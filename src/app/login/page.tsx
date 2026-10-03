@@ -20,7 +20,11 @@ export default function LoginPage() {
     const { error } = await supabase.auth.signInWithPassword({ email, password });
     setLoading(false);
     if (error) {
-      setError('E-mail ou senha incorretos.');
+      setError(
+        error.code === 'email_not_confirmed'
+          ? 'Sua conta ainda não foi confirmada. Abra o e-mail de confirmação (veja também o Spam) e clique no link.'
+          : 'E-mail ou senha incorretos.'
+      );
       return;
     }
     router.push('/');
