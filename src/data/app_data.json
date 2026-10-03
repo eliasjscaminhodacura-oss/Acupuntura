@@ -1,0 +1,6809 @@
+{
+ "categories": {
+  "FACE": "Face & Inspeção Visual",
+  "MENTAL": "Mente, Emoções & Memória (Shen)",
+  "CORPO": "Corpo & Aspectos Gerais",
+  "DORES": "Dores & Qualidade da Dor",
+  "COLUNA": "Coluna & Região Lombar",
+  "MEMBROS": "Membros & Extremidades",
+  "SONO": "Sono & Ritmo Biológico",
+  "CEFALEIA": "Cefaleia & Enxaqueca",
+  "TONTURA": "Tontura & Vertigem",
+  "OLHOS": "Olhos & Visão",
+  "NARIZOUVIDO": "Nariz & Ouvidos",
+  "BOCAGARGANTA": "Boca, Garganta & Gosto",
+  "RESPIRATORIO": "Sistema Respiratório & Tórax",
+  "TORAX": "Tórax, Mamas & Hipocôndrios",
+  "GASTRICO": "Digestivo, Estômago & Apetite",
+  "INTESTINO": "Intestino & Evacuação",
+  "URINA": "Urina & Bexiga",
+  "GENITAIS": "Sistema Reprodutor & Genitais",
+  "MENSTRUACAO": "Menstruação & Ciclo Feminino",
+  "LINGUA": "Língua (Corpo, Cor & Saburra)",
+  "PULSO": "Pulso (Qualidade & Profundidade)"
+ },
+ "questions": [
+  {
+   "id": "item_6",
+   "key": "FACE_aspecto_s/alt",
+   "cat": "FACE",
+   "subcat": "Aspecto",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_7",
+   "key": "FACE_aspecto_arroxeada",
+   "cat": "FACE",
+   "subcat": "Aspecto",
+   "label": "Arroxeada",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgXueC"
+   ]
+  },
+  {
+   "id": "item_8",
+   "key": "FACE_aspecto_macas vermelhas",
+   "cat": "FACE",
+   "subcat": "Aspecto",
+   "label": "Macas vermelhas",
+   "exc_def": "Def",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnR",
+    "DefYnC"
+   ]
+  },
+  {
+   "id": "item_9",
+   "key": "FACE_aspecto_palida",
+   "cat": "FACE",
+   "subcat": "Aspecto",
+   "label": "Palida",
+   "exc_def": "Def",
+   "fr_cal": "Frio",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiC",
+    "DefXueC",
+    "DefYgBP",
+    "DefXueF",
+    "DefYgR",
+    "DefQiVB"
+   ]
+  },
+  {
+   "id": "item_10",
+   "key": "FACE_aspecto_vermelha",
+   "cat": "FACE",
+   "subcat": "Aspecto",
+   "label": "Vermelha",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Sup",
+   "syndromes": [
+    "FgC",
+    "FgF"
+   ]
+  },
+  {
+   "id": "item_11",
+   "key": "FACE_aspecto_ictericia",
+   "cat": "FACE",
+   "subcat": "Aspecto",
+   "label": "Ictericia",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Sup",
+   "syndromes": [
+    "UmdCalorF"
+   ]
+  },
+  {
+   "id": "item_12",
+   "key": "FACE_aspecto_inchada",
+   "cat": "FACE",
+   "subcat": "Aspecto",
+   "label": "Inchada",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiE",
+    "DefYgBP",
+    "DefYgR"
+   ]
+  },
+  {
+   "id": "item_13",
+   "key": "FACE_aspecto_sem brilho",
+   "cat": "FACE",
+   "subcat": "Aspecto",
+   "label": "Sem brilho",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiR",
+    "DefQiBP",
+    "DefQiC"
+   ]
+  },
+  {
+   "id": "item_15",
+   "key": "MENTAL_emocional_agitacao",
+   "cat": "MENTAL",
+   "subcat": "Emocional",
+   "label": "Agitacao",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "DefYnC",
+    "DefXueC",
+    "EstgXueC",
+    "FgC",
+    "EstgQiF",
+    "AscYgF",
+    "FgF",
+    "DefYnR"
+   ]
+  },
+  {
+   "id": "item_16",
+   "key": "MENTAL_emocional_anormal",
+   "cat": "MENTAL",
+   "subcat": "Emocional",
+   "label": "Anormal",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_17",
+   "key": "MENTAL_emocional_apatia",
+   "cat": "MENTAL",
+   "subcat": "Emocional",
+   "label": "Apatia",
+   "exc_def": "Def",
+   "fr_cal": "Frio",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR",
+    "DefYgBP",
+    "DefXueF"
+   ]
+  },
+  {
+   "id": "item_18",
+   "key": "MENTAL_emocional_depressao",
+   "cat": "MENTAL",
+   "subcat": "Emocional",
+   "label": "Depressao",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "EstgQiF",
+    "DefYgC",
+    "DefQiE"
+   ]
+  },
+  {
+   "id": "item_19",
+   "key": "MENTAL_emocional_desanimo",
+   "cat": "MENTAL",
+   "subcat": "Emocional",
+   "label": "Desanimo",
+   "exc_def": "Def",
+   "fr_cal": "Frio",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefXueF"
+   ]
+  },
+  {
+   "id": "item_20",
+   "key": "MENTAL_emocional_falta de vontade",
+   "cat": "MENTAL",
+   "subcat": "Emocional",
+   "label": "Falta de vontade",
+   "exc_def": "Def",
+   "fr_cal": "Frio",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR"
+   ]
+  },
+  {
+   "id": "item_21",
+   "key": "MENTAL_emocional_impaciencia",
+   "cat": "MENTAL",
+   "subcat": "Emocional",
+   "label": "Impaciencia",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgQiF",
+    "AscYgF",
+    "FgF",
+    "VtF",
+    "DefYnR"
+   ]
+  },
+  {
+   "id": "item_22",
+   "key": "MENTAL_emocional_introversao",
+   "cat": "MENTAL",
+   "subcat": "Emocional",
+   "label": "Introversao",
+   "exc_def": "Def",
+   "fr_cal": "Frio",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR"
+   ]
+  },
+  {
+   "id": "item_23",
+   "key": "MENTAL_emocional_irritabilidade",
+   "cat": "MENTAL",
+   "subcat": "Emocional",
+   "label": "Irritabilidade",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "EstgQiF",
+    "AscYgF",
+    "FgF",
+    "DefXueC",
+    "FgC",
+    "DefYnE"
+   ]
+  },
+  {
+   "id": "item_24",
+   "key": "MENTAL_emocional_letargia",
+   "cat": "MENTAL",
+   "subcat": "Emocional",
+   "label": "Letargia",
+   "exc_def": "Def",
+   "fr_cal": "Frio",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR",
+    "DefYgBP",
+    "DefQiBP",
+    "DefXueF",
+    "DefXueC",
+    "DefQiC",
+    "DefYgC"
+   ]
+  },
+  {
+   "id": "item_25",
+   "key": "MENTAL_emocional_loquaz",
+   "cat": "MENTAL",
+   "subcat": "Emocional",
+   "label": "Loquaz",
+   "exc_def": "Def",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnC"
+   ]
+  },
+  {
+   "id": "item_26",
+   "key": "MENTAL_emocional_medo",
+   "cat": "MENTAL",
+   "subcat": "Emocional",
+   "label": "Medo",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiR"
+   ]
+  },
+  {
+   "id": "item_27",
+   "key": "MENTAL_emocional_neurose",
+   "cat": "MENTAL",
+   "subcat": "Emocional",
+   "label": "Neurose",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_28",
+   "key": "MENTAL_emocional_pessoa ausente",
+   "cat": "MENTAL",
+   "subcat": "Emocional",
+   "label": "Pessoa ausente",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_29",
+   "key": "MENTAL_emocional_preocupacao",
+   "cat": "MENTAL",
+   "subcat": "Emocional",
+   "label": "Preocupacao",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiBP"
+   ]
+  },
+  {
+   "id": "item_30",
+   "key": "MENTAL_emocional_tristeza",
+   "cat": "MENTAL",
+   "subcat": "Emocional",
+   "label": "Tristeza",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiP",
+    "DefQiC",
+    "DefYgC",
+    "DefXueC",
+    "DefYnC"
+   ]
+  },
+  {
+   "id": "item_32",
+   "key": "MENTAL_memoria_fraca em geral",
+   "cat": "MENTAL",
+   "subcat": "Memoria",
+   "label": "Fraca em geral",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "DefXueC",
+    "DefJgR",
+    "DefYnR"
+   ]
+  },
+  {
+   "id": "item_33",
+   "key": "MENTAL_memoria_falta de concentracao",
+   "cat": "MENTAL",
+   "subcat": "Memoria",
+   "label": "Falta de concentracao",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiBP"
+   ]
+  },
+  {
+   "id": "item_34",
+   "key": "MENTAL_memoria_antiga enfraquecida",
+   "cat": "MENTAL",
+   "subcat": "Memoria",
+   "label": "Antiga enfraquecida",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefXueC",
+    "DefYnC",
+    "DefJgR"
+   ]
+  },
+  {
+   "id": "item_35",
+   "key": "MENTAL_memoria_recente enfraquecida",
+   "cat": "MENTAL",
+   "subcat": "Memoria",
+   "label": "Recente enfraquecida",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnR",
+    "DefJgR"
+   ]
+  },
+  {
+   "id": "item_36",
+   "key": "MENTAL_memoria_s/alt",
+   "cat": "MENTAL",
+   "subcat": "Memoria",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_38",
+   "key": "CORPO_disfuncoes_cansaco",
+   "cat": "CORPO",
+   "subcat": "Disfuncoes",
+   "label": "Cansaco",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiBP",
+    "DefYgBP",
+    "DefQiR",
+    "DefYgR"
+   ]
+  },
+  {
+   "id": "item_39",
+   "key": "CORPO_disfuncoes_cerebral",
+   "cat": "CORPO",
+   "subcat": "Disfuncoes",
+   "label": "Cerebral",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": []
+  },
+  {
+   "id": "item_40",
+   "key": "CORPO_disfuncoes_diabetes",
+   "cat": "CORPO",
+   "subcat": "Disfuncoes",
+   "label": "Diabetes",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiBP",
+    "DefYgBP"
+   ]
+  },
+  {
+   "id": "item_41",
+   "key": "CORPO_disfuncoes_epilepsia",
+   "cat": "CORPO",
+   "subcat": "Disfuncoes",
+   "label": "Epilepsia",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": []
+  },
+  {
+   "id": "item_42",
+   "key": "CORPO_disfuncoes_falaanormal",
+   "cat": "CORPO",
+   "subcat": "Disfuncoes",
+   "label": "Falaanormal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "DefQiC",
+    "DefYnC",
+    "DefXueC",
+    "EstgXueC",
+    "FgC",
+    "FlmC"
+   ]
+  },
+  {
+   "id": "item_43",
+   "key": "CORPO_disfuncoes_falta de ar",
+   "cat": "CORPO",
+   "subcat": "Disfuncoes",
+   "label": "Falta de ar",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiP",
+    "DefYgR"
+   ]
+  },
+  {
+   "id": "item_44",
+   "key": "CORPO_disfuncoes_osteoporose",
+   "cat": "CORPO",
+   "subcat": "Disfuncoes",
+   "label": "Osteoporose",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefJgR",
+    "DefYnR"
+   ]
+  },
+  {
+   "id": "item_45",
+   "key": "CORPO_disfuncoes_pele",
+   "cat": "CORPO",
+   "subcat": "Disfuncoes",
+   "label": "Pele",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_46",
+   "key": "CORPO_disfuncoes_pressao alta",
+   "cat": "CORPO",
+   "subcat": "Disfuncoes",
+   "label": "Pressao alta",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnR",
+    "DefXueF",
+    "AscYgF",
+    "FgF",
+    "VtF",
+    "DefQiVB"
+   ]
+  },
+  {
+   "id": "item_47",
+   "key": "CORPO_disfuncoes_reumatismo",
+   "cat": "CORPO",
+   "subcat": "Disfuncoes",
+   "label": "Reumatismo",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Sup",
+   "syndromes": [
+    "CalorID",
+    "ObstID"
+   ]
+  },
+  {
+   "id": "item_48",
+   "key": "CORPO_disfuncoes_tremores",
+   "cat": "CORPO",
+   "subcat": "Disfuncoes",
+   "label": "Tremores",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefXueF",
+    "AscYgF",
+    "VtF",
+    "FlmC"
+   ]
+  },
+  {
+   "id": "item_50",
+   "key": "CORPO_aspecto_magreza",
+   "cat": "CORPO",
+   "subcat": "Aspecto",
+   "label": "Magreza",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnR",
+    "DefXueF",
+    "CalorE"
+   ]
+  },
+  {
+   "id": "item_51",
+   "key": "CORPO_aspecto_obesidade",
+   "cat": "CORPO",
+   "subcat": "Aspecto",
+   "label": "Obesidade",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "UmdCalorBP"
+   ]
+  },
+  {
+   "id": "item_52",
+   "key": "CORPO_aspecto_s/alt",
+   "cat": "CORPO",
+   "subcat": "Aspecto",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_54",
+   "key": "CORPO_temperatura_s/alt",
+   "cat": "CORPO",
+   "subcat": "Temperatura",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_55",
+   "key": "CORPO_temperatura_calor",
+   "cat": "CORPO",
+   "subcat": "Temperatura",
+   "label": "Calor",
+   "exc_def": "",
+   "fr_cal": "Calor",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_56",
+   "key": "CORPO_temperatura_frio",
+   "cat": "CORPO",
+   "subcat": "Temperatura",
+   "label": "Frio",
+   "exc_def": "",
+   "fr_cal": "Frio",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_57",
+   "key": "CORPO_temperatura_ondas de calor",
+   "cat": "CORPO",
+   "subcat": "Temperatura",
+   "label": "Ondas de calor",
+   "exc_def": "Def",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnR"
+   ]
+  },
+  {
+   "id": "item_59",
+   "key": "CORPO_inchacos_abdome",
+   "cat": "CORPO",
+   "subcat": "Inchacos",
+   "label": "Abdome",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR",
+    "DefYgBP"
+   ]
+  },
+  {
+   "id": "item_60",
+   "key": "CORPO_inchacos_ascite",
+   "cat": "CORPO",
+   "subcat": "Inchacos",
+   "label": "Ascite",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR",
+    "DefYgBP",
+    "UmdFrioBP",
+    "UmdCalorBP"
+   ]
+  },
+  {
+   "id": "item_61",
+   "key": "CORPO_inchacos_corpo",
+   "cat": "CORPO",
+   "subcat": "Inchacos",
+   "label": "Corpo",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR",
+    "DefYgBP",
+    "UmdFrioBP",
+    "UmdCalorBP"
+   ]
+  },
+  {
+   "id": "item_62",
+   "key": "CORPO_inchacos_face",
+   "cat": "CORPO",
+   "subcat": "Inchacos",
+   "label": "Face",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR"
+   ]
+  },
+  {
+   "id": "item_63",
+   "key": "CORPO_inchacos_olhos",
+   "cat": "CORPO",
+   "subcat": "Inchacos",
+   "label": "Olhos",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiR"
+   ]
+  },
+  {
+   "id": "item_64",
+   "key": "CORPO_inchacos_tornozelo",
+   "cat": "CORPO",
+   "subcat": "Inchacos",
+   "label": "Tornozelo",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR",
+    "UmdFrioB",
+    "UmdCalorB"
+   ]
+  },
+  {
+   "id": "item_66",
+   "key": "CORPO_pele_s/alt",
+   "cat": "CORPO",
+   "subcat": "Pele",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_67",
+   "key": "CORPO_pele_anormal",
+   "cat": "CORPO",
+   "subcat": "Pele",
+   "label": "Anormal",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "UmdCalorIG"
+   ]
+  },
+  {
+   "id": "item_68",
+   "key": "CORPO_pele_hematomas",
+   "cat": "CORPO",
+   "subcat": "Pele",
+   "label": "Hematomas",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "EstgXueC",
+    "EstgXueF",
+    "BPcontrXue"
+   ]
+  },
+  {
+   "id": "item_69",
+   "key": "CORPO_pele_petequias",
+   "cat": "CORPO",
+   "subcat": "Pele",
+   "label": "Petequias",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "EstgXueC",
+    "EstgXueF"
+   ]
+  },
+  {
+   "id": "item_70",
+   "key": "CORPO_pele_seca",
+   "cat": "CORPO",
+   "subcat": "Pele",
+   "label": "Seca",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnP",
+    "DefXueF",
+    "DefYnE"
+   ]
+  },
+  {
+   "id": "item_72",
+   "key": "CORPO_transpiracao_s/alt",
+   "cat": "CORPO",
+   "subcat": "Transpiracao",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_73",
+   "key": "CORPO_transpiracao_ausencia",
+   "cat": "CORPO",
+   "subcat": "Transpiracao",
+   "label": "Ausencia",
+   "exc_def": "Exc",
+   "fr_cal": "Frio",
+   "sup_prof": "Sup",
+   "syndromes": [
+    "VtFrioP"
+   ]
+  },
+  {
+   "id": "item_74",
+   "key": "CORPO_transpiracao_mais de dia",
+   "cat": "CORPO",
+   "subcat": "Transpiracao",
+   "label": "Mais de dia",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR",
+    "DefYgC"
+   ]
+  },
+  {
+   "id": "item_75",
+   "key": "CORPO_transpiracao_profusa e fria",
+   "cat": "CORPO",
+   "subcat": "Transpiracao",
+   "label": "Profusa e fria",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "ColapsQiBP"
+   ]
+  },
+  {
+   "id": "item_76",
+   "key": "CORPO_transpiracao_mais à noite",
+   "cat": "CORPO",
+   "subcat": "Transpiracao",
+   "label": "Mais à noite",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnR",
+    "DefYnC"
+   ]
+  },
+  {
+   "id": "item_77",
+   "key": "CORPO_transpiracao_sem esforço",
+   "cat": "CORPO",
+   "subcat": "Transpiracao",
+   "label": "Sem esforço",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiP"
+   ]
+  },
+  {
+   "id": "item_78",
+   "key": "CORPO_transpiracao_cabeca",
+   "cat": "CORPO",
+   "subcat": "Transpiracao",
+   "label": "Cabeca",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "FgC",
+    "FlmC",
+    "CalorE",
+    "UmdCalorBP"
+   ]
+  },
+  {
+   "id": "item_79",
+   "key": "CORPO_transpiracao_maos",
+   "cat": "CORPO",
+   "subcat": "Transpiracao",
+   "label": "Maos",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiP"
+   ]
+  },
+  {
+   "id": "item_80",
+   "key": "CORPO_transpiracao_membros",
+   "cat": "CORPO",
+   "subcat": "Transpiracao",
+   "label": "Membros",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiBP",
+    "DefQiE"
+   ]
+  },
+  {
+   "id": "item_82",
+   "key": "CORPO_febre_s/alt",
+   "cat": "CORPO",
+   "subcat": "Febre",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_83",
+   "key": "CORPO_febre em geral",
+   "cat": "CORPO",
+   "subcat": "Febre em geral",
+   "label": "Febre em geral",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_84",
+   "key": "CORPO_febre_alta e constante",
+   "cat": "CORPO",
+   "subcat": "Febre",
+   "label": "Alta e constante",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Sup",
+   "syndromes": [
+    "VtFrioP",
+    "VtCalorP"
+   ]
+  },
+  {
+   "id": "item_85",
+   "key": "CORPO_febre_calafrio",
+   "cat": "CORPO",
+   "subcat": "Febre",
+   "label": "Calafrio",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "DefYgBP",
+    "DefYgR"
+   ]
+  },
+  {
+   "id": "item_86",
+   "key": "CORPO_febre_calafrioque piora com calor",
+   "cat": "CORPO",
+   "subcat": "Febre",
+   "label": "Calafrioque piora com calor",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Sup",
+   "syndromes": []
+  },
+  {
+   "id": "item_87",
+   "key": "CORPO_febre_calafrio que melhora com calor",
+   "cat": "CORPO",
+   "subcat": "Febre",
+   "label": "Calafrio que melhora com calor",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "DefYgR"
+   ]
+  },
+  {
+   "id": "item_88",
+   "key": "CORPO_febre_febricula",
+   "cat": "CORPO",
+   "subcat": "Febre",
+   "label": "Febricula",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "",
+   "syndromes": [
+    "UmdCalorBP"
+   ]
+  },
+  {
+   "id": "item_89",
+   "key": "CORPO_febre_sem sudorese",
+   "cat": "CORPO",
+   "subcat": "Febre",
+   "label": "Sem sudorese",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "",
+   "syndromes": [
+    "CalorE"
+   ]
+  },
+  {
+   "id": "item_90",
+   "key": "CORPO_febre_vespertina",
+   "cat": "CORPO",
+   "subcat": "Febre",
+   "label": "Vespertina",
+   "exc_def": "Def",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnP",
+    "DefYnR",
+    "DefYnE"
+   ]
+  },
+  {
+   "id": "item_91",
+   "key": "CORPO_febre_aversao a frio",
+   "cat": "CORPO",
+   "subcat": "Febre",
+   "label": "Aversao a frio",
+   "exc_def": "",
+   "fr_cal": "Frio",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_92",
+   "key": "CORPO_febre_aversao a calor",
+   "cat": "CORPO",
+   "subcat": "Febre",
+   "label": "Aversao a calor",
+   "exc_def": "",
+   "fr_cal": "Calor",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_94",
+   "key": "DORES_intensidade_forte",
+   "cat": "DORES",
+   "subcat": "Intensidade",
+   "label": "Forte",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "EstgXueF"
+   ]
+  },
+  {
+   "id": "item_95",
+   "key": "DORES_intensidade_fraca",
+   "cat": "DORES",
+   "subcat": "Intensidade",
+   "label": "Fraca",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "EstgQiF"
+   ]
+  },
+  {
+   "id": "item_96",
+   "key": "DORES_intensidade_s/alt",
+   "cat": "DORES",
+   "subcat": "Intensidade",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_98",
+   "key": "DORES_coloracao_arroxeada",
+   "cat": "DORES",
+   "subcat": "Coloracao",
+   "label": "Arroxeada",
+   "exc_def": "Exc",
+   "fr_cal": "Frio",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgXueF"
+   ]
+  },
+  {
+   "id": "item_99",
+   "key": "DORES_coloracao_avermelhada",
+   "cat": "DORES",
+   "subcat": "Coloracao",
+   "label": "Avermelhada",
+   "exc_def": "",
+   "fr_cal": "Calor",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_100",
+   "key": "DORES_coloracao_s/alt",
+   "cat": "DORES",
+   "subcat": "Coloracao",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_102",
+   "key": "DORES_local_peito",
+   "cat": "DORES",
+   "subcat": "Local",
+   "label": "Peito",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "EstgQiF",
+    "EstgXueF",
+    "EstgXueC",
+    "FlmFrioP",
+    "FlmCalorP"
+   ]
+  },
+  {
+   "id": "item_103",
+   "key": "DORES_local_lateral do torax",
+   "cat": "DORES",
+   "subcat": "Local",
+   "label": "Lateral do torax",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "EstgQiF",
+    "AscYgF",
+    "EstgXueF"
+   ]
+  },
+  {
+   "id": "item_104",
+   "key": "DORES_local_abaixo das costelas",
+   "cat": "DORES",
+   "subcat": "Local",
+   "label": "Abaixo das costelas",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "EstgQiF",
+    "AscYgF",
+    "EstgXueF"
+   ]
+  },
+  {
+   "id": "item_105",
+   "key": "DORES_local_acima do umbigo",
+   "cat": "DORES",
+   "subcat": "Local",
+   "label": "Acima do umbigo",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "AlimE",
+    "RebelE"
+   ]
+  },
+  {
+   "id": "item_106",
+   "key": "DORES_local_abaixo do umbigo",
+   "cat": "DORES",
+   "subcat": "Local",
+   "label": "Abaixo do umbigo",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "UmdCalorB",
+    "UmdFrioB"
+   ]
+  },
+  {
+   "id": "item_108",
+   "key": "DORES_tipo_s/alt",
+   "cat": "DORES",
+   "subcat": "Tipo",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_109",
+   "key": "DORES_tipo_colica",
+   "cat": "DORES",
+   "subcat": "Tipo",
+   "label": "Colica",
+   "exc_def": "",
+   "fr_cal": "Frio",
+   "sup_prof": "",
+   "syndromes": [
+    "UmdFrioIG",
+    "EstgXueF"
+   ]
+  },
+  {
+   "id": "item_110",
+   "key": "DORES_tipo_frio",
+   "cat": "DORES",
+   "subcat": "Tipo",
+   "label": "Frio",
+   "exc_def": "",
+   "fr_cal": "Frio",
+   "sup_prof": "",
+   "syndromes": [
+    "DefYgR",
+    "DefYgBP"
+   ]
+  },
+  {
+   "id": "item_111",
+   "key": "DORES_tipo_latejante",
+   "cat": "DORES",
+   "subcat": "Tipo",
+   "label": "Latejante",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "EstgQiF",
+    "AscYgF"
+   ]
+  },
+  {
+   "id": "item_112",
+   "key": "DORES_tipo_peso",
+   "cat": "DORES",
+   "subcat": "Tipo",
+   "label": "Peso",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "UmdCalorB",
+    "UmdFrioB",
+    "UmdCalorBP",
+    "UmdFrioBP"
+   ]
+  },
+  {
+   "id": "item_113",
+   "key": "DORES_tipo_pontada",
+   "cat": "DORES",
+   "subcat": "Tipo",
+   "label": "Pontada",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "EstgXueF",
+    "EstgXueC"
+   ]
+  },
+  {
+   "id": "item_114",
+   "key": "DORES_tipo_queimacao",
+   "cat": "DORES",
+   "subcat": "Tipo",
+   "label": "Queimacao",
+   "exc_def": "",
+   "fr_cal": "Calor",
+   "sup_prof": "",
+   "syndromes": [
+    "DefYnE",
+    "DefYnR"
+   ]
+  },
+  {
+   "id": "item_115",
+   "key": "DORES_tipo_surda",
+   "cat": "DORES",
+   "subcat": "Tipo",
+   "label": "Surda",
+   "exc_def": "Def",
+   "fr_cal": "Frio",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiR",
+    "DefQiBP",
+    "DefXueC",
+    "DefXueF"
+   ]
+  },
+  {
+   "id": "item_116",
+   "key": "DORES_tipo_alivia com pressao",
+   "cat": "DORES",
+   "subcat": "Tipo",
+   "label": "Alivia com pressao",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_117",
+   "key": "DORES_tipo_piora com pressao",
+   "cat": "DORES",
+   "subcat": "Tipo",
+   "label": "Piora com pressao",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "EstgXueF",
+    "EstgXueC",
+    "EstgQiF"
+   ]
+  },
+  {
+   "id": "item_118",
+   "key": "DORES_tipo_alivia com calor",
+   "cat": "DORES",
+   "subcat": "Tipo",
+   "label": "Alivia com calor",
+   "exc_def": "",
+   "fr_cal": "Frio",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_119",
+   "key": "DORES_tipo_alivia com frio",
+   "cat": "DORES",
+   "subcat": "Tipo",
+   "label": "Alivia com frio",
+   "exc_def": "",
+   "fr_cal": "Calor",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_120",
+   "key": "DORES_tipo_alivia com movimento",
+   "cat": "DORES",
+   "subcat": "Tipo",
+   "label": "Alivia com movimento",
+   "exc_def": "Def",
+   "fr_cal": "Frio",
+   "sup_prof": "",
+   "syndromes": [
+    "DefQiR",
+    "DefQiBP"
+   ]
+  },
+  {
+   "id": "item_121",
+   "key": "DORES_tipo_piora com movimento",
+   "cat": "DORES",
+   "subcat": "Tipo",
+   "label": "Piora com movimento",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "",
+   "syndromes": [
+    "EstgXueF",
+    "EstgXueC",
+    "EstgQiF"
+   ]
+  },
+  {
+   "id": "item_123",
+   "key": "COLUNA_costas tensas",
+   "cat": "COLUNA",
+   "subcat": "Costas tensas",
+   "label": "Costas tensas",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "UmdFrioB",
+    "UmdCalorB"
+   ]
+  },
+  {
+   "id": "item_124",
+   "key": "COLUNA_dor no dorso",
+   "cat": "COLUNA",
+   "subcat": "Dor no dorso",
+   "label": "Dor no dorso",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "UmdFrioB",
+    "UmdCalorB"
+   ]
+  },
+  {
+   "id": "item_125",
+   "key": "COLUNA_dor nas costas e ombros",
+   "cat": "COLUNA",
+   "subcat": "Dor nas costas e ombros",
+   "label": "Dor nas costas e ombros",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_126",
+   "key": "COLUNA_fraqueza",
+   "cat": "COLUNA",
+   "subcat": "Fraqueza",
+   "label": "Fraqueza",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiR"
+   ]
+  },
+  {
+   "id": "item_127",
+   "key": "COLUNA_rigidez na nuca",
+   "cat": "COLUNA",
+   "subcat": "Rigidez na nuca",
+   "label": "Rigidez na nuca",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "UmdFrioB",
+    "UmdCalorB"
+   ]
+  },
+  {
+   "id": "item_128",
+   "key": "COLUNA_torcicolo",
+   "cat": "COLUNA",
+   "subcat": "Torcicolo",
+   "label": "Torcicolo",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "ObstID"
+   ]
+  },
+  {
+   "id": "item_130",
+   "key": "COLUNA_lombar_s/alt",
+   "cat": "COLUNA",
+   "subcat": "Lombar",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_131",
+   "key": "COLUNA_lombar_dor em geral",
+   "cat": "COLUNA",
+   "subcat": "Lombar",
+   "label": "Dor em geral",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_132",
+   "key": "COLUNA_lombar_dolorida a noite",
+   "cat": "COLUNA",
+   "subcat": "Lombar",
+   "label": "Dolorida a noite",
+   "exc_def": "",
+   "fr_cal": "Frio",
+   "sup_prof": "",
+   "syndromes": [
+    "DefYgR",
+    "UmdFrioB"
+   ]
+  },
+  {
+   "id": "item_133",
+   "key": "COLUNA_lombar_dolorida sempre",
+   "cat": "COLUNA",
+   "subcat": "Lombar",
+   "label": "Dolorida sempre",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiR"
+   ]
+  },
+  {
+   "id": "item_134",
+   "key": "COLUNA_lombar_fraca",
+   "cat": "COLUNA",
+   "subcat": "Lombar",
+   "label": "Fraca",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiR",
+    "DefJgR"
+   ]
+  },
+  {
+   "id": "item_136",
+   "key": "COLUNA_lombar_dor ciatica",
+   "cat": "COLUNA",
+   "subcat": "Lombar",
+   "label": "Dor ciatica",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_137",
+   "key": "COLUNA_lombar_alivia ao deitar",
+   "cat": "COLUNA",
+   "subcat": "Lombar",
+   "label": "Alivia ao deitar",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_138",
+   "key": "COLUNA_lombar_piora ao deitar",
+   "cat": "COLUNA",
+   "subcat": "Lombar",
+   "label": "Piora ao deitar",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_139",
+   "key": "COLUNA_lombar_fria",
+   "cat": "COLUNA",
+   "subcat": "Lombar",
+   "label": "Fria",
+   "exc_def": "",
+   "fr_cal": "Frio",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_140",
+   "key": "COLUNA_lombar_quente",
+   "cat": "COLUNA",
+   "subcat": "Lombar",
+   "label": "Quente",
+   "exc_def": "",
+   "fr_cal": "Calor",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_142",
+   "key": "COLUNA_regiaolombar_regiao extensa",
+   "cat": "COLUNA",
+   "subcat": "Regiaolombar",
+   "label": "Regiao extensa",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiR",
+    "DefYgR"
+   ]
+  },
+  {
+   "id": "item_143",
+   "key": "COLUNA_regiaolombar_pontual",
+   "cat": "COLUNA",
+   "subcat": "Regiaolombar",
+   "label": "Pontual",
+   "exc_def": "Exc",
+   "fr_cal": "Frio",
+   "sup_prof": "",
+   "syndromes": [
+    "EstgXueF"
+   ]
+  },
+  {
+   "id": "item_144",
+   "key": "COLUNA_regiaolombar_s/alt",
+   "cat": "COLUNA",
+   "subcat": "Regiaolombar",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_146",
+   "key": "MEMBROS_arroxeamento",
+   "cat": "MEMBROS",
+   "subcat": "Arroxeamento",
+   "label": "Arroxeamento",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgXueC",
+    "EstgXueF",
+    "BPcontrXue"
+   ]
+  },
+  {
+   "id": "item_147",
+   "key": "MEMBROS_articulacoes inflamadas",
+   "cat": "MEMBROS",
+   "subcat": "Articulacoes inflamadas",
+   "label": "Articulacoes inflamadas",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_148",
+   "key": "MEMBROS_espasticos",
+   "cat": "MEMBROS",
+   "subcat": "Espasticos",
+   "label": "Espasticos",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "FlmC",
+    "VtF"
+   ]
+  },
+  {
+   "id": "item_149",
+   "key": "MEMBROS_fracos",
+   "cat": "MEMBROS",
+   "subcat": "Fracos",
+   "label": "Fracos",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiBP"
+   ]
+  },
+  {
+   "id": "item_151",
+   "key": "MEMBROS_bracos_bracos inchados",
+   "cat": "MEMBROS",
+   "subcat": "Bracos",
+   "label": "Bracos inchados",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "DefYgBP",
+    "DefQiP",
+    "EstgQiF",
+    "UmdCalorBP",
+    "UmdFrioBP"
+   ]
+  },
+  {
+   "id": "item_152",
+   "key": "MEMBROS_bracos_bracos pesados",
+   "cat": "MEMBROS",
+   "subcat": "Bracos",
+   "label": "Bracos pesados",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Sup",
+   "syndromes": [
+    "DefQiBP",
+    "DefYgBP",
+    "UmdFrioBP",
+    "UmdCalorBP"
+   ]
+  },
+  {
+   "id": "item_153",
+   "key": "MEMBROS_bracos_dor no braco",
+   "cat": "MEMBROS",
+   "subcat": "Bracos",
+   "label": "Dor no braco",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Sup",
+   "syndromes": [
+    "EstgXueC",
+    "EstgQiF",
+    "UmdCalorIG",
+    "UmdFrioIG"
+   ]
+  },
+  {
+   "id": "item_154",
+   "key": "MEMBROS_bracos_dor nos ombros",
+   "cat": "MEMBROS",
+   "subcat": "Bracos",
+   "label": "Dor nos ombros",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Sup",
+   "syndromes": [
+    "EstgXueC",
+    "EstgQiF",
+    "UmdCalorIG",
+    "UmdFrioIG",
+    "VtCalorP",
+    "VtFrioP"
+   ]
+  },
+  {
+   "id": "item_155",
+   "key": "MEMBROS_bracos_ombros rigidos",
+   "cat": "MEMBROS",
+   "subcat": "Bracos",
+   "label": "Ombros rigidos",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Sup",
+   "syndromes": [
+    "EstgXueC",
+    "EstgQiF",
+    "UmdCalorIG",
+    "UmdFrioIG",
+    "VtCalorP",
+    "VtFrioP"
+   ]
+  },
+  {
+   "id": "item_157",
+   "key": "MEMBROS_maos_caimbras",
+   "cat": "MEMBROS",
+   "subcat": "Maos",
+   "label": "Caimbras",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefXueC"
+   ]
+  },
+  {
+   "id": "item_158",
+   "key": "MEMBROS_maos_dor nas maos",
+   "cat": "MEMBROS",
+   "subcat": "Maos",
+   "label": "Dor nas maos",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Sup",
+   "syndromes": [
+    "ObstID"
+   ]
+  },
+  {
+   "id": "item_159",
+   "key": "MEMBROS_maos_formigamento",
+   "cat": "MEMBROS",
+   "subcat": "Maos",
+   "label": "Formigamento",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefXueF",
+    "AscYgF",
+    "DefYnP"
+   ]
+  },
+  {
+   "id": "item_160",
+   "key": "MEMBROS_maos_maos frias",
+   "cat": "MEMBROS",
+   "subcat": "Maos",
+   "label": "Maos frias",
+   "exc_def": "Def",
+   "fr_cal": "Frio",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgC",
+    "DefQiP"
+   ]
+  },
+  {
+   "id": "item_161",
+   "key": "MEMBROS_maos_maos quentes",
+   "cat": "MEMBROS",
+   "subcat": "Maos",
+   "label": "Maos quentes",
+   "exc_def": "Def",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnC",
+    "DefYnP"
+   ]
+  },
+  {
+   "id": "item_163",
+   "key": "MEMBROS_pernas_problemas em geral",
+   "cat": "MEMBROS",
+   "subcat": "Pernas",
+   "label": "Problemas em geral",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_164",
+   "key": "MEMBROS_pernas_artrite e dores",
+   "cat": "MEMBROS",
+   "subcat": "Pernas",
+   "label": "Artrite e dores",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "UmdFrioBP",
+    "UmdCalorBP"
+   ]
+  },
+  {
+   "id": "item_165",
+   "key": "MEMBROS_pernas_problemas nervosos",
+   "cat": "MEMBROS",
+   "subcat": "Pernas",
+   "label": "Problemas nervosos",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "DefQiR",
+    "UmdFrioB",
+    "UmdCalorB"
+   ]
+  },
+  {
+   "id": "item_166",
+   "key": "MEMBROS_pernas_dor no calcanhar",
+   "cat": "MEMBROS",
+   "subcat": "Pernas",
+   "label": "Dor no calcanhar",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiR",
+    "DefYgR"
+   ]
+  },
+  {
+   "id": "item_167",
+   "key": "MEMBROS_pernas_joelhos fracos",
+   "cat": "MEMBROS",
+   "subcat": "Pernas",
+   "label": "Joelhos fracos",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefJgR",
+    "DefQiR"
+   ]
+  },
+  {
+   "id": "item_168",
+   "key": "MEMBROS_pernas_joelhos frios",
+   "cat": "MEMBROS",
+   "subcat": "Pernas",
+   "label": "Joelhos frios",
+   "exc_def": "Def",
+   "fr_cal": "Frio",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefJgR",
+    "DefYgR"
+   ]
+  },
+  {
+   "id": "item_169",
+   "key": "MEMBROS_pernas_manchas roxas",
+   "cat": "MEMBROS",
+   "subcat": "Pernas",
+   "label": "Manchas roxas",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "BPcontrXue"
+   ]
+  },
+  {
+   "id": "item_170",
+   "key": "MEMBROS_pernas_marcha vacilante",
+   "cat": "MEMBROS",
+   "subcat": "Pernas",
+   "label": "Marcha vacilante",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgXueF",
+    "DefYnR",
+    "DefXueF"
+   ]
+  },
+  {
+   "id": "item_171",
+   "key": "MEMBROS_pernas_pernas frias",
+   "cat": "MEMBROS",
+   "subcat": "Pernas",
+   "label": "Pernas frias",
+   "exc_def": "Def",
+   "fr_cal": "Frio",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR"
+   ]
+  },
+  {
+   "id": "item_172",
+   "key": "MEMBROS_pernas_pernas pesadas",
+   "cat": "MEMBROS",
+   "subcat": "Pernas",
+   "label": "Pernas pesadas",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "DefQiBP",
+    "DefYgBP",
+    "UmdFrioBP",
+    "UmdCalorBP"
+   ]
+  },
+  {
+   "id": "item_173",
+   "key": "MEMBROS_pernas_pernas quentes",
+   "cat": "MEMBROS",
+   "subcat": "Pernas",
+   "label": "Pernas quentes",
+   "exc_def": "Def",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnR"
+   ]
+  },
+  {
+   "id": "item_175",
+   "key": "MEMBROS_pes_caimbras",
+   "cat": "MEMBROS",
+   "subcat": "Pes",
+   "label": "Caimbras",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefXueF"
+   ]
+  },
+  {
+   "id": "item_176",
+   "key": "MEMBROS_pes_dor nos pes",
+   "cat": "MEMBROS",
+   "subcat": "Pes",
+   "label": "Dor nos pes",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "DefYgR",
+    "DefYnR",
+    "DefXueF",
+    "UmdCalorB",
+    "UmdFrioB"
+   ]
+  },
+  {
+   "id": "item_177",
+   "key": "MEMBROS_pes_formigamento",
+   "cat": "MEMBROS",
+   "subcat": "Pes",
+   "label": "Formigamento",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefXueF",
+    "AscYgF"
+   ]
+  },
+  {
+   "id": "item_178",
+   "key": "MEMBROS_pes_pes frios",
+   "cat": "MEMBROS",
+   "subcat": "Pes",
+   "label": "Pes frios",
+   "exc_def": "Def",
+   "fr_cal": "Frio",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR"
+   ]
+  },
+  {
+   "id": "item_179",
+   "key": "MEMBROS_pes_pes quentes",
+   "cat": "MEMBROS",
+   "subcat": "Pes",
+   "label": "Pes quentes",
+   "exc_def": "Def",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnR"
+   ]
+  },
+  {
+   "id": "item_181",
+   "key": "MEMBROS_edemas_s/alt",
+   "cat": "MEMBROS",
+   "subcat": "Edemas",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_182",
+   "key": "MEMBROS_edemas_com cacifo",
+   "cat": "MEMBROS",
+   "subcat": "Edemas",
+   "label": "Com cacifo",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR",
+    "DefYgBP"
+   ]
+  },
+  {
+   "id": "item_183",
+   "key": "MEMBROS_edemas_sem cacifo",
+   "cat": "MEMBROS",
+   "subcat": "Edemas",
+   "label": "Sem cacifo",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "UmdCalorBP",
+    "UmdFrioBP"
+   ]
+  },
+  {
+   "id": "item_185",
+   "key": "MEMBROS_unhas_fracas",
+   "cat": "MEMBROS",
+   "subcat": "Unhas",
+   "label": "Fracas",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefXueF"
+   ]
+  },
+  {
+   "id": "item_186",
+   "key": "MEMBROS_unhas_secas",
+   "cat": "MEMBROS",
+   "subcat": "Unhas",
+   "label": "Secas",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefXueF"
+   ]
+  },
+  {
+   "id": "item_188",
+   "key": "SONO_inicio_s/alt",
+   "cat": "SONO",
+   "subcat": "Inicio",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_189",
+   "key": "SONO_inicio_demora",
+   "cat": "SONO",
+   "subcat": "Inicio",
+   "label": "Demora",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefXueC",
+    "DefXueF",
+    "DefQiBP"
+   ]
+  },
+  {
+   "id": "item_190",
+   "key": "SONO_inicio_insonia em geral",
+   "cat": "SONO",
+   "subcat": "Inicio",
+   "label": "Insonia em geral",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_191",
+   "key": "SONO_inicio_agitado não dorme",
+   "cat": "SONO",
+   "subcat": "Inicio",
+   "label": "Agitado não dorme",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "FgC"
+   ]
+  },
+  {
+   "id": "item_193",
+   "key": "SONO_acorda no meio da noite_s/alt",
+   "cat": "SONO",
+   "subcat": "Acorda no meio da noite",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_194",
+   "key": "SONO_acorda no meio da noite_com azia",
+   "cat": "SONO",
+   "subcat": "Acorda no meio da noite",
+   "label": "Com azia",
+   "exc_def": "",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnC",
+    "FgC",
+    "FlmC",
+    "CalorE"
+   ]
+  },
+  {
+   "id": "item_195",
+   "key": "SONO_acorda no meio da noite_com boca seca",
+   "cat": "SONO",
+   "subcat": "Acorda no meio da noite",
+   "label": "Com boca seca",
+   "exc_def": "Def",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnE"
+   ]
+  },
+  {
+   "id": "item_196",
+   "key": "SONO_acorda no meio da noite_com calor e suor",
+   "cat": "SONO",
+   "subcat": "Acorda no meio da noite",
+   "label": "Com calor e suor",
+   "exc_def": "Exc",
+   "fr_cal": "Exc",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnC"
+   ]
+  },
+  {
+   "id": "item_197",
+   "key": "SONO_acorda no meio da noite_com pesadelo",
+   "cat": "SONO",
+   "subcat": "Acorda no meio da noite",
+   "label": "Com pesadelo",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "FgC"
+   ]
+  },
+  {
+   "id": "item_198",
+   "key": "SONO_acorda no meio da noite_por sono leve",
+   "cat": "SONO",
+   "subcat": "Acorda no meio da noite",
+   "label": "Por sono leve",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefXueC"
+   ]
+  },
+  {
+   "id": "item_199",
+   "key": "SONO_acorda no meio da noite_com taquicardia",
+   "cat": "SONO",
+   "subcat": "Acorda no meio da noite",
+   "label": "Com taquicardia",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnC",
+    "FgC"
+   ]
+  },
+  {
+   "id": "item_200",
+   "key": "SONO_acorda no meio da noite_pra urinar",
+   "cat": "SONO",
+   "subcat": "Acorda no meio da noite",
+   "label": "Pra urinar",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR"
+   ]
+  },
+  {
+   "id": "item_202",
+   "key": "SONO_acorda_s/alt",
+   "cat": "SONO",
+   "subcat": "Acorda",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_203",
+   "key": "SONO_ acorda pela manhã_sonolencia demais",
+   "cat": "SONO",
+   "subcat": " acorda pela manhã",
+   "label": "Sonolencia demais",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR",
+    "DefYgC"
+   ]
+  },
+  {
+   "id": "item_204",
+   "key": "SONO_ acorda pela manhã_cedo demais",
+   "cat": "SONO",
+   "subcat": " acorda pela manhã",
+   "label": "Cedo demais",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefXueC",
+    "DefQiVB"
+   ]
+  },
+  {
+   "id": "item_205",
+   "key": "SONO_ acorda pela manhã_cansado",
+   "cat": "SONO",
+   "subcat": " acorda pela manhã",
+   "label": "Cansado",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgC"
+   ]
+  },
+  {
+   "id": "item_207",
+   "key": "SONO_sonho_comida",
+   "cat": "SONO",
+   "subcat": "Sonho",
+   "label": "Comida",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiE",
+    "DefYnE"
+   ]
+  },
+  {
+   "id": "item_208",
+   "key": "SONO_sonho_sexo",
+   "cat": "SONO",
+   "subcat": "Sonho",
+   "label": "Sexo",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnR",
+    "DefYnC",
+    "FgC"
+   ]
+  },
+  {
+   "id": "item_209",
+   "key": "SONO_sonho_fogo",
+   "cat": "SONO",
+   "subcat": "Sonho",
+   "label": "Fogo",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnC",
+    "FgC"
+   ]
+  },
+  {
+   "id": "item_210",
+   "key": "SONO_sonho_floresta",
+   "cat": "SONO",
+   "subcat": "Sonho",
+   "label": "Floresta",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgQiF",
+    "AscYgF",
+    "VtF"
+   ]
+  },
+  {
+   "id": "item_211",
+   "key": "SONO_sonho_voar",
+   "cat": "SONO",
+   "subcat": "Sonho",
+   "label": "Voar",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "VtFrioP",
+    "VtCalorP",
+    "FlmFrioP",
+    "FlmCalorP"
+   ]
+  },
+  {
+   "id": "item_212",
+   "key": "SONO_sonho_abismo",
+   "cat": "SONO",
+   "subcat": "Sonho",
+   "label": "Abismo",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnR"
+   ]
+  },
+  {
+   "id": "item_213",
+   "key": "SONO_sonho_afogamento",
+   "cat": "SONO",
+   "subcat": "Sonho",
+   "label": "Afogamento",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR"
+   ]
+  },
+  {
+   "id": "item_214",
+   "key": "SONO_sonho_choromedo",
+   "cat": "SONO",
+   "subcat": "Sonho",
+   "label": "Choromedo",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "SecP",
+    "VtFrioP",
+    "VtCalorP",
+    "FlmFrioP",
+    "FlmCalorP"
+   ]
+  },
+  {
+   "id": "item_215",
+   "key": "SONO_sonho_raiva",
+   "cat": "SONO",
+   "subcat": "Sonho",
+   "label": "Raiva",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgQiF",
+    "AscYgF",
+    "VtF"
+   ]
+  },
+  {
+   "id": "item_216",
+   "key": "SONO_sonho_aguachuva",
+   "cat": "SONO",
+   "subcat": "Sonho",
+   "label": "Aguachuva",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgBP",
+    "UmdFrioBP"
+   ]
+  },
+  {
+   "id": "item_217",
+   "key": "SONO_sonho_inundacao",
+   "cat": "SONO",
+   "subcat": "Sonho",
+   "label": "Inundacao",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR",
+    "UmdFrioBP",
+    "UmdFrioB"
+   ]
+  },
+  {
+   "id": "item_219",
+   "key": "CEFALEIA_localizacao_cefaleia em geral",
+   "cat": "CEFALEIA",
+   "subcat": "Localizacao",
+   "label": "Cefaleia em geral",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_220",
+   "key": "CEFALEIA_localizacao_acima e atras do olho",
+   "cat": "CEFALEIA",
+   "subcat": "Localizacao",
+   "label": "Acima e atras do olho",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "VtF",
+    "AscYgF",
+    "DefXueF"
+   ]
+  },
+  {
+   "id": "item_221",
+   "key": "CEFALEIA_localizacao_ao redor da cabeca",
+   "cat": "CEFALEIA",
+   "subcat": "Localizacao",
+   "label": "Ao redor da cabeca",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "EstgQiF",
+    "VtFrioP"
+   ]
+  },
+  {
+   "id": "item_222",
+   "key": "CEFALEIA_localizacao_frontal",
+   "cat": "CEFALEIA",
+   "subcat": "Localizacao",
+   "label": "Frontal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "UmdFrioBP",
+    "UmdCalorBP",
+    "CalorE",
+    "RebelE",
+    "AlimE",
+    "DefQiBP"
+   ]
+  },
+  {
+   "id": "item_223",
+   "key": "CEFALEIA_localizacao_hemicrania",
+   "cat": "CEFALEIA",
+   "subcat": "Localizacao",
+   "label": "Hemicrania",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "AscYgF",
+    "DefXueF"
+   ]
+  },
+  {
+   "id": "item_224",
+   "key": "CEFALEIA_localizacao_occipital",
+   "cat": "CEFALEIA",
+   "subcat": "Localizacao",
+   "label": "Occipital",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "AscYgF",
+    "DefQiR"
+   ]
+  },
+  {
+   "id": "item_225",
+   "key": "CEFALEIA_localizacao_occipital e cervical",
+   "cat": "CEFALEIA",
+   "subcat": "Localizacao",
+   "label": "Occipital e cervical",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiR"
+   ]
+  },
+  {
+   "id": "item_226",
+   "key": "CEFALEIA_localizacao_occipital e nariz",
+   "cat": "CEFALEIA",
+   "subcat": "Localizacao",
+   "label": "Occipital e nariz",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Sup",
+   "syndromes": [
+    "VtFrioP",
+    "VtCalorP"
+   ]
+  },
+  {
+   "id": "item_227",
+   "key": "CEFALEIA_localizacao_s/alt",
+   "cat": "CEFALEIA",
+   "subcat": "Localizacao",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_228",
+   "key": "CEFALEIA_localizacao_temporal",
+   "cat": "CEFALEIA",
+   "subcat": "Localizacao",
+   "label": "Temporal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "AscYgF",
+    "DefXueF"
+   ]
+  },
+  {
+   "id": "item_229",
+   "key": "CEFALEIA_localizacao_vertex",
+   "cat": "CEFALEIA",
+   "subcat": "Localizacao",
+   "label": "Vertex",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "FgF",
+    "DefXueF"
+   ]
+  },
+  {
+   "id": "item_231",
+   "key": "CEFALEIA_tipo_fluxo de sangue",
+   "cat": "CEFALEIA",
+   "subcat": "Tipo",
+   "label": "Fluxo de sangue",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Sup",
+   "syndromes": [
+    "VtFrioP",
+    "VtCalorP"
+   ]
+  },
+  {
+   "id": "item_232",
+   "key": "CEFALEIA_tipo_forte em aperto",
+   "cat": "CEFALEIA",
+   "subcat": "Tipo",
+   "label": "Forte em aperto",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "VtF"
+   ]
+  },
+  {
+   "id": "item_233",
+   "key": "CEFALEIA_tipo_forte e latejante",
+   "cat": "CEFALEIA",
+   "subcat": "Tipo",
+   "label": "Forte e latejante",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "AscYgF",
+    "CalorE"
+   ]
+  },
+  {
+   "id": "item_234",
+   "key": "CEFALEIA_tipo_forte em peso",
+   "cat": "CEFALEIA",
+   "subcat": "Tipo",
+   "label": "Forte em peso",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "UmdFrioBP",
+    "UmdCalorBP",
+    "UmdCalorF"
+   ]
+  },
+  {
+   "id": "item_235",
+   "key": "CEFALEIA_tipo_fraca na fronte",
+   "cat": "CEFALEIA",
+   "subcat": "Tipo",
+   "label": "Fraca na fronte",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiBP"
+   ]
+  },
+  {
+   "id": "item_236",
+   "key": "CEFALEIA_tipo_fraca na lateral",
+   "cat": "CEFALEIA",
+   "subcat": "Tipo",
+   "label": "Fraca na lateral",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefXueF"
+   ]
+  },
+  {
+   "id": "item_237",
+   "key": "CEFALEIA_tipo_s/alt",
+   "cat": "CEFALEIA",
+   "subcat": "Tipo",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_238",
+   "key": "CEFALEIA_tipo_vazio na cabeca",
+   "cat": "CEFALEIA",
+   "subcat": "Tipo",
+   "label": "Vazio na cabeca",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiR"
+   ]
+  },
+  {
+   "id": "item_240",
+   "key": "CEFALEIA_piora antes do fluxo menstrual",
+   "cat": "CEFALEIA",
+   "subcat": "Piora antes do fluxo menstrual",
+   "label": "Piora antes do fluxo menstrual",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgQiF"
+   ]
+  },
+  {
+   "id": "item_241",
+   "key": "CEFALEIA_piora depois do fluxo menstrual",
+   "cat": "CEFALEIA",
+   "subcat": "Piora depois do fluxo menstrual",
+   "label": "Piora depois do fluxo menstrual",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefXueF"
+   ]
+  },
+  {
+   "id": "item_243",
+   "key": "TONTURA_intensidade_forte",
+   "cat": "TONTURA",
+   "subcat": "Intensidade",
+   "label": "Forte",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "FlmC"
+   ]
+  },
+  {
+   "id": "item_244",
+   "key": "TONTURA_intensidade_fraca",
+   "cat": "TONTURA",
+   "subcat": "Intensidade",
+   "label": "Fraca",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": []
+  },
+  {
+   "id": "item_245",
+   "key": "TONTURA_intensidade_tontura em geral",
+   "cat": "TONTURA",
+   "subcat": "Intensidade",
+   "label": "Tontura em geral",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "FlmC",
+    "DefXueF",
+    "AscYgF",
+    "DefYnR"
+   ]
+  },
+  {
+   "id": "item_246",
+   "key": "TONTURA_intensidade_s/alt",
+   "cat": "TONTURA",
+   "subcat": "Intensidade",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_248",
+   "key": "TONTURA_inicio_gradual",
+   "cat": "TONTURA",
+   "subcat": "Inicio",
+   "label": "Gradual",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": []
+  },
+  {
+   "id": "item_249",
+   "key": "TONTURA_inicio_s/alt",
+   "cat": "TONTURA",
+   "subcat": "Inicio",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_250",
+   "key": "TONTURA_inicio_subito",
+   "cat": "TONTURA",
+   "subcat": "Inicio",
+   "label": "Subito",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": []
+  },
+  {
+   "id": "item_252",
+   "key": "TONTURA_tipo_com cefaleia latejante",
+   "cat": "TONTURA",
+   "subcat": "Tipo",
+   "label": "Com cefaleia latejante",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "AscYgF"
+   ]
+  },
+  {
+   "id": "item_253",
+   "key": "TONTURA_tipo_com peso na cabeca",
+   "cat": "TONTURA",
+   "subcat": "Tipo",
+   "label": "Com peso na cabeca",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiBP",
+    "UmdCalorBP",
+    "UmdFrioBP"
+   ]
+  },
+  {
+   "id": "item_254",
+   "key": "TONTURA_tipo_escurece a vista",
+   "cat": "TONTURA",
+   "subcat": "Tipo",
+   "label": "Escurece a vista",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "DefQiBP",
+    "DefXueC",
+    "FlmC",
+    "DefXueF"
+   ]
+  },
+  {
+   "id": "item_255",
+   "key": "TONTURA_tipo_perde a linha ao andar",
+   "cat": "TONTURA",
+   "subcat": "Tipo",
+   "label": "Perde a linha ao andar",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "DefQiR",
+    "DefXueF"
+   ]
+  },
+  {
+   "id": "item_256",
+   "key": "TONTURA_tipo_s/alt",
+   "cat": "TONTURA",
+   "subcat": "Tipo",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_257",
+   "key": "TONTURA_tipo_vazio na cabeca",
+   "cat": "TONTURA",
+   "subcat": "Tipo",
+   "label": "Vazio na cabeca",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "DefQiR",
+    "DefYnR"
+   ]
+  },
+  {
+   "id": "item_258",
+   "key": "TONTURA_tipo_ver tudo girando",
+   "cat": "TONTURA",
+   "subcat": "Tipo",
+   "label": "Ver tudo girando",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "VtF"
+   ]
+  },
+  {
+   "id": "item_260",
+   "key": "OLHOS_alteracao nos olhos",
+   "cat": "OLHOS",
+   "subcat": "Alteracao nos olhos",
+   "label": "Alteracao nos olhos",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_261",
+   "key": "OLHOS_doenca nos olhos",
+   "cat": "OLHOS",
+   "subcat": "Doenca nos olhos",
+   "label": "Doenca nos olhos",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "AscYgF",
+    "VtF",
+    "UmdCalorF",
+    "FgF",
+    "EstgXueF",
+    "EstgQiF"
+   ]
+  },
+  {
+   "id": "item_262",
+   "key": "OLHOS_dor nos olhos",
+   "cat": "OLHOS",
+   "subcat": "Dor nos olhos",
+   "label": "Dor nos olhos",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "AscYgF",
+    "FgF",
+    "VtF",
+    "UmdCalorF",
+    "EstgXueF",
+    "DefXueF"
+   ]
+  },
+  {
+   "id": "item_263",
+   "key": "OLHOS_lacrimeja e epifora",
+   "cat": "OLHOS",
+   "subcat": "Lacrimeja e epifora",
+   "label": "Lacrimeja e epifora",
+   "exc_def": "",
+   "fr_cal": "Calor",
+   "sup_prof": "",
+   "syndromes": [
+    "DefYnP",
+    "DefYnE",
+    "DefXueF",
+    "FgF",
+    "UmdCalorF"
+   ]
+  },
+  {
+   "id": "item_264",
+   "key": "OLHOS_secura",
+   "cat": "OLHOS",
+   "subcat": "Secura",
+   "label": "Secura",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnR",
+    "DefXueF"
+   ]
+  },
+  {
+   "id": "item_265",
+   "key": "OLHOS_vermelhos",
+   "cat": "OLHOS",
+   "subcat": "Vermelhos",
+   "label": "Vermelhos",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "AscYgF",
+    "FgF"
+   ]
+  },
+  {
+   "id": "item_267",
+   "key": "OLHOS_visao_embacada",
+   "cat": "OLHOS",
+   "subcat": "Visao",
+   "label": "Embacada",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefXueF"
+   ]
+  },
+  {
+   "id": "item_268",
+   "key": "OLHOS_visao_fraca",
+   "cat": "OLHOS",
+   "subcat": "Visao",
+   "label": "Fraca",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefXueF"
+   ]
+  },
+  {
+   "id": "item_269",
+   "key": "OLHOS_visao_ofuscacoes",
+   "cat": "OLHOS",
+   "subcat": "Visao",
+   "label": "Ofuscacoes",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgQiF",
+    "AscYgF",
+    "DefXueF",
+    "DefQiBP"
+   ]
+  },
+  {
+   "id": "item_270",
+   "key": "OLHOS_visao_olhosvidrados",
+   "cat": "OLHOS",
+   "subcat": "Visao",
+   "label": "Olhosvidrados",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiVB"
+   ]
+  },
+  {
+   "id": "item_271",
+   "key": "OLHOS_visao_pontos com brilho",
+   "cat": "OLHOS",
+   "subcat": "Visao",
+   "label": "Pontos com brilho",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "AscYgF"
+   ]
+  },
+  {
+   "id": "item_272",
+   "key": "OLHOS_visao_pontos escuros",
+   "cat": "OLHOS",
+   "subcat": "Visao",
+   "label": "Pontos escuros",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefXueF"
+   ]
+  },
+  {
+   "id": "item_273",
+   "key": "OLHOS_visao_s/alt",
+   "cat": "OLHOS",
+   "subcat": "Visao",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_275",
+   "key": "NARIZOUVIDO_nariz_entupido",
+   "cat": "NARIZOUVIDO",
+   "subcat": "Nariz",
+   "label": "Entupido",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Sup",
+   "syndromes": [
+    "VtFrioP",
+    "VtCalorP"
+   ]
+  },
+  {
+   "id": "item_276",
+   "key": "NARIZOUVIDO_nariz_epistaxe",
+   "cat": "NARIZOUVIDO",
+   "subcat": "Nariz",
+   "label": "Epistaxe",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "",
+   "syndromes": [
+    "FgF",
+    "VtCalorP",
+    "UmdCalorIG",
+    "UmdCalorB"
+   ]
+  },
+  {
+   "id": "item_278",
+   "key": "NARIZOUVIDO_secrecao_s/alt",
+   "cat": "NARIZOUVIDO",
+   "subcat": "Secrecao",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_279",
+   "key": "NARIZOUVIDO_secrecao_amarela",
+   "cat": "NARIZOUVIDO",
+   "subcat": "Secrecao",
+   "label": "Amarela",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Sup",
+   "syndromes": [
+    "VtCalorP"
+   ]
+  },
+  {
+   "id": "item_280",
+   "key": "NARIZOUVIDO_secrecao_branca",
+   "cat": "NARIZOUVIDO",
+   "subcat": "Secrecao",
+   "label": "Branca",
+   "exc_def": "Exc",
+   "fr_cal": "Frio",
+   "sup_prof": "Sup",
+   "syndromes": [
+    "VtFrioP"
+   ]
+  },
+  {
+   "id": "item_282",
+   "key": "NARIZOUVIDO_ouvido_s/alt",
+   "cat": "NARIZOUVIDO",
+   "subcat": "Ouvido",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_283",
+   "key": "NARIZOUVIDO_ouvido_surdez gradual",
+   "cat": "NARIZOUVIDO",
+   "subcat": "Ouvido",
+   "label": "Surdez gradual",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefXueC",
+    "DefQiC"
+   ]
+  },
+  {
+   "id": "item_284",
+   "key": "NARIZOUVIDO_ouvido_surdez repentina",
+   "cat": "NARIZOUVIDO",
+   "subcat": "Ouvido",
+   "label": "Surdez repentina",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "AscYgF",
+    "FgF"
+   ]
+  },
+  {
+   "id": "item_285",
+   "key": "NARIZOUVIDO_ouvido_zumbidos",
+   "cat": "NARIZOUVIDO",
+   "subcat": "Ouvido",
+   "label": "Zumbidos",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnR",
+    "AscYgF",
+    "DefXueF",
+    "FgF",
+    "DefQiR"
+   ]
+  },
+  {
+   "id": "item_286",
+   "key": "NARIZOUVIDO_ouvido_zumbido agudo",
+   "cat": "NARIZOUVIDO",
+   "subcat": "Ouvido",
+   "label": "Zumbido agudo",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "AscYgF",
+    "FgF"
+   ]
+  },
+  {
+   "id": "item_287",
+   "key": "NARIZOUVIDO_ouvido_zumbido grave",
+   "cat": "NARIZOUVIDO",
+   "subcat": "Ouvido",
+   "label": "Zumbido grave",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiR",
+    "DefYnR"
+   ]
+  },
+  {
+   "id": "item_288",
+   "key": "NARIZOUVIDO_ouvido_alivia com pressao",
+   "cat": "NARIZOUVIDO",
+   "subcat": "Ouvido",
+   "label": "Alivia com pressao",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_289",
+   "key": "NARIZOUVIDO_ouvido_cera e coceira",
+   "cat": "NARIZOUVIDO",
+   "subcat": "Ouvido",
+   "label": "Cera e coceira",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "UmdCalorF"
+   ]
+  },
+  {
+   "id": "item_291",
+   "key": "BOCAGARGANTA_aftas",
+   "cat": "BOCAGARGANTA",
+   "subcat": "Aftas",
+   "label": "Aftas",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "",
+   "syndromes": [
+    "CalorE",
+    "FgC"
+   ]
+  },
+  {
+   "id": "item_292",
+   "key": "BOCAGARGANTA_muita salivacao",
+   "cat": "BOCAGARGANTA",
+   "subcat": "Muita salivacao",
+   "label": "Muita salivacao",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "AlimE",
+    "DefYgBP"
+   ]
+  },
+  {
+   "id": "item_293",
+   "key": "BOCAGARGANTA_boca seca",
+   "cat": "BOCAGARGANTA",
+   "subcat": "Boca seca",
+   "label": "Boca seca",
+   "exc_def": "",
+   "fr_cal": "Calor",
+   "sup_prof": "",
+   "syndromes": [
+    "DefYnE",
+    "CalorE"
+   ]
+  },
+  {
+   "id": "item_294",
+   "key": "BOCAGARGANTA_gengivite",
+   "cat": "BOCAGARGANTA",
+   "subcat": "Gengivite",
+   "label": "Gengivite",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "",
+   "syndromes": [
+    "CalorE"
+   ]
+  },
+  {
+   "id": "item_295",
+   "key": "BOCAGARGANTA_mau halito",
+   "cat": "BOCAGARGANTA",
+   "subcat": "Mau halito",
+   "label": "Mau halito",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "",
+   "syndromes": [
+    "CalorE",
+    "AlimE",
+    "UmdCalorBP"
+   ]
+  },
+  {
+   "id": "item_297",
+   "key": "BOCAGARGANTA_gostonaboca_s/alt",
+   "cat": "BOCAGARGANTA",
+   "subcat": "Gostonaboca",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_298",
+   "key": "BOCAGARGANTA_gostonaboca_adocicado",
+   "cat": "BOCAGARGANTA",
+   "subcat": "Gostonaboca",
+   "label": "Adocicado",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "UmdCalorBP"
+   ]
+  },
+  {
+   "id": "item_299",
+   "key": "BOCAGARGANTA_gostonaboca_amargo",
+   "cat": "BOCAGARGANTA",
+   "subcat": "Gostonaboca",
+   "label": "Amargo",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "FgC",
+    "FgF"
+   ]
+  },
+  {
+   "id": "item_300",
+   "key": "BOCAGARGANTA_gostonaboca_metalico",
+   "cat": "BOCAGARGANTA",
+   "subcat": "Gostonaboca",
+   "label": "Metalico",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "UmdCalorIG"
+   ]
+  },
+  {
+   "id": "item_301",
+   "key": "BOCAGARGANTA_gostonaboca_salgado",
+   "cat": "BOCAGARGANTA",
+   "subcat": "Gostonaboca",
+   "label": "Salgado",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiR"
+   ]
+  },
+  {
+   "id": "item_303",
+   "key": "BOCAGARGANTA_garganta anormal",
+   "cat": "BOCAGARGANTA",
+   "subcat": "Garganta anormal",
+   "label": "Garganta anormal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_304",
+   "key": "BOCAGARGANTA_dores na garganta",
+   "cat": "BOCAGARGANTA",
+   "subcat": "Dores na garganta",
+   "label": "Dores na garganta",
+   "exc_def": "Def",
+   "fr_cal": "Calor",
+   "sup_prof": "",
+   "syndromes": [
+    "VtCalorP",
+    "DefYnP",
+    "DefYnR",
+    "CalorE"
+   ]
+  },
+  {
+   "id": "item_305",
+   "key": "BOCAGARGANTA_garganta seca",
+   "cat": "BOCAGARGANTA",
+   "subcat": "Garganta seca",
+   "label": "Garganta seca",
+   "exc_def": "",
+   "fr_cal": "Calor",
+   "sup_prof": "",
+   "syndromes": [
+    "DefYnP",
+    "VtCalorP",
+    "DefYnR",
+    "CalorE"
+   ]
+  },
+  {
+   "id": "item_306",
+   "key": "BOCAGARGANTA_rouquidao e pigarro",
+   "cat": "BOCAGARGANTA",
+   "subcat": "Rouquidao e pigarro",
+   "label": "Rouquidao e pigarro",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnP"
+   ]
+  },
+  {
+   "id": "item_307",
+   "key": "BOCAGARGANTA_caroço na garganta",
+   "cat": "BOCAGARGANTA",
+   "subcat": "Caroço na garganta",
+   "label": "Caroço na garganta",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgQiF"
+   ]
+  },
+  {
+   "id": "item_308",
+   "key": "BOCAGARGANTA_dor de dente",
+   "cat": "BOCAGARGANTA",
+   "subcat": "Dor de dente",
+   "label": "Dor de dente",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "UmdCalorIG",
+    "UmdFrioIG"
+   ]
+  },
+  {
+   "id": "item_310",
+   "key": "RESPIRATORIO_tosse_s/alt",
+   "cat": "RESPIRATORIO",
+   "subcat": "Tosse",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_311",
+   "key": "RESPIRATORIO_tosse_tosse em geral",
+   "cat": "RESPIRATORIO",
+   "subcat": "Tosse",
+   "label": "Tosse em geral",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_312",
+   "key": "RESPIRATORIO_tosse_aguda",
+   "cat": "RESPIRATORIO",
+   "subcat": "Tosse",
+   "label": "Aguda",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Sup",
+   "syndromes": [
+    "SecP",
+    "FlmFrioP",
+    "FlmCalorP"
+   ]
+  },
+  {
+   "id": "item_313",
+   "key": "RESPIRATORIO_tosse_cronica",
+   "cat": "RESPIRATORIO",
+   "subcat": "Tosse",
+   "label": "Cronica",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnP",
+    "DefQiP"
+   ]
+  },
+  {
+   "id": "item_315",
+   "key": "RESPIRATORIO_tosse_s/alt",
+   "cat": "RESPIRATORIO",
+   "subcat": "Tosse",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_316",
+   "key": "RESPIRATORIO_tosse_forte",
+   "cat": "RESPIRATORIO",
+   "subcat": "Tosse",
+   "label": "Forte",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Sup",
+   "syndromes": [
+    "SecP",
+    "FlmFrioP",
+    "FlmCalorP"
+   ]
+  },
+  {
+   "id": "item_317",
+   "key": "RESPIRATORIO_tosse_fraca",
+   "cat": "RESPIRATORIO",
+   "subcat": "Tosse",
+   "label": "Fraca",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnP",
+    "DefQiP"
+   ]
+  },
+  {
+   "id": "item_319",
+   "key": "RESPIRATORIO_tosse_chiadoasma",
+   "cat": "RESPIRATORIO",
+   "subcat": "Tosse",
+   "label": "Chiadoasma",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "FlmFrioP",
+    "FlmCalorP",
+    "DefYgR",
+    "DefQiP"
+   ]
+  },
+  {
+   "id": "item_320",
+   "key": "RESPIRATORIO_tosse_pioraanoite",
+   "cat": "RESPIRATORIO",
+   "subcat": "Tosse",
+   "label": "Pioraanoite",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "DefYnP"
+   ]
+  },
+  {
+   "id": "item_322",
+   "key": "RESPIRATORIO_tosse_s/alt",
+   "cat": "RESPIRATORIO",
+   "subcat": "Tosse",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_323",
+   "key": "RESPIRATORIO_tosse_catarro amarelo garganta",
+   "cat": "RESPIRATORIO",
+   "subcat": "Tosse",
+   "label": "Catarro amarelo garganta",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Sup",
+   "syndromes": [
+    "VtCalorP"
+   ]
+  },
+  {
+   "id": "item_324",
+   "key": "RESPIRATORIO_tosse_catarro amarelo pulmao",
+   "cat": "RESPIRATORIO",
+   "subcat": "Tosse",
+   "label": "Catarro amarelo pulmao",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Sup",
+   "syndromes": [
+    "FlmCalorP"
+   ]
+  },
+  {
+   "id": "item_325",
+   "key": "RESPIRATORIO_tosse_catarro branco garganta",
+   "cat": "RESPIRATORIO",
+   "subcat": "Tosse",
+   "label": "Catarro branco garganta",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Sup",
+   "syndromes": [
+    "VtFrioP"
+   ]
+  },
+  {
+   "id": "item_326",
+   "key": "RESPIRATORIO_tosse_catarro branco pulmao",
+   "cat": "RESPIRATORIO",
+   "subcat": "Tosse",
+   "label": "Catarro branco pulmao",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Sup",
+   "syndromes": [
+    "FlmFrioP"
+   ]
+  },
+  {
+   "id": "item_327",
+   "key": "RESPIRATORIO_tosse_tosse seca",
+   "cat": "RESPIRATORIO",
+   "subcat": "Tosse",
+   "label": "Tosse seca",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Sup",
+   "syndromes": [
+    "SecP"
+   ]
+  },
+  {
+   "id": "item_329",
+   "key": "RESPIRATORIO_suspiros",
+   "cat": "RESPIRATORIO",
+   "subcat": "Suspiros",
+   "label": "Suspiros",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "EstgQiF"
+   ]
+  },
+  {
+   "id": "item_330",
+   "key": "RESPIRATORIO_bocejos",
+   "cat": "RESPIRATORIO",
+   "subcat": "Bocejos",
+   "label": "Bocejos",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgQiF",
+    "EstgXueF"
+   ]
+  },
+  {
+   "id": "item_331",
+   "key": "RESPIRATORIO_empiema",
+   "cat": "RESPIRATORIO",
+   "subcat": "Empiema",
+   "label": "Empiema",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": []
+  },
+  {
+   "id": "item_333",
+   "key": "TORAX_coracao_s/alt",
+   "cat": "TORAX",
+   "subcat": "Coracao",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_334",
+   "key": "TORAX_coracao_dor precordial",
+   "cat": "TORAX",
+   "subcat": "Coracao",
+   "label": "Dor precordial",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiC",
+    "EstgXueC",
+    "EstgQiF",
+    "EstgXueF"
+   ]
+  },
+  {
+   "id": "item_335",
+   "key": "TORAX_coracao_palpitacao",
+   "cat": "TORAX",
+   "subcat": "Coracao",
+   "label": "Palpitacao",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiC",
+    "DefYgC",
+    "DefYnC",
+    "DefXueC",
+    "FgC",
+    "FlmC",
+    "EstgXueC",
+    "ColapsQiC"
+   ]
+  },
+  {
+   "id": "item_336",
+   "key": "TORAX_coracao_problema cardiaco",
+   "cat": "TORAX",
+   "subcat": "Coracao",
+   "label": "Problema cardiaco",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgXueC",
+    "FgC",
+    "FlmC"
+   ]
+  },
+  {
+   "id": "item_337",
+   "key": "TORAX_coracao_taquicardia",
+   "cat": "TORAX",
+   "subcat": "Coracao",
+   "label": "Taquicardia",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiC",
+    "DefYgC",
+    "DefYnC",
+    "DefXueC",
+    "FgC",
+    "FlmC",
+    "EstgXueC",
+    "ColapsQiC"
+   ]
+  },
+  {
+   "id": "item_339",
+   "key": "TORAX_peito_dor no peito",
+   "cat": "TORAX",
+   "subcat": "Peito",
+   "label": "Dor no peito",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgQiF",
+    "EstgXueC"
+   ]
+  },
+  {
+   "id": "item_340",
+   "key": "TORAX_peito_pressao no peito",
+   "cat": "TORAX",
+   "subcat": "Peito",
+   "label": "Pressao no peito",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgQiF",
+    "FlmFrioP",
+    "FlmCalorP"
+   ]
+  },
+  {
+   "id": "item_341",
+   "key": "TORAX_peito_s/alt",
+   "cat": "TORAX",
+   "subcat": "Peito",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_343",
+   "key": "TORAX_desconforto nos hipocondrios",
+   "cat": "TORAX",
+   "subcat": "Desconforto nos hipocondrios",
+   "label": "Desconforto nos hipocondrios",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgQiF",
+    "UmdCalorF"
+   ]
+  },
+  {
+   "id": "item_344",
+   "key": "TORAX_dor nos hipocondrios",
+   "cat": "TORAX",
+   "subcat": "Dor nos hipocondrios",
+   "label": "Dor nos hipocondrios",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgQiF",
+    "UmdCalorF",
+    "FgF"
+   ]
+  },
+  {
+   "id": "item_345",
+   "key": "TORAX_dor intercostal",
+   "cat": "TORAX",
+   "subcat": "Dor intercostal",
+   "label": "Dor intercostal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_346",
+   "key": "TORAX_mamas doloridas e inchadas",
+   "cat": "TORAX",
+   "subcat": "Mamas doloridas e inchadas",
+   "label": "Mamas doloridas e inchadas",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgQiF"
+   ]
+  },
+  {
+   "id": "item_348",
+   "key": "GASTRICO_sede_s/alt",
+   "cat": "GASTRICO",
+   "subcat": "Sede",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_349",
+   "key": "GASTRICO_sede_ausencia de sede",
+   "cat": "GASTRICO",
+   "subcat": "Sede",
+   "label": "Ausencia de sede",
+   "exc_def": "Exc",
+   "fr_cal": "Frio",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "FrioE",
+    "UmdFrioBP"
+   ]
+  },
+  {
+   "id": "item_350",
+   "key": "GASTRICO_sede_com desejo de beber",
+   "cat": "GASTRICO",
+   "subcat": "Sede",
+   "label": "Com desejo de beber",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "CalorE",
+    "UmdCalorBP"
+   ]
+  },
+  {
+   "id": "item_351",
+   "key": "GASTRICO_sede_sem desejo de beber",
+   "cat": "GASTRICO",
+   "subcat": "Sede",
+   "label": "Sem desejo de beber",
+   "exc_def": "Exc",
+   "fr_cal": "Frio",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "FrioE",
+    "UmdFrioBP"
+   ]
+  },
+  {
+   "id": "item_353",
+   "key": "GASTRICO_desejo_alimentos frios",
+   "cat": "GASTRICO",
+   "subcat": "Desejo",
+   "label": "Alimentos frios",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "",
+   "syndromes": [
+    "CalorE"
+   ]
+  },
+  {
+   "id": "item_354",
+   "key": "GASTRICO_desejo_alimentos quentes",
+   "cat": "GASTRICO",
+   "subcat": "Desejo",
+   "label": "Alimentos quentes",
+   "exc_def": "Exc",
+   "fr_cal": "Frio",
+   "sup_prof": "",
+   "syndromes": [
+    "FrioE"
+   ]
+  },
+  {
+   "id": "item_355",
+   "key": "GASTRICO_desejo_coisas estranhas",
+   "cat": "GASTRICO",
+   "subcat": "Desejo",
+   "label": "Coisas estranhas",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "Parasita"
+   ]
+  },
+  {
+   "id": "item_356",
+   "key": "GASTRICO_desejo_amargo",
+   "cat": "GASTRICO",
+   "subcat": "Desejo",
+   "label": "Amargo",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiC"
+   ]
+  },
+  {
+   "id": "item_357",
+   "key": "GASTRICO_desejo_azedo",
+   "cat": "GASTRICO",
+   "subcat": "Desejo",
+   "label": "Azedo",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefXueF"
+   ]
+  },
+  {
+   "id": "item_358",
+   "key": "GASTRICO_desejo_doce",
+   "cat": "GASTRICO",
+   "subcat": "Desejo",
+   "label": "Doce",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiBP"
+   ]
+  },
+  {
+   "id": "item_359",
+   "key": "GASTRICO_desejo_picante",
+   "cat": "GASTRICO",
+   "subcat": "Desejo",
+   "label": "Picante",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiP"
+   ]
+  },
+  {
+   "id": "item_360",
+   "key": "GASTRICO_desejo_salgado",
+   "cat": "GASTRICO",
+   "subcat": "Desejo",
+   "label": "Salgado",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiR"
+   ]
+  },
+  {
+   "id": "item_362",
+   "key": "GASTRICO_aversao_azedo",
+   "cat": "GASTRICO",
+   "subcat": "Aversao",
+   "label": "Azedo",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "FgF"
+   ]
+  },
+  {
+   "id": "item_363",
+   "key": "GASTRICO_aversao_doce",
+   "cat": "GASTRICO",
+   "subcat": "Aversao",
+   "label": "Doce",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "UmdCalorBP",
+    "UmdFrioBP"
+   ]
+  },
+  {
+   "id": "item_364",
+   "key": "GASTRICO_aversao_gordura",
+   "cat": "GASTRICO",
+   "subcat": "Aversao",
+   "label": "Gordura",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "UmdCalorF",
+    "UmdCalorBP"
+   ]
+  },
+  {
+   "id": "item_365",
+   "key": "GASTRICO_aversao_picante",
+   "cat": "GASTRICO",
+   "subcat": "Aversao",
+   "label": "Picante",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "VtFrioP",
+    "VtCalorP",
+    "SecP",
+    "FlmFrioP",
+    "FlmCalorP"
+   ]
+  },
+  {
+   "id": "item_366",
+   "key": "GASTRICO_aversao_salgado",
+   "cat": "GASTRICO",
+   "subcat": "Aversao",
+   "label": "Salgado",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "UmdCalorB",
+    "UmdFrioB",
+    "DefYgR",
+    "DefYnR"
+   ]
+  },
+  {
+   "id": "item_368",
+   "key": "GASTRICO_apetite_anorexia",
+   "cat": "GASTRICO",
+   "subcat": "Apetite",
+   "label": "Anorexia",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiBP",
+    "UmdCalorBP",
+    "DefQiE",
+    "FrioE"
+   ]
+  },
+  {
+   "id": "item_369",
+   "key": "GASTRICO_apetite_bulimia",
+   "cat": "GASTRICO",
+   "subcat": "Apetite",
+   "label": "Bulimia",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "CalorE"
+   ]
+  },
+  {
+   "id": "item_370",
+   "key": "GASTRICO_apetite_fome sem conseguir comer",
+   "cat": "GASTRICO",
+   "subcat": "Apetite",
+   "label": "Fome sem conseguir comer",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnE"
+   ]
+  },
+  {
+   "id": "item_371",
+   "key": "GASTRICO_apetite_fora de hora",
+   "cat": "GASTRICO",
+   "subcat": "Apetite",
+   "label": "Fora de hora",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "CalorE"
+   ]
+  },
+  {
+   "id": "item_372",
+   "key": "GASTRICO_apetite_irregular",
+   "cat": "GASTRICO",
+   "subcat": "Apetite",
+   "label": "Irregular",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "AlimE",
+    "FrioE"
+   ]
+  },
+  {
+   "id": "item_373",
+   "key": "GASTRICO_apetite_s/alt",
+   "cat": "GASTRICO",
+   "subcat": "Apetite",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_375",
+   "key": "GASTRICO_estomago_s/alt",
+   "cat": "GASTRICO",
+   "subcat": "Estomago",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_376",
+   "key": "GASTRICO_estomago_aperto",
+   "cat": "GASTRICO",
+   "subcat": "Estomago",
+   "label": "Aperto",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgQiF"
+   ]
+  },
+  {
+   "id": "item_377",
+   "key": "GASTRICO_estomago_digestao rapida",
+   "cat": "GASTRICO",
+   "subcat": "Estomago",
+   "label": "Digestao rapida",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "CalorE"
+   ]
+  },
+  {
+   "id": "item_378",
+   "key": "GASTRICO_estomago_distensao",
+   "cat": "GASTRICO",
+   "subcat": "Estomago",
+   "label": "Distensao",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiBP",
+    "DefYgBP",
+    "UmdFrioIG",
+    "UmdCalorIG",
+    "AlimE"
+   ]
+  },
+  {
+   "id": "item_379",
+   "key": "GASTRICO_estomago_dor em pontada",
+   "cat": "GASTRICO",
+   "subcat": "Estomago",
+   "label": "Dor em pontada",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgXueF"
+   ]
+  },
+  {
+   "id": "item_380",
+   "key": "GASTRICO_estomago_empachamento",
+   "cat": "GASTRICO",
+   "subcat": "Estomago",
+   "label": "Empachamento",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgQiF",
+    "DefQiBP",
+    "DefYgBP"
+   ]
+  },
+  {
+   "id": "item_381",
+   "key": "GASTRICO_estomago_má digestao",
+   "cat": "GASTRICO",
+   "subcat": "Estomago",
+   "label": "Má digestao",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiBP",
+    "DefQiE",
+    "EstgQiF"
+   ]
+  },
+  {
+   "id": "item_382",
+   "key": "GASTRICO_estomago_peso",
+   "cat": "GASTRICO",
+   "subcat": "Estomago",
+   "label": "Peso",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiBP",
+    "DefQiE",
+    "AlimE"
+   ]
+  },
+  {
+   "id": "item_383",
+   "key": "GASTRICO_estomago_queimacao",
+   "cat": "GASTRICO",
+   "subcat": "Estomago",
+   "label": "Queimacao",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "CalorE",
+    "DefYnE",
+    "EstgQiF",
+    "FgF"
+   ]
+  },
+  {
+   "id": "item_385",
+   "key": "GASTRICO_estomago_nauseas",
+   "cat": "GASTRICO",
+   "subcat": "Estomago",
+   "label": "Nauseas",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "DefQiBP",
+    "DefYgBP",
+    "UmdCalorBP",
+    "UmdFrioBP",
+    "DefYnE"
+   ]
+  },
+  {
+   "id": "item_386",
+   "key": "GASTRICO_estomago_gases",
+   "cat": "GASTRICO",
+   "subcat": "Estomago",
+   "label": "Gases",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "DefQiBP",
+    "DefYgBP",
+    "UmdCalorIG",
+    "DefQiE"
+   ]
+  },
+  {
+   "id": "item_387",
+   "key": "GASTRICO_estomago_azia e refluxo",
+   "cat": "GASTRICO",
+   "subcat": "Estomago",
+   "label": "Azia e refluxo",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "AlimE",
+    "RebelE"
+   ]
+  },
+  {
+   "id": "item_389",
+   "key": "GASTRICO_abdome_distensao em geral",
+   "cat": "GASTRICO",
+   "subcat": "Abdome",
+   "label": "Distensao em geral",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_390",
+   "key": "GASTRICO_abdome_obstrução em geral",
+   "cat": "GASTRICO",
+   "subcat": "Abdome",
+   "label": "Obstrução em geral",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_391",
+   "key": "GASTRICO_abdome_distensao no baixo ventre",
+   "cat": "GASTRICO",
+   "subcat": "Abdome",
+   "label": "Distensao no baixo ventre",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "CalorID",
+    "ObstID"
+   ]
+  },
+  {
+   "id": "item_392",
+   "key": "GASTRICO_abdome_dor abdominal",
+   "cat": "GASTRICO",
+   "subcat": "Abdome",
+   "label": "Dor abdominal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "AlimE",
+    "DefQiE",
+    "UmdCalorF"
+   ]
+  },
+  {
+   "id": "item_393",
+   "key": "GASTRICO_abdome_dor periumbilical",
+   "cat": "GASTRICO",
+   "subcat": "Abdome",
+   "label": "Dor periumbilical",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "CalorID",
+    "ObstID"
+   ]
+  },
+  {
+   "id": "item_394",
+   "key": "GASTRICO_abdome_queimacao periumbilical",
+   "cat": "GASTRICO",
+   "subcat": "Abdome",
+   "label": "Queimacao periumbilical",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "CalorID"
+   ]
+  },
+  {
+   "id": "item_395",
+   "key": "GASTRICO_abdome_s/alt",
+   "cat": "GASTRICO",
+   "subcat": "Abdome",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_397",
+   "key": "GASTRICO_falta de paladar",
+   "cat": "GASTRICO",
+   "subcat": "Falta de paladar",
+   "label": "Falta de paladar",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiBP"
+   ]
+  },
+  {
+   "id": "item_399",
+   "key": "INTESTINO_incontinencia",
+   "cat": "INTESTINO",
+   "subcat": "Incontinencia",
+   "label": "Incontinencia",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_400",
+   "key": "INTESTINO_hemorroidas",
+   "cat": "INTESTINO",
+   "subcat": "Hemorroidas",
+   "label": "Hemorroidas",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiBP",
+    "ColapsQiBP",
+    "UmdCalorIG"
+   ]
+  },
+  {
+   "id": "item_401",
+   "key": "INTESTINO_prolapso anal",
+   "cat": "INTESTINO",
+   "subcat": "Prolapso anal",
+   "label": "Prolapso anal",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiBP",
+    "ColapsQiBP",
+    "DefXueF"
+   ]
+  },
+  {
+   "id": "item_403",
+   "key": "INTESTINO_frequencia_anormal",
+   "cat": "INTESTINO",
+   "subcat": "Frequencia",
+   "label": "Anormal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": []
+  },
+  {
+   "id": "item_404",
+   "key": "INTESTINO_frequencia_constipacao",
+   "cat": "INTESTINO",
+   "subcat": "Frequencia",
+   "label": "Constipacao",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgQiF",
+    "CalorID",
+    "CalorID",
+    "FgC",
+    "FgC",
+    "DefYnE",
+    "DefQiBP",
+    "DefYnR"
+   ]
+  },
+  {
+   "id": "item_405",
+   "key": "INTESTINO_frequencia_diaria",
+   "cat": "INTESTINO",
+   "subcat": "Frequencia",
+   "label": "Diaria",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_406",
+   "key": "INTESTINO_frequencia_mais de 2x por dia",
+   "cat": "INTESTINO",
+   "subcat": "Frequencia",
+   "label": "Mais de 2x por dia",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiBP"
+   ]
+  },
+  {
+   "id": "item_408",
+   "key": "INTESTINO_formato_bolinhas",
+   "cat": "INTESTINO",
+   "subcat": "Formato",
+   "label": "Bolinhas",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgQiF"
+   ]
+  },
+  {
+   "id": "item_409",
+   "key": "INTESTINO_formato_consistente",
+   "cat": "INTESTINO",
+   "subcat": "Formato",
+   "label": "Consistente",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_410",
+   "key": "INTESTINO_formato_diarreia",
+   "cat": "INTESTINO",
+   "subcat": "Formato",
+   "label": "Diarreia",
+   "exc_def": "Def",
+   "fr_cal": "Frio",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiBP"
+   ]
+  },
+  {
+   "id": "item_411",
+   "key": "INTESTINO_formato_diarreia na aurora",
+   "cat": "INTESTINO",
+   "subcat": "Formato",
+   "label": "Diarreia na aurora",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR"
+   ]
+  },
+  {
+   "id": "item_412",
+   "key": "INTESTINO_formato_finas como lapis",
+   "cat": "INTESTINO",
+   "subcat": "Formato",
+   "label": "Finas como lapis",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiBP"
+   ]
+  },
+  {
+   "id": "item_413",
+   "key": "INTESTINO_formato_grudentas",
+   "cat": "INTESTINO",
+   "subcat": "Formato",
+   "label": "Grudentas",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiBP",
+    "UmdFrioBP",
+    "UmdCalorBP"
+   ]
+  },
+  {
+   "id": "item_414",
+   "key": "INTESTINO_formato_ressecadas",
+   "cat": "INTESTINO",
+   "subcat": "Formato",
+   "label": "Ressecadas",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": []
+  },
+  {
+   "id": "item_415",
+   "key": "INTESTINO_formato_com sangue ou muco",
+   "cat": "INTESTINO",
+   "subcat": "Formato",
+   "label": "Com sangue ou muco",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "UmdCalorIG"
+   ]
+  },
+  {
+   "id": "item_416",
+   "key": "INTESTINO_formato_com restos alimentares",
+   "cat": "INTESTINO",
+   "subcat": "Formato",
+   "label": "Com restos alimentares",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiBP",
+    "DefYgBP"
+   ]
+  },
+  {
+   "id": "item_418",
+   "key": "URINA_urina anormal",
+   "cat": "URINA",
+   "subcat": "Urina anormal",
+   "label": "Urina anormal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_419",
+   "key": "URINA_bexiga caida",
+   "cat": "URINA",
+   "subcat": "Bexiga caida",
+   "label": "Bexiga caida",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiBP",
+    "ColapsQiBP"
+   ]
+  },
+  {
+   "id": "item_420",
+   "key": "URINA_escape de urina com esforço",
+   "cat": "URINA",
+   "subcat": "Escape de urina com esforço",
+   "label": "Escape de urina com esforço",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiBP",
+    "DefYgR"
+   ]
+  },
+  {
+   "id": "item_421",
+   "key": "URINA_incontinencia urinaria",
+   "cat": "URINA",
+   "subcat": "Incontinencia urinaria",
+   "label": "Incontinencia urinaria",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR"
+   ]
+  },
+  {
+   "id": "item_422",
+   "key": "URINA_peso no hipogastrio",
+   "cat": "URINA",
+   "subcat": "Peso no hipogastrio",
+   "label": "Peso no hipogastrio",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "UmdCalorB",
+    "UmdFrioB"
+   ]
+  },
+  {
+   "id": "item_424",
+   "key": "URINA_frequencia_5 a 7x",
+   "cat": "URINA",
+   "subcat": "Frequencia",
+   "label": "5 a 7x",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_425",
+   "key": "URINA_frequencia_ate 4x",
+   "cat": "URINA",
+   "subcat": "Frequencia",
+   "label": "Ate 4x",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnR"
+   ]
+  },
+  {
+   "id": "item_426",
+   "key": "URINA_frequencia_mais de 7x",
+   "cat": "URINA",
+   "subcat": "Frequencia",
+   "label": "Mais de 7x",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR",
+    "UmdCalorB"
+   ]
+  },
+  {
+   "id": "item_427",
+   "key": "URINA_frequencia_nocturia",
+   "cat": "URINA",
+   "subcat": "Frequencia",
+   "label": "Nocturia",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR"
+   ]
+  },
+  {
+   "id": "item_428",
+   "key": "URINA_frequencia_enurese noturna",
+   "cat": "URINA",
+   "subcat": "Frequencia",
+   "label": "Enurese noturna",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR"
+   ]
+  },
+  {
+   "id": "item_430",
+   "key": "URINA_qtde_s/alt",
+   "cat": "URINA",
+   "subcat": "Qtde",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_431",
+   "key": "URINA_qtde_aumentada",
+   "cat": "URINA",
+   "subcat": "Qtde",
+   "label": "Aumentada",
+   "exc_def": "Def",
+   "fr_cal": "Frio",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR"
+   ]
+  },
+  {
+   "id": "item_432",
+   "key": "URINA_qtde_diminuida",
+   "cat": "URINA",
+   "subcat": "Qtde",
+   "label": "Diminuida",
+   "exc_def": "",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnR",
+    "UmdCalorB"
+   ]
+  },
+  {
+   "id": "item_434",
+   "key": "URINA_cor_amarelo clara",
+   "cat": "URINA",
+   "subcat": "Cor",
+   "label": "Amarelo clara",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_435",
+   "key": "URINA_cor_amarelo escura",
+   "cat": "URINA",
+   "subcat": "Cor",
+   "label": "Amarelo escura",
+   "exc_def": "",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnR",
+    "UmdCalorB"
+   ]
+  },
+  {
+   "id": "item_436",
+   "key": "URINA_cor_transparente",
+   "cat": "URINA",
+   "subcat": "Cor",
+   "label": "Transparente",
+   "exc_def": "Def",
+   "fr_cal": "Frio",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR"
+   ]
+  },
+  {
+   "id": "item_437",
+   "key": "URINA_cor_turva",
+   "cat": "URINA",
+   "subcat": "Cor",
+   "label": "Turva",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "UmdFrioB",
+    "UmdCalorB"
+   ]
+  },
+  {
+   "id": "item_439",
+   "key": "URINA_jato_s/alt",
+   "cat": "URINA",
+   "subcat": "Jato",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_440",
+   "key": "URINA_jato_fraco",
+   "cat": "URINA",
+   "subcat": "Jato",
+   "label": "Fraco",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR"
+   ]
+  },
+  {
+   "id": "item_441",
+   "key": "URINA_jato_inicio dificil",
+   "cat": "URINA",
+   "subcat": "Jato",
+   "label": "Inicio dificil",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "UmdCalorB"
+   ]
+  },
+  {
+   "id": "item_442",
+   "key": "URINA_jato_interrompido",
+   "cat": "URINA",
+   "subcat": "Jato",
+   "label": "Interrompido",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "UmdFrioB",
+    "UmdCalorB",
+    "EstgQiF"
+   ]
+  },
+  {
+   "id": "item_443",
+   "key": "URINA_jato_queimacao",
+   "cat": "URINA",
+   "subcat": "Jato",
+   "label": "Queimacao",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "UmdCalorB",
+    "FgC",
+    "CalorID"
+   ]
+  },
+  {
+   "id": "item_445",
+   "key": "GENITAIS_masculino_doença",
+   "cat": "GENITAIS",
+   "subcat": "Masculino",
+   "label": "Doença",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "UmdCalorF",
+    "DefYnR"
+   ]
+  },
+  {
+   "id": "item_446",
+   "key": "GENITAIS_masculino_dor",
+   "cat": "GENITAIS",
+   "subcat": "Masculino",
+   "label": "Dor",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "UmdCalorF"
+   ]
+  },
+  {
+   "id": "item_447",
+   "key": "GENITAIS_masculino_ejaculacao precoce",
+   "cat": "GENITAIS",
+   "subcat": "Masculino",
+   "label": "Ejaculacao precoce",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnR"
+   ]
+  },
+  {
+   "id": "item_448",
+   "key": "GENITAIS_masculino_emissao noturna",
+   "cat": "GENITAIS",
+   "subcat": "Masculino",
+   "label": "Emissao noturna",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnR",
+    "FgC",
+    "DefJgR",
+    "DefYnC"
+   ]
+  },
+  {
+   "id": "item_449",
+   "key": "GENITAIS_masculino_espermatorreia",
+   "cat": "GENITAIS",
+   "subcat": "Masculino",
+   "label": "Espermatorreia",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR"
+   ]
+  },
+  {
+   "id": "item_450",
+   "key": "GENITAIS_masculino_esterilidade",
+   "cat": "GENITAIS",
+   "subcat": "Masculino",
+   "label": "Esterilidade",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefJgR",
+    "DefYnR"
+   ]
+  },
+  {
+   "id": "item_451",
+   "key": "GENITAIS_masculino_impotencia",
+   "cat": "GENITAIS",
+   "subcat": "Masculino",
+   "label": "Impotencia",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR"
+   ]
+  },
+  {
+   "id": "item_452",
+   "key": "GENITAIS_masculino_libido diminuida",
+   "cat": "GENITAIS",
+   "subcat": "Masculino",
+   "label": "Libido diminuida",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR",
+    "DefQiR"
+   ]
+  },
+  {
+   "id": "item_453",
+   "key": "GENITAIS_masculino_libido em excesso",
+   "cat": "GENITAIS",
+   "subcat": "Masculino",
+   "label": "Libido em excesso",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnR",
+    "DefYnC",
+    "FgC"
+   ]
+  },
+  {
+   "id": "item_455",
+   "key": "GENITAIS_feminino_doenca",
+   "cat": "GENITAIS",
+   "subcat": "Feminino",
+   "label": "Doenca",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "UmdCalorF",
+    "DefYnR"
+   ]
+  },
+  {
+   "id": "item_456",
+   "key": "GENITAIS_feminino_dor",
+   "cat": "GENITAIS",
+   "subcat": "Feminino",
+   "label": "Dor",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "UmdCalorF"
+   ]
+  },
+  {
+   "id": "item_457",
+   "key": "GENITAIS_feminino_infertilidade",
+   "cat": "GENITAIS",
+   "subcat": "Feminino",
+   "label": "Infertilidade",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefJgR",
+    "EstgQiF",
+    "DefYnR"
+   ]
+  },
+  {
+   "id": "item_458",
+   "key": "GENITAIS_feminino_frigidez",
+   "cat": "GENITAIS",
+   "subcat": "Feminino",
+   "label": "Frigidez",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR",
+    "DefXueF"
+   ]
+  },
+  {
+   "id": "item_459",
+   "key": "GENITAIS_feminino_prolapso uterino",
+   "cat": "GENITAIS",
+   "subcat": "Feminino",
+   "label": "Prolapso uterino",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiBP"
+   ]
+  },
+  {
+   "id": "item_460",
+   "key": "GENITAIS_feminino_libido diminuida",
+   "cat": "GENITAIS",
+   "subcat": "Feminino",
+   "label": "Libido diminuida",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR",
+    "DefQiR"
+   ]
+  },
+  {
+   "id": "item_461",
+   "key": "GENITAIS_feminino_libido em excesso",
+   "cat": "GENITAIS",
+   "subcat": "Feminino",
+   "label": "Libido em excesso",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnR",
+    "DefYnC",
+    "FgC"
+   ]
+  },
+  {
+   "id": "item_463",
+   "key": "GENITAIS_feminino_corrimento_s/alt",
+   "cat": "GENITAIS",
+   "subcat": "Feminino",
+   "label": "Corrimento s/alt",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_464",
+   "key": "GENITAIS_feminino_corrimento_amarelo",
+   "cat": "GENITAIS",
+   "subcat": "Feminino",
+   "label": "Corrimento amarelo",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "UmdCalorBP",
+    "UmdCalorF"
+   ]
+  },
+  {
+   "id": "item_465",
+   "key": "GENITAIS_feminino_corrimento_amarelo com sangue",
+   "cat": "GENITAIS",
+   "subcat": "Feminino",
+   "label": "Corrimento amarelo com sangue",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "UmdCalorBP",
+    "UmdCalorF"
+   ]
+  },
+  {
+   "id": "item_466",
+   "key": "GENITAIS_feminino_corrimento_branco",
+   "cat": "GENITAIS",
+   "subcat": "Feminino",
+   "label": "Corrimento branco",
+   "exc_def": "",
+   "fr_cal": "Frio",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR",
+    "DefYgBP",
+    "UmdFrioBP"
+   ]
+  },
+  {
+   "id": "item_467",
+   "key": "GENITAIS_feminino_corrimento_escuro e frio",
+   "cat": "GENITAIS",
+   "subcat": "Feminino",
+   "label": "Corrimento escuro e frio",
+   "exc_def": "Def",
+   "fr_cal": "Frio",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR"
+   ]
+  },
+  {
+   "id": "item_469",
+   "key": "MENSTRUACAO_alteração geral",
+   "cat": "MENSTRUACAO",
+   "subcat": "Alteração geral",
+   "label": "Alteração geral",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_470",
+   "key": "MENSTRUACAO_mamas doloridas",
+   "cat": "MENSTRUACAO",
+   "subcat": "Mamas doloridas",
+   "label": "Mamas doloridas",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgQiF"
+   ]
+  },
+  {
+   "id": "item_471",
+   "key": "MENSTRUACAO_baixo ventre distendido",
+   "cat": "MENSTRUACAO",
+   "subcat": "Baixo ventre distendido",
+   "label": "Baixo ventre distendido",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgXueF",
+    "EstgQiF"
+   ]
+  },
+  {
+   "id": "item_472",
+   "key": "MENSTRUACAO_tpm",
+   "cat": "MENSTRUACAO",
+   "subcat": "Tpm",
+   "label": "Tpm",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgQiF"
+   ]
+  },
+  {
+   "id": "item_474",
+   "key": "MENSTRUACAO_ciclo_s/alt",
+   "cat": "MENSTRUACAO",
+   "subcat": "Ciclo",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_475",
+   "key": "MENSTRUACAO_ciclo_curto",
+   "cat": "MENSTRUACAO",
+   "subcat": "Ciclo",
+   "label": "Curto",
+   "exc_def": "",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiBP",
+    "FgF",
+    "EstgXueF",
+    "EstgQiF"
+   ]
+  },
+  {
+   "id": "item_476",
+   "key": "MENSTRUACAO_ciclo_irregular",
+   "cat": "MENSTRUACAO",
+   "subcat": "Ciclo",
+   "label": "Irregular",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgQiF"
+   ]
+  },
+  {
+   "id": "item_477",
+   "key": "MENSTRUACAO_ciclo_longo",
+   "cat": "MENSTRUACAO",
+   "subcat": "Ciclo",
+   "label": "Longo",
+   "exc_def": "",
+   "fr_cal": "Frio",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefXueF",
+    "EstgXueF",
+    "EstgQiF"
+   ]
+  },
+  {
+   "id": "item_478",
+   "key": "MENSTRUACAO_ciclo_irregular pos menopausa",
+   "cat": "MENSTRUACAO",
+   "subcat": "Ciclo",
+   "label": "Irregular pos menopausa",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "UmdCalorF"
+   ]
+  },
+  {
+   "id": "item_480",
+   "key": "MENSTRUACAO_qtde_s/alt",
+   "cat": "MENSTRUACAO",
+   "subcat": "Qtde",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_481",
+   "key": "MENSTRUACAO_qtde_abundante",
+   "cat": "MENSTRUACAO",
+   "subcat": "Qtde",
+   "label": "Abundante",
+   "exc_def": "",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiBP"
+   ]
+  },
+  {
+   "id": "item_482",
+   "key": "MENSTRUACAO_qtde_ausente",
+   "cat": "MENSTRUACAO",
+   "subcat": "Qtde",
+   "label": "Ausente",
+   "exc_def": "Def",
+   "fr_cal": "Frio",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefXueF",
+    "EstgXueF",
+    "DefJgR"
+   ]
+  },
+  {
+   "id": "item_483",
+   "key": "MENSTRUACAO_qtde_escasso",
+   "cat": "MENSTRUACAO",
+   "subcat": "Qtde",
+   "label": "Escasso",
+   "exc_def": "Def",
+   "fr_cal": "Frio",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefXueF",
+    "EstgXueF"
+   ]
+  },
+  {
+   "id": "item_484",
+   "key": "MENSTRUACAO_qtde_irregular",
+   "cat": "MENSTRUACAO",
+   "subcat": "Qtde",
+   "label": "Irregular",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefXueF",
+    "EstgQiF"
+   ]
+  },
+  {
+   "id": "item_486",
+   "key": "MENSTRUACAO_cor_s/alt",
+   "cat": "MENSTRUACAO",
+   "subcat": "Cor",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_487",
+   "key": "MENSTRUACAO_cor_arroxeado",
+   "cat": "MENSTRUACAO",
+   "subcat": "Cor",
+   "label": "Arroxeado",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgXueF"
+   ]
+  },
+  {
+   "id": "item_488",
+   "key": "MENSTRUACAO_cor_escuro com coagulo",
+   "cat": "MENSTRUACAO",
+   "subcat": "Cor",
+   "label": "Escuro com coagulo",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgXueF"
+   ]
+  },
+  {
+   "id": "item_489",
+   "key": "MENSTRUACAO_cor_vermelho forte",
+   "cat": "MENSTRUACAO",
+   "subcat": "Cor",
+   "label": "Vermelho forte",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": []
+  },
+  {
+   "id": "item_490",
+   "key": "MENSTRUACAO_cor_vermelho palido",
+   "cat": "MENSTRUACAO",
+   "subcat": "Cor",
+   "label": "Vermelho palido",
+   "exc_def": "Def",
+   "fr_cal": "Frio",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefXueF"
+   ]
+  },
+  {
+   "id": "item_492",
+   "key": "MENSTRUACAO_colica_periodo_durante o fluxo",
+   "cat": "MENSTRUACAO",
+   "subcat": "Colica",
+   "label": "Periodo durante o fluxo",
+   "exc_def": "Exc",
+   "fr_cal": "Frio",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgQiF",
+    "EstgXueF"
+   ]
+  },
+  {
+   "id": "item_493",
+   "key": "MENSTRUACAO_colica_periodo_pos menstrual",
+   "cat": "MENSTRUACAO",
+   "subcat": "Colica",
+   "label": "Periodo pos menstrual",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefXueF"
+   ]
+  },
+  {
+   "id": "item_494",
+   "key": "MENSTRUACAO_colica_periodo_pre menstrual",
+   "cat": "MENSTRUACAO",
+   "subcat": "Colica",
+   "label": "Periodo pre menstrual",
+   "exc_def": "Exc",
+   "fr_cal": "Frio",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgQiF",
+    "EstgXueF"
+   ]
+  },
+  {
+   "id": "item_495",
+   "key": "MENSTRUACAO_colica_periodo_s/alt",
+   "cat": "MENSTRUACAO",
+   "subcat": "Colica",
+   "label": "Periodo s/alt",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_497",
+   "key": "MENSTRUACAO_colica_tipo_s/alt",
+   "cat": "MENSTRUACAO",
+   "subcat": "Colica",
+   "label": "Tipo s/alt",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_498",
+   "key": "MENSTRUACAO_colica_tipo_forte em peso",
+   "cat": "MENSTRUACAO",
+   "subcat": "Colica",
+   "label": "Tipo forte em peso",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "UmdCalorBP",
+    "UmdFrioBP",
+    "UmdCalorF"
+   ]
+  },
+  {
+   "id": "item_499",
+   "key": "MENSTRUACAO_colica_tipo_forte em pontada",
+   "cat": "MENSTRUACAO",
+   "subcat": "Colica",
+   "label": "Tipo forte em pontada",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgXueF"
+   ]
+  },
+  {
+   "id": "item_500",
+   "key": "MENSTRUACAO_colica_tipo_forte em torcao",
+   "cat": "MENSTRUACAO",
+   "subcat": "Colica",
+   "label": "Tipo forte em torcao",
+   "exc_def": "Exc",
+   "fr_cal": "Frio",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgQiF"
+   ]
+  },
+  {
+   "id": "item_501",
+   "key": "MENSTRUACAO_colica_tipo_fraca",
+   "cat": "MENSTRUACAO",
+   "subcat": "Colica",
+   "label": "Tipo fraca",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefXueF",
+    "DefQiBP",
+    "DefYgBP"
+   ]
+  },
+  {
+   "id": "item_502",
+   "key": "MENSTRUACAO_colica_tipo_alivia com pressao",
+   "cat": "MENSTRUACAO",
+   "subcat": "Colica",
+   "label": "Tipo alivia com pressao",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefXueF",
+    "DefQiBP"
+   ]
+  },
+  {
+   "id": "item_503",
+   "key": "MENSTRUACAO_colica_tipo_piora com pressao",
+   "cat": "MENSTRUACAO",
+   "subcat": "Colica",
+   "label": "Tipo piora com pressao",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgXueF",
+    "EstgQiF"
+   ]
+  },
+  {
+   "id": "item_504",
+   "key": "MENSTRUACAO_colica_tipo_alivia com calor",
+   "cat": "MENSTRUACAO",
+   "subcat": "Colica",
+   "label": "Tipo alivia com calor",
+   "exc_def": "Exc",
+   "fr_cal": "Frio",
+   "sup_prof": "Prof",
+   "syndromes": []
+  },
+  {
+   "id": "item_505",
+   "key": "MENSTRUACAO_colica_tipo_alivia com frio",
+   "cat": "MENSTRUACAO",
+   "subcat": "Colica",
+   "label": "Tipo alivia com frio",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": []
+  },
+  {
+   "id": "item_507",
+   "key": "LINGUA_cor_s/alt",
+   "cat": "LINGUA",
+   "subcat": "Cor",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_508",
+   "key": "LINGUA_cor_palida",
+   "cat": "LINGUA",
+   "subcat": "Cor",
+   "label": "Palida",
+   "exc_def": "Def",
+   "fr_cal": "Frio",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgR",
+    "DefYgBP",
+    "DefXueF"
+   ]
+  },
+  {
+   "id": "item_509",
+   "key": "LINGUA_cor_vermelho escura",
+   "cat": "LINGUA",
+   "subcat": "Cor",
+   "label": "Vermelho escura",
+   "exc_def": "",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": []
+  },
+  {
+   "id": "item_510",
+   "key": "LINGUA_cor_arroxeada",
+   "cat": "LINGUA",
+   "subcat": "Cor",
+   "label": "Arroxeada",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgXueF",
+    "EstgXueC"
+   ]
+  },
+  {
+   "id": "item_511",
+   "key": "LINGUA_cor_ptavermelha",
+   "cat": "LINGUA",
+   "subcat": "Cor",
+   "label": "Ptavermelha",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "FgC"
+   ]
+  },
+  {
+   "id": "item_512",
+   "key": "LINGUA_cor_pontos vermelhos",
+   "cat": "LINGUA",
+   "subcat": "Cor",
+   "label": "Pontos vermelhos",
+   "exc_def": "",
+   "fr_cal": "Calor",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_513",
+   "key": "LINGUA_cor_lateral roxa",
+   "cat": "LINGUA",
+   "subcat": "Cor",
+   "label": "Lateral roxa",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstgXueF"
+   ]
+  },
+  {
+   "id": "item_515",
+   "key": "LINGUA_saburra_fina",
+   "cat": "LINGUA",
+   "subcat": "Saburra",
+   "label": "Fina",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_516",
+   "key": "LINGUA_saburra_grossa",
+   "cat": "LINGUA",
+   "subcat": "Saburra",
+   "label": "Grossa",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": []
+  },
+  {
+   "id": "item_517",
+   "key": "LINGUA_saburra_ausente",
+   "cat": "LINGUA",
+   "subcat": "Saburra",
+   "label": "Ausente",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnE"
+   ]
+  },
+  {
+   "id": "item_518",
+   "key": "LINGUA_saburra_branca",
+   "cat": "LINGUA",
+   "subcat": "Saburra",
+   "label": "Branca",
+   "exc_def": "",
+   "fr_cal": "Frio",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_519",
+   "key": "LINGUA_saburra_amarela",
+   "cat": "LINGUA",
+   "subcat": "Saburra",
+   "label": "Amarela",
+   "exc_def": "",
+   "fr_cal": "Calor",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_520",
+   "key": "LINGUA_saburra_escura",
+   "cat": "LINGUA",
+   "subcat": "Saburra",
+   "label": "Escura",
+   "exc_def": "",
+   "fr_cal": "Calor",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_521",
+   "key": "LINGUA_saburra_umida",
+   "cat": "LINGUA",
+   "subcat": "Saburra",
+   "label": "Umida",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYgBP",
+    "DefYgR"
+   ]
+  },
+  {
+   "id": "item_522",
+   "key": "LINGUA_saburra_seca",
+   "cat": "LINGUA",
+   "subcat": "Saburra",
+   "label": "Seca",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "DefYnE",
+    "CalorE",
+    "CalorID",
+    "DefXueF"
+   ]
+  },
+  {
+   "id": "item_523",
+   "key": "LINGUA_saburra_geografica",
+   "cat": "LINGUA",
+   "subcat": "Saburra",
+   "label": "Geografica",
+   "exc_def": "Def",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnE",
+    "DefYnR"
+   ]
+  },
+  {
+   "id": "item_524",
+   "key": "LINGUA_saburra_com muco",
+   "cat": "LINGUA",
+   "subcat": "Saburra",
+   "label": "Com muco",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": [
+    "DefYgBP",
+    "UmdFrioBP",
+    "UmdCalorBP"
+   ]
+  },
+  {
+   "id": "item_526",
+   "key": "LINGUA_tamanho_s/alt",
+   "cat": "LINGUA",
+   "subcat": "Tamanho",
+   "label": "Sem alterações / Normal",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_527",
+   "key": "LINGUA_tamanho_edemaciada",
+   "cat": "LINGUA",
+   "subcat": "Tamanho",
+   "label": "Edemaciada",
+   "exc_def": "Exc",
+   "fr_cal": "Frio",
+   "sup_prof": "",
+   "syndromes": [
+    "DefYgBP",
+    "DefYgR"
+   ]
+  },
+  {
+   "id": "item_528",
+   "key": "LINGUA_tamanho_murcha",
+   "cat": "LINGUA",
+   "subcat": "Tamanho",
+   "label": "Murcha",
+   "exc_def": "Def",
+   "fr_cal": "Calor",
+   "sup_prof": "",
+   "syndromes": [
+    "DefYnE",
+    "DefXueF"
+   ]
+  },
+  {
+   "id": "item_529",
+   "key": "LINGUA_tamanho_marcas de dentes",
+   "cat": "LINGUA",
+   "subcat": "Tamanho",
+   "label": "Marcas de dentes",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiBP",
+    "DefYgBP"
+   ]
+  },
+  {
+   "id": "item_530",
+   "key": "LINGUA_tamanho_fissuras verticais",
+   "cat": "LINGUA",
+   "subcat": "Tamanho",
+   "label": "Fissuras verticais",
+   "exc_def": "Def",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefYnE"
+   ]
+  },
+  {
+   "id": "item_531",
+   "key": "LINGUA_tamanho_fissuras horizontais",
+   "cat": "LINGUA",
+   "subcat": "Tamanho",
+   "label": "Fissuras horizontais",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiE"
+   ]
+  },
+  {
+   "id": "item_533",
+   "key": "LINGUA_tremula",
+   "cat": "LINGUA",
+   "subcat": "Tremula",
+   "label": "Tremula",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "VtF"
+   ]
+  },
+  {
+   "id": "item_534",
+   "key": "LINGUA_desviada",
+   "cat": "LINGUA",
+   "subcat": "Desviada",
+   "label": "Desviada",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "VtF"
+   ]
+  },
+  {
+   "id": "item_536",
+   "key": "PULSO_profundo",
+   "cat": "PULSO",
+   "subcat": "Profundo",
+   "label": "Profundo",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": []
+  },
+  {
+   "id": "item_537",
+   "key": "PULSO_superficial",
+   "cat": "PULSO",
+   "subcat": "Superficial",
+   "label": "Superficial",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Sup",
+   "syndromes": []
+  },
+  {
+   "id": "item_538",
+   "key": "PULSO_lento",
+   "cat": "PULSO",
+   "subcat": "Lento",
+   "label": "Lento",
+   "exc_def": "",
+   "fr_cal": "Frio",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_539",
+   "key": "PULSO_rapido",
+   "cat": "PULSO",
+   "subcat": "Rapido",
+   "label": "Rapido",
+   "exc_def": "",
+   "fr_cal": "Calor",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_540",
+   "key": "PULSO_forte",
+   "cat": "PULSO",
+   "subcat": "Forte",
+   "label": "Forte",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_541",
+   "key": "PULSO_fraca",
+   "cat": "PULSO",
+   "subcat": "Fraca",
+   "label": "Fraca",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_542",
+   "key": "PULSO_largo",
+   "cat": "PULSO",
+   "subcat": "Largo",
+   "label": "Largo",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_543",
+   "key": "PULSO_fino",
+   "cat": "PULSO",
+   "subcat": "Fino",
+   "label": "Fino",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_544",
+   "key": "PULSO_escorregadio",
+   "cat": "PULSO",
+   "subcat": "Escorregadio",
+   "label": "Escorregadio",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  },
+  {
+   "id": "item_545",
+   "key": "PULSO_emcorda",
+   "cat": "PULSO",
+   "subcat": "Emcorda",
+   "label": "Emcorda",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "",
+   "syndromes": []
+  }
+ ],
+ "syndromes": {
+  "AlimE": {
+   "code": "AlimE",
+   "name": "Retenção Alimentos",
+   "organ": "E",
+   "organ_name": "Estômago",
+   "element": "Terra",
+   "alma": "Yi"
+  },
+  "AscYgF": {
+   "code": "AscYgF",
+   "name": "Ascensão Yang do F",
+   "organ": "F",
+   "organ_name": "Fígado",
+   "element": "Madeira",
+   "alma": "Hun"
+  },
+  "BPcontrXue": {
+   "code": "BPcontrXue",
+   "name": "BP não controla Xue",
+   "organ": "BP",
+   "organ_name": "Baço-Pâncreas",
+   "element": "Terra",
+   "alma": "Yi"
+  },
+  "CalorE": {
+   "code": "CalorE",
+   "name": "Calor/Fogo no E",
+   "organ": "E",
+   "organ_name": "Estômago",
+   "element": "Terra",
+   "alma": "Yi"
+  },
+  "CalorID": {
+   "code": "CalorID",
+   "name": "Calor no ID",
+   "organ": "ID",
+   "organ_name": "Intestino Delgado",
+   "element": "Fogo",
+   "alma": "Shen"
+  },
+  "ColapsQiBP": {
+   "code": "ColapsQiBP",
+   "name": "Colapso Yang do BP",
+   "organ": "BP",
+   "organ_name": "Baço-Pâncreas",
+   "element": "Terra",
+   "alma": "Yi"
+  },
+  "ColapsQiC": {
+   "code": "ColapsQiC",
+   "name": "Colapso Yang do C",
+   "organ": "C",
+   "organ_name": "Coração",
+   "element": "Fogo",
+   "alma": "Shen"
+  },
+  "DefJgR": {
+   "code": "DefJgR",
+   "name": "Defic. Jing do R",
+   "organ": "R",
+   "organ_name": "Rim",
+   "element": "Água",
+   "alma": "Zhi"
+  },
+  "DefQiBP": {
+   "code": "DefQiBP",
+   "name": "Defic. Qi de BP",
+   "organ": "BP",
+   "organ_name": "Baço-Pâncreas",
+   "element": "Terra",
+   "alma": "Yi"
+  },
+  "DefQiC": {
+   "code": "DefQiC",
+   "name": "Defic. Qi do C",
+   "organ": "C",
+   "organ_name": "Coração",
+   "element": "Fogo",
+   "alma": "Shen"
+  },
+  "DefQiE": {
+   "code": "DefQiE",
+   "name": "Defic. Qi do E",
+   "organ": "E",
+   "organ_name": "Estômago",
+   "element": "Terra",
+   "alma": "Yi"
+  },
+  "DefQiP": {
+   "code": "DefQiP",
+   "name": "Defic. Qi do P",
+   "organ": "P",
+   "organ_name": "Pulmão",
+   "element": "Metal",
+   "alma": "Po"
+  },
+  "DefQiR": {
+   "code": "DefQiR",
+   "name": "Defic. Qi do R",
+   "organ": "R",
+   "organ_name": "Rim",
+   "element": "Água",
+   "alma": "Zhi"
+  },
+  "DefQiVB": {
+   "code": "DefQiVB",
+   "name": "Defic. Qi da VB",
+   "organ": "VB",
+   "organ_name": "Vesícula Biliar",
+   "element": "Madeira",
+   "alma": "Hun"
+  },
+  "DefXueC": {
+   "code": "DefXueC",
+   "name": "Defic. Xue do C",
+   "organ": "C",
+   "organ_name": "Coração",
+   "element": "Fogo",
+   "alma": "Shen"
+  },
+  "DefXueF": {
+   "code": "DefXueF",
+   "name": "Defic. Xue do F",
+   "organ": "F",
+   "organ_name": "Fígado",
+   "element": "Madeira",
+   "alma": "Hun"
+  },
+  "DefYgBP": {
+   "code": "DefYgBP",
+   "name": "Defic. Yang do BP",
+   "organ": "BP",
+   "organ_name": "Baço-Pâncreas",
+   "element": "Terra",
+   "alma": "Yi"
+  },
+  "DefYgC": {
+   "code": "DefYgC",
+   "name": "Defic. Yang do C",
+   "organ": "C",
+   "organ_name": "Coração",
+   "element": "Fogo",
+   "alma": "Shen"
+  },
+  "DefYgR": {
+   "code": "DefYgR",
+   "name": "Defic. Yang do R",
+   "organ": "R",
+   "organ_name": "Rim",
+   "element": "Água",
+   "alma": "Zhi"
+  },
+  "DefYnC": {
+   "code": "DefYnC",
+   "name": "Defic. Yin do C",
+   "organ": "C",
+   "organ_name": "Coração",
+   "element": "Fogo",
+   "alma": "Shen"
+  },
+  "DefYnE": {
+   "code": "DefYnE",
+   "name": "Defic. Yin do E",
+   "organ": "E",
+   "organ_name": "Estômago",
+   "element": "Terra",
+   "alma": "Yi"
+  },
+  "DefYnP": {
+   "code": "DefYnP",
+   "name": "Defic. Yin do P",
+   "organ": "P",
+   "organ_name": "Pulmão",
+   "element": "Metal",
+   "alma": "Po"
+  },
+  "DefYnR": {
+   "code": "DefYnR",
+   "name": "Defic. Yin do R",
+   "organ": "R",
+   "organ_name": "Rim",
+   "element": "Água",
+   "alma": "Zhi"
+  },
+  "EstgQiF": {
+   "code": "EstgQiF",
+   "name": "Estagnação Qi do F",
+   "organ": "F",
+   "organ_name": "Fígado",
+   "element": "Madeira",
+   "alma": "Hun"
+  },
+  "EstgXueC": {
+   "code": "EstgXueC",
+   "name": "Estagnação Xue do C",
+   "organ": "C",
+   "organ_name": "Coração",
+   "element": "Fogo",
+   "alma": "Shen"
+  },
+  "EstgXueF": {
+   "code": "EstgXueF",
+   "name": "Estagnação Xue do F",
+   "organ": "F",
+   "organ_name": "Fígado",
+   "element": "Madeira",
+   "alma": "Hun"
+  },
+  "FgC": {
+   "code": "FgC",
+   "name": "Fogo de C",
+   "organ": "C",
+   "organ_name": "Coração",
+   "element": "Fogo",
+   "alma": "Shen"
+  },
+  "FgF": {
+   "code": "FgF",
+   "name": "Fogo de F",
+   "organ": "F",
+   "organ_name": "Fígado",
+   "element": "Madeira",
+   "alma": "Hun"
+  },
+  "FlmC": {
+   "code": "FlmC",
+   "name": "Fleuma-Fogo no C",
+   "organ": "C",
+   "organ_name": "Coração",
+   "element": "Fogo",
+   "alma": "Shen"
+  },
+  "FlmCalorP": {
+   "code": "FlmCalorP",
+   "name": "Fleuma-Calor no P",
+   "organ": "P",
+   "organ_name": "Pulmão",
+   "element": "Metal",
+   "alma": "Po"
+  },
+  "FlmFrioP": {
+   "code": "FlmFrioP",
+   "name": "Fleuma-Frio no P",
+   "organ": "P",
+   "organ_name": "Pulmão",
+   "element": "Metal",
+   "alma": "Po"
+  },
+  "FrioE": {
+   "code": "FrioE",
+   "name": "Frio no E",
+   "organ": "E",
+   "organ_name": "Estômago",
+   "element": "Terra",
+   "alma": "Yi"
+  },
+  "ObstID": {
+   "code": "ObstID",
+   "name": "Obstrução Qi no ID",
+   "organ": "ID",
+   "organ_name": "Intestino Delgado",
+   "element": "Fogo",
+   "alma": "Shen"
+  },
+  "Parasita": {
+   "code": "Parasita",
+   "name": "Parasitas",
+   "organ": "E",
+   "organ_name": "Estômago",
+   "element": "Terra",
+   "alma": "Yi"
+  },
+  "RebelE": {
+   "code": "RebelE",
+   "name": "Rebelião de Qi no E",
+   "organ": "E",
+   "organ_name": "Estômago",
+   "element": "Terra",
+   "alma": "Yi"
+  },
+  "SecP": {
+   "code": "SecP",
+   "name": "Secura no P",
+   "organ": "P",
+   "organ_name": "Pulmão",
+   "element": "Metal",
+   "alma": "Po"
+  },
+  "UmdCalorB": {
+   "code": "UmdCalorB",
+   "name": "Umidade-Calor na B",
+   "organ": "B",
+   "organ_name": "Bexiga",
+   "element": "Água",
+   "alma": "Zhi"
+  },
+  "UmdCalorBP": {
+   "code": "UmdCalorBP",
+   "name": "Umidade-Calor no BP",
+   "organ": "BP",
+   "organ_name": "Baço-Pâncreas",
+   "element": "Terra",
+   "alma": "Yi"
+  },
+  "UmdCalorF": {
+   "code": "UmdCalorF",
+   "name": "Umidade-Calor no F/VB",
+   "organ": "F",
+   "organ_name": "Fígado",
+   "element": "Madeira",
+   "alma": "Hun"
+  },
+  "UmdCalorIG": {
+   "code": "UmdCalorIG",
+   "name": "Umidade-Calor no IG",
+   "organ": "IG",
+   "organ_name": "Intestino Grosso",
+   "element": "Metal",
+   "alma": "Po"
+  },
+  "UmdFrioB": {
+   "code": "UmdFrioB",
+   "name": "Umidade-Frio na B",
+   "organ": "B",
+   "organ_name": "Bexiga",
+   "element": "Água",
+   "alma": "Zhi"
+  },
+  "UmdFrioBP": {
+   "code": "UmdFrioBP",
+   "name": "Umidade-Frio no BP",
+   "organ": "BP",
+   "organ_name": "Baço-Pâncreas",
+   "element": "Terra",
+   "alma": "Yi"
+  },
+  "UmdFrioIG": {
+   "code": "UmdFrioIG",
+   "name": "Umidade-Frio no IG",
+   "organ": "IG",
+   "organ_name": "Intestino Grosso",
+   "element": "Metal",
+   "alma": "Po"
+  },
+  "VtCalorP": {
+   "code": "VtCalorP",
+   "name": "Vento-Calor no P",
+   "organ": "P",
+   "organ_name": "Pulmão",
+   "element": "Metal",
+   "alma": "Po"
+  },
+  "VtF": {
+   "code": "VtF",
+   "name": "Vento de F",
+   "organ": "F",
+   "organ_name": "Fígado",
+   "element": "Madeira",
+   "alma": "Hun"
+  },
+  "VtFrioP": {
+   "code": "VtFrioP",
+   "name": "Vento-Frio no P",
+   "organ": "P",
+   "organ_name": "Pulmão",
+   "element": "Metal",
+   "alma": "Po"
+  }
+ },
+ "clinical_notes": {
+  "DefQiBP": {
+   "principio": "Tonificar o Qi do Baço-Pâncreas, fortalecer o Yang digestivo e harmonizar o Estômago.",
+   "pontos": "BP3 (Taibai), BP6 (Sanyinjiao), E36 (Zusanli), VC12 (Zhongwan), B20 (Pishu).",
+   "psicossomatica": "Yi (Reflexão/Propósito): Excesso de ruminação, preocupação obsessiva, sobrecarga de tarefas e dificuldade em digerir pensamentos."
+  },
+  "DefYgBP": {
+   "principio": "Aquecer o Yang do Baço, eliminar o Frio interno e dispersar a umidade acumulada.",
+   "pontos": "BP3, BP6, E36, VC12, VC4 (Guanyuan), B20, moxabustão recomendada.",
+   "psicossomatica": "Yi: Sensação de incapacidade de metabolizar as exigências práticas da vida com frieza e lentidão psíquica."
+  },
+  "UmdFrioBP": {
+   "principio": "Dissipar a Umidade-Frio, reaquecer o Aquecedor Médio e recuperar a função de transporte.",
+   "pontos": "BP9 (Yinlingquan), BP6, VC12, E36, E25 (Tianshu), moxa em VC8.",
+   "psicossomatica": "Yi estagnado: Pesar interior, letargia mental, sensação de \"lama psicológica\" e apego a velhos padrões."
+  },
+  "UmdCalorBP": {
+   "principio": "Drenar a Umidade, clarear o Calor do Baço/Estômago e restabelecer a clareza digestiva.",
+   "pontos": "BP9, BP6, E44 (Neiting), VC12, IG11 (Quchi), B20.",
+   "psicossomatica": "Yi irritado: Inquietação acompanhada de peso mental e impulsividade alimentar."
+  },
+  "ColapsQiBP": {
+   "principio": "Ascender o Yang puro, tonificar o Qi central e conter prolapsos e afundamentos.",
+   "pontos": "VG20 (Baihui - moxa), E36, VC12, VC6 (Qihai), B20.",
+   "psicossomatica": "Perda da sustentação da vontade e do ânimo perante a vida; desabamento estrutural."
+  },
+  "BPcontrXue": {
+   "principio": "Fortalecer o Qi do Baço para conter o Sangue nos vasos e tonificar o Xue.",
+   "pontos": "BP1 (Yinbai - moxa), BP6, BP10 (Xuehai), E36, B20.",
+   "psicossomatica": "Esgotamento da capacidade de reter a própria energia vital e nutrição pessoal."
+  },
+  "DefQiE": {
+   "principio": "Tonificar o Qi do Estômago e restabelecer a descida do Qi gástrico.",
+   "pontos": "E36, VC12, BP3, B21 (Weishu).",
+   "psicossomatica": "Dificuldade em receber, acolher novas ideias e aceitar o alimento exterior."
+  },
+  "DefYnE": {
+   "principio": "Nutrir os Fluidos Corpóreos (Jinye) e o Yin do Estômago, clarear o calor vazio.",
+   "pontos": "E36, E44, BP6, VC12, R3 (Taixi).",
+   "psicossomatica": "Secura emocional interna; sede de acolhimento sem capacidade de assimilação serena."
+  },
+  "CalorE": {
+   "principio": "Drenar o Fogo do Estômago, purgar o calor turbulento e acalmar o Yang ascendente.",
+   "pontos": "E44 (Neiting), E45, IG11, VC12, E25.",
+   "psicossomatica": "Fúria reprimida ou voracidade; desespero por controle e queimação interior."
+  },
+  "FrioE": {
+   "principio": "Aquecer o Estômago, dispersar o Frio patogênico e aliviar a dor espasmódica.",
+   "pontos": "VC12 (com moxa), E36, CS6 (Neiguan), B21.",
+   "psicossomatica": "Contração defensiva, rigidez fria e choque perante episódios indigestos da vida."
+  },
+  "RebelE": {
+   "principio": "Subjugar a rebelião do Qi, direcionar a energia para baixo e harmonizar o estômago.",
+   "pontos": "CS6 (Neiguan), VC12, E36, VC13, F3 (Taichong).",
+   "psicossomatica": "Rejeição visceral a acontecimentos da realidade; náusea existencial perante situações inaceitáveis."
+  },
+  "AlimE": {
+   "principio": "Promover a digestão, dissipar o acúmulo de alimentos e desobstruir o fluxo.",
+   "pontos": "VC12, VC10, E25, E36, E44, PC6.",
+   "psicossomatica": "Compulsão por acúmulo, ingestão rápida sem saborear a vida e estagnação de pensamentos."
+  },
+  "Parasita": {
+   "principio": "Eliminar toxinas e calor no trato gastrointestinal, regular o Qi.",
+   "pontos": "E25, BP4, E36, VC12.",
+   "psicossomatica": "Sentimento de invasão externa ou de ter suas energias esgotadas por terceiros."
+  },
+  "EstgQiF": {
+   "principio": "Regular o fluxo livre do Qi do Fígado, suavizar o Hun e desfazer estagnações.",
+   "pontos": "F3 (Taichong), VB34 (Yanglingquan), CS6 (Neiguan), VB20 (Fengchi), VC17 (Danzhong).",
+   "psicossomatica": "Hun (Projeção/Direção): Frustração profunda, raiva contida, sensação de projetos travados e falta de horizonte."
+  },
+  "EstgXueF": {
+   "principio": "Ativar a circulação do Sangue, dissolver estases e desobstruir os canais.",
+   "pontos": "BP10 (Xuehai), B17 (Geshu), F3, VB34, BP6.",
+   "psicossomatica": "Ressentimentos antigos fossilizados, mágoas profundas que se fixaram no corpo como dor pontual."
+  },
+  "DefXueF": {
+   "principio": "Nutrir o Sangue do Fígado, beneficiar os tendões e tonificar os olhos e a visão.",
+   "pontos": "F8 (Ququan), B18 (Ganshu), B20, B23 (Shenshu), BP6, E36.",
+   "psicossomatica": "Visão de futuro enfraquecida, timidez, insegurança quanto aos passos a dar, falta de flexibilidade muscular e mental."
+  },
+  "AscYgF": {
+   "principio": "Pacificiar o Fígado, ancorar o Yang exuberante e nutrir o Yin da Água.",
+   "pontos": "F3, F2 (Xingjian), VB20, R3 (Taixi), R1 (Yongquan), Taiyang.",
+   "psicossomatica": "Explosões súbitas de raiva, impaciência com a lentidão alheia e cabeça sob pressão incontrolável."
+  },
+  "FgF": {
+   "principio": "Clarear o Fogo do Fígado, purgar o calor excessivo e acalmar o Shen.",
+   "pontos": "F2, VB43, VB20, IG11, Taiyang.",
+   "psicossomatica": "Cólera aberta, agressividade verbal, olhos inflamados e estado belicoso contra o mundo."
+  },
+  "UmdCalorF": {
+   "principio": "Eliminar o Calor e drenar a Umidade nos canais do Fígado e Vesícula Biliar.",
+   "pontos": "F5, F8, VB34, BP9, BP6, IG11.",
+   "psicossomatica": "Amargura reprimida, conflitos emocionais não resolvidos com secreção de veneno psíquico."
+  },
+  "VtF": {
+   "principio": "Extinguir o Vento do Fígado, acalmar espasmos, tremores e regularizar o Yang.",
+   "pontos": "VB20, VG16, F3, F2, IG4 (Hegu), VG20.",
+   "psicossomatica": "Instabilidade súbita, perda de controle motor e psíquico provocada por tempestade emocional interna."
+  },
+  "DefQiVB": {
+   "principio": "Fortalecer o Qi da Vesícula Biliar e outorgar decisão e coragem.",
+   "pontos": "VB40 (Qiuxu), VB34, B19 (Danshu), CS6.",
+   "psicossomatica": "Indecisão crônica, covardia moral, sobressaltos frequentes e medo de assumir a liderança da vida."
+  },
+  "DefQiC": {
+   "principio": "Tonificar o Qi do Coração, tranquilizar a mente e serenar os batimentos.",
+   "pontos": "C5 (Tongli), C7 (Shenmen), CS6, VC17, B15 (Xinshu).",
+   "psicossomatica": "Shen (Consciência/Luz): Fadiga no relacionamento, perda de alegria de viver e insegurança afetiva."
+  },
+  "DefXueC": {
+   "principio": "Nutrir o Sangue do Coração, estabilizar o Shen e promover um sono restaurador.",
+   "pontos": "C7, CS6, BP6, B15, B20, VC14 (Juque).",
+   "psicossomatica": "Vulnerabilidade afetiva, esquecimento de si mesmo, sono povoado por desassossego e ansiedade branda."
+  },
+  "DefYnC": {
+   "principio": "Nutrir o Yin do Coração, serenar o Fogo por deficiência e acalmar o Shen noturno.",
+   "pontos": "C7, R3, BP6, CS6, VC14, VC15.",
+   "psicossomatica": "Inquietude interior perpétua, palpitações noturnas, sensação de calor nas palmas e no peito por esgotamento emocional."
+  },
+  "DefYgC": {
+   "principio": "Aquecer e revigorar o Yang do Coração, promover a circulação torácica.",
+   "pontos": "C5, CS6, VC17, VC6, B15, moxa em VC4.",
+   "psicossomatica": "Frio no peito, retração social, desânimo afetivo e sensação de coração pesado e gelado."
+  },
+  "ColapsQiC": {
+   "principio": "Resgatar o Yang genuíno, interromper o colapso e sustentar o Qi vital.",
+   "pontos": "VG26, VC4, VC8, R1, CS6 (emergência).",
+   "psicossomatica": "Desfalecimento da vontade de conexão, apagão súbito da chama da vida."
+  },
+  "EstgXueC": {
+   "principio": "Ativar o Sangue no Coração, dissolver estases torácicas e desimpedir o peito.",
+   "pontos": "CS6, C7, B17, B15, VC17, BP10.",
+   "psicossomatica": "Angústia asfixiante, aperto no peito motivado por perdas ou choques emocionais violentos não chorados."
+  },
+  "FgC": {
+   "principio": "Purgar o Fogo do Coração, clarear o Shen e extinguir o calor patogênico na língua.",
+   "pontos": "C8 (Shaofu), C7, CS8 (Laogong), IG11, VG24.",
+   "psicossomatica": "Euforia desmedida alternada com surtos de fúria, riso inapropriado e hiperatividade mental incontrolável."
+  },
+  "FlmC": {
+   "principio": "Transformar a fleuma, desobstruir os orifícios do Coração e clarear o Shen.",
+   "pontos": "E40 (Fenglong), CS5 (Jianshi), C7, VC12, VG20.",
+   "psicossomatica": "Confusão mental, fala confusa, pensamentos turvos e distorção da percepção da realidade."
+  },
+  "EstgQiC": {
+   "principio": "Promover o fluxo suave de Qi no tórax e aliviar a opressão no peito.",
+   "pontos": "VC17, CS6, C7, F3.",
+   "psicossomatica": "Suspiros repetidos para abrir o peito; mágoa recente que impede a livre respiração afetiva."
+  },
+  "CalorID": {
+   "principio": "Drenar o calor do Intestino Delgado e direcioná-lo para a bexiga para expulsão.",
+   "pontos": "ID2, ID5, C8, B28, B66.",
+   "psicossomatica": "Sensação de injustiça, dificuldade em discernir o que é puro do impuro nas relações humanas."
+  },
+  "ObstID": {
+   "principio": "Mover o Qi, desobstruir o estancamento e aliviar a dor abdominal intensa.",
+   "pontos": "E39 (Xiahuxu), E25, VC6, F3.",
+   "psicossomatica": "Contração aguda perante uma desordem violenta nos relacionamentos imediatos."
+  },
+  "DefQiP": {
+   "principio": "Tonificar o Qi do Pulmão, consolidar o Wei Qi (imunidade) e fortalecer a voz.",
+   "pontos": "P9 (Taiyuan), P7 (Lieque), B13 (Feishu), VC6, E36.",
+   "psicossomatica": "Po (Instinto/Sobrevivência): Tristeza acumulada, sensação de fragilidade, desamparo e facilidade para chorar."
+  },
+  "DefYnP": {
+   "principio": "Nutrir o Yin do Pulmão, umedecer as vias aéreas e clarear o calor vazio.",
+   "pontos": "P9, R3, BP6, VC17, B13, B43 (Gaohuangshu).",
+   "psicossomatica": "Apego melancólico ao passado que resseca a esperança e a capacidade de renovação."
+  },
+  "SecP": {
+   "principio": "Umedecer a secura no Pulmão e restaurar a produção de fluidos protetores.",
+   "pontos": "P9, R6 (Zhaohai), BP6, B13.",
+   "psicossomatica": "Ambiente psíquico árido, rigidez de convicções e falta de flexibilidade perante a impermanência."
+  },
+  "VtFrioP": {
+   "principio": "Dispersar o Vento-Frio, liberar o exterior e restabelecer a difusão do Qi do Pulmão.",
+   "pontos": "P7, IG4, VB20, B12 (Fengmen), VG14 (Dazhui).",
+   "psicossomatica": "Vulnerabilidade às correntes frias do meio externo; choque ante ameaças imprevistas."
+  },
+  "VtCalorP": {
+   "principio": "Dispersar o Vento-Calor, clarear o Pulmão e acalmar a garganta.",
+   "pontos": "P10, P11, IG11, IG4, VG14.",
+   "psicossomatica": "Reatividade inflamada a estímulos e palavras externas; queimação rápida de pavio curto."
+  },
+  "FlmFrioP": {
+   "principio": "Aquecer o Pulmão, transformar a fleuma fria e restaurar a respiração profunda.",
+   "pontos": "P5, P7, E40, B13, VC12, moxa.",
+   "psicossomatica": "Entupimento emocional por tristeza não expressa, estagnação gélida e choro retido."
+  },
+  "FlmCalorP": {
+   "principio": "Clarear o calor do Pulmão, liquefazer e expelir o catarro denso.",
+   "pontos": "P5, P10, E40, IG11, VC17.",
+   "psicossomatica": "Tensão interna inflamada por acúmulo de queixas sufocadas que geram irritação constante."
+  },
+  "UmdCalorIG": {
+   "principio": "Clarear o calor, drenar a umidade do intestino grosso e regular a evacuação.",
+   "pontos": "E25, E37 (Shangjuxu), IG11, BP9, B25.",
+   "psicossomatica": "Dificuldade extrema em desapegar de ofensas, resultando em inflamações e purgações caóticas."
+  },
+  "UmdFrioIG": {
+   "principio": "Aquecer o Intestino Grosso, eliminar a umidade fria e restabelecer a consistência das fezes.",
+   "pontos": "E25, E37, VC6, B25, moxa.",
+   "psicossomatica": "Falta de calor para metabolizar e soltar o que já não serve; lentidão defensiva."
+  },
+  "DefQiR": {
+   "principio": "Tonificar o Qi do Rim, fixar a essência e fortalecer a região lombar.",
+   "pontos": "R3 (Taixi), B23 (Shenshu), VC4, VG4 (Mingmen).",
+   "psicossomatica": "Zhi (Determinação/Coragem): Insegurança de base, esgotamento do entusiasmo vital e medo difuso."
+  },
+  "DefYgR": {
+   "principio": "Aquecer e revigorar o Yang do Rim, alimentar a Chama de Mingmen e dispersar o frio profundo.",
+   "pontos": "VG4 (moxa), B23, VC4, R3, R7 (Fuliu), B52 (Zhishi).",
+   "psicossomatica": "Sensação de congelamento das forças vitais, perda do impulso sexual e de criação, isolamento por frio interno."
+  },
+  "DefYnR": {
+   "principio": "Nutrir o Yin do Rim, fortalecer a Água e refrescar o calor vazio noturno.",
+   "pontos": "R3, R6, BP6, B23, VC4, R1.",
+   "psicossomatica": "Inquietação nos alicerces da vida; sensação de desgaste crônico sem tempo para recarregar a fonte."
+  },
+  "DefJgR": {
+   "principio": "Preencher a Essência (Jing), tonificar a medula e revigorar a vitalidade primordial.",
+   "pontos": "VC4, B23, VG4, VB39 (Xuanzhong - mestre das medulas), R3.",
+   "psicossomatica": "Envelhecimento precoce, sensação de que as baterias vitais mais profundas foram drenadas."
+  },
+  "UmdCalorB": {
+   "principio": "Clarear o calor e drenar a umidade da Bexiga, desimpedir a via urinária.",
+   "pontos": "B28 (Pangguangshu), VC3 (Zhongji), BP9, BP6, R3.",
+   "psicossomatica": "Medo reprimido associado a ressentimento territorial ou irritação íntima com limites desrespeitados."
+  },
+  "UmdFrioB": {
+   "principio": "Aquecer a Bexiga, transformar a umidade fria e restaurar o controle miccional.",
+   "pontos": "B28, VC3, VC4, B23, moxa.",
+   "psicossomatica": "Sensação de vulnerabilidade nas fronteiras pessoais e incapacidade de segurar a própria energia."
+  }
+ }
+}
