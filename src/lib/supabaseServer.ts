@@ -1,35 +1,40 @@
-import { createServerClient, type CookieOptions } from '@supabase/ssr';
+import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
+import { redirect } from 'next/navigation';
 
 // Cliente Supabase para uso em Server Components / Route Handlers,
 // lendo a sessão do terapeuta a partir dos cookies da requisição.
-export function createServerSupabaseClient() {
-  const cookieStore = cookies();
+export async function createServerSupabaseClient() {
+  const cookieStore = await cookies();
 
   return createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
     {
       cookies: {
-        get(name: string) {
-          return cookieStore.get(name)?.value;
+        getAll() {
+          return cookieStore.getAll();
         },
-        set(name: string, value: string, options: CookieOptions) {
+        setAll(cookiesToSet) {
           try {
-            cookieStore.set({ name, value, ...options });
+            cookiesToSet.forEach(({ name, value, options }) =>
+              cookieStore.set(name, value, options)
+            );
           } catch {
             // chamado de um Server Component sem permissão de escrita;
-            // o middleware cuida da renovação do cookie nesse caso.
-          }
-        },
-        remove(name: string, options: CookieOptions) {
-          try {
-            cookieStore.set({ name, value: '', ...options });
-          } catch {
-            // idem acima
+            // o proxy cuida da renovação do cookie nesse caso.
           }
         },
       },
     }
   );
+}
+
+// Garante que há um terapeuta logado; caso contrário, manda para o
+// login. Segunda camada de proteção além do proxy (e da RLS no banco).
+export async function requireUser() {
+  const supabase = await createServerSupabaseClient();
+  const { data: { user } } = await supabase.auth.getUser();
+  if (!user) redirect('/login');
+  return { supabase, user };
 }

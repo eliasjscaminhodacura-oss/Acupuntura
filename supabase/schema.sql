@@ -1,5 +1,6 @@
 -- Esquema do banco para o app "Ficha de Anamnese — Método EliasJS"
 -- Execute este arquivo no painel do Supabase em: SQL Editor > New query > colar tudo > Run
+-- (Pode ser executado mais de uma vez sem problemas.)
 --
 -- Modelo:
 --  - Cada terapeuta é um usuário do Supabase Auth (auth.users), criado
@@ -29,19 +30,23 @@ create table if not exists public.patients (
 
 alter table public.patients enable row level security;
 
+drop policy if exists "therapists_select_own_patients" on public.patients;
 create policy "therapists_select_own_patients"
   on public.patients for select
   using (auth.uid() = therapist_id);
 
+drop policy if exists "therapists_insert_own_patients" on public.patients;
 create policy "therapists_insert_own_patients"
   on public.patients for insert
   with check (auth.uid() = therapist_id);
 
+drop policy if exists "therapists_update_own_patients" on public.patients;
 create policy "therapists_update_own_patients"
   on public.patients for update
   using (auth.uid() = therapist_id)
   with check (auth.uid() = therapist_id);
 
+drop policy if exists "therapists_delete_own_patients" on public.patients;
 create policy "therapists_delete_own_patients"
   on public.patients for delete
   using (auth.uid() = therapist_id);
@@ -63,19 +68,31 @@ create table if not exists public.fichas (
 
 alter table public.fichas enable row level security;
 
+drop policy if exists "therapists_select_own_fichas" on public.fichas;
 create policy "therapists_select_own_fichas"
   on public.fichas for select
   using (auth.uid() = therapist_id);
 
+drop policy if exists "therapists_insert_own_fichas" on public.fichas;
 create policy "therapists_insert_own_fichas"
   on public.fichas for insert
-  with check (auth.uid() = therapist_id);
+  with check (
+    auth.uid() = therapist_id
+    and exists (select 1 from public.patients p
+                where p.id = patient_id and p.therapist_id = auth.uid())
+  );
 
+drop policy if exists "therapists_update_own_fichas" on public.fichas;
 create policy "therapists_update_own_fichas"
   on public.fichas for update
   using (auth.uid() = therapist_id)
-  with check (auth.uid() = therapist_id);
+  with check (
+    auth.uid() = therapist_id
+    and exists (select 1 from public.patients p
+                where p.id = patient_id and p.therapist_id = auth.uid())
+  );
 
+drop policy if exists "therapists_delete_own_fichas" on public.fichas;
 create policy "therapists_delete_own_fichas"
   on public.fichas for delete
   using (auth.uid() = therapist_id);
@@ -84,7 +101,9 @@ create policy "therapists_delete_own_fichas"
 -- Atualiza "updated_at" automaticamente
 -- ---------------------------------------------------------------------
 create or replace function public.set_updated_at()
-returns trigger language plpgsql as $$
+returns trigger language plpgsql
+set search_path = ''
+as $
 begin
   new.updated_at = now();
   return new;

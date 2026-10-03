@@ -7,7 +7,7 @@ pacientes totalmente privados entre terapeutas** (multiusuário / SaaS).
 
 ## Como foi construído
 
-- **Next.js** (React) — o site/aplicativo em si.
+- **Next.js 16** (React 19) — o site/aplicativo em si.
 - **Supabase** — login dos terapeutas (Auth) e banco de dados dos
   pacientes e fichas (Postgres), com *Row Level Security* garantindo
   que um terapeuta nunca veja dados de outro.
@@ -43,7 +43,8 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=sua-anon-key-aqui
 
 ### 3. Instalar dependências e testar localmente
 
-No computador (ou em uma sessão com acesso à internet liberado):
+Requer o [Node.js](https://nodejs.org) (versão LTS) instalado. No terminal,
+na pasta do projeto:
 
 ```bash
 npm install
@@ -71,6 +72,7 @@ pedirá para criar uma conta de terapeuta (`/signup`).
 ```
 src/
   app/            páginas (login, cadastro, lista de pacientes, ficha)
+  proxy.ts        protege as páginas: quem não fez login vai para /login
   components/     formulário da ficha, gráfico de 5 elementos, etc.
   lib/            lógica de pontuação, geração de PDF, clientes Supabase
   data/           app_data.json — todas as 460 perguntas, 46 síndromes

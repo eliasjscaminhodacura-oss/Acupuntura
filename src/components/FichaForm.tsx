@@ -31,6 +31,7 @@ export default function FichaForm({ patient, fichaId, initialAnswers, initialCom
   const [complaint, setComplaint] = useState(initialComplaint);
   const [saving, setSaving] = useState(false);
   const [savedAt, setSavedAt] = useState<string | null>(null);
+  const [saveError, setSaveError] = useState<string | null>(null);
   const [currentFichaId, setCurrentFichaId] = useState(fichaId);
 
   const groups = useMemo(() => groupQuestionsByCategory(data), []);
@@ -43,9 +44,14 @@ export default function FichaForm({ patient, fichaId, initialAnswers, initialCom
 
   async function handleSave() {
     setSaving(true);
+    setSaveError(null);
     const { data: userData } = await supabase.auth.getUser();
     const therapistId = userData.user?.id;
-    if (!therapistId) { setSaving(false); return; }
+    if (!therapistId) {
+      setSaving(false);
+      setSaveError('Sessão expirada. Faça login novamente para salvar.');
+      return;
+    }
 
     const payload = {
       therapist_id: therapistId,
@@ -56,13 +62,19 @@ export default function FichaForm({ patient, fichaId, initialAnswers, initialCom
       element_scores: result.elementScores,
     };
 
+    let error;
     if (currentFichaId) {
-      await supabase.from('fichas').update(payload).eq('id', currentFichaId);
+      ({ error } = await supabase.from('fichas').update(payload).eq('id', currentFichaId));
     } else {
-      const { data: inserted } = await supabase.from('fichas').insert(payload).select('id').single();
-      if (inserted) setCurrentFichaId(inserted.id);
+      const res = await supabase.from('fichas').insert(payload).select('id').single();
+      error = res.error;
+      if (res.data) setCurrentFichaId(res.data.id);
     }
     setSaving(false);
+    if (error) {
+      setSaveError('Não foi possível salvar a ficha. Verifique sua conexão e tente novamente.');
+      return;
+    }
     setSavedAt(new Date().toLocaleTimeString('pt-BR'));
   }
 
@@ -99,7 +111,8 @@ export default function FichaForm({ patient, fichaId, initialAnswers, initialCom
         </div>
       </div>
 
-      {savedAt && <p style={{ color: '#3E6259', fontSize: 13 }}>Salvo às {savedAt}.</p>}
+      {saveError && <div className="error">{saveError}</div>}
+      {savedAt && !saveError && <p style={{ color: '#3E6259', fontSize: 13 }}>Salvo às {savedAt}.</p>}
 
       <div className="panel">
         <label htmlFor="complaint">Queixa principal</label>

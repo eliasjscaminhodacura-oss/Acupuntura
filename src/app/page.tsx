@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import { createServerSupabaseClient } from '@/lib/supabaseServer';
+import { requireUser } from '@/lib/supabaseServer';
 import LogoutButton from '@/components/LogoutButton';
 
 export const dynamic = 'force-dynamic';
 
 export default async function DashboardPage() {
-  const supabase = createServerSupabaseClient();
+  const { supabase } = await requireUser();
   const { data: patients } = await supabase
     .from('patients')
     .select('id, name, phone, created_at')
