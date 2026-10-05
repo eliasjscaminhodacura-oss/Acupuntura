@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { createClient } from '@/lib/supabaseClient';
+import Logo from '@/components/Logo';
 
 export default function SignupPage() {
   const supabase = createClient();
@@ -46,9 +47,12 @@ export default function SignupPage() {
 
   return (
     <div className="container" style={{ maxWidth: 380 }}>
+      <div className="login-logo">
+        <Logo size={160} />
+      </div>
       <div className="brand">
         <div>
-          <div className="kicker">Método EliasJS · Caminho da Cura</div>
+          <div className="kicker">Método de Anamnese em MTC by Elias JS · Caminho da Cura</div>
           <h1>Criar conta de terapeuta</h1>
         </div>
       </div>

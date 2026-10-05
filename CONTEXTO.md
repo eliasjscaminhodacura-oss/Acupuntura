@@ -1,4 +1,4 @@
-# CONTEXTO DO PROJETO — Ficha de Anamnese MTC (Método EliasJS · Caminho da Cura)
+# CONTEXTO DO PROJETO — Método de Anamnese em MTC (by Elias JS · Caminho da Cura)
 
 > Diário de bordo do projeto. **Atualizar ao final de cada dia de trabalho**,
 > depois fazer commit e push. Quem abrir uma nova sessão (Claude ou pessoa)
@@ -8,19 +8,20 @@
 
 ## ▶️ ONDE PARAMOS (leia isto primeiro)
 
-**Última sessão: 03/10/2026.** O app **já funciona localmente** ligado ao
-Supabase de verdade. O dono criou a conta de terapeuta dele, fez login e
-cadastrou um paciente de teste, e a ficha abriu.
+**Última sessão: 04/10/2026 (notebook do dono).** O app funciona localmente,
+ligado ao Supabase. Nesta sessão: notebook configurado do zero, muitas
+melhorias na ficha (ver histórico de 04/10), nova logo, Ciclo dos 5
+Elementos, mapa do corpo ("holograma"), salvamento automático. O dono
+testou e aprovou tudo.
 
 **Próxima coisa a fazer:**
 
-1. Se for um computador novo (o dono vai instalar o Claude Code do zero
-   num notebook), seguir a **seção 4 (Configurar um computador novo)**.
-2. Terminar os testes locais que ficaram faltando (seção 6, item 5):
-   marcar sintomas → conferir radar e síndromes → **Salvar ficha** →
-   **Gerar PDF** e conferir o arquivo → voltar ao painel e **reabrir** a
-   ficha (as marcações devem continuar) → **Sair** e entrar de novo.
-3. Depois: publicar na Vercel (seção 6, item 6).
+1. Se for outro computador, seguir a **seção 4 (Configurar um computador
+   novo)**. A coluna `sex` já existe no Supabase — não precisa rodar SQL.
+2. O dono deve **revisar as posições dos 71 pontos** no mapa do corpo
+   (são ilustrativas; ajustar em `src/lib/body-map.ts`, objeto `POINTS`).
+3. **Publicar na Vercel** (seção 6, item 6) — o dono já entende que
+   `localhost:3000` só funciona no computador onde o app está ligado.
 
 ---
 
@@ -57,7 +58,8 @@ próprio).
   TypeScript 5 (não usar TS 7 — novo demais para o Next).
 - **Supabase** (`@supabase/ssr` 0.12, `supabase-js` 2.117): Auth (login dos
   terapeutas) + Postgres com Row Level Security (`auth.uid() = therapist_id`).
-- **jsPDF 4**: PDF da ficha com radar dos 5 elementos desenhado à mão.
+- **jsPDF 4**: PDF da ficha (Ciclo dos 5 Elementos, mapa do corpo e
+  sintomas em caixinhas) desenhado à mão, sem imagens além da logo.
 - Hospedagem planejada: **Vercel** (região dos servidores deve ser São Paulo
   `gru1`, igual ao banco).
 - **Next 16 mudou muita coisa**: antes de mexer em APIs do Next, ler a
@@ -70,11 +72,15 @@ próprio).
 
 | Arquivo | Função |
 |---|---|
-| `src/data/app_data.json` | 460 perguntas, 46 síndromes, notas clínicas (fiéis à planilha) |
-| `src/lib/ficha-types.ts`, `ficha-logic.ts` | tipos e cálculo de pontuação |
-| `src/lib/pdf-export.ts` | geração do PDF (`buildPdfBlob` já aceita `logoDataUrl` para a futura logo) |
-| `src/components/FichaForm.tsx` | formulário da ficha (cálculo em tempo real, salvar com aviso de erro, PDF) |
-| `src/components/ElementRadar.tsx` | radar SVG dos 5 elementos |
+| `src/data/app_data.json` | 460 perguntas, 46 síndromes, notas clínicas (fiéis à planilha; rótulos com acentos corrigidos em 04/10 — as `key` não mudaram, exceto 2 chaves duplicadas da Tosse) |
+| `src/lib/ficha-types.ts`, `ficha-logic.ts` | tipos, cálculo de pontuação, agrupamento (Normal sempre primeiro; itens avulsos juntados num grupo sem título), filtro por sexo (`dataForSex`), regra do "Sem alterações / Normal" (`normalGroups`, `applyNormalDefaults`) |
+| `src/lib/pdf-export.ts` | geração do PDF: logo em todas as páginas, Ciclo, síndromes, mapa do corpo, sintomas em 3 colunas igual à tela |
+| `src/lib/cycle5.ts` + `src/components/ElementCycle.tsx` | Ciclo dos 5 Elementos (Sheng/Ke), gráfico principal do resultado |
+| `src/lib/radar3d.ts` + `src/components/ElementRadar.tsx` | gráfico 3D dos 5 elementos (botão "Ver em 3D") |
+| `src/lib/body-map.ts` + `src/components/BodyHologram.tsx` | mapa do corpo: contorno, 10 órgãos e 71 pontos (posições ILUSTRATIVAS) |
+| `src/components/FichaForm.tsx` | ficha: resultado no final, salvamento automático (2 s), avanço automático entre partes, "voltar"/"corrigir dados" |
+| `src/components/PatientForm.tsx` | cadastro e correção do paciente (com Sexo) — usado em `/pacientes/novo` e `/pacientes/[id]/editar` |
+| `src/components/Logo.tsx` + `public/logo.jpg` | logo do dono (recortada em círculo na tela e no PDF) |
 | `src/components/LogoutButton.tsx` | botão Sair |
 | `src/proxy.ts` | protege rotas (sem login → /login). Rotas públicas: /login, /signup, /auth/, /api/public |
 | `src/lib/supabaseServer.ts` | cliente Supabase do servidor + `requireUser()` (2ª camada de proteção nas páginas) |
@@ -82,7 +88,7 @@ próprio).
 | `src/app/page.tsx` | painel "Meus pacientes" |
 | `src/app/login`, `src/app/signup` | entrar / criar conta de terapeuta |
 | `src/app/auth/callback/route.ts` | destino do link de confirmação do e-mail de cadastro |
-| `src/app/pacientes/novo/page.tsx` | cadastro de paciente |
+| `src/app/pacientes/novo/page.tsx`, `src/app/pacientes/[patientId]/editar/page.tsx` | cadastro / correção de paciente |
 | `src/app/ficha/[patientId]/page.tsx` | abre a ficha mais recente do paciente |
 | `supabase/schema.sql` | tabelas `patients` e `fichas` + RLS. **Já executado** no Supabase. Pode ser rodado de novo sem problema |
 | `CLAUDE.md` | lido automaticamente pelo Claude Code; importa este arquivo |
@@ -96,8 +102,15 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
    Depois disso, o terminal pode não achar `node` até ser reaberto. No
    Bash do Claude Code dá para contornar acrescentando ao PATH a pasta
    `%LOCALAPPDATA%\Microsoft\WinGet\Packages\OpenJS.NodeJS.LTS_*\node-v*-win-x64`.
-2. **Git**: verificar com `git --version`; se faltar,
-   `winget install --id Git.Git -e`.
+2. **Git e GitHub CLI**: verificar com `git --version`; se faltar,
+   `winget install --id Git.Git -e` e `winget install --id GitHub.cli -e`.
+   Logo depois de instalar, o PATH do Claude Code ainda não os enxerga: usar
+   `C:\Program Files\Git\cmd` e `C:\Program Files\GitHub CLI\gh.exe`.
+   Login: `gh auth login --hostname github.com --git-protocol https --web`
+   rodado em segundo plano — ele mostra um código de 8 letras; o dono abre
+   https://github.com/login/device, cola o código e autoriza. Depois
+   `gh auth setup-git` (assim o `git push` funciona sem pedir senha).
+   No notebook (04/10) o terminal integrado do app não abriu; isso funcionou.
 3. **Baixar o projeto**: `git clone https://github.com/eliasjscaminhodacura-oss/acupuntura.git`
    e abrir o Claude Code dentro dessa pasta.
 4. Configurar o autor dos commits (só no repositório):
@@ -115,10 +128,10 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
    `sb_publishable_`). Pedir ao dono para copiar e colar na conversa. Essa
    chave é pública por natureza (fica no navegador); **nunca** usar/pedir a
    "Secret key" nem a "service_role".
-7. `npm run build` para conferir, depois `npm run dev` e abrir
-   http://localhost:3000.
-8. 1º `git push`: o dono roda `! git push origin main` para fazer login no
-   GitHub pelo navegador (Git Credential Manager).
+7. `npm run build` para conferir, depois `npm run dev` (em segundo plano;
+   o Claude Code desliga processos de fundo após 2 h — se cair, é só ligar
+   de novo) e abrir http://localhost:3000 no Chrome do dono. O navegador
+   do app não tem o login do dono: telas internas só ele vê.
 
 ## 5. Supabase (já criado)
 
@@ -127,6 +140,8 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
   para LGPD e velocidade).
 - URL: `https://bgwyhakqicwmxxjgfbrn.supabase.co`
 - `supabase/schema.sql` executado com sucesso em 03/10/2026.
+- 04/10/2026: coluna `patients.sex` ('M'/'F') criada no SQL Editor (as 3
+  linhas `alter table` que estão no `schema.sql`). Já feito.
 - Testado: sem login, a API devolve lista vazia de pacientes (RLS ok).
 - Conta de terapeuta do dono criada. O e-mail de confirmação não foi
   clicado/não chegou; a conta foi confirmada manualmente no SQL Editor com:
@@ -144,14 +159,13 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
 2. [x] `npm install` + `npm run build` — compila sem erros.
 3. [x] Correções/atualizações de segurança (ver histórico).
 4. [x] Projeto Supabase criado (São Paulo) e `schema.sql` executado.
-5. [ ] Teste local completo. **Já OK:** cadastro de terapeuta, login,
-       cadastro de paciente, abrir ficha. **Falta conferir:** radar/síndromes
-       ao marcar sintomas, salvar, PDF, reabrir ficha salva, sair/entrar.
+5. [x] Teste local completo (04/10): login, paciente, ficha, salvar,
+       PDF, reabrir — o dono testou e aprovou.
 6. [ ] Publicar na Vercel (conectar o repositório GitHub; variáveis
        `NEXT_PUBLIC_SUPABASE_URL` e `NEXT_PUBLIC_SUPABASE_ANON_KEY`; depois
        ajustar Site URL/Redirect URLs no Supabase).
-7. [ ] Depois: logomarca (trazer a imagem gerada por IA do protótipo antigo
-       em HTML), cobrança (Stripe), domínio próprio.
+7. [x] Logomarca (04/10: logo nova do dono em `public/logo.jpg`).
+       [ ] Depois: cobrança (Stripe), domínio próprio.
 8. [ ] **Antes de qualquer lançamento comercial: consultar advogado de LGPD**
        (o app trata dados de saúde de pacientes de terceiros). Levar também:
        termos de uso, política de privacidade, contrato de operador de dados.
@@ -160,11 +174,39 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
 
 - SMTP próprio para e-mails de cadastro (ver seção 5).
 - Tela de "esqueci minha senha".
-- Editar/excluir paciente; histórico de várias fichas por paciente
-  (hoje a página abre/atualiza sempre a ficha mais recente).
+- Excluir paciente; histórico de várias fichas por paciente
+  (hoje a página abre/atualiza sempre a ficha mais recente). Editar
+  paciente já existe (04/10).
+- PDF tem 9–10 páginas (mostra todas as opções, como a tela). Se o dono
+  quiser mais curto: mostrar só as categorias com alguma alteração.
+- O dono revisar as posições dos pontos no mapa do corpo.
 - Termos de uso / política de privacidade (junto com o advogado de LGPD).
 
 ## 8. Histórico (mais recente primeiro)
+
+### 04/10/2026
+- Notebook do dono configurado do zero (Git, GitHub CLI, Node 24 LTS,
+  clone em `Documentos\Acupuntura`, `.env.local` com a Publishable key).
+- Ficha: rótulos com acentos/espaços corrigidos; Tosse dividida em 3 grupos
+  (e corrigido bug: os 3 "Sem alterações" da Tosse tinham a mesma chave);
+  Cólica e Corrimento em grupos próprios; "Sem alterações / Normal" sempre
+  primeiro, **já vem marcado** e se desmarca ao escolher uma alteração (volta
+  sozinho se nenhuma alteração ficar marcada); títulos dos grupos em negrito;
+  perguntas em 3 colunas; avanço automático para a próxima parte (pode
+  desligar); itens avulsos juntados sem título repetido.
+- Paciente ganhou **Sexo** (coluna no Supabase): masculino não vê genitais
+  femininos, Menstruação nem os itens de cefaleia ligados ao fluxo menstrual.
+  Botões "← Meus pacientes" e "Corrigir dados do paciente".
+- **Resultado no final** da ficha: Ciclo dos 5 Elementos (com frase simples
+  para leigos; "Ver em 3D" mostra o gráfico 3D), mapa do corpo com visual de
+  holograma (órgãos acendem pela cor do elemento; pontos das síndromes em
+  amarelo, o ponto clicado fica vermelho com anel pulsando) e síndromes.
+- **Salvamento automático** 2 s após cada alteração (o dono perdeu
+  marcações ao atualizar a página antes disso).
+- PDF: data dd/mm/aaaa, sexo, logo em todas as páginas, Ciclo, página do
+  mapa do corpo, sintomas em caixinhas iguais à tela.
+- Logo nova do dono; título em todas as telas: "Método de Anamnese em MTC
+  by Elias JS · Caminho da Cura".
 
 ### 03/10/2026
 - Sessão no Claude Code em Windows (computador de trabalho). Rede ao npm OK

@@ -28,6 +28,12 @@ create table if not exists public.patients (
   updated_at timestamptz not null default now()
 );
 
+-- Sexo do paciente (M/F): define quais perguntas da ficha aparecem.
+-- Adicionado em 04/10/2026; "if not exists" permite rodar de novo.
+alter table public.patients add column if not exists sex text;
+alter table public.patients drop constraint if exists patients_sex_check;
+alter table public.patients add constraint patients_sex_check check (sex in ('M', 'F'));
+
 alter table public.patients enable row level security;
 
 drop policy if exists "therapists_select_own_patients" on public.patients;

@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { requireUser } from '@/lib/supabaseServer';
 import FichaForm from '@/components/FichaForm';
+import type { PatientRecord } from '@/components/PatientForm';
 
 export const dynamic = 'force-dynamic';
 
@@ -8,9 +9,10 @@ export default async function FichaPage({ params }: { params: Promise<{ patientI
   const { patientId } = await params;
   const { supabase } = await requireUser();
 
+  // "*" para continuar funcionando mesmo antes da coluna "sex" existir no banco.
   const { data: patient } = await supabase
     .from('patients')
-    .select('id, name, birth_date, phone, address')
+    .select('*')
     .eq('id', patientId)
     .single();
 
@@ -26,7 +28,7 @@ export default async function FichaPage({ params }: { params: Promise<{ patientI
 
   return (
     <FichaForm
-      patient={patient}
+      patient={{ ...(patient as PatientRecord), sex: patient.sex ?? null }}
       fichaId={ficha?.id ?? null}
       initialAnswers={(ficha?.answers as Record<string, boolean>) ?? {}}
       initialComplaint={ficha?.chief_complaint ?? ''}

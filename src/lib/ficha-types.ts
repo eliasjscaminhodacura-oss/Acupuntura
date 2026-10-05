@@ -32,6 +32,10 @@ export type FichaData = {
   clinical_notes: Record<string, ClinicalNote>;
 };
 
+// Sexo do paciente: define quais perguntas aparecem (genitais/menstruação).
+// null = não informado (pacientes antigos) -> mostra tudo.
+export type Sex = 'M' | 'F' | null;
+
 // chave do item (Question.key) -> marcado (true) ou não
 export type Answers = Record<string, boolean>;
 

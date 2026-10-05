@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { requireUser } from '@/lib/supabaseServer';
 import LogoutButton from '@/components/LogoutButton';
+import Logo from '@/components/Logo';
 
 export const dynamic = 'force-dynamic';
 
@@ -14,11 +15,12 @@ export default async function DashboardPage() {
   return (
     <div className="container">
       <div className="topbar">
-        <div>
-          <div className="kicker" style={{ fontSize: 12, textTransform: 'uppercase', color: '#6b675c' }}>
-            Método EliasJS · Caminho da Cura
+        <div className="brand" style={{ marginBottom: 0 }}>
+          <Logo size={64} />
+          <div>
+            <div className="kicker">Método de Anamnese em MTC by Elias JS · Caminho da Cura</div>
+            <h1 style={{ margin: '2px 0 0' }}>Meus pacientes</h1>
           </div>
-          <h1 style={{ margin: '2px 0 0' }}>Meus pacientes</h1>
         </div>
         <LogoutButton />
       </div>
@@ -39,9 +41,14 @@ export default async function DashboardPage() {
               <strong>{p.name}</strong>
               {p.phone && <div style={{ fontSize: 13, color: '#6b675c' }}>{p.phone}</div>}
             </div>
-            <Link href={`/ficha/${p.id}`}>
-              <button className="secondary">Abrir ficha</button>
-            </Link>
+            <div style={{ display: 'flex', gap: 8 }}>
+              <Link href={`/pacientes/${p.id}/editar`}>
+                <button className="secondary small">Corrigir dados</button>
+              </Link>
+              <Link href={`/ficha/${p.id}`}>
+                <button className="secondary">Abrir ficha</button>
+              </Link>
+            </div>
           </div>
         ))}
       </div>

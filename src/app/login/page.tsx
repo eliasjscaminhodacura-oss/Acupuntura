@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { createClient } from '@/lib/supabaseClient';
+import Logo from '@/components/Logo';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -33,9 +34,12 @@ export default function LoginPage() {
 
   return (
     <div className="container" style={{ maxWidth: 380 }}>
+      <div className="login-logo">
+        <Logo size={200} />
+      </div>
       <div className="brand">
         <div>
-          <div className="kicker">Método EliasJS · Caminho da Cura</div>
+          <div className="kicker">Método de Anamnese em MTC by Elias JS · Caminho da Cura</div>
           <h1>Entrar</h1>
         </div>
       </div>

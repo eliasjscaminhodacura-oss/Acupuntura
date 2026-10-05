@@ -2,8 +2,9 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Método EliasJS · Caminho da Cura',
+  title: 'Método de Anamnese em MTC by Elias JS · Caminho da Cura',
   description: 'Ficha de Anamnese pela Medicina Tradicional Chinesa',
+  icons: { icon: '/logo.jpg' },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
