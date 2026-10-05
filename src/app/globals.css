@@ -423,3 +423,52 @@ button.small { padding: 6px 12px; font-size: 13px; }
   .body3d-row-title { min-width: 100%; }
   .body3d-stage, .body3d-loading { height: 62vh; }
 }
+
+/* Orientação alimentar */
+.diet h4 { margin: 18px 0 8px; color: var(--jade); }
+.diet-help { color: var(--muted); font-size: 13px; margin: 0 0 12px; }
+.diet-legal { color: var(--muted); font-size: 11px; margin: 14px 0 0; font-style: italic; }
+.diet-element {
+  border-left: 4px solid;
+  padding: 8px 12px;
+  background: var(--bg);
+  border-radius: 0 8px 8px 0;
+  font-size: 14px;
+}
+.diet-element-meta { display: block; color: var(--muted); font-size: 12px; margin-top: 2px; }
+.diet-element p { margin: 6px 0 0; }
+.diet-row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.diet-principle { font-size: 13px; margin: 8px 0 0; }
+.diet-toggle,
+.diet-chip {
+  padding: 5px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--ink);
+  font-size: 13px;
+  cursor: pointer;
+}
+.diet-toggle.on { background: var(--jade); border-color: var(--jade); color: #fff; }
+.diet-chip.pref, .diet-chip.extra { border-color: var(--jade); background: rgba(62, 98, 89, .1); }
+.diet-chip.extra { border-style: dashed; }
+.diet-chip.evite { border-color: var(--brick); background: rgba(166, 61, 47, .08); }
+.diet-chip.off { opacity: .45; text-decoration: line-through; background: transparent; }
+.diet-chip:disabled { cursor: not-allowed; }
+.diet-group { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-bottom: 6px; }
+.diet-group-name {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--muted);
+  min-width: 150px;
+}
+.diet-pref-title { color: var(--jade); }
+.diet-evite-title { color: var(--brick) !important; }
+.diet-add { margin-top: 8px; max-width: 320px; }
+.diet-list { margin: 0; padding-left: 20px; font-size: 14px; }
+.diet-notes { margin-top: 10px; color: var(--brick); }
+.diet-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+@media (max-width: 560px) {
+  .diet-group-name { min-width: 100%; }
+}

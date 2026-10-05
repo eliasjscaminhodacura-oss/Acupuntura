@@ -27,8 +27,12 @@ perfeito"). Os 71 pontos foram revisados pelo dono e estão corretos.
    `gru1`) já está no repositório.
 3. **Dietética (Orientação Alimentar segundo a MTC)** — etapa 1 pronta: o
    dono deve revisar `revisao/Dietetica-MTC-revisao.xlsx` (instruções na
-   aba "Leia-me"). Depois: `npm run dietetica:importar` e seguir para a
-   etapa 2 (ver seção 7).
+   aba "Leia-me"). Depois: `npm run dietetica:importar`.
+   Etapa 2 (painel + PDF do paciente) também pronta — **falta o dono rodar
+   no Supabase (SQL Editor) a linha
+   `alter table public.fichas add column if not exists diet jsonb;`**
+   (já está no `schema.sql`). Sem ela, a ficha salva normalmente, mas as
+   escolhas da orientação alimentar não ficam guardadas (o painel avisa).
 4. **Publicar na Vercel** (seção 6, item 6) — o dono já entende que
    `localhost:3000` só funciona no computador onde o app está ligado.
 
@@ -100,6 +104,7 @@ próprio).
 | `src/app/auth/callback/route.ts` | destino do link de confirmação do e-mail de cadastro |
 | `src/app/pacientes/novo/page.tsx`, `src/app/pacientes/[patientId]/editar/page.tsx` | cadastro / correção de paciente |
 | `src/app/ficha/[patientId]/page.tsx` | abre a ficha mais recente do paciente |
+| `src/data/dietetica.json` + `src/lib/dietetica.ts` + `src/components/DietPanel.tsx` + `src/lib/pdf-dieta.ts` | Orientação alimentar segundo a MTC: conteúdo (revisado pelo dono via planilha), lógica (síndromes escolhidas — automático = 3 mais fortes; tira do "Prefira" o que alguma síndrome manda evitar ou o que tem natureza térmica oposta; restrições do paciente), painel no fim do resultado e PDF A5 do paciente |
 | `supabase/schema.sql` | tabelas `patients` e `fichas` + RLS. **Já executado** no Supabase. Pode ser rodado de novo sem problema |
 | `CLAUDE.md` | lido automaticamente pelo Claude Code; importa este arquivo |
 
@@ -190,11 +195,14 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
      46; orientação por Elemento). Planilha de revisão:
      `npm run dietetica:exportar` / `npm run dietetica:importar`
      (`scripts/dietetica-planilha.mjs`). **Aguardando revisão do dono.**
-  2. [ ] Painel "Orientação alimentar" no fim do resultado da ficha (vem
+  2. [x] Painel "Orientação alimentar" no fim do resultado da ficha (vem
      preenchido pelas síndromes; terapeuta ajusta; restrições do paciente:
      diabetes, hipertensão, gestação, alergias, vegetariano), PDF próprio
      do paciente (1 coluna, letra grande, para celular) e botão "Enviar para
-     o paciente" (Web Share → WhatsApp).
+     o paciente" (Web Share → WhatsApp). Feito em 05/10: `DietPanel.tsx`,
+     `lib/dietetica.ts` (junta as síndromes, conflito por natureza
+     térmica, restrições), `lib/pdf-dieta.ts` (A5, ~250 KB),
+     `lib/download.ts`. Escolhas salvas em `fichas.diet` (jsonb).
   3. [ ] Biblioteca de 40–60 receitas tradicionais (congees, sopas, chás),
      revisadas pelo dono.
   4. [ ] (Opcional) Receitas geradas por IA, aprovadas pelo terapeuta
@@ -225,6 +233,14 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
   `revisao/Dietetica-MTC-revisao.xlsx` para o dono revisar. Nova
   dependência de desenvolvimento `exceljs` (com `overrides` de `uuid`
   ^11 para zerar o npm audit).
+- Dietética, etapa 2: painel "Orientação alimentar segundo a MTC" no fim do
+  resultado + PDF do paciente (A5) + botão "Enviar para o paciente".
+  Testado com página temporária (já apagada) e PDF conferido.
+- Demonstração enquanto se programa: `next.config.js` aceita
+  `NEXT_DIST_DIR`. Cópia fixa: `NEXT_DIST_DIR=.next-demo npm run build` e
+  `NEXT_DIST_DIR=.next-demo npx next start -p 3000` (os builds normais vão
+  para `.next` e não a afetam). Esse build acrescenta `.next-demo` ao
+  `tsconfig.json` — desfazer com `git checkout tsconfig.json`.
 - Um `npm run dev` antigo ficou rodando escondido e passou a mostrar
   "Jest worker encountered 2 child process exceptions" (porque o `.next`
   foi recompilado por baixo dele). Solução: encerrar o processo node na

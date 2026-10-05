@@ -23,7 +23,7 @@ export default function Logo({ size = 56 }: { size?: number }) {
 
 // Prepara a logo para o PDF: recorta em círculo (fundo transparente) e
 // devolve como PNG. Devolve undefined se não houver logo.
-export async function loadLogoDataUrl(): Promise<string | undefined> {
+export async function loadLogoDataUrl(size = 600): Promise<string | undefined> {
   try {
     const res = await fetch(LOGO_SRC);
     if (!res.ok || !res.headers.get('content-type')?.startsWith('image/')) return undefined;
@@ -35,7 +35,6 @@ export async function loadLogoDataUrl(): Promise<string | undefined> {
         img.onerror = reject;
         img.src = url;
       });
-      const size = 600;
       const canvas = document.createElement('canvas');
       canvas.width = size;
       canvas.height = size;

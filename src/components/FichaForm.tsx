@@ -24,6 +24,9 @@ import { buildBodyResult } from '@/lib/body-map';
 import Logo, { loadLogoDataUrl } from './Logo';
 import type { PatientRecord } from './PatientForm';
 import { buildPdfBlob } from '@/lib/pdf-export';
+import { downloadBlob } from '@/lib/download';
+import DietPanel from './DietPanel';
+import { normalizeDiet, type DietState } from '@/lib/dietetica';
 
 const allData = appData as unknown as FichaData;
 
@@ -36,15 +39,19 @@ type Props = {
   fichaId: string | null;
   initialAnswers: Answers;
   initialComplaint: string;
+  initialDiet: unknown;
 };
 
-export default function FichaForm({ patient, fichaId, initialAnswers, initialComplaint }: Props) {
+export default function FichaForm({ patient, fichaId, initialAnswers, initialComplaint, initialDiet }: Props) {
   const supabase = createClient();
   const router = useRouter();
   const [answers, setAnswers] = useState<Answers>(() =>
     applyNormalDefaults(initialAnswers, normalGroups(dataForSex(allData, patient.sex)))
   );
   const [complaint, setComplaint] = useState(initialComplaint);
+  const [diet, setDiet] = useState<DietState>(() => normalizeDiet(initialDiet));
+  // true se o banco ainda não tem a coluna fichas.diet (schema.sql não rodado)
+  const [dietNotSaved, setDietNotSaved] = useState(false);
   const [saving, setSaving] = useState(false);
   const [savedAt, setSavedAt] = useState<string | null>(null);
   const [saveError, setSaveError] = useState<string | null>(null);
@@ -60,11 +67,14 @@ export default function FichaForm({ patient, fichaId, initialAnswers, initialCom
   // enquanto um salvamento estava em andamento).
   const answersRef = useRef(answers);
   const complaintRef = useRef(complaint);
+  const dietRef = useRef(diet);
+  const dietColumnMissing = useRef(false);
   const fichaIdRef = useRef(fichaId);
   const savingRef = useRef(false);
   const pendingRef = useRef(false);
   answersRef.current = answers;
   complaintRef.current = complaint;
+  dietRef.current = diet;
 
   // Só as perguntas que valem para o sexo do paciente
   const data = useMemo(() => dataForSex(allData, patient.sex), [patient.sex]);
@@ -112,7 +122,7 @@ export default function FichaForm({ patient, fichaId, initialAnswers, initialCom
     if (!dirty) return;
     const t = setTimeout(() => { void handleSave(); }, AUTOSAVE_DELAY_MS);
     return () => clearTimeout(t);
-  }, [answers, complaint, dirty, saveRetry]);
+  }, [answers, complaint, diet, dirty, saveRetry]);
 
   function changeAutoScroll(on: boolean) {
     setAutoScroll(on);
@@ -174,6 +184,7 @@ export default function FichaForm({ patient, fichaId, initialAnswers, initialCom
 
     const snapAnswers = answersRef.current;
     const snapComplaint = complaintRef.current;
+    const snapDiet = dietRef.current;
     const scores = computeScores(snapAnswers, data);
 
     let error: unknown = null;
@@ -182,7 +193,7 @@ export default function FichaForm({ patient, fichaId, initialAnswers, initialCom
     if (!therapistId) {
       error = 'sessão';
     } else {
-      const payload = {
+      const base = {
         therapist_id: therapistId,
         patient_id: patient.id,
         chief_complaint: snapComplaint,
@@ -190,12 +201,20 @@ export default function FichaForm({ patient, fichaId, initialAnswers, initialCom
         syndrome_scores: scores.syndromeScores,
         element_scores: scores.elementScores,
       };
-      if (fichaIdRef.current) {
-        ({ error } = await supabase.from('fichas').update(payload).eq('id', fichaIdRef.current));
-      } else {
+      const write = async (payload: Record<string, unknown>) => {
+        if (fichaIdRef.current) {
+          return (await supabase.from('fichas').update(payload).eq('id', fichaIdRef.current)).error;
+        }
         const res = await supabase.from('fichas').insert(payload).select('id').single();
-        error = res.error;
         if (res.data) fichaIdRef.current = res.data.id;
+        return res.error;
+      };
+      error = await write(dietColumnMissing.current ? base : { ...base, diet: snapDiet });
+      // Banco sem a coluna "diet" (schema.sql ainda não rodado): salva o resto.
+      if (error && !dietColumnMissing.current && /diet/.test(String((error as { message?: string }).message))) {
+        dietColumnMissing.current = true;
+        setDietNotSaved(true);
+        error = await write(base);
       }
     }
 
@@ -212,7 +231,8 @@ export default function FichaForm({ patient, fichaId, initialAnswers, initialCom
 
     setSavedAt(new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }));
     const changedMeanwhile =
-      pendingRef.current || answersRef.current !== snapAnswers || complaintRef.current !== snapComplaint;
+      pendingRef.current || answersRef.current !== snapAnswers || complaintRef.current !== snapComplaint ||
+      dietRef.current !== snapDiet;
     pendingRef.current = false;
     if (changedMeanwhile) {
       setSaveRetry((n) => n + 1); // salva de novo o que mudou durante este salvamento
@@ -237,14 +257,7 @@ export default function FichaForm({ patient, fichaId, initialAnswers, initialCom
       },
       logo
     );
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `ficha-${patient.name.replace(/\s+/g, '-').toLowerCase()}.pdf`;
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-    URL.revokeObjectURL(url);
+    downloadBlob(blob, `ficha-${patient.name.replace(/\s+/g, '-').toLowerCase()}.pdf`);
   }
 
   const patientSummary = [
@@ -398,6 +411,16 @@ export default function FichaForm({ patient, fichaId, initialAnswers, initialCom
             );
           })}
         </div>
+
+        <DietPanel
+          data={data}
+          ranked={top.map((s) => s.code)}
+          elementScores={result.elementScores}
+          patientName={patient.name}
+          diet={diet}
+          onChange={(next) => { setDiet(next); setDirty(true); }}
+          notSaved={dietNotSaved}
+        />
       </div>
 
       <div className="panel" style={{ display: 'flex', justifyContent: 'space-between', gap: 8, flexWrap: 'wrap' }}>

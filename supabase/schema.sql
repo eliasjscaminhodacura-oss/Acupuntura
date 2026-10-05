@@ -72,6 +72,10 @@ create table if not exists public.fichas (
   updated_at timestamptz not null default now()
 );
 
+-- Escolhas da "Orientação alimentar segundo a MTC" (restrições, alimentos
+-- tirados/acrescentados, recado). Adicionado em 05/10/2026.
+alter table public.fichas add column if not exists diet jsonb;
+
 alter table public.fichas enable row level security;
 
 drop policy if exists "therapists_select_own_fichas" on public.fichas;
