@@ -1,0 +1,4811 @@
+{
+  "versao": 1,
+  "revisado": false,
+  "aviso": "Orientação alimentar segundo a Medicina Tradicional Chinesa. Não substitui acompanhamento médico ou nutricional.",
+  "acoes": {
+    "Qi": "Tonifica o Qi",
+    "Yang": "Aquece/tonifica o Yang",
+    "Yin": "Nutre o Yin",
+    "Xue": "Nutre o Sangue (Xue)",
+    "Jing": "Nutre a Essência (Jing)",
+    "Umid": "Drena a umidade",
+    "Flm": "Transforma a fleuma (catarro)",
+    "Aq": "Aquece o interior / dispersa o frio",
+    "Ref": "Refresca / clareia o calor",
+    "MQi": "Move o Qi",
+    "MXue": "Move o Sangue",
+    "Sec": "Umedece a secura",
+    "Shen": "Acalma o Shen (mente)",
+    "Vt": "Acalma o vento / faz descer o Yang do Fígado",
+    "Dig": "Ajuda a digestão / dissolve alimentos retidos",
+    "ExtF": "Libera o exterior (vento-frio)",
+    "ExtC": "Libera o exterior (vento-calor)",
+    "Adst": "Adstringente / consolida",
+    "Para": "Antiparasitário",
+    "Desc": "Faz descer o Qi do Estômago (náusea, refluxo)",
+    "Diur": "Diurético",
+    "Laxa": "Umedece os intestinos (laxante suave)"
+  },
+  "alertas": {
+    "GeraUmid": "Gera umidade/catarro",
+    "GeraCalor": "Gera calor",
+    "Estimulante": "Estimulante",
+    "Gelado": "Gelado",
+    "Cru": "Cru"
+  },
+  "alimentos": [
+    {
+      "id": "arroz-branco",
+      "nome": "Arroz branco",
+      "grupo": "Cereais",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E"
+      ],
+      "acoes": [
+        "Qi",
+        "Desc"
+      ],
+      "alertas": [],
+      "obs": "Base do congee (mingau de arroz).",
+      "revisado": false
+    },
+    {
+      "id": "arroz-integral",
+      "nome": "Arroz integral",
+      "grupo": "Cereais",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E",
+        "P"
+      ],
+      "acoes": [
+        "Qi",
+        "Umid"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "arroz-glutinoso-moti",
+      "nome": "Arroz glutinoso (moti)",
+      "grupo": "Cereais",
+      "natureza": "Morno",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E",
+        "P"
+      ],
+      "acoes": [
+        "Qi",
+        "Adst",
+        "Aq"
+      ],
+      "alertas": [],
+      "obs": "Pesado: pouca quantidade se houver umidade.",
+      "revisado": false
+    },
+    {
+      "id": "aveia",
+      "nome": "Aveia",
+      "grupo": "Cereais",
+      "natureza": "Morno",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E",
+        "C"
+      ],
+      "acoes": [
+        "Qi",
+        "Shen"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "milho-e-fuba",
+      "nome": "Milho e fubá",
+      "grupo": "Cereais",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "E",
+        "IG",
+        "B"
+      ],
+      "acoes": [
+        "Qi",
+        "Umid",
+        "Diur"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "painco-milheto",
+      "nome": "Painço (milheto)",
+      "grupo": "Cereais",
+      "natureza": "Fresco",
+      "sabores": [
+        "doce",
+        "salgado"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E",
+        "R"
+      ],
+      "acoes": [
+        "Qi",
+        "Yin",
+        "Ref",
+        "Umid"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "cevada",
+      "nome": "Cevada",
+      "grupo": "Cereais",
+      "natureza": "Fresco",
+      "sabores": [
+        "doce",
+        "salgado"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E",
+        "B"
+      ],
+      "acoes": [
+        "Umid",
+        "Ref",
+        "Dig",
+        "Diur"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "trigo-integral",
+      "nome": "Trigo integral",
+      "grupo": "Cereais",
+      "natureza": "Fresco",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "C",
+        "BP",
+        "R"
+      ],
+      "acoes": [
+        "Shen",
+        "Yin"
+      ],
+      "alertas": [],
+      "obs": "Na MTC, o grão que acalma o Coração.",
+      "revisado": false
+    },
+    {
+      "id": "trigo-sarraceno",
+      "nome": "Trigo-sarraceno",
+      "grupo": "Cereais",
+      "natureza": "Fresco",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E",
+        "IG"
+      ],
+      "acoes": [
+        "MQi",
+        "Dig"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "quinoa",
+      "nome": "Quinoa",
+      "grupo": "Cereais",
+      "natureza": "Morno",
+      "sabores": [
+        "doce",
+        "azedo"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "R"
+      ],
+      "acoes": [
+        "Qi",
+        "Yang"
+      ],
+      "alertas": [],
+      "obs": "Classificação moderna (verificar).",
+      "revisado": false
+    },
+    {
+      "id": "centeio",
+      "nome": "Centeio",
+      "grupo": "Cereais",
+      "natureza": "Neutro",
+      "sabores": [
+        "amargo"
+      ],
+      "elemento": "Fogo",
+      "orgaos": [
+        "F",
+        "VB",
+        "BP"
+      ],
+      "acoes": [
+        "Umid",
+        "MQi"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "pao-branco-e-massas-refinadas",
+      "nome": "Pão branco e massas refinadas",
+      "grupo": "Cereais",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E"
+      ],
+      "acoes": [],
+      "alertas": [
+        "GeraUmid"
+      ],
+      "obs": "Farinhas refinadas tendem a gerar umidade.",
+      "revisado": false
+    },
+    {
+      "id": "feijao-azuki",
+      "nome": "Feijão-azuki",
+      "grupo": "Leguminosas",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce",
+        "azedo"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "C",
+        "ID",
+        "R",
+        "B"
+      ],
+      "acoes": [
+        "Umid",
+        "Diur",
+        "Ref"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "feijao-preto",
+      "nome": "Feijão-preto",
+      "grupo": "Leguminosas",
+      "natureza": "Morno",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "R",
+        "BP"
+      ],
+      "acoes": [
+        "Yin",
+        "Jing",
+        "Xue"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "feijao-carioca",
+      "nome": "Feijão-carioca",
+      "grupo": "Leguminosas",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "R"
+      ],
+      "acoes": [
+        "Qi",
+        "Umid"
+      ],
+      "alertas": [],
+      "obs": "Classificação aproximada (verificar).",
+      "revisado": false
+    },
+    {
+      "id": "feijao-mungo-moyashi",
+      "nome": "Feijão-mungo (moyashi)",
+      "grupo": "Leguminosas",
+      "natureza": "Frio",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "C",
+        "E"
+      ],
+      "acoes": [
+        "Ref",
+        "Umid",
+        "Diur"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "broto-de-feijao",
+      "nome": "Broto de feijão",
+      "grupo": "Leguminosas",
+      "natureza": "Frio",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "C",
+        "E"
+      ],
+      "acoes": [
+        "Ref",
+        "Umid"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "tofu-e-soja",
+      "nome": "Tofu e soja",
+      "grupo": "Leguminosas",
+      "natureza": "Fresco",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E",
+        "IG"
+      ],
+      "acoes": [
+        "Ref",
+        "Yin",
+        "Sec"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "grao-de-bico",
+      "nome": "Grão-de-bico",
+      "grupo": "Leguminosas",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E",
+        "C"
+      ],
+      "acoes": [
+        "Qi"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "lentilha",
+      "nome": "Lentilha",
+      "grupo": "Leguminosas",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "C",
+        "R"
+      ],
+      "acoes": [
+        "Qi",
+        "Umid",
+        "Diur"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "ervilha",
+      "nome": "Ervilha",
+      "grupo": "Leguminosas",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E"
+      ],
+      "acoes": [
+        "Qi",
+        "Desc",
+        "Diur"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "fava",
+      "nome": "Fava",
+      "grupo": "Leguminosas",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E"
+      ],
+      "acoes": [
+        "Qi",
+        "Umid"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "abobora",
+      "nome": "Abóbora",
+      "grupo": "Legumes e verduras",
+      "natureza": "Morno",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E"
+      ],
+      "acoes": [
+        "Qi"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "batata-doce",
+      "nome": "Batata-doce",
+      "grupo": "Legumes e verduras",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E",
+        "R"
+      ],
+      "acoes": [
+        "Qi",
+        "Yin",
+        "Laxa"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "batata",
+      "nome": "Batata",
+      "grupo": "Legumes e verduras",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E"
+      ],
+      "acoes": [
+        "Qi"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "inhame-cara",
+      "nome": "Inhame / cará",
+      "grupo": "Legumes e verduras",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "P",
+        "R"
+      ],
+      "acoes": [
+        "Qi",
+        "Yin",
+        "Jing",
+        "Adst"
+      ],
+      "alertas": [],
+      "obs": "Equivalente brasileiro aproximado do Shan Yao (verificar).",
+      "revisado": false
+    },
+    {
+      "id": "mandioca",
+      "nome": "Mandioca",
+      "grupo": "Legumes e verduras",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E"
+      ],
+      "acoes": [
+        "Qi"
+      ],
+      "alertas": [],
+      "obs": "Sempre bem cozida. Classificação aproximada (verificar).",
+      "revisado": false
+    },
+    {
+      "id": "mandioquinha-batata-baroa",
+      "nome": "Mandioquinha (batata-baroa)",
+      "grupo": "Legumes e verduras",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E"
+      ],
+      "acoes": [
+        "Qi"
+      ],
+      "alertas": [],
+      "obs": "Classificação aproximada (verificar).",
+      "revisado": false
+    },
+    {
+      "id": "cenoura",
+      "nome": "Cenoura",
+      "grupo": "Legumes e verduras",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "P",
+        "BP",
+        "F"
+      ],
+      "acoes": [
+        "Qi",
+        "Dig"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "beterraba",
+      "nome": "Beterraba",
+      "grupo": "Legumes e verduras",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "C",
+        "F"
+      ],
+      "acoes": [
+        "Xue",
+        "MXue",
+        "Laxa"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "chuchu",
+      "nome": "Chuchu",
+      "grupo": "Legumes e verduras",
+      "natureza": "Fresco",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E"
+      ],
+      "acoes": [
+        "Ref",
+        "Diur"
+      ],
+      "alertas": [],
+      "obs": "Classificação aproximada (verificar).",
+      "revisado": false
+    },
+    {
+      "id": "abobrinha",
+      "nome": "Abobrinha",
+      "grupo": "Legumes e verduras",
+      "natureza": "Fresco",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "E",
+        "P"
+      ],
+      "acoes": [
+        "Ref",
+        "Umid",
+        "Diur"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "pepino",
+      "nome": "Pepino",
+      "grupo": "Legumes e verduras",
+      "natureza": "Frio",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E",
+        "IG"
+      ],
+      "acoes": [
+        "Ref",
+        "Diur",
+        "Sec"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "tomate",
+      "nome": "Tomate",
+      "grupo": "Legumes e verduras",
+      "natureza": "Fresco",
+      "sabores": [
+        "doce",
+        "azedo"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "F",
+        "E"
+      ],
+      "acoes": [
+        "Ref",
+        "Yin",
+        "Dig"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "berinjela",
+      "nome": "Berinjela",
+      "grupo": "Legumes e verduras",
+      "natureza": "Fresco",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E",
+        "IG"
+      ],
+      "acoes": [
+        "Ref",
+        "MXue"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "aipo-salsao",
+      "nome": "Aipo (salsão)",
+      "grupo": "Legumes e verduras",
+      "natureza": "Fresco",
+      "sabores": [
+        "doce",
+        "amargo"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "F",
+        "E"
+      ],
+      "acoes": [
+        "Ref",
+        "Vt",
+        "Diur"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "alface",
+      "nome": "Alface",
+      "grupo": "Legumes e verduras",
+      "natureza": "Fresco",
+      "sabores": [
+        "amargo",
+        "doce"
+      ],
+      "elemento": "Fogo",
+      "orgaos": [
+        "E",
+        "IG"
+      ],
+      "acoes": [
+        "Ref",
+        "Diur"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "agriao",
+      "nome": "Agrião",
+      "grupo": "Legumes e verduras",
+      "natureza": "Fresco",
+      "sabores": [
+        "amargo",
+        "picante"
+      ],
+      "elemento": "Fogo",
+      "orgaos": [
+        "P",
+        "E",
+        "B"
+      ],
+      "acoes": [
+        "Ref",
+        "Flm",
+        "Diur"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "rucula",
+      "nome": "Rúcula",
+      "grupo": "Legumes e verduras",
+      "natureza": "Fresco",
+      "sabores": [
+        "amargo",
+        "picante"
+      ],
+      "elemento": "Fogo",
+      "orgaos": [
+        "F",
+        "E"
+      ],
+      "acoes": [
+        "Ref",
+        "Dig"
+      ],
+      "alertas": [],
+      "obs": "Classificação aproximada (verificar).",
+      "revisado": false
+    },
+    {
+      "id": "jilo",
+      "nome": "Jiló",
+      "grupo": "Legumes e verduras",
+      "natureza": "Fresco",
+      "sabores": [
+        "amargo"
+      ],
+      "elemento": "Fogo",
+      "orgaos": [
+        "C",
+        "F"
+      ],
+      "acoes": [
+        "Ref",
+        "Dig"
+      ],
+      "alertas": [],
+      "obs": "Classificação aproximada (verificar).",
+      "revisado": false
+    },
+    {
+      "id": "espinafre",
+      "nome": "Espinafre",
+      "grupo": "Legumes e verduras",
+      "natureza": "Fresco",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "F",
+        "E",
+        "IG",
+        "B"
+      ],
+      "acoes": [
+        "Xue",
+        "Yin",
+        "Laxa",
+        "Ref"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "couve",
+      "nome": "Couve",
+      "grupo": "Legumes e verduras",
+      "natureza": "Morno",
+      "sabores": [
+        "amargo",
+        "doce"
+      ],
+      "elemento": "Fogo",
+      "orgaos": [
+        "P",
+        "E"
+      ],
+      "acoes": [
+        "Qi",
+        "Flm",
+        "Xue"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "brocolis",
+      "nome": "Brócolis",
+      "grupo": "Legumes e verduras",
+      "natureza": "Fresco",
+      "sabores": [
+        "doce",
+        "amargo"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "F",
+        "E"
+      ],
+      "acoes": [
+        "Ref",
+        "Diur"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "couve-flor",
+      "nome": "Couve-flor",
+      "grupo": "Legumes e verduras",
+      "natureza": "Fresco",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "E",
+        "IG"
+      ],
+      "acoes": [
+        "Ref",
+        "Dig"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "repolho",
+      "nome": "Repolho",
+      "grupo": "Legumes e verduras",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce",
+        "picante"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "E",
+        "IG"
+      ],
+      "acoes": [
+        "Qi",
+        "Desc",
+        "Dig"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "acelga",
+      "nome": "Acelga",
+      "grupo": "Legumes e verduras",
+      "natureza": "Fresco",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "E",
+        "IG"
+      ],
+      "acoes": [
+        "Ref",
+        "Laxa"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "rabanete-nabo",
+      "nome": "Rabanete / nabo",
+      "grupo": "Legumes e verduras",
+      "natureza": "Fresco",
+      "sabores": [
+        "picante",
+        "doce"
+      ],
+      "elemento": "Metal",
+      "orgaos": [
+        "P",
+        "E"
+      ],
+      "acoes": [
+        "Dig",
+        "Flm",
+        "MQi",
+        "Desc"
+      ],
+      "alertas": [],
+      "obs": "Cozido perde parte do frescor.",
+      "revisado": false
+    },
+    {
+      "id": "cebola",
+      "nome": "Cebola",
+      "grupo": "Legumes e verduras",
+      "natureza": "Morno",
+      "sabores": [
+        "picante"
+      ],
+      "elemento": "Metal",
+      "orgaos": [
+        "P",
+        "E",
+        "IG"
+      ],
+      "acoes": [
+        "Aq",
+        "MQi",
+        "Flm",
+        "MXue"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "alho-poro",
+      "nome": "Alho-poró",
+      "grupo": "Legumes e verduras",
+      "natureza": "Morno",
+      "sabores": [
+        "picante"
+      ],
+      "elemento": "Metal",
+      "orgaos": [
+        "F",
+        "R",
+        "E"
+      ],
+      "acoes": [
+        "Aq",
+        "Yang",
+        "MXue"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "cogumelo-shiitake",
+      "nome": "Cogumelo shiitake",
+      "grupo": "Legumes e verduras",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "E",
+        "F"
+      ],
+      "acoes": [
+        "Qi"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "algas-kombu-nori",
+      "nome": "Algas (kombu, nori)",
+      "grupo": "Legumes e verduras",
+      "natureza": "Frio",
+      "sabores": [
+        "salgado"
+      ],
+      "elemento": "Água",
+      "orgaos": [
+        "R",
+        "F",
+        "E",
+        "P"
+      ],
+      "acoes": [
+        "Flm",
+        "Ref",
+        "Diur",
+        "Yin"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "aspargo",
+      "nome": "Aspargo",
+      "grupo": "Legumes e verduras",
+      "natureza": "Fresco",
+      "sabores": [
+        "doce",
+        "amargo"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "P",
+        "R"
+      ],
+      "acoes": [
+        "Yin",
+        "Ref",
+        "Diur"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "vagem",
+      "nome": "Vagem",
+      "grupo": "Legumes e verduras",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "R"
+      ],
+      "acoes": [
+        "Qi"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "quiabo",
+      "nome": "Quiabo",
+      "grupo": "Legumes e verduras",
+      "natureza": "Fresco",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "E",
+        "IG"
+      ],
+      "acoes": [
+        "Sec",
+        "Laxa"
+      ],
+      "alertas": [],
+      "obs": "Classificação aproximada (verificar).",
+      "revisado": false
+    },
+    {
+      "id": "pimentao",
+      "nome": "Pimentão",
+      "grupo": "Legumes e verduras",
+      "natureza": "Morno",
+      "sabores": [
+        "picante",
+        "doce"
+      ],
+      "elemento": "Metal",
+      "orgaos": [
+        "BP",
+        "E"
+      ],
+      "acoes": [
+        "MQi",
+        "Dig"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "maca",
+      "nome": "Maçã",
+      "grupo": "Frutas",
+      "natureza": "Fresco",
+      "sabores": [
+        "doce",
+        "azedo"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "P",
+        "C",
+        "BP"
+      ],
+      "acoes": [
+        "Yin",
+        "Sec",
+        "Ref"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "pera",
+      "nome": "Pera",
+      "grupo": "Frutas",
+      "natureza": "Fresco",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "P",
+        "E"
+      ],
+      "acoes": [
+        "Sec",
+        "Yin",
+        "Ref",
+        "Flm"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "banana",
+      "nome": "Banana",
+      "grupo": "Frutas",
+      "natureza": "Frio",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "P",
+        "IG",
+        "E"
+      ],
+      "acoes": [
+        "Ref",
+        "Laxa",
+        "Sec"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "melancia",
+      "nome": "Melancia",
+      "grupo": "Frutas",
+      "natureza": "Frio",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "C",
+        "E",
+        "B"
+      ],
+      "acoes": [
+        "Ref",
+        "Diur"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "melao",
+      "nome": "Melão",
+      "grupo": "Frutas",
+      "natureza": "Frio",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "C",
+        "E"
+      ],
+      "acoes": [
+        "Ref",
+        "Diur"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "laranja",
+      "nome": "Laranja",
+      "grupo": "Frutas",
+      "natureza": "Fresco",
+      "sabores": [
+        "doce",
+        "azedo"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "P",
+        "E"
+      ],
+      "acoes": [
+        "Yin",
+        "Ref"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "tangerina-fruta",
+      "nome": "Tangerina (fruta)",
+      "grupo": "Frutas",
+      "natureza": "Fresco",
+      "sabores": [
+        "doce",
+        "azedo"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "P",
+        "E"
+      ],
+      "acoes": [
+        "Yin",
+        "Ref"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "limao",
+      "nome": "Limão",
+      "grupo": "Frutas",
+      "natureza": "Fresco",
+      "sabores": [
+        "azedo"
+      ],
+      "elemento": "Madeira",
+      "orgaos": [
+        "F",
+        "P"
+      ],
+      "acoes": [
+        "Yin",
+        "Ref",
+        "Adst"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "abacaxi",
+      "nome": "Abacaxi",
+      "grupo": "Frutas",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce",
+        "azedo"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "E",
+        "BP"
+      ],
+      "acoes": [
+        "Dig",
+        "Diur"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "mamao",
+      "nome": "Mamão",
+      "grupo": "Frutas",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "E",
+        "BP"
+      ],
+      "acoes": [
+        "Dig",
+        "Laxa"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "manga",
+      "nome": "Manga",
+      "grupo": "Frutas",
+      "natureza": "Fresco",
+      "sabores": [
+        "doce",
+        "azedo"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "P",
+        "E"
+      ],
+      "acoes": [
+        "Yin",
+        "Desc",
+        "Diur"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "uva",
+      "nome": "Uva",
+      "grupo": "Frutas",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce",
+        "azedo"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "P",
+        "BP",
+        "R"
+      ],
+      "acoes": [
+        "Xue",
+        "Qi",
+        "Diur"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "uva-passa",
+      "nome": "Uva-passa",
+      "grupo": "Frutas",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "F"
+      ],
+      "acoes": [
+        "Xue",
+        "Qi"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "morango",
+      "nome": "Morango",
+      "grupo": "Frutas",
+      "natureza": "Fresco",
+      "sabores": [
+        "doce",
+        "azedo"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "P",
+        "BP"
+      ],
+      "acoes": [
+        "Ref",
+        "Sec"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "kiwi",
+      "nome": "Kiwi",
+      "grupo": "Frutas",
+      "natureza": "Frio",
+      "sabores": [
+        "doce",
+        "azedo"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "R",
+        "E"
+      ],
+      "acoes": [
+        "Ref",
+        "Diur"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "caqui",
+      "nome": "Caqui",
+      "grupo": "Frutas",
+      "natureza": "Frio",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "P",
+        "E"
+      ],
+      "acoes": [
+        "Sec",
+        "Ref",
+        "Adst"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "pessego",
+      "nome": "Pêssego",
+      "grupo": "Frutas",
+      "natureza": "Morno",
+      "sabores": [
+        "doce",
+        "azedo"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "P",
+        "IG"
+      ],
+      "acoes": [
+        "Sec",
+        "MXue"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "cereja",
+      "nome": "Cereja",
+      "grupo": "Frutas",
+      "natureza": "Morno",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "R"
+      ],
+      "acoes": [
+        "Qi",
+        "Yang",
+        "Xue"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "tamara-jujuba",
+      "nome": "Tâmara (jujuba)",
+      "grupo": "Frutas",
+      "natureza": "Morno",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E"
+      ],
+      "acoes": [
+        "Qi",
+        "Xue",
+        "Shen"
+      ],
+      "alertas": [],
+      "obs": "Da Zao, a tâmara vermelha chinesa; a tâmara comum serve.",
+      "revisado": false
+    },
+    {
+      "id": "goji-berry",
+      "nome": "Goji berry",
+      "grupo": "Frutas",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "F",
+        "R",
+        "P"
+      ],
+      "acoes": [
+        "Xue",
+        "Yin",
+        "Jing"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "abacate",
+      "nome": "Abacate",
+      "grupo": "Frutas",
+      "natureza": "Fresco",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "F",
+        "P",
+        "IG"
+      ],
+      "acoes": [
+        "Yin",
+        "Xue",
+        "Sec",
+        "Laxa"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "goiaba",
+      "nome": "Goiaba",
+      "grupo": "Frutas",
+      "natureza": "Morno",
+      "sabores": [
+        "doce",
+        "azedo"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E",
+        "IG"
+      ],
+      "acoes": [
+        "Adst",
+        "Dig"
+      ],
+      "alertas": [],
+      "obs": "Classificação aproximada (verificar).",
+      "revisado": false
+    },
+    {
+      "id": "maracuja",
+      "nome": "Maracujá",
+      "grupo": "Frutas",
+      "natureza": "Fresco",
+      "sabores": [
+        "doce",
+        "azedo"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "C",
+        "F"
+      ],
+      "acoes": [
+        "Shen",
+        "Ref"
+      ],
+      "alertas": [],
+      "obs": "Classificação aproximada (verificar).",
+      "revisado": false
+    },
+    {
+      "id": "ameixa-seca",
+      "nome": "Ameixa seca",
+      "grupo": "Frutas",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce",
+        "azedo"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "F",
+        "R",
+        "IG"
+      ],
+      "acoes": [
+        "Laxa",
+        "Sec"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "figo",
+      "nome": "Figo",
+      "grupo": "Frutas",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "P",
+        "BP",
+        "IG"
+      ],
+      "acoes": [
+        "Laxa",
+        "Sec",
+        "Dig"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "roma",
+      "nome": "Romã",
+      "grupo": "Frutas",
+      "natureza": "Morno",
+      "sabores": [
+        "doce",
+        "azedo"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "IG",
+        "R"
+      ],
+      "acoes": [
+        "Adst",
+        "Para"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "lichia",
+      "nome": "Lichia",
+      "grupo": "Frutas",
+      "natureza": "Morno",
+      "sabores": [
+        "doce",
+        "azedo"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "F",
+        "C"
+      ],
+      "acoes": [
+        "Xue",
+        "Qi"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "frango",
+      "nome": "Frango",
+      "grupo": "Carnes, peixes e ovos",
+      "natureza": "Morno",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E"
+      ],
+      "acoes": [
+        "Qi",
+        "Yang",
+        "Xue"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "carne-bovina",
+      "nome": "Carne bovina",
+      "grupo": "Carnes, peixes e ovos",
+      "natureza": "Morno",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E"
+      ],
+      "acoes": [
+        "Qi",
+        "Xue"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "carne-de-cordeiro",
+      "nome": "Carne de cordeiro",
+      "grupo": "Carnes, peixes e ovos",
+      "natureza": "Quente",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "R"
+      ],
+      "acoes": [
+        "Yang",
+        "Aq"
+      ],
+      "alertas": [
+        "GeraCalor"
+      ],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "carne-de-porco",
+      "nome": "Carne de porco",
+      "grupo": "Carnes, peixes e ovos",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce",
+        "salgado"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E",
+        "R"
+      ],
+      "acoes": [
+        "Yin",
+        "Sec"
+      ],
+      "alertas": [
+        "GeraUmid"
+      ],
+      "obs": "Prefira cortes magros.",
+      "revisado": false
+    },
+    {
+      "id": "figado-boi-ou-galinha",
+      "nome": "Fígado (boi ou galinha)",
+      "grupo": "Carnes, peixes e ovos",
+      "natureza": "Morno",
+      "sabores": [
+        "doce",
+        "amargo"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "F"
+      ],
+      "acoes": [
+        "Xue"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "peixes-de-agua-doce",
+      "nome": "Peixes de água doce",
+      "grupo": "Carnes, peixes e ovos",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E"
+      ],
+      "acoes": [
+        "Qi",
+        "Umid"
+      ],
+      "alertas": [],
+      "obs": "Tilápia, pacu, carpa.",
+      "revisado": false
+    },
+    {
+      "id": "peixes-de-mar-sardinha-salmao",
+      "nome": "Peixes de mar (sardinha, salmão)",
+      "grupo": "Carnes, peixes e ovos",
+      "natureza": "Morno",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "R"
+      ],
+      "acoes": [
+        "Qi",
+        "Xue"
+      ],
+      "alertas": [],
+      "obs": "Classificação aproximada (verificar).",
+      "revisado": false
+    },
+    {
+      "id": "camarao",
+      "nome": "Camarão",
+      "grupo": "Carnes, peixes e ovos",
+      "natureza": "Morno",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "F",
+        "R"
+      ],
+      "acoes": [
+        "Yang"
+      ],
+      "alertas": [
+        "GeraCalor"
+      ],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "ostra-e-mariscos",
+      "nome": "Ostra e mariscos",
+      "grupo": "Carnes, peixes e ovos",
+      "natureza": "Neutro",
+      "sabores": [
+        "salgado",
+        "doce"
+      ],
+      "elemento": "Água",
+      "orgaos": [
+        "F",
+        "R"
+      ],
+      "acoes": [
+        "Yin",
+        "Xue",
+        "Shen",
+        "Vt"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "ovo",
+      "nome": "Ovo",
+      "grupo": "Carnes, peixes e ovos",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "C",
+        "R",
+        "BP"
+      ],
+      "acoes": [
+        "Yin",
+        "Xue",
+        "Shen",
+        "Sec"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "pato",
+      "nome": "Pato",
+      "grupo": "Carnes, peixes e ovos",
+      "natureza": "Fresco",
+      "sabores": [
+        "doce",
+        "salgado"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "P",
+        "R"
+      ],
+      "acoes": [
+        "Yin"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "caldo-de-ossos",
+      "nome": "Caldo de ossos",
+      "grupo": "Carnes, peixes e ovos",
+      "natureza": "Morno",
+      "sabores": [
+        "salgado",
+        "doce"
+      ],
+      "elemento": "Água",
+      "orgaos": [
+        "R",
+        "BP"
+      ],
+      "acoes": [
+        "Jing",
+        "Xue",
+        "Qi"
+      ],
+      "alertas": [],
+      "obs": "Cozimento longo (4 a 8 horas).",
+      "revisado": false
+    },
+    {
+      "id": "leite-de-vaca",
+      "nome": "Leite de vaca",
+      "grupo": "Laticínios",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "P",
+        "E"
+      ],
+      "acoes": [
+        "Yin",
+        "Sec"
+      ],
+      "alertas": [
+        "GeraUmid"
+      ],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "iogurte",
+      "nome": "Iogurte",
+      "grupo": "Laticínios",
+      "natureza": "Fresco",
+      "sabores": [
+        "doce",
+        "azedo"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "P",
+        "E",
+        "IG"
+      ],
+      "acoes": [
+        "Yin"
+      ],
+      "alertas": [
+        "GeraUmid"
+      ],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "queijo",
+      "nome": "Queijo",
+      "grupo": "Laticínios",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce",
+        "salgado"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E"
+      ],
+      "acoes": [],
+      "alertas": [
+        "GeraUmid"
+      ],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "manteiga-e-ghee",
+      "nome": "Manteiga e ghee",
+      "grupo": "Laticínios",
+      "natureza": "Morno",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E"
+      ],
+      "acoes": [
+        "Sec"
+      ],
+      "alertas": [
+        "GeraUmid"
+      ],
+      "obs": "O ghee (manteiga clarificada) é o mais leve.",
+      "revisado": false
+    },
+    {
+      "id": "nozes",
+      "nome": "Nozes",
+      "grupo": "Oleaginosas e sementes",
+      "natureza": "Morno",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "R",
+        "P",
+        "IG"
+      ],
+      "acoes": [
+        "Yang",
+        "Jing",
+        "Laxa",
+        "Sec"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "castanha-portuguesa",
+      "nome": "Castanha portuguesa",
+      "grupo": "Oleaginosas e sementes",
+      "natureza": "Morno",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E",
+        "R"
+      ],
+      "acoes": [
+        "Qi",
+        "Yang"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "castanha-do-para",
+      "nome": "Castanha-do-pará",
+      "grupo": "Oleaginosas e sementes",
+      "natureza": "Morno",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "R"
+      ],
+      "acoes": [
+        "Jing"
+      ],
+      "alertas": [],
+      "obs": "Classificação aproximada (verificar).",
+      "revisado": false
+    },
+    {
+      "id": "amendoa",
+      "nome": "Amêndoa",
+      "grupo": "Oleaginosas e sementes",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "P",
+        "IG"
+      ],
+      "acoes": [
+        "Flm",
+        "Sec"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "gergelim-preto",
+      "nome": "Gergelim preto",
+      "grupo": "Oleaginosas e sementes",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "F",
+        "R"
+      ],
+      "acoes": [
+        "Xue",
+        "Yin",
+        "Jing",
+        "Laxa"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "semente-de-abobora",
+      "nome": "Semente de abóbora",
+      "grupo": "Oleaginosas e sementes",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "IG",
+        "E"
+      ],
+      "acoes": [
+        "Para"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "amendoim",
+      "nome": "Amendoim",
+      "grupo": "Oleaginosas e sementes",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "P"
+      ],
+      "acoes": [
+        "Qi",
+        "Sec"
+      ],
+      "alertas": [
+        "GeraUmid"
+      ],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "linhaca",
+      "nome": "Linhaça",
+      "grupo": "Oleaginosas e sementes",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "IG",
+        "P"
+      ],
+      "acoes": [
+        "Laxa",
+        "Sec"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "semente-de-girassol",
+      "nome": "Semente de girassol",
+      "grupo": "Oleaginosas e sementes",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "IG"
+      ],
+      "acoes": [
+        "Qi",
+        "Laxa"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "alho",
+      "nome": "Alho",
+      "grupo": "Temperos e ervas",
+      "natureza": "Quente",
+      "sabores": [
+        "picante"
+      ],
+      "elemento": "Metal",
+      "orgaos": [
+        "BP",
+        "E",
+        "P"
+      ],
+      "acoes": [
+        "Aq",
+        "Para",
+        "MQi"
+      ],
+      "alertas": [
+        "GeraCalor"
+      ],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "cebolinha",
+      "nome": "Cebolinha",
+      "grupo": "Temperos e ervas",
+      "natureza": "Morno",
+      "sabores": [
+        "picante"
+      ],
+      "elemento": "Metal",
+      "orgaos": [
+        "P",
+        "E"
+      ],
+      "acoes": [
+        "ExtF",
+        "Aq"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "gengibre-fresco",
+      "nome": "Gengibre fresco",
+      "grupo": "Temperos e ervas",
+      "natureza": "Morno",
+      "sabores": [
+        "picante"
+      ],
+      "elemento": "Metal",
+      "orgaos": [
+        "P",
+        "BP",
+        "E"
+      ],
+      "acoes": [
+        "ExtF",
+        "Aq",
+        "Desc"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "gengibre-seco",
+      "nome": "Gengibre seco",
+      "grupo": "Temperos e ervas",
+      "natureza": "Quente",
+      "sabores": [
+        "picante"
+      ],
+      "elemento": "Metal",
+      "orgaos": [
+        "BP",
+        "E",
+        "C",
+        "P"
+      ],
+      "acoes": [
+        "Aq",
+        "Yang"
+      ],
+      "alertas": [
+        "GeraCalor"
+      ],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "casca-de-tangerina-seca",
+      "nome": "Casca de tangerina (seca)",
+      "grupo": "Temperos e ervas",
+      "natureza": "Morno",
+      "sabores": [
+        "picante",
+        "amargo"
+      ],
+      "elemento": "Metal",
+      "orgaos": [
+        "BP",
+        "P"
+      ],
+      "acoes": [
+        "MQi",
+        "Flm",
+        "Umid",
+        "Desc"
+      ],
+      "alertas": [],
+      "obs": "Chen Pi. Use a casca seca em chás e cozidos.",
+      "revisado": false
+    },
+    {
+      "id": "canela",
+      "nome": "Canela",
+      "grupo": "Temperos e ervas",
+      "natureza": "Quente",
+      "sabores": [
+        "picante",
+        "doce"
+      ],
+      "elemento": "Metal",
+      "orgaos": [
+        "R",
+        "BP",
+        "C",
+        "F"
+      ],
+      "acoes": [
+        "Aq",
+        "Yang",
+        "MXue"
+      ],
+      "alertas": [
+        "GeraCalor"
+      ],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "cravo",
+      "nome": "Cravo",
+      "grupo": "Temperos e ervas",
+      "natureza": "Quente",
+      "sabores": [
+        "picante"
+      ],
+      "elemento": "Metal",
+      "orgaos": [
+        "BP",
+        "E",
+        "R"
+      ],
+      "acoes": [
+        "Aq",
+        "Desc",
+        "Yang"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "erva-doce-funcho",
+      "nome": "Erva-doce (funcho)",
+      "grupo": "Temperos e ervas",
+      "natureza": "Morno",
+      "sabores": [
+        "picante"
+      ],
+      "elemento": "Metal",
+      "orgaos": [
+        "F",
+        "R",
+        "BP",
+        "E"
+      ],
+      "acoes": [
+        "Aq",
+        "MQi",
+        "Desc"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "pimenta-do-reino",
+      "nome": "Pimenta-do-reino",
+      "grupo": "Temperos e ervas",
+      "natureza": "Quente",
+      "sabores": [
+        "picante"
+      ],
+      "elemento": "Metal",
+      "orgaos": [
+        "E",
+        "IG"
+      ],
+      "acoes": [
+        "Aq",
+        "Dig"
+      ],
+      "alertas": [
+        "GeraCalor"
+      ],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "pimenta-vermelha",
+      "nome": "Pimenta vermelha",
+      "grupo": "Temperos e ervas",
+      "natureza": "Quente",
+      "sabores": [
+        "picante"
+      ],
+      "elemento": "Metal",
+      "orgaos": [
+        "E",
+        "P"
+      ],
+      "acoes": [
+        "Aq",
+        "ExtF"
+      ],
+      "alertas": [
+        "GeraCalor"
+      ],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "curcuma-acafrao-da-terra",
+      "nome": "Cúrcuma (açafrão-da-terra)",
+      "grupo": "Temperos e ervas",
+      "natureza": "Morno",
+      "sabores": [
+        "picante",
+        "amargo"
+      ],
+      "elemento": "Metal",
+      "orgaos": [
+        "BP",
+        "F"
+      ],
+      "acoes": [
+        "MXue",
+        "MQi"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "hortela",
+      "nome": "Hortelã",
+      "grupo": "Temperos e ervas",
+      "natureza": "Fresco",
+      "sabores": [
+        "picante"
+      ],
+      "elemento": "Metal",
+      "orgaos": [
+        "P",
+        "F"
+      ],
+      "acoes": [
+        "ExtC",
+        "MQi",
+        "Ref"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "manjericao",
+      "nome": "Manjericão",
+      "grupo": "Temperos e ervas",
+      "natureza": "Morno",
+      "sabores": [
+        "picante"
+      ],
+      "elemento": "Metal",
+      "orgaos": [
+        "P",
+        "BP",
+        "E"
+      ],
+      "acoes": [
+        "ExtF",
+        "MQi"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "alecrim",
+      "nome": "Alecrim",
+      "grupo": "Temperos e ervas",
+      "natureza": "Morno",
+      "sabores": [
+        "picante"
+      ],
+      "elemento": "Metal",
+      "orgaos": [
+        "C",
+        "BP"
+      ],
+      "acoes": [
+        "MQi",
+        "Aq"
+      ],
+      "alertas": [],
+      "obs": "Classificação aproximada (verificar).",
+      "revisado": false
+    },
+    {
+      "id": "salsinha",
+      "nome": "Salsinha",
+      "grupo": "Temperos e ervas",
+      "natureza": "Morno",
+      "sabores": [
+        "picante"
+      ],
+      "elemento": "Metal",
+      "orgaos": [
+        "B",
+        "E"
+      ],
+      "acoes": [
+        "Diur",
+        "Dig"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "coentro",
+      "nome": "Coentro",
+      "grupo": "Temperos e ervas",
+      "natureza": "Morno",
+      "sabores": [
+        "picante"
+      ],
+      "elemento": "Metal",
+      "orgaos": [
+        "P",
+        "BP"
+      ],
+      "acoes": [
+        "ExtF",
+        "Dig"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "cominho",
+      "nome": "Cominho",
+      "grupo": "Temperos e ervas",
+      "natureza": "Morno",
+      "sabores": [
+        "picante"
+      ],
+      "elemento": "Metal",
+      "orgaos": [
+        "BP",
+        "E"
+      ],
+      "acoes": [
+        "Aq",
+        "Dig"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "noz-moscada",
+      "nome": "Noz-moscada",
+      "grupo": "Temperos e ervas",
+      "natureza": "Morno",
+      "sabores": [
+        "picante"
+      ],
+      "elemento": "Metal",
+      "orgaos": [
+        "BP",
+        "IG"
+      ],
+      "acoes": [
+        "Aq",
+        "Adst"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "cardamomo",
+      "nome": "Cardamomo",
+      "grupo": "Temperos e ervas",
+      "natureza": "Morno",
+      "sabores": [
+        "picante"
+      ],
+      "elemento": "Metal",
+      "orgaos": [
+        "BP",
+        "E"
+      ],
+      "acoes": [
+        "MQi",
+        "Aq",
+        "Umid"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "vinagre",
+      "nome": "Vinagre",
+      "grupo": "Temperos e ervas",
+      "natureza": "Morno",
+      "sabores": [
+        "azedo",
+        "amargo"
+      ],
+      "elemento": "Madeira",
+      "orgaos": [
+        "F",
+        "E"
+      ],
+      "acoes": [
+        "MXue",
+        "Dig",
+        "Para"
+      ],
+      "alertas": [],
+      "obs": "Em pequena quantidade.",
+      "revisado": false
+    },
+    {
+      "id": "mel",
+      "nome": "Mel",
+      "grupo": "Temperos e ervas",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "P",
+        "BP",
+        "IG"
+      ],
+      "acoes": [
+        "Sec",
+        "Qi",
+        "Laxa"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "acucar-mascavo",
+      "nome": "Açúcar mascavo",
+      "grupo": "Temperos e ervas",
+      "natureza": "Morno",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "F"
+      ],
+      "acoes": [
+        "MXue",
+        "Aq"
+      ],
+      "alertas": [],
+      "obs": "Com moderação.",
+      "revisado": false
+    },
+    {
+      "id": "cabelo-de-milho-cha",
+      "nome": "Cabelo de milho (chá)",
+      "grupo": "Chás e bebidas",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "B",
+        "F",
+        "VB"
+      ],
+      "acoes": [
+        "Diur",
+        "Umid",
+        "Ref"
+      ],
+      "alertas": [],
+      "obs": "Chá diurético tradicional.",
+      "revisado": false
+    },
+    {
+      "id": "cha-de-crisantemo",
+      "nome": "Chá de crisântemo",
+      "grupo": "Chás e bebidas",
+      "natureza": "Fresco",
+      "sabores": [
+        "doce",
+        "amargo"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "P",
+        "F"
+      ],
+      "acoes": [
+        "Ref",
+        "Vt",
+        "ExtC"
+      ],
+      "alertas": [],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "cha-verde",
+      "nome": "Chá verde",
+      "grupo": "Chás e bebidas",
+      "natureza": "Fresco",
+      "sabores": [
+        "amargo",
+        "doce"
+      ],
+      "elemento": "Fogo",
+      "orgaos": [
+        "C",
+        "P",
+        "E"
+      ],
+      "acoes": [
+        "Ref",
+        "Dig",
+        "Diur"
+      ],
+      "alertas": [
+        "Estimulante"
+      ],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "camomila-cha",
+      "nome": "Camomila (chá)",
+      "grupo": "Chás e bebidas",
+      "natureza": "Neutro",
+      "sabores": [
+        "amargo"
+      ],
+      "elemento": "Fogo",
+      "orgaos": [
+        "F"
+      ],
+      "acoes": [
+        "Shen",
+        "MQi"
+      ],
+      "alertas": [],
+      "obs": "Classificação aproximada (verificar).",
+      "revisado": false
+    },
+    {
+      "id": "agua-de-coco",
+      "nome": "Água de coco",
+      "grupo": "Chás e bebidas",
+      "natureza": "Fresco",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "E",
+        "C"
+      ],
+      "acoes": [
+        "Ref",
+        "Sec"
+      ],
+      "alertas": [],
+      "obs": "Classificação aproximada (verificar).",
+      "revisado": false
+    },
+    {
+      "id": "cafe",
+      "nome": "Café",
+      "grupo": "Chás e bebidas",
+      "natureza": "Morno",
+      "sabores": [
+        "amargo"
+      ],
+      "elemento": "Fogo",
+      "orgaos": [
+        "C"
+      ],
+      "acoes": [],
+      "alertas": [
+        "GeraCalor",
+        "Estimulante"
+      ],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "bebidas-alcoolicas",
+      "nome": "Bebidas alcoólicas",
+      "grupo": "Chás e bebidas",
+      "natureza": "Quente",
+      "sabores": [
+        "picante",
+        "amargo"
+      ],
+      "elemento": "Metal",
+      "orgaos": [
+        "F",
+        "C",
+        "E"
+      ],
+      "acoes": [],
+      "alertas": [
+        "GeraCalor",
+        "GeraUmid"
+      ],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "acucar-refinado-e-doces",
+      "nome": "Açúcar refinado e doces",
+      "grupo": "Outros",
+      "natureza": "Neutro",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP"
+      ],
+      "acoes": [],
+      "alertas": [
+        "GeraUmid"
+      ],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "frituras-e-comidas-gordurosas",
+      "nome": "Frituras e comidas gordurosas",
+      "grupo": "Outros",
+      "natureza": "Quente",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E"
+      ],
+      "acoes": [],
+      "alertas": [
+        "GeraUmid",
+        "GeraCalor"
+      ],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "embutidos-e-industrializados",
+      "nome": "Embutidos e industrializados",
+      "grupo": "Outros",
+      "natureza": "Quente",
+      "sabores": [
+        "salgado"
+      ],
+      "elemento": "Água",
+      "orgaos": [
+        "BP",
+        "E"
+      ],
+      "acoes": [],
+      "alertas": [
+        "GeraUmid",
+        "GeraCalor"
+      ],
+      "obs": "Salsicha, presunto, salgadinhos, refrigerantes.",
+      "revisado": false
+    },
+    {
+      "id": "bebidas-geladas-e-sorvetes",
+      "nome": "Bebidas geladas e sorvetes",
+      "grupo": "Outros",
+      "natureza": "Frio",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E"
+      ],
+      "acoes": [],
+      "alertas": [
+        "Gelado",
+        "GeraUmid"
+      ],
+      "obs": "",
+      "revisado": false
+    },
+    {
+      "id": "saladas-e-alimentos-crus",
+      "nome": "Saladas e alimentos crus",
+      "grupo": "Outros",
+      "natureza": "Fresco",
+      "sabores": [
+        "doce"
+      ],
+      "elemento": "Terra",
+      "orgaos": [
+        "BP",
+        "E"
+      ],
+      "acoes": [],
+      "alertas": [
+        "Cru"
+      ],
+      "obs": "Evitar em quem tem digestão fraca ou frio interno.",
+      "revisado": false
+    }
+  ],
+  "elementos": {
+    "Madeira": {
+      "sabor": "Azedo",
+      "cor": "Verde",
+      "orgaos": "Fígado e Vesícula Biliar",
+      "estacao": "Primavera",
+      "orientacao": "Folhas verdes, brotos e um toque de sabor azedo (limão, vinagre) em pequena quantidade. Refeições leves e em horários regulares. Evitar álcool, gordura e excessos.",
+      "alimentos": [
+        "limao",
+        "brocolis",
+        "aipo-salsao",
+        "couve",
+        "espinafre",
+        "broto-de-feijao",
+        "vinagre"
+      ],
+      "revisado": false
+    },
+    "Fogo": {
+      "sabor": "Amargo",
+      "cor": "Vermelho",
+      "orgaos": "Coração e Intestino Delgado",
+      "estacao": "Verão",
+      "orientacao": "Alimentos frescos, um toque de sabor amargo (folhas amargas, chá verde) e alimentos vermelhos. Comer com calma. Evitar estimulantes e excesso de picantes.",
+      "alimentos": [
+        "feijao-azuki",
+        "jilo",
+        "alface",
+        "trigo-integral",
+        "tamara-jujuba",
+        "melancia",
+        "cha-verde"
+      ],
+      "revisado": false
+    },
+    "Terra": {
+      "sabor": "Doce (natural)",
+      "cor": "Amarelo",
+      "orgaos": "Baço-Pâncreas e Estômago",
+      "estacao": "Fim de cada estação (canícula)",
+      "orientacao": "Cereais, raízes e legumes amarelos e alaranjados, cozidos e mornos. O doce que nutre é o dos alimentos naturais, não o do açúcar refinado. Mastigar bem e não comer com pressa.",
+      "alimentos": [
+        "abobora",
+        "batata-doce",
+        "milho-e-fuba",
+        "painco-milheto",
+        "cenoura",
+        "inhame-cara",
+        "arroz-branco"
+      ],
+      "revisado": false
+    },
+    "Metal": {
+      "sabor": "Picante (suave)",
+      "cor": "Branco",
+      "orgaos": "Pulmão e Intestino Grosso",
+      "estacao": "Outono",
+      "orientacao": "Alimentos brancos que hidratam (pera, rabanete, amêndoa, arroz) e um toque picante suave (gengibre, cebola) para abrir. Evitar secura, frituras e cigarro.",
+      "alimentos": [
+        "pera",
+        "rabanete-nabo",
+        "amendoa",
+        "arroz-branco",
+        "cebola",
+        "gengibre-fresco",
+        "inhame-cara"
+      ],
+      "revisado": false
+    },
+    "Água": {
+      "sabor": "Salgado (suave)",
+      "cor": "Preto / azul-escuro",
+      "orgaos": "Rim e Bexiga",
+      "estacao": "Inverno",
+      "orientacao": "Alimentos escuros e nutritivos (feijão-preto, gergelim preto, algas, nozes), cozidos lentamente. Sal com moderação. Descansar e se agasalhar.",
+      "alimentos": [
+        "feijao-preto",
+        "gergelim-preto",
+        "algas-kombu-nori",
+        "nozes",
+        "castanha-portuguesa",
+        "caldo-de-ossos"
+      ],
+      "revisado": false
+    }
+  },
+  "sindromes": {
+    "UmdCalorB": {
+      "principio": "Drenar a umidade-calor da Bexiga.",
+      "paciente": "Há \"umidade e calor\" na bexiga (ardor ao urinar, urina escura e frequente). Beba bastante água e prefira alimentos frescos e diuréticos; evite álcool, picantes e doces. Procure também avaliação médica.",
+      "naturezas": [
+        "Fresco",
+        "Frio",
+        "Neutro"
+      ],
+      "preparo": "Sopas, caldos e chás diuréticos.",
+      "prefira": [
+        "feijao-azuki",
+        "cabelo-de-milho-cha",
+        "melancia",
+        "pepino",
+        "cevada",
+        "feijao-mungo-moyashi",
+        "agua-de-coco",
+        "aipo-salsao",
+        "alface",
+        "abobrinha",
+        "milho-e-fuba",
+        "lentilha",
+        "painco-milheto",
+        "broto-de-feijao"
+      ],
+      "evite": [
+        "bebidas-alcoolicas",
+        "pimenta-vermelha",
+        "cafe",
+        "acucar-refinado-e-doces",
+        "frituras-e-comidas-gordurosas",
+        "carne-de-cordeiro"
+      ],
+      "revisado": false
+    },
+    "UmdFrioB": {
+      "principio": "Aquecer e drenar a umidade-frio da Bexiga.",
+      "paciente": "Há \"umidade fria\" na bexiga (urina turva, sensação de peso, desconforto que piora com o frio). Alimentos mornos e diuréticos; evite gelados e crus.",
+      "naturezas": [
+        "Morno",
+        "Neutro"
+      ],
+      "preparo": "Sopas e cozidos mornos; chás diuréticos mornos.",
+      "prefira": [
+        "feijao-azuki",
+        "milho-e-fuba",
+        "cabelo-de-milho-cha",
+        "erva-doce-funcho",
+        "gengibre-fresco",
+        "canela",
+        "cebola",
+        "alho-poro",
+        "lentilha",
+        "cardamomo",
+        "arroz-integral",
+        "centeio",
+        "feijao-carioca",
+        "fava"
+      ],
+      "evite": [
+        "bebidas-geladas-e-sorvetes",
+        "melancia",
+        "saladas-e-alimentos-crus",
+        "leite-de-vaca",
+        "acucar-refinado-e-doces"
+      ],
+      "revisado": false
+    },
+    "DefJgR": {
+      "principio": "Nutrir a Essência (Jing) do Rim.",
+      "paciente": "Sua energia de reserva (de base) está baixa. Prefira alimentos nutritivos e escuros, cozidos lentamente, e descanse bem.",
+      "naturezas": [
+        "Neutro",
+        "Morno"
+      ],
+      "preparo": "Sopas e caldos de cozimento longo (caldo de ossos), cozidos.",
+      "prefira": [
+        "gergelim-preto",
+        "feijao-preto",
+        "nozes",
+        "goji-berry",
+        "ovo",
+        "algas-kombu-nori",
+        "ostra-e-mariscos",
+        "castanha-portuguesa",
+        "inhame-cara",
+        "caldo-de-ossos",
+        "castanha-do-para",
+        "batata-doce",
+        "cereja",
+        "frango"
+      ],
+      "evite": [
+        "cafe",
+        "bebidas-alcoolicas",
+        "acucar-refinado-e-doces",
+        "embutidos-e-industrializados"
+      ],
+      "revisado": false
+    },
+    "DefQiR": {
+      "principio": "Tonificar e consolidar o Qi do Rim.",
+      "paciente": "A energia dos seus rins está fraca (urina frequente, cansaço nas costas e nos joelhos). Alimentos mornos, nutritivos e escuros; evite gelados.",
+      "naturezas": [
+        "Morno",
+        "Neutro"
+      ],
+      "preparo": "Cozidos lentos, sopas e caldos.",
+      "prefira": [
+        "feijao-preto",
+        "nozes",
+        "castanha-portuguesa",
+        "inhame-cara",
+        "gergelim-preto",
+        "arroz-glutinoso-moti",
+        "cereja",
+        "caldo-de-ossos",
+        "quinoa",
+        "frango",
+        "arroz-branco",
+        "arroz-integral",
+        "aveia",
+        "milho-e-fuba"
+      ],
+      "evite": [
+        "bebidas-geladas-e-sorvetes",
+        "melancia",
+        "saladas-e-alimentos-crus",
+        "cafe"
+      ],
+      "revisado": false
+    },
+    "DefYgR": {
+      "principio": "Aquecer e tonificar o Yang do Rim.",
+      "paciente": "A energia \"quente\" dos seus rins está fraca (frio nas costas e nos pés, urina clara e frequente, cansaço). Prefira alimentos mornos, cozidos lentamente, e temperos que aquecem.",
+      "naturezas": [
+        "Morno",
+        "Quente"
+      ],
+      "preparo": "Cozidos lentos, caldos e assados.",
+      "prefira": [
+        "nozes",
+        "camarao",
+        "carne-de-cordeiro",
+        "canela",
+        "cravo",
+        "erva-doce-funcho",
+        "feijao-preto",
+        "castanha-portuguesa",
+        "alho-poro",
+        "quinoa",
+        "caldo-de-ossos",
+        "gengibre-seco",
+        "cereja",
+        "frango"
+      ],
+      "evite": [
+        "bebidas-geladas-e-sorvetes",
+        "saladas-e-alimentos-crus",
+        "melancia",
+        "pepino",
+        "banana"
+      ],
+      "revisado": false
+    },
+    "DefYnR": {
+      "principio": "Nutrir o Yin do Rim.",
+      "paciente": "Falta \"frescor\" de base nos seus rins (calor à noite, suor noturno, boca seca, zumbido). Alimentos nutritivos, frescos e escuros, com pouco tempero picante.",
+      "naturezas": [
+        "Neutro",
+        "Fresco"
+      ],
+      "preparo": "Sopas, caldos e cozidos lentos com pouco tempero.",
+      "prefira": [
+        "feijao-preto",
+        "gergelim-preto",
+        "goji-berry",
+        "algas-kombu-nori",
+        "ovo",
+        "tofu-e-soja",
+        "carne-de-porco",
+        "pato",
+        "ostra-e-mariscos",
+        "painco-milheto",
+        "inhame-cara",
+        "trigo-integral",
+        "batata-doce",
+        "tomate"
+      ],
+      "evite": [
+        "cafe",
+        "bebidas-alcoolicas",
+        "pimenta-vermelha",
+        "carne-de-cordeiro",
+        "canela",
+        "frituras-e-comidas-gordurosas"
+      ],
+      "revisado": false
+    },
+    "ColapsQiC": {
+      "principio": "Aquecer e tonificar o Yang do Coração (quadro potencialmente grave: sempre com acompanhamento médico).",
+      "paciente": "Seu coração precisa de calor e força. Alimentos mornos, cozidos e nutritivos; evite gelados e crus. Este quadro exige acompanhamento médico.",
+      "naturezas": [
+        "Morno",
+        "Quente",
+        "Neutro"
+      ],
+      "preparo": "Sopas e cozidos quentes, caldos.",
+      "prefira": [
+        "canela",
+        "gengibre-seco",
+        "frango",
+        "carne-de-cordeiro",
+        "cebola",
+        "alho-poro",
+        "nozes",
+        "tamara-jujuba",
+        "arroz-glutinoso-moti",
+        "cravo",
+        "quinoa",
+        "cereja",
+        "castanha-portuguesa",
+        "camarao"
+      ],
+      "evite": [
+        "bebidas-geladas-e-sorvetes",
+        "saladas-e-alimentos-crus",
+        "melancia",
+        "pepino",
+        "bebidas-alcoolicas",
+        "cafe"
+      ],
+      "revisado": false
+    },
+    "DefQiC": {
+      "principio": "Tonificar o Qi do Coração.",
+      "paciente": "Seu coração está com pouca energia (cansaço, palpitações ao esforço). Prefira refeições regulares, mornas e nutritivas; evite estimulantes.",
+      "naturezas": [
+        "Neutro",
+        "Morno"
+      ],
+      "preparo": "Refeições mornas e regulares, sopas e cozidos.",
+      "prefira": [
+        "trigo-integral",
+        "tamara-jujuba",
+        "aveia",
+        "arroz-branco",
+        "frango",
+        "lichia",
+        "ovo",
+        "cogumelo-shiitake",
+        "arroz-integral",
+        "arroz-glutinoso-moti",
+        "milho-e-fuba",
+        "quinoa",
+        "feijao-carioca",
+        "grao-de-bico"
+      ],
+      "evite": [
+        "cafe",
+        "bebidas-alcoolicas",
+        "bebidas-geladas-e-sorvetes",
+        "acucar-refinado-e-doces"
+      ],
+      "revisado": false
+    },
+    "DefXueC": {
+      "principio": "Nutrir o Sangue do Coração e acalmar o Shen.",
+      "paciente": "Falta \"sangue\" para nutrir o coração e a mente (sono leve, palpitações, memória fraca, ansiedade). Prefira alimentos que nutrem o sangue e refeições calmas e regulares.",
+      "naturezas": [
+        "Neutro",
+        "Morno"
+      ],
+      "preparo": "Sopas, cozidos e congee com tâmaras.",
+      "prefira": [
+        "tamara-jujuba",
+        "lichia",
+        "ovo",
+        "goji-berry",
+        "uva-passa",
+        "beterraba",
+        "trigo-integral",
+        "aveia",
+        "figado-boi-ou-galinha",
+        "ostra-e-mariscos",
+        "feijao-preto",
+        "couve",
+        "uva",
+        "cereja"
+      ],
+      "evite": [
+        "cafe",
+        "bebidas-alcoolicas",
+        "pimenta-vermelha",
+        "acucar-refinado-e-doces"
+      ],
+      "revisado": false
+    },
+    "DefYgC": {
+      "principio": "Aquecer e tonificar o Yang do Coração.",
+      "paciente": "Seu coração está com pouco \"calor\" (frio, palpitações, cansaço). Alimentos mornos e cozidos; evite gelados.",
+      "naturezas": [
+        "Morno",
+        "Quente",
+        "Neutro"
+      ],
+      "preparo": "Sopas e cozidos quentes.",
+      "prefira": [
+        "canela",
+        "gengibre-seco",
+        "cebola",
+        "alho-poro",
+        "frango",
+        "carne-de-cordeiro",
+        "nozes",
+        "tamara-jujuba",
+        "cebolinha",
+        "cravo",
+        "quinoa",
+        "cereja",
+        "castanha-portuguesa",
+        "arroz-glutinoso-moti"
+      ],
+      "evite": [
+        "bebidas-geladas-e-sorvetes",
+        "saladas-e-alimentos-crus",
+        "melancia",
+        "pepino",
+        "banana"
+      ],
+      "revisado": false
+    },
+    "DefYnC": {
+      "principio": "Nutrir o Yin do Coração e acalmar o Shen.",
+      "paciente": "Faltam \"frescor\" e calma ao coração (insônia, agitação, calor à noite, boca seca). Prefira alimentos frescos e hidratantes e evite estimulantes.",
+      "naturezas": [
+        "Fresco",
+        "Neutro"
+      ],
+      "preparo": "Sopas, mingaus e cozidos leves; jantar leve e cedo.",
+      "prefira": [
+        "trigo-integral",
+        "painco-milheto",
+        "ovo",
+        "ostra-e-mariscos",
+        "tofu-e-soja",
+        "maca",
+        "pera",
+        "feijao-mungo-moyashi",
+        "gergelim-preto",
+        "tomate",
+        "espinafre",
+        "aspargo",
+        "laranja",
+        "tangerina-fruta"
+      ],
+      "evite": [
+        "cafe",
+        "bebidas-alcoolicas",
+        "pimenta-vermelha",
+        "frituras-e-comidas-gordurosas",
+        "carne-de-cordeiro"
+      ],
+      "revisado": false
+    },
+    "EstgXueC": {
+      "principio": "Mover o Sangue do Coração (sempre com acompanhamento médico).",
+      "paciente": "A circulação no coração está \"travada\" (dor ou aperto no peito). Este quadro exige acompanhamento médico. Alimentos que ajudam a circulação, com pouca gordura e pouco sal.",
+      "naturezas": [
+        "Neutro",
+        "Morno"
+      ],
+      "preparo": "Cozidos leves, vapor; pouca gordura e pouco sal.",
+      "prefira": [
+        "curcuma-acafrao-da-terra",
+        "cebola",
+        "alho",
+        "beterraba",
+        "vinagre",
+        "pessego",
+        "cebolinha",
+        "berinjela",
+        "alho-poro",
+        "acucar-mascavo",
+        "centeio",
+        "pimentao",
+        "casca-de-tangerina-seca",
+        "erva-doce-funcho"
+      ],
+      "evite": [
+        "frituras-e-comidas-gordurosas",
+        "embutidos-e-industrializados",
+        "queijo",
+        "acucar-refinado-e-doces",
+        "bebidas-geladas-e-sorvetes",
+        "bebidas-alcoolicas"
+      ],
+      "revisado": false
+    },
+    "FlmC": {
+      "principio": "Transformar a fleuma, clarear o fogo do Coração e acalmar o Shen.",
+      "paciente": "Há \"muco e calor\" perturbando a mente (agitação, confusão, insônia). Alimentos leves e frescos; evite gordura, doces, laticínios, álcool e estimulantes.",
+      "naturezas": [
+        "Fresco",
+        "Neutro"
+      ],
+      "preparo": "Sopas leves e cozidos no vapor.",
+      "prefira": [
+        "rabanete-nabo",
+        "pera",
+        "algas-kombu-nori",
+        "agriao",
+        "feijao-mungo-moyashi",
+        "aipo-salsao",
+        "cevada",
+        "casca-de-tangerina-seca",
+        "maracuja",
+        "amendoa",
+        "painco-milheto",
+        "feijao-azuki",
+        "tofu-e-soja",
+        "chuchu"
+      ],
+      "evite": [
+        "frituras-e-comidas-gordurosas",
+        "leite-de-vaca",
+        "queijo",
+        "acucar-refinado-e-doces",
+        "bebidas-alcoolicas",
+        "cafe",
+        "pimenta-vermelha"
+      ],
+      "revisado": false
+    },
+    "FgC": {
+      "principio": "Drenar o Fogo do Coração e acalmar o Shen.",
+      "paciente": "Há \"fogo\" no coração (agitação, insônia, aftas na língua, calor). Prefira alimentos frescos e um toque amargo; evite estimulantes, álcool e picantes.",
+      "naturezas": [
+        "Fresco",
+        "Frio",
+        "Neutro"
+      ],
+      "preparo": "Sopas frescas, cozidos rápidos e vapor.",
+      "prefira": [
+        "feijao-mungo-moyashi",
+        "feijao-azuki",
+        "melancia",
+        "pepino",
+        "alface",
+        "jilo",
+        "trigo-integral",
+        "aipo-salsao",
+        "broto-de-feijao",
+        "maracuja",
+        "cevada",
+        "chuchu",
+        "abobrinha",
+        "agriao"
+      ],
+      "evite": [
+        "cafe",
+        "bebidas-alcoolicas",
+        "pimenta-vermelha",
+        "frituras-e-comidas-gordurosas",
+        "carne-de-cordeiro",
+        "canela"
+      ],
+      "revisado": false
+    },
+    "CalorID": {
+      "principio": "Clarear o calor do Coração e do Intestino Delgado e favorecer a eliminação pela urina.",
+      "paciente": "Há \"calor\" sendo eliminado pela urina (ardor, urina escura), ligado a um coração agitado. Beba bastante líquido e prefira alimentos frescos e diuréticos.",
+      "naturezas": [
+        "Fresco",
+        "Frio",
+        "Neutro"
+      ],
+      "preparo": "Sopas, caldos e sucos naturais; cozidos leves.",
+      "prefira": [
+        "feijao-azuki",
+        "melancia",
+        "pepino",
+        "feijao-mungo-moyashi",
+        "alface",
+        "cabelo-de-milho-cha",
+        "agua-de-coco",
+        "cevada",
+        "abobrinha",
+        "chuchu",
+        "aipo-salsao",
+        "agriao",
+        "brocolis",
+        "algas-kombu-nori"
+      ],
+      "evite": [
+        "pimenta-vermelha",
+        "bebidas-alcoolicas",
+        "cafe",
+        "frituras-e-comidas-gordurosas",
+        "carne-de-cordeiro"
+      ],
+      "revisado": false
+    },
+    "ObstID": {
+      "principio": "Mover o Qi do Intestino e desfazer a obstrução.",
+      "paciente": "O intestino está \"travado\" (dor e distensão na barriga, gases). Refeições leves e bem mastigadas, com alimentos que movimentam a digestão. Dor forte na barriga precisa de avaliação médica.",
+      "naturezas": [
+        "Neutro",
+        "Morno"
+      ],
+      "preparo": "Sopas leves e cozidos; comer devagar.",
+      "prefira": [
+        "casca-de-tangerina-seca",
+        "rabanete-nabo",
+        "erva-doce-funcho",
+        "cardamomo",
+        "mamao",
+        "cominho",
+        "gengibre-fresco",
+        "pimentao",
+        "centeio",
+        "cebola",
+        "figo",
+        "curcuma-acafrao-da-terra",
+        "manjericao",
+        "alecrim"
+      ],
+      "evite": [
+        "frituras-e-comidas-gordurosas",
+        "bebidas-geladas-e-sorvetes",
+        "queijo",
+        "acucar-refinado-e-doces"
+      ],
+      "revisado": false
+    },
+    "AscYgF": {
+      "principio": "Nutrir o Yin do Fígado e do Rim, acalmar e fazer descer o Yang do Fígado.",
+      "paciente": "Sua energia está \"subindo demais\" (cabeça, irritação, pressão). Prefira alimentos frescos e leves; evite os muito picantes, o álcool e o café.",
+      "naturezas": [
+        "Fresco",
+        "Neutro"
+      ],
+      "preparo": "Cozidos rápidos, vapor, sopas e saladas mornas. Pouco sal.",
+      "prefira": [
+        "aipo-salsao",
+        "cha-de-crisantemo",
+        "espinafre",
+        "algas-kombu-nori",
+        "tofu-e-soja",
+        "painco-milheto",
+        "ostra-e-mariscos",
+        "gergelim-preto",
+        "feijao-mungo-moyashi",
+        "tomate",
+        "aspargo",
+        "maca",
+        "pera",
+        "laranja"
+      ],
+      "evite": [
+        "bebidas-alcoolicas",
+        "cafe",
+        "pimenta-vermelha",
+        "carne-de-cordeiro",
+        "frituras-e-comidas-gordurosas",
+        "alho"
+      ],
+      "revisado": false
+    },
+    "DefXueF": {
+      "principio": "Nutrir o Sangue do Fígado.",
+      "paciente": "Falta \"sangue\" para o fígado (vista cansada, unhas fracas, cãibras, menstruação escassa). Coma alimentos que nutrem o sangue: folhas verde-escuras, beterraba e feijões escuros.",
+      "naturezas": [
+        "Neutro",
+        "Morno"
+      ],
+      "preparo": "Cozidos, sopas e refogados leves.",
+      "prefira": [
+        "beterraba",
+        "espinafre",
+        "couve",
+        "figado-boi-ou-galinha",
+        "goji-berry",
+        "gergelim-preto",
+        "feijao-preto",
+        "uva",
+        "tamara-jujuba",
+        "ovo",
+        "carne-bovina",
+        "uva-passa",
+        "cereja",
+        "lichia"
+      ],
+      "evite": [
+        "cafe",
+        "bebidas-alcoolicas",
+        "pimenta-vermelha",
+        "frituras-e-comidas-gordurosas"
+      ],
+      "revisado": false
+    },
+    "EstgQiF": {
+      "principio": "Mover o Qi do Fígado e harmonizar.",
+      "paciente": "A energia do fígado está \"travada\" (irritação, suspiros, estufamento, TPM). Alimentos leves, um toque picante suave e azedo; evite excessos e gordura.",
+      "naturezas": [
+        "Neutro",
+        "Fresco",
+        "Morno"
+      ],
+      "preparo": "Refeições leves e sem pressa; cozidos rápidos e salteados com pouco óleo.",
+      "prefira": [
+        "casca-de-tangerina-seca",
+        "rabanete-nabo",
+        "hortela",
+        "manjericao",
+        "cebola",
+        "aipo-salsao",
+        "curcuma-acafrao-da-terra",
+        "beterraba",
+        "limao",
+        "erva-doce-funcho",
+        "trigo-sarraceno",
+        "pimentao",
+        "centeio",
+        "alecrim"
+      ],
+      "evite": [
+        "frituras-e-comidas-gordurosas",
+        "bebidas-alcoolicas",
+        "embutidos-e-industrializados",
+        "queijo",
+        "acucar-refinado-e-doces",
+        "cafe"
+      ],
+      "revisado": false
+    },
+    "EstgXueF": {
+      "principio": "Mover o Sangue e o Qi do Fígado.",
+      "paciente": "O sangue está circulando com dificuldade (dores fixas, cólicas fortes com coágulos, manchas roxas). Prefira alimentos que movimentam a circulação.",
+      "naturezas": [
+        "Neutro",
+        "Morno"
+      ],
+      "preparo": "Cozidos e refogados com cúrcuma, cebola e gengibre.",
+      "prefira": [
+        "curcuma-acafrao-da-terra",
+        "beterraba",
+        "berinjela",
+        "pessego",
+        "vinagre",
+        "cebola",
+        "cebolinha",
+        "acucar-mascavo",
+        "alho-poro",
+        "gengibre-fresco",
+        "centeio",
+        "pimentao",
+        "casca-de-tangerina-seca",
+        "erva-doce-funcho"
+      ],
+      "evite": [
+        "bebidas-geladas-e-sorvetes",
+        "frituras-e-comidas-gordurosas",
+        "queijo",
+        "acucar-refinado-e-doces"
+      ],
+      "revisado": false
+    },
+    "FgF": {
+      "principio": "Drenar o Fogo do Fígado.",
+      "paciente": "Há \"fogo\" no fígado (irritação forte, dor de cabeça, olhos vermelhos, gosto amargo). Alimentos frescos e leves; evite álcool, picantes, frituras e café.",
+      "naturezas": [
+        "Fresco",
+        "Frio",
+        "Neutro"
+      ],
+      "preparo": "Cozidos rápidos, vapor e sopas frescas.",
+      "prefira": [
+        "aipo-salsao",
+        "cha-de-crisantemo",
+        "pepino",
+        "tomate",
+        "alface",
+        "brocolis",
+        "feijao-mungo-moyashi",
+        "melancia",
+        "kiwi",
+        "tofu-e-soja",
+        "painco-milheto",
+        "cevada",
+        "feijao-azuki",
+        "broto-de-feijao"
+      ],
+      "evite": [
+        "bebidas-alcoolicas",
+        "cafe",
+        "pimenta-vermelha",
+        "frituras-e-comidas-gordurosas",
+        "carne-de-cordeiro",
+        "alho",
+        "gengibre-seco"
+      ],
+      "revisado": false
+    },
+    "UmdCalorF": {
+      "principio": "Drenar a umidade-calor do Fígado e da Vesícula Biliar.",
+      "paciente": "Há \"umidade e calor\" no fígado e na vesícula (gosto amargo, náusea, intolerância a gordura, às vezes pele amarelada). Alimentos leves, frescos e sem gordura; nada de álcool e frituras.",
+      "naturezas": [
+        "Fresco",
+        "Neutro"
+      ],
+      "preparo": "Vapor, sopas leves e cozidos sem gordura.",
+      "prefira": [
+        "feijao-azuki",
+        "cevada",
+        "rabanete-nabo",
+        "aipo-salsao",
+        "pepino",
+        "feijao-mungo-moyashi",
+        "milho-e-fuba",
+        "cabelo-de-milho-cha",
+        "alface",
+        "painco-milheto",
+        "abobrinha",
+        "centeio",
+        "arroz-integral",
+        "feijao-carioca"
+      ],
+      "evite": [
+        "bebidas-alcoolicas",
+        "frituras-e-comidas-gordurosas",
+        "embutidos-e-industrializados",
+        "queijo",
+        "acucar-refinado-e-doces",
+        "pimenta-vermelha"
+      ],
+      "revisado": false
+    },
+    "VtF": {
+      "principio": "Acalmar o vento interno e nutrir o Yin e o Sangue do Fígado.",
+      "paciente": "Há \"vento interno\" (tonturas, tremores, formigamentos). Alimentos que acalmam e nutrem; evite álcool, café e picantes. Tontura forte ou fraqueza súbita exige atendimento médico imediato.",
+      "naturezas": [
+        "Neutro",
+        "Fresco"
+      ],
+      "preparo": "Sopas, cozidos leves e vapor.",
+      "prefira": [
+        "aipo-salsao",
+        "cha-de-crisantemo",
+        "gergelim-preto",
+        "ostra-e-mariscos",
+        "goji-berry",
+        "feijao-preto",
+        "tofu-e-soja",
+        "ovo",
+        "espinafre",
+        "abacate",
+        "beterraba",
+        "uva",
+        "uva-passa",
+        "painco-milheto"
+      ],
+      "evite": [
+        "bebidas-alcoolicas",
+        "cafe",
+        "pimenta-vermelha",
+        "camarao",
+        "frituras-e-comidas-gordurosas"
+      ],
+      "revisado": false
+    },
+    "DefQiVB": {
+      "principio": "Tonificar o Qi da Vesícula Biliar (e do Fígado).",
+      "paciente": "Falta energia à vesícula (indecisão, sustos fáceis, dificuldade para digerir gordura). Refeições leves, regulares e com pouca gordura.",
+      "naturezas": [
+        "Neutro",
+        "Morno"
+      ],
+      "preparo": "Cozidos leves e vapor; pouca gordura.",
+      "prefira": [
+        "arroz-branco",
+        "aveia",
+        "cenoura",
+        "tamara-jujuba",
+        "curcuma-acafrao-da-terra",
+        "casca-de-tangerina-seca",
+        "trigo-integral",
+        "repolho",
+        "arroz-integral",
+        "arroz-glutinoso-moti",
+        "milho-e-fuba",
+        "quinoa",
+        "feijao-carioca",
+        "grao-de-bico"
+      ],
+      "evite": [
+        "frituras-e-comidas-gordurosas",
+        "queijo",
+        "embutidos-e-industrializados",
+        "bebidas-alcoolicas",
+        "bebidas-geladas-e-sorvetes"
+      ],
+      "revisado": false
+    },
+    "UmdCalorIG": {
+      "principio": "Clarear a umidade-calor do Intestino Grosso.",
+      "paciente": "Há \"umidade e calor\" no intestino (diarreia com urgência, ardor, odor forte). Alimentos leves, frescos e bem cozidos; evite gordura, picantes, álcool e doces. Diarreia com sangue ou febre precisa de avaliação médica.",
+      "naturezas": [
+        "Fresco",
+        "Neutro"
+      ],
+      "preparo": "Congee, sopas leves e cozidos bem feitos.",
+      "prefira": [
+        "feijao-mungo-moyashi",
+        "feijao-azuki",
+        "cevada",
+        "arroz-branco",
+        "abobrinha",
+        "chuchu",
+        "painco-milheto",
+        "cabelo-de-milho-cha",
+        "arroz-integral",
+        "milho-e-fuba",
+        "centeio",
+        "feijao-carioca",
+        "lentilha",
+        "fava"
+      ],
+      "evite": [
+        "pimenta-vermelha",
+        "frituras-e-comidas-gordurosas",
+        "bebidas-alcoolicas",
+        "leite-de-vaca",
+        "acucar-refinado-e-doces",
+        "cafe"
+      ],
+      "revisado": false
+    },
+    "UmdFrioIG": {
+      "principio": "Aquecer e secar a umidade-frio do Intestino Grosso.",
+      "paciente": "Há \"umidade fria\" no intestino (fezes moles, cólica que melhora com calor). Alimentos mornos e bem cozidos; evite gelados, crus e laticínios.",
+      "naturezas": [
+        "Morno",
+        "Neutro"
+      ],
+      "preparo": "Congee, sopas e cozidos mornos.",
+      "prefira": [
+        "gengibre-seco",
+        "arroz-glutinoso-moti",
+        "arroz-branco",
+        "noz-moscada",
+        "canela",
+        "cravo",
+        "goiaba",
+        "cebola",
+        "erva-doce-funcho",
+        "cardamomo",
+        "arroz-integral",
+        "milho-e-fuba",
+        "centeio",
+        "feijao-azuki"
+      ],
+      "evite": [
+        "bebidas-geladas-e-sorvetes",
+        "saladas-e-alimentos-crus",
+        "banana",
+        "leite-de-vaca",
+        "melancia"
+      ],
+      "revisado": false
+    },
+    "DefQiP": {
+      "principio": "Tonificar o Qi do Pulmão (e o Baço-Pâncreas, que o nutre).",
+      "paciente": "Seu pulmão está com pouca energia (falta de fôlego, voz fraca, resfriados frequentes). Coma alimentos mornos e nutritivos e proteja-se do frio.",
+      "naturezas": [
+        "Neutro",
+        "Morno"
+      ],
+      "preparo": "Sopas, congee e cozidos.",
+      "prefira": [
+        "arroz-branco",
+        "inhame-cara",
+        "aveia",
+        "cenoura",
+        "abobora",
+        "frango",
+        "cogumelo-shiitake",
+        "amendoa",
+        "mel",
+        "gengibre-fresco",
+        "arroz-integral",
+        "arroz-glutinoso-moti",
+        "milho-e-fuba",
+        "quinoa"
+      ],
+      "evite": [
+        "bebidas-geladas-e-sorvetes",
+        "leite-de-vaca",
+        "queijo",
+        "acucar-refinado-e-doces",
+        "banana"
+      ],
+      "revisado": false
+    },
+    "DefYnP": {
+      "principio": "Nutrir o Yin do Pulmão e umedecer a secura.",
+      "paciente": "Seu pulmão está \"seco\" (tosse seca, garganta seca, calor no fim da tarde). Prefira alimentos que hidratam: pera, mel, amêndoas, inhame.",
+      "naturezas": [
+        "Fresco",
+        "Neutro"
+      ],
+      "preparo": "Peras cozidas, sopas, mingaus e cozidos com caldo.",
+      "prefira": [
+        "pera",
+        "mel",
+        "amendoa",
+        "inhame-cara",
+        "tofu-e-soja",
+        "caqui",
+        "ovo",
+        "pato",
+        "aspargo",
+        "gergelim-preto",
+        "maca",
+        "abacate",
+        "carne-de-porco",
+        "leite-de-vaca"
+      ],
+      "evite": [
+        "pimenta-vermelha",
+        "pimenta-do-reino",
+        "frituras-e-comidas-gordurosas",
+        "bebidas-alcoolicas",
+        "cafe"
+      ],
+      "revisado": false
+    },
+    "FlmCalorP": {
+      "principio": "Clarear o calor do Pulmão e transformar a fleuma.",
+      "paciente": "Há \"catarro com calor\" no pulmão (tosse com catarro amarelo e grosso). Alimentos frescos que soltam o catarro; evite laticínios, doces, frituras e picantes.",
+      "naturezas": [
+        "Fresco",
+        "Frio",
+        "Neutro"
+      ],
+      "preparo": "Peras cozidas, sopas leves e vapor.",
+      "prefira": [
+        "pera",
+        "rabanete-nabo",
+        "agriao",
+        "algas-kombu-nori",
+        "amendoa",
+        "caqui",
+        "cevada",
+        "casca-de-tangerina-seca",
+        "painco-milheto",
+        "feijao-azuki",
+        "feijao-mungo-moyashi",
+        "broto-de-feijao",
+        "tofu-e-soja",
+        "chuchu"
+      ],
+      "evite": [
+        "leite-de-vaca",
+        "queijo",
+        "acucar-refinado-e-doces",
+        "frituras-e-comidas-gordurosas",
+        "pimenta-vermelha",
+        "bebidas-alcoolicas",
+        "amendoim"
+      ],
+      "revisado": false
+    },
+    "FlmFrioP": {
+      "principio": "Aquecer o Pulmão e transformar a fleuma fria.",
+      "paciente": "Há \"catarro frio\" no pulmão (tosse com catarro claro, sensação de frio). Alimentos mornos e temperos que aquecem; evite gelados, crus, laticínios e doces.",
+      "naturezas": [
+        "Morno",
+        "Neutro",
+        "Quente"
+      ],
+      "preparo": "Sopas e cozidos quentes com gengibre e casca de tangerina.",
+      "prefira": [
+        "gengibre-fresco",
+        "casca-de-tangerina-seca",
+        "cebola",
+        "alho",
+        "cebolinha",
+        "canela",
+        "couve",
+        "erva-doce-funcho",
+        "cardamomo",
+        "amendoa",
+        "arroz-glutinoso-moti",
+        "alho-poro",
+        "carne-de-cordeiro",
+        "gengibre-seco"
+      ],
+      "evite": [
+        "leite-de-vaca",
+        "queijo",
+        "iogurte",
+        "banana",
+        "bebidas-geladas-e-sorvetes",
+        "acucar-refinado-e-doces",
+        "saladas-e-alimentos-crus"
+      ],
+      "revisado": false
+    },
+    "SecP": {
+      "principio": "Umedecer o Pulmão e nutrir os líquidos.",
+      "paciente": "Seu pulmão está \"seco\" (garganta e nariz secos, tosse seca, pele seca). Prefira alimentos que hidratam e beba água morna ao longo do dia.",
+      "naturezas": [
+        "Neutro",
+        "Fresco"
+      ],
+      "preparo": "Peras cozidas, sopas e mingaus.",
+      "prefira": [
+        "pera",
+        "mel",
+        "amendoa",
+        "maca",
+        "caqui",
+        "gergelim-preto",
+        "inhame-cara",
+        "tofu-e-soja",
+        "banana",
+        "abacate",
+        "carne-de-porco",
+        "ovo",
+        "leite-de-vaca",
+        "quiabo"
+      ],
+      "evite": [
+        "pimenta-vermelha",
+        "pimenta-do-reino",
+        "frituras-e-comidas-gordurosas",
+        "cafe",
+        "bebidas-alcoolicas"
+      ],
+      "revisado": false
+    },
+    "VtCalorP": {
+      "principio": "Liberar o exterior e dispersar o vento-calor.",
+      "paciente": "Resfriado com \"calor\" (garganta inflamada, febre, catarro amarelado). Alimentos leves e frescos, chás de hortelã e crisântemo; evite picantes fortes, frituras e doces.",
+      "naturezas": [
+        "Fresco",
+        "Neutro"
+      ],
+      "preparo": "Chás, sopas leves e peras cozidas.",
+      "prefira": [
+        "hortela",
+        "cha-de-crisantemo",
+        "pera",
+        "agriao",
+        "feijao-mungo-moyashi",
+        "rabanete-nabo",
+        "alface",
+        "painco-milheto",
+        "cevada",
+        "feijao-azuki",
+        "tofu-e-soja",
+        "chuchu",
+        "abobrinha",
+        "tomate"
+      ],
+      "evite": [
+        "pimenta-vermelha",
+        "frituras-e-comidas-gordurosas",
+        "carne-de-cordeiro",
+        "acucar-refinado-e-doces",
+        "bebidas-alcoolicas",
+        "leite-de-vaca"
+      ],
+      "revisado": false
+    },
+    "VtFrioP": {
+      "principio": "Liberar o exterior e dispersar o vento-frio.",
+      "paciente": "Resfriado com \"frio\" (calafrios, nariz escorrendo claro, corpo dolorido). Tome chás e sopas quentes que fazem suar levemente (gengibre, cebolinha) e descanse bem agasalhado.",
+      "naturezas": [
+        "Morno",
+        "Quente"
+      ],
+      "preparo": "Chá de gengibre com cebolinha, congee quente, sopas.",
+      "prefira": [
+        "gengibre-fresco",
+        "cebolinha",
+        "canela",
+        "manjericao",
+        "coentro",
+        "alho",
+        "cebola",
+        "arroz-branco",
+        "pimenta-vermelha",
+        "arroz-glutinoso-moti",
+        "alho-poro",
+        "carne-de-cordeiro",
+        "gengibre-seco",
+        "cravo"
+      ],
+      "evite": [
+        "bebidas-geladas-e-sorvetes",
+        "saladas-e-alimentos-crus",
+        "melancia",
+        "leite-de-vaca",
+        "acucar-refinado-e-doces",
+        "banana"
+      ],
+      "revisado": false
+    },
+    "BPcontrXue": {
+      "principio": "Tonificar o Qi do Baço-Pâncreas para que ele segure o Sangue nos vasos.",
+      "paciente": "Seu sistema digestivo está fraco e não \"segura\" bem o sangue. Coma alimentos cozidos, mornos e nutritivos, em horários regulares.",
+      "naturezas": [
+        "Neutro",
+        "Morno"
+      ],
+      "preparo": "Cozidos longos, sopas e mingaus (congee).",
+      "prefira": [
+        "tamara-jujuba",
+        "inhame-cara",
+        "abobora",
+        "arroz-integral",
+        "frango",
+        "carne-bovina",
+        "aveia",
+        "uva-passa",
+        "couve",
+        "uva",
+        "cereja",
+        "lichia",
+        "peixes-de-mar-sardinha-salmao",
+        "caldo-de-ossos"
+      ],
+      "evite": [
+        "bebidas-geladas-e-sorvetes",
+        "saladas-e-alimentos-crus",
+        "acucar-refinado-e-doces",
+        "pimenta-vermelha",
+        "bebidas-alcoolicas"
+      ],
+      "revisado": false
+    },
+    "ColapsQiBP": {
+      "principio": "Tonificar e elevar o Qi (Yang) do Baço-Pâncreas.",
+      "paciente": "Sua energia digestiva está muito fraca e \"caindo\" (cansaço, sensação de peso para baixo). Coma alimentos mornos, cozidos e nutritivos, em pequenas porções várias vezes ao dia.",
+      "naturezas": [
+        "Morno",
+        "Neutro"
+      ],
+      "preparo": "Congee (mingau de arroz), sopas e cozidos longos.",
+      "prefira": [
+        "arroz-glutinoso-moti",
+        "inhame-cara",
+        "tamara-jujuba",
+        "frango",
+        "abobora",
+        "batata-doce",
+        "aveia",
+        "carne-bovina",
+        "gengibre-fresco",
+        "quinoa",
+        "cereja",
+        "castanha-portuguesa",
+        "arroz-branco",
+        "arroz-integral"
+      ],
+      "evite": [
+        "bebidas-geladas-e-sorvetes",
+        "saladas-e-alimentos-crus",
+        "melancia",
+        "banana",
+        "acucar-refinado-e-doces"
+      ],
+      "revisado": false
+    },
+    "DefQiBP": {
+      "principio": "Tonificar o Qi do Baço-Pâncreas e fortalecer a digestão.",
+      "paciente": "Sua digestão está fraca (cansaço depois de comer, barriga estufada, fezes moles). Coma alimentos cozidos e mornos, em horários regulares, mastigando bem.",
+      "naturezas": [
+        "Neutro",
+        "Morno"
+      ],
+      "preparo": "Congee, sopas, cozidos e assados. Evitar comer frio, cru ou com pressa.",
+      "prefira": [
+        "arroz-branco",
+        "aveia",
+        "abobora",
+        "batata-doce",
+        "inhame-cara",
+        "cenoura",
+        "tamara-jujuba",
+        "frango",
+        "grao-de-bico",
+        "cogumelo-shiitake",
+        "arroz-integral",
+        "arroz-glutinoso-moti",
+        "milho-e-fuba",
+        "quinoa"
+      ],
+      "evite": [
+        "saladas-e-alimentos-crus",
+        "bebidas-geladas-e-sorvetes",
+        "acucar-refinado-e-doces",
+        "leite-de-vaca",
+        "queijo",
+        "frituras-e-comidas-gordurosas",
+        "banana"
+      ],
+      "revisado": false
+    },
+    "DefYgBP": {
+      "principio": "Aquecer e tonificar o Yang do Baço-Pâncreas.",
+      "paciente": "Sua digestão está fraca e \"fria\" (frio na barriga, fezes moles, mãos frias). Coma sempre alimentos cozidos e mornos, com temperos que aquecem (gengibre, canela).",
+      "naturezas": [
+        "Morno",
+        "Quente",
+        "Neutro"
+      ],
+      "preparo": "Cozidos longos, sopas e assados, com gengibre e canela.",
+      "prefira": [
+        "gengibre-seco",
+        "canela",
+        "abobora",
+        "aveia",
+        "arroz-glutinoso-moti",
+        "frango",
+        "carne-de-cordeiro",
+        "cebola",
+        "erva-doce-funcho",
+        "cardamomo",
+        "quinoa",
+        "alho-poro",
+        "cravo",
+        "cereja"
+      ],
+      "evite": [
+        "saladas-e-alimentos-crus",
+        "bebidas-geladas-e-sorvetes",
+        "melancia",
+        "pepino",
+        "banana",
+        "leite-de-vaca",
+        "acucar-refinado-e-doces"
+      ],
+      "revisado": false
+    },
+    "UmdCalorBP": {
+      "principio": "Drenar a umidade-calor do Baço-Pâncreas e do Estômago.",
+      "paciente": "Há \"umidade e calor\" na digestão (peso, náusea, fezes pastosas e de odor forte, gosto amargo). Alimentos leves e frescos; evite gordura, doces, laticínios e álcool.",
+      "naturezas": [
+        "Fresco",
+        "Neutro"
+      ],
+      "preparo": "Sopas leves, vapor e cozidos sem gordura.",
+      "prefira": [
+        "cevada",
+        "feijao-azuki",
+        "feijao-mungo-moyashi",
+        "milho-e-fuba",
+        "pepino",
+        "aipo-salsao",
+        "rabanete-nabo",
+        "alface",
+        "abobrinha",
+        "painco-milheto",
+        "cabelo-de-milho-cha",
+        "arroz-integral",
+        "centeio",
+        "feijao-carioca"
+      ],
+      "evite": [
+        "frituras-e-comidas-gordurosas",
+        "leite-de-vaca",
+        "queijo",
+        "acucar-refinado-e-doces",
+        "bebidas-alcoolicas",
+        "amendoim",
+        "embutidos-e-industrializados",
+        "pimenta-vermelha"
+      ],
+      "revisado": false
+    },
+    "UmdFrioBP": {
+      "principio": "Aquecer o Baço-Pâncreas e transformar a umidade-frio.",
+      "paciente": "Há \"umidade fria\" na digestão (peso no corpo, barriga estufada, fezes moles, pouca sede). Alimentos mornos e cozidos, com temperos aromáticos; evite gelados, crus, laticínios e doces.",
+      "naturezas": [
+        "Morno",
+        "Neutro"
+      ],
+      "preparo": "Cozidos e assados com temperos aromáticos (gengibre, cardamomo).",
+      "prefira": [
+        "gengibre-fresco",
+        "cardamomo",
+        "casca-de-tangerina-seca",
+        "arroz-integral",
+        "milho-e-fuba",
+        "feijao-azuki",
+        "abobora",
+        "cebola",
+        "erva-doce-funcho",
+        "centeio",
+        "feijao-carioca",
+        "lentilha",
+        "fava",
+        "peixes-de-agua-doce"
+      ],
+      "evite": [
+        "leite-de-vaca",
+        "queijo",
+        "iogurte",
+        "banana",
+        "acucar-refinado-e-doces",
+        "bebidas-geladas-e-sorvetes",
+        "saladas-e-alimentos-crus",
+        "frituras-e-comidas-gordurosas"
+      ],
+      "revisado": false
+    },
+    "CalorE": {
+      "principio": "Clarear o calor do Estômago e proteger os líquidos (Yin).",
+      "paciente": "Há \"calor\" no seu estômago (azia, fome excessiva, sede, mau hálito). Prefira alimentos frescos e hidratantes; evite picantes, frituras, álcool e café.",
+      "naturezas": [
+        "Fresco",
+        "Frio",
+        "Neutro"
+      ],
+      "preparo": "Cozidos rápidos, vapor e sopas frescas. Frutas frescas entre as refeições.",
+      "prefira": [
+        "pera",
+        "melancia",
+        "pepino",
+        "tofu-e-soja",
+        "feijao-mungo-moyashi",
+        "painco-milheto",
+        "cevada",
+        "banana",
+        "alface",
+        "broto-de-feijao",
+        "maca",
+        "tomate",
+        "espinafre",
+        "algas-kombu-nori"
+      ],
+      "evite": [
+        "pimenta-vermelha",
+        "pimenta-do-reino",
+        "bebidas-alcoolicas",
+        "cafe",
+        "frituras-e-comidas-gordurosas",
+        "carne-de-cordeiro",
+        "gengibre-seco"
+      ],
+      "revisado": false
+    },
+    "DefQiE": {
+      "principio": "Tonificar o Qi do Estômago.",
+      "paciente": "Seu estômago está fraco (pouco apetite, sensação de cheio). Faça refeições leves, mornas e em horários regulares.",
+      "naturezas": [
+        "Neutro",
+        "Morno"
+      ],
+      "preparo": "Congee, sopas e cozidos, em pequenas porções.",
+      "prefira": [
+        "arroz-branco",
+        "batata",
+        "inhame-cara",
+        "abobora",
+        "cenoura",
+        "tamara-jujuba",
+        "gengibre-fresco",
+        "ervilha",
+        "repolho",
+        "arroz-integral",
+        "arroz-glutinoso-moti",
+        "aveia",
+        "milho-e-fuba",
+        "quinoa"
+      ],
+      "evite": [
+        "saladas-e-alimentos-crus",
+        "bebidas-geladas-e-sorvetes",
+        "frituras-e-comidas-gordurosas",
+        "acucar-refinado-e-doces"
+      ],
+      "revisado": false
+    },
+    "DefYnE": {
+      "principio": "Nutrir o Yin do Estômago e produzir líquidos.",
+      "paciente": "Seu estômago está \"seco\" (boca seca, pouca fome, desconforto leve depois de comer). Prefira sopas, mingaus e frutas suculentas; evite picantes e frituras.",
+      "naturezas": [
+        "Fresco",
+        "Neutro"
+      ],
+      "preparo": "Sopas, mingaus e cozidos com bastante caldo.",
+      "prefira": [
+        "painco-milheto",
+        "pera",
+        "tofu-e-soja",
+        "inhame-cara",
+        "ovo",
+        "maca",
+        "arroz-branco",
+        "batata-doce",
+        "abacate",
+        "carne-de-porco",
+        "leite-de-vaca",
+        "trigo-integral",
+        "tomate",
+        "espinafre"
+      ],
+      "evite": [
+        "pimenta-vermelha",
+        "pimenta-do-reino",
+        "frituras-e-comidas-gordurosas",
+        "cafe",
+        "bebidas-alcoolicas",
+        "gengibre-seco"
+      ],
+      "revisado": false
+    },
+    "FrioE": {
+      "principio": "Aquecer o Estômago e dispersar o frio.",
+      "paciente": "Seu estômago está \"frio\" (dor que melhora com calor, vontade de bebidas quentes). Coma alimentos mornos e cozidos, com gengibre e canela.",
+      "naturezas": [
+        "Morno",
+        "Quente",
+        "Neutro"
+      ],
+      "preparo": "Sopas e cozidos quentes; chá de gengibre.",
+      "prefira": [
+        "gengibre-fresco",
+        "gengibre-seco",
+        "canela",
+        "cravo",
+        "erva-doce-funcho",
+        "arroz-glutinoso-moti",
+        "frango",
+        "cebola",
+        "cardamomo",
+        "alho-poro",
+        "carne-de-cordeiro",
+        "alho",
+        "cebolinha",
+        "pimenta-do-reino"
+      ],
+      "evite": [
+        "bebidas-geladas-e-sorvetes",
+        "saladas-e-alimentos-crus",
+        "melancia",
+        "pepino",
+        "banana"
+      ],
+      "revisado": false
+    },
+    "Parasita": {
+      "principio": "Expulsar parasitas e fortalecer o Baço-Pâncreas.",
+      "paciente": "Alimentos tradicionalmente usados contra parasitas, junto com o tratamento médico adequado. Evite doces.",
+      "naturezas": [
+        "Neutro",
+        "Morno"
+      ],
+      "preparo": "Cozidos bem feitos; higiene cuidadosa dos alimentos.",
+      "prefira": [
+        "semente-de-abobora",
+        "alho",
+        "roma",
+        "mamao",
+        "cravo",
+        "cebola",
+        "vinagre",
+        "arroz-branco",
+        "arroz-integral",
+        "arroz-glutinoso-moti",
+        "aveia",
+        "milho-e-fuba",
+        "quinoa",
+        "feijao-carioca"
+      ],
+      "evite": [
+        "acucar-refinado-e-doces",
+        "frituras-e-comidas-gordurosas",
+        "embutidos-e-industrializados"
+      ],
+      "revisado": false
+    },
+    "RebelE": {
+      "principio": "Fazer descer o Qi do Estômago e harmonizar.",
+      "paciente": "A energia do estômago está \"subindo\" (náusea, arrotos, soluço, refluxo). Porções pequenas e mornas; coma devagar e não se deite logo depois de comer.",
+      "naturezas": [
+        "Neutro",
+        "Morno"
+      ],
+      "preparo": "Congee e sopas leves, em pequenas porções.",
+      "prefira": [
+        "gengibre-fresco",
+        "casca-de-tangerina-seca",
+        "arroz-branco",
+        "cardamomo",
+        "rabanete-nabo",
+        "ervilha",
+        "erva-doce-funcho",
+        "cravo",
+        "repolho",
+        "cenoura",
+        "pimentao",
+        "abacaxi",
+        "mamao",
+        "goiaba"
+      ],
+      "evite": [
+        "frituras-e-comidas-gordurosas",
+        "cafe",
+        "bebidas-alcoolicas",
+        "bebidas-geladas-e-sorvetes",
+        "pimenta-vermelha",
+        "acucar-refinado-e-doces"
+      ],
+      "revisado": false
+    },
+    "AlimE": {
+      "principio": "Dissolver a retenção de alimentos, harmonizar o Estômago e fazer o Qi descer.",
+      "paciente": "Sua digestão está \"parada\". Coma porções menores, mastigue bem e prefira refeições leves e mornas, com o jantar mais cedo.",
+      "naturezas": [
+        "Neutro",
+        "Morno"
+      ],
+      "preparo": "Sopas leves, cozidos e vapor. Evitar comer tarde da noite e em excesso.",
+      "prefira": [
+        "rabanete-nabo",
+        "mamao",
+        "abacaxi",
+        "casca-de-tangerina-seca",
+        "gengibre-fresco",
+        "arroz-branco",
+        "cevada",
+        "repolho",
+        "pimentao",
+        "cenoura",
+        "goiaba",
+        "figo",
+        "erva-doce-funcho",
+        "salsinha"
+      ],
+      "evite": [
+        "frituras-e-comidas-gordurosas",
+        "queijo",
+        "acucar-refinado-e-doces",
+        "bebidas-geladas-e-sorvetes",
+        "embutidos-e-industrializados"
+      ],
+      "revisado": false
+    }
+  }
+}

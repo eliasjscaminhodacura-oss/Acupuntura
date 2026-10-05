@@ -18,7 +18,18 @@ perfeito"). Os 71 pontos foram revisados pelo dono e estão corretos.
 
 1. Se for outro computador, seguir a **seção 4 (Configurar um computador
    novo)**. A coluna `sex` já existe no Supabase — não precisa rodar SQL.
-2. **Publicar na Vercel** (seção 6, item 6) — o dono já entende que
+   No notebook: `git pull` e `npm install` (há dependências novas).
+2. **Terminar a conta na Vercel (em casa, no notebook).** No computador do
+   trabalho o SMS de verificação da Vercel (celular +55 15 …7878) nunca
+   chegou. Retomar em https://vercel.com/signup → "Continue with GitHub" →
+   código SMS. Se continuar sem chegar: tentar outro celular; plano B é a
+   Netlify (servidores nos EUA no plano grátis). O `vercel.json` (região
+   `gru1`) já está no repositório.
+3. **Dietética (Orientação Alimentar segundo a MTC)** — etapa 1 pronta: o
+   dono deve revisar `revisao/Dietetica-MTC-revisao.xlsx` (instruções na
+   aba "Leia-me"). Depois: `npm run dietetica:importar` e seguir para a
+   etapa 2 (ver seção 7).
+4. **Publicar na Vercel** (seção 6, item 6) — o dono já entende que
    `localhost:3000` só funciona no computador onde o app está ligado.
 
 ---
@@ -171,6 +182,28 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
 
 ## 7. Ideias / melhorias anotadas (ainda não feitas)
 
+- **Dietética Chinesa — "Orientação alimentar segundo a MTC"** (plano
+  aprovado pelo dono em 05/10/2026):
+  1. [x] Base de conhecimento: `src/data/dietetica.json` (141 alimentos com
+     natureza/sabor/Elemento/órgãos/ações/alertas; orientação por síndrome
+     — princípio, explicação ao paciente, Prefira/Evite, preparo — para as
+     46; orientação por Elemento). Planilha de revisão:
+     `npm run dietetica:exportar` / `npm run dietetica:importar`
+     (`scripts/dietetica-planilha.mjs`). **Aguardando revisão do dono.**
+  2. [ ] Painel "Orientação alimentar" no fim do resultado da ficha (vem
+     preenchido pelas síndromes; terapeuta ajusta; restrições do paciente:
+     diabetes, hipertensão, gestação, alergias, vegetariano), PDF próprio
+     do paciente (1 coluna, letra grande, para celular) e botão "Enviar para
+     o paciente" (Web Share → WhatsApp).
+  3. [ ] Biblioteca de 40–60 receitas tradicionais (congees, sopas, chás),
+     revisadas pelo dono.
+  4. [ ] (Opcional) Receitas geradas por IA, aprovadas pelo terapeuta
+     antes de enviar (custo por uso; recurso do plano pago).
+  - ⚠️ Nunca chamar de "dieta"/"prescrição" (Lei 8.234/1991: prescrição
+    dietética é privativa do nutricionista). Aviso no PDF. Levar ao advogado.
+- **Vercel Hobby (grátis) não permite uso comercial**: ao começar a cobrar,
+  mudar para o plano Pro (~US$ 20/mês).
+
 - SMTP próprio para e-mails de cadastro (ver seção 5).
 - Tela de "esqueci minha senha".
 - Excluir paciente; histórico de várias fichas por paciente
@@ -185,6 +218,17 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
 
 ### 05/10/2026
 - Computador de trabalho: baixado o trabalho do notebook (git pull); build OK.
+- Vercel: criado `vercel.json` (região São Paulo `gru1`). O cadastro do
+  dono travou no SMS de verificação (não chegou no trabalho) — fica para
+  casa, no notebook.
+- Dietética, etapa 1: `src/data/dietetica.json` + planilha
+  `revisao/Dietetica-MTC-revisao.xlsx` para o dono revisar. Nova
+  dependência de desenvolvimento `exceljs` (com `overrides` de `uuid`
+  ^11 para zerar o npm audit).
+- Um `npm run dev` antigo ficou rodando escondido e passou a mostrar
+  "Jest worker encountered 2 child process exceptions" (porque o `.next`
+  foi recompilado por baixo dele). Solução: encerrar o processo node na
+  porta 3000 e ligar de novo.
 - Dono confirmou que os 71 pontos estão corretos.
 - **Mapa do corpo em 3D** (pedido do dono: explorar órgãos, ossos e sistemas
   sem óculos especiais, mantendo os pontos). Escolhido o "holograma
