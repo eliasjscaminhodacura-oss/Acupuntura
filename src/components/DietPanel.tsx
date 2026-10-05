@@ -50,6 +50,8 @@ export default function DietPanel({ data, ranked, elementScores, patientName, di
   const set = (patch: Partial<DietState>) => onChange({ ...diet, ...patch });
   const toggleSyndrome = (code: string) => set({ sindromes: toggleIn(chosen, code) });
   const toggleFood = (id: string) => set({ removidos: toggleIn(diet.removidos, id) });
+  const toggleRecipe = (id: string) =>
+    set({ receitas: toggleIn(result.receitas.filter((r) => r.escolhida).map((r) => r.receita.id), id) });
 
   const addFood = (text: string) => {
     const food = DIET.alimentos.find((a) => a.nome.toLowerCase() === text.trim().toLowerCase());
@@ -204,7 +206,41 @@ export default function DietPanel({ data, ranked, elementScores, patientName, di
           <h4 className="diet-evite-title">Evite</h4>
           <div className="diet-row">{result.evite.map((i) => chip(i, 'evite'))}</div>
 
-          <h4>Como preparar</h4>
+          <h4>Receitas</h4>
+          <p className="diet-help">Marque as receitas que vão para o PDF do paciente.</p>
+          {result.receitas.length === 0 && (
+            <p className="diet-help">Nenhuma receita compatível com estas síndromes e restrições.</p>
+          )}
+          <div className="diet-recipes">
+            {result.receitas.map(({ receita, ingredientes, escolhida }) => (
+              <div key={receita.id} className={'diet-recipe' + (escolhida ? ' on' : '')}>
+                <label className="diet-recipe-head">
+                  <input type="checkbox" checked={escolhida} onChange={() => toggleRecipe(receita.id)} />
+                  <span>
+                    <strong>{receita.nome}</strong>
+                    <span className="diet-recipe-meta">{receita.tipo} · {receita.tempo} · rende {receita.rende}</span>
+                  </span>
+                </label>
+                <details>
+                  <summary>Ver receita</summary>
+                  <div className="diet-recipe-body">
+                    <strong>Ingredientes</strong>
+                    <ul>{ingredientes.map((i) => <li key={i.texto}>{i.texto}{i.opcional ? ' (opcional)' : ''}</li>)}</ul>
+                    <strong>Modo de preparo</strong>
+                    <ol>{receita.preparo.map((p) => <li key={p}>{p}</li>)}</ol>
+                    <p><em>Por que ajuda:</em> {receita.porque}</p>
+                  </div>
+                </details>
+              </div>
+            ))}
+          </div>
+          {diet.receitas && (
+            <button type="button" className="secondary small" style={{ marginTop: 8 }} onClick={() => set({ receitas: null })}>
+              Voltar às receitas automáticas
+            </button>
+          )}
+
+          <h4>Dicas de preparo</h4>
           <ul className="diet-list">{result.preparos.map((p) => <li key={p}>{p}</li>)}</ul>
 
           {result.notas.length > 0 && (

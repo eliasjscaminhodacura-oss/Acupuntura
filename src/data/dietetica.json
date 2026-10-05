@@ -4807,5 +4807,1928 @@
       ],
       "revisado": false
     }
-  }
+  },
+  "receitas": [
+    {
+      "id": "congee-de-arroz-com-tamaras-e-gengibre",
+      "nome": "Congee de arroz com tâmaras e gengibre",
+      "tipo": "Café da manhã",
+      "natureza": "Morno",
+      "rende": "2 porções",
+      "tempo": "1h30",
+      "indicacoes": [
+        "DefQiBP",
+        "DefQiE",
+        "ColapsQiBP",
+        "BPcontrXue",
+        "DefQiP",
+        "DefXueC"
+      ],
+      "ingredientes": [
+        {
+          "texto": "1/2 xícara (chá) de arroz branco",
+          "alimento": "arroz-branco",
+          "opcional": false
+        },
+        {
+          "texto": "5 xícaras (chá) de água",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "6 tâmaras sem caroço, picadas",
+          "alimento": "tamara-jujuba",
+          "opcional": false
+        },
+        {
+          "texto": "3 rodelas finas de gengibre fresco",
+          "alimento": "gengibre-fresco",
+          "opcional": false
+        },
+        {
+          "texto": "1 pitada de sal",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Lave o arroz e coloque numa panela com a água, as tâmaras e o gengibre.",
+        "Leve ao fogo alto até ferver; depois abaixe o fogo bem baixo.",
+        "Cozinhe com a panela semitampada por 1 hora a 1h30, mexendo de vez em quando, até virar um mingau cremoso.",
+        "Retire o gengibre, acerte o sal e sirva morno."
+      ],
+      "porque": "O congee é o alimento mais fácil de digerir na MTC: descansa o Baço-Pâncreas e o Estômago. A tâmara nutre o Qi e o Sangue; o gengibre aquece a digestão.",
+      "revisado": false
+    },
+    {
+      "id": "mingau-de-aveia-com-tamara-e-canela",
+      "nome": "Mingau de aveia com tâmara e canela",
+      "tipo": "Café da manhã",
+      "natureza": "Morno",
+      "rende": "1 porção",
+      "tempo": "15 min",
+      "indicacoes": [
+        "DefQiBP",
+        "DefYgBP",
+        "DefQiC",
+        "ColapsQiBP",
+        "DefQiVB"
+      ],
+      "ingredientes": [
+        {
+          "texto": "4 colheres (sopa) de aveia em flocos",
+          "alimento": "aveia",
+          "opcional": false
+        },
+        {
+          "texto": "1 e 1/2 xícara (chá) de água",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "3 tâmaras picadas",
+          "alimento": "tamara-jujuba",
+          "opcional": false
+        },
+        {
+          "texto": "1 pitada de canela em pó",
+          "alimento": "canela",
+          "opcional": true
+        }
+      ],
+      "preparo": [
+        "Coloque a aveia, a água e as tâmaras numa panela pequena.",
+        "Cozinhe em fogo baixo por 8 a 10 minutos, mexendo, até engrossar.",
+        "Desligue, polvilhe a canela e sirva morno."
+      ],
+      "porque": "Café da manhã morno e cozido, que fortalece a digestão logo cedo. A aveia e a tâmara tonificam o Qi; a canela aquece o Yang.",
+      "revisado": false
+    },
+    {
+      "id": "sopa-creme-de-abobora-com-gengibre",
+      "nome": "Sopa creme de abóbora com gengibre",
+      "tipo": "Sopa",
+      "natureza": "Morno",
+      "rende": "4 porções",
+      "tempo": "40 min",
+      "indicacoes": [
+        "DefQiBP",
+        "DefYgBP",
+        "UmdFrioBP",
+        "DefQiP",
+        "ColapsQiBP",
+        "FrioE"
+      ],
+      "ingredientes": [
+        {
+          "texto": "500 g de abóbora cabotiá descascada, em cubos",
+          "alimento": "abobora",
+          "opcional": false
+        },
+        {
+          "texto": "1 cebola picada",
+          "alimento": "cebola",
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (sopa) de gengibre fresco ralado",
+          "alimento": "gengibre-fresco",
+          "opcional": false
+        },
+        {
+          "texto": "1 litro de água",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (sopa) de azeite",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "Sal a gosto",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Refogue a cebola no azeite até ficar transparente.",
+        "Junte o gengibre e mexa por 1 minuto.",
+        "Acrescente a abóbora e a água; cozinhe por 25 minutos, até a abóbora desmanchar.",
+        "Bata no liquidificador (com cuidado, quente) e acerte o sal. Sirva quente."
+      ],
+      "porque": "A abóbora, doce e morna, é o alimento típico do Elemento Terra: fortalece o Baço-Pâncreas. O gengibre e a cebola aquecem e ajudam a secar a umidade.",
+      "revisado": false
+    },
+    {
+      "id": "canja-de-galinha-com-inhame-e-cenoura",
+      "nome": "Canja de galinha com inhame e cenoura",
+      "tipo": "Sopa",
+      "natureza": "Morno",
+      "rende": "4 porções",
+      "tempo": "1h",
+      "indicacoes": [
+        "DefQiBP",
+        "DefQiP",
+        "ColapsQiBP",
+        "BPcontrXue",
+        "DefQiC"
+      ],
+      "ingredientes": [
+        {
+          "texto": "300 g de peito ou sobrecoxa de frango em pedaços",
+          "alimento": "frango",
+          "opcional": false
+        },
+        {
+          "texto": "1 inhame (ou cará) médio em cubos",
+          "alimento": "inhame-cara",
+          "opcional": false
+        },
+        {
+          "texto": "1 cenoura em rodelas",
+          "alimento": "cenoura",
+          "opcional": false
+        },
+        {
+          "texto": "1/3 xícara (chá) de arroz branco",
+          "alimento": "arroz-branco",
+          "opcional": false
+        },
+        {
+          "texto": "1 cebola picada",
+          "alimento": "cebola",
+          "opcional": false
+        },
+        {
+          "texto": "2 rodelas de gengibre fresco",
+          "alimento": "gengibre-fresco",
+          "opcional": false
+        },
+        {
+          "texto": "1,5 litro de água",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "Sal e cheiro-verde a gosto",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Doure levemente o frango com a cebola numa panela.",
+        "Junte a água e o gengibre e cozinhe por 25 minutos.",
+        "Acrescente o arroz, o inhame e a cenoura; cozinhe por mais 20 minutos, até o arroz ficar bem macio.",
+        "Desfie o frango, acerte o sal e finalize com cheiro-verde."
+      ],
+      "porque": "Canja quente e nutritiva: o frango e o inhame tonificam o Qi do Baço-Pâncreas e do Pulmão; ótima para quem está cansado ou se recuperando.",
+      "revisado": false
+    },
+    {
+      "id": "pure-de-batata-doce-com-inhame",
+      "nome": "Purê de batata-doce com inhame",
+      "tipo": "Acompanhamento",
+      "natureza": "Neutro",
+      "rende": "3 porções",
+      "tempo": "30 min",
+      "indicacoes": [
+        "DefQiBP",
+        "DefQiE",
+        "DefYnE",
+        "DefYnP"
+      ],
+      "ingredientes": [
+        {
+          "texto": "1 batata-doce média",
+          "alimento": "batata-doce",
+          "opcional": false
+        },
+        {
+          "texto": "1 inhame (ou cará) médio",
+          "alimento": "inhame-cara",
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (sopa) de ghee ou manteiga",
+          "alimento": "manteiga-e-ghee",
+          "opcional": true
+        },
+        {
+          "texto": "Sal a gosto",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Descasque e corte a batata-doce e o inhame em pedaços.",
+        "Cozinhe em água ou no vapor por 20 minutos, até ficarem macios.",
+        "Amasse ainda quente, junte o ghee e o sal e misture bem."
+      ],
+      "porque": "Batata-doce e inhame são doces e neutros: nutrem o Qi e os líquidos (Yin) do Estômago, sem esquentar nem esfriar.",
+      "revisado": false
+    },
+    {
+      "id": "arroz-com-shiitake-e-ervilhas",
+      "nome": "Arroz com shiitake e ervilhas",
+      "tipo": "Prato principal",
+      "natureza": "Neutro",
+      "rende": "3 porções",
+      "tempo": "35 min",
+      "indicacoes": [
+        "DefQiBP",
+        "DefQiE",
+        "DefQiP",
+        "RebelE"
+      ],
+      "ingredientes": [
+        {
+          "texto": "1 xícara (chá) de arroz branco",
+          "alimento": "arroz-branco",
+          "opcional": false
+        },
+        {
+          "texto": "6 cogumelos shiitake fatiados",
+          "alimento": "cogumelo-shiitake",
+          "opcional": false
+        },
+        {
+          "texto": "1/2 xícara (chá) de ervilhas",
+          "alimento": "ervilha",
+          "opcional": false
+        },
+        {
+          "texto": "1 cebola pequena picada",
+          "alimento": "cebola",
+          "opcional": false
+        },
+        {
+          "texto": "2 xícaras (chá) de água quente",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (sopa) de azeite",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "Sal a gosto",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Refogue a cebola e o shiitake no azeite por 3 minutos.",
+        "Junte o arroz lavado e refogue mais 1 minuto.",
+        "Acrescente a água quente e o sal; cozinhe em fogo baixo, tampado, por 15 minutos.",
+        "Junte as ervilhas nos últimos 5 minutos. Solte com um garfo e sirva."
+      ],
+      "porque": "O shiitake tonifica o Qi; a ervilha harmoniza o Estômago e ajuda o Qi a descer. Prato leve para o dia a dia.",
+      "revisado": false
+    },
+    {
+      "id": "cha-de-gengibre-com-canela",
+      "nome": "Chá de gengibre com canela",
+      "tipo": "Chá",
+      "natureza": "Quente",
+      "rende": "2 xícaras",
+      "tempo": "15 min",
+      "indicacoes": [
+        "FrioE",
+        "DefYgBP",
+        "DefYgC",
+        "ColapsQiC",
+        "VtFrioP",
+        "FlmFrioP",
+        "UmdFrioIG"
+      ],
+      "ingredientes": [
+        {
+          "texto": "5 rodelas de gengibre fresco",
+          "alimento": "gengibre-fresco",
+          "opcional": false
+        },
+        {
+          "texto": "1 pau de canela",
+          "alimento": "canela",
+          "opcional": false
+        },
+        {
+          "texto": "500 ml de água",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (chá) de açúcar mascavo",
+          "alimento": "acucar-mascavo",
+          "opcional": true
+        }
+      ],
+      "preparo": [
+        "Coloque a água, o gengibre e a canela numa panela.",
+        "Ferva em fogo baixo, tampado, por 10 minutos.",
+        "Coe, adoce se quiser e beba quente, aos goles."
+      ],
+      "porque": "Bebida que aquece o centro: espanta o frio do Estômago e do corpo e ajuda o Yang a circular.",
+      "revisado": false
+    },
+    {
+      "id": "cozido-de-cordeiro-com-gengibre-e-cebola",
+      "nome": "Cozido de cordeiro com gengibre e cebola",
+      "tipo": "Prato principal",
+      "natureza": "Quente",
+      "rende": "4 porções",
+      "tempo": "2h",
+      "indicacoes": [
+        "DefYgR",
+        "DefYgBP",
+        "DefYgC",
+        "ColapsQiC"
+      ],
+      "ingredientes": [
+        {
+          "texto": "500 g de carne de cordeiro em cubos",
+          "alimento": "carne-de-cordeiro",
+          "opcional": false
+        },
+        {
+          "texto": "2 cebolas em pétalas",
+          "alimento": "cebola",
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (sopa) de gengibre fresco ralado",
+          "alimento": "gengibre-fresco",
+          "opcional": false
+        },
+        {
+          "texto": "1 cenoura em rodelas",
+          "alimento": "cenoura",
+          "opcional": false
+        },
+        {
+          "texto": "1 pau de canela",
+          "alimento": "canela",
+          "opcional": true
+        },
+        {
+          "texto": "1 litro de água",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "Sal a gosto",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Doure a carne numa panela de fundo grosso.",
+        "Junte a cebola e o gengibre e refogue até perfumar.",
+        "Acrescente a água, a canela e a cenoura; cozinhe em fogo baixo, tampado, por 1h30, até a carne ficar macia.",
+        "Acerte o sal e sirva quente."
+      ],
+      "porque": "O cordeiro é a carne mais quente da MTC: aquece o Yang do Rim e do Baço-Pâncreas. Ideal no inverno e para quem sente muito frio.",
+      "revisado": false
+    },
+    {
+      "id": "feijao-preto-com-alho-poro-e-cominho",
+      "nome": "Feijão-preto com alho-poró e cominho",
+      "tipo": "Prato principal",
+      "natureza": "Morno",
+      "rende": "4 porções",
+      "tempo": "1h30 (com o feijão de molho)",
+      "indicacoes": [
+        "DefYgR",
+        "DefQiR",
+        "DefJgR"
+      ],
+      "ingredientes": [
+        {
+          "texto": "1 xícara (chá) de feijão-preto, de molho por 8 horas",
+          "alimento": "feijao-preto",
+          "opcional": false
+        },
+        {
+          "texto": "1 talo de alho-poró fatiado",
+          "alimento": "alho-poro",
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (chá) de cominho",
+          "alimento": "cominho",
+          "opcional": false
+        },
+        {
+          "texto": "1 folha de louro",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (sopa) de azeite",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "Sal a gosto",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Descarte a água do molho e cozinhe o feijão com água nova e o louro na panela de pressão por 25 minutos.",
+        "Refogue o alho-poró e o cominho no azeite.",
+        "Junte o feijão cozido com o caldo e deixe apurar por 10 minutos em fogo baixo.",
+        "Acerte o sal e sirva."
+      ],
+      "porque": "O feijão-preto, escuro como o Elemento Água, nutre o Rim e a Essência; o alho-poró e o cominho aquecem e facilitam a digestão do feijão.",
+      "revisado": false
+    },
+    {
+      "id": "camarao-salteado-com-alho-poro",
+      "nome": "Camarão salteado com alho-poró",
+      "tipo": "Prato principal",
+      "natureza": "Morno",
+      "rende": "2 porções",
+      "tempo": "20 min",
+      "indicacoes": [
+        "DefYgR"
+      ],
+      "ingredientes": [
+        {
+          "texto": "250 g de camarão limpo",
+          "alimento": "camarao",
+          "opcional": false
+        },
+        {
+          "texto": "1 talo de alho-poró fatiado",
+          "alimento": "alho-poro",
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (chá) de gengibre fresco ralado",
+          "alimento": "gengibre-fresco",
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (sopa) de azeite",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "Sal a gosto",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Aqueça o azeite e refogue o alho-poró por 2 minutos.",
+        "Junte o gengibre e o camarão e salteie por 3 a 4 minutos, até o camarão ficar rosado.",
+        "Acerte o sal e sirva com arroz."
+      ],
+      "porque": "O camarão e o alho-poró aquecem e tonificam o Yang do Rim (falta de energia, frio nas costas e nos pés).",
+      "revisado": false
+    },
+    {
+      "id": "congee-de-arroz-glutinoso-com-castanha-portuguesa",
+      "nome": "Congee de arroz glutinoso com castanha portuguesa",
+      "tipo": "Café da manhã",
+      "natureza": "Morno",
+      "rende": "2 porções",
+      "tempo": "1h30",
+      "indicacoes": [
+        "DefQiR",
+        "DefYgR",
+        "UmdFrioIG",
+        "ColapsQiBP"
+      ],
+      "ingredientes": [
+        {
+          "texto": "1/2 xícara (chá) de arroz glutinoso (moti) ou arroz branco",
+          "alimento": "arroz-glutinoso-moti",
+          "opcional": false
+        },
+        {
+          "texto": "8 castanhas portuguesas cozidas e descascadas",
+          "alimento": "castanha-portuguesa",
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (chá) de erva-doce",
+          "alimento": "erva-doce-funcho",
+          "opcional": false
+        },
+        {
+          "texto": "5 xícaras (chá) de água",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "1 pitada de sal",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Coloque o arroz lavado, a água e a erva-doce (num saquinho de pano ou coador de chá) na panela.",
+        "Ferva e cozinhe em fogo bem baixo, semitampado, por 1 hora.",
+        "Junte as castanhas picadas e cozinhe mais 20 minutos, até ficar cremoso.",
+        "Retire a erva-doce e sirva morno."
+      ],
+      "porque": "A castanha portuguesa fortalece o Rim e o Baço-Pâncreas; o arroz glutinoso consolida e a erva-doce aquece o abdome.",
+      "revisado": false
+    },
+    {
+      "id": "pera-cozida-com-mel-e-amendoas",
+      "nome": "Pera cozida com mel e amêndoas",
+      "tipo": "Sobremesa",
+      "natureza": "Fresco",
+      "rende": "2 porções",
+      "tempo": "25 min",
+      "indicacoes": [
+        "DefYnP",
+        "SecP",
+        "FlmCalorP"
+      ],
+      "ingredientes": [
+        {
+          "texto": "2 peras",
+          "alimento": "pera",
+          "opcional": false
+        },
+        {
+          "texto": "10 amêndoas",
+          "alimento": "amendoa",
+          "opcional": false
+        },
+        {
+          "texto": "2 colheres (chá) de mel",
+          "alimento": "mel",
+          "opcional": true
+        },
+        {
+          "texto": "2 xícaras (chá) de água",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Descasque as peras, corte ao meio e retire as sementes.",
+        "Cozinhe as peras com as amêndoas na água, em fogo baixo, por 20 minutos.",
+        "Sirva morna com um pouco do caldo e o mel por cima."
+      ],
+      "porque": "Receita clássica para o Pulmão seco: a pera umedece e refresca, a amêndoa e o mel acalmam a tosse seca.",
+      "revisado": false
+    },
+    {
+      "id": "mingau-de-painco-com-goji",
+      "nome": "Mingau de painço com goji",
+      "tipo": "Café da manhã",
+      "natureza": "Fresco",
+      "rende": "2 porções",
+      "tempo": "40 min",
+      "indicacoes": [
+        "DefYnR",
+        "DefYnE",
+        "DefYnC",
+        "CalorE",
+        "AscYgF"
+      ],
+      "ingredientes": [
+        {
+          "texto": "1/2 xícara (chá) de painço (milheto) lavado",
+          "alimento": "painco-milheto",
+          "opcional": false
+        },
+        {
+          "texto": "4 xícaras (chá) de água",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (sopa) de goji berry",
+          "alimento": "goji-berry",
+          "opcional": false
+        },
+        {
+          "texto": "1 pitada de sal",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Cozinhe o painço na água em fogo baixo, semitampado, por 30 minutos, mexendo de vez em quando.",
+        "Junte o goji nos últimos 5 minutos.",
+        "Sirva morno."
+      ],
+      "porque": "O painço é fresco e nutre o Yin do Estômago e do Rim; o goji nutre o Sangue e o Yin. Bom para quem sente calor à noite e boca seca.",
+      "revisado": false
+    },
+    {
+      "id": "sopa-de-tofu-com-espinafre-e-gergelim",
+      "nome": "Sopa de tofu com espinafre e gergelim",
+      "tipo": "Sopa",
+      "natureza": "Fresco",
+      "rende": "3 porções",
+      "tempo": "20 min",
+      "indicacoes": [
+        "DefYnR",
+        "DefXueF",
+        "AscYgF",
+        "DefYnC",
+        "VtF"
+      ],
+      "ingredientes": [
+        {
+          "texto": "200 g de tofu em cubos",
+          "alimento": "tofu-e-soja",
+          "opcional": false
+        },
+        {
+          "texto": "2 xícaras (chá) de folhas de espinafre",
+          "alimento": "espinafre",
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (sopa) de gergelim preto torrado",
+          "alimento": "gergelim-preto",
+          "opcional": false
+        },
+        {
+          "texto": "1 litro de água ou caldo de legumes",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (chá) de shoyu ou sal a gosto",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Ferva a água (ou o caldo).",
+        "Junte o tofu e cozinhe por 5 minutos em fogo baixo.",
+        "Acrescente o espinafre e desligue assim que murchar (1 minuto).",
+        "Tempere e salpique o gergelim preto."
+      ],
+      "porque": "Tofu e espinafre refrescam e nutrem o Yin e o Sangue; o gergelim preto nutre o Rim e o Fígado. Acalma o Yang que sobe.",
+      "revisado": false
+    },
+    {
+      "id": "caldo-de-feijao-preto-com-gergelim-preto-e-algas",
+      "nome": "Caldo de feijão-preto com gergelim preto e algas",
+      "tipo": "Sopa",
+      "natureza": "Neutro",
+      "rende": "4 porções",
+      "tempo": "1h30 (com o feijão de molho)",
+      "indicacoes": [
+        "DefYnR",
+        "DefJgR",
+        "DefXueF"
+      ],
+      "ingredientes": [
+        {
+          "texto": "1 xícara (chá) de feijão-preto, de molho por 8 horas",
+          "alimento": "feijao-preto",
+          "opcional": false
+        },
+        {
+          "texto": "1 tira de alga kombu (10 cm)",
+          "alimento": "algas-kombu-nori",
+          "opcional": true
+        },
+        {
+          "texto": "2 colheres (sopa) de gergelim preto torrado e moído",
+          "alimento": "gergelim-preto",
+          "opcional": false
+        },
+        {
+          "texto": "1 cebola picada",
+          "alimento": "cebola",
+          "opcional": false
+        },
+        {
+          "texto": "Sal a gosto",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Cozinhe o feijão com água nova e a kombu na pressão por 25 minutos.",
+        "Bata metade do feijão com o caldo, para engrossar.",
+        "Refogue a cebola, junte o feijão e apure por 10 minutos.",
+        "Sirva com o gergelim moído por cima."
+      ],
+      "porque": "Três alimentos escuros do Elemento Água: nutrem o Yin, o Sangue e a Essência do Rim.",
+      "revisado": false
+    },
+    {
+      "id": "ovos-mexidos-com-tomate-estilo-chines",
+      "nome": "Ovos mexidos com tomate (estilo chinês)",
+      "tipo": "Prato principal",
+      "natureza": "Neutro",
+      "rende": "2 porções",
+      "tempo": "15 min",
+      "indicacoes": [
+        "DefYnC",
+        "DefXueC",
+        "DefYnE"
+      ],
+      "ingredientes": [
+        {
+          "texto": "3 ovos",
+          "alimento": "ovo",
+          "opcional": false
+        },
+        {
+          "texto": "2 tomates maduros em gomos",
+          "alimento": "tomate",
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (sopa) de óleo",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "Cebolinha e sal a gosto",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Bata os ovos com uma pitada de sal e mexa rapidamente no óleo quente; reserve ainda macios.",
+        "Na mesma frigideira, refogue o tomate até soltar o caldo.",
+        "Volte os ovos, misture delicadamente e finalize com cebolinha."
+      ],
+      "porque": "O ovo nutre o Yin e o Sangue e acalma o Shen; o tomate refresca e umedece. Prato simples e muito tradicional.",
+      "revisado": false
+    },
+    {
+      "id": "couve-refogada-com-gergelim-preto",
+      "nome": "Couve refogada com gergelim preto",
+      "tipo": "Acompanhamento",
+      "natureza": "Neutro",
+      "rende": "2 porções",
+      "tempo": "10 min",
+      "indicacoes": [
+        "DefXueF",
+        "VtF",
+        "DefXueC"
+      ],
+      "ingredientes": [
+        {
+          "texto": "1 maço de couve em tiras finas",
+          "alimento": "couve",
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (sopa) de gergelim preto",
+          "alimento": "gergelim-preto",
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (sopa) de azeite",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "Sal a gosto",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Toste o gergelim numa frigideira seca por 1 minuto e reserve.",
+        "Refogue a couve no azeite por 2 a 3 minutos, só até murchar.",
+        "Tempere com sal e salpique o gergelim."
+      ],
+      "porque": "Folhas verde-escuras e gergelim preto nutrem o Sangue do Fígado (vista cansada, unhas fracas, cãibras).",
+      "revisado": false
+    },
+    {
+      "id": "congee-de-goji-e-tamara-com-ovo",
+      "nome": "Congee de goji e tâmara com ovo",
+      "tipo": "Café da manhã",
+      "natureza": "Morno",
+      "rende": "2 porções",
+      "tempo": "1h30",
+      "indicacoes": [
+        "DefXueC",
+        "DefXueF",
+        "BPcontrXue"
+      ],
+      "ingredientes": [
+        {
+          "texto": "1/2 xícara (chá) de arroz branco",
+          "alimento": "arroz-branco",
+          "opcional": false
+        },
+        {
+          "texto": "5 xícaras (chá) de água",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "6 tâmaras picadas",
+          "alimento": "tamara-jujuba",
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (sopa) de goji berry",
+          "alimento": "goji-berry",
+          "opcional": false
+        },
+        {
+          "texto": "1 ovo",
+          "alimento": "ovo",
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Cozinhe o arroz com a água e as tâmaras em fogo bem baixo por 1h20, até virar mingau.",
+        "Junte o goji e cozinhe mais 5 minutos.",
+        "Bata o ovo e despeje em fio, mexendo, até cozinhar (1 minuto). Sirva morno."
+      ],
+      "porque": "Tâmara, goji e ovo nutrem o Sangue; o congee garante que tudo seja bem absorvido.",
+      "revisado": false
+    },
+    {
+      "id": "figado-acebolado-com-espinafre",
+      "nome": "Fígado acebolado com espinafre",
+      "tipo": "Prato principal",
+      "natureza": "Morno",
+      "rende": "2 porções",
+      "tempo": "20 min",
+      "indicacoes": [
+        "DefXueF",
+        "DefXueC"
+      ],
+      "ingredientes": [
+        {
+          "texto": "300 g de fígado de boi em bifes finos",
+          "alimento": "figado-boi-ou-galinha",
+          "opcional": false
+        },
+        {
+          "texto": "2 cebolas em rodelas",
+          "alimento": "cebola",
+          "opcional": false
+        },
+        {
+          "texto": "2 xícaras (chá) de espinafre",
+          "alimento": "espinafre",
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (sopa) de azeite",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "Sal a gosto",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Doure o fígado no azeite, 2 minutos de cada lado; reserve.",
+        "Na mesma frigideira, doure a cebola.",
+        "Junte o espinafre até murchar, volte o fígado e acerte o sal."
+      ],
+      "porque": "Na MTC, \"órgão nutre órgão\": o fígado é um dos alimentos que mais nutrem o Sangue do Fígado.",
+      "revisado": false
+    },
+    {
+      "id": "sopa-de-feijao-mungo",
+      "nome": "Sopa de feijão-mungo",
+      "tipo": "Sopa",
+      "natureza": "Frio",
+      "rende": "4 porções",
+      "tempo": "1h",
+      "indicacoes": [
+        "FgC",
+        "FgF",
+        "CalorE",
+        "CalorID",
+        "UmdCalorBP",
+        "UmdCalorB",
+        "UmdCalorIG",
+        "VtCalorP"
+      ],
+      "ingredientes": [
+        {
+          "texto": "1 xícara (chá) de feijão-mungo (o grão verde do moyashi)",
+          "alimento": "feijao-mungo-moyashi",
+          "opcional": false
+        },
+        {
+          "texto": "1,5 litro de água",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (sopa) de mel",
+          "alimento": "mel",
+          "opcional": true
+        }
+      ],
+      "preparo": [
+        "Lave o feijão-mungo e cozinhe na água em fogo médio por 40 a 50 minutos, até os grãos abrirem.",
+        "Pode tomar o caldo puro ou com os grãos, morno ou em temperatura ambiente.",
+        "Adoce levemente se quiser."
+      ],
+      "porque": "Remédio caseiro clássico contra o calor: refresca o Coração, o Fígado e o Estômago e elimina o calor pela urina.",
+      "revisado": false
+    },
+    {
+      "id": "cha-de-crisantemo-com-goji",
+      "nome": "Chá de crisântemo com goji",
+      "tipo": "Chá",
+      "natureza": "Fresco",
+      "rende": "2 xícaras",
+      "tempo": "10 min",
+      "indicacoes": [
+        "AscYgF",
+        "FgF",
+        "VtF",
+        "VtCalorP"
+      ],
+      "ingredientes": [
+        {
+          "texto": "1 colher (sopa) de flores secas de crisântemo",
+          "alimento": "cha-de-crisantemo",
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (sopa) de goji berry",
+          "alimento": "goji-berry",
+          "opcional": false
+        },
+        {
+          "texto": "500 ml de água quente (não fervendo)",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Coloque o crisântemo e o goji num bule.",
+        "Cubra com a água quente e tampe por 5 minutos.",
+        "Coe e beba morno, ao longo do dia."
+      ],
+      "porque": "O crisântemo refresca o Fígado e acalma o Yang que sobe (dor de cabeça, olhos vermelhos); o goji nutre o Yin do Fígado e do Rim.",
+      "revisado": false
+    },
+    {
+      "id": "aipo-refogado-com-tofu",
+      "nome": "Aipo refogado com tofu",
+      "tipo": "Prato principal",
+      "natureza": "Fresco",
+      "rende": "2 porções",
+      "tempo": "15 min",
+      "indicacoes": [
+        "AscYgF",
+        "FgF",
+        "VtF",
+        "UmdCalorF"
+      ],
+      "ingredientes": [
+        {
+          "texto": "3 talos de aipo (salsão) em fatias",
+          "alimento": "aipo-salsao",
+          "opcional": false
+        },
+        {
+          "texto": "200 g de tofu firme em cubos",
+          "alimento": "tofu-e-soja",
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (sopa) de azeite",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (chá) de shoyu ou sal a gosto",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Doure o tofu no azeite e reserve.",
+        "Refogue o aipo por 2 minutos, mantendo-o crocante.",
+        "Volte o tofu, tempere e sirva."
+      ],
+      "porque": "O aipo é o alimento clássico para acalmar o Fígado e baixar o Yang; o tofu refresca e nutre o Yin.",
+      "revisado": false
+    },
+    {
+      "id": "suco-de-melancia-com-hortela",
+      "nome": "Suco de melancia com hortelã",
+      "tipo": "Bebida",
+      "natureza": "Frio",
+      "rende": "2 copos",
+      "tempo": "5 min",
+      "indicacoes": [
+        "CalorID",
+        "FgC",
+        "CalorE"
+      ],
+      "ingredientes": [
+        {
+          "texto": "3 xícaras (chá) de melancia em cubos",
+          "alimento": "melancia",
+          "opcional": false
+        },
+        {
+          "texto": "5 folhas de hortelã",
+          "alimento": "hortela",
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Bata a melancia com a hortelã no liquidificador.",
+        "Sirva em temperatura ambiente (sem gelo), de preferência nos dias quentes."
+      ],
+      "porque": "A melancia limpa o calor do Coração e elimina pela urina; a hortelã refresca. Só para quadros de calor — não para quem sente frio.",
+      "revisado": false
+    },
+    {
+      "id": "sopa-de-cevada-com-abobrinha",
+      "nome": "Sopa de cevada com abobrinha",
+      "tipo": "Sopa",
+      "natureza": "Fresco",
+      "rende": "4 porções",
+      "tempo": "1h",
+      "indicacoes": [
+        "UmdCalorBP",
+        "UmdCalorB",
+        "UmdCalorF",
+        "UmdCalorIG",
+        "CalorE"
+      ],
+      "ingredientes": [
+        {
+          "texto": "1/2 xícara (chá) de cevada em grão, de molho por 2 horas",
+          "alimento": "cevada",
+          "opcional": false
+        },
+        {
+          "texto": "1 abobrinha em cubos",
+          "alimento": "abobrinha",
+          "opcional": false
+        },
+        {
+          "texto": "1 cenoura em cubos",
+          "alimento": "cenoura",
+          "opcional": false
+        },
+        {
+          "texto": "1 cebola picada",
+          "alimento": "cebola",
+          "opcional": false
+        },
+        {
+          "texto": "1,5 litro de água",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "Sal e salsinha a gosto",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Cozinhe a cevada na água por 40 minutos.",
+        "Junte a cebola, a cenoura e a abobrinha e cozinhe mais 15 minutos.",
+        "Acerte o sal e finalize com salsinha."
+      ],
+      "porque": "A cevada e a abobrinha drenam a umidade e refrescam o calor, aliviando o peso e o inchaço.",
+      "revisado": false
+    },
+    {
+      "id": "feijao-azuki-com-milho",
+      "nome": "Feijão-azuki com milho",
+      "tipo": "Prato principal",
+      "natureza": "Neutro",
+      "rende": "4 porções",
+      "tempo": "1h (com o feijão de molho)",
+      "indicacoes": [
+        "UmdCalorB",
+        "UmdFrioB",
+        "UmdCalorBP",
+        "CalorID"
+      ],
+      "ingredientes": [
+        {
+          "texto": "1 xícara (chá) de feijão-azuki, de molho por 6 horas",
+          "alimento": "feijao-azuki",
+          "opcional": false
+        },
+        {
+          "texto": "1 espiga de milho debulhada",
+          "alimento": "milho-e-fuba",
+          "opcional": false
+        },
+        {
+          "texto": "1 cebola picada",
+          "alimento": "cebola",
+          "opcional": false
+        },
+        {
+          "texto": "2 rodelas de gengibre fresco",
+          "alimento": "gengibre-fresco",
+          "opcional": false
+        },
+        {
+          "texto": "Sal a gosto",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Cozinhe o azuki com água nova e o gengibre na pressão por 15 minutos.",
+        "Refogue a cebola, junte o milho e o azuki com um pouco do caldo.",
+        "Cozinhe mais 10 minutos e acerte o sal."
+      ],
+      "porque": "O azuki e o milho são diuréticos suaves e drenam a umidade sem esfriar demais; o gengibre equilibra.",
+      "revisado": false
+    },
+    {
+      "id": "cha-de-cabelo-de-milho",
+      "nome": "Chá de cabelo de milho",
+      "tipo": "Chá",
+      "natureza": "Neutro",
+      "rende": "3 xícaras",
+      "tempo": "15 min",
+      "indicacoes": [
+        "UmdCalorB",
+        "UmdFrioB",
+        "CalorID",
+        "UmdCalorF"
+      ],
+      "ingredientes": [
+        {
+          "texto": "Cabelos de 2 espigas de milho (frescos ou secos)",
+          "alimento": "cabelo-de-milho-cha",
+          "opcional": false
+        },
+        {
+          "texto": "750 ml de água",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Ferva a água com os cabelos de milho por 10 minutos em fogo baixo.",
+        "Coe e beba morno ao longo do dia."
+      ],
+      "porque": "Chá diurético tradicional: ajuda a eliminar a umidade pela urina e alivia o ardor ao urinar.",
+      "revisado": false
+    },
+    {
+      "id": "arroz-integral-com-azuki-gengibre-e-cardamomo",
+      "nome": "Arroz integral com azuki, gengibre e cardamomo",
+      "tipo": "Prato principal",
+      "natureza": "Morno",
+      "rende": "4 porções",
+      "tempo": "1h",
+      "indicacoes": [
+        "UmdFrioBP",
+        "UmdFrioIG",
+        "DefQiBP"
+      ],
+      "ingredientes": [
+        {
+          "texto": "1 xícara (chá) de arroz integral",
+          "alimento": "arroz-integral",
+          "opcional": false
+        },
+        {
+          "texto": "1/3 xícara (chá) de feijão-azuki, de molho por 6 horas",
+          "alimento": "feijao-azuki",
+          "opcional": false
+        },
+        {
+          "texto": "3 rodelas de gengibre fresco",
+          "alimento": "gengibre-fresco",
+          "opcional": false
+        },
+        {
+          "texto": "3 bagas de cardamomo amassadas",
+          "alimento": "cardamomo",
+          "opcional": false
+        },
+        {
+          "texto": "3 xícaras (chá) de água",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "Sal a gosto",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Coloque tudo numa panela de pressão.",
+        "Cozinhe por 25 minutos após pegar pressão.",
+        "Retire o gengibre e o cardamomo, solte com um garfo e sirva."
+      ],
+      "porque": "Prato que seca a umidade e aquece o Baço-Pâncreas: o azuki drena, o arroz integral fortalece e os temperos aromáticos \"acordam\" a digestão.",
+      "revisado": false
+    },
+    {
+      "id": "cha-de-casca-de-tangerina",
+      "nome": "Chá de casca de tangerina",
+      "tipo": "Chá",
+      "natureza": "Morno",
+      "rende": "2 xícaras",
+      "tempo": "10 min",
+      "indicacoes": [
+        "EstgQiF",
+        "AlimE",
+        "RebelE",
+        "ObstID",
+        "FlmFrioP",
+        "DefQiVB"
+      ],
+      "ingredientes": [
+        {
+          "texto": "1 colher (sopa) de casca de tangerina seca (seque ao sol por alguns dias)",
+          "alimento": "casca-de-tangerina-seca",
+          "opcional": false
+        },
+        {
+          "texto": "3 folhas de hortelã",
+          "alimento": "hortela",
+          "opcional": true
+        },
+        {
+          "texto": "500 ml de água",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Ferva a água com a casca de tangerina por 5 minutos.",
+        "Desligue, junte a hortelã e tampe por 3 minutos.",
+        "Coe e beba morno após as refeições."
+      ],
+      "porque": "A casca de tangerina (Chen Pi) move o Qi, desfaz o estufamento, ajuda a digestão e solta o catarro.",
+      "revisado": false
+    },
+    {
+      "id": "beterraba-refogada-com-cebola-e-curcuma",
+      "nome": "Beterraba refogada com cebola e cúrcuma",
+      "tipo": "Acompanhamento",
+      "natureza": "Morno",
+      "rende": "3 porções",
+      "tempo": "30 min",
+      "indicacoes": [
+        "EstgXueF",
+        "EstgXueC",
+        "EstgQiF",
+        "DefQiVB"
+      ],
+      "ingredientes": [
+        {
+          "texto": "2 beterrabas descascadas em cubos",
+          "alimento": "beterraba",
+          "opcional": false
+        },
+        {
+          "texto": "1 cebola em pétalas",
+          "alimento": "cebola",
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (chá) de cúrcuma (açafrão-da-terra)",
+          "alimento": "curcuma-acafrao-da-terra",
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (sopa) de azeite",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "Sal a gosto",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Cozinhe a beterraba no vapor por 15 minutos.",
+        "Refogue a cebola no azeite com a cúrcuma.",
+        "Junte a beterraba, misture por 3 minutos e acerte o sal."
+      ],
+      "porque": "A beterraba nutre e movimenta o Sangue; a cúrcuma e a cebola ajudam a circulação do Qi e do Sangue.",
+      "revisado": false
+    },
+    {
+      "id": "berinjela-no-vapor-com-alho-e-vinagre",
+      "nome": "Berinjela no vapor com alho e vinagre",
+      "tipo": "Acompanhamento",
+      "natureza": "Fresco",
+      "rende": "2 porções",
+      "tempo": "20 min",
+      "indicacoes": [
+        "EstgXueF",
+        "EstgXueC"
+      ],
+      "ingredientes": [
+        {
+          "texto": "1 berinjela em tiras",
+          "alimento": "berinjela",
+          "opcional": false
+        },
+        {
+          "texto": "1 dente de alho picado",
+          "alimento": "alho",
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (sopa) de vinagre de arroz ou de maçã",
+          "alimento": "vinagre",
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (sopa) de azeite",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "Sal e cebolinha a gosto",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Cozinhe a berinjela no vapor por 10 minutos, até ficar macia.",
+        "Misture o alho, o vinagre, o azeite e o sal.",
+        "Regue a berinjela e finalize com cebolinha."
+      ],
+      "porque": "A berinjela movimenta o Sangue e refresca; o vinagre e o alho ajudam a circulação.",
+      "revisado": false
+    },
+    {
+      "id": "cha-de-erva-doce",
+      "nome": "Chá de erva-doce",
+      "tipo": "Chá",
+      "natureza": "Morno",
+      "rende": "2 xícaras",
+      "tempo": "10 min",
+      "indicacoes": [
+        "ObstID",
+        "RebelE",
+        "EstgQiF",
+        "FrioE"
+      ],
+      "ingredientes": [
+        {
+          "texto": "1 colher (sopa) de sementes de erva-doce",
+          "alimento": "erva-doce-funcho",
+          "opcional": false
+        },
+        {
+          "texto": "500 ml de água quente",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Amasse levemente as sementes.",
+        "Cubra com a água quente e tampe por 10 minutos.",
+        "Coe e beba morno após as refeições."
+      ],
+      "porque": "A erva-doce aquece o abdome, move o Qi e alivia gases, cólicas e enjoo.",
+      "revisado": false
+    },
+    {
+      "id": "caldo-de-rabanete-com-gengibre",
+      "nome": "Caldo de rabanete com gengibre",
+      "tipo": "Sopa",
+      "natureza": "Fresco",
+      "rende": "3 porções",
+      "tempo": "30 min",
+      "indicacoes": [
+        "AlimE",
+        "FlmCalorP",
+        "RebelE",
+        "FlmC"
+      ],
+      "ingredientes": [
+        {
+          "texto": "1 nabo (daikon) ou 6 rabanetes em rodelas",
+          "alimento": "rabanete-nabo",
+          "opcional": false
+        },
+        {
+          "texto": "3 rodelas de gengibre fresco",
+          "alimento": "gengibre-fresco",
+          "opcional": false
+        },
+        {
+          "texto": "1 litro de água",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "Sal e cebolinha a gosto",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Cozinhe o rabanete e o gengibre na água por 20 minutos.",
+        "Acerte o sal e finalize com cebolinha.",
+        "Tome morno, de preferência no jantar."
+      ],
+      "porque": "O rabanete dissolve os alimentos parados e o catarro e faz o Qi descer; o gengibre protege o Estômago.",
+      "revisado": false
+    },
+    {
+      "id": "mamao-com-sementes-e-limao",
+      "nome": "Mamão com sementes e limão",
+      "tipo": "Lanche",
+      "natureza": "Neutro",
+      "rende": "1 porção",
+      "tempo": "5 min",
+      "indicacoes": [
+        "AlimE",
+        "ObstID",
+        "Parasita"
+      ],
+      "ingredientes": [
+        {
+          "texto": "1 fatia de mamão",
+          "alimento": "mamao",
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (chá) das sementes do próprio mamão",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "Gotas de limão",
+          "alimento": "limao",
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Corte o mamão em cubos.",
+        "Mastigue junto algumas sementes (sabor picante) e regue com limão.",
+        "Coma entre as refeições."
+      ],
+      "porque": "O mamão ajuda a digestão e o intestino; as sementes são usadas tradicionalmente contra parasitas.",
+      "revisado": false
+    },
+    {
+      "id": "sementes-de-abobora-torradas",
+      "nome": "Sementes de abóbora torradas",
+      "tipo": "Lanche",
+      "natureza": "Neutro",
+      "rende": "1 xícara",
+      "tempo": "15 min",
+      "indicacoes": [
+        "Parasita"
+      ],
+      "ingredientes": [
+        {
+          "texto": "1 xícara (chá) de sementes de abóbora cruas, sem casca",
+          "alimento": "semente-de-abobora",
+          "opcional": false
+        },
+        {
+          "texto": "1 pitada de sal",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Toste as sementes numa frigideira seca, em fogo baixo, mexendo, por 8 a 10 minutos.",
+        "Tempere com sal.",
+        "Coma um punhado em jejum pela manhã."
+      ],
+      "porque": "Remédio tradicional contra parasitas intestinais (sempre junto do tratamento médico).",
+      "revisado": false
+    },
+    {
+      "id": "congee-de-arroz-com-gengibre-e-cebolinha",
+      "nome": "Congee de arroz com gengibre e cebolinha",
+      "tipo": "Café da manhã",
+      "natureza": "Morno",
+      "rende": "2 porções",
+      "tempo": "1h",
+      "indicacoes": [
+        "RebelE",
+        "VtFrioP",
+        "FrioE"
+      ],
+      "ingredientes": [
+        {
+          "texto": "1/2 xícara (chá) de arroz branco",
+          "alimento": "arroz-branco",
+          "opcional": false
+        },
+        {
+          "texto": "5 xícaras (chá) de água",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "4 rodelas de gengibre fresco",
+          "alimento": "gengibre-fresco",
+          "opcional": false
+        },
+        {
+          "texto": "2 talos de cebolinha picados",
+          "alimento": "cebolinha",
+          "opcional": false
+        },
+        {
+          "texto": "1 pitada de sal",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Cozinhe o arroz com a água e o gengibre em fogo bem baixo por 50 minutos.",
+        "Desligue, junte a cebolinha e o sal.",
+        "Tome bem quente, agasalhado."
+      ],
+      "porque": "Congee clássico para o início de resfriado com frio e para o enjoo: o gengibre e a cebolinha aquecem e fazem suar levemente.",
+      "revisado": false
+    },
+    {
+      "id": "cha-de-gengibre-com-cebolinha",
+      "nome": "Chá de gengibre com cebolinha",
+      "tipo": "Chá",
+      "natureza": "Morno",
+      "rende": "2 xícaras",
+      "tempo": "10 min",
+      "indicacoes": [
+        "VtFrioP",
+        "FlmFrioP"
+      ],
+      "ingredientes": [
+        {
+          "texto": "5 rodelas de gengibre fresco",
+          "alimento": "gengibre-fresco",
+          "opcional": false
+        },
+        {
+          "texto": "A parte branca de 3 talos de cebolinha",
+          "alimento": "cebolinha",
+          "opcional": false
+        },
+        {
+          "texto": "500 ml de água",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (chá) de açúcar mascavo",
+          "alimento": "acucar-mascavo",
+          "opcional": true
+        }
+      ],
+      "preparo": [
+        "Ferva o gengibre na água por 5 minutos.",
+        "Junte a cebolinha e ferva mais 2 minutos.",
+        "Coe, adoce se quiser, beba quente e agasalhe-se para suar levemente."
+      ],
+      "porque": "Fórmula caseira tradicional para resfriado com calafrios: libera o frio pela superfície do corpo.",
+      "revisado": false
+    },
+    {
+      "id": "cha-de-hortela-e-crisantemo",
+      "nome": "Chá de hortelã e crisântemo",
+      "tipo": "Chá",
+      "natureza": "Fresco",
+      "rende": "2 xícaras",
+      "tempo": "10 min",
+      "indicacoes": [
+        "VtCalorP",
+        "FgF"
+      ],
+      "ingredientes": [
+        {
+          "texto": "1 colher (sopa) de flores de crisântemo",
+          "alimento": "cha-de-crisantemo",
+          "opcional": false
+        },
+        {
+          "texto": "6 folhas de hortelã",
+          "alimento": "hortela",
+          "opcional": false
+        },
+        {
+          "texto": "500 ml de água quente",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Coloque o crisântemo e a hortelã num bule.",
+        "Cubra com a água quente e tampe por 5 minutos.",
+        "Coe e beba morno."
+      ],
+      "porque": "Para resfriado com calor (garganta inflamada, febre): a hortelã e o crisântemo refrescam e liberam a superfície.",
+      "revisado": false
+    },
+    {
+      "id": "sopa-de-agriao-com-rabanete",
+      "nome": "Sopa de agrião com rabanete",
+      "tipo": "Sopa",
+      "natureza": "Fresco",
+      "rende": "3 porções",
+      "tempo": "25 min",
+      "indicacoes": [
+        "FlmCalorP",
+        "VtCalorP",
+        "FlmC"
+      ],
+      "ingredientes": [
+        {
+          "texto": "1 maço de agrião",
+          "alimento": "agriao",
+          "opcional": false
+        },
+        {
+          "texto": "4 rabanetes em rodelas",
+          "alimento": "rabanete-nabo",
+          "opcional": false
+        },
+        {
+          "texto": "1 batata pequena em cubos",
+          "alimento": "batata",
+          "opcional": false
+        },
+        {
+          "texto": "1 litro de água",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "Sal a gosto",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Cozinhe a batata e o rabanete na água por 15 minutos.",
+        "Junte o agrião e cozinhe mais 3 minutos.",
+        "Bata no liquidificador, acerte o sal e sirva morna."
+      ],
+      "porque": "O agrião e o rabanete refrescam o Pulmão e soltam o catarro amarelo.",
+      "revisado": false
+    },
+    {
+      "id": "sopa-de-cebola-com-gengibre-e-casca-de-tangerina",
+      "nome": "Sopa de cebola com gengibre e casca de tangerina",
+      "tipo": "Sopa",
+      "natureza": "Morno",
+      "rende": "3 porções",
+      "tempo": "40 min",
+      "indicacoes": [
+        "FlmFrioP",
+        "VtFrioP",
+        "UmdFrioBP"
+      ],
+      "ingredientes": [
+        {
+          "texto": "3 cebolas em fatias finas",
+          "alimento": "cebola",
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (sopa) de gengibre fresco ralado",
+          "alimento": "gengibre-fresco",
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (chá) de casca de tangerina seca",
+          "alimento": "casca-de-tangerina-seca",
+          "opcional": false
+        },
+        {
+          "texto": "1 litro de água ou caldo de legumes",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (sopa) de azeite",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "Sal a gosto",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Refogue a cebola no azeite em fogo baixo por 15 minutos, até dourar.",
+        "Junte o gengibre e a casca de tangerina.",
+        "Acrescente a água e cozinhe por 15 minutos. Acerte o sal e sirva quente."
+      ],
+      "porque": "A cebola e o gengibre aquecem o Pulmão; a casca de tangerina transforma o catarro claro.",
+      "revisado": false
+    },
+    {
+      "id": "caldo-de-ossos-com-inhame-e-goji",
+      "nome": "Caldo de ossos com inhame e goji",
+      "tipo": "Sopa",
+      "natureza": "Morno",
+      "rende": "6 porções",
+      "tempo": "4 a 8 horas",
+      "indicacoes": [
+        "DefJgR",
+        "DefQiR",
+        "DefYgR",
+        "DefXueF"
+      ],
+      "ingredientes": [
+        {
+          "texto": "1 kg de ossos de boi ou de frango (com tutano/cartilagem)",
+          "alimento": "caldo-de-ossos",
+          "opcional": false
+        },
+        {
+          "texto": "1 inhame (ou cará) em cubos",
+          "alimento": "inhame-cara",
+          "opcional": false
+        },
+        {
+          "texto": "2 colheres (sopa) de goji berry",
+          "alimento": "goji-berry",
+          "opcional": false
+        },
+        {
+          "texto": "1 cebola",
+          "alimento": "cebola",
+          "opcional": false
+        },
+        {
+          "texto": "3 rodelas de gengibre fresco",
+          "alimento": "gengibre-fresco",
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (sopa) de vinagre",
+          "alimento": "vinagre",
+          "opcional": false
+        },
+        {
+          "texto": "3 litros de água",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "Sal a gosto",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Coloque os ossos, a água, o vinagre, a cebola e o gengibre numa panela grande.",
+        "Cozinhe em fogo bem baixo por 4 a 8 horas, retirando a espuma no início.",
+        "Coe o caldo, junte o inhame e cozinhe por 20 minutos; acrescente o goji nos últimos 5.",
+        "Acerte o sal. O caldo pode ser congelado em porções."
+      ],
+      "porque": "O caldo de cozimento longo nutre a Essência (Jing), o Sangue e os ossos; o inhame e o goji fortalecem o Rim.",
+      "revisado": false
+    },
+    {
+      "id": "creme-de-gergelim-preto-e-nozes",
+      "nome": "Creme de gergelim preto e nozes",
+      "tipo": "Lanche",
+      "natureza": "Neutro",
+      "rende": "2 porções",
+      "tempo": "15 min",
+      "indicacoes": [
+        "DefJgR",
+        "DefYnR",
+        "DefXueF",
+        "DefQiR",
+        "SecP"
+      ],
+      "ingredientes": [
+        {
+          "texto": "3 colheres (sopa) de gergelim preto",
+          "alimento": "gergelim-preto",
+          "opcional": false
+        },
+        {
+          "texto": "6 nozes",
+          "alimento": "nozes",
+          "opcional": false
+        },
+        {
+          "texto": "2 colheres (sopa) de farinha de arroz ou arroz cozido",
+          "alimento": "arroz-branco",
+          "opcional": false
+        },
+        {
+          "texto": "2 xícaras (chá) de água",
+          "alimento": null,
+          "opcional": false
+        },
+        {
+          "texto": "1 colher (chá) de mel",
+          "alimento": "mel",
+          "opcional": true
+        }
+      ],
+      "preparo": [
+        "Toste o gergelim e as nozes numa frigideira seca por 2 minutos.",
+        "Bata com a água e o arroz no liquidificador até ficar liso.",
+        "Aqueça em fogo baixo, mexendo, por 5 minutos, até engrossar. Adoce se quiser."
+      ],
+      "porque": "Gergelim preto e nozes nutrem o Rim, a Essência e o Sangue e umedecem a secura (pele, cabelo, intestino).",
+      "revisado": false
+    },
+    {
+      "id": "mingau-de-trigo-com-tamaras",
+      "nome": "Mingau de trigo com tâmaras",
+      "tipo": "Café da manhã",
+      "natureza": "Neutro",
+      "rende": "2 porções",
+      "tempo": "40 min",
+      "indicacoes": [
+        "DefXueC",
+        "DefYnC",
+        "DefQiC"
+      ],
+      "ingredientes": [
+        {
+          "texto": "1/2 xícara (chá) de trigo em grão (ou triguilho)",
+          "alimento": "trigo-integral",
+          "opcional": false
+        },
+        {
+          "texto": "6 tâmaras picadas",
+          "alimento": "tamara-jujuba",
+          "opcional": false
+        },
+        {
+          "texto": "4 xícaras (chá) de água",
+          "alimento": null,
+          "opcional": false
+        }
+      ],
+      "preparo": [
+        "Cozinhe o trigo com as tâmaras na água, em fogo baixo, por 30 minutos.",
+        "Mexa até ficar cremoso.",
+        "Sirva morno, de preferência no café da manhã ou à noite."
+      ],
+      "porque": "Inspirado na fórmula clássica Gan Mai Da Zao: o trigo e a tâmara acalmam o Shen e nutrem o Coração (ansiedade, sono agitado).",
+      "revisado": false
+    }
+  ]
 }

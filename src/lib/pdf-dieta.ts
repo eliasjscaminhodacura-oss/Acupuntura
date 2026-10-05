@@ -73,6 +73,24 @@ export function buildDietPdfBlob({ patientName, diet, observacao, logoDataUrl }:
     y += 1.2;
   };
 
+  const numbered = (n: number, text: string, size = 10.5) => {
+    doc.setFontSize(size);
+    const lines = doc.splitTextToSize(safe(text), TEXT_W - 6) as string[];
+    const lh = size * 0.42;
+    ensure(lh * Math.min(lines.length, 2));
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(...JADE);
+    doc.text(`${n}.`, M + 0.5, y + lh * 0.8);
+    doc.setFont('helvetica', 'normal');
+    doc.setTextColor(...INK);
+    for (const line of lines) {
+      ensure(lh);
+      doc.text(line, M + 6, y + lh * 0.8);
+      y += lh;
+    }
+    y += 1.2;
+  };
+
   // Faixa colorida com o título da seção.
   const band = (title: string, color: [number, number, number]) => {
     ensure(16);
@@ -151,8 +169,32 @@ export function buildDietPdfBlob({ patientName, diet, observacao, logoDataUrl }:
     y += 1;
   }
 
+  const receitas = diet.receitas.filter((r) => r.escolhida);
+  if (receitas.length) {
+    ensure(55); // título da seção junto com o começo da 1ª receita
+    band(receitas.length > 1 ? 'Receitas para você' : 'Receita para você', JADE);
+    receitas.forEach(({ receita, ingredientes }, n) => {
+      ensure(40); // não começa uma receita no pé da página
+      if (n > 0) {
+        doc.setDrawColor(...JADE);
+        doc.setLineWidth(0.2);
+        doc.line(M, y, W - M, y);
+        y += 4;
+      }
+      para(receita.nome, 13, { bold: true, color: JADE, gap: 0.5 });
+      para(`${receita.tipo} · rende ${receita.rende} · tempo: ${receita.tempo}`, 9.5, { color: MUTED, gap: 2.5 });
+      para('Ingredientes', 10.5, { bold: true, gap: 0.8 });
+      for (const i of ingredientes) bullet(i.texto + (i.opcional ? ' (opcional)' : ''), 10.5);
+      y += 1.5;
+      para('Modo de preparo', 10.5, { bold: true, gap: 0.8 });
+      receita.preparo.forEach((p, k) => numbered(k + 1, p));
+      y += 1;
+      para(`Por que ajuda: ${receita.porque}`, 9.5, { color: MUTED, gap: 5 });
+    });
+  }
+
   if (diet.preparos.length) {
-    band('Como preparar', JADE);
+    band('Dicas de preparo', JADE);
     for (const p of diet.preparos) bullet(p);
     y += 1;
   }

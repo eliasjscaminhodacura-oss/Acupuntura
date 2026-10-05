@@ -85,8 +85,12 @@ async function exportar() {
     '   (alimentos brasileiros que os textos clássicos não trazem) — decida você.',
     '   Para incluir um alimento novo, escreva numa linha vazia no fim (deixe o Código em branco).',
     '4. Na aba "Elementos", confira a orientação geral de cada Elemento.',
-    '5. Marque "Sim" na coluna "Revisado?" de cada linha conferida. Se quiser explicar algo, use a coluna "Comentário".',
-    '6. Salve o arquivo (Ctrl+B) com o mesmo nome e avise o Claude: ele lê as suas mudanças e atualiza o app.',
+    '5. Na aba "Receitas": um ingrediente por linha (Alt+Enter para pular linha dentro da célula). Ingrediente opcional começa com "(opcional)".',
+    '   No fim da linha, entre colchetes, vai o alimento da aba "Alimentos" (serve para respeitar as restrições do paciente). Ex.:',
+    '   (opcional) 1 pitada de canela em pó [Canela]',
+    '   No modo de preparo, um passo por linha. Em "Indicada para", os códigos das síndromes separados por ponto e vírgula.',
+    '6. Marque "Sim" na coluna "Revisado?" de cada linha conferida. Se quiser explicar algo, use a coluna "Comentário".',
+    '7. Salve o arquivo (Ctrl+B) com o mesmo nome e avise o Claude: ele lê as suas mudanças e atualiza o app.',
     '',
     'NÃO MUDE: os títulos das colunas, a coluna "Código" e os nomes das abas.',
     '',
@@ -139,6 +143,20 @@ async function exportar() {
   }
   styleSheet(se, [11, 16, 16, 24, 18, 70, 50, 11, 30], { wrapCols: [6, 7, 9] });
   dropdown(se, 8, ['Sim', 'Não'], 5);
+
+  // --- Receitas
+  const sr = wb.addWorksheet('Receitas');
+  sr.addRow(['Código', 'Nome', 'Tipo', 'Natureza', 'Rende', 'Tempo', 'Indicada para (códigos; separe por ;)',
+    'Ingredientes (1 por linha)', 'Modo de preparo (1 passo por linha)', 'Por que ajuda', 'Revisado?', 'Comentário']);
+  for (const r of d.receitas ?? []) {
+    sr.addRow([r.id, r.nome, r.tipo, r.natureza, r.rende, r.tempo,
+      r.indicacoes.map((c) => `${c} (${app.syndromes[c]?.name ?? '?'})`).join(SEP),
+      r.ingredientes.map((i) => `${i.opcional ? '(opcional) ' : ''}${i.texto}${i.alimento ? ` [${nome[i.alimento]}]` : ''}`).join('\n'),
+      r.preparo.join('\n'), r.porque, r.revisado ? 'Sim' : 'Não', '']);
+  }
+  styleSheet(sr, [26, 30, 15, 10, 12, 14, 34, 60, 70, 45, 11, 30], { wrapCols: [7, 8, 9, 10, 12] });
+  dropdown(sr, 4, NATUREZAS, (d.receitas?.length ?? 0) + 20);
+  dropdown(sr, 11, ['Sim', 'Não'], (d.receitas?.length ?? 0) + 20);
 
   // --- Legenda
   const sl = wb.addWorksheet('Legenda');
@@ -222,15 +240,35 @@ async function importar(file = XLSX_PATH) {
     if (com.trim()) comentarios.push(`${where}: ${com.trim()}`);
   }
 
+  const receitas = [];
+  const wsR = wb.getWorksheet('Receitas');
+  if (wsR) for (const [id, nomeR, tipo, natureza, rende, tempo, ind, ingr, prep, porque, rev, com] of rows('Receitas')) {
+    if (!nomeR.trim()) continue;
+    const where = `Receita "${nomeR}"`;
+    if (!NATUREZAS.includes(natureza.trim())) problemas.push(`${where}: natureza "${natureza}" inválida`);
+    const indicacoes = split(ind).map((t) => t.split(/[\s(]/)[0]).filter(Boolean);
+    for (const c of indicacoes) if (!d.sindromes[c]) problemas.push(`${where}: síndrome "${c}" desconhecida`);
+    const ingredientes = String(ingr).split('\n').map((l) => l.trim()).filter(Boolean).map((l) => {
+      const m = l.match(/^(\(opcional\)\s*)?(.*?)(?:\s*\[([^\]]+)\])?$/i);
+      const alimento = m[3] ? acha(m[3], where)[0] ?? null : null;
+      return { texto: m[2].trim(), alimento, opcional: !!m[1] };
+    });
+    receitas.push({ id: id.trim() || slug(nomeR), nome: nomeR.trim(), tipo: tipo.trim(), natureza: natureza.trim(),
+      rende: rende.trim(), tempo: tempo.trim(), indicacoes, ingredientes,
+      preparo: String(prep).split('\n').map((l) => l.trim()).filter(Boolean), porque: porque.trim(), revisado: norm(rev) === 'sim' });
+    if (com.trim()) comentarios.push(`${where}: ${com.trim()}`);
+  }
+
   if (comentarios.length) console.log(`\nCOMENTÁRIOS DO REVISOR (${comentarios.length}):\n- ` + comentarios.join('\n- '));
   if (problemas.length) {
     console.log(`\nPROBLEMAS (${problemas.length}) — nada foi gravado:\n- ` + problemas.join('\n- '));
     process.exitCode = 1;
     return;
   }
-  const tudo = [...alimentos, ...Object.values(sindromes), ...Object.values(elementos)];
+  const tudo = [...alimentos, ...Object.values(sindromes), ...Object.values(elementos), ...receitas];
   const revisados = tudo.filter((x) => x.revisado).length;
   Object.assign(d, { alimentos, sindromes, elementos, revisado: revisados === tudo.length });
+  if (wsR) d.receitas = receitas;
   writeFileSync(JSON_PATH, JSON.stringify(d, null, 2) + '\n');
   console.log(`\nOK: ${alimentos.length} alimentos, ${Object.keys(sindromes).length} síndromes. Revisados: ${revisados}/${tudo.length}.`);
 }

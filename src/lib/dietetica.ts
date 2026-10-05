@@ -36,12 +36,28 @@ export type OrientacaoElemento = {
   alimentos: string[];
 };
 
+export type Ingrediente = { texto: string; alimento: string | null; opcional: boolean };
+
+export type Receita = {
+  id: string;
+  nome: string;
+  tipo: string;
+  natureza: string;
+  rende: string;
+  tempo: string;
+  indicacoes: string[]; // síndromes
+  ingredientes: Ingrediente[];
+  preparo: string[];
+  porque: string;
+};
+
 type DietData = {
   aviso: string;
   acoes: Record<string, string>;
   alimentos: Alimento[];
   elementos: Record<string, OrientacaoElemento>;
   sindromes: Record<string, OrientacaoSindrome>;
+  receitas: Receita[];
 };
 
 export const DIET = raw as unknown as DietData;
@@ -54,10 +70,11 @@ export type DietState = {
   restricoes: string[];
   removidos: string[]; // alimentos sugeridos que o terapeuta tirou
   extras: string[]; // alimentos acrescentados ao "Prefira"
+  receitas: string[] | null; // null = automático (as mais indicadas)
   observacao: string;
 };
 
-export const EMPTY_DIET: DietState = { sindromes: null, restricoes: [], removidos: [], extras: [], observacao: '' };
+export const EMPTY_DIET: DietState = { sindromes: null, restricoes: [], removidos: [], extras: [], receitas: null, observacao: '' };
 
 export function normalizeDiet(v: unknown): DietState {
   const d = (v && typeof v === 'object' ? v : {}) as Partial<DietState>;
@@ -67,17 +84,20 @@ export function normalizeDiet(v: unknown): DietState {
     restricoes: list(d.restricoes),
     removidos: list(d.removidos),
     extras: list(d.extras),
+    receitas: Array.isArray(d.receitas) ? list(d.receitas) : null,
     observacao: typeof d.observacao === 'string' ? d.observacao : '',
   };
 }
 
 export const AUTO_SYNDROMES = 3;
+export const AUTO_RECEITAS = 3;
+const MAX_RECEITAS = 8;
 
 // Escala de natureza térmica. Um alimento sai do "Prefira" se estiver a 2
 // ou mais passos de tudo o que alguma síndrome escolhida aceita (ex.: frio
 // quando uma síndrome pede morno/neutro). Fresco e morno ficam.
 const NATUREZA_NIVEL: Record<string, number> = { Quente: 2, Morno: 1, Neutro: 0, Fresco: -1, Frio: -2 };
-function conflitaNatureza(food: Alimento, sindromes: OrientacaoSindrome[]) {
+function conflitaNatureza(food: { natureza: string }, sindromes: OrientacaoSindrome[]) {
   const n = NATUREZA_NIVEL[food.natureza];
   if (n === undefined) return false;
   return sindromes.some((s) => {
@@ -129,6 +149,7 @@ export type DietResult = {
   evite: SugestaoItem[];
   preparos: string[];
   notas: string[];
+  receitas: { receita: Receita; ingredientes: Ingrediente[]; escolhida: boolean }[];
 };
 
 // Elemento com mais marcações na ficha.
@@ -179,6 +200,28 @@ export function buildDiet(state: DietState, ranked: string[], elementScores: Rec
     .map((food) => ({ ...item(food), removido: false }));
   const evite = eviteIds.map(known).filter((a): a is Alimento => !!a).map(item).map((i) => ({ ...i, bloqueio: null }));
 
+  // Receitas indicadas para as síndromes escolhidas. Sai a receita que leva
+  // (como ingrediente obrigatório) algo a evitar ou barrado por restrição,
+  // ou cuja natureza conflita; ingredientes opcionais nessa situação somem.
+  const barrado = (id: string | null) => {
+    if (!id) return false;
+    const food = FOOD.get(id);
+    return evitar.has(id) || (!!food && restr.some((r) => r.remove(food)));
+  };
+  const candidatas = DIET.receitas
+    .map((receita) => ({ receita, n: receita.indicacoes.filter((c) => codes.includes(c)).length }))
+    .filter(({ receita, n }) => n > 0
+      && !receita.ingredientes.some((i) => !i.opcional && barrado(i.alimento))
+      && !conflitaNatureza(receita, sindromes.map((x) => x.info)))
+    .sort((a, b) => b.n - a.n)
+    .slice(0, MAX_RECEITAS);
+  const escolhidas = state.receitas ?? candidatas.slice(0, AUTO_RECEITAS).map((c) => c.receita.id);
+  const receitas = candidatas.map(({ receita }) => ({
+    receita,
+    ingredientes: receita.ingredientes.filter((i) => !(i.opcional && barrado(i.alimento))),
+    escolhida: escolhidas.includes(receita.id),
+  }));
+
   const nome = topElement(elementScores);
   return {
     elemento: nome ? { nome, info: DIET.elementos[nome] } : null,
@@ -188,6 +231,7 @@ export function buildDiet(state: DietState, ranked: string[], elementScores: Rec
     evite,
     preparos: [...new Set(sindromes.map((s) => s.info.preparo).filter(Boolean))],
     notas: restr.map((r) => r.nota).filter((n): n is string => !!n),
+    receitas,
   };
 }
 

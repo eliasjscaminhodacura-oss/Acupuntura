@@ -203,8 +203,12 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
      `lib/dietetica.ts` (junta as síndromes, conflito por natureza
      térmica, restrições), `lib/pdf-dieta.ts` (A5, ~250 KB),
      `lib/download.ts`. Escolhas salvas em `fichas.diet` (jsonb).
-  3. [ ] Biblioteca de 40–60 receitas tradicionais (congees, sopas, chás),
-     revisadas pelo dono.
+  3. [x] Biblioteca de receitas: 42 receitas em `dietetica.json` →
+     `receitas` (ingredientes com quantidade e alimento ligado, opcionais,
+     passos, "por que ajuda", síndromes indicadas; ≥ 2 por síndrome). O app
+     sugere até 8 compatíveis (tira as que levam algo a evitar/barrado ou de
+     natureza oposta), marca 3 automaticamente; vão para o PDF. Aba
+     "Receitas" na planilha. **Aguardando revisão do dono.**
   4. [ ] (Opcional) Receitas geradas por IA, aprovadas pelo terapeuta
      antes de enviar (custo por uso; recurso do plano pago).
   - ⚠️ Nunca chamar de "dieta"/"prescrição" (Lei 8.234/1991: prescrição
@@ -236,6 +240,8 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
 - Dietética, etapa 2: painel "Orientação alimentar segundo a MTC" no fim do
   resultado + PDF do paciente (A5) + botão "Enviar para o paciente".
   Testado com página temporária (já apagada) e PDF conferido.
+- Dietética, etapa 3: receitas como "receita de cozinha" (pedido do dono)
+  no painel e no PDF; "Como preparar" virou "Dicas de preparo".
 - Demonstração enquanto se programa: `next.config.js` aceita
   `NEXT_DIST_DIR`. Cópia fixa: `NEXT_DIST_DIR=.next-demo npm run build` e
   `NEXT_DIST_DIR=.next-demo npx next start -p 3000` (os builds normais vão
