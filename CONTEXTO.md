@@ -8,30 +8,36 @@
 
 ## ▶️ ONDE PARAMOS (leia isto primeiro)
 
-**Última sessão: 05/10/2026 (computador de trabalho).** O app funciona
-localmente, ligado ao Supabase. Nesta sessão o mapa do corpo virou um
-**holograma 3D** que gira, com camadas (pele, ossos, órgãos, circulação,
-nervos, respiração, digestão, urinário, pontos). O dono aprovou ("ficou
-perfeito"). Os 71 pontos foram revisados pelo dono e estão corretos.
+**Última sessão: 05/10/2026 (computador de trabalho).** O dono vai
+continuar **no notebook dele**. O app funciona localmente, ligado ao
+Supabase. Feito nesta sessão (detalhes no histórico de 05/10):
+- Mapa do corpo em **holograma 3D** (gira; camadas pele, ossos, órgãos,
+  circulação, nervos, respiração, digestão, urinário, pontos). Aprovado.
+- **Orientação Alimentar segundo a MTC** (Dietética), etapas 1 a 3: base de
+  141 alimentos + orientação para as 46 síndromes + por Elemento, painel no
+  fim do resultado da ficha, **42 receitas** com ingredientes/quantidades/
+  preparo, **PDF do paciente** (A5) e botão "Enviar para o paciente".
+  Coluna `fichas.diet` já criada no Supabase. Dono aprovou ("Perfeito").
 
-**Próxima coisa a fazer:**
+**Próxima coisa a fazer (no notebook):**
 
-1. Se for outro computador, seguir a **seção 4 (Configurar um computador
-   novo)**. A coluna `sex` já existe no Supabase — não precisa rodar SQL.
-   No notebook: `git pull` e `npm install` (há dependências novas).
-2. **Terminar a conta na Vercel (em casa, no notebook).** No computador do
-   trabalho o SMS de verificação da Vercel (celular +55 15 …7878) nunca
-   chegou. Retomar em https://vercel.com/signup → "Continue with GitHub" →
-   código SMS. Se continuar sem chegar: tentar outro celular; plano B é a
-   Netlify (servidores nos EUA no plano grátis). O `vercel.json` (região
-   `gru1`) já está no repositório.
-3. **Dietética (Orientação Alimentar segundo a MTC)** — etapa 1 pronta: o
-   dono deve revisar `revisao/Dietetica-MTC-revisao.xlsx` (instruções na
-   aba "Leia-me"). Depois: `npm run dietetica:importar`.
-   Etapas 2 e 3 (painel, PDF do paciente, receitas) prontas; coluna
-   `fichas.diet` já criada no Supabase (05/10).
-4. **Publicar na Vercel** (seção 6, item 6) — o dono já entende que
-   `localhost:3000` só funciona no computador onde o app está ligado.
+1. **Atualizar o notebook:** `git pull` e `npm install` (dependências
+   novas: `three`, `exceljs`). Conferir `npm run build`. O `.env.local`
+   do notebook já existe (configurado em 04/10). Nada a rodar no Supabase.
+2. **Terminar a conta na Vercel.** No computador do trabalho o SMS de
+   verificação (celular do dono, final …7878) nunca chegou. Retomar em
+   https://vercel.com/signup → "Continue with GitHub" → código SMS. Se não
+   chegar: outro celular; plano B é a Netlify (servidores nos EUA no plano
+   grátis). O `vercel.json` (região `gru1`) já está no repositório. Depois
+   seguir a seção 6, item 6 (variáveis, Site URL/Redirect URLs no Supabase).
+   Lembrete: plano Hobby não permite uso comercial (Pro ao começar a cobrar).
+3. **Revisão da Dietética pelo dono:** planilha
+   `revisao/Dietetica-MTC-revisao.xlsx` (abas Leia-me, Síndromes,
+   Alimentos, Elementos, Receitas, Legenda). Quando ele salvar:
+   `npm run dietetica:importar` (mostra comentários e problemas; só grava
+   se não houver problemas), `npm run build`, commit e push.
+4. Depois: etapa 4 opcional da Dietética (receitas por IA), logomarca no
+   domínio próprio, Stripe, advogado de LGPD (seção 6).
 
 ---
 
@@ -177,12 +183,18 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
        PDF, reabrir — o dono testou e aprovou.
 6. [ ] Publicar na Vercel (conectar o repositório GitHub; variáveis
        `NEXT_PUBLIC_SUPABASE_URL` e `NEXT_PUBLIC_SUPABASE_ANON_KEY`; depois
-       ajustar Site URL/Redirect URLs no Supabase).
+       ajustar Site URL/Redirect URLs no Supabase). `vercel.json` pronto;
+       falta a conta (SMS de verificação não chegou no trabalho, 05/10).
 7. [x] Logomarca (04/10: logo nova do dono em `public/logo.jpg`).
        [ ] Depois: cobrança (Stripe), domínio próprio.
 8. [ ] **Antes de qualquer lançamento comercial: consultar advogado de LGPD**
        (o app trata dados de saúde de pacientes de terceiros). Levar também:
        termos de uso, política de privacidade, contrato de operador de dados.
+       E perguntar sobre a Orientação alimentar (Lei 8.234/1991: prescrição
+       dietética é privativa do nutricionista — o app usa "orientação
+       segundo a MTC" e aviso no PDF).
+9. [ ] Dono revisar a planilha da Dietética (alimentos, síndromes,
+       elementos, 42 receitas) e importar (`npm run dietetica:importar`).
 
 ## 7. Ideias / melhorias anotadas (ainda não feitas)
 
