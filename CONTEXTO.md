@@ -8,19 +8,17 @@
 
 ## ▶️ ONDE PARAMOS (leia isto primeiro)
 
-**Última sessão: 04/10/2026 (notebook do dono).** O app funciona localmente,
-ligado ao Supabase. Nesta sessão: notebook configurado do zero, muitas
-melhorias na ficha (ver histórico de 04/10), nova logo, Ciclo dos 5
-Elementos, mapa do corpo ("holograma"), salvamento automático. O dono
-testou e aprovou tudo.
+**Última sessão: 05/10/2026 (computador de trabalho).** O app funciona
+localmente, ligado ao Supabase. Nesta sessão o mapa do corpo virou um
+**holograma 3D** que gira, com camadas (pele, ossos, órgãos, circulação,
+nervos, respiração, digestão, urinário, pontos). O dono aprovou ("ficou
+perfeito"). Os 71 pontos foram revisados pelo dono e estão corretos.
 
 **Próxima coisa a fazer:**
 
 1. Se for outro computador, seguir a **seção 4 (Configurar um computador
    novo)**. A coluna `sex` já existe no Supabase — não precisa rodar SQL.
-2. O dono deve **revisar as posições dos 71 pontos** no mapa do corpo
-   (são ilustrativas; ajustar em `src/lib/body-map.ts`, objeto `POINTS`).
-3. **Publicar na Vercel** (seção 6, item 6) — o dono já entende que
+2. **Publicar na Vercel** (seção 6, item 6) — o dono já entende que
    `localhost:3000` só funciona no computador onde o app está ligado.
 
 ---
@@ -77,7 +75,8 @@ próprio).
 | `src/lib/pdf-export.ts` | geração do PDF: logo em todas as páginas, Ciclo, síndromes, mapa do corpo, sintomas em 3 colunas igual à tela |
 | `src/lib/cycle5.ts` + `src/components/ElementCycle.tsx` | Ciclo dos 5 Elementos (Sheng/Ke), gráfico principal do resultado |
 | `src/lib/radar3d.ts` + `src/components/ElementRadar.tsx` | gráfico 3D dos 5 elementos (botão "Ver em 3D") |
-| `src/lib/body-map.ts` + `src/components/BodyHologram.tsx` | mapa do corpo: contorno, 10 órgãos e 71 pontos (posições ILUSTRATIVAS) |
+| `src/lib/body-map.ts` + `src/components/BodyHologram.tsx` | mapa do corpo: contorno, 10 órgãos e 71 pontos (posições revisadas pelo dono em 05/10). `BodyHologram` mostra o 3D por padrão e o 2D (frente/costas) por botão ou se o aparelho não tiver WebGL; o PDF continua usando o 2D |
+| `src/lib/body3d.ts` + `src/components/Body3D.tsx` | corpo 3D estilizado com **three.js** (formas simples, sem modelos externos nem licenças). Usa as mesmas coordenadas 200x440 do 2D; os pontos são colocados na pele por raio (frente/costas). Camadas, enquadramentos (Frente/Costas/Lado/Cabeça/Tronco/Mãos/Pés), toque mostra nome do órgão/osso. Carregado sob demanda (`next/dynamic`, `ssr: false`) |
 | `src/components/FichaForm.tsx` | ficha: resultado no final, salvamento automático (2 s), avanço automático entre partes, "voltar"/"corrigir dados" |
 | `src/components/PatientForm.tsx` | cadastro e correção do paciente (com Sexo) — usado em `/pacientes/novo` e `/pacientes/[id]/editar` |
 | `src/components/Logo.tsx` + `public/logo.jpg` | logo do dono (recortada em círculo na tela e no PDF) |
@@ -183,6 +182,19 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
 - Termos de uso / política de privacidade (junto com o advogado de LGPD).
 
 ## 8. Histórico (mais recente primeiro)
+
+### 05/10/2026
+- Computador de trabalho: baixado o trabalho do notebook (git pull); build OK.
+- Dono confirmou que os 71 pontos estão corretos.
+- **Mapa do corpo em 3D** (pedido do dono: explorar órgãos, ossos e sistemas
+  sem óculos especiais, mantendo os pontos). Escolhido o "holograma
+  estilizado" (leve, sem licença) em vez de atlas anatômico realista.
+  Nova dependência: `three` 0.186 (+ `@types/three`).
+- Testado com Chrome invisível controlado por script (página de teste
+  temporária, já apagada): camadas, voo da câmera, seleção de ponto (B23 nas
+  costas), toque no fígado, tela de celular.
+- ⚠️ Este computador tem pouca memória (~1,4 GB livre): o Claude Code chegou
+  a desligar o `npm run dev` sozinho. Fechar programas antes de ligar o app.
 
 ### 04/10/2026
 - Notebook do dono configurado do zero (Git, GitHub CLI, Node 24 LTS,

@@ -1,9 +1,16 @@
 'use client';
 
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
 import { BODY_H, BODY_OUTLINE, BODY_W, ORGANS, pointPositions, type BodyResult, type BodyView } from '@/lib/body-map';
 import { ELEMENT_COLOR } from '@/lib/ficha-logic';
 import { shade, type Pt } from '@/lib/radar3d';
+
+// O 3D (three.js) é pesado: só é baixado quando o resultado aparece.
+const Body3D = dynamic(() => import('./Body3D'), {
+  ssr: false,
+  loading: () => <div className="body3d-loading">Carregando o corpo em 3D…</div>,
+});
 
 const CYAN = '#5CE1E6';
 const POINT = '#FFE27A';
@@ -98,22 +105,37 @@ function View({ view, body, selected, onSelect }: {
 
 // "Holograma" do corpo: órgãos comprometidos acendem na cor do elemento e
 // os pontos sugeridos pelas síndromes identificadas aparecem marcados.
+// Por padrão em 3D; o mapa 2D (frente e costas) fica como alternativa e é
+// usado sozinho se o aparelho não suportar 3D.
 export default function BodyHologram({ body }: { body: BodyResult }) {
   const [selected, setSelected] = useState<string | null>(null);
-
-  if (!body.organs.length) {
-    return <p style={{ color: 'var(--muted)', fontSize: 14 }}>Marque os sintomas acima para ver os órgãos e pontos no corpo.</p>;
-  }
+  const [mode, setMode] = useState<'3d' | '2d'>('3d');
+  const [no3d, setNo3d] = useState(false);
 
   return (
     <div>
-      <div className="holo">
-        <View view="front" body={body} selected={selected} onSelect={setSelected} />
-        <View view="back" body={body} selected={selected} onSelect={setSelected} />
+      <div className="holo-mode">
+        {!body.organs.length && (
+          <p style={{ color: 'var(--muted)', fontSize: 14, margin: 0 }}>Marque os sintomas acima para ver os órgãos e pontos no corpo.</p>
+        )}
+        {!no3d && (
+          <button type="button" className="secondary small" onClick={() => setMode((m) => (m === '3d' ? '2d' : '3d'))}>
+            {mode === '3d' ? 'Ver em 2D (frente e costas)' : 'Ver em 3D'}
+          </button>
+        )}
       </div>
 
+      {mode === '3d' && !no3d ? (
+        <Body3D body={body} selected={selected} onSelect={setSelected} onFail={() => setNo3d(true)} />
+      ) : (
+        <div className="holo">
+          <View view="front" body={body} selected={selected} onSelect={setSelected} />
+          <View view="back" body={body} selected={selected} onSelect={setSelected} />
+        </div>
+      )}
+
       <div className="holo-legend">
-        <h4>Órgãos mais comprometidos</h4>
+        {body.organs.length > 0 && <h4>Órgãos mais comprometidos</h4>}
         {body.organs.map((o) => (
           <div key={o.organ} className="organ-bar">
             <span className="organ-name">{o.organ}</span>
@@ -122,7 +144,7 @@ export default function BodyHologram({ body }: { body: BodyResult }) {
           </div>
         ))}
 
-        {body.points.length > 0 && (
+        {body.organs.length > 0 && body.points.length > 0 && (
           <>
             <h4>Pontos sugeridos <small>(toque num ponto para destacá-lo · localização ilustrativa)</small></h4>
             <ul className="point-list">

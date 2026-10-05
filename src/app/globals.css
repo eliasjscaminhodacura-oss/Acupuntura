@@ -314,3 +314,112 @@ button.small { padding: 6px 12px; font-size: 13px; }
   padding-bottom: 6px;
   border-bottom: 2px solid var(--jade);
 }
+
+/* Corpo 3D */
+.holo-mode {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.holo-mode button { margin-left: auto; }
+.body3d-stage,
+.body3d-loading {
+  position: relative;
+  height: min(72vh, 640px);
+  min-height: 380px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 50% 35%, #12384a 0%, #0a1d29 60%, #06121a 100%);
+  box-shadow: inset 0 0 40px rgba(92, 225, 230, .15);
+}
+.body3d-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5CE1E6;
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+}
+.body3d-stage canvas { display: block; width: 100%; height: 100%; touch-action: none; cursor: grab; }
+.body3d-stage canvas:active { cursor: grabbing; }
+.body3d-labels { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.body3d-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: auto;
+  background: rgba(6, 18, 26, .55);
+  border: 1px solid rgba(255, 226, 122, .5);
+  color: #FFE27A;
+  font: 700 11px system-ui, sans-serif;
+  padding: 1px 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  text-shadow: 0 0 6px rgba(255, 226, 122, .7);
+}
+.body3d-label.active {
+  color: #fff;
+  background: #FF3B3B;
+  border-color: #FF3B3B;
+  font-size: 13px;
+  text-shadow: none;
+  z-index: 1;
+}
+.body3d-info {
+  position: absolute;
+  transform: translate(-50%, calc(-100% - 12px));
+  max-width: 240px;
+  background: rgba(6, 18, 26, .9);
+  border: 1px solid #5CE1E6;
+  color: #E9FDFF;
+  font: 13px system-ui, sans-serif;
+  padding: 6px 10px;
+  border-radius: 8px;
+  pointer-events: none;
+  text-align: center;
+}
+.body3d-hint {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 8px;
+  text-align: center;
+  color: #5CE1E6;
+  opacity: .7;
+  font: 12px system-ui, sans-serif;
+  padding: 0 12px;
+  pointer-events: none;
+}
+.body3d-toolbar { margin-top: 10px; display: grid; gap: 8px; }
+.body3d-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.body3d-row-title {
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  min-width: 72px;
+}
+.body3d-chip {
+  --chip: var(--jade);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--ink);
+  font-size: 13px;
+  cursor: pointer;
+}
+.body3d-chip .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--chip); opacity: .35; }
+.body3d-chip.on { border-color: var(--chip); box-shadow: inset 0 0 0 1px var(--chip); }
+.body3d-chip.on .dot { opacity: 1; box-shadow: 0 0 6px var(--chip); }
+@media (max-width: 560px) {
+  .body3d-row-title { min-width: 100%; }
+  .body3d-stage, .body3d-loading { height: 62vh; }
+}
