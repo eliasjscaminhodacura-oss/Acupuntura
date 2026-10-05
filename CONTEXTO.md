@@ -28,11 +28,8 @@ perfeito"). Os 71 pontos foram revisados pelo dono e estão corretos.
 3. **Dietética (Orientação Alimentar segundo a MTC)** — etapa 1 pronta: o
    dono deve revisar `revisao/Dietetica-MTC-revisao.xlsx` (instruções na
    aba "Leia-me"). Depois: `npm run dietetica:importar`.
-   Etapa 2 (painel + PDF do paciente) também pronta — **falta o dono rodar
-   no Supabase (SQL Editor) a linha
-   `alter table public.fichas add column if not exists diet jsonb;`**
-   (já está no `schema.sql`). Sem ela, a ficha salva normalmente, mas as
-   escolhas da orientação alimentar não ficam guardadas (o painel avisa).
+   Etapas 2 e 3 (painel, PDF do paciente, receitas) prontas; coluna
+   `fichas.diet` já criada no Supabase (05/10).
 4. **Publicar na Vercel** (seção 6, item 6) — o dono já entende que
    `localhost:3000` só funciona no computador onde o app está ligado.
 
@@ -155,6 +152,8 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
   para LGPD e velocidade).
 - URL: `https://bgwyhakqicwmxxjgfbrn.supabase.co`
 - `supabase/schema.sql` executado com sucesso em 03/10/2026.
+- 05/10/2026: coluna `fichas.diet` (jsonb) criada no SQL Editor — guarda as
+  escolhas da Orientação alimentar. Já feito.
 - 04/10/2026: coluna `patients.sex` ('M'/'F') criada no SQL Editor (as 3
   linhas `alter table` que estão no `schema.sql`). Já feito.
 - Testado: sem login, a API devolve lista vazia de pacientes (RLS ok).
