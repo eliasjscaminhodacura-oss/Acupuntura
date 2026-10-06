@@ -25,7 +25,8 @@ retornos do paciente) — tabela `ficha_eventos` já criada no Supabase.
    tela de 06/10 foi cancelada porque a chave secreta apareceu numa aba de
    pesquisa do Google). Usar um app autenticador no celular do dono.
    Lembrete: plano Hobby não permite uso comercial (Pro ao começar a cobrar).
-3. **Revisão da Dietética pelo dono:** planilha
+3. **Dietética revisada por dois livros (06/10, aprovado pelo dono)** — ver
+   histórico de 06/10. Se o dono ainda quiser revisar item a item: planilha
    `revisao/Dietetica-MTC-revisao.xlsx` (abas Leia-me, Síndromes,
    Alimentos, Elementos, Receitas, Legenda). Quando ele salvar:
    `npm run dietetica:importar` (mostra comentários e problemas; só grava
@@ -194,8 +195,10 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
        E perguntar sobre a Orientação alimentar (Lei 8.234/1991: prescrição
        dietética é privativa do nutricionista — o app usa "orientação
        segundo a MTC" e aviso no PDF).
-9. [ ] Dono revisar a planilha da Dietética (alimentos, síndromes,
-       elementos, 42 receitas) e importar (`npm run dietetica:importar`).
+9. [x] Dietética revisada (06/10) com base em Hirsch (Manual do Herói) e
+       Arantes (Dietoterapia Chinesa, Roca 2015); dono aprovou.
+       [ ] Opcional: dono revisar a planilha item a item e importar
+       (`npm run dietetica:importar`).
 
 ## 7. Ideias / melhorias anotadas (ainda não feitas)
 
@@ -261,6 +264,20 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
 - Botões flutuantes ↑ (voltar ao início) e ↓ (ir para o final) em todas as
   telas (`src/components/ScrollButtons.tsx`, no `layout.tsx`); cada um só
   aparece quando faz sentido. Pedido do dono para navegar na ficha longa.
+- **Dietética revisada com dois livros** do dono (PDFs em
+  `DocumentosELIASLIVROSACUPUNTURA`): Sonia Hirsch, *Manual do Herói* (tabela
+  Categorix: natureza/sabor/elemento; Banco da Cozinha; contraindicações) e
+  Andrea Arantes, *Dietoterapia Chinesa* (cap. 25). Texto extraído com
+  `pdfjs-dist` (o Read do Claude não renderiza PDF nesta máquina). Regra:
+  mudar só quando os dois livros concordam; manter quando divergem. Feito:
+  13 naturezas (aveia Fresco; manga/tomate/aspargo Frio; melão/pepino/
+  abacaxi Fresco; alho Morno; porco Fresco; pimentão Quente; boi e couve
+  Neutro; ostra Fresco — os livros dizem fria, mas assim ela continua em
+  DefJgR/DefXueC, decisão do dono); 24 avisos "Atenção:" no campo `obs`
+  (aparecem ao passar o mouse no alimento do painel); algas na restrição
+  Gestante; "(omita se houver catarro)" no mel/açúcar de 4 receitas;
+  campo `fontes` no dietetica.json. Planilha de revisão reexportada.
+  Direitos autorais: só resumos com nossas palavras, nunca trechos.
 - Dica: para o dono colar SQL, ele costuma copiar outra coisa no caminho —
   copiar de novo com `Set-Clipboard` e pedir para não copiar nada antes do
   Ctrl+V.

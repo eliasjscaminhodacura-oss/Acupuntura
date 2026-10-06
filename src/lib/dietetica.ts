@@ -125,7 +125,7 @@ export const RESTRICOES: { key: string; label: string; remove: (a: Alimento) => 
     nota: 'Pressão alta: use pouco sal. Siga também a orientação do seu médico.',
   },
   {
-    key: 'gestacao', label: 'Gestante', remove: (a) => ['curcuma-acafrao-da-terra', 'canela', 'acucar-mascavo', 'ostra-e-mariscos', 'pimenta-vermelha'].includes(a.id),
+    key: 'gestacao', label: 'Gestante', remove: (a) => ['curcuma-acafrao-da-terra', 'canela', 'acucar-mascavo', 'ostra-e-mariscos', 'pimenta-vermelha', 'algas-kombu-nori'].includes(a.id),
     nota: 'Gestante: confirme qualquer mudança na alimentação com o(a) obstetra.',
   },
   { key: 'frutos-do-mar', label: 'Alergia a frutos do mar', remove: (a) => ['camarao', 'ostra-e-mariscos'].includes(a.id) },

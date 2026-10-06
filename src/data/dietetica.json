@@ -104,7 +104,7 @@
       "id": "aveia",
       "nome": "Aveia",
       "grupo": "Cereais",
-      "natureza": "Morno",
+      "natureza": "Fresco",
       "sabores": [
         "doce"
       ],
@@ -236,7 +236,7 @@
         "Dig"
       ],
       "alertas": [],
-      "obs": "",
+      "obs": "Atenção: Pesado para má digestão e vertigens; à noite pode tirar o sono.",
       "revisado": false
     },
     {
@@ -325,7 +325,7 @@
         "Ref"
       ],
       "alertas": [],
-      "obs": "",
+      "obs": "Atenção: Não indicado para pessoas muito magras.",
       "revisado": false
     },
     {
@@ -434,7 +434,7 @@
         "Sec"
       ],
       "alertas": [],
-      "obs": "",
+      "obs": "Atenção: Evitar na espermatorreia.",
       "revisado": false
     },
     {
@@ -741,7 +741,7 @@
       "id": "pepino",
       "nome": "Pepino",
       "grupo": "Legumes e verduras",
-      "natureza": "Frio",
+      "natureza": "Fresco",
       "sabores": [
         "doce"
       ],
@@ -757,14 +757,14 @@
         "Sec"
       ],
       "alertas": [],
-      "obs": "",
+      "obs": "Atenção: Com moderação; evitar com catarro, dor abdominal ou diarreia.",
       "revisado": false
     },
     {
       "id": "tomate",
       "nome": "Tomate",
       "grupo": "Legumes e verduras",
-      "natureza": "Fresco",
+      "natureza": "Frio",
       "sabores": [
         "doce",
         "azedo"
@@ -780,7 +780,7 @@
         "Dig"
       ],
       "alertas": [],
-      "obs": "",
+      "obs": "Atenção: Com moderação, não todo dia: cru no verão, cozido no outono.",
       "revisado": false
     },
     {
@@ -847,7 +847,7 @@
         "Diur"
       ],
       "alertas": [],
-      "obs": "",
+      "obs": "Atenção: Em excesso turva a visão; evitar com doença nos olhos.",
       "revisado": false
     },
     {
@@ -939,14 +939,14 @@
         "Ref"
       ],
       "alertas": [],
-      "obs": "",
+      "obs": "Atenção: Evitar com diarreia ou ejaculação precoce.",
       "revisado": false
     },
     {
       "id": "couve",
       "nome": "Couve",
       "grupo": "Legumes e verduras",
-      "natureza": "Morno",
+      "natureza": "Neutro",
       "sabores": [
         "amargo",
         "doce"
@@ -1165,14 +1165,14 @@
         "Yin"
       ],
       "alertas": [],
-      "obs": "",
+      "obs": "Atenção: Natureza fria: evitar na gravidez.",
       "revisado": false
     },
     {
       "id": "aspargo",
       "nome": "Aspargo",
       "grupo": "Legumes e verduras",
-      "natureza": "Fresco",
+      "natureza": "Frio",
       "sabores": [
         "doce",
         "amargo"
@@ -1188,7 +1188,7 @@
         "Diur"
       ],
       "alertas": [],
-      "obs": "",
+      "obs": "Atenção: Não usar todo dia em quem tem frio; evitar em quadros de frio.",
       "revisado": false
     },
     {
@@ -1236,7 +1236,7 @@
       "id": "pimentao",
       "nome": "Pimentão",
       "grupo": "Legumes e verduras",
-      "natureza": "Morno",
+      "natureza": "Quente",
       "sabores": [
         "picante",
         "doce"
@@ -1350,7 +1350,7 @@
       "id": "melao",
       "nome": "Melão",
       "grupo": "Frutas",
-      "natureza": "Frio",
+      "natureza": "Fresco",
       "sabores": [
         "doce"
       ],
@@ -1437,7 +1437,7 @@
       "id": "abacaxi",
       "nome": "Abacaxi",
       "grupo": "Frutas",
-      "natureza": "Neutro",
+      "natureza": "Fresco",
       "sabores": [
         "doce",
         "azedo"
@@ -1480,7 +1480,7 @@
       "id": "manga",
       "nome": "Manga",
       "grupo": "Frutas",
-      "natureza": "Fresco",
+      "natureza": "Frio",
       "sabores": [
         "doce",
         "azedo"
@@ -1496,7 +1496,7 @@
         "Diur"
       ],
       "alertas": [],
-      "obs": "",
+      "obs": "Atenção: Pode piorar resfriado, indigestão e convalescença; pode dar coceira na pele.",
       "revisado": false
     },
     {
@@ -1885,7 +1885,7 @@
       "id": "carne-bovina",
       "nome": "Carne bovina",
       "grupo": "Carnes, peixes e ovos",
-      "natureza": "Morno",
+      "natureza": "Neutro",
       "sabores": [
         "doce"
       ],
@@ -1899,7 +1899,7 @@
         "Xue"
       ],
       "alertas": [],
-      "obs": "",
+      "obs": "Atenção: Com moderação (no máximo 1 vez por semana), alternando as proteínas.",
       "revisado": false
     },
     {
@@ -1929,7 +1929,7 @@
       "id": "carne-de-porco",
       "nome": "Carne de porco",
       "grupo": "Carnes, peixes e ovos",
-      "natureza": "Neutro",
+      "natureza": "Fresco",
       "sabores": [
         "doce",
         "salgado"
@@ -2031,14 +2031,14 @@
       "alertas": [
         "GeraCalor"
       ],
-      "obs": "",
+      "obs": "Atenção: Evitar na ejaculação precoce; em excesso favorece supurações.",
       "revisado": false
     },
     {
       "id": "ostra-e-mariscos",
       "nome": "Ostra e mariscos",
       "grupo": "Carnes, peixes e ovos",
-      "natureza": "Neutro",
+      "natureza": "Fresco",
       "sabores": [
         "salgado",
         "doce"
@@ -2055,7 +2055,7 @@
         "Vt"
       ],
       "alertas": [],
-      "obs": "",
+      "obs": "Atenção: natureza fria nos livros de referência; cozida, fica mais suave.",
       "revisado": false
     },
     {
@@ -2079,7 +2079,7 @@
         "Sec"
       ],
       "alertas": [],
-      "obs": "",
+      "obs": "Atenção: Com moderação (2 a 3 vezes por semana).",
       "revisado": false
     },
     {
@@ -2191,7 +2191,7 @@
       "alertas": [
         "GeraUmid"
       ],
-      "obs": "",
+      "obs": "Atenção: Ruim para digestão fraca; gera umidade.",
       "revisado": false
     },
     {
@@ -2322,7 +2322,7 @@
         "Laxa"
       ],
       "alertas": [],
-      "obs": "",
+      "obs": "Atenção: Evitar com intestino solto.",
       "revisado": false
     },
     {
@@ -2365,7 +2365,7 @@
       "alertas": [
         "GeraUmid"
       ],
-      "obs": "",
+      "obs": "Atenção: Preferir cozido em água com sal, não torrado.",
       "revisado": false
     },
     {
@@ -2414,7 +2414,7 @@
       "id": "alho",
       "nome": "Alho",
       "grupo": "Temperos e ervas",
-      "natureza": "Quente",
+      "natureza": "Morno",
       "sabores": [
         "picante"
       ],
@@ -2432,7 +2432,7 @@
       "alertas": [
         "GeraCalor"
       ],
-      "obs": "",
+      "obs": "Atenção: Pode piorar problemas de olhos, dentes, língua e garganta.",
       "revisado": false
     },
     {
@@ -2476,7 +2476,7 @@
         "Desc"
       ],
       "alertas": [],
-      "obs": "",
+      "obs": "Atenção: Evitar na hipertensão, gastrite e alergias (aumenta o calor interno).",
       "revisado": false
     },
     {
@@ -2501,7 +2501,7 @@
       "alertas": [
         "GeraCalor"
       ],
-      "obs": "",
+      "obs": "Atenção: Evitar na hipertensão, gastrite e alergias (aumenta o calor interno).",
       "revisado": false
     },
     {
@@ -2622,7 +2622,7 @@
       "alertas": [
         "GeraCalor"
       ],
-      "obs": "",
+      "obs": "Atenção: Evitar em pessoas agitadas ou com calor interno, secura e irritação.",
       "revisado": false
     },
     {
@@ -2645,7 +2645,7 @@
       "alertas": [
         "GeraCalor"
       ],
-      "obs": "",
+      "obs": "Atenção: Evitar em pessoas agitadas ou com calor interno, secura e irritação.",
       "revisado": false
     },
     {
@@ -2884,7 +2884,7 @@
         "Laxa"
       ],
       "alertas": [],
-      "obs": "",
+      "obs": "Atenção: Evitar com reumatismo, diarreia ou muito catarro.",
       "revisado": false
     },
     {
@@ -2905,7 +2905,7 @@
         "Aq"
       ],
       "alertas": [],
-      "obs": "Com moderação.",
+      "obs": "Com moderação. Atenção: Aumenta o catarro.",
       "revisado": false
     },
     {
@@ -5160,7 +5160,7 @@
           "opcional": false
         },
         {
-          "texto": "1 colher (chá) de açúcar mascavo",
+          "texto": "1 colher (chá) de açúcar mascavo (omita se houver catarro)",
           "alimento": "acucar-mascavo",
           "opcional": true
         }
@@ -5403,7 +5403,7 @@
           "opcional": false
         },
         {
-          "texto": "2 colheres (chá) de mel",
+          "texto": "2 colheres (chá) de mel (omita se houver catarro)",
           "alimento": "mel",
           "opcional": true
         },
@@ -5769,7 +5769,7 @@
           "opcional": false
         },
         {
-          "texto": "1 colher (sopa) de mel",
+          "texto": "1 colher (sopa) de mel (omita se houver catarro)",
           "alimento": "mel",
           "opcional": true
         }
@@ -6432,7 +6432,7 @@
           "opcional": false
         },
         {
-          "texto": "1 colher (chá) de açúcar mascavo",
+          "texto": "1 colher (chá) de açúcar mascavo (omita se houver catarro)",
           "alimento": "acucar-mascavo",
           "opcional": true
         }
@@ -6730,5 +6730,9 @@
       "porque": "Inspirado na fórmula clássica Gan Mai Da Zao: o trigo e a tâmara acalmam o Shen e nutrem o Coração (ansiedade, sono agitado).",
       "revisado": false
     }
+  ],
+  "fontes": [
+    "HIRSCH, Sonia. Manual do Herói, ou a Filosofia Chinesa na Cozinha.",
+    "ARANTES, Andrea Maciel. Dietoterapia Chinesa: Nutrição para Corpo, Mente e Espírito. Rio de Janeiro: Roca, 2015."
   ]
 }
