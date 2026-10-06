@@ -12,15 +12,24 @@
 publicado na internet: https://acupuntura-eta.vercel.app** (Vercel, plano
 Hobby, conta `eliasjscaminhodacura-oss` entrando pelo GitHub). Cada `git
 push` para `main` atualiza o site sozinho em 1–2 min. O dono fez login no
-site e abriu as fichas — funcionando. Feito nesta sessão (detalhes no
-histórico de 06/10): site publicado; Supabase com Site URL/Redirect URLs do
-site; **Registro de atendimentos** na ficha (abertura, alterações,
-retornos do paciente) — tabela `ficha_eventos` já criada no Supabase.
+site e abriu as fichas — funcionando (também no celular). O dono já usa o
+site com pacientes reais. Feito nesta sessão (detalhes no histórico de
+06/10): site publicado; Supabase com Site URL/Redirect URLs do site;
+**Registro de atendimentos** na ficha (abertura, alterações, retornos do
+paciente) — tabela `ficha_eventos` já criada no Supabase; botões
+flutuantes ↑ início / ↓ final; **Dietética revisada com dois livros**.
+Tudo publicado; nada pendente no notebook.
+
+**Jeito de trabalhar combinado com o dono:** testar no `localhost:3000`
+e, quando ele disser **"publicar"**, rodar `npm run build`, atualizar este
+arquivo, commit e push (a Vercel publica sozinha; conferir o status do
+deploy com `gh api repos/eliasjscaminhodacura-oss/Acupuntura/commits/<sha>/status`).
 
 **Próxima coisa a fazer:**
 
 1. Em qualquer computador: `git pull` e `npm install` antes de começar.
-   Nada a rodar no Supabase.
+   Nada a rodar no Supabase. O dono disse que vai trazer **novidades
+   para acrescentar** na próxima sessão (07/10) — começar ouvindo o pedido.
 2. Ativar a **verificação em duas etapas da Vercel** com uma chave NOVA (a
    tela de 06/10 foi cancelada porque a chave secreta apareceu numa aba de
    pesquisa do Google). Usar um app autenticador no celular do dono.
