@@ -516,3 +516,29 @@ button.small { padding: 6px 12px; font-size: 13px; }
 .visit-history li.visit-retorno { font-weight: 700; }
 .visit-icon { width: 22px; flex-shrink: 0; text-align: center; }
 .visit-note { font-weight: normal; color: var(--muted); font-size: 13px; margin-top: 2px; }
+
+/* Botões flutuantes "voltar ao início" (↑) e "ir para o final" (↓) */
+.scroll-buttons {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(20px, env(safe-area-inset-bottom));
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.scroll-btn {
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 26px;
+  line-height: 1;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .3);
+  animation: scroll-btn-in .25s ease-out;
+}
+.scroll-btn:hover { filter: brightness(1.1); }
+@keyframes scroll-btn-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}

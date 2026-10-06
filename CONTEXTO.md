@@ -90,6 +90,7 @@ próprio).
 | `src/lib/body-map.ts` + `src/components/BodyHologram.tsx` | mapa do corpo: contorno, 10 órgãos e 71 pontos (posições revisadas pelo dono em 05/10). `BodyHologram` mostra o 3D por padrão e o 2D (frente/costas) por botão ou se o aparelho não tiver WebGL; o PDF continua usando o 2D |
 | `src/lib/body3d.ts` + `src/components/Body3D.tsx` | corpo 3D estilizado com **three.js** (formas simples, sem modelos externos nem licenças). Usa as mesmas coordenadas 200x440 do 2D; os pontos são colocados na pele por raio (frente/costas). Camadas, enquadramentos (Frente/Costas/Lado/Cabeça/Tronco/Mãos/Pés), toque mostra nome do órgão/osso. Carregado sob demanda (`next/dynamic`, `ssr: false`) |
 | `src/components/FichaForm.tsx` | ficha: resultado no final, salvamento automático (2 s), avanço automático entre partes, "voltar"/"corrigir dados" |
+| `src/components/ScrollButtons.tsx` | botões flutuantes ↑ início / ↓ final (em todas as telas, via `layout.tsx`) |
 | `src/lib/ficha-eventos.ts` + `src/components/VisitLog.tsx` | Registro de atendimentos: abertura, sessões de alteração e retornos (tabela `ficha_eventos`) |
 | `src/components/PatientForm.tsx` | cadastro e correção do paciente (com Sexo) — usado em `/pacientes/novo` e `/pacientes/[id]/editar` |
 | `src/components/Logo.tsx` + `public/logo.jpg` | logo do dono (recortada em círculo na tela e no PDF) |
@@ -257,6 +258,9 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
   observação opcional; histórico completo; datas também no PDF. Horário
   sempre de Brasília (`America/Sao_Paulo`). Se a tabela não existir, a
   ficha continua funcionando e avisa.
+- Botões flutuantes ↑ (voltar ao início) e ↓ (ir para o final) em todas as
+  telas (`src/components/ScrollButtons.tsx`, no `layout.tsx`); cada um só
+  aparece quando faz sentido. Pedido do dono para navegar na ficha longa.
 - Dica: para o dono colar SQL, ele costuma copiar outra coisa no caminho —
   copiar de novo com `Set-Clipboard` e pedir para não copiar nada antes do
   Ctrl+V.
