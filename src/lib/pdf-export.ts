@@ -26,6 +26,10 @@ type PatientInfo = {
   phone?: string;
   address?: string;
   complaint?: string;
+  // Registro de atendimentos (textos já formatados)
+  openedAt?: string; // "04/10/2026 às 19:20"
+  updatedAt?: string;
+  returns?: string[]; // um por retorno, do mais antigo ao mais recente
 };
 
 const JADE: [number, number, number] = [62, 98, 89];
@@ -273,6 +277,11 @@ export function buildPdfBlob(
   if (patient.phone) field('Telefone', patient.phone);
   if (patient.address) field('Endereço', patient.address);
   if (patient.complaint) field('Queixa principal', patient.complaint);
+  if (patient.openedAt) field('Ficha aberta em', patient.openedAt);
+  if (patient.updatedAt) field('Última alteração', patient.updatedAt);
+  if (patient.returns?.length) {
+    field(`Retornos (${patient.returns.length})`, patient.returns.join('; '));
+  }
   y += 5;
 
   const { syndromeScores, elementScores } = computeScores(answers, data);

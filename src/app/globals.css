@@ -482,3 +482,37 @@ button.small { padding: 6px 12px; font-size: 13px; }
 @media (max-width: 560px) {
   .diet-group-name { min-width: 100%; }
 }
+
+/* Registro de atendimentos */
+.visit-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 8px 16px;
+  margin: 4px 0 8px;
+}
+.visit-facts div { display: flex; flex-direction: column; }
+.visit-facts span { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.visit-facts strong { font-size: 15px; }
+.visit-form { margin: 10px 0; }
+.visit-message { font-size: 13px; color: var(--jade); margin: 6px 0; }
+.link-button {
+  background: none;
+  border: none;
+  padding: 4px 0;
+  color: var(--jade);
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.visit-history { list-style: none; padding: 0; margin: 6px 0 0; }
+.visit-history li {
+  display: flex;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+.visit-history li:last-child { border-bottom: none; }
+.visit-history li.visit-retorno { font-weight: 700; }
+.visit-icon { width: 22px; flex-shrink: 0; text-align: center; }
+.visit-note { font-weight: normal; color: var(--muted); font-size: 13px; margin-top: 2px; }

@@ -26,6 +26,8 @@ import type { PatientRecord } from './PatientForm';
 import { buildPdfBlob } from '@/lib/pdf-export';
 import { downloadBlob } from '@/lib/download';
 import DietPanel from './DietPanel';
+import VisitLog from './VisitLog';
+import { addEvent, loadEvents, recordChange, formatDateTimeBR, type FichaEvent } from '@/lib/ficha-eventos';
 import { normalizeDiet, type DietState } from '@/lib/dietetica';
 
 const allData = appData as unknown as FichaData;
@@ -40,9 +42,19 @@ type Props = {
   initialAnswers: Answers;
   initialComplaint: string;
   initialDiet: unknown;
+  initialCreatedAt: string | null;
+  initialUpdatedAt: string | null;
 };
 
-export default function FichaForm({ patient, fichaId, initialAnswers, initialComplaint, initialDiet }: Props) {
+export default function FichaForm({
+  patient,
+  fichaId,
+  initialAnswers,
+  initialComplaint,
+  initialDiet,
+  initialCreatedAt,
+  initialUpdatedAt,
+}: Props) {
   const supabase = createClient();
   const router = useRouter();
   const [answers, setAnswers] = useState<Answers>(() =>
@@ -58,6 +70,13 @@ export default function FichaForm({ patient, fichaId, initialAnswers, initialCom
   const [dirty, setDirty] = useState(false);
   const [autoScroll, setAutoScroll] = useState(true);
   const [saveRetry, setSaveRetry] = useState(0);
+  // Registro de atendimentos (abertura, alterações, retornos)
+  const [createdAt, setCreatedAt] = useState(initialCreatedAt);
+  const [updatedAt, setUpdatedAt] = useState(initialUpdatedAt);
+  const [events, setEvents] = useState<FichaEvent[] | null>([]);
+  const eventsRef = useRef<FichaEvent[] | null>([]);
+  const logChain = useRef<Promise<void>>(Promise.resolve());
+  eventsRef.current = events;
 
   const categoryRefs = useRef<(HTMLDivElement | null)[]>([]);
   const scrollTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -103,6 +122,12 @@ export default function FichaForm({ patient, fichaId, initialAnswers, initialCom
     try {
       if (localStorage.getItem(AUTO_SCROLL_KEY) === 'off') setAutoScroll(false);
     } catch {}
+  }, []);
+
+  // Carrega o registro de atendimentos da ficha (null se a tabela não existir)
+  useEffect(() => {
+    if (!fichaIdRef.current) return;
+    loadEvents(supabase, fichaIdRef.current).then(setEvents);
   }, []);
 
   // Avisa antes de fechar a aba com alterações não salvas
@@ -188,6 +213,7 @@ export default function FichaForm({ patient, fichaId, initialAnswers, initialCom
     const scores = computeScores(snapAnswers, data);
 
     let error: unknown = null;
+    const wasNew = !fichaIdRef.current;
     const { data: userData } = await supabase.auth.getUser();
     const therapistId = userData.user?.id;
     if (!therapistId) {
@@ -230,6 +256,11 @@ export default function FichaForm({ patient, fichaId, initialAnswers, initialCom
     }
 
     setSavedAt(new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }));
+    const nowIso = new Date().toISOString();
+    setUpdatedAt(nowIso);
+    if (wasNew) setCreatedAt(nowIso);
+    // um registro de cada vez, na ordem dos salvamentos
+    logChain.current = logChain.current.then(() => logSave(therapistId!, wasNew));
     const changedMeanwhile =
       pendingRef.current || answersRef.current !== snapAnswers || complaintRef.current !== snapComplaint ||
       dietRef.current !== snapDiet;
@@ -239,6 +270,39 @@ export default function FichaForm({ patient, fichaId, initialAnswers, initialCom
       return false;
     }
     setDirty(false);
+    return true;
+  }
+
+  // Anota no registro de atendimentos: abertura (ficha nova) ou alteração.
+  async function logSave(therapistId: string, wasNew: boolean) {
+    const current = eventsRef.current;
+    if (current === null || !fichaIdRef.current) return; // tabela não existe no banco
+    const ids = { therapistId, fichaId: fichaIdRef.current, patientId: patient.id };
+    let next: FichaEvent[] | null;
+    if (wasNew) {
+      const created = await addEvent(supabase, ids, 'abertura');
+      next = created ? [created] : null;
+    } else {
+      next = await recordChange(supabase, ids, current);
+    }
+    eventsRef.current = next; // já vale para o próximo registro da fila
+    setEvents(next);
+  }
+
+  // Botão "Registrar retorno do paciente" (salva a ficha antes, se preciso).
+  async function registerReturn(note: string): Promise<boolean> {
+    if (!fichaIdRef.current || dirty) await handleSave();
+    const { data: userData } = await supabase.auth.getUser();
+    const therapistId = userData.user?.id;
+    if (!therapistId || !fichaIdRef.current) return false;
+    const created = await addEvent(
+      supabase,
+      { therapistId, fichaId: fichaIdRef.current, patientId: patient.id },
+      'retorno',
+      note
+    );
+    if (!created) return false;
+    setEvents((prev) => [created, ...(prev ?? [])]);
     return true;
   }
 
@@ -254,6 +318,12 @@ export default function FichaForm({ patient, fichaId, initialAnswers, initialCom
         phone: patient.phone || undefined,
         address: patient.address || undefined,
         complaint,
+        openedAt: createdAt ? formatDateTimeBR(createdAt) : undefined,
+        updatedAt: updatedAt ? formatDateTimeBR(updatedAt) : undefined,
+        returns: (events ?? [])
+          .filter((e) => e.kind === 'retorno')
+          .reverse()
+          .map((e) => formatDateTimeBR(e.started_at) + (e.note ? ` (${e.note})` : '')),
       },
       logo
     );
@@ -311,6 +381,8 @@ export default function FichaForm({ patient, fichaId, initialAnswers, initialCom
                 : 'As marcações são salvas automaticamente.'}
         </p>
       )}
+
+      <VisitLog createdAt={createdAt} updatedAt={updatedAt} events={events} onRegisterReturn={registerReturn} />
 
       <div className="panel">
         <label htmlFor="complaint">Queixa principal</label>

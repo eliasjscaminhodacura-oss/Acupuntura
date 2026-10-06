@@ -8,28 +8,22 @@
 
 ## ▶️ ONDE PARAMOS (leia isto primeiro)
 
-**Última sessão: 05/10/2026 (computador de trabalho).** O dono vai
-continuar **no notebook dele**. O app funciona localmente, ligado ao
-Supabase. Feito nesta sessão (detalhes no histórico de 05/10):
-- Mapa do corpo em **holograma 3D** (gira; camadas pele, ossos, órgãos,
-  circulação, nervos, respiração, digestão, urinário, pontos). Aprovado.
-- **Orientação Alimentar segundo a MTC** (Dietética), etapas 1 a 3: base de
-  141 alimentos + orientação para as 46 síndromes + por Elemento, painel no
-  fim do resultado da ficha, **42 receitas** com ingredientes/quantidades/
-  preparo, **PDF do paciente** (A5) e botão "Enviar para o paciente".
-  Coluna `fichas.diet` já criada no Supabase. Dono aprovou ("Perfeito").
+**Última sessão: 06/10/2026 (notebook do dono).** 🎉 **O app está
+publicado na internet: https://acupuntura-eta.vercel.app** (Vercel, plano
+Hobby, conta `eliasjscaminhodacura-oss` entrando pelo GitHub). Cada `git
+push` para `main` atualiza o site sozinho em 1–2 min. O dono fez login no
+site e abriu as fichas — funcionando. Feito nesta sessão (detalhes no
+histórico de 06/10): site publicado; Supabase com Site URL/Redirect URLs do
+site; **Registro de atendimentos** na ficha (abertura, alterações,
+retornos do paciente) — tabela `ficha_eventos` já criada no Supabase.
 
-**Próxima coisa a fazer (no notebook):**
+**Próxima coisa a fazer:**
 
-1. **Atualizar o notebook:** `git pull` e `npm install` (dependências
-   novas: `three`, `exceljs`). Conferir `npm run build`. O `.env.local`
-   do notebook já existe (configurado em 04/10). Nada a rodar no Supabase.
-2. **Terminar a conta na Vercel.** No computador do trabalho o SMS de
-   verificação (celular do dono, final …7878) nunca chegou. Retomar em
-   https://vercel.com/signup → "Continue with GitHub" → código SMS. Se não
-   chegar: outro celular; plano B é a Netlify (servidores nos EUA no plano
-   grátis). O `vercel.json` (região `gru1`) já está no repositório. Depois
-   seguir a seção 6, item 6 (variáveis, Site URL/Redirect URLs no Supabase).
+1. Em qualquer computador: `git pull` e `npm install` antes de começar.
+   Nada a rodar no Supabase.
+2. Ativar a **verificação em duas etapas da Vercel** com uma chave NOVA (a
+   tela de 06/10 foi cancelada porque a chave secreta apareceu numa aba de
+   pesquisa do Google). Usar um app autenticador no celular do dono.
    Lembrete: plano Hobby não permite uso comercial (Pro ao começar a cobrar).
 3. **Revisão da Dietética pelo dono:** planilha
    `revisao/Dietetica-MTC-revisao.xlsx` (abas Leia-me, Síndromes,
@@ -96,6 +90,7 @@ próprio).
 | `src/lib/body-map.ts` + `src/components/BodyHologram.tsx` | mapa do corpo: contorno, 10 órgãos e 71 pontos (posições revisadas pelo dono em 05/10). `BodyHologram` mostra o 3D por padrão e o 2D (frente/costas) por botão ou se o aparelho não tiver WebGL; o PDF continua usando o 2D |
 | `src/lib/body3d.ts` + `src/components/Body3D.tsx` | corpo 3D estilizado com **three.js** (formas simples, sem modelos externos nem licenças). Usa as mesmas coordenadas 200x440 do 2D; os pontos são colocados na pele por raio (frente/costas). Camadas, enquadramentos (Frente/Costas/Lado/Cabeça/Tronco/Mãos/Pés), toque mostra nome do órgão/osso. Carregado sob demanda (`next/dynamic`, `ssr: false`) |
 | `src/components/FichaForm.tsx` | ficha: resultado no final, salvamento automático (2 s), avanço automático entre partes, "voltar"/"corrigir dados" |
+| `src/lib/ficha-eventos.ts` + `src/components/VisitLog.tsx` | Registro de atendimentos: abertura, sessões de alteração e retornos (tabela `ficha_eventos`) |
 | `src/components/PatientForm.tsx` | cadastro e correção do paciente (com Sexo) — usado em `/pacientes/novo` e `/pacientes/[id]/editar` |
 | `src/components/Logo.tsx` + `public/logo.jpg` | logo do dono (recortada em círculo na tela e no PDF) |
 | `src/components/LogoutButton.tsx` | botão Sair |
@@ -158,6 +153,9 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
   para LGPD e velocidade).
 - URL: `https://bgwyhakqicwmxxjgfbrn.supabase.co`
 - `supabase/schema.sql` executado com sucesso em 03/10/2026.
+- 06/10/2026: tabela `ficha_eventos` (registro de atendimentos, com RLS)
+  criada no SQL Editor — bloco final do `schema.sql`. Já feito; conferido
+  (sem login a API devolve lista vazia).
 - 05/10/2026: coluna `fichas.diet` (jsonb) criada no SQL Editor — guarda as
   escolhas da Orientação alimentar. Já feito.
 - 04/10/2026: coluna `patients.sex` ('M'/'F') criada no SQL Editor (as 3
@@ -181,10 +179,12 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
 4. [x] Projeto Supabase criado (São Paulo) e `schema.sql` executado.
 5. [x] Teste local completo (04/10): login, paciente, ficha, salvar,
        PDF, reabrir — o dono testou e aprovou.
-6. [ ] Publicar na Vercel (conectar o repositório GitHub; variáveis
-       `NEXT_PUBLIC_SUPABASE_URL` e `NEXT_PUBLIC_SUPABASE_ANON_KEY`; depois
-       ajustar Site URL/Redirect URLs no Supabase). `vercel.json` pronto;
-       falta a conta (SMS de verificação não chegou no trabalho, 05/10).
+6. [x] Publicado na Vercel (06/10): https://acupuntura-eta.vercel.app —
+       variáveis `NEXT_PUBLIC_SUPABASE_URL` e `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+       configuradas na Vercel; no Supabase, Site URL =
+       `https://acupuntura-eta.vercel.app` e Redirect URLs =
+       `https://acupuntura-eta.vercel.app/**` e `http://localhost:3000/**`.
+       [ ] Verificação em duas etapas da conta Vercel (ver "Onde paramos").
 7. [x] Logomarca (04/10: logo nova do dono em `public/logo.jpg`).
        [ ] Depois: cobrança (Stripe), domínio próprio.
 8. [ ] **Antes de qualquer lançamento comercial: consultar advogado de LGPD**
@@ -238,6 +238,28 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
 - Termos de uso / política de privacidade (junto com o advogado de LGPD).
 
 ## 8. Histórico (mais recente primeiro)
+
+### 06/10/2026
+- Notebook: `git pull` do trabalho de 05/10 + `npm install`; build OK.
+- **Site publicado na Vercel:** https://acupuntura-eta.vercel.app. A conta
+  foi criada pelo GitHub; a tela opcional de verificação em duas etapas foi
+  cancelada (chave vazou para uma aba de pesquisa) — refazer depois. No
+  passo das variáveis, colar as duas linhas `NOME=valor` no campo Key
+  funcionou (a Vercel separa sozinha). NÃO usar a integração "Adicionar
+  Supabase" da Vercel (criaria outro banco). Supabase: Site URL e Redirect
+  URLs ajustados. Dono testou login e fichas no site: OK.
+- **Registro de atendimentos** (pedido do dono: data e hora da abertura,
+  das alterações e dos retornos): tabela `ficha_eventos`
+  (`kind` = abertura | alteracao | retorno, `note`, `started_at`,
+  `ended_at`); `src/lib/ficha-eventos.ts` e `src/components/VisitLog.tsx`.
+  Alterações seguidas com menos de 30 min de intervalo estendem a mesma
+  sessão (não lotam o histórico). Botão "Registrar retorno do paciente" com
+  observação opcional; histórico completo; datas também no PDF. Horário
+  sempre de Brasília (`America/Sao_Paulo`). Se a tabela não existir, a
+  ficha continua funcionando e avisa.
+- Dica: para o dono colar SQL, ele costuma copiar outra coisa no caminho —
+  copiar de novo com `Set-Clipboard` e pedir para não copiar nada antes do
+  Ctrl+V.
 
 ### 05/10/2026
 - Computador de trabalho: baixado o trabalho do notebook (git pull); build OK.

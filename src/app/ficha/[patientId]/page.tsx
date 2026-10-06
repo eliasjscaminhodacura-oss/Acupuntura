@@ -33,6 +33,8 @@ export default async function FichaPage({ params }: { params: Promise<{ patientI
       initialAnswers={(ficha?.answers as Record<string, boolean>) ?? {}}
       initialComplaint={ficha?.chief_complaint ?? ''}
       initialDiet={ficha?.diet ?? null}
+      initialCreatedAt={ficha?.created_at ?? null}
+      initialUpdatedAt={ficha?.updated_at ?? null}
     />
   );
 }

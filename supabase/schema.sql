@@ -136,3 +136,57 @@ create trigger fichas_set_updated_at
 create index if not exists idx_patients_therapist on public.patients(therapist_id);
 create index if not exists idx_fichas_therapist on public.fichas(therapist_id);
 create index if not exists idx_fichas_patient on public.fichas(patient_id);
+
+-- ---------------------------------------------------------------------
+-- Registro de atendimentos de cada ficha (adicionado em 06/10/2026):
+-- abertura da ficha, sessões de alteração e retornos do paciente.
+-- "started_at"/"ended_at": início e fim da sessão (alterações seguidas,
+-- até 30 min de intervalo, contam como uma sessão só).
+-- ---------------------------------------------------------------------
+create table if not exists public.ficha_eventos (
+  id uuid primary key default gen_random_uuid(),
+  therapist_id uuid not null references auth.users(id) on delete cascade,
+  ficha_id uuid not null references public.fichas(id) on delete cascade,
+  patient_id uuid not null references public.patients(id) on delete cascade,
+  kind text not null check (kind in ('abertura', 'alteracao', 'retorno')),
+  note text,
+  started_at timestamptz not null default now(),
+  ended_at timestamptz not null default now()
+);
+
+alter table public.ficha_eventos enable row level security;
+
+drop policy if exists "therapists_select_own_eventos" on public.ficha_eventos;
+create policy "therapists_select_own_eventos"
+  on public.ficha_eventos for select
+  using (auth.uid() = therapist_id);
+
+drop policy if exists "therapists_insert_own_eventos" on public.ficha_eventos;
+create policy "therapists_insert_own_eventos"
+  on public.ficha_eventos for insert
+  with check (
+    auth.uid() = therapist_id
+    and exists (select 1 from public.fichas f
+                where f.id = ficha_eventos.ficha_id
+                  and f.patient_id = ficha_eventos.patient_id
+                  and f.therapist_id = auth.uid())
+  );
+
+drop policy if exists "therapists_update_own_eventos" on public.ficha_eventos;
+create policy "therapists_update_own_eventos"
+  on public.ficha_eventos for update
+  using (auth.uid() = therapist_id)
+  with check (auth.uid() = therapist_id);
+
+drop policy if exists "therapists_delete_own_eventos" on public.ficha_eventos;
+create policy "therapists_delete_own_eventos"
+  on public.ficha_eventos for delete
+  using (auth.uid() = therapist_id);
+
+create index if not exists idx_ficha_eventos_ficha on public.ficha_eventos(ficha_id, started_at desc);
+
+-- Fichas que já existiam: registra a abertura com a data de criação.
+insert into public.ficha_eventos (therapist_id, ficha_id, patient_id, kind, started_at, ended_at)
+select f.therapist_id, f.id, f.patient_id, 'abertura', f.created_at, f.created_at
+from public.fichas f
+where not exists (select 1 from public.ficha_eventos e where e.ficha_id = f.id and e.kind = 'abertura');
