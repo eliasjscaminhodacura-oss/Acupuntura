@@ -9,7 +9,8 @@
     "typecheck": "tsc --noEmit",
     "dietetica:exportar": "node scripts/dietetica-planilha.mjs exportar",
     "dietetica:importar": "node scripts/dietetica-planilha.mjs importar",
-    "auriculo:posicionar": "node scripts/auriculo-posicionar.mjs"
+    "auriculo:posicionar": "node scripts/auriculo-posicionar.mjs",
+    "corpo:gerar": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/corpo-real.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.7",

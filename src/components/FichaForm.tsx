@@ -482,7 +482,7 @@ export default function FichaForm({
 
         <div className="panel">
           <h3 style={{ marginTop: 0 }}>Mapa do corpo — órgãos e pontos sugeridos</h3>
-          <BodyHologram body={body} />
+          <BodyHologram body={body} sex={patient.sex} />
         </div>
 
         <div className="panel">

@@ -12,6 +12,26 @@
 publicado: **https://acupuntura-eta.vercel.app** (Vercel; cada `git push`
 para `main` atualiza o site em 1–2 min; o dono já usa com pacientes reais).
 
+⚠️ **Trabalho em andamento no ramo `corpo-real` (NÃO está no site).**
+Para continuar: `git fetch`, `git checkout corpo-real`, `npm install`.
+Só juntar com `main` quando o dono disser **"publicar"**.
+- **Corpo realista, etapa 1 (feita, falta o dono conferir):** o holograma do
+  corpo usa corpos reais masculino/feminino (MakeHuman, CC0: malha base +
+  alvos de gênero, mistura das 3 etnias, adulto jovem) em posição
+  anatômica (braços junto ao corpo, palmas para a frente), conforme o sexo
+  do paciente (sem sexo informado: botões "Corpo masculino/feminino").
+  `npm run corpo:gerar` (`scripts/corpo-real.mjs`) baixa o MakeHuman para
+  `scripts/.makehuman/` (fora do git), gera `public/corpo/*.glb` (~320 KB) e
+  `src/data/corpo-3d.json` (tabelas de correspondência mapa 2D → corpo real
+  e posição dos 71 pontos). `src/lib/body-warp.ts` faz a correspondência
+  (alturas: cabeça, queixo, C7, mamilos, umbigo, púbis; larguras do tronco;
+  cadeias braço/perna). Órgãos, ossos e sistemas ainda são as formas
+  simples, levadas para dentro do corpo real pela correspondência.
+  Próximas etapas: 2) órgãos com anatomia real (Z-Anatomy/BodyParts3D, CC
+  BY-SA — conferir licença com o dono); 3) ossos, vasos, nervos reais e
+  imagens novas no mapa 2D/PDF. O dono precisa conferir os 71 pontos no
+  corpo novo.
+
 ✅ **Auriculoterapia publicada no site em 07/10/2026** (ramo
 `auriculoterapia` juntado com `main`; o ramo pode ser apagado).
 - **Auriculoterapia, etapa 1 (feita, aprovada como 1ª versão):** aba
@@ -111,7 +131,7 @@ próprio).
 | `src/lib/cycle5.ts` + `src/components/ElementCycle.tsx` | Ciclo dos 5 Elementos (Sheng/Ke), gráfico principal do resultado |
 | `src/lib/radar3d.ts` + `src/components/ElementRadar.tsx` | gráfico 3D dos 5 elementos (botão "Ver em 3D") |
 | `src/lib/body-map.ts` + `src/components/BodyHologram.tsx` | mapa do corpo: contorno, 10 órgãos e 71 pontos (posições revisadas pelo dono em 05/10). `BodyHologram` mostra o 3D por padrão e o 2D (frente/costas) por botão ou se o aparelho não tiver WebGL; o PDF continua usando o 2D |
-| `src/lib/body3d.ts` + `src/components/Body3D.tsx` | corpo 3D estilizado com **three.js** (formas simples, sem modelos externos nem licenças). Usa as mesmas coordenadas 200x440 do 2D; os pontos são colocados na pele por raio (frente/costas). Camadas, enquadramentos (Frente/Costas/Lado/Cabeça/Tronco/Mãos/Pés), toque mostra nome do órgão/osso. Carregado sob demanda (`next/dynamic`, `ssr: false`) |
+| `src/lib/body3d.ts` + `src/components/Body3D.tsx` | corpo 3D com **three.js** (no ramo `corpo-real`: pele = corpo realista MakeHuman; antes: formas simples). Usa as mesmas coordenadas 200x440 do 2D; os pontos são colocados na pele por raio (frente/costas). Camadas, enquadramentos (Frente/Costas/Lado/Cabeça/Tronco/Mãos/Pés), toque mostra nome do órgão/osso. Carregado sob demanda (`next/dynamic`, `ssr: false`) |
 | `src/components/FichaForm.tsx` | ficha: resultado no final, salvamento automático (2 s), avanço automático entre partes, "voltar"/"corrigir dados" |
 | `src/components/ScrollButtons.tsx` | botões flutuantes ↑ início / ↓ final (em todas as telas, via `layout.tsx`) |
 | `src/lib/ficha-eventos.ts` + `src/components/VisitLog.tsx` | Registro de atendimentos: abertura, sessões de alteração e retornos (tabela `ficha_eventos`) |

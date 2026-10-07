@@ -5,6 +5,8 @@ import dynamic from 'next/dynamic';
 import { BODY_H, BODY_OUTLINE, BODY_W, ORGANS, pointPositions, type BodyResult, type BodyView } from '@/lib/body-map';
 import { ELEMENT_COLOR } from '@/lib/ficha-logic';
 import { shade, type Pt } from '@/lib/radar3d';
+import type { Sex } from '@/lib/ficha-types';
+import type { Corpo } from './Body3D';
 
 // O 3D (three.js) é pesado: só é baixado quando o resultado aparece.
 const Body3D = dynamic(() => import('./Body3D'), {
@@ -107,8 +109,11 @@ function View({ view, body, selected, onSelect }: {
 // os pontos sugeridos pelas síndromes identificadas aparecem marcados.
 // Por padrão em 3D; o mapa 2D (frente e costas) fica como alternativa e é
 // usado sozinho se o aparelho não suportar 3D.
-export default function BodyHologram({ body }: { body: BodyResult }) {
+export default function BodyHologram({ body, sex }: { body: BodyResult; sex: Sex }) {
   const [selected, setSelected] = useState<string | null>(null);
+  // corpo pelo sexo do paciente; se não informado, o terapeuta escolhe
+  const [escolha, setEscolha] = useState<Corpo>('masculino');
+  const corpo: Corpo = sex === 'F' ? 'feminino' : sex === 'M' ? 'masculino' : escolha;
   const [mode, setMode] = useState<'3d' | '2d'>('3d');
   const [no3d, setNo3d] = useState(false);
 
@@ -118,6 +123,15 @@ export default function BodyHologram({ body }: { body: BodyResult }) {
         {!body.organs.length && (
           <p style={{ color: 'var(--muted)', fontSize: 14, margin: 0 }}>Marque os sintomas acima para ver os órgãos e pontos no corpo.</p>
         )}
+        {!no3d && mode === '3d' && !sex && (
+          <div className="body3d-row">
+            {(['masculino', 'feminino'] as Corpo[]).map((c) => (
+              <button key={c} type="button" className={'body3d-chip' + (corpo === c ? ' on' : '')} aria-pressed={corpo === c} onClick={() => setEscolha(c)}>
+                Corpo {c}
+              </button>
+            ))}
+          </div>
+        )}
         {!no3d && (
           <button type="button" className="secondary small" onClick={() => setMode((m) => (m === '3d' ? '2d' : '3d'))}>
             {mode === '3d' ? 'Ver em 2D (frente e costas)' : 'Ver em 3D'}
@@ -126,7 +140,7 @@ export default function BodyHologram({ body }: { body: BodyResult }) {
       </div>
 
       {mode === '3d' && !no3d ? (
-        <Body3D body={body} selected={selected} onSelect={setSelected} onFail={() => setNo3d(true)} />
+        <Body3D key={corpo} corpo={corpo} body={body} selected={selected} onSelect={setSelected} onFail={() => setNo3d(true)} />
       ) : (
         <div className="holo">
           <View view="front" body={body} selected={selected} onSelect={setSelected} />

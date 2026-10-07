@@ -3,10 +3,29 @@
 import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { createBodyScene, FOCUS, LAYERS, type BodyScene, type LayerKey } from '@/lib/body3d';
 import type { BodyResult } from '@/lib/body-map';
+import type { Warp } from '@/lib/body-warp';
+import corpo3d from '@/data/corpo-3d.json';
+
+export type Corpo = 'masculino' | 'feminino';
+
+type CorpoData = { warp: Warp; pontos: Record<string, number[][]> };
+
+// Carrega a pele do corpo realista (sem compressão, ~320 KB).
+async function loadSkin(corpo: Corpo) {
+  const gltf = await new GLTFLoader().loadAsync(`/corpo/${corpo}.glb`);
+  let geo: THREE.BufferGeometry | null = null;
+  gltf.scene.traverse((o) => { if (!geo && (o as THREE.Mesh).isMesh) geo = (o as THREE.Mesh).geometry; });
+  if (!geo) throw new Error('modelo sem malha');
+  const g = geo as THREE.BufferGeometry;
+  g.computeVertexNormals();
+  return g;
+}
 
 type Props = {
+  corpo: Corpo;
   body: BodyResult;
   selected: string | null;
   onSelect: (code: string | null) => void;
@@ -25,11 +44,12 @@ const V = (a: [number, number, number]) => new THREE.Vector3(...a);
 
 // Corpo humano 3D estilizado: gira com o mouse/dedo, aproxima, liga e
 // desliga camadas (pele, ossos, órgãos, sistemas) e mostra os pontos.
-export default function Body3D({ body, selected, onSelect, onFail }: Props) {
+export default function Body3D({ corpo, body, selected, onSelect, onFail }: Props) {
   const stageRef = useRef<HTMLDivElement>(null);
   const labelsRef = useRef<HTMLDivElement>(null);
   const api = useRef<Api | null>(null);
-  const cb = useRef({ onSelect, onFail, selected });
+  const cb = useRef({ onSelect, onFail, selected, body });
+  const [ready, setReady] = useState(false);
   const [layers, setLayers] = useState<Record<LayerKey, boolean>>(
     () => Object.fromEntries(LAYERS.map((l) => [l.key, l.on])) as Record<LayerKey, boolean>
   );
@@ -40,7 +60,7 @@ export default function Body3D({ body, selected, onSelect, onFail }: Props) {
   const [hint, setHint] = useState(true);
 
   useEffect(() => {
-    cb.current = { onSelect, onFail, selected };
+    cb.current = { onSelect, onFail, selected, body };
   });
 
   // Monta a cena uma vez.
@@ -61,8 +81,8 @@ export default function Body3D({ body, selected, onSelect, onFail }: Props) {
 
     const camera = new THREE.PerspectiveCamera(35, 1, 1, 5000);
     const world = new THREE.Scene();
-    const scene = createBodyScene();
-    world.add(scene.root);
+    let scene: BodyScene | null = null;
+    let disposed = false;
 
     const grid = new THREE.PolarGridHelper(150, 8, 6, 64, 0x5ce1e6, 0x5ce1e6);
     const gridMat = grid.material as THREE.Material;
@@ -105,6 +125,7 @@ export default function Body3D({ body, selected, onSelect, onFail }: Props) {
     const rebuildLabels = () => {
       labelsEl.replaceChildren();
       labels = [];
+      if (!scene) return;
       for (const p of scene.points) {
         p.positions.forEach((pp) => {
           if (!pp.labelled) return;
@@ -128,7 +149,7 @@ export default function Body3D({ body, selected, onSelect, onFail }: Props) {
     let down: { x: number; y: number } | null = null;
     const onDown = (e: PointerEvent) => { down = { x: e.clientX, y: e.clientY }; };
     const onUp = (e: PointerEvent) => {
-      if (!down || Math.hypot(e.clientX - down.x, e.clientY - down.y) > 6) return;
+      if (!scene || !down || Math.hypot(e.clientX - down.x, e.clientY - down.y) > 6) return;
       down = null;
       const rect = renderer.domElement.getBoundingClientRect();
       const x = e.clientX - rect.left;
@@ -137,7 +158,7 @@ export default function Body3D({ body, selected, onSelect, onFail }: Props) {
 
       if (scene.layers.pontos.visible) {
         const hit = ray.intersectObjects(scene.pointHits, false).find((h) => {
-          const p = scene.points.find((pt) => pt.code === h.object.userData.code);
+          const p = scene!.points.find((pt) => pt.code === h.object.userData.code);
           const pp = p?.positions.find((q) => q.pos.distanceTo(h.object.position) < 0.01);
           return pp ? facing(pp.pos, pp.normal) : true;
         });
@@ -149,8 +170,8 @@ export default function Body3D({ body, selected, onSelect, onFail }: Props) {
         }
       }
       const targets = (Object.keys(scene.layers) as LayerKey[])
-        .filter((k) => k !== 'pele' && k !== 'pontos' && scene.layers[k].visible)
-        .map((k) => scene.layers[k]);
+        .filter((k) => k !== 'pele' && k !== 'pontos' && scene!.layers[k].visible)
+        .map((k) => scene!.layers[k]);
       const hit = ray.intersectObjects(targets, true).find((h) => h.object.userData.label);
       setInfo(hit ? { text: hit.object.userData.label as string, x, y } : null);
     };
@@ -188,6 +209,7 @@ export default function Body3D({ body, selected, onSelect, onFail }: Props) {
         if (k === 1) flight = null;
       }
       controls.update();
+      if (!scene) return;
       scene.tick(now / 1000);
 
       // pontos do lado de lá do corpo ficam apagados
@@ -212,16 +234,27 @@ export default function Body3D({ body, selected, onSelect, onFail }: Props) {
     };
     raf = requestAnimationFrame(loop);
 
-    api.current = { scene, controls, camera, focus, rebuildLabels };
+    loadSkin(corpo)
+      .then((skin) => {
+        if (disposed) { skin.dispose(); return; }
+        scene = createBodyScene({ skin, ...(corpo3d as unknown as Record<Corpo, CorpoData>)[corpo] });
+        world.add(scene.root);
+        scene.setResult(cb.current.body);
+        api.current = { scene, controls, camera, focus, rebuildLabels };
+        rebuildLabels();
+        setReady(true);
+      })
+      .catch(() => cb.current.onFail());
 
     return () => {
+      disposed = true;
       cancelAnimationFrame(raf);
       ro.disconnect();
       io.disconnect();
       renderer.domElement.removeEventListener('pointerdown', onDown);
       renderer.domElement.removeEventListener('pointerup', onUp);
       controls.dispose();
-      scene.dispose();
+      scene?.dispose();
       grid.geometry.dispose();
       gridMat.dispose();
       renderer.dispose();
@@ -236,7 +269,7 @@ export default function Body3D({ body, selected, onSelect, onFail }: Props) {
     if (!api.current) return;
     api.current.scene.setResult(body);
     api.current.rebuildLabels();
-  }, [body]);
+  }, [body, ready]);
 
   // Ponto escolhido (no corpo ou na lista): destaca e leva a câmera até ele.
   useEffect(() => {
@@ -250,13 +283,13 @@ export default function Body3D({ body, selected, onSelect, onFail }: Props) {
       setAutoRotate(false);
       a.focus(pp.pos, pp.normal.clone().add(new THREE.Vector3(0, 0.25, 0)), 170);
     }
-  }, [selected]);
+  }, [selected, ready]);
 
   useEffect(() => {
     const a = api.current;
     if (!a) return;
     for (const l of LAYERS) a.scene.layers[l.key].visible = layers[l.key];
-  }, [layers]);
+  }, [layers, ready]);
 
   useEffect(() => {
     if (api.current) api.current.controls.autoRotate = autoRotate;
@@ -281,6 +314,7 @@ export default function Body3D({ body, selected, onSelect, onFail }: Props) {
     <div className="body3d">
       <div className="body3d-stage" ref={stageRef}>
         <div className="body3d-labels" ref={labelsRef} />
+        {!ready && <div className="ear3d-wait">Carregando o corpo em 3D…</div>}
         {info && (
           <div className="body3d-info" style={{ left: info.x, top: info.y }}>
             {info.text}

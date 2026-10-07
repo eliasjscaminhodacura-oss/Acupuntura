@@ -1,15 +1,18 @@
 import * as THREE from 'three';
-import { BODY_H, ORGANS, pointPositions, type BodyResult } from './body-map';
+import { BODY_H, ORGANS, type BodyResult } from './body-map';
+import { warp, type Warp } from './body-warp';
 import { ELEMENT_COLOR } from './ficha-logic';
 import { shade } from './radar3d';
 import { getGlowTexture, holoMaterial } from './holo';
 
-// Corpo 3D estilizado ("holograma") para o resultado da ficha.
-// Tudo é montado com formas simples (sem modelos externos). As medidas
-// seguem o mesmo quadro de 200 x 440 do mapa 2D (body-map.ts): x da tela
-// vira X (centro em 0), y da tela vira altura (Y para cima) e Z aponta
-// para a frente do paciente. Assim os pontos aprovados no 2D caem no
-// mesmo lugar do corpo 3D. Posições ILUSTRATIVAS, como no 2D.
+// Corpo 3D ("holograma") para o resultado da ficha. A pele é um corpo
+// realista (masculino ou feminino, gerado com o MakeHuman por
+// scripts/corpo-real.mjs); órgãos, ossos e sistemas ainda são formas
+// simples. Tudo usa o quadro de 200 x 440 do mapa 2D (body-map.ts): x da
+// tela vira X (centro em 0), y vira altura (Y para cima) e Z aponta para a
+// frente do paciente. As coordenadas do mapa passam pelas tabelas de
+// correspondência (body-warp.ts) para cair no lugar certo do corpo real.
+// Posições ILUSTRATIVAS, como no 2D.
 
 export type LayerKey = 'pele' | 'ossos' | 'orgaos' | 'circulacao' | 'nervos' | 'respiracao' | 'digestao' | 'urinario' | 'pontos';
 
@@ -29,8 +32,9 @@ const CYAN = '#5CE1E6';
 const POINT = '#FFE27A';
 const POINT_SELECTED = '#FF3B3B';
 
-// Converte coordenadas do mapa 2D (tela) para o espaço 3D.
-const P = (x: number, y: number, z = 0) => new THREE.Vector3(x - 100, BODY_H - y, z);
+// Converte coordenadas do mapa 2D (tela) para o espaço 3D. Trocada em
+// createBodyScene pela correspondência com o corpo realista.
+let P = (x: number, y: number, z = 0) => new THREE.Vector3(x - 100, BODY_H - y, z);
 const mirror = (v: THREE.Vector3) => new THREE.Vector3(-v.x, v.y, v.z);
 
 // ---------------------------------------------------------------- geometrias
@@ -51,71 +55,6 @@ function tube(points: THREE.Vector3[], r: number, mat: THREE.Material) {
   return new THREE.Mesh(geo, mat);
 }
 
-// Superfície "esticada" ao longo de um caminho de cima para baixo, com
-// seções elípticas (ou quase retangulares, se e < 1). Usada para tronco,
-// pescoço, braços e pernas (pontas abertas: ficam escondidas dentro da
-// parte vizinha). key = [x, y, z, raioX, raioZ] em coords de tela.
-type Key = [number, number, number, number, number];
-
-function loft(keys: Key[], e = 1, seg = 36, steps = 8) {
-  const centers = keys.map(([x, y, z]) => P(x, y, z));
-  const curve = new THREE.CatmullRomCurve3(centers);
-  const n = (keys.length - 1) * steps;
-  const pos: number[] = [];
-  const rings: THREE.Vector3[] = [];
-  const zAxis = new THREE.Vector3(0, 0, 1);
-  const sp = (v: number) => Math.sign(v) * Math.pow(Math.abs(v), e);
-
-  for (let i = 0; i <= n; i++) {
-    const t = i / n;
-    const k = Math.min(keys.length - 2, Math.floor(t * (keys.length - 1)));
-    const local = t * (keys.length - 1) - k;
-    const s = local * local * (3 - 2 * local);
-    const rx = keys[k][3] + (keys[k + 1][3] - keys[k][3]) * s;
-    const rz = keys[k][4] + (keys[k + 1][4] - keys[k][4]) * s;
-    const c = curve.getPoint(t);
-    const tan = curve.getTangent(t).normalize();
-    const xAxis = new THREE.Vector3().crossVectors(tan, zAxis).normalize();
-    const zA = new THREE.Vector3().crossVectors(xAxis, tan).normalize();
-    rings.push(c);
-    for (let j = 0; j < seg; j++) {
-      const a = (j / seg) * Math.PI * 2;
-      const v = c.clone()
-        .addScaledVector(xAxis, rx * sp(Math.cos(a)))
-        .addScaledVector(zA, rz * sp(Math.sin(a)));
-      pos.push(v.x, v.y, v.z);
-    }
-  }
-  const idx: number[] = [];
-  for (let i = 0; i < n; i++) {
-    for (let j = 0; j < seg; j++) {
-      const a = i * seg + j;
-      const b = i * seg + ((j + 1) % seg);
-      const c = (i + 1) * seg + j;
-      const d = (i + 1) * seg + ((j + 1) % seg);
-      idx.push(a, c, b, b, c, d);
-    }
-  }
-
-  const geo = new THREE.BufferGeometry();
-  geo.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
-  geo.setIndex(idx);
-  geo.computeVertexNormals();
-
-  // Garante que as faces apontem para fora (senão o brilho da borda some).
-  const nrm = geo.getAttribute('normal');
-  const mid = Math.floor(n / 2) * seg;
-  const out = new THREE.Vector3(pos[mid * 3], pos[mid * 3 + 1], pos[mid * 3 + 2]).sub(rings[Math.floor(n / 2)]);
-  if (out.dot(new THREE.Vector3(nrm.getX(mid), nrm.getY(mid), nrm.getZ(mid))) < 0) {
-    for (let i = 0; i < idx.length; i += 3) [idx[i + 1], idx[i + 2]] = [idx[i + 2], idx[i + 1]];
-    geo.setIndex(idx);
-    geo.computeVertexNormals();
-  }
-  return geo;
-}
-
-const mirrorKeys = (keys: Key[]): Key[] => keys.map(([x, y, z, rx, rz]) => [200 - x, y, z, rx, rz]);
-
 function named<T extends THREE.Object3D>(obj: T, label: string): T {
   obj.userData.label = label;
   return obj;
@@ -129,40 +68,17 @@ function both(group: THREE.Group, make: (m: (v: THREE.Vector3) => THREE.Vector3,
 
 // ---------------------------------------------------------------- partes
 
-const TORSO: Key[] = [
+// tronco do 3D antigo: [x, y, z, meia largura, meia profundidade] no mapa
+// (usado para posicionar costelas e nervos)
+const TORSO: [number, number, number, number, number][] = [
   [100, 68, -2, 11, 10], [100, 76, -2, 22, 13], [100, 82, -1, 31, 16], [100, 92, 0, 37, 19],
   [100, 118, 1, 36, 22], [100, 140, 1, 34, 21], [100, 170, 1, 31, 18], [100, 196, 1, 29.5, 17],
   [100, 220, 0, 33, 19], [100, 244, -1, 36, 20], [100, 264, -1, 33, 18], [100, 276, -1, 14, 9],
 ];
-const NECK: Key[] = [[100, 50, -3, 10, 10], [100, 64, -3, 10.5, 10.5], [100, 76, -3, 12, 11]];
-const ARM: Key[] = [
-  [138, 86, -2, 12, 12], [146, 112, -2, 10.5, 10.5], [150, 140, -2, 10, 10], [154, 172, -2, 10, 9.5],
-  [160, 200, -1, 9.5, 8.5], [167, 235, 0, 8.5, 7], [173, 264, 0, 7, 4.5], [176, 276, 0, 6, 3.5],
-];
-const LEG: Key[] = [
-  [115, 222, -1, 15, 14], [118, 246, -1, 19, 18], [120, 272, 0, 18, 17], [120, 300, 0, 16, 15], [119, 330, 1, 13, 12],
-  [119, 350, -1, 13, 13], [118, 375, -1, 11.5, 11], [118, 392, -1, 11, 10], [118, 412, -1, 9, 8],
-  [118, 426, -3, 7, 7],
-];
-
-function buildSkin(time: { value: number }) {
+function buildSkin(time: { value: number }, geo: THREE.BufferGeometry) {
   const g = new THREE.Group();
   const mat = holoMaterial(CYAN, time, { base: 0.025, rim: 0.55, power: 2.4, scan: 1 });
-  const add = (geo: THREE.BufferGeometry) => g.add(named(new THREE.Mesh(geo, mat), 'Pele'));
-  add(loft(TORSO, 0.9));
-  add(loft(NECK));
-  add(loft(ARM));
-  add(loft(mirrorKeys(ARM)));
-  add(loft(LEG));
-  add(loft(mirrorKeys(LEG)));
-  g.add(named(ellipsoid(P(100, 33, 1), 23, 27, 25, mat), 'Pele'));
-  g.add(named(ellipsoid(P(100, 44, 23), 3, 6, 4, mat), 'Pele'));
-  both(g, (m) => named(ellipsoid(m(P(123, 36, 0)), 3, 7, 5, mat), 'Pele'));
-  // mãos (palmas para a frente) e polegares
-  both(g, (m, s) => named(ellipsoid(m(P(179, 286, 0)), 8.5, 24, 4.2, mat, 0.26 * s), 'Pele'));
-  both(g, (m, s) => named(ellipsoid(m(P(188, 286, 2)), 3, 9, 3, mat, 0.6 * s), 'Pele'));
-  // pés (apontando para a frente)
-  both(g, (m) => named(ellipsoid(m(P(122, 430, 9)), 12, 7, 19, mat), 'Pele'));
+  g.add(named(new THREE.Mesh(geo, mat), 'Pele'));
   return g;
 }
 
@@ -367,34 +283,6 @@ export type PlacedPoint = {
 const HIT_GEO = new THREE.SphereGeometry(6, 8, 6);
 const CORE_GEO = new THREE.SphereGeometry(1, 16, 12);
 
-// Coloca o ponto na superfície da pele: "atira" um raio de frente (ou de
-// costas) na posição x/y do mapa 2D. Se o raio passar ao lado do corpo
-// (pontos bem na borda do braço/perna), tenta pela lateral e depois por
-// perto.
-function placeOnSkin(skin: THREE.Object3D[], x: number, y: number, front: boolean) {
-  const ray = new THREE.Raycaster();
-  const dirZ = front ? -1 : 1;
-  const tryRay = (o: THREE.Vector3, d: THREE.Vector3) => {
-    ray.set(o, d.normalize());
-    const hit = ray.intersectObjects(skin, false)[0];
-    if (!hit || !hit.face) return null;
-    const normal = hit.face.normal.clone().transformDirection(hit.object.matrixWorld);
-    if (normal.dot(d) > 0) normal.negate();
-    return { pos: hit.point.clone(), normal };
-  };
-  const X = x - 100;
-  const Y = BODY_H - y;
-  let r = tryRay(new THREE.Vector3(X, Y, -dirZ * 500), new THREE.Vector3(0, 0, dirZ));
-  if (!r && X !== 0) r = tryRay(new THREE.Vector3(Math.sign(X) * 400, Y, front ? 3 : -3), new THREE.Vector3(-Math.sign(X), 0, 0));
-  for (let rad = 3; !r && rad <= 12; rad += 3) {
-    for (let a = 0; a < 8 && !r; a++) {
-      const ang = (a / 8) * Math.PI * 2;
-      r = tryRay(new THREE.Vector3(X + Math.cos(ang) * rad, Y + Math.sin(ang) * rad, -dirZ * 500), new THREE.Vector3(0, 0, dirZ));
-    }
-  }
-  return r ?? { pos: new THREE.Vector3(X, Y, front ? 15 : -15), normal: new THREE.Vector3(0, 0, -dirZ) };
-}
-
 // ---------------------------------------------------------------- cena
 
 export type BodyScene = {
@@ -408,11 +296,20 @@ export type BodyScene = {
   dispose: () => void;
 };
 
-export function createBodyScene(): BodyScene {
+// Corpo realista: malha da pele, tabelas de correspondência e a posição
+// de cada ponto na pele ([x, y, z, nx, ny, nz] por posição do ponto).
+export type BodyModel = {
+  skin: THREE.BufferGeometry;
+  warp: Warp;
+  pontos: Record<string, number[][]>;
+};
+
+export function createBodyScene(model: BodyModel): BodyScene {
   const time = { value: 0 };
   const root = new THREE.Group();
+  P = (x, y, z = 0) => new THREE.Vector3(...warp(model.warp, x, y, z));
 
-  const skin = buildSkin(time);
+  const skin = buildSkin(time, model.skin);
   const bones = buildBones(time);
   const organs = buildOrgans(time);
   const systems = buildSystems(time);
@@ -430,7 +327,6 @@ export function createBodyScene(): BodyScene {
     root.add(layers[l.key]);
   }
   root.updateMatrixWorld(true);
-  const skinMeshes = skin.children;
 
   const scene: BodyScene = {
     root,
@@ -477,10 +373,11 @@ export function createBodyScene(): BodyScene {
     scene.pointHits = [];
     const hitMat = new THREE.MeshBasicMaterial({ visible: false });
     for (const p of body.points) {
-      const front = p.def.view === 'front';
-      const positions = pointPositions(p.def).map(([x, y], i) => {
-        const s = placeOnSkin(skinMeshes, x, y, front);
-        return { pos: s.pos.addScaledVector(s.normal, 0.8), normal: s.normal, labelled: i === 0 };
+      const placed = model.pontos[p.code];
+      if (!placed) continue;
+      const positions = placed.map(([x, y, z, nx, ny, nz], i) => {
+        const normal = new THREE.Vector3(nx, ny, nz);
+        return { pos: new THREE.Vector3(x, y, z).addScaledVector(normal, 0.8), normal, labelled: i === 0 };
       });
       const objects = positions.map(({ pos }) => {
         const core = new THREE.Mesh(CORE_GEO, new THREE.MeshBasicMaterial({ color: POINT, transparent: true, depthWrite: false }));
