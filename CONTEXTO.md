@@ -12,10 +12,8 @@
 publicado: **https://acupuntura-eta.vercel.app** (Vercel; cada `git push`
 para `main` atualiza o site em 1–2 min; o dono já usa com pacientes reais).
 
-⚠️ **Trabalho em andamento no ramo `auriculoterapia` (NÃO está no site).**
-Para continuar em outro computador: `git fetch` e
-`git checkout auriculoterapia`, depois `npm install`. Só juntar com
-`main` (merge + push) quando o dono disser **"publicar"**.
+✅ **Auriculoterapia publicada no site em 07/10/2026** (ramo
+`auriculoterapia` juntado com `main`; o ramo pode ser apagado).
 - **Auriculoterapia, etapa 1 (feita, aprovada como 1ª versão):** aba
   `/auriculoterapia` (botão no painel) com orelha 3D de escaneamento real
   (holograma ou pele real, esquerda/direita), 93 pontos da norma chinesa
@@ -23,7 +21,7 @@ Para continuar em outro computador: `git fetch` e
   mapa 2D (frente e dorso). O dono vai mandar **livros de auriculoterapia**
   (do notebook) para conferir pontos/textos e a **lista de pontos
   brasileiros** que ele usa.
-- **Auriculoterapia, etapa 2 (feita, falta o dono testar):** painel
+- **Auriculoterapia, etapa 2 (feita e publicada; o dono ainda vai testar com pacientes):** painel
   "Auriculoterapia — pontos sugeridos" no fim do resultado da ficha
   (`AuriculoPanel.tsx`, `lib/auriculo-sugestao.ts`,
   `data/auriculo-sugestoes.json` = pontos de cada uma das 46 síndromes +
@@ -41,8 +39,10 @@ deploy com `gh api repos/eliasjscaminhodacura-oss/Acupuntura/commits/<sha>/statu
 
 **Próxima coisa a fazer:**
 
-1. Em qualquer computador: `git pull` e `npm install` antes de começar
-   (e o ramo `auriculoterapia`, ver acima).
+1. Em qualquer computador: `git pull` e `npm install` antes de começar.
+   Próximo na Auriculoterapia: conferir pontos/textos com os livros que o
+   dono vai mandar, lista de pontos brasileiros, planilha de revisão,
+   etapa 3 (registro dos pontos por sessão).
 2. [x] Verificação em duas etapas da Vercel ativa com chave NOVA (07/10,
    Google Authenticator no celular do dono; códigos de recuperação anotados
    em papel por ele).
@@ -271,7 +271,7 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
 ## 8. Histórico (mais recente primeiro)
 
 ### 07/10/2026
-- **Auriculoterapia (etapa 1)** no ramo `auriculoterapia`: dono escolheu
+- **Auriculoterapia (etapas 1 e 2) publicada** a pedido do dono. Etapa 1 no ramo `auriculoterapia`: dono escolheu
   mapa chinês + pontos brasileiros (lista a enviar) e a versão completa
   (atlas + sugestão pela ficha + registro da sessão). Orelha escolhida pelo
   dono entre 3 modelos CC BY (escaneamento real). Conta Sketchfab criada
