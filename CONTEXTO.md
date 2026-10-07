@@ -30,9 +30,9 @@ deploy com `gh api repos/eliasjscaminhodacura-oss/Acupuntura/commits/<sha>/statu
 1. Em qualquer computador: `git pull` e `npm install` antes de começar.
    Nada a rodar no Supabase. O dono disse que vai trazer **novidades
    para acrescentar** na próxima sessão (07/10) — começar ouvindo o pedido.
-2. Ativar a **verificação em duas etapas da Vercel** com uma chave NOVA (a
-   tela de 06/10 foi cancelada porque a chave secreta apareceu numa aba de
-   pesquisa do Google). Usar um app autenticador no celular do dono.
+2. [x] Verificação em duas etapas da Vercel ativa com chave NOVA (07/10,
+   Google Authenticator no celular do dono; códigos de recuperação anotados
+   em papel por ele).
    Lembrete: plano Hobby não permite uso comercial (Pro ao começar a cobrar).
 3. **Dietética revisada por dois livros (06/10, aprovado pelo dono)** — ver
    histórico de 06/10. Se o dono ainda quiser revisar item a item: planilha
@@ -195,7 +195,7 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
        configuradas na Vercel; no Supabase, Site URL =
        `https://acupuntura-eta.vercel.app` e Redirect URLs =
        `https://acupuntura-eta.vercel.app/**` e `http://localhost:3000/**`.
-       [ ] Verificação em duas etapas da conta Vercel (ver "Onde paramos").
+       [x] Verificação em duas etapas da conta Vercel (07/10, chave nova).
 7. [x] Logomarca (04/10: logo nova do dono em `public/logo.jpg`).
        [ ] Depois: cobrança (Stripe), domínio próprio.
 8. [ ] **Antes de qualquer lançamento comercial: consultar advogado de LGPD**
@@ -251,6 +251,13 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
 - Termos de uso / política de privacidade (junto com o advogado de LGPD).
 
 ## 8. Histórico (mais recente primeiro)
+
+### 07/10/2026
+- Computador de trabalho: `git pull` do trabalho de 06/10 + `npm install`;
+  build OK.
+- Vercel: verificação em duas etapas trocada por chave nova (botão
+  "Replace" em Account Settings → Authentication), app Google
+  Authenticator no celular do dono; ele anotou os códigos de recuperação.
 
 ### 06/10/2026
 - Notebook: `git pull` do trabalho de 05/10 + `npm install`; build OK.
