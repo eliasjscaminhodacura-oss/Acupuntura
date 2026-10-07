@@ -76,6 +76,10 @@ create table if not exists public.fichas (
 -- tirados/acrescentados, recado). Adicionado em 05/10/2026.
 alter table public.fichas add column if not exists diet jsonb;
 
+-- Pontos de auriculoterapia escolhidos (síndromes consideradas, pontos,
+-- orelha, observações). Adicionado em 07/10/2026.
+alter table public.fichas add column if not exists auriculo jsonb;
+
 alter table public.fichas enable row level security;
 
 drop policy if exists "therapists_select_own_fichas" on public.fichas;

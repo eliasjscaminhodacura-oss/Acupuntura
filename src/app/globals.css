@@ -616,3 +616,47 @@ button.small { padding: 6px 12px; font-size: 13px; }
   from { opacity: 0; transform: translateY(12px); }
   to { opacity: 1; transform: none; }
 }
+
+/* Auriculoterapia na ficha */
+.auriculo h4 { margin: 16px 0 8px; color: var(--jade); }
+.auriculo-principio { font-size: 13px; margin: 6px 0 0; color: var(--ink); }
+.auriculo-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 14px;
+  margin-top: 14px;
+  align-items: start;
+}
+.auriculo-ear { padding: 6px; }
+@media (max-width: 700px) {
+  .auriculo-grid { grid-template-columns: 1fr; }
+  .auriculo-ear { grid-template-columns: 1fr 1fr; }
+}
+.auriculo-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 6px;
+}
+.auriculo-item { align-items: flex-start; font-size: 13px; }
+.auriculo-item .point-syn { display: block; }
+.auriculo-dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 5px; }
+.link-button {
+  background: none;
+  border: none;
+  padding: 0 2px;
+  color: var(--jade);
+  text-decoration: underline;
+  font-size: 12px;
+  cursor: pointer;
+}
+.auriculo-add { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 10px; }
+.auriculo-add select {
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--ink);
+  font: inherit;
+  font-size: 14px;
+  max-width: 100%;
+}

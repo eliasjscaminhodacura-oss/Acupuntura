@@ -20,7 +20,7 @@ export default async function FichaPage({ params }: { params: Promise<{ patientI
 
   const { data: ficha } = await supabase
     .from('fichas')
-    .select('*') // "*": funciona mesmo antes da coluna "diet" existir no banco
+    .select('*') // "*": funciona mesmo antes das colunas "diet"/"auriculo" existirem no banco
     .eq('patient_id', patientId)
     .order('created_at', { ascending: false })
     .limit(1)
@@ -33,6 +33,7 @@ export default async function FichaPage({ params }: { params: Promise<{ patientI
       initialAnswers={(ficha?.answers as Record<string, boolean>) ?? {}}
       initialComplaint={ficha?.chief_complaint ?? ''}
       initialDiet={ficha?.diet ?? null}
+      initialAuriculo={ficha?.auriculo ?? null}
       initialCreatedAt={ficha?.created_at ?? null}
       initialUpdatedAt={ficha?.updated_at ?? null}
     />

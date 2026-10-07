@@ -18,6 +18,7 @@ import {
   type BodyResult,
   type BodyView,
 } from './body-map';
+import { drawAuriculoSection, type AuriculoPdf } from './pdf-auriculo';
 
 type PatientInfo = {
   name: string;
@@ -218,7 +219,8 @@ export function buildPdfBlob(
   data: FichaData,
   answers: Answers,
   patient: PatientInfo,
-  logoDataUrl?: string
+  logoDataUrl?: string,
+  auriculo?: AuriculoPdf | null
 ): Blob {
   const doc = new jsPDF({ unit: 'mm', format: 'a4' });
   const pageW = doc.internal.pageSize.getWidth();
@@ -377,6 +379,22 @@ export function buildPdfBlob(
         y += lines.length * 3.6 + 1;
       }
     }
+  }
+
+  // Auriculoterapia: pontos escolhidos pelo terapeuta
+  if (auriculo && auriculo.pontos.length) {
+    doc.addPage();
+    y = drawAuriculoSection(doc, auriculo, PAGE_TOP, {
+      margin: MARGIN,
+      contentW,
+      safe,
+      title: (t, yy) => sectionTitle(doc, t, yy),
+      ensure: (yy, h) => {
+        if (yy + h <= PAGE_BOTTOM) return yy;
+        doc.addPage();
+        return PAGE_TOP;
+      },
+    });
   }
 
   // Sintomas: mesmo layout da tela (categoria > subcategoria > caixinhas)

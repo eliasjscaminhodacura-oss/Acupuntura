@@ -29,6 +29,9 @@ import DietPanel from './DietPanel';
 import VisitLog from './VisitLog';
 import { addEvent, loadEvents, recordChange, formatDateTimeBR, type FichaEvent } from '@/lib/ficha-eventos';
 import { normalizeDiet, type DietState } from '@/lib/dietetica';
+import AuriculoPanel from './AuriculoPanel';
+import { normalizeAuriculo, pontosEscolhidos, sindromesUsadas, sugerir, PONTO, type AuriculoState } from '@/lib/auriculo-sugestao';
+import { loadEarImages } from '@/lib/pdf-auriculo';
 
 const allData = appData as unknown as FichaData;
 
@@ -42,6 +45,7 @@ type Props = {
   initialAnswers: Answers;
   initialComplaint: string;
   initialDiet: unknown;
+  initialAuriculo: unknown;
   initialCreatedAt: string | null;
   initialUpdatedAt: string | null;
 };
@@ -52,6 +56,7 @@ export default function FichaForm({
   initialAnswers,
   initialComplaint,
   initialDiet,
+  initialAuriculo,
   initialCreatedAt,
   initialUpdatedAt,
 }: Props) {
@@ -62,8 +67,10 @@ export default function FichaForm({
   );
   const [complaint, setComplaint] = useState(initialComplaint);
   const [diet, setDiet] = useState<DietState>(() => normalizeDiet(initialDiet));
-  // true se o banco ainda não tem a coluna fichas.diet (schema.sql não rodado)
-  const [dietNotSaved, setDietNotSaved] = useState(false);
+  const [auriculo, setAuriculo] = useState<AuriculoState>(() => normalizeAuriculo(initialAuriculo));
+  // colunas opcionais que o banco ainda não tem (schema.sql não rodado):
+  // o resto da ficha continua sendo salvo
+  const [missingColumns, setMissingColumns] = useState<string[]>([]);
   const [saving, setSaving] = useState(false);
   const [savedAt, setSavedAt] = useState<string | null>(null);
   const [saveError, setSaveError] = useState<string | null>(null);
@@ -87,13 +94,15 @@ export default function FichaForm({
   const answersRef = useRef(answers);
   const complaintRef = useRef(complaint);
   const dietRef = useRef(diet);
-  const dietColumnMissing = useRef(false);
+  const auriculoRef = useRef(auriculo);
+  const missingRef = useRef<Set<string>>(new Set());
   const fichaIdRef = useRef(fichaId);
   const savingRef = useRef(false);
   const pendingRef = useRef(false);
   answersRef.current = answers;
   complaintRef.current = complaint;
   dietRef.current = diet;
+  auriculoRef.current = auriculo;
 
   // Só as perguntas que valem para o sexo do paciente
   const data = useMemo(() => dataForSex(allData, patient.sex), [patient.sex]);
@@ -147,7 +156,7 @@ export default function FichaForm({
     if (!dirty) return;
     const t = setTimeout(() => { void handleSave(); }, AUTOSAVE_DELAY_MS);
     return () => clearTimeout(t);
-  }, [answers, complaint, diet, dirty, saveRetry]);
+  }, [answers, complaint, diet, auriculo, dirty, saveRetry]);
 
   function changeAutoScroll(on: boolean) {
     setAutoScroll(on);
@@ -210,6 +219,7 @@ export default function FichaForm({
     const snapAnswers = answersRef.current;
     const snapComplaint = complaintRef.current;
     const snapDiet = dietRef.current;
+    const snapAuriculo = auriculoRef.current;
     const scores = computeScores(snapAnswers, data);
 
     let error: unknown = null;
@@ -235,12 +245,21 @@ export default function FichaForm({
         if (res.data) fichaIdRef.current = res.data.id;
         return res.error;
       };
-      error = await write(dietColumnMissing.current ? base : { ...base, diet: snapDiet });
-      // Banco sem a coluna "diet" (schema.sql ainda não rodado): salva o resto.
-      if (error && !dietColumnMissing.current && /diet/.test(String((error as { message?: string }).message))) {
-        dietColumnMissing.current = true;
-        setDietNotSaved(true);
-        error = await write(base);
+      const optional: Record<string, unknown> = { diet: snapDiet, auriculo: snapAuriculo };
+      const payload = () => ({
+        ...base,
+        ...Object.fromEntries(Object.entries(optional).filter(([k]) => !missingRef.current.has(k))),
+      });
+      error = await write(payload());
+      // Banco sem a coluna "diet"/"auriculo" (schema.sql ainda não rodado):
+      // tira a coluna que falta e salva o resto.
+      for (let i = 0; i < 2 && error; i++) {
+        const msg = String((error as { message?: string }).message);
+        const col = Object.keys(optional).find((k) => !missingRef.current.has(k) && msg.includes(k));
+        if (!col) break;
+        missingRef.current.add(col);
+        setMissingColumns([...missingRef.current]);
+        error = await write(payload());
       }
     }
 
@@ -263,7 +282,7 @@ export default function FichaForm({
     logChain.current = logChain.current.then(() => logSave(therapistId!, wasNew));
     const changedMeanwhile =
       pendingRef.current || answersRef.current !== snapAnswers || complaintRef.current !== snapComplaint ||
-      dietRef.current !== snapDiet;
+      dietRef.current !== snapDiet || auriculoRef.current !== snapAuriculo;
     pendingRef.current = false;
     if (changedMeanwhile) {
       setSaveRetry((n) => n + 1); // salva de novo o que mudou durante este salvamento
@@ -308,6 +327,9 @@ export default function FichaForm({
 
   async function handlePdf() {
     const logo = await loadLogoDataUrl();
+    const sindAur = sindromesUsadas(auriculo, top.map((s) => s.code));
+    const escolhidos = top.length ? pontosEscolhidos(auriculo, sugerir(data, answers, sindAur)) : [];
+    const ear = escolhidos.length ? await loadEarImages(auriculo.lado === 'direita') : null;
     const blob = buildPdfBlob(
       data,
       answers,
@@ -325,7 +347,13 @@ export default function FichaForm({
           .reverse()
           .map((e) => formatDateTimeBR(e.started_at) + (e.note ? ` (${e.note})` : '')),
       },
-      logo
+      logo,
+      ear && {
+        lado: auriculo.lado,
+        observacao: auriculo.observacao,
+        pontos: escolhidos.map((c) => PONTO.get(c)!),
+        imagens: ear,
+      }
     );
     downloadBlob(blob, `ficha-${patient.name.replace(/\s+/g, '-').toLowerCase()}.pdf`);
   }
@@ -491,7 +519,16 @@ export default function FichaForm({
           patientName={patient.name}
           diet={diet}
           onChange={(next) => { setDiet(next); setDirty(true); }}
-          notSaved={dietNotSaved}
+          notSaved={missingColumns.includes('diet')}
+        />
+
+        <AuriculoPanel
+          data={data}
+          ranked={top.map((s) => s.code)}
+          answers={answers}
+          state={auriculo}
+          onChange={(next) => { setAuriculo(next); setDirty(true); }}
+          notSaved={missingColumns.includes('auriculo')}
         />
       </div>
 

@@ -23,10 +23,18 @@ Para continuar em outro computador: `git fetch` e
   mapa 2D (frente e dorso). O dono vai mandar **livros de auriculoterapia**
   (do notebook) para conferir pontos/textos e a **lista de pontos
   brasileiros** que ele usa.
-- **Auriculoterapia, etapa 2 (começando):** pontos sugeridos no resultado
-  da ficha, a partir das síndromes/sintomas; terapeuta marca/desmarca,
-  escolhe orelha D/E/ambas; salvo na ficha e no PDF. Ligação síndrome →
-  pontos numa planilha para o dono revisar.
+- **Auriculoterapia, etapa 2 (feita, falta o dono testar):** painel
+  "Auriculoterapia — pontos sugeridos" no fim do resultado da ficha
+  (`AuriculoPanel.tsx`, `lib/auriculo-sugestao.ts`,
+  `data/auriculo-sugestoes.json` = pontos de cada uma das 46 síndromes +
+  regras por sintoma marcado). Automático: 3 síndromes mais fortes, 8 pontos
+  mais indicados; terapeuta marca/desmarca, acrescenta, escolhe orelha
+  (direita/esquerda/ambas) e escreve observações. Salvo em `fichas.auriculo`
+  (jsonb) e no PDF (`lib/pdf-auriculo.ts`, página com a orelha e os pontos).
+  ⚠️ **Rodar no Supabase** (SQL Editor):
+  `alter table public.fichas add column if not exists auriculo jsonb;`
+  — sem isso o painel avisa que as escolhas não ficam salvas (o resto da
+  ficha salva normal). Falta: planilha de revisão (como a da Dietética).
 - Etapa 3 (depois): registrar os pontos usados em cada sessão.
 
 **Jeito de trabalhar combinado com o dono:** testar no `localhost:3000`
