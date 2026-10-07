@@ -12,9 +12,8 @@
 publicado: **https://acupuntura-eta.vercel.app** (Vercel; cada `git push`
 para `main` atualiza o site em 1–2 min; o dono já usa com pacientes reais).
 
-⚠️ **Trabalho em andamento no ramo `corpo-real` (NÃO está no site).**
-Para continuar: `git fetch`, `git checkout corpo-real`, `npm install`.
-Só juntar com `main` quando o dono disser **"publicar"**.
+✅ **Corpo realista (etapas 1 e 2) publicado no site em 07/10/2026**
+(ramo `corpo-real` juntado com `main`; o ramo pode ser apagado).
 - **Corpo realista, etapa 1 (feita, falta o dono conferir):** o holograma do
   corpo usa corpos reais masculino/feminino (MakeHuman, CC0: malha base +
   alvos de gênero, mistura das 3 etnias, adulto jovem) em posição
@@ -28,7 +27,7 @@ Só juntar com `main` quando o dono disser **"publicar"**.
   cadeias braço/perna). Órgãos, ossos e sistemas ainda são as formas
   simples, levadas para dentro do corpo real pela correspondência.
   Dono aprovou a etapa 1 (07/10).
-- **Corpo realista, etapa 2 (feita, falta o dono ver):** órgãos com
+- **Corpo realista, etapa 2 (feita e publicada):** órgãos com
   anatomia real do **BodyParts3D** (DBCLS, **CC BY 4.0** — o cabeçalho
   dos OBJ ainda fala em CC BY-SA 2.1 JP, mas a licença atual do site é CC BY
   4.0; crédito no rodapé do mapa do corpo): coração, pulmões (o atlas só
