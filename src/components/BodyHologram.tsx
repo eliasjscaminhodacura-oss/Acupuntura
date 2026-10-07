@@ -172,6 +172,11 @@ export default function BodyHologram({ body, sex }: { body: BodyResult; sex: Sex
             </ul>
           </>
         )}
+        {mode === '3d' && !no3d && (
+          <p className="ear-credit" style={{ marginTop: 12 }}>
+            Corpo 3D: MakeHuman (CC0). Órgãos: BodyParts3D, © The Database Center for Life Science, licença CC BY 4.0.
+          </p>
+        )}
       </div>
     </div>
   );
