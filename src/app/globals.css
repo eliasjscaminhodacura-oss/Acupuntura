@@ -424,6 +424,80 @@ button.small { padding: 6px 12px; font-size: 13px; }
   .body3d-stage, .body3d-loading { height: 62vh; }
 }
 
+/* Auriculoterapia */
+.ear-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 18px;
+  margin-bottom: 10px;
+}
+.ear-controls .body3d-row-title { min-width: 0; }
+.ear-controls > button { margin-left: auto; }
+.ear3d-stage { background: radial-gradient(ellipse at 50% 40%, #12384a 0%, #0a1d29 60%, #06121a 100%); }
+.ear3d-wait {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5CE1E6;
+  font: 14px system-ui, sans-serif;
+}
+.ear2d {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 12px;
+  background: radial-gradient(ellipse at 50% 35%, #12384a 0%, #0a1d29 60%, #06121a 100%);
+}
+.ear2d-view { margin: 0; text-align: center; }
+.ear2d-view svg { width: 100%; height: auto; display: block; }
+.ear2d-view figcaption {
+  color: #5CE1E6;
+  font: 12px system-ui, sans-serif;
+  letter-spacing: .2em;
+  opacity: .8;
+}
+@media (max-width: 560px) {
+  .ear2d { grid-template-columns: 1fr; }
+  .ear-controls > button { margin-left: 0; }
+}
+.ear-card {
+  --reg: var(--jade);
+  margin-top: 14px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--reg);
+  border-radius: 10px;
+  background: var(--bg);
+}
+.ear-card-head { display: flex; align-items: flex-start; gap: 12px; }
+.ear-card-head > button { margin-left: auto; }
+.ear-card h3 { margin: 0; font-size: 18px; }
+.ear-card h4 { margin: 12px 0 4px; color: var(--jade); font-size: 14px; }
+.ear-card p { margin: 0; line-height: 1.5; }
+.ear-code {
+  background: #FF3B3B;
+  color: #fff;
+  font: 700 13px system-ui, sans-serif;
+  padding: 4px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+.ear-sub { color: var(--muted); font-size: 13px; margin-top: 2px; }
+.ear-note { color: var(--muted); font-size: 13px; font-style: italic; margin-top: 10px !important; }
+.ear-help { color: var(--muted); font-size: 13px; margin: 12px 0 6px; }
+.ear-group h4 {
+  margin: 16px 0 8px;
+  color: var(--jade);
+  border-left: 4px solid;
+  padding-left: 8px;
+}
+.ear-group h4 small { display: block; color: var(--muted); font-weight: normal; font-size: 12px; margin-top: 2px; }
+.ear-credit { color: var(--muted); font-size: 11px; font-style: italic; line-height: 1.5; }
+
 /* Orientação alimentar */
 .diet h4 { margin: 18px 0 8px; color: var(--jade); }
 .diet-help { color: var(--muted); font-size: 13px; margin: 0 0 12px; }

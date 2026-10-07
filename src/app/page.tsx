@@ -25,9 +25,12 @@ export default async function DashboardPage() {
         <LogoutButton />
       </div>
 
-      <div className="panel">
+      <div className="panel" style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
         <Link href="/pacientes/novo">
           <button>+ Novo paciente</button>
+        </Link>
+        <Link href="/auriculoterapia">
+          <button className="secondary">Auriculoterapia</button>
         </Link>
       </div>
 

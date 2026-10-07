@@ -8,17 +8,26 @@
 
 ## ▶️ ONDE PARAMOS (leia isto primeiro)
 
-**Última sessão: 06/10/2026 (notebook do dono).** 🎉 **O app está
-publicado na internet: https://acupuntura-eta.vercel.app** (Vercel, plano
-Hobby, conta `eliasjscaminhodacura-oss` entrando pelo GitHub). Cada `git
-push` para `main` atualiza o site sozinho em 1–2 min. O dono fez login no
-site e abriu as fichas — funcionando (também no celular). O dono já usa o
-site com pacientes reais. Feito nesta sessão (detalhes no histórico de
-06/10): site publicado; Supabase com Site URL/Redirect URLs do site;
-**Registro de atendimentos** na ficha (abertura, alterações, retornos do
-paciente) — tabela `ficha_eventos` já criada no Supabase; botões
-flutuantes ↑ início / ↓ final; **Dietética revisada com dois livros**.
-Tudo publicado; nada pendente no notebook.
+**Última sessão: 07/10/2026 (computador de trabalho).** 🎉 O app está
+publicado: **https://acupuntura-eta.vercel.app** (Vercel; cada `git push`
+para `main` atualiza o site em 1–2 min; o dono já usa com pacientes reais).
+
+⚠️ **Trabalho em andamento no ramo `auriculoterapia` (NÃO está no site).**
+Para continuar em outro computador: `git fetch` e
+`git checkout auriculoterapia`, depois `npm install`. Só juntar com
+`main` (merge + push) quando o dono disser **"publicar"**.
+- **Auriculoterapia, etapa 1 (feita, aprovada como 1ª versão):** aba
+  `/auriculoterapia` (botão no painel) com orelha 3D de escaneamento real
+  (holograma ou pele real, esquerda/direita), 93 pontos da norma chinesa
+  GB/T 13734-2008 com localização e indicações, busca, filtro por região,
+  mapa 2D (frente e dorso). O dono vai mandar **livros de auriculoterapia**
+  (do notebook) para conferir pontos/textos e a **lista de pontos
+  brasileiros** que ele usa.
+- **Auriculoterapia, etapa 2 (começando):** pontos sugeridos no resultado
+  da ficha, a partir das síndromes/sintomas; terapeuta marca/desmarca,
+  escolhe orelha D/E/ambas; salvo na ficha e no PDF. Ligação síndrome →
+  pontos numa planilha para o dono revisar.
+- Etapa 3 (depois): registrar os pontos usados em cada sessão.
 
 **Jeito de trabalhar combinado com o dono:** testar no `localhost:3000`
 e, quando ele disser **"publicar"**, rodar `npm run build`, atualizar este
@@ -27,9 +36,8 @@ deploy com `gh api repos/eliasjscaminhodacura-oss/Acupuntura/commits/<sha>/statu
 
 **Próxima coisa a fazer:**
 
-1. Em qualquer computador: `git pull` e `npm install` antes de começar.
-   Nada a rodar no Supabase. O dono disse que vai trazer **novidades
-   para acrescentar** na próxima sessão (07/10) — começar ouvindo o pedido.
+1. Em qualquer computador: `git pull` e `npm install` antes de começar
+   (e o ramo `auriculoterapia`, ver acima).
 2. [x] Verificação em duas etapas da Vercel ativa com chave NOVA (07/10,
    Google Authenticator no celular do dono; códigos de recuperação anotados
    em papel por ele).
@@ -113,6 +121,9 @@ próprio).
 | `src/app/auth/callback/route.ts` | destino do link de confirmação do e-mail de cadastro |
 | `src/app/pacientes/novo/page.tsx`, `src/app/pacientes/[patientId]/editar/page.tsx` | cadastro / correção de paciente |
 | `src/app/ficha/[patientId]/page.tsx` | abre a ficha mais recente do paciente |
+| `src/data/auriculo.json` + `src/data/auriculo-3d.json` + `src/lib/auriculo.ts` | Auriculoterapia: pontos (nome, chinês, região, localização, indicações, e onde ficam numa vista: `uv` 0–100) e as posições 3D/2D geradas por `npm run auriculo:posicionar` (`scripts/auriculo-posicionar.mjs`, raios na malha). Para corrigir um ponto: mudar o `uv` e rodar o script |
+| `public/auriculo/orelha.glb`, `frente.webp`, `dorso.webp` | orelha 3D (escaneamento "Human Ear" de thunk3d.scanner, Sketchfab, **CC BY 4.0 — crédito obrigatório no rodapé**), recortada/simplificada (~680 KB, meshopt), orelha ESQUERDA em mm (X para trás, Y para cima, Z para fora); imagens 2D renderizadas do mesmo modelo |
+| `src/lib/ear3d.ts` + `src/components/Ear3D.tsx`, `Ear2D.tsx`, `EarAtlas.tsx`, `src/app/auriculoterapia/page.tsx` | tela de Auriculoterapia. `src/lib/holo.ts` = material "holograma" comum ao corpo e à orelha. `.glb` liberado no `proxy.ts` como as imagens |
 | `src/data/dietetica.json` + `src/lib/dietetica.ts` + `src/components/DietPanel.tsx` + `src/lib/pdf-dieta.ts` | Orientação alimentar segundo a MTC: conteúdo (revisado pelo dono via planilha), lógica (síndromes escolhidas — automático = 3 mais fortes; tira do "Prefira" o que alguma síndrome manda evitar ou o que tem natureza térmica oposta; restrições do paciente), painel no fim do resultado e PDF A5 do paciente |
 | `supabase/schema.sql` | tabelas `patients` e `fichas` + RLS. **Já executado** no Supabase. Pode ser rodado de novo sem problema |
 | `CLAUDE.md` | lido automaticamente pelo Claude Code; importa este arquivo |
@@ -253,6 +264,13 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
 ## 8. Histórico (mais recente primeiro)
 
 ### 07/10/2026
+- **Auriculoterapia (etapa 1)** no ramo `auriculoterapia`: dono escolheu
+  mapa chinês + pontos brasileiros (lista a enviar) e a versão completa
+  (atlas + sugestão pela ficha + registro da sessão). Orelha escolhida pelo
+  dono entre 3 modelos CC BY (escaneamento real). Conta Sketchfab criada
+  via Epic Games para baixar. Processamento: recorte elíptico, orientação
+  pela vista lateral, simplificação (gltf-transform) — ferramentas só na
+  pasta temporária; o resultado está em `public/auriculo/`.
 - Computador de trabalho: `git pull` do trabalho de 06/10 + `npm install`;
   build OK.
 - Vercel: verificação em duas etapas trocada por chave nova (botão
