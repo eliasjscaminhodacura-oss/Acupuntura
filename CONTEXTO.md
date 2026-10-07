@@ -8,83 +8,64 @@
 
 ## ▶️ ONDE PARAMOS (leia isto primeiro)
 
-**Última sessão: 07/10/2026 (computador de trabalho).** 🎉 O app está
-publicado: **https://acupuntura-eta.vercel.app** (Vercel; cada `git push`
-para `main` atualiza o site em 1–2 min; o dono já usa com pacientes reais).
+**Última sessão: 07/10/2026 (computador de trabalho).** O dono vai
+continuar **no notebook dele**. O app está publicado em
+**https://acupuntura-eta.vercel.app** (Vercel; cada `git push` para `main`
+atualiza o site em 1–2 min; o dono já usa com pacientes reais).
+**Tudo o que foi feito em 07/10 está publicado** (`main`); não há trabalho
+pendente em ramo. Os ramos `auriculoterapia` e `corpo-real` já foram
+juntados com `main` e podem ser apagados.
 
-✅ **Corpo realista (etapas 1 e 2) publicado no site em 07/10/2026**
-(ramo `corpo-real` juntado com `main`; o ramo pode ser apagado).
-- **Corpo realista, etapa 1 (feita, falta o dono conferir):** o holograma do
-  corpo usa corpos reais masculino/feminino (MakeHuman, CC0: malha base +
-  alvos de gênero, mistura das 3 etnias, adulto jovem) em posição
-  anatômica (braços junto ao corpo, palmas para a frente), conforme o sexo
-  do paciente (sem sexo informado: botões "Corpo masculino/feminino").
-  `npm run corpo:gerar` (`scripts/corpo-real.mjs`) baixa o MakeHuman para
-  `scripts/.makehuman/` (fora do git), gera `public/corpo/*.glb` (~320 KB) e
-  `src/data/corpo-3d.json` (tabelas de correspondência mapa 2D → corpo real
-  e posição dos 71 pontos). `src/lib/body-warp.ts` faz a correspondência
-  (alturas: cabeça, queixo, C7, mamilos, umbigo, púbis; larguras do tronco;
-  cadeias braço/perna). Órgãos, ossos e sistemas ainda são as formas
-  simples, levadas para dentro do corpo real pela correspondência.
-  Dono aprovou a etapa 1 (07/10).
-- **Corpo realista, etapa 2 (feita e publicada):** órgãos com
-  anatomia real do **BodyParts3D** (DBCLS, **CC BY 4.0** — o cabeçalho
-  dos OBJ ainda fala em CC BY-SA 2.1 JP, mas a licença atual do site é CC BY
-  4.0; crédito no rodapé do mapa do corpo): coração, pulmões (o atlas só
-  tem brônquios/vasos — a superfície é gerada em volta deles), fígado,
-  vesícula, estômago, baço+pâncreas, intestinos, rins, bexiga, próstata.
-  Encaixe por fatias de altura comparando a pele do atlas com a do corpo
-  (`scripts/orgaos-bp3d.mjs`); períneo do atlas = ísquios − 2 cm. Corpo
-  feminino: útero+trompas e ovários de "Pelvic Organs from MRI"
-  (audreybyrd, Sketchfab, CC BY 4.0), baixado pelo dono para
-  `scripts/.pelve/` (fora do git; sem ele o gerador avisa e segue sem
-  útero). Arquivos: `public/corpo/orgaos-*.glb` (~400 KB).
-  Próxima: etapa 3) ossos, vasos, nervos reais e imagens novas no mapa
-  2D/PDF.
-
-✅ **Auriculoterapia publicada no site em 07/10/2026** (ramo
-`auriculoterapia` juntado com `main`; o ramo pode ser apagado).
-- **Auriculoterapia, etapa 1 (feita, aprovada como 1ª versão):** aba
-  `/auriculoterapia` (botão no painel) com orelha 3D de escaneamento real
-  (holograma ou pele real, esquerda/direita), 93 pontos da norma chinesa
-  GB/T 13734-2008 com localização e indicações, busca, filtro por região,
-  mapa 2D (frente e dorso). O dono vai mandar **livros de auriculoterapia**
-  (do notebook) para conferir pontos/textos e a **lista de pontos
-  brasileiros** que ele usa.
-- **Auriculoterapia, etapa 2 (feita e publicada; o dono ainda vai testar com pacientes):** painel
-  "Auriculoterapia — pontos sugeridos" no fim do resultado da ficha
-  (`AuriculoPanel.tsx`, `lib/auriculo-sugestao.ts`,
-  `data/auriculo-sugestoes.json` = pontos de cada uma das 46 síndromes +
-  regras por sintoma marcado). Automático: 3 síndromes mais fortes, 8 pontos
-  mais indicados; terapeuta marca/desmarca, acrescenta, escolhe orelha
-  (direita/esquerda/ambas) e escreve observações. Salvo em `fichas.auriculo`
-  (jsonb) e no PDF (`lib/pdf-auriculo.ts`, página com a orelha e os pontos).
-  Coluna `fichas.auriculo` **já criada no Supabase** (07/10, "Success"). Falta: planilha de revisão (como a da Dietética).
-- Etapa 3 (depois): registrar os pontos usados em cada sessão.
+Feito em 07/10 (detalhes no histórico):
+- **Vercel:** verificação em duas etapas com chave nova.
+- **Auriculoterapia** (aba `/auriculoterapia`): orelha 3D real (holograma
+  ou pele, esquerda/direita), 93 pontos da norma chinesa GB/T 13734-2008,
+  busca, filtro por região, mapa 2D. **Na ficha:** painel "Auriculoterapia —
+  pontos sugeridos" (síndromes + sintomas → pontos; terapeuta escolhe
+  pontos e orelha), salvo em `fichas.auriculo` e no PDF.
+- **Mapa do corpo realista:** corpos masculino/feminino reais (MakeHuman,
+  CC0) em posição anatômica, pelo sexo do paciente; órgãos com anatomia
+  real (BodyParts3D, CC BY 4.0); útero, trompas e ovários no corpo feminino
+  ("Pelvic Organs from MRI", CC BY 4.0). Os 71 pontos levados para o corpo
+  novo (aprovado pelo dono).
 
 **Jeito de trabalhar combinado com o dono:** testar no `localhost:3000`
 e, quando ele disser **"publicar"**, rodar `npm run build`, atualizar este
-arquivo, commit e push (a Vercel publica sozinha; conferir o status do
-deploy com `gh api repos/eliasjscaminhodacura-oss/Acupuntura/commits/<sha>/status`).
+arquivo, commit e push (a Vercel publica sozinha). Trabalhos grandes: num
+ramo separado até o "publicar". Nesta máquina o `gh` não está no PATH;
+para conferir a publicação basta ver se os arquivos novos respondem 200
+no site (ex.: `curl -I https://acupuntura-eta.vercel.app/corpo/masculino.glb`).
 
-**Próxima coisa a fazer:**
+**Próxima coisa a fazer (no notebook):**
 
-1. Em qualquer computador: `git pull` e `npm install` antes de começar.
-   Próximo na Auriculoterapia: conferir pontos/textos com os livros que o
-   dono vai mandar, lista de pontos brasileiros, planilha de revisão,
-   etapa 3 (registro dos pontos por sessão).
-2. [x] Verificação em duas etapas da Vercel ativa com chave NOVA (07/10,
-   Google Authenticator no celular do dono; códigos de recuperação anotados
-   em papel por ele).
-   Lembrete: plano Hobby não permite uso comercial (Pro ao começar a cobrar).
-3. **Dietética revisada por dois livros (06/10, aprovado pelo dono)** — ver
-   histórico de 06/10. Se o dono ainda quiser revisar item a item: planilha
-   `revisao/Dietetica-MTC-revisao.xlsx` (abas Leia-me, Síndromes,
-   Alimentos, Elementos, Receitas, Legenda). Quando ele salvar:
-   `npm run dietetica:importar` (mostra comentários e problemas; só grava
-   se não houver problemas), `npm run build`, commit e push.
-4. Depois: etapa 4 opcional da Dietética (receitas por IA), logomarca no
-   domínio próprio, Stripe, advogado de LGPD (seção 6).
+1. **Atualizar:** `git pull` e `npm install` (dependências novas de
+   desenvolvimento: `@gltf-transform/core`, `@gltf-transform/extensions`,
+   `meshoptimizer`). Conferir `npm run build`. Nada a rodar no Supabase.
+2. **Auriculoterapia — revisão com os livros:** o dono vai colocar os
+   livros (PDF/fotos) numa pasta do notebook e mandar a **lista de pontos
+   brasileiros** que usa. Conferir pontos, localizações, indicações e as
+   ligações síndrome → pontos (`src/data/auriculo.json`,
+   `src/data/auriculo-sugestoes.json`); acrescentar os pontos brasileiros;
+   montar planilha de revisão (como a da Dietética). Para mexer na posição
+   de um ponto: mudar o `uv` e rodar `npm run auriculo:posicionar`.
+3. **Corpo realista, etapa 3:** (3a, ~40 min) ossos, vasos (artérias e
+   veias), nervos, traqueia, esôfago e ureteres reais do BodyParts3D, no
+   mesmo esquema dos órgãos (`scripts/orgaos-bp3d.mjs`, `npm run
+   corpo:gerar`); (3b, 1–2 h) trocar o mapa 2D e a página do PDF pelas
+   imagens do corpo real (o 2D é a base dos 71 pontos — cuidado).
+   Para rodar `npm run corpo:gerar` no notebook: ele baixa sozinho o
+   MakeHuman e o BodyParts3D (~140 MB) para `scripts/.makehuman/` e
+   `scripts/.bodyparts3d/`; o modelo dos órgãos femininos tem que ser
+   baixado pelo dono no Sketchfab ("Pelvic Organs from MRI", GLB) e posto
+   em `scripts/.pelve/pelvic_organs_from_mri.glb` — sem ele o corpo
+   feminino é gerado sem útero/ovários (o gerador avisa).
+4. **Auriculoterapia, etapa 3:** registrar os pontos usados em cada sessão
+   (no Registro de atendimentos).
+5. Dietética: se o dono quiser revisar item a item, planilha
+   `revisao/Dietetica-MTC-revisao.xlsx` → `npm run dietetica:importar`.
+6. Depois: receitas por IA (opcional), domínio próprio, Stripe, advogado de
+   LGPD (seção 6). Lembrete: Vercel Hobby não permite uso comercial (Pro ao
+   começar a cobrar).
 
 ---
 
@@ -301,18 +282,33 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
 ## 8. Histórico (mais recente primeiro)
 
 ### 07/10/2026
-- **Auriculoterapia (etapas 1 e 2) publicada** a pedido do dono. Etapa 1 no ramo `auriculoterapia`: dono escolheu
-  mapa chinês + pontos brasileiros (lista a enviar) e a versão completa
-  (atlas + sugestão pela ficha + registro da sessão). Orelha escolhida pelo
-  dono entre 3 modelos CC BY (escaneamento real). Conta Sketchfab criada
-  via Epic Games para baixar. Processamento: recorte elíptico, orientação
-  pela vista lateral, simplificação (gltf-transform) — ferramentas só na
-  pasta temporária; o resultado está em `public/auriculo/`.
 - Computador de trabalho: `git pull` do trabalho de 06/10 + `npm install`;
   build OK.
 - Vercel: verificação em duas etapas trocada por chave nova (botão
   "Replace" em Account Settings → Authentication), app Google
   Authenticator no celular do dono; ele anotou os códigos de recuperação.
+  A chave antiga foi apagada do celular (testado com janela anônima).
+- **Auriculoterapia, etapa 1** (publicada): dono escolheu mapa chinês +
+  pontos brasileiros (lista a enviar) e a versão completa (atlas +
+  sugestão pela ficha + registro da sessão). Orelha escolhida pelo dono
+  entre 3 modelos CC BY: escaneamento real "Human Ear" (thunk3d.scanner,
+  CC BY 4.0, crédito no rodapé). Conta Sketchfab criada via Epic Games.
+  Processamento (recorte elíptico, vista lateral, simplificação com
+  gltf-transform) feito com ferramentas na pasta temporária; resultado em
+  `public/auriculo/`. `.glb` liberado no `proxy.ts` (como as imagens).
+- **Auriculoterapia, etapa 2** (publicada): pontos sugeridos na ficha;
+  coluna `fichas.auriculo` criada no Supabase pelo dono.
+- **Corpo realista, etapas 1 e 2** (publicadas): MakeHuman (CC0) montado
+  por script (malha base + alvos de gênero + esqueleto para pôr em posição
+  anatômica); pontos levados por `body-warp.ts`; órgãos do BodyParts3D
+  (licença atual CC BY 4.0) e útero/ovários de "Pelvic Organs from MRI"
+  (baixado pelo dono). Correção: o períneo do atlas é medido pelos ísquios
+  (as coxas se encostam na pele do atlas). Material holograma passou para
+  `src/lib/holo.ts`.
+- Conferência visual feita com Chrome sem tela controlado por script
+  (puppeteer-core e páginas de teste temporárias, já apagadas).
+- ⚠️ Este computador ficou sem memória duas vezes: o Claude Code desligou o
+  `npm run dev` e as ferramentas de imagem. Fechar programas antes.
 
 ### 06/10/2026
 - Notebook: `git pull` do trabalho de 05/10 + `npm install`; build OK.
