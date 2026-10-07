@@ -31,10 +31,7 @@ Para continuar em outro computador: `git fetch` e
   mais indicados; terapeuta marca/desmarca, acrescenta, escolhe orelha
   (direita/esquerda/ambas) e escreve observações. Salvo em `fichas.auriculo`
   (jsonb) e no PDF (`lib/pdf-auriculo.ts`, página com a orelha e os pontos).
-  ⚠️ **Rodar no Supabase** (SQL Editor):
-  `alter table public.fichas add column if not exists auriculo jsonb;`
-  — sem isso o painel avisa que as escolhas não ficam salvas (o resto da
-  ficha salva normal). Falta: planilha de revisão (como a da Dietética).
+  Coluna `fichas.auriculo` **já criada no Supabase** (07/10, "Success"). Falta: planilha de revisão (como a da Dietética).
 - Etapa 3 (depois): registrar os pontos usados em cada sessão.
 
 **Jeito de trabalhar combinado com o dono:** testar no `localhost:3000`
@@ -183,6 +180,8 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
   para LGPD e velocidade).
 - URL: `https://bgwyhakqicwmxxjgfbrn.supabase.co`
 - `supabase/schema.sql` executado com sucesso em 03/10/2026.
+- 07/10/2026: coluna `fichas.auriculo` (jsonb) criada no SQL Editor —
+  pontos de auriculoterapia escolhidos na ficha. Já feito.
 - 06/10/2026: tabela `ficha_eventos` (registro de atendimentos, com RLS)
   criada no SQL Editor — bloco final do `schema.sql`. Já feito; conferido
   (sem login a API devolve lista vazia).
