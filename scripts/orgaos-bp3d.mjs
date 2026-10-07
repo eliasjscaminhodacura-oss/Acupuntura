@@ -170,7 +170,9 @@ export function makeFit(atlas, body) {
   const zs = skin.map((p) => p[1]);
   const soles = Math.min(...zs);
   const headTop = Math.max(...zs);
-  const crotch = Math.min(...skin.filter((p) => Math.abs(p[0]) < 12 && p[1] > 600 && p[1] < 1000).map((p) => p[1]));
+  // períneo: ~2 cm abaixo da parte mais baixa do osso do quadril (ísquios).
+  // (Pela pele não dá: no atlas as coxas encostam uma na outra.)
+  const crotch = Math.min(...atlas.part(['hip bone']).P.map((p) => p[2])) - 20;
   const manubrium = atlas.part(['manubrium']).P;
   const jugular = Math.max(...manubrium.map((p) => p[2]));
   const knots = [[soles, body.alturas.soles], [crotch, body.alturas.crotch], [jugular, body.alturas.jugular], [headTop, body.alturas.headTop]];
@@ -205,7 +207,7 @@ export function makeFit(atlas, body) {
     return rows[rows.length - 1];
   };
   // nada desce abaixo do períneo (o fim do reto fica entre as nádegas)
-  const floor = crotch + 15;
+  const floor = crotch + 5;
   return ([x, y, z0]) => {
     const z = Math.max(z0, floor);
     const [, a, b] = lerpRow(z);
@@ -295,4 +297,63 @@ export function envelope(points, carve, { voxel = 5, radius = 24, isoFrac = 0.18
   for (const q of Fc) size.set(root(q[0]), (size.get(root(q[0])) ?? 0) + 1);
   const big = [...size.entries()].sort((a, b) => b[1] - a[1])[0][0];
   return { P, F: Fc.filter((q) => root(q[0]) === big) };
+}
+
+// Órgãos femininos: o BodyParts3D é de um homem, então útero, trompas e
+// ovários vêm de "Pelvic Organs from MRI" (audreybyrd, Sketchfab, CC BY 4.0
+// — ressonância de uma mulher de 25 anos). O arquivo GLB baixado fica em
+// scripts/.pelve/pelvic_organs_from_mri.glb (fora do git).
+// Encaixe: escala pelo tamanho real do útero com o colo (~9 cm), base da
+// vulva no períneo do corpo e bexiga logo atrás da parede da barriga.
+export const PELVE = new URL('scripts/.pelve/pelvic_organs_from_mri.glb', ROOT);
+
+export async function femalePelvis(NodeIO, THREE, body) {
+  if (!fs.existsSync(PELVE)) return null;
+  const doc = await new NodeIO().read(fileURLToPath(PELVE));
+  // keep = false: só mede (mínimos/máximos), sem guardar os vértices
+  const group = (name, keep = true) => {
+    const g = doc.getRoot().listNodes().find((n) => n.getName().startsWith(name));
+    const P = [];
+    const F = [];
+    const min = [Infinity, Infinity, Infinity];
+    const max = [-Infinity, -Infinity, -Infinity];
+    for (const n of g.listChildren()) {
+      const m = new THREE.Matrix4().fromArray(n.getWorldMatrix());
+      for (const p of n.getMesh().listPrimitives()) {
+        const a = p.getAttribute('POSITION');
+        const base = P.length;
+        const el = [];
+        const v = new THREE.Vector3();
+        for (let i = 0; i < a.getCount(); i++) {
+          a.getElement(i, el);
+          v.set(el[0], el[1], el[2]).applyMatrix4(m);
+          for (let k = 0; k < 3; k++) { min[k] = Math.min(min[k], v.getComponent(k)); max[k] = Math.max(max[k], v.getComponent(k)); }
+          if (keep) P.push([v.x, v.y, v.z]);
+        }
+        if (!keep) continue;
+        const idx = p.getIndices().getArray();
+        for (let i = 0; i < idx.length; i += 3) F.push([base + idx[i], base + idx[i + 1], base + idx[i + 2]]);
+      }
+    }
+    return { P, F, min, max };
+  };
+  const uterus = group('uterus-and-tubes');
+  const ovaries = group('ovaries');
+  const vulva = group('vulva', false);
+  const bladder = group('bladder', false);
+  const unit = body.mmPerUnit;
+  // escala: os dois ovários ocupam ~12 cm de largura
+  const s = 120 / unit / (ovaries.max[0] - ovaries.min[0]);
+  const cx = (uterus.min[0] + uterus.max[0]) / 2;
+  const bladderFront = bladder.max[2];
+  const ty = body.alturas.crotch + 2 - s * vulva.min[1];
+  // frente do corpo na altura da bexiga
+  const yb = ty + s * ((bladder.min[1] + bladder.max[1]) / 2);
+  const front = Math.max(...body.torso.filter((p) => Math.abs(p[0]) < 15 && Math.abs(p[1] - yb) < 4).map((p) => p[2]));
+  const tz = front - 18 / unit - s * bladderFront;
+  const fit = ([x, y, z]) => [(x - cx) * s, ty + y * s, tz + z * s];
+  return {
+    'Útero e trompas': { P: uterus.P.map(fit), F: uterus.F, tris: 3000 },
+    'Ovários': { P: ovaries.P.map(fit), F: ovaries.F, tris: 900 },
+  };
 }

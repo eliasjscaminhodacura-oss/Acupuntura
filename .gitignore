@@ -12,3 +12,4 @@ next-env.d.ts
 /.next-demo/
 scripts/.makehuman/
 scripts/.bodyparts3d/
+scripts/.pelve/

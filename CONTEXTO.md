@@ -27,10 +27,21 @@ Só juntar com `main` quando o dono disser **"publicar"**.
   (alturas: cabeça, queixo, C7, mamilos, umbigo, púbis; larguras do tronco;
   cadeias braço/perna). Órgãos, ossos e sistemas ainda são as formas
   simples, levadas para dentro do corpo real pela correspondência.
-  Próximas etapas: 2) órgãos com anatomia real (Z-Anatomy/BodyParts3D, CC
-  BY-SA — conferir licença com o dono); 3) ossos, vasos, nervos reais e
-  imagens novas no mapa 2D/PDF. O dono precisa conferir os 71 pontos no
-  corpo novo.
+  Dono aprovou a etapa 1 (07/10).
+- **Corpo realista, etapa 2 (feita, falta o dono ver):** órgãos com
+  anatomia real do **BodyParts3D** (DBCLS, **CC BY 4.0** — o cabeçalho
+  dos OBJ ainda fala em CC BY-SA 2.1 JP, mas a licença atual do site é CC BY
+  4.0; crédito no rodapé do mapa do corpo): coração, pulmões (o atlas só
+  tem brônquios/vasos — a superfície é gerada em volta deles), fígado,
+  vesícula, estômago, baço+pâncreas, intestinos, rins, bexiga, próstata.
+  Encaixe por fatias de altura comparando a pele do atlas com a do corpo
+  (`scripts/orgaos-bp3d.mjs`); períneo do atlas = ísquios − 2 cm. Corpo
+  feminino: útero+trompas e ovários de "Pelvic Organs from MRI"
+  (audreybyrd, Sketchfab, CC BY 4.0), baixado pelo dono para
+  `scripts/.pelve/` (fora do git; sem ele o gerador avisa e segue sem
+  útero). Arquivos: `public/corpo/orgaos-*.glb` (~400 KB).
+  Próxima: etapa 3) ossos, vasos, nervos reais e imagens novas no mapa
+  2D/PDF.
 
 ✅ **Auriculoterapia publicada no site em 07/10/2026** (ramo
 `auriculoterapia` juntado com `main`; o ramo pode ser apagado).

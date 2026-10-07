@@ -17,7 +17,7 @@ import * as THREE from 'three';
 import { fileURLToPath } from 'node:url';
 import { BODY_OUTLINE, POINTS, pointPositions } from '../src/lib/body-map.ts';
 import { warp, regionOf } from '../src/lib/body-warp.ts';
-import { ORGAOS, loadAtlas, makeFit, simplify } from './orgaos-bp3d.mjs';
+import { ORGAOS, femalePelvis, loadAtlas, makeFit, simplify } from './orgaos-bp3d.mjs';
 
 const ROOT = new URL('..', import.meta.url);
 const CACHE = new URL('scripts/.makehuman/', ROOT);
@@ -321,7 +321,7 @@ function build(sex) {
   }
   const jugular = (J('clavicle.L____head').y + J('clavicle.R____head').y) / 2;
   const torso = verts.filter((v) => v.arm < 0.3).map((v) => v.p);
-  return { pos, idx, warp: warpTable, pontos, problems, torso, alturas: { headTop, chin, c7, nipple, navelY, crotch, jugular, soles: 3 } };
+  return { pos, idx, warp: warpTable, pontos, problems, torso, mmPerUnit: ((ymax - ymin) * 100) / 431, alturas: { headTop, chin, c7, nipple, navelY, crotch, jugular, soles: 3 } };
 }
 
 function interp(table, x) {
@@ -365,6 +365,11 @@ for (const [sex, nome] of [['male', 'masculino'], ['female', 'feminino']]) {
     if (o.sexo && o.sexo !== sex) continue;
     const src = parts[o.key];
     orgaos[o.key] = await simplify(src.P.map(fit), src.F, o.tris);
+  }
+  if (sex === 'female') {
+    const fem = await femalePelvis(NodeIO, THREE, b);
+    if (!fem) console.log('AVISO: falta scripts/.pelve/pelvic_organs_from_mri.glb — corpo feminino sem útero e ovários');
+    for (const [k, o] of Object.entries(fem ?? {})) orgaos[k] = await simplify(o.P, o.F, o.tris);
   }
   await writeGlb(new URL(`public/corpo/orgaos-${nome}.glb`, ROOT), orgaos);
   console.log(nome, 'órgãos:', Object.entries(orgaos).map(([k, v]) => `${k} ${v.idx.length / 3}`).join(', '));
