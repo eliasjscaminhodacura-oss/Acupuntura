@@ -189,6 +189,25 @@ const ORGAN_DEPTH: Record<string, { z: number; rz: number }> = {
   'Rim': { z: -11, rz: 5 },
 };
 
+// Órgãos com anatomia real (BodyParts3D), já encaixados no corpo: cada
+// malha fica centrada no próprio meio, para o coração poder "bater".
+function buildRealOrgans(time: { value: number }, real: Map<string, THREE.BufferGeometry>) {
+  const g = new THREE.Group();
+  const meshes = new Map<string, THREE.Mesh[]>();
+  for (const [organ, geo] of real) {
+    geo.computeBoundingBox();
+    const c = geo.boundingBox!.getCenter(new THREE.Vector3());
+    geo.translate(-c.x, -c.y, -c.z);
+    geo.computeVertexNormals();
+    const mesh = named(new THREE.Mesh(geo, holoMaterial(CYAN, time, { base: 0.06, rim: 0.35, power: 1.8 })), organ);
+    mesh.position.copy(c);
+    mesh.userData.organ = organ;
+    meshes.set(organ, [mesh]);
+    g.add(mesh);
+  }
+  return { group: g, meshes };
+}
+
 function buildOrgans(time: { value: number }) {
   const g = new THREE.Group();
   const meshes = new Map<string, THREE.Mesh[]>();
@@ -300,6 +319,7 @@ export type BodyScene = {
 // de cada ponto na pele ([x, y, z, nx, ny, nz] por posição do ponto).
 export type BodyModel = {
   skin: THREE.BufferGeometry;
+  organs?: Map<string, THREE.BufferGeometry>; // nome do órgão -> malha real
   warp: Warp;
   pontos: Record<string, number[][]>;
 };
@@ -311,7 +331,7 @@ export function createBodyScene(model: BodyModel): BodyScene {
 
   const skin = buildSkin(time, model.skin);
   const bones = buildBones(time);
-  const organs = buildOrgans(time);
+  const organs = model.organs?.size ? buildRealOrgans(time, model.organs) : buildOrgans(time);
   const systems = buildSystems(time);
   const pointsGroup = new THREE.Group();
 
@@ -353,8 +373,8 @@ export function createBodyScene(model: BodyModel): BodyScene {
       for (const m of list) {
         const u = (m.material as THREE.ShaderMaterial).uniforms;
         u.uColor.value.set(h ? shade(ELEMENT_COLOR[h.element] ?? CYAN, 1.35) : CYAN);
-        u.uBase.value = h ? 0.12 + 0.4 * h.intensity : 0.05;
-        u.uRim.value = h ? 0.6 + 0.4 * h.intensity : 0.3;
+        u.uBase.value = h ? 0.12 + 0.4 * h.intensity : 0.07;
+        u.uRim.value = h ? 0.6 + 0.4 * h.intensity : 0.5;
         u.uOpacity.value = 1;
         m.userData.label = h ? `${organ} — ${Math.round(h.intensity * 100)}% (${h.element})` : `${organ} — sem alteração`;
         if (h && h.intensity > 0.99) organPulse.push(m);

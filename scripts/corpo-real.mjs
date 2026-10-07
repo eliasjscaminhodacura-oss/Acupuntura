@@ -14,8 +14,10 @@
 import fs from 'node:fs';
 import { Document, NodeIO } from '@gltf-transform/core';
 import * as THREE from 'three';
+import { fileURLToPath } from 'node:url';
 import { BODY_OUTLINE, POINTS, pointPositions } from '../src/lib/body-map.ts';
 import { warp, regionOf } from '../src/lib/body-warp.ts';
+import { ORGAOS, loadAtlas, makeFit, simplify } from './orgaos-bp3d.mjs';
 
 const ROOT = new URL('..', import.meta.url);
 const CACHE = new URL('scripts/.makehuman/', ROOT);
@@ -317,7 +319,9 @@ function build(sex) {
       return hit;
     });
   }
-  return { pos, idx, warp: warpTable, pontos, problems, alturas: { headTop, chin, c7, nipple, navelY, crotch } };
+  const jugular = (J('clavicle.L____head').y + J('clavicle.R____head').y) / 2;
+  const torso = verts.filter((v) => v.arm < 0.3).map((v) => v.p);
+  return { pos, idx, warp: warpTable, pontos, problems, torso, alturas: { headTop, chin, c7, nipple, navelY, crotch, jugular, soles: 3 } };
 }
 
 function interp(table, x) {
@@ -330,24 +334,40 @@ function interp(table, x) {
   return table[table.length - 1][1];
 }
 
-async function writeGlb(file, pos, idx) {
+// Grava um GLB com uma malha por nome ({ nome: { pos, idx } }).
+async function writeGlb(file, meshes) {
   const doc = new Document();
   const buf = doc.createBuffer();
-  const prim = doc.createPrimitive()
-    .setAttribute('POSITION', doc.createAccessor().setType('VEC3').setArray(new Float32Array(pos)).setBuffer(buf))
-    .setIndices(doc.createAccessor().setType('SCALAR').setArray(new Uint16Array(idx)).setBuffer(buf));
-  doc.createScene().addChild(doc.createNode('corpo').setMesh(doc.createMesh('corpo').addPrimitive(prim)));
-  await new NodeIO().write(file, doc);
+  const scene = doc.createScene();
+  for (const [name, { pos, idx }] of Object.entries(meshes)) {
+    const prim = doc.createPrimitive()
+      .setAttribute('POSITION', doc.createAccessor().setType('VEC3').setArray(new Float32Array(pos)).setBuffer(buf))
+      .setIndices(doc.createAccessor().setType('SCALAR').setArray(new Uint16Array(idx)).setBuffer(buf));
+    scene.addChild(doc.createNode(name).setMesh(doc.createMesh(name).addPrimitive(prim)));
+  }
+  await new NodeIO().write(fileURLToPath(file), doc);
 }
 
 const out = {
-  fonte: 'Corpos gerados com MakeHuman (malha base, alvos e esqueleto, licença CC0 1.0): adulto jovem, mistura igual das etnias, em posição anatômica.',
+  fonte: 'Corpos gerados com MakeHuman (malha base, alvos e esqueleto, licença CC0 1.0): adulto jovem, mistura igual das etnias, em posição anatômica. Órgãos: BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International (simplificados e encaixados em cada corpo).',
 };
 fs.mkdirSync(new URL('public/corpo/', ROOT), { recursive: true });
 let problems = [];
+const atlas = await loadAtlas();
+const parts = Object.fromEntries(ORGAOS.map((o) => [o.key, atlas.part(o.parts)]));
 for (const [sex, nome] of [['male', 'masculino'], ['female', 'feminino']]) {
   const b = build(sex);
-  await writeGlb(new URL(`public/corpo/${nome}.glb`, ROOT).pathname.replace(/^\/([A-Za-z]:)/, '$1'), b.pos, b.idx);
+  await writeGlb(new URL(`public/corpo/${nome}.glb`, ROOT), { corpo: { pos: b.pos, idx: b.idx } });
+  // órgãos do atlas encaixados neste corpo
+  const fit = makeFit(atlas, b);
+  const orgaos = {};
+  for (const o of ORGAOS) {
+    if (o.sexo && o.sexo !== sex) continue;
+    const src = parts[o.key];
+    orgaos[o.key] = await simplify(src.P.map(fit), src.F, o.tris);
+  }
+  await writeGlb(new URL(`public/corpo/orgaos-${nome}.glb`, ROOT), orgaos);
+  console.log(nome, 'órgãos:', Object.entries(orgaos).map(([k, v]) => `${k} ${v.idx.length / 3}`).join(', '));
   out[nome] = { warp: b.warp, pontos: b.pontos };
   problems = problems.concat(b.problems);
   console.log(nome, 'alturas', Object.fromEntries(Object.entries(b.alturas).map(([k, v]) => [k, +v.toFixed(1)])));

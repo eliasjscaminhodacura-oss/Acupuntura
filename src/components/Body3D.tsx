@@ -13,15 +13,25 @@ export type Corpo = 'masculino' | 'feminino';
 
 type CorpoData = { warp: Warp; pontos: Record<string, number[][]> };
 
-// Carrega a pele do corpo realista (sem compressão, ~320 KB).
-async function loadSkin(corpo: Corpo) {
-  const gltf = await new GLTFLoader().loadAsync(`/corpo/${corpo}.glb`);
-  let geo: THREE.BufferGeometry | null = null;
-  gltf.scene.traverse((o) => { if (!geo && (o as THREE.Mesh).isMesh) geo = (o as THREE.Mesh).geometry; });
-  if (!geo) throw new Error('modelo sem malha');
-  const g = geo as THREE.BufferGeometry;
-  g.computeVertexNormals();
-  return g;
+// Carrega a pele do corpo realista e os órgãos reais (sem compressão,
+// ~320 KB + ~400 KB). Os órgãos têm o nome do órgão no nó do arquivo.
+async function loadModel(corpo: Corpo) {
+  const loader = new GLTFLoader();
+  const [body, org] = await Promise.all([
+    loader.loadAsync(`/corpo/${corpo}.glb`),
+    loader.loadAsync(`/corpo/orgaos-${corpo}.glb`).catch(() => null),
+  ]);
+  let skin: THREE.BufferGeometry | null = null;
+  body.scene.traverse((o) => { if (!skin && (o as THREE.Mesh).isMesh) skin = (o as THREE.Mesh).geometry; });
+  if (!skin) throw new Error('modelo sem malha');
+  (skin as THREE.BufferGeometry).computeVertexNormals();
+  const organs = new Map<string, THREE.BufferGeometry>();
+  org?.scene.traverse((o) => {
+    if (!(o as THREE.Mesh).isMesh) return;
+    const name = (o.userData.name as string | undefined) ?? (o.parent?.userData.name as string | undefined) ?? o.name.replace(/_/g, ' ');
+    organs.set(name, (o as THREE.Mesh).geometry);
+  });
+  return { skin: skin as THREE.BufferGeometry, organs };
 }
 
 type Props = {
@@ -234,10 +244,10 @@ export default function Body3D({ corpo, body, selected, onSelect, onFail }: Prop
     };
     raf = requestAnimationFrame(loop);
 
-    loadSkin(corpo)
-      .then((skin) => {
-        if (disposed) { skin.dispose(); return; }
-        scene = createBodyScene({ skin, ...(corpo3d as unknown as Record<Corpo, CorpoData>)[corpo] });
+    loadModel(corpo)
+      .then(({ skin, organs }) => {
+        if (disposed) { skin.dispose(); organs.forEach((g) => g.dispose()); return; }
+        scene = createBodyScene({ skin, organs, ...(corpo3d as unknown as Record<Corpo, CorpoData>)[corpo] });
         world.add(scene.root);
         scene.setResult(cb.current.body);
         api.current = { scene, controls, camera, focus, rebuildLabels };

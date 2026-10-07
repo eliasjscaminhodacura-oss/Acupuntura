@@ -11,3 +11,4 @@ next-env.d.ts
 # cópia de demonstração (NEXT_DIST_DIR)
 /.next-demo/
 scripts/.makehuman/
+scripts/.bodyparts3d/
