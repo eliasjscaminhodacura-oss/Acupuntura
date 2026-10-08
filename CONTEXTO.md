@@ -31,8 +31,12 @@ Feito em 08/10 (detalhes no histórico):
 - **Aba "Dietoterapia Chinesa"** (publicada; pedido do dono para divulgar o
   método): tela `/dietoterapia` de consulta sem paciente (por síndrome,
   alimentos, receitas, 5 Elementos). Na tela inicial, botões apagados
-  "Fitoterapia (em breve)" e "Análise Facial (em breve)" — próximos
-  módulos que o dono quer oferecer.
+  "Fitoterapia (em breve)" — próximo módulo que o dono quer oferecer.
+- **Análise Facial segundo a MTC** (publicada): aba `/analise-facial`
+  (5 tipos do Ling Shu 64 com rostos desenhados em SVG, mapas do rosto Su
+  Wen 32 e Ling Shu 49, cores da tez, sinais) e painel na ficha (sinais
+  marcados → Elemento e síndromes, comparando com a anamnese; vai no PDF).
+  Coluna `fichas.facial` criada no Supabase pelo dono em 08/10.
 
 **Jeito de trabalhar combinado com o dono:** testar no `localhost:3000`
 e, quando ele disser **"publicar"**, rodar `npm run build`, atualizar este
@@ -64,8 +68,10 @@ trabalho (sem `gh` no PATH), ver se os arquivos novos respondem 200 no site.
    (no Registro de atendimentos).
 5. Dietética: se o dono quiser revisar item a item, planilha
    `revisao/Dietetica-MTC-revisao.xlsx` → `npm run dietetica:importar`.
-6. **Novos módulos anunciados na tela inicial ("em breve"):** Fitoterapia
-   e Análise Facial segundo a MTC — esperar o dono trazer o material/livros.
+6. **Fitoterapia** (anunciada "em breve" na tela inicial): esperar o dono
+   trazer o material/livros. **Análise Facial**: o dono deve revisar o
+   conteúdo (`src/data/facial.json`, feito sem livros, pelos clássicos);
+   se trouxer livros, conferir e citar.
 7. Depois: receitas por IA (opcional), domínio próprio, Stripe, advogado de
    LGPD (seção 6). Lembrete: Vercel Hobby não permite uso comercial (Pro ao
    começar a cobrar).
@@ -146,6 +152,7 @@ próprio).
 | `public/auriculo/orelha.glb`, `frente.webp`, `dorso.webp` | orelha 3D (escaneamento "Human Ear" de thunk3d.scanner, Sketchfab, **CC BY 4.0 — crédito obrigatório no rodapé**), recortada/simplificada (~680 KB, meshopt), orelha ESQUERDA em mm (X para trás, Y para cima, Z para fora); imagens 2D renderizadas do mesmo modelo |
 | `src/lib/ear3d.ts` + `src/components/Ear3D.tsx`, `Ear2D.tsx`, `EarAtlas.tsx`, `src/app/auriculoterapia/page.tsx` | tela de Auriculoterapia. `src/lib/holo.ts` = material "holograma" comum ao corpo e à orelha. `.glb` liberado no `proxy.ts` como as imagens |
 | `src/components/DietAtlas.tsx` + `src/app/dietoterapia/page.tsx` | aba Dietoterapia Chinesa (consulta sem paciente: por síndrome com nome por extenso, alimentos com filtros, receitas, 5 Elementos, referências) |
+| `src/data/facial.json` + `src/lib/facial.ts` + `src/components/FaceIllustration.tsx`, `FacialAtlas.tsx`, `FacialPanel.tsx` + `src/app/analise-facial/page.tsx` | Análise Facial: conteúdo (tipos, mapas, cores, sinais → síndromes), cálculo (`analisar`: constituição pelo formato do rosto; Elemento em destaque só sem empate), rostos desenhados em SVG (mesma pele de base com tom do Elemento — tez não é etnia), aba de consulta e painel da ficha (salvo em `fichas.facial`, texto no PDF) |
 | `src/data/dietetica.json` + `src/lib/dietetica.ts` + `src/components/DietPanel.tsx` + `src/lib/pdf-dieta.ts` | Orientação alimentar segundo a MTC: conteúdo (revisado pelo dono via planilha), lógica (síndromes escolhidas — automático = 3 mais fortes; tira do "Prefira" o que alguma síndrome manda evitar ou o que tem natureza térmica oposta; restrições do paciente), painel no fim do resultado e PDF A5 do paciente |
 | `supabase/schema.sql` | tabelas `patients` e `fichas` + RLS. **Já executado** no Supabase. Pode ser rodado de novo sem problema |
 | `CLAUDE.md` | lido automaticamente pelo Claude Code; importa este arquivo |
@@ -197,6 +204,8 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
   para LGPD e velocidade).
 - URL: `https://bgwyhakqicwmxxjgfbrn.supabase.co`
 - `supabase/schema.sql` executado com sucesso em 03/10/2026.
+- 08/10/2026: coluna `fichas.facial` (jsonb) criada no SQL Editor —
+  sinais da análise facial marcados na ficha. Já feito; conferido.
 - 07/10/2026: coluna `fichas.auriculo` (jsonb) criada no SQL Editor —
   pontos de auriculoterapia escolhidos na ficha. Já feito.
 - 06/10/2026: tabela `ficha_eventos` (registro de atendimentos, com RLS)
@@ -288,6 +297,13 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
 ## 8. Histórico (mais recente primeiro)
 
 ### 08/10/2026
+- **Análise Facial segundo a MTC** (pedido do dono, com "fotos" dos tipos):
+  explicado que fotos de pessoas reais não podem ser usadas (direitos e
+  imagem); o dono escolheu ilustrações desenhadas, consulta + painel na
+  ficha, e conteúdo pelos clássicos (sem livros). Na 1ª versão dos desenhos
+  cada tipo tinha uma cor de pele muito diferente (o tipo Água parecia uma
+  pessoa negra) — corrigido para a mesma pele de base com leve tom do
+  Elemento, com aviso de que tez não é etnia.
 - **Aba Dietoterapia Chinesa** (`/dietoterapia`, `DietAtlas.tsx`): mesma
   base do painel da ficha, para consulta e divulgação. Nomes das síndromes
   por extenso só nesta tela ("Defic. Yin do R" → "Deficiência de Yin do
