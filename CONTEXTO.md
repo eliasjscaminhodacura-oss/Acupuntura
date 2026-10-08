@@ -24,6 +24,10 @@ Feito em 08/10 (detalhes no histórico):
   `scripts/corpo-ilustrado/LEIA-ME.md`.
 - Antes disso (substituído pela ilustração, fica como reserva): órgãos com
   silhueta real e contorno 2D masculino/feminino no mapa antigo.
+- **Auriculoterapia revisada com 4 livros** do dono (publicada): 130 pontos
+  (eram 93), cuidados de segurança, fontes por ponto, referências,
+  sugestões revisadas, regra que tira pontos contraindicados e protocolos
+  prontos. O ramo `auriculo-revisao` já foi juntado com `main`.
 
 **Jeito de trabalhar combinado com o dono:** testar no `localhost:3000`
 e, quando ele disser **"publicar"**, rodar `npm run build`, atualizar este
@@ -36,13 +40,15 @@ trabalho (sem `gh` no PATH), ver se os arquivos novos respondem 200 no site.
 
 1. **Atualizar:** `git pull` e `npm install`. Conferir `npm run build`.
    Nada a rodar no Supabase.
-2. **Auriculoterapia — revisão com os livros:** o dono vai colocar os
-   livros (PDF/fotos) numa pasta do notebook e mandar a **lista de pontos
-   brasileiros** que usa. Conferir pontos, localizações, indicações e as
-   ligações síndrome → pontos (`src/data/auriculo.json`,
-   `src/data/auriculo-sugestoes.json`); acrescentar os pontos brasileiros;
-   montar planilha de revisão (como a da Dietética). Para mexer na posição
-   de um ponto: mudar o `uv` e rodar `npm run auriculo:posicionar`.
+2. **Auriculoterapia — o que falta da revisão:** o PDF do livro do Souza
+   (`C:\Users\Elias\Documents\ELIAS\ACUPUNTURA\auriculo completo  MARCELO PEREIRA.pdf`)
+   **não tem as páginas 36–207** (localização dos 200 pontos). Se o dono
+   mandar fotos dessas páginas (livro em papel), acrescentar os ~40 pontos
+   que só existem nele (Palato, Cordas vocais, Timo, Aorta, Coronárias,
+   Metabolismo, Ovário, Depressão, Febre, pontos do dorso etc.). O dono
+   também pode pedir para corrigir a posição de algum ponto novo (mudar o
+   `uv` em `auriculo.json` e rodar `npm run auriculo:posicionar`).
+   Opcional: planilha de revisão como a da Dietética.
 3. **Corpo ilustrado — se o dono pedir ajustes:** tronco um pouco estreito
    em relação à referência e uma pequena "ponta" na lateral do quadril
    feminino. Regras de encaixe em `scripts/corpo-ilustrado.mjs`
@@ -274,6 +280,25 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
 ## 8. Histórico (mais recente primeiro)
 
 ### 08/10/2026
+- **Auriculoterapia revisada com 4 livros** (pasta
+  `Documents\ELIAS\ACUPUNTURA`): Souza, *Tratado de Auriculoterapia*
+  (FIB, 2001; PDF escaneado, lido como imagem, faltam as p. 36–207);
+  Scavone, *Manual de Auriculoterapia* (2016; pontos chineses p. 207–243,
+  pontos mestres franceses p. 166–204); Neves, *Manual prático de
+  auriculoterapia* (2009; OCR ruim); SMS-Rio, *Auriculoterapia na APS*
+  (2024, CC BY-NC). Feito: `auriculo.json` com `referencias`, campos
+  `cuidado` e `fontes` por ponto (sem `fontes` = GB/T + Scavone); 37
+  pontos novos com códigos de região + letra (LOa Ansiedade, TGa Fome, ATa
+  Tálamo, COa Pulmão superior etc.), posicionados por régua a partir dos
+  pontos GB/T; sinônimos nos antigos (Olho 1/Visão 1, Ponto Zero/Diafragma,
+  Neurastenia = LO4, Cérebro = AT2,3,4i, Asma = AT1,2,4i); cuidados:
+  Suprarrenal (pressão alta), Rim (cálculo renal), Simpático (distensão
+  abdominal), Útero/Pelve/Abdômen (gestantes). `auriculo-sugestoes.json`
+  ganhou `evitar` (tira pontos da sugestão por sintoma/síndrome, com aviso)
+  e `protocolos` (Triângulo Cibernético, Ansiedade, Dor osteomuscular,
+  Tabagismo — botões no painel da ficha). Componente
+  `AuriculoRefs.tsx`; PDF mostra cuidados e referências. Scripts usados
+  ficaram na pasta temporária (não no projeto).
 - Notebook: `git pull` do trabalho de 07/10 + `npm install`; build OK.
 - Pedido do dono: órgãos no mapa 2D "mais reais". 1ª versão: silhuetas
   reais (do 3D, pela régua inversa do `body-warp`) e foto dos órgãos com
