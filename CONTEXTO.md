@@ -37,6 +37,12 @@ Feito em 08/10 (detalhes no histórico):
   Wen 32 e Ling Shu 49, cores da tez, sinais) e painel na ficha (sinais
   marcados → Elemento e síndromes, comparando com a anamnese; vai no PDF).
   Coluna `fichas.facial` criada no Supabase pelo dono em 08/10.
+- **Auriculoterapia com o Tratado de Souza** (publicada): 216 pontos
+  (86 novos do Souza, 43 no dorso — códigos D1–D43; frente com letras
+  LOe…, ATf…, COd… etc.), nome/nº de Souza nos equivalentes (campo
+  `souza`), quadro "Analgesia" (cap. X resumido + 10 programas dos caps.
+  XLIV/XLV em `auriculo.json → analgesia.programas`) e protocolo
+  "+ Analgesia" no painel da ficha.
 
 **Jeito de trabalhar combinado com o dono:** testar no `localhost:3000`
 e, quando ele disser **"publicar"**, rodar `npm run build`, atualizar este
@@ -49,15 +55,14 @@ trabalho (sem `gh` no PATH), ver se os arquivos novos respondem 200 no site.
 
 1. **Atualizar:** `git pull` e `npm install`. Conferir `npm run build`.
    Nada a rodar no Supabase.
-2. **Auriculoterapia — o que falta da revisão:** o PDF do livro do Souza
-   (`C:\Users\Elias\Documents\ELIAS\ACUPUNTURA\auriculo completo  MARCELO PEREIRA.pdf`)
-   **não tem as páginas 36–207** (localização dos 200 pontos). Se o dono
-   mandar fotos dessas páginas (livro em papel), acrescentar os ~40 pontos
-   que só existem nele (Palato, Cordas vocais, Timo, Aorta, Coronárias,
-   Metabolismo, Ovário, Depressão, Febre, pontos do dorso etc.). O dono
-   também pode pedir para corrigir a posição de algum ponto novo (mudar o
-   `uv` em `auriculo.json` e rodar `npm run auriculo:posicionar`).
-   Opcional: planilha de revisão como a da Dietética.
+2. **Auriculoterapia — falta do Souza:** o dono vai reescanear (modo
+   "Documento", 1 página por foto — o modo "Cartão de Identidade" ficou
+   ilegível) os programas de analgesia **2 (Adenoma da tireoide), 6 e 9
+   do cap. XLIV** (p. 336, 340, 343), o **nº 4 do cap. XLV** (~p. 350) e a
+   **Adenda 2** (p. 352). Acrescentar em `analgesia.programas` e tirar o
+   aviso de `programasNota`. Adendas 1 e 3 (obesidade, alcoolismo) só têm
+   figura sem nomes. Posições dos pontos novos são aproximadas: o dono pode
+   pedir ajustes (mudar `uv` e `npm run auriculo:posicionar`).
 3. **Corpo ilustrado — se o dono pedir ajustes:** tronco um pouco estreito
    em relação à referência e uma pequena "ponta" na lateral do quadril
    feminino. Regras de encaixe em `scripts/corpo-ilustrado.mjs`
@@ -281,6 +286,12 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
      antes de enviar (custo por uso; recurso do plano pago).
   - ⚠️ Nunca chamar de "dieta"/"prescrição" (Lei 8.234/1991: prescrição
     dietética é privativa do nutricionista). Aviso no PDF. Levar ao advogado.
+- **Analgesia/anestesia por acupuntura e auriculoterapia** (pedido do dono
+  em 08/10: "interessa aos profissionais"). Base: Souza, cap. X (p. 81–83:
+  vantagens da analgesia auricular, bloqueios) e cap. XLV (programas de
+  analgesia aurículo-sistêmica, p. 345+). Ideia: seção/protocolos na
+  Auriculoterapia. Cuidado: apresentar como analgesia complementar; anestesia
+  cirúrgica é ato médico — levar ao advogado junto com o resto.
 - **Vercel Hobby (grátis) não permite uso comercial**: ao começar a cobrar,
   mudar para o plano Pro (~US$ 20/mês).
 
@@ -297,6 +308,14 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
 ## 8. Histórico (mais recente primeiro)
 
 ### 08/10/2026
+- **Souza, Tratado de Auriculoterapia** (scans do dono em Downloads:
+  "Documento sem título 08-10-2026*.pdf"): lidos os 200 pontos (p. 97–205;
+  texto nas páginas ímpares, fotos nas pares) e os caps. X, XLIV e XLV.
+  Notas de leitura (resumo, não trecho) ficaram na pasta temporária da
+  sessão. Ferramentas: `pdfjs-dist` + `@napi-rs/canvas` para virar
+  imagem e recortar; imagem com os pontos por cima para conferir posições.
+  Um `next dev` antigo seguia rodando escondido com dados velhos (erro de
+  hidratação "215 vs 130"): encerrar o processo da porta 3000 e religar.
 - **Análise Facial segundo a MTC** (pedido do dono, com "fotos" dos tipos):
   explicado que fotos de pessoas reais não podem ser usadas (direitos e
   imagem); o dono escolheu ilustrações desenhadas, consulta + painel na
