@@ -504,6 +504,10 @@ button.small { padding: 6px 12px; font-size: 13px; }
 .ear-analgesia ul { margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.55; }
 .ear-programas { margin: 6px 0 0; padding-left: 20px; font-size: 14px; line-height: 1.5; }
 .ear-programas li { margin-bottom: 8px; }
+.analgesia h3 { margin: 18px 0 6px; color: var(--jade); font-size: 17px; }
+.anal-list, .anal-pontos { margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.55; }
+.anal-list li, .anal-pontos li { margin-bottom: 5px; }
+.anal-pontos { list-style: none; padding-left: 0; }
 .ear-refs { color: var(--muted); font-size: 12px; margin-top: 10px; }
 .ear-refs summary { cursor: pointer; font-weight: 600; }
 .ear-refs ul { margin: 6px 0 0; padding-left: 18px; line-height: 1.5; }

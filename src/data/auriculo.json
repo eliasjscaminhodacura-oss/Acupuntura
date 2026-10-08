@@ -5,14 +5,18 @@
     {"id":"Souza","texto":"SOUZA, Marcelo Pereira de. Tratado de Auriculoterapia. Brasília: FIB – Fisioterapia Integrada de Brasília, 2001."},
     {"id":"Scavone","texto":"SCAVONE, Alessandra Maria Porto. Manual de Auriculoterapia: acupuntura auricular francesa e chinesa. 2016."},
     {"id":"Neves","texto":"NEVES, Marcos Lisboa. Manual prático de auriculoterapia. Porto Alegre: Ed. do Autor, 2009."},
-    {"id":"SMS-Rio","texto":"RIO DE JANEIRO (RJ). Secretaria Municipal de Saúde (SMS-Rio/SUBPAV). Auriculoterapia na Atenção Primária à Saúde: ansiedade, dor osteomuscular e tabagismo. Rio de Janeiro, 2024. Elaboração: Ana Cecília de Oliveira Valdés, Esmeralda Vasconcellos Corrêa e Helene Frangakis de Amorim."}
+    {"id":"SMS-Rio","texto":"RIO DE JANEIRO (RJ). Secretaria Municipal de Saúde (SMS-Rio/SUBPAV). Auriculoterapia na Atenção Primária à Saúde: ansiedade, dor osteomuscular e tabagismo. Rio de Janeiro, 2024. Elaboração: Ana Cecília de Oliveira Valdés, Esmeralda Vasconcellos Corrêa e Helene Frangakis de Amorim."},
+    {"id":"Silvério-Lopes","texto":"SILVÉRIO-LOPES, Sandra (org.). Analgesia por Acupuntura. Curitiba: Omnipax, 2013. Acesso livre, CC BY-NC-ND 3.0."},
+    {"id":"Cassu & Luna","texto":"CASSU, Renata Navarro; LUNA, Stelio Pacca Loureiro. Aplicações da acupuntura para analgesia – artigo de revisão. MEDVEP, v. 2, n. 6, p. 121-126, 2004."},
+    {"id":"Martini & Becker","texto":"MARTINI, Jussara Gue; BECKER, Sandra Greice. A acupuntura na analgesia do parto: percepções das parturientes. Escola Anna Nery Revista de Enfermagem, v. 13, n. 3, p. 589-594, 2009."},
+    {"id":"Luiz et al.","texto":"LUIZ, Alexandre Bastos; BABINSKI, Márcio Antônio; FERREIRA, Arthur de Sá. Neurobiologia da analgesia induzida por acupuntura manual e eletroacupuntura: revisão de literatura. Cadernos de Naturologia e Terapias Complementares, v. 1, n. 1, p. 71-83, 2012."}
   ],
   "analgesia": {
-    "titulo": "Analgesia por auriculoterapia e acupuntura (Souza, cap. X)",
+    "titulo": "Analgesia por auriculoterapia e acupuntura",
     "aviso": "No Brasil, anestesia para cirurgia é ato médico. Use estes recursos como analgesia complementar — para dor, preparo e recuperação — e, em procedimentos, sempre junto com a equipe médica.",
     "secoes": [
       {
-        "titulo": "O que é",
+        "titulo": "O que é (Souza)",
         "itens": [
           "O mais correto é falar em analgesia: as agulhas tiram a dor, mas o tato e a pressão continuam (às vezes ficam até mais sensíveis); a sensação de calor e frio pode mudar.",
           "O paciente continua consciente e se mexe normalmente — pode conversar, colaborar, beber água.",
@@ -21,7 +25,7 @@
         ]
       },
       {
-        "titulo": "Pontos de base nos programas",
+        "titulo": "Pontos de base nos programas (Souza)",
         "itens": [
           "Shen Men (TF4), Simpático (AH6a) e Analgesia — centro da cimba (CO6,10i) — aparecem em praticamente todos os programas de analgesia do livro.",
           "Somam-se o Subcórtex (AT4) e os pontos da região a tratar (ex.: Odontalgia e Extração dentária para dentes; Períneo para episiotomia; Joelho, Quadril etc.).",
@@ -29,7 +33,7 @@
         ]
       },
       {
-        "titulo": "Preparo do paciente",
+        "titulo": "Preparo do paciente (Souza)",
         "itens": [
           "O maior bloqueio é a ansiedade. Antes do procedimento, faça sessões de relaxamento, e não sessões repetidas de “pré-anestesia” (elas podem criar resistência à acupuntura).",
           "Pontos que acalmam e relaxam: Shen Men (nas duas orelhas no preparo), Nervo vago, Relaxamento muscular, Subcórtex e Occipital; no corpo, Anmian (atrás do músculo esternocleidomastóideo, entre TA17 e VB20), VG26 e VG25 (ponta do nariz).",
@@ -38,7 +42,7 @@
         ]
       },
       {
-        "titulo": "Limites",
+        "titulo": "Limites (Souza)",
         "itens": [
           "Puxar ou manipular vísceras continua doloroso: o procedimento precisa ser lento e delicado.",
           "O tônus muscular não diminui (pode até aumentar): às vezes é preciso um relaxante ou calmante leve.",
@@ -46,11 +50,47 @@
         ]
       },
       {
-        "titulo": "Vantagens relatadas",
+        "titulo": "Vantagens relatadas (Souza)",
         "itens": [
           "Evita os riscos da anestesia química em quem tem diabetes, problemas cardíacos, asma ou alergias.",
           "Menos sangramento, cicatrização mais rápida, menos infecção, volta rápida da alimentação e das funções do intestino e dos rins.",
           "O alívio da dor pode durar horas depois do procedimento, reduzindo a necessidade de analgésicos."
+        ]
+      },
+      {
+        "titulo": "Como a acupuntura alivia a dor (Cassu & Luna; Luiz et al.; Martini & Becker)",
+        "itens": [
+          "O estímulo da agulha viaja pelos nervos até a medula e o cérebro (tálamo, hipotálamo), que liberam substâncias analgésicas do próprio corpo: endorfinas, encefalinas e dinorfinas, além de serotonina, noradrenalina e outras.",
+          "Também “fecha portões” da dor na medula (teoria do portão de controle). Por isso o efeito depende dos nervos da região estarem íntegros: em áreas sem sensibilidade (ex.: paralisias) a analgesia não acontece.",
+          "Nem todos respondem igual: de 10% a 40% das pessoas respondem pouco. Uma explicação estudada é o excesso de uma substância que bloqueia os opioides do corpo (colecistocinina).",
+          "Junto com a anestesia geral ou peridural, a eletroacupuntura chega a reduzir em até 50% a quantidade de anestésico, mas sozinha não costuma abolir toda a dor de uma cirurgia — reforça o papel complementar."
+        ]
+      },
+      {
+        "titulo": "Eletroacupuntura: frequências (Cassu & Luna; Luiz et al.; Silvério-Lopes)",
+        "itens": [
+          "2 Hz (baixa) libera encefalinas e betaendorfinas; 100 Hz (alta) libera dinorfina na medula.",
+          "O efeito mais forte vem de alternar 2 Hz e 100 Hz automaticamente (modo denso-disperso, trocando a cada ~3 segundos): os três tipos de opioides do corpo agem juntos e o paciente se acostuma menos ao estímulo.",
+          "Se o aparelho só permitir uma frequência, a baixa (2 Hz ou 15 Hz) tende a aliviar mais que a alta (100 Hz) usada sozinha.",
+          "Aumente a intensidade aos poucos, durante a fase de estímulo da onda, até o limite que o paciente tolera."
+        ]
+      },
+      {
+        "titulo": "Eletroacupuntura: contraindicações e cuidados (Silvério-Lopes; Cassu & Luna)",
+        "itens": [
+          "Não usar em: portadores de marcapasso; gestantes; prótese metálica na região a estimular; perda de sensibilidade (ex.: diabetes com neuropatia); quem não consegue entender ou responder ao terapeuta; epilepsia em atividade. Cuidado redobrado em cardiopatas e em febre ou doença aguda.",
+          "Não ligar um mesmo canal de um lado ao outro do corpo no tronco ou nos braços (ex.: IG4 direito com IG4 esquerdo): a corrente passaria pelo coração. Feche o circuito no mesmo lado (ex.: IG4 com IG10).",
+          "Prenda a garra (“jacaré”) no cabo da agulha, acomode os fios para não puxarem as agulhas e evite extremidades e face para estímulo elétrico.",
+          "Ao terminar: tire primeiro os cabos do aparelho, depois as garras das agulhas, e só então desligue. Use apenas aparelhos feitos para eletroacupuntura."
+        ]
+      },
+      {
+        "titulo": "Gestantes (Silvério-Lopes, cap. 9; Cassu & Luna)",
+        "itens": [
+          "Bem aplicada, a acupuntura tem risco muito baixo para mãe e bebê: agulhas superficiais, sem perfurar vasos e sem pontos que estimulem o útero.",
+          "Muitos autores evitam o 1º trimestre (para que um aborto espontâneo, comum nessa fase, não seja atribuído ao tratamento) e preferem tratar a partir do 3º trimestre.",
+          "Eletroacupuntura é contraindicada na gestação; E36, IG4 e VG20 (Baihui) estão entre os pontos citados como capazes de induzir contrações.",
+          "No parto, a acupuntura não altera a consciência da mãe, favorece o vínculo com o bebê e não impede outras formas de analgesia."
         ]
       }
     ],
@@ -195,7 +235,115 @@
         "sistemicos": "TA8 → CS5."
       }
     ],
-    "programasNota": "Programas do Tratado de Souza (caps. XLIV e XLV), resumidos. As Adendas (obesidade, tabagismo, alcoolismo) trazem só a figura da orelha, sem os nomes dos pontos. Sempre em conjunto com a equipe médica."
+    "programasNota": "Programas do Tratado de Souza (caps. XLIV e XLV), resumidos. As Adendas (obesidade, tabagismo, alcoolismo) trazem só a figura da orelha, sem os nomes dos pontos. Sempre em conjunto com a equipe médica.",
+    "protocolosDor": [
+      {
+        "nome": "Cefaleia / enxaqueca",
+        "pontos": [
+          "TF4",
+          "CO10",
+          "AH6a",
+          "CO6,10i",
+          "AT2,3,4i",
+          "AT1",
+          "AT3",
+          "AT2"
+        ],
+        "extra": "Conforme a causa: ansiedade (Ansiedade + Tensão), tensão muscular (Relaxamento muscular), irritabilidade (Fígado Yang), cervicalgia (Vértebras cervicais), nuca (Pescoço). Cefaleia pré-menstrual: Metabolismo ou Suprarrenal.",
+        "sessoes": "Mínimo de 5 sessões a cada 7–10 dias (a cada 15 dias se houver acupuntura sistêmica junto); depois algumas sessões espaçadas (20–30 dias). Na TPM, aplicar 3–5 dias antes da menstruação."
+      },
+      {
+        "nome": "LER / DORT",
+        "pontos": [
+          "TF4",
+          "CO10",
+          "AH6a",
+          "CO6,10i",
+          "AT2,3,4i"
+        ],
+        "extra": "Ponto da região dolorida (braço, antebraço, cotovelo…) + Subcórtex se a dor for aguda ou Suprarrenal se for crônica. Relaxamento muscular se houver contraturas ou dor difusa.",
+        "sessoes": "Cerca de 10 sessões, com intervalo de ~10 dias."
+      },
+      {
+        "nome": "Lombalgia / ciática",
+        "pontos": [
+          "TF4",
+          "CO10",
+          "AH6a",
+          "CO6,10i",
+          "COe"
+        ],
+        "extra": "Ponto local: lombalgia = Vértebras lombares e/ou Lumbago; lombociatalgia = Vértebras lombares + Ciático ou Coxa; ciatalgia = Ciático + Coxa. Inflamação: Suprarrenal ou Subcórtex.",
+        "sessoes": "5 a 10 sessões, intervalo de ~10 dias."
+      },
+      {
+        "nome": "Artrite / artrose",
+        "pontos": [
+          "TF4",
+          "CO10",
+          "AH6a",
+          "CO6,10i",
+          "TG2p"
+        ],
+        "extra": "Ponto da articulação dolorida (punho, joelho, quadril, artelhos…). Relaxamento muscular em geral não é necessário (dor localizada).",
+        "sessoes": "5 a 10 sessões, intervalo de ~10 dias."
+      },
+      {
+        "nome": "Dor no ombro",
+        "pontos": [
+          "TF4",
+          "CO10",
+          "AH6a",
+          "CO6,10i",
+          "SF4,5",
+          "SFc",
+          "COe"
+        ],
+        "extra": "Bursite ou tendinite: acrescentar Subcórtex.",
+        "sessoes": "5 a 10 sessões, intervalo de 7–10 dias."
+      },
+      {
+        "nome": "Fibromialgia",
+        "pontos": [
+          "TF4",
+          "CO10",
+          "AH6a",
+          "CO6,10i",
+          "COe"
+        ],
+        "extra": "Ponto da musculatura dolorida; Subcórtex (dor aguda/intensa) ou Suprarrenal (dor crônica e difusa). Pela ansiedade/depressão: Tensão, Ansiedade e Diafragma. Costuma responder melhor junto com acupuntura sistêmica.",
+        "sessoes": "8 a 10 sessões a cada 10 dias; melhora esperada a partir da 4ª sessão."
+      },
+      {
+        "nome": "Cólica menstrual (dismenorreia primária)",
+        "pontos": [
+          "TF4",
+          "CO10",
+          "AH6a",
+          "TF2"
+        ],
+        "extra": "Analgesia é opcional (o alívio vem do relaxamento do útero pelo Simpático). Investigar miomas, cistos e alterações hormonais.",
+        "sessoes": "Mínimo de 4 sessões, 3–5 dias antes da menstruação."
+      },
+      {
+        "nome": "Odontologia (pré-operatório)",
+        "pontos": [
+          "TF4",
+          "AH6a",
+          "CO15",
+          "LOa",
+          "LOn",
+          "CO10",
+          "COj",
+          "TG2p",
+          "AT4",
+          "CO6,10i"
+        ],
+        "extra": "Ansiedade (Ansiedade, Tensão, Shen Men, Simpático, Coração); sangramento (Rim, Metabolismo, Suprarrenal); maxilares (Subcórtex, Fossa triangular média/Pingchuan) e pontos locais (Maxila, Mandíbula, Dente). No corpo: E36, BP6, IG4, R7, E5, E6.",
+        "sessoes": "Sessão 3 a 7 dias antes da cirurgia. Em extração de terceiros molares, a auriculoterapia sozinha não mostrou redução da dor pós-operatória em estudo; o ganho principal é na ansiedade."
+      }
+    ],
+    "protocolosDorNota": "Protocolos de Silvério-Lopes & Seroiska (Analgesia por Acupuntura, 2013, cap. 1), a partir de revisão de 47 estudos de 2001–2012. Base comum: Shen Men, Rim e Simpático (Triângulo Cibernético) + Analgesia; Subcórtex para dor aguda, Suprarrenal para dor crônica e inflamatória."
   },
   "modelo": {
     "arquivo": "/auriculo/orelha.glb",

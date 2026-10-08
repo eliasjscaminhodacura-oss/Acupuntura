@@ -114,6 +114,6 @@
     { "nome": "Ansiedade", "fonte": "SMS-Rio", "principais": ["TF4", "CO10", "AH6a", "AT4", "CO15", "LOa"], "complementares": ["LO4", "CO12", "CO13"], "nota": "Triângulo + Subcórtex, Coração e Ansiedade." },
     { "nome": "Dor osteomuscular", "fonte": "SMS-Rio", "principais": ["TF4", "CO10", "AH6a", "AT4", "ATa"], "complementares": [], "nota": "Triângulo + Subcórtex e Tálamo, mais os pontos da região dolorida, na orelha do lado afetado." },
     { "nome": "Tabagismo", "fonte": "SMS-Rio", "principais": ["TF4", "CO14", "COa"], "complementares": ["CO10", "AH6a", "CO12", "CO15", "TG1,2i", "TGa", "TGc", "AT4", "AT2,3,4i", "LOa", "LOb"], "nota": "Shen Men + Pulmão 1 e 2; complementares conforme a abstinência (ansiedade, fome, irritabilidade)." },
-    { "nome": "Analgesia", "fonte": "Souza", "principais": ["TF4", "AH6a", "CO6,10i", "AT4"], "complementares": ["COl", "COe", "AT3", "D19"], "nota": "Shen Men, Simpático, Analgesia e Subcórtex, mais os pontos da região dolorida; preparo com Nervo vago e Relaxamento muscular. Veja “Analgesia” na aba Auriculoterapia." }
+    { "nome": "Analgesia", "fonte": "Souza", "principais": ["TF4", "AH6a", "CO6,10i", "AT4"], "complementares": ["COl", "COe", "AT3", "D19"], "nota": "Shen Men, Simpático, Analgesia e Subcórtex, mais os pontos da região dolorida; preparo com Nervo vago e Relaxamento muscular. Veja a aba Analgesia em Acupuntura." }
   ]
 }

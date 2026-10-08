@@ -1,6 +1,4 @@
-import { ANALGESIA, PONTOS, REFERENCIAS, type PontoAuricular } from '@/lib/auriculo';
-
-const NOME = new Map(PONTOS.map((p) => [p.codigo, p.nome]));
+import { REFERENCIAS, type PontoAuricular } from '@/lib/auriculo';
 
 // Cuidado (contraindicação) e fontes de um ponto, no cartão do ponto.
 export function PontoExtras({ ponto }: { ponto: PontoAuricular }) {
@@ -15,31 +13,14 @@ export function PontoExtras({ ponto }: { ponto: PontoAuricular }) {
   );
 }
 
-// Analgesia por auriculoterapia: o que é, preparo, limites e cuidados.
+// Atalho para a aba Analgesia em Acupuntura.
 export function AnalgesiaInfo() {
   return (
-    <details className="panel ear-analgesia">
-      <summary><strong>{ANALGESIA.titulo}</strong></summary>
-      <p className="ear-caution"><strong>⚠ </strong>{ANALGESIA.aviso}</p>
-      {ANALGESIA.secoes.map((s) => (
-        <div key={s.titulo}>
-          <h4>{s.titulo}</h4>
-          <ul>{s.itens.map((i) => <li key={i}>{i}</li>)}</ul>
-        </div>
-      ))}
-      <h4>Programas de analgesia do livro</h4>
-      <p className="ear-fontes">{ANALGESIA.programasNota}</p>
-      <ul className="ear-programas">
-        {ANALGESIA.programas.map((p) => (
-          <li key={p.nome}>
-            <strong>{p.nome}</strong> <span className="ear-fontes">(cap. {p.cap})</span>
-            {p.pontos.length > 0 && <div>Orelha: {p.pontos.map((c) => `${NOME.get(c) ?? c} (${c})`).join(', ')}{p.orelha ? ` — ${p.orelha.toLowerCase()}` : ''}.</div>}
-            {p.estimulacao && <div>{p.estimulacao}</div>}
-            {p.sistemicos && <div>Pontos do corpo: {p.sistemicos}</div>}
-          </li>
-        ))}
-      </ul>
-    </details>
+    <p className="panel ear-analgesia">
+      <strong>Analgesia:</strong> pontos analgésicos da orelha, protocolos por tipo de dor, eletroacupuntura e os
+      programas de analgesia cirúrgica de Souza estão na aba{' '}
+      <a href="/analgesia">Analgesia em Acupuntura</a>.
+    </p>
   );
 }
 

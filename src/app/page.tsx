@@ -32,6 +32,9 @@ export default async function DashboardPage() {
         <Link href="/auriculoterapia">
           <button className="secondary">Auriculoterapia</button>
         </Link>
+        <Link href="/analgesia">
+          <button className="secondary">Analgesia em Acupuntura</button>
+        </Link>
         <Link href="/dietoterapia">
           <button className="secondary">Dietoterapia Chinesa</button>
         </Link>

@@ -1,0 +1,136 @@
+{
+  "aviso": "Conteúdo de apoio ao terapeuta, resumido com nossas palavras a partir das obras citadas. No Brasil, anestesia para cirurgia é ato médico: use a acupuntura como analgesia complementar — para dor, preparo e recuperação — e, em procedimentos, sempre junto com a equipe médica.",
+  "fundamentos": [
+    { "titulo": "Analgesia, não anestesia", "fonte": "Souza; Silvério-Lopes", "itens": [
+      "As agulhas tiram ou diminuem a dor, mas o tato e a pressão continuam (às vezes até mais sensíveis); a sensação de calor e frio pode mudar.",
+      "O paciente fica consciente e se mexe normalmente — conversa, colabora, bebe água.",
+      "O efeito aparece 20 a 30 minutos depois de começar o estímulo e pode durar horas depois da sessão.",
+      "A chamada “anestesia por acupuntura” como recurso principal caiu em desuso; hoje o foco é a dor do dia a dia e o pré e pós-operatório."
+    ] },
+    { "titulo": "Como a acupuntura alivia a dor", "fonte": "Cassu & Luna; Luiz et al.; Martini & Becker", "itens": [
+      "O estímulo da agulha viaja pelos nervos até a medula e o cérebro (tálamo, hipotálamo), que liberam analgésicos do próprio corpo: endorfinas, encefalinas e dinorfinas, além de serotonina, noradrenalina e outras substâncias.",
+      "Também “fecha portões” da dor na medula (teoria do portão de controle). Por isso o efeito depende dos nervos estarem íntegros: em áreas sem sensibilidade (ex.: paralisias) a analgesia não acontece.",
+      "Os pontos analgésicos clássicos agem no corpo todo, não só no local da dor, porque os opioides liberados circulam pelo sistema nervoso."
+    ] },
+    { "titulo": "O que esperar", "fonte": "Cassu & Luna; Luiz et al.; Martini & Becker; Silvério-Lopes", "itens": [
+      "De 10% a 40% das pessoas respondem pouco. Uma explicação estudada é o excesso de uma substância que bloqueia os opioides do corpo (colecistocinina).",
+      "Junto com a anestesia geral ou peridural, a eletroacupuntura chega a reduzir em até 50% a quantidade de anestésico — mas sozinha não costuma abolir toda a dor de uma cirurgia.",
+      "Tensão e ansiedade são o maior bloqueio: trate a ansiedade antes (sessões de relaxamento), em vez de repetir sessões de “pré-anestesia”.",
+      "Dores com forte componente emocional (ex.: fibromialgia) respondem melhor quando a auriculoterapia é somada à acupuntura sistêmica."
+    ] },
+    { "titulo": "Preparo antes de um procedimento", "fonte": "Souza; Silvério-Lopes", "itens": [
+      "Sessão de acupuntura 3 a 7 dias antes da cirurgia (relatado em odontologia: menos ansiedade, menos edema e hematoma, cicatrização mais rápida e menos analgésico).",
+      "Pontos calmantes: Shen Men (nas duas orelhas), Nervo vago, Relaxamento muscular, Subcórtex, Occipital, Ansiedade e Tensão; no corpo, Anmian (atrás do esternocleidomastóideo, entre TA17 e VB20), VG26 e VG25.",
+      "Teste chinês: dias antes, estimular IG4 com a mão; se o paciente sente peso, inchaço ou formigamento subindo pelo braço, a resposta tende a ser boa. Orienta, mas não é conclusivo.",
+      "Limites: puxar vísceras continua doloroso (procedimento lento e delicado); o tônus muscular não diminui; náusea, suor e alterações de pressão não são bloqueados."
+    ] }
+  ],
+  "auriculo": {
+    "base": "Base dos protocolos: Shen Men, Rim e Simpático (o Triângulo Cibernético de Souza) + Analgesia. Acrescente Subcórtex para dor aguda, traumática ou pós-cirúrgica, e Suprarrenal para dor crônica e inflamatória (LER/DORT, bursite, tendinite, artrose). Relaxamento muscular quando há contratura de grandes grupos musculares.",
+    "pontos": [
+      { "codigo": "TF4", "porque": "“Porta da mente”: dispara a liberação de substâncias analgésicas. Único ponto em que todos os autores concordam (nome, uso e lugar)." },
+      { "codigo": "CO10", "porque": "Dor óssea, articular e dental, linfedema, cefaleia pré-menstrual. O Rim rege os ossos e a vitalidade." },
+      { "codigo": "AH6a", "porque": "Dor visceral: cólicas intestinais, biliares, renais e menstruais, dor de estômago; ajuda na taquicardia, suor e falta de ar de fundo nervoso." },
+      { "codigo": "CO6,10i", "porque": "Ponto “Analgesia” de Souza, no centro da concha superior: dores de cabeça e do sistema músculo-esquelético (articular, traumática, pós-operatória, tensional). Fácil de achar e de fixar." },
+      { "codigo": "TG2p", "porque": "Dor de processos inflamatórios crônicos e degenerativos (LER/DORT, bursite, tendinite, sinusite, fascite plantar, artrose, lombalgia). Também diurético. Evitar na pressão alta." },
+      { "codigo": "AT4", "porque": "Dor aguda, traumática ou pós-cirúrgica, com ou sem inflamação (fraturas, extrações, bursite, tendinite)." },
+      { "codigo": "COe", "porque": "Dor por contratura e tensão de grandes grupos musculares (lombociatalgia, cervicobraquialgia, torcicolo, cãibras). Não precisa em dores de pequenas articulações." }
+    ],
+    "fonte": "Silvério-Lopes & Seroiska (cap. 1), a partir de revisão de 47 estudos (2001–2012) e da comparação de 5 autores de auriculoterapia.",
+    "eletro": {
+      "texto": "Eletroestímulo na orelha é pouco usual porque dói: use agulhas pequenas (0,20×6 mm ou 0,25×15 mm), no máximo 4 pontos, paciente com bom autocontrole; atenção à vermelhidão e a hematomas ao retirar. Parâmetros: modulação em pacote (burst), polarizada, 100 Hz ou mais, 20 minutos.",
+      "pares": [
+        { "efeito": "Calmante", "negativo": "TF4", "positivo": "LOn" },
+        { "efeito": "Analgesia geral", "negativo": "TF4", "positivo": "CO6,10i" },
+        { "efeito": "Analgesia local", "negativo": "TF4", "positivo": null, "obs": "o ponto da região dolorida (ex.: Fronte, Ombro, Tornozelo)" },
+        { "efeito": "Dor visceral (cólicas)", "negativo": "AH6a", "positivo": null, "obs": "o ponto do órgão (ex.: Rim, Útero, Intestino grosso, Vesícula)" }
+      ]
+    },
+    "dort": "Protocolo usado em estudo com LER/DORT (Araújo & Zampar; Araújo & Silvério-Lopes): 10 sessões, 2 vezes por semana, com sangria no Ápice da orelha no início, e sementes por 48 h em Shen Men, Rim e Simpático (nas duas orelhas), Fígado (orelha direita), Baço (orelha esquerda) e os pontos das regiões doloridas (Ombro, Articulação do ombro, Cotovelo, Punho, Dedos, Vértebras cervicais). Reavaliados 3 anos depois, a maioria continuava com benefício."
+  },
+  "corpo": {
+    "classicos": [
+      { "ponto": "IG4 (Hegu)", "texto": "Analgésico de ação ampla (cabeça, membros superiores, tronco). Evitar na gestação." },
+      { "ponto": "E36 (Zusanli)", "texto": "Analgésico geral, muito estudado; membros inferiores. Evitar com eletro na gestação." },
+      { "ponto": "VB34 (Yanglingquan)", "texto": "Analgésico; relaxa tendões e músculos." },
+      { "ponto": "B60 (Kunlun)", "texto": "Analgésico; dores das costas e dos membros inferiores." },
+      { "ponto": "TA8", "texto": "Ação ampla (Souza); usado no programa “analgesia com uma agulha” (TA8 → CS5)." },
+      { "ponto": "E5 e o ponto Boca", "texto": "Analgesia da face, lábios e boca (Souza)." }
+    ],
+    "fonte": "Silvério-Lopes (cap. 5) e Souza (cap. X). Podem ser usados em qualquer dor e são ótimos para eletroacupuntura.",
+    "gestantes": [
+      "Bem aplicada, a acupuntura tem risco muito baixo para mãe e bebê: agulhas superficiais, sem perfurar vasos, sem pontos que estimulam o útero e sem pontos de “alta energia”.",
+      "Muitos autores evitam o 1º trimestre (para que um aborto espontâneo, comum nessa fase, não seja atribuído ao tratamento) e preferem tratar a partir do 3º trimestre.",
+      "Eletroacupuntura, magnetoterapia e a craniopuntura de Yamamoto (YNSA) não são recomendadas na gestação. E36, IG4 e VG20 (Baihui) estão entre os pontos citados como capazes de induzir contrações.",
+      "Lombalgia da gestante (Quimelli): pontos estudados como VG4, VG20, VB34, B23, B25, B60 e R3, a partir da 28ª semana, com boa aceitação (“não incomodou” ou “incomodou pouco”).",
+      "No parto, a acupuntura não altera a consciência da mãe, favorece o vínculo com o bebê, é barata e não impede outras formas de analgesia (Martini & Becker)."
+    ]
+  },
+  "eletro": {
+    "frequencias": [
+      "2 Hz (baixa) libera encefalinas e betaendorfinas; 100 Hz (alta) libera dinorfina na medula (Luiz et al.; Martini & Becker).",
+      "O efeito mais forte vem de alternar 2 Hz e 100 Hz automaticamente, trocando a cada ~3 segundos: os três tipos de opioides do corpo agem juntos e o paciente se acostuma menos (Luiz et al.; Cassu & Luna).",
+      "Se só puder usar uma frequência, a baixa (2 ou 15 Hz) tende a aliviar mais que 100 Hz sozinha (Luiz et al.).",
+      "Em cervicalgia tensional (estudo duplo-cego com 66 pessoas), 2500 Hz e depois 100 Hz deram mais alívio dentro de cada grupo, embora sem diferença estatística entre os grupos (Silvério-Lopes, cap. 10).",
+      "Regra prática do livro: dor aguda → sedação (frequência alta, ~20 min); dor crônica → tonificação (frequência baixa, por menos tempo) (Cassu & Luna)."
+    ],
+    "modulacao": [
+      "Pacote (burst), com ~3 a 4 s de estímulo e de repouso: a mais indicada para analgesia e sedação.",
+      "Contínua: para tonificar pontos.",
+      "Densa-dispersa (“bomba”): para mover linfa e líquidos (edema).",
+      "Aumente a intensidade aos poucos, na fase de estímulo da onda, até o limite que o paciente tolera."
+    ],
+    "polaridade": [
+      "Mesmo meridiano: pólo negativo (preto) no ponto mais perto da origem do meridiano. Ex.: IG4 (−) com IG10 (+) na dor do antebraço.",
+      "Meridianos diferentes no mesmo sentido: negativo no ponto anatomicamente mais perto da origem. Ex.: VB34 (−) com E36 (+).",
+      "Meridianos em sentidos opostos: negativo no ponto mais importante (analgésico clássico, ponto de comando ou ponto da dor). Ex.: B60 (−) com R8 (+).",
+      "Pontos paralelos ou muito próximos: tanto faz (pode usar modo despolarizado). Ex.: Xiyan, TA15 com VB21, B60 com VB40."
+    ],
+    "dorLocal": [
+      "Dor irradiada (cervicobraquialgia, lombociatalgia): monte os pares ao longo do trajeto da dor; a corrente vai do pólo negativo para o positivo.",
+      "Dor localizada aguda e intensa: eletrodos perto da dor, em paralelo ou “fechando um campo” sobre ela. Se a dor for de frio/umidade, prefira moxabustão.",
+      "Área dolorida maior que ~4 cm: “cercar o dragão” (agulhas em volta). Dor yang (calor, vermelhidão, aguda): negativo dentro, positivo em volta — dispersa. Dor yin (fria, pálida, profunda, crônica): positivo dentro, negativo em volta — aumenta o fluxo no local.",
+      "Pós-operatório (ortopedia, odontologia, oncologia, plástica): menos inflamação, edema e equimose, menos dor, movimento precoce, melhor cicatrização e sono.",
+      "Dor oncológica: abordagem sistêmica, somando todos os pontos analgésicos clássicos possíveis."
+    ],
+    "contra": [
+      "Não usar em: marcapasso; gestantes; prótese metálica na região a estimular; perda de sensibilidade (ex.: diabetes com neuropatia); quem não consegue entender ou responder ao terapeuta; epilepsia em atividade.",
+      "Cuidado em cardiopatas, febre e doenças agudas (Cassu & Luna)."
+    ],
+    "cuidados": [
+      "Não ligar um mesmo canal de um lado ao outro do corpo no tronco ou nos braços (ex.: IG4 direito com IG4 esquerdo): a corrente passaria pelo coração. Feche o circuito no mesmo lado (ex.: IG4 com IG10).",
+      "Prenda a garra (“jacaré”) no cabo da agulha; acomode os fios com presilhas ou fita para não puxarem as agulhas; evite estímulo elétrico nas extremidades e na face.",
+      "Ao terminar: tire primeiro os cabos do aparelho, depois as garras das agulhas, e só então desligue — desligar direto pode dar choque.",
+      "Use só aparelhos feitos para eletroacupuntura (um estudo encontrou apenas um aparelho do mercado brasileiro 100% conforme as normas)."
+    ],
+    "eletropuntura": [
+      "Eletrodos de superfície (caneta), sem agulha: bom para crianças e regiões sensíveis (dedos); em adultos, os resultados ainda são limitados.",
+      "Tonificar: onda contínua, abaixo de 50 Hz, 1 minuto por ponto. Sedar: pacote, acima de 100 Hz, 2 minutos por ponto. Faça primeiro todos os pontos a tonificar, depois os a sedar.",
+      "Teste a intensidade em você antes (ex.: Yintang ou IG20); a ponta não pode tocar metais (anéis, brincos) nem o cabo que o paciente segura; não estimular sobre implantes metálicos."
+    ]
+  },
+  "tecnicas": [
+    { "nome": "Craniopuntura de Yamamoto (YNSA)", "fonte": "Camilotti (cap. 2)", "itens": [
+      "Microssistema no couro cabeludo: somatotopia yin (frente, linha do cabelo) e yang (atrás). Cerca de 80% dos casos se resolvem pela yin — comece por ela e peça ao paciente para fazer o movimento que dói.",
+      "Agulhas 0,25×25 ou 0,25×40 mm, quase deitadas (15°), ~1 cm nos pontos e ~2 cm nas áreas, por ~20 minutos; aplicar com o paciente sentado.",
+      "Estudos: melhor que placebo na lombalgia aguda (menos dor e menos anti-inflamatório).",
+      "Contraindicações: trombose ou flebite; pressão alta no momento (em hipertensos controlados, comece pelos pontos “Y” e meça a pressão); feridas ou tumores no local; distúrbios de coagulação ou anticoagulantes; gestação."
+    ] },
+    { "nome": "Quiroacupuntura (Koryo Sooji Chim)", "fonte": "Simões (cap. 3)", "itens": [
+      "Resposta rápida pela inervação da mão; agulhas a 1–2 mm de profundidade por ~20 minutos, ou agulhas semipermanentes por 6 a 8 horas para analgesia mais duradoura.",
+      "Pontos-chave: D3 (equivale a IG4 — membros superiores, cabeça e tronco) e E39 (equivale a E36 — membros inferiores e abaixo da cintura), somados ao ponto da região da dor.",
+      "Seguro (não há órgãos vitais na mão) e prático em odontologia; estudos com melhora significativa na osteoartrose."
+    ] },
+    { "nome": "Magnetoterapia e magnetopuntura", "fonte": "Tano & Silvério-Lopes (cap. 4)", "itens": [
+      "Pastilhas de ferrite (250 a 1000 G) fixadas sobre o ponto. Relatos: 1000 G por 30 min com a face norte na pele reduzindo dor músculo-esquelética; pares de pontos perto da dor (ex.: B10 com VB21 no trapézio; B23 com B25 na lombar, alternando os pólos; E35 no joelho).",
+      "Dores agudas parecem responder mais rápido que as crônicas. As pesquisas ainda são fracas e não há dose definida — use com cautela.",
+      "Não usar em gestantes, cardiopatas graves, marcapasso, pacientes oncológicos (sobretudo perto do tumor) ou com sensibilidade ao material. Em crianças, no máximo 5 minutos por dia e cuidado com a ingestão das peças."
+    ] },
+    { "nome": "Laserpuntura", "fonte": "Silva (cap. 6); Erthal & Baggio (cap. 11)", "itens": [
+      "Luz vermelha para pontos superficiais; infravermelha para pontos profundos.",
+      "O mais usado é o laser AsGaAl (780–870 nm, 20–100 mW), que penetra 2–3 cm. Em estudo animal no E36 (830 nm, 30 mW, 6 s), laser e agulha aliviaram a dor de forma parecida — usar os dois juntos não somou efeito.",
+      "Alternativa sem agulha para quem tem medo ou restrição; os parâmetros ideais ainda são discutidos."
+    ] }
+  ],
+  "fontes": ["Silvério-Lopes", "Souza", "Cassu & Luna", "Luiz et al.", "Martini & Becker"]
+}
