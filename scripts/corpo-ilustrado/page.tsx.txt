@@ -1,0 +1,167 @@
+'use client';
+// PÁGINA TEMPORÁRIA: "fotografa" o corpo ilustrado (músculos, ossos, vasos e
+// órgãos) de frente e de costas — apagar depois (cópia em scripts/corpo-ilustrado/).
+import { useEffect, useState } from 'react';
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { MeshoptDecoder } from 'three/examples/jsm/libs/meshopt_decoder.module.js';
+import { mergeVertices } from 'three/examples/jsm/utils/BufferGeometryUtils.js';
+
+type View = 'front' | 'back';
+const PX = 5; // pixels por unidade (o corpo tem 440 unidades de altura)
+const PDF_BG = 0xf2f7f6; // fundo do corpo no PDF
+
+// cores de atlas (como na imagem de referência do dono)
+const COR: Record<string, string> = {
+  'Músculos': '#c2493d',
+  'Ossos': '#ece2cc',
+  'Artérias': '#d32626',
+  'Veias': '#2f56b8',
+  'Pulmão': '#e7a39a',
+  'Coração': '#b3262b',
+  'Fígado': '#8a2f22',
+  'Vesícula Biliar': '#4f8a34',
+  'Estômago': '#e7a08a',
+  'Baço-Pâncreas': '#c76a50',
+  'Intestino Delgado': '#efa898',
+  'Intestino Grosso': '#e0927c',
+  'Rim': '#9a3a2a',
+  'Bexiga': '#e8bc96',
+  'Próstata': '#cf8b7a',
+  'Útero e trompas': '#de8a96',
+  'Ovários': '#efc0ae',
+};
+
+function material(name: string) {
+  const vaso = name === 'Artérias' || name === 'Veias';
+  return new THREE.MeshPhysicalMaterial({
+    color: new THREE.Color(COR[name] ?? '#d99a8a'),
+    roughness: name === 'Ossos' ? 0.7 : 0.5,
+    metalness: 0,
+    clearcoat: vaso ? 0.6 : 0.3,
+    clearcoatRoughness: 0.35,
+    side: THREE.FrontSide,
+  });
+}
+
+async function loadMeshes(url: string) {
+  const loader = new GLTFLoader();
+  loader.setMeshoptDecoder(MeshoptDecoder);
+  const gltf = await loader.loadAsync(url);
+  gltf.scene.updateMatrixWorld(true);
+  const out = new Map<string, THREE.BufferGeometry>();
+  gltf.scene.traverse((o) => {
+    const m = o as THREE.Mesh;
+    if (!m.isMesh) return;
+    const name = (m.userData.name as string | undefined) ?? (m.parent?.userData.name as string | undefined) ?? m.name.replace(/_/g, ' ');
+    // copia para Float32 (o .glb pode guardar posições compactadas)
+    const src = m.geometry.getAttribute('position') as THREE.BufferAttribute;
+    const arr = new Float32Array(src.count * 3);
+    const v = new THREE.Vector3();
+    for (let i = 0; i < src.count; i++) { v.fromBufferAttribute(src, i).applyMatrix4(m.matrixWorld); arr.set([v.x, v.y, v.z], i * 3); }
+    let g = new THREE.BufferGeometry();
+    g.setAttribute('position', new THREE.BufferAttribute(arr, 3));
+    if (m.geometry.index) g.setIndex(Array.from(m.geometry.index.array as ArrayLike<number>));
+    g = mergeVertices(g, 0.01);
+    g.computeVertexNormals();
+    out.set(name, g);
+  });
+  return out;
+}
+
+function lights(scene: THREE.Scene, view: View) {
+  const s = view === 'front' ? 1 : -1;
+  scene.add(new THREE.AmbientLight(0xffffff, 0.4));
+  scene.add(new THREE.HemisphereLight(0xfff4ee, 0x4a2020, 0.9));
+  const key = new THREE.DirectionalLight(0xffffff, 2.3);
+  key.position.set(-0.45 * s, 0.6, 1 * s);
+  scene.add(key);
+  const fill = new THREE.DirectionalLight(0xffe6dc, 0.6);
+  fill.position.set(0.7 * s, -0.2, 0.8 * s);
+  scene.add(fill);
+}
+
+async function render(corpo: 'masculino' | 'feminino', view: View) {
+  const camadas = await loadMeshes(`/corpo/tmp-ilustrado-${corpo}.glb`);
+  const orgaos = await loadMeshes(`/corpo/orgaos-${corpo}.glb`);
+
+  // área: o corpo inteiro (X de -100 a 100, altura de 0 a 440)
+  const [u0, v0, u1, v1] = [-100, 0, 100, 440];
+  const W = (u1 - u0) * PX;
+  const H = (v1 - v0) * PX;
+  // câmera ortográfica: de frente olha de +Z; de costas, de -Z (assim o lado
+  // esquerdo do paciente aparece à esquerda, como numa vista de costas)
+  const cam = new THREE.OrthographicCamera(u0, u1, 440 - v0, 440 - v1, 1, 5000);
+  cam.position.set(0, 0, view === 'front' ? 1000 : -1000);
+  cam.up.set(0, 1, 0);
+  cam.lookAt(0, 0, 0);
+
+  // 3 passadas, cada uma por cima da anterior (como num atlas "aberto"):
+  // 1) ossos + músculos; 2) vasos; 3) órgãos (de costas, só os rins)
+  const passes: THREE.Scene[] = [new THREE.Scene(), new THREE.Scene(), new THREE.Scene()];
+  passes.forEach((sc) => lights(sc, view));
+  for (const [name, g] of camadas) {
+    const mesh = new THREE.Mesh(g, material(name));
+    (name === 'Artérias' || name === 'Veias' ? passes[1] : passes[0]).add(mesh);
+  }
+  for (const [name, g] of orgaos) {
+    if ((name === 'Rim') !== (view === 'back')) continue;
+    passes[2].add(new THREE.Mesh(g, material(name)));
+  }
+
+  const canvas = document.createElement('canvas');
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, preserveDrawingBuffer: true });
+  renderer.setPixelRatio(1);
+  renderer.setSize(W, H, false);
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.05;
+  renderer.autoClear = false;
+
+  const shoot = (bg: number | null) => {
+    renderer.setClearColor(bg ?? 0x000000, bg === null ? 0 : 1);
+    renderer.clear();
+    passes.forEach((sc, i) => {
+      if (i > 0) renderer.clearDepth();
+      renderer.render(sc, cam);
+    });
+  };
+
+  const save = async (file: string, dataUrl: string, meta?: unknown) => {
+    const res = await fetch('/api/public/zz-save', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ file, dataUrl, metaFile: meta ? 'corpo-ilustrado-img.json' : undefined, metaKey: `${corpo}-${view}`, meta }),
+    });
+    return (await res.json()).bytes as number;
+  };
+
+  shoot(null);
+  const webp = await save(`ilustrado-${corpo}-${view}.webp`, canvas.toDataURL('image/webp', 0.86), { box: [u0, v0, u1, v1] });
+  shoot(PDF_BG);
+  const jpg = await save(`ilustrado-${corpo}-${view}.jpg`, canvas.toDataURL('image/jpeg', 0.82));
+  renderer.dispose();
+  return `${corpo}-${view}: ${W}x${H}, webp ${Math.round(webp / 1024)} KB, jpg ${Math.round(jpg / 1024)} KB`;
+}
+
+export default function Ilustrar() {
+  const [log, setLog] = useState<string[]>([]);
+  useEffect(() => {
+    (async () => {
+      await MeshoptDecoder.ready;
+      const out: string[] = [];
+      for (const corpo of ['masculino', 'feminino'] as const) {
+        for (const view of ['front', 'back'] as const) {
+          try {
+            out.push(await render(corpo, view));
+          } catch (e) {
+            out.push(`${corpo}-${view}: ERRO ${String(e)}`);
+          }
+          setLog([...out]);
+        }
+      }
+      document.title = 'PRONTO';
+    })();
+  }, []);
+  return <pre id="log">{log.join('\n')}</pre>;
+}

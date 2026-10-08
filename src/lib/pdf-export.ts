@@ -11,7 +11,8 @@ import {
 import { shade, type Pt } from './radar3d';
 import { buildCycle5 } from './cycle5';
 import {
-  BODY_OUTLINE,
+  BREAST_LINES,
+  bodyOutline,
   ORGANS,
   buildBodyResult,
   pointPositions,
@@ -19,6 +20,11 @@ import {
   type BodyView,
 } from './body-map';
 import { drawAuriculoSection, type AuriculoPdf } from './pdf-auriculo';
+import { organs2d, organsImage } from './organs2d';
+import { illustrated } from './corpo-ilustrado';
+
+// Ilustrações dos órgãos já carregadas (data URL PNG), por vista.
+export type OrganImages = Partial<Record<BodyView, string>>;
 
 type PatientInfo = {
   name: string;
@@ -136,14 +142,27 @@ function drawCycle(doc: jsPDF, cx: number, cy: number, scores: Record<string, nu
 }
 
 // Uma vista do corpo (frente ou costas) em versão clara para impressão.
-function drawBodyView(doc: jsPDF, x0: number, y0: number, scale: number, view: BodyView, body: BodyResult) {
+function drawBodyView(
+  doc: jsPDF,
+  x0: number,
+  y0: number,
+  scale: number,
+  view: BodyView,
+  body: BodyResult,
+  corpo: 'masculino' | 'feminino',
+  organImgs?: OrganImages
+) {
   const P = ([x, y]: Pt): Pt => [x0 + x * scale, y0 + y * scale];
   const organScore = new Map(body.organs.map((o) => [o.organ, o]));
 
   doc.setLineWidth(0.4);
   doc.setDrawColor(...JADE);
   doc.setFillColor(242, 247, 246);
-  polygon(doc, BODY_OUTLINE.map(P), 'FD');
+  polygon(doc, bodyOutline(corpo).map(P), 'FD');
+  if (corpo === 'feminino' && view === 'front') {
+    doc.setLineWidth(0.25);
+    for (const l of BREAST_LINES) polygon(doc, l.map(P), 'S', false);
+  }
 
   if (view === 'back') {
     doc.setLineDashPattern([1, 1], 0);
@@ -154,7 +173,41 @@ function drawBodyView(doc: jsPDF, x0: number, y0: number, scale: number, view: B
     doc.setLineDashPattern([], 0);
   }
 
-  for (const o of ORGANS.filter((og) => og.view === view)) {
+  // órgãos com o formato real (mesmas silhuetas do mapa 2D da tela)
+  const realOrgans = organs2d(corpo).filter((o) => o.view === view);
+  // ilustração realista (PNG carregado pela tela antes de gerar o PDF)
+  const img = organImgs?.[view];
+  const area = organsImage(corpo, view);
+  if (img && area) {
+    const [ix, iy] = P([area.x, area.y]);
+    doc.addImage(img, 'PNG', ix, iy, area.w * scale, area.h * scale, `orgaos-${view}`, 'MEDIUM'); // comprimida
+  }
+  for (const o of realOrgans) {
+    const hit = organScore.get(o.organ);
+    if (img && area && !hit) continue; // com a ilustração, só os comprometidos ganham contorno
+    const color = hit ? ELEMENT_COLOR[hit.element] : '#B9CBC7';
+    const ops = o.loops.flatMap((loop) => [
+      { op: 'm', c: P(loop[0]) },
+      ...loop.slice(1).map((p) => ({ op: 'l', c: P(p) })),
+      { op: 'h', c: [] },
+    ]);
+    doc.setDrawColor(...hexToRgb(hit ? shade(color, 0.75) : color));
+    // path() só monta o contorno; a pintura é pedida em seguida (par/ímpar =
+    // respeita buracos, como o do intestino grosso)
+    doc.path(ops);
+    if (img && area) {
+      doc.setLineWidth(0.25 + 0.35 * hit!.intensity);
+      doc.setDrawColor(...hexToRgb(color));
+      doc.stroke();
+    } else {
+      doc.setLineWidth(0.25);
+      doc.setFillColor(...hexToRgb(hit ? shade(color, 1 + (1 - hit.intensity) * 0.65) : '#E6EFEC'));
+      doc.fillStrokeEvenOdd();
+    }
+  }
+
+  // reserva: formas simples, se as silhuetas não existirem
+  for (const o of realOrgans.length ? [] : ORGANS.filter((og) => og.view === view)) {
     const hit = organScore.get(o.organ);
     const color = hit ? ELEMENT_COLOR[hit.element] : '#B9CBC7';
     for (const s of o.shapes) {
@@ -198,6 +251,75 @@ function drawBodyView(doc: jsPDF, x0: number, y0: number, scale: number, view: B
   doc.setLineWidth(0.2);
 }
 
+// Vista do corpo ilustrado (atlas: músculos, ossos, vasos e órgãos), com o
+// contorno do corpo, os órgãos comprometidos e os pontos sugeridos.
+function drawIllustratedView(
+  doc: jsPDF,
+  x0: number,
+  y0: number,
+  scale: number,
+  view: BodyView,
+  body: BodyResult,
+  corpo: 'masculino' | 'feminino',
+  img: string
+) {
+  const il = illustrated(corpo, view);
+  if (!il) return;
+  const P = ([u, v]: Pt): Pt => [x0 + (u - il.box.x) * scale, y0 + (v - il.box.y) * scale];
+  const [ix, iy] = P([il.box.x, il.box.y]);
+  doc.addImage(img, 'JPEG', ix, iy, il.box.w * scale, il.box.h * scale, `ilus-${view}`, 'MEDIUM');
+
+  const path = (loops: Pt[][]) => doc.path(loops.flatMap((loop) => [
+    { op: 'm', c: P(loop[0]) },
+    ...loop.slice(1).map((p) => ({ op: 'l', c: P(p) })),
+    { op: 'h', c: [] },
+  ]));
+
+  // contorno do corpo
+  doc.setLineWidth(0.35);
+  doc.setDrawColor(...JADE);
+  path(il.outline);
+  doc.stroke();
+
+  // órgãos comprometidos: contorno na cor do elemento
+  const organScore = new Map(body.organs.map((o) => [o.organ, o]));
+  for (const o of il.organs) {
+    const hit = organScore.get(o.organ);
+    if (!hit) continue;
+    doc.setLineWidth(0.3 + 0.4 * hit.intensity);
+    doc.setDrawColor(...hexToRgb(ELEMENT_COLOR[hit.element]));
+    path(o.loops);
+    doc.stroke();
+  }
+
+  // pontos: miolo amarelo com borda escura (aparece sobre o vermelho dos músculos)
+  doc.setFontSize(6);
+  doc.setFont('helvetica', 'bold');
+  for (const p of body.points.filter((pt) => pt.def.view === view)) {
+    (il.pontos[p.code] ?? []).forEach((pos, i) => {
+      const [x, y] = P(pos);
+      doc.setLineWidth(0.25);
+      doc.setDrawColor(60, 30, 20);
+      doc.setFillColor(255, 216, 74);
+      doc.circle(x, y, 0.9, 'FD');
+      if (i === 0) {
+        const w = doc.getTextWidth(p.code);
+        doc.setFillColor(255, 255, 255);
+        doc.rect(x + 1.2, y - 1.5, w + 0.8, 2.4, 'F');
+        doc.setTextColor(...BRICK);
+        doc.text(p.code, x + 1.6, y + 0.6);
+      }
+    });
+  }
+
+  doc.setTextColor(...MUTED);
+  doc.setFontSize(8);
+  doc.text(view === 'front' ? 'FRENTE' : 'COSTAS', x0 + (il.box.w * scale) / 2, y0 - 2, { align: 'center' });
+  doc.setFont('helvetica', 'normal');
+  doc.setTextColor(...INK);
+  doc.setLineWidth(0.2);
+}
+
 function drawCheckbox(doc: jsPDF, x: number, y: number, checked: boolean) {
   const s = 3;
   doc.setLineWidth(0.25);
@@ -220,7 +342,9 @@ export function buildPdfBlob(
   answers: Answers,
   patient: PatientInfo,
   logoDataUrl?: string,
-  auriculo?: AuriculoPdf | null
+  auriculo?: AuriculoPdf | null,
+  organImgs?: OrganImages,
+  ilusImgs?: OrganImages // fotos do corpo ilustrado (JPEG), por vista
 ): Blob {
   const doc = new jsPDF({ unit: 'mm', format: 'a4' });
   const pageW = doc.internal.pageSize.getWidth();
@@ -339,8 +463,14 @@ export function buildPdfBlob(
     sectionTitle(doc, 'Mapa do corpo - órgãos comprometidos e pontos sugeridos', y);
     y += 9;
     const scale = 0.4;
-    drawBodyView(doc, MARGIN + 6, y, scale, 'front', body);
-    drawBodyView(doc, MARGIN + 96, y, scale, 'back', body);
+    const corpo = patient.sex === 'Feminino' ? 'feminino' : 'masculino';
+    if (ilusImgs?.front && ilusImgs.back && illustrated(corpo, 'front') && illustrated(corpo, 'back')) {
+      drawIllustratedView(doc, MARGIN + 6, y, scale, 'front', body, corpo, ilusImgs.front);
+      drawIllustratedView(doc, MARGIN + 96, y, scale, 'back', body, corpo, ilusImgs.back);
+    } else {
+      drawBodyView(doc, MARGIN + 6, y, scale, 'front', body, corpo, organImgs);
+      drawBodyView(doc, MARGIN + 96, y, scale, 'back', body, corpo, organImgs);
+    }
     y += 440 * scale + 6;
 
     doc.setFont('helvetica', 'bold');

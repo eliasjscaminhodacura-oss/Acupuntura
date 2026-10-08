@@ -62,7 +62,9 @@ export async function loadAtlas() {
   const zip = await download('isa_BP3D_4.0_obj_99.zip');
   if (!fs.existsSync(OBJ_DIR)) {
     console.log('descompactando o atlas…');
-    execFileSync('tar', ['-xf', fileURLToPath(zip), '-C', fileURLToPath(CACHE)]);
+    // no Windows usa o tar do sistema (o do Git Bash confunde "C:" com um servidor)
+    const tar = process.platform === 'win32' ? `${process.env.SystemRoot}\\System32\\tar.exe` : 'tar';
+    execFileSync(tar, ['-xf', fileURLToPath(zip), '-C', fileURLToPath(CACHE)]);
   }
   const elements = new Map();
   for (const list of ['isa_element_parts.txt', 'partof_element_parts.txt']) {
@@ -165,7 +167,9 @@ export async function simplify(P, F, tris) {
 // Monta a função que leva um ponto do atlas (mm) para dentro do corpo.
 // body: { torso: [[X, Y, Z], …] vértices do tronco do corpo, alturas
 // { soles, crotch, jugular, headTop } }
-export function makeFit(atlas, body) {
+// opts.clampFloor (padrão true): nada desce abaixo do períneo (bom para os
+// órgãos); o corpo ilustrado desliga para seguir pela virilha.
+export function makeFit(atlas, body, { clampFloor = true } = {}) {
   const skin = atlas.skin.P.map(([x, y, z]) => [x, z, -y]); // [lado, altura, frente]
   const zs = skin.map((p) => p[1]);
   const soles = Math.min(...zs);
@@ -209,7 +213,7 @@ export function makeFit(atlas, body) {
   // nada desce abaixo do períneo (o fim do reto fica entre as nádegas)
   const floor = crotch + 5;
   return ([x, y, z0]) => {
-    const z = Math.max(z0, floor);
+    const z = clampFloor ? Math.max(z0, floor) : z0;
     const [, a, b] = lerpRow(z);
     const X = x >= 0 ? (x / a.left) * b.left : (x / a.right) * b.right;
     const t = Math.max(-0.1, Math.min(1.1, (-y - a.back) / (a.front - a.back)));

@@ -1,0 +1,18 @@
+// ROTA TEMPORÁRIA (só para gerar as ilustrações do corpo) — apagar depois.
+import fs from 'node:fs';
+import path from 'node:path';
+
+export async function POST(req: Request) {
+  if (process.env.NODE_ENV !== 'development') return new Response('não', { status: 404 });
+  const { file, dataUrl, metaFile, metaKey, meta } = await req.json();
+  if (!/^[a-z0-9-]+\.(png|webp|jpg)$/.test(file)) return new Response('nome inválido', { status: 400 });
+  const bytes = Buffer.from(String(dataUrl).split(',')[1], 'base64');
+  fs.writeFileSync(path.join(process.cwd(), 'public', 'corpo', file), bytes);
+  if (metaFile && /^[a-z0-9-]+\.json$/.test(metaFile)) {
+    const mf = path.join(process.cwd(), 'src', 'data', metaFile);
+    const all = fs.existsSync(mf) ? JSON.parse(fs.readFileSync(mf, 'utf8')) : {};
+    all[metaKey] = meta;
+    fs.writeFileSync(mf, JSON.stringify(all, null, 2) + '\n');
+  }
+  return Response.json({ ok: true, bytes: bytes.length });
+}

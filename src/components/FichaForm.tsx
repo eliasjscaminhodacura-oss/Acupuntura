@@ -24,6 +24,8 @@ import { buildBodyResult } from '@/lib/body-map';
 import Logo, { loadLogoDataUrl } from './Logo';
 import type { PatientRecord } from './PatientForm';
 import { buildPdfBlob } from '@/lib/pdf-export';
+import { loadOrganImages } from '@/lib/organs2d';
+import { loadIllustrationsForPdf } from '@/lib/corpo-ilustrado';
 import { downloadBlob } from '@/lib/download';
 import DietPanel from './DietPanel';
 import VisitLog from './VisitLog';
@@ -327,6 +329,10 @@ export default function FichaForm({
 
   async function handlePdf() {
     const logo = await loadLogoDataUrl();
+    const corpoPdf = patient.sex === 'F' ? 'feminino' : 'masculino';
+    const ilusImgs = await loadIllustrationsForPdf(corpoPdf);
+    // as imagens antigas dos órgãos só são usadas se o corpo ilustrado faltar
+    const organImgs = ilusImgs.front && ilusImgs.back ? {} : await loadOrganImages(corpoPdf);
     const sindAur = sindromesUsadas(auriculo, top.map((s) => s.code));
     const escolhidos = top.length ? pontosEscolhidos(auriculo, sugerir(data, answers, sindAur)) : [];
     const ear = escolhidos.length ? await loadEarImages(auriculo.lado === 'direita') : null;
@@ -353,7 +359,9 @@ export default function FichaForm({
         observacao: auriculo.observacao,
         pontos: escolhidos.map((c) => PONTO.get(c)!),
         imagens: ear,
-      }
+      },
+      organImgs,
+      ilusImgs
     );
     downloadBlob(blob, `ficha-${patient.name.replace(/\s+/g, '-').toLowerCase()}.pdf`);
   }

@@ -14,7 +14,7 @@
 import fs from 'node:fs';
 import { Document, NodeIO } from '@gltf-transform/core';
 import * as THREE from 'three';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { BODY_OUTLINE, POINTS, pointPositions } from '../src/lib/body-map.ts';
 import { warp, regionOf } from '../src/lib/body-warp.ts';
 import { ORGAOS, femalePelvis, loadAtlas, makeFit, simplify } from './orgaos-bp3d.mjs';
@@ -181,7 +181,7 @@ function half2(y) {
 
 // ------------------------------------------------------------ 3D
 
-function build(sex) {
+export function build(sex) {
   const P = anatomical(bodyShape(sex));
   // usa só a pele do corpo; escala para o quadro do mapa (altura 431)
   const used = new Map();
@@ -348,35 +348,40 @@ async function writeGlb(file, meshes) {
   await new NodeIO().write(fileURLToPath(file), doc);
 }
 
-const out = {
-  fonte: 'Corpos gerados com MakeHuman (malha base, alvos e esqueleto, licença CC0 1.0): adulto jovem, mistura igual das etnias, em posição anatômica. Órgãos: BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International (simplificados e encaixados em cada corpo).',
-};
-fs.mkdirSync(new URL('public/corpo/', ROOT), { recursive: true });
-let problems = [];
-const atlas = await loadAtlas();
-const parts = Object.fromEntries(ORGAOS.map((o) => [o.key, atlas.part(o.parts)]));
-for (const [sex, nome] of [['male', 'masculino'], ['female', 'feminino']]) {
-  const b = build(sex);
-  await writeGlb(new URL(`public/corpo/${nome}.glb`, ROOT), { corpo: { pos: b.pos, idx: b.idx } });
-  // órgãos do atlas encaixados neste corpo
-  const fit = makeFit(atlas, b);
-  const orgaos = {};
-  for (const o of ORGAOS) {
-    if (o.sexo && o.sexo !== sex) continue;
-    const src = parts[o.key];
-    orgaos[o.key] = await simplify(src.P.map(fit), src.F, o.tris);
+// Só gera os arquivos quando rodado direto (npm run corpo:gerar); quem
+// importa este arquivo (ex.: scripts/corpo-ilustrado.mjs) usa só build().
+const isMain = process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href;
+if (isMain) {
+  const out = {
+    fonte: 'Corpos gerados com MakeHuman (malha base, alvos e esqueleto, licença CC0 1.0): adulto jovem, mistura igual das etnias, em posição anatômica. Órgãos: BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International (simplificados e encaixados em cada corpo).',
+  };
+  fs.mkdirSync(new URL('public/corpo/', ROOT), { recursive: true });
+  let problems = [];
+  const atlas = await loadAtlas();
+  const parts = Object.fromEntries(ORGAOS.map((o) => [o.key, atlas.part(o.parts)]));
+  for (const [sex, nome] of [['male', 'masculino'], ['female', 'feminino']]) {
+    const b = build(sex);
+    await writeGlb(new URL(`public/corpo/${nome}.glb`, ROOT), { corpo: { pos: b.pos, idx: b.idx } });
+    // órgãos do atlas encaixados neste corpo
+    const fit = makeFit(atlas, b);
+    const orgaos = {};
+    for (const o of ORGAOS) {
+      if (o.sexo && o.sexo !== sex) continue;
+      const src = parts[o.key];
+      orgaos[o.key] = await simplify(src.P.map(fit), src.F, o.tris);
+    }
+    if (sex === 'female') {
+      const fem = await femalePelvis(NodeIO, THREE, b);
+      if (!fem) console.log('AVISO: falta scripts/.pelve/pelvic_organs_from_mri.glb — corpo feminino sem útero e ovários');
+      for (const [k, o] of Object.entries(fem ?? {})) orgaos[k] = await simplify(o.P, o.F, o.tris);
+    }
+    await writeGlb(new URL(`public/corpo/orgaos-${nome}.glb`, ROOT), orgaos);
+    console.log(nome, 'órgãos:', Object.entries(orgaos).map(([k, v]) => `${k} ${v.idx.length / 3}`).join(', '));
+    out[nome] = { warp: b.warp, pontos: b.pontos };
+    problems = problems.concat(b.problems);
+    console.log(nome, 'alturas', Object.fromEntries(Object.entries(b.alturas).map(([k, v]) => [k, +v.toFixed(1)])));
   }
-  if (sex === 'female') {
-    const fem = await femalePelvis(NodeIO, THREE, b);
-    if (!fem) console.log('AVISO: falta scripts/.pelve/pelvic_organs_from_mri.glb — corpo feminino sem útero e ovários');
-    for (const [k, o] of Object.entries(fem ?? {})) orgaos[k] = await simplify(o.P, o.F, o.tris);
-  }
-  await writeGlb(new URL(`public/corpo/orgaos-${nome}.glb`, ROOT), orgaos);
-  console.log(nome, 'órgãos:', Object.entries(orgaos).map(([k, v]) => `${k} ${v.idx.length / 3}`).join(', '));
-  out[nome] = { warp: b.warp, pontos: b.pontos };
-  problems = problems.concat(b.problems);
-  console.log(nome, 'alturas', Object.fromEntries(Object.entries(b.alturas).map(([k, v]) => [k, +v.toFixed(1)])));
+  fs.writeFileSync(new URL('src/data/corpo-3d.json', ROOT), JSON.stringify(out) + '\n');
+  console.log('Corpos e pontos gerados.');
+  if (problems.length) { console.log('PROBLEMAS:\n- ' + problems.join('\n- ')); process.exitCode = 1; }
 }
-fs.writeFileSync(new URL('src/data/corpo-3d.json', ROOT), JSON.stringify(out) + '\n');
-console.log('Corpos e pontos gerados.');
-if (problems.length) { console.log('PROBLEMAS:\n- ' + problems.join('\n- ')); process.exitCode = 1; }

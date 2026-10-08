@@ -46,10 +46,42 @@ function smoothClosed(points: Pt[], steps = 5): Pt[] {
   return out;
 }
 
-export const BODY_OUTLINE: Pt[] = (() => {
-  const left = HALF.slice(1, -1).reverse().map(([x, y]) => [BODY_W - x, y] as Pt);
-  return smoothClosed([...HALF, ...left]);
-})();
+function mirrorClose(half: Pt[]): Pt[] {
+  const left = half.slice(1, -1).reverse().map(([x, y]) => [BODY_W - x, y] as Pt);
+  return smoothClosed([...half, ...left]);
+}
+
+// Contorno neutro (usado quando o sexo não é informado).
+export const BODY_OUTLINE: Pt[] = mirrorClose(HALF);
+
+// Variações do contorno por sexo: só o tronco muda (ombros, cintura,
+// quadril); cabeça, braços, pernas e os 71 pontos ficam iguais.
+const AJUSTE: Record<'masculino' | 'feminino', Record<string, Pt>> = {
+  masculino: {
+    '110,70': [111, 70], '122,76': [124, 76], '140,81': [143, 81], '150,90': [153, 91], '156,110': [158, 111],
+    '135,140': [136, 140], '134,220': [133, 220], '137,244': [135, 244], '138,272': [137, 272],
+  },
+  feminino: {
+    '140,81': [137, 82], '150,90': [147, 91], '156,110': [154, 111],
+    '135,140': [134, 140], '132,170': [130, 170], '130,196': [129, 195], '134,220': [136, 222],
+    '137,244': [141, 246], '138,272': [141, 272], '136,300': [137, 300],
+  },
+};
+
+const OUTLINES = {
+  masculino: mirrorClose(HALF.map((p) => AJUSTE.masculino[p.join(',')] ?? p)),
+  feminino: mirrorClose(HALF.map((p) => AJUSTE.feminino[p.join(',')] ?? p)),
+};
+
+export function bodyOutline(corpo?: 'masculino' | 'feminino' | null): Pt[] {
+  return corpo ? OUTLINES[corpo] : BODY_OUTLINE;
+}
+
+// Linha dos seios no corpo feminino (vista de frente): uma curva de cada lado.
+export const BREAST_LINES: Pt[][] = [
+  [[105, 123], [109, 131], [115, 134], [121, 132], [125, 126]],
+  [[95, 123], [91, 131], [85, 134], [79, 132], [75, 126]],
+];
 
 export type OrganShape =
   | { kind: 'ellipse'; cx: number; cy: number; rx: number; ry: number }
