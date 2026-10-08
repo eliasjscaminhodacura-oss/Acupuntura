@@ -51,6 +51,14 @@ Feito em 08/10 (detalhes no histórico):
   orelha), Pontos do corpo e gestantes, Eletroacupuntura, Outras técnicas
   (YNSA, quiro, magneto, laser) e Programas cirúrgicos (Souza). O quadro de
   Analgesia da aba Auriculoterapia virou atalho para esta aba.
+- **Fitoterapia Chinesa** (`/fitoterapia`, publicada): 61 fórmulas clássicas
+  ligadas às 46 síndromes e 133 ervas (sem doses), revisadas com Bensky &
+  Gamble (ervas), Maciocia (síndrome → fórmula), Oliveira (2016), Miyamoto
+  e apostila de remédios patenteados. Aba de consulta (Fórmulas, Ervas, Por
+  síndrome, Fundamentos e segurança) e painel na ficha (sugere pelas
+  síndromes; condições do paciente — gestante, anticoagulante, pressão
+  alta, vegetariano — geram aviso e desmarcam a fórmula; vai no PDF).
+  Coluna `fichas.fitoterapia` criada pelo dono em 08/10.
 
 **Jeito de trabalhar combinado com o dono:** testar no `localhost:3000`
 e, quando ele disser **"publicar"**, rodar `npm run build`, atualizar este
@@ -78,8 +86,9 @@ trabalho (sem `gh` no PATH), ver se os arquivos novos respondem 200 no site.
    (no Registro de atendimentos).
 5. Dietética: se o dono quiser revisar item a item, planilha
    `revisao/Dietetica-MTC-revisao.xlsx` → `npm run dietetica:importar`.
-6. **Fitoterapia** (anunciada "em breve" na tela inicial): esperar o dono
-   trazer o material/livros. **Análise Facial**: o dono deve revisar o
+6. **Fitoterapia:** conteúdo gerado por `node scripts/fitoterapia-dados.mjs`
+   (editar o script, não o JSON). Dono pode revisar fórmulas/ervas.
+   **Análise Facial**: o dono deve revisar o
    conteúdo (`src/data/facial.json`, feito sem livros, pelos clássicos);
    se trouxer livros, conferir e citar.
 7. Depois: receitas por IA (opcional), domínio próprio, Stripe, advogado de
@@ -164,6 +173,7 @@ próprio).
 | `src/components/DietAtlas.tsx` + `src/app/dietoterapia/page.tsx` | aba Dietoterapia Chinesa (consulta sem paciente: por síndrome com nome por extenso, alimentos com filtros, receitas, 5 Elementos, referências) |
 | `src/data/facial.json` + `src/lib/facial.ts` + `src/components/FaceIllustration.tsx`, `FacialAtlas.tsx`, `FacialPanel.tsx` + `src/app/analise-facial/page.tsx` | Análise Facial: conteúdo (tipos, mapas, cores, sinais → síndromes), cálculo (`analisar`: constituição pelo formato do rosto; Elemento em destaque só sem empate), rostos desenhados em SVG (mesma pele de base com tom do Elemento — tez não é etnia), aba de consulta e painel da ficha (salvo em `fichas.facial`, texto no PDF) |
 | `src/data/analgesia.json` + `src/components/AnalgesiaAtlas.tsx` + `src/app/analgesia/page.tsx` | aba Analgesia em Acupuntura (texto em analgesia.json; protocolos por dor e programas de Souza vêm de `auriculo.json → analgesia`; referências em `auriculo.json → referencias`) |
+| `scripts/fitoterapia-dados.mjs` → `src/data/fitoterapia.json` + `src/lib/fitoterapia.ts` + `src/components/FitoAtlas.tsx`, `FitoPanel.tsx` + `src/app/fitoterapia/page.tsx` | Fitoterapia Chinesa: ervas (natureza, sabor, meridianos, ações, cuidados, alertas gest/anticoag/pressao/toxica/animal/mineral), fórmulas (composição sem dose, síndromes — a 1ª síndrome da lista = fórmula principal ★), painel da ficha (`fichas.fitoterapia`), PDF |
 | `src/data/dietetica.json` + `src/lib/dietetica.ts` + `src/components/DietPanel.tsx` + `src/lib/pdf-dieta.ts` | Orientação alimentar segundo a MTC: conteúdo (revisado pelo dono via planilha), lógica (síndromes escolhidas — automático = 3 mais fortes; tira do "Prefira" o que alguma síndrome manda evitar ou o que tem natureza térmica oposta; restrições do paciente), painel no fim do resultado e PDF A5 do paciente |
 | `supabase/schema.sql` | tabelas `patients` e `fichas` + RLS. **Já executado** no Supabase. Pode ser rodado de novo sem problema |
 | `CLAUDE.md` | lido automaticamente pelo Claude Code; importa este arquivo |
@@ -215,6 +225,8 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
   para LGPD e velocidade).
 - URL: `https://bgwyhakqicwmxxjgfbrn.supabase.co`
 - `supabase/schema.sql` executado com sucesso em 03/10/2026.
+- 08/10/2026: coluna `fichas.fitoterapia` (jsonb) criada no SQL Editor —
+  fórmulas escolhidas na ficha. Já feito; conferido.
 - 08/10/2026: coluna `fichas.facial` (jsonb) criada no SQL Editor —
   sinais da análise facial marcados na ficha. Já feito; conferido.
 - 07/10/2026: coluna `fichas.auriculo` (jsonb) criada no SQL Editor —
@@ -314,6 +326,12 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
 ## 8. Histórico (mais recente primeiro)
 
 ### 08/10/2026
+- **Fitoterapia Chinesa:** feita primeiro pelos clássicos e logo revisada com
+  5 materiais do dono (Bensky & Gamble — conferência automática da natureza
+  pelo campo "Properties"; Maciocia — busca de cada fórmula e da síndrome
+  próxima no texto; apostila; dissertação; amostra do Miyamoto). Segurança:
+  sem doses, Mu Tong só de Akebia (nunca Aristolochia), sem Zhu Sha
+  (mercúrio), Shen Fu Tang marcada como emergência.
 - **Analgesia em Acupuntura:** o dono mandou 6 PDFs (2 eram cópias). O livro
   de Silvério-Lopes tem texto extraível, mas com acentos quebrados (LaTeX:
   "´a", "¸c") — corrigir com sed ao ler. O artigo de Luiz et al. só deu para
