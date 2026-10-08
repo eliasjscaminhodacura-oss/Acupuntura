@@ -35,6 +35,8 @@ import AuriculoPanel from './AuriculoPanel';
 import { normalizeAuriculo, pontosEscolhidos, sindromesUsadas, sugerir, PONTO, type AuriculoState } from '@/lib/auriculo-sugestao';
 import { loadEarImages } from '@/lib/pdf-auriculo';
 import FacialPanel from './FacialPanel';
+import FitoPanel from './FitoPanel';
+import { FORMULA, escolhidas as fitoEscolhidas, normalizeFito, sindromesUsadas as fitoSindromes, sugerir as fitoSugerir, type FitoState } from '@/lib/fitoterapia';
 import { OBS, analisar, normalizeFacial, type FacialState } from '@/lib/facial';
 import { topElement } from '@/lib/dietetica';
 
@@ -52,6 +54,7 @@ type Props = {
   initialDiet: unknown;
   initialAuriculo: unknown;
   initialFacial: unknown;
+  initialFito: unknown;
   initialCreatedAt: string | null;
   initialUpdatedAt: string | null;
 };
@@ -64,6 +67,7 @@ export default function FichaForm({
   initialDiet,
   initialAuriculo,
   initialFacial,
+  initialFito,
   initialCreatedAt,
   initialUpdatedAt,
 }: Props) {
@@ -76,6 +80,7 @@ export default function FichaForm({
   const [diet, setDiet] = useState<DietState>(() => normalizeDiet(initialDiet));
   const [auriculo, setAuriculo] = useState<AuriculoState>(() => normalizeAuriculo(initialAuriculo));
   const [facial, setFacial] = useState<FacialState>(() => normalizeFacial(initialFacial));
+  const [fito, setFito] = useState<FitoState>(() => normalizeFito(initialFito));
   // colunas opcionais que o banco ainda não tem (schema.sql não rodado):
   // o resto da ficha continua sendo salvo
   const [missingColumns, setMissingColumns] = useState<string[]>([]);
@@ -104,6 +109,7 @@ export default function FichaForm({
   const dietRef = useRef(diet);
   const auriculoRef = useRef(auriculo);
   const facialRef = useRef(facial);
+  const fitoRef = useRef(fito);
   const missingRef = useRef<Set<string>>(new Set());
   const fichaIdRef = useRef(fichaId);
   const savingRef = useRef(false);
@@ -113,6 +119,7 @@ export default function FichaForm({
   dietRef.current = diet;
   auriculoRef.current = auriculo;
   facialRef.current = facial;
+  fitoRef.current = fito;
 
   // Só as perguntas que valem para o sexo do paciente
   const data = useMemo(() => dataForSex(allData, patient.sex), [patient.sex]);
@@ -166,7 +173,7 @@ export default function FichaForm({
     if (!dirty) return;
     const t = setTimeout(() => { void handleSave(); }, AUTOSAVE_DELAY_MS);
     return () => clearTimeout(t);
-  }, [answers, complaint, diet, auriculo, facial, dirty, saveRetry]);
+  }, [answers, complaint, diet, auriculo, facial, fito, dirty, saveRetry]);
 
   function changeAutoScroll(on: boolean) {
     setAutoScroll(on);
@@ -231,6 +238,7 @@ export default function FichaForm({
     const snapDiet = dietRef.current;
     const snapAuriculo = auriculoRef.current;
     const snapFacial = facialRef.current;
+    const snapFito = fitoRef.current;
     const scores = computeScores(snapAnswers, data);
 
     let error: unknown = null;
@@ -256,7 +264,7 @@ export default function FichaForm({
         if (res.data) fichaIdRef.current = res.data.id;
         return res.error;
       };
-      const optional: Record<string, unknown> = { diet: snapDiet, auriculo: snapAuriculo, facial: snapFacial };
+      const optional: Record<string, unknown> = { diet: snapDiet, auriculo: snapAuriculo, facial: snapFacial, fitoterapia: snapFito };
       const payload = () => ({
         ...base,
         ...Object.fromEntries(Object.entries(optional).filter(([k]) => !missingRef.current.has(k))),
@@ -264,7 +272,7 @@ export default function FichaForm({
       error = await write(payload());
       // Banco sem a coluna "diet"/"auriculo" (schema.sql ainda não rodado):
       // tira a coluna que falta e salva o resto.
-      for (let i = 0; i < 3 && error; i++) {
+      for (let i = 0; i < 4 && error; i++) {
         const msg = String((error as { message?: string }).message);
         const col = Object.keys(optional).find((k) => !missingRef.current.has(k) && msg.includes(k));
         if (!col) break;
@@ -293,7 +301,7 @@ export default function FichaForm({
     logChain.current = logChain.current.then(() => logSave(therapistId!, wasNew));
     const changedMeanwhile =
       pendingRef.current || answersRef.current !== snapAnswers || complaintRef.current !== snapComplaint ||
-      dietRef.current !== snapDiet || auriculoRef.current !== snapAuriculo || facialRef.current !== snapFacial;
+      dietRef.current !== snapDiet || auriculoRef.current !== snapAuriculo || facialRef.current !== snapFacial || fitoRef.current !== snapFito;
     pendingRef.current = false;
     if (changedMeanwhile) {
       setSaveRetry((n) => n + 1); // salva de novo o que mudou durante este salvamento
@@ -334,6 +342,15 @@ export default function FichaForm({
     if (!created) return false;
     setEvents((prev) => [created, ...(prev ?? [])]);
     return true;
+  }
+
+  // Texto da fitoterapia para o PDF.
+  function fitoLinhas(): string[] {
+    const sind = fitoSindromes(fito, top.map((s) => s.code));
+    const ids = fitoEscolhidas(fito, fitoSugerir(sind, fito.condicoes));
+    const out = ids.map((id) => FORMULA.get(id)).filter(Boolean).map((f) => `${f!.pinyin} (${f!.nome}): ${f!.acao}`);
+    if (fito.observacao.trim()) out.push(`Observações: ${fito.observacao.trim()}`);
+    return out;
   }
 
   // Texto da análise facial para o PDF.
@@ -386,7 +403,8 @@ export default function FichaForm({
       },
       organImgs,
       ilusImgs,
-      facialLinhas()
+      facialLinhas(),
+      fitoLinhas()
     );
     downloadBlob(blob, `ficha-${patient.name.replace(/\s+/g, '-').toLowerCase()}.pdf`);
   }
@@ -552,6 +570,14 @@ export default function FichaForm({
           state={facial}
           onChange={(next) => { setFacial(next); setDirty(true); }}
           notSaved={missingColumns.includes('facial')}
+        />
+
+        <FitoPanel
+          data={data}
+          ranked={top.map((s) => s.code)}
+          state={fito}
+          onChange={(next) => { setFito(next); setDirty(true); }}
+          notSaved={missingColumns.includes('fitoterapia')}
         />
 
         <DietPanel

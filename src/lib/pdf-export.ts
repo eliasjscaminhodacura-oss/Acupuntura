@@ -345,7 +345,8 @@ export function buildPdfBlob(
   auriculo?: AuriculoPdf | null,
   organImgs?: OrganImages,
   ilusImgs?: OrganImages, // fotos do corpo ilustrado (JPEG), por vista
-  facial?: string[] // linhas da análise facial
+  facial?: string[], // linhas da análise facial
+  fito?: string[] // fórmulas de fitoterapia escolhidas
 ): Blob {
   const doc = new jsPDF({ unit: 'mm', format: 'a4' });
   const pageW = doc.internal.pageSize.getWidth();
@@ -521,6 +522,22 @@ export function buildPdfBlob(
     doc.setFontSize(9);
     doc.setTextColor(...INK);
     for (const l of facial) {
+      const lines = doc.splitTextToSize(safe(l), contentW) as string[];
+      if (y + lines.length * 4 > PAGE_BOTTOM) { doc.addPage(); y = PAGE_TOP; }
+      doc.text(lines, MARGIN, y);
+      y += lines.length * 4 + 1.5;
+    }
+  }
+
+  // Fitoterapia Chinesa
+  if (fito && fito.length) {
+    if (y + 24 > PAGE_BOTTOM) { doc.addPage(); y = PAGE_TOP; } else y += 6;
+    sectionTitle(doc, 'Fitoterapia Chinesa - fórmulas escolhidas', y);
+    y += 7;
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(9);
+    doc.setTextColor(...INK);
+    for (const l of [...fito, 'Doses, preparo e duração definidos pelo terapeuta. Não substitui avaliação médica.']) {
       const lines = doc.splitTextToSize(safe(l), contentW) as string[];
       if (y + lines.length * 4 > PAGE_BOTTOM) { doc.addPage(); y = PAGE_TOP; }
       doc.text(lines, MARGIN, y);

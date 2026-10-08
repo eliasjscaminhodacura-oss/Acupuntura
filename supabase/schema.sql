@@ -84,6 +84,10 @@ alter table public.fichas add column if not exists auriculo jsonb;
 -- 08/10/2026.
 alter table public.fichas add column if not exists facial jsonb;
 
+-- Fitoterapia Chinesa (síndromes consideradas, fórmulas escolhidas,
+-- condições do paciente, observações). Adicionado em 08/10/2026.
+alter table public.fichas add column if not exists fitoterapia jsonb;
+
 alter table public.fichas enable row level security;
 
 drop policy if exists "therapists_select_own_fichas" on public.fichas;
