@@ -53,7 +53,113 @@
           "O alívio da dor pode durar horas depois do procedimento, reduzindo a necessidade de analgésicos."
         ]
       }
-    ]
+    ],
+    "programas": [
+      {
+        "nome": "Retirada de cálculo ureteral",
+        "cap": "XLIV",
+        "pontos": [
+          "CO10",
+          "CO14",
+          "CO9",
+          "AH6a"
+        ],
+        "estimulacao": "Aos pares: Rim → Pulmão; Bexiga → Simpático."
+      },
+      {
+        "nome": "Amigdalectomia",
+        "cap": "XLIV",
+        "pontos": [
+          "TF4",
+          "CO14",
+          "HX12"
+        ],
+        "orelha": "Nas duas orelhas",
+        "estimulacao": "Aos pares, nas duas orelhas."
+      },
+      {
+        "nome": "Cistoscopia",
+        "cap": "XLIV",
+        "pontos": [
+          "HX4"
+        ],
+        "estimulacao": "Órgão genital externo 1 → Órgão genital externo 2 (os dois pontos na hélice); pode ser nas duas orelhas."
+      },
+      {
+        "nome": "Curetagem uterina",
+        "cap": "XLIV",
+        "pontos": [
+          "TF2",
+          "AH6a"
+        ],
+        "orelha": "Orelha direita",
+        "estimulacao": "Não precisa estimular: colocar as agulhas e esperar 15 a 20 minutos antes do procedimento."
+      },
+      {
+        "nome": "Glaucoma",
+        "cap": "XLIV",
+        "pontos": [
+          "AH6a",
+          "CO10",
+          "CO12",
+          "LO5"
+        ],
+        "estimulacao": "Aos pares: Simpático → Rim; Fígado → Olho."
+      },
+      {
+        "nome": "Intervenção nos membros",
+        "cap": "XLIV",
+        "pontos": [
+          "TF4",
+          "CO10",
+          "AH6a"
+        ],
+        "estimulacao": "Aos pares: Shen Men → Rim; Simpático → ponto da região (perna, joelho, cotovelo etc.)."
+      },
+      {
+        "nome": "Intervenção nas fossas nasais",
+        "cap": "XLV",
+        "pontos": [
+          "TG1,2i",
+          "TG4"
+        ],
+        "estimulacao": "Uma agulha no Nariz externo, aprofundada até alcançar o Nariz interno, sem atravessar a pele.",
+        "sistemicos": "E5, VG25, IG4."
+      },
+      {
+        "nome": "Cirurgia cardíaca",
+        "cap": "XLV",
+        "pontos": [
+          "CO14",
+          "AH12",
+          "AH10",
+          "CO10"
+        ],
+        "orelha": "Nas duas orelhas",
+        "sistemicos": "1º programa: CS6 e P7. 2º programa: IG4, CS6, TA8 e BP20 — o anestesista escolhe o que se adapta melhor."
+      },
+      {
+        "nome": "Litíase renal",
+        "cap": "XLV",
+        "pontos": [
+          "AH6a",
+          "CO10",
+          "CO14",
+          "AT4"
+        ],
+        "orelha": "Do mesmo lado do rim afetado",
+        "estimulacao": "Na orelha, a agulha do Rim é levada por baixo da pele até o ponto Bexiga.",
+        "sistemicos": "B54 e VB39, dos dois lados."
+      },
+      {
+        "nome": "Analgesia com uma agulha",
+        "cap": "XLV",
+        "pontos": [],
+        "estimulacao": "Segundo o autor, uma agulha longa (4 a 6 tsun) inserida em TA8 e levada entre o rádio e a ulna até CS5, sem atravessar a pele, estimulada durante todo o procedimento.",
+        "sistemicos": "TA8 → CS5."
+      }
+    ],
+    "programasNota": "Programas do Tratado de Souza (caps. XLIV e XLV), resumidos. O scan recebido não trouxe 3 programas do cap. XLIV (nº 2, 6 e 9), o nº 4 do cap. XLV e a Adenda 2. Sempre em conjunto com a equipe médica."
   },
   "modelo": {
     "arquivo": "/auriculo/orelha.glb",

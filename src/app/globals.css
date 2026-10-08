@@ -502,6 +502,8 @@ button.small { padding: 6px 12px; font-size: 13px; }
 .ear-analgesia summary { cursor: pointer; color: var(--jade); }
 .ear-analgesia h4 { margin: 14px 0 4px; color: var(--jade); }
 .ear-analgesia ul { margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.55; }
+.ear-programas { margin: 6px 0 0; padding-left: 20px; font-size: 14px; line-height: 1.5; }
+.ear-programas li { margin-bottom: 8px; }
 .ear-refs { color: var(--muted); font-size: 12px; margin-top: 10px; }
 .ear-refs summary { cursor: pointer; font-weight: 600; }
 .ear-refs ul { margin: 6px 0 0; padding-left: 18px; line-height: 1.5; }

@@ -1,4 +1,6 @@
-import { ANALGESIA, REFERENCIAS, type PontoAuricular } from '@/lib/auriculo';
+import { ANALGESIA, PONTOS, REFERENCIAS, type PontoAuricular } from '@/lib/auriculo';
+
+const NOME = new Map(PONTOS.map((p) => [p.codigo, p.nome]));
 
 // Cuidado (contraindicação) e fontes de um ponto, no cartão do ponto.
 export function PontoExtras({ ponto }: { ponto: PontoAuricular }) {
@@ -25,6 +27,18 @@ export function AnalgesiaInfo() {
           <ul>{s.itens.map((i) => <li key={i}>{i}</li>)}</ul>
         </div>
       ))}
+      <h4>Programas de analgesia do livro</h4>
+      <p className="ear-fontes">{ANALGESIA.programasNota}</p>
+      <ul className="ear-programas">
+        {ANALGESIA.programas.map((p) => (
+          <li key={p.nome}>
+            <strong>{p.nome}</strong> <span className="ear-fontes">(cap. {p.cap})</span>
+            {p.pontos.length > 0 && <div>Orelha: {p.pontos.map((c) => `${NOME.get(c) ?? c} (${c})`).join(', ')}{p.orelha ? ` — ${p.orelha.toLowerCase()}` : ''}.</div>}
+            {p.estimulacao && <div>{p.estimulacao}</div>}
+            {p.sistemicos && <div>Pontos do corpo: {p.sistemicos}</div>}
+          </li>
+        ))}
+      </ul>
     </details>
   );
 }

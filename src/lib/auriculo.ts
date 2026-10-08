@@ -72,7 +72,7 @@ export const PONTOS: PontoAuricular[] = data.pontos
 export const REFERENCIAS: { id: string; texto: string }[] = data.referencias;
 
 // Analgesia por auriculoterapia (resumo do Souza, cap. X).
-export const ANALGESIA = (data as unknown as { analgesia: { titulo: string; aviso: string; secoes: { titulo: string; itens: string[] }[] } }).analgesia;
+export const ANALGESIA = (data as unknown as { analgesia: { titulo: string; aviso: string; secoes: { titulo: string; itens: string[] }[]; programasNota: string; programas: { nome: string; cap: string; pontos: string[]; orelha?: string; estimulacao?: string; sistemicos?: string }[] } }).analgesia;
 
 export const MODELO = {
   arquivo: data.modelo.arquivo,
