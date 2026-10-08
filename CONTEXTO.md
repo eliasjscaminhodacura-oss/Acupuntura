@@ -28,6 +28,11 @@ Feito em 08/10 (detalhes no histórico):
   (eram 93), cuidados de segurança, fontes por ponto, referências,
   sugestões revisadas, regra que tira pontos contraindicados e protocolos
   prontos. O ramo `auriculo-revisao` já foi juntado com `main`.
+- **Aba "Dietoterapia Chinesa"** (publicada; pedido do dono para divulgar o
+  método): tela `/dietoterapia` de consulta sem paciente (por síndrome,
+  alimentos, receitas, 5 Elementos). Na tela inicial, botões apagados
+  "Fitoterapia (em breve)" e "Análise Facial (em breve)" — próximos
+  módulos que o dono quer oferecer.
 
 **Jeito de trabalhar combinado com o dono:** testar no `localhost:3000`
 e, quando ele disser **"publicar"**, rodar `npm run build`, atualizar este
@@ -59,7 +64,9 @@ trabalho (sem `gh` no PATH), ver se os arquivos novos respondem 200 no site.
    (no Registro de atendimentos).
 5. Dietética: se o dono quiser revisar item a item, planilha
    `revisao/Dietetica-MTC-revisao.xlsx` → `npm run dietetica:importar`.
-6. Depois: receitas por IA (opcional), domínio próprio, Stripe, advogado de
+6. **Novos módulos anunciados na tela inicial ("em breve"):** Fitoterapia
+   e Análise Facial segundo a MTC — esperar o dono trazer o material/livros.
+7. Depois: receitas por IA (opcional), domínio próprio, Stripe, advogado de
    LGPD (seção 6). Lembrete: Vercel Hobby não permite uso comercial (Pro ao
    começar a cobrar).
 
@@ -138,6 +145,7 @@ próprio).
 | `src/data/auriculo.json` + `src/data/auriculo-3d.json` + `src/lib/auriculo.ts` | Auriculoterapia: pontos (nome, chinês, região, localização, indicações, e onde ficam numa vista: `uv` 0–100) e as posições 3D/2D geradas por `npm run auriculo:posicionar` (`scripts/auriculo-posicionar.mjs`, raios na malha). Para corrigir um ponto: mudar o `uv` e rodar o script |
 | `public/auriculo/orelha.glb`, `frente.webp`, `dorso.webp` | orelha 3D (escaneamento "Human Ear" de thunk3d.scanner, Sketchfab, **CC BY 4.0 — crédito obrigatório no rodapé**), recortada/simplificada (~680 KB, meshopt), orelha ESQUERDA em mm (X para trás, Y para cima, Z para fora); imagens 2D renderizadas do mesmo modelo |
 | `src/lib/ear3d.ts` + `src/components/Ear3D.tsx`, `Ear2D.tsx`, `EarAtlas.tsx`, `src/app/auriculoterapia/page.tsx` | tela de Auriculoterapia. `src/lib/holo.ts` = material "holograma" comum ao corpo e à orelha. `.glb` liberado no `proxy.ts` como as imagens |
+| `src/components/DietAtlas.tsx` + `src/app/dietoterapia/page.tsx` | aba Dietoterapia Chinesa (consulta sem paciente: por síndrome com nome por extenso, alimentos com filtros, receitas, 5 Elementos, referências) |
 | `src/data/dietetica.json` + `src/lib/dietetica.ts` + `src/components/DietPanel.tsx` + `src/lib/pdf-dieta.ts` | Orientação alimentar segundo a MTC: conteúdo (revisado pelo dono via planilha), lógica (síndromes escolhidas — automático = 3 mais fortes; tira do "Prefira" o que alguma síndrome manda evitar ou o que tem natureza térmica oposta; restrições do paciente), painel no fim do resultado e PDF A5 do paciente |
 | `supabase/schema.sql` | tabelas `patients` e `fichas` + RLS. **Já executado** no Supabase. Pode ser rodado de novo sem problema |
 | `CLAUDE.md` | lido automaticamente pelo Claude Code; importa este arquivo |
@@ -280,6 +288,10 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
 ## 8. Histórico (mais recente primeiro)
 
 ### 08/10/2026
+- **Aba Dietoterapia Chinesa** (`/dietoterapia`, `DietAtlas.tsx`): mesma
+  base do painel da ficha, para consulta e divulgação. Nomes das síndromes
+  por extenso só nesta tela ("Defic. Yin do R" → "Deficiência de Yin do
+  Rim"). Botões "em breve" de Fitoterapia e Análise Facial na tela inicial.
 - **Auriculoterapia revisada com 4 livros** (pasta
   `Documents\ELIAS\ACUPUNTURA`): Souza, *Tratado de Auriculoterapia*
   (FIB, 2001; PDF escaneado, lido como imagem, faltam as p. 36–207);
