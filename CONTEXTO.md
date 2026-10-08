@@ -8,39 +8,34 @@
 
 ## ▶️ ONDE PARAMOS (leia isto primeiro)
 
-**Última sessão: 07/10/2026 (computador de trabalho).** O dono vai
-continuar **no notebook dele**. O app está publicado em
+**Última sessão: 08/10/2026 (notebook do dono).** O app está publicado em
 **https://acupuntura-eta.vercel.app** (Vercel; cada `git push` para `main`
 atualiza o site em 1–2 min; o dono já usa com pacientes reais).
-**Tudo o que foi feito em 07/10 está publicado** (`main`); não há trabalho
-pendente em ramo. Os ramos `auriculoterapia` e `corpo-real` já foram
-juntados com `main` e podem ser apagados.
+**Tudo o que foi feito em 08/10 está publicado** (`main`). O ramo
+`corpo-ilustrado` já foi juntado com `main` e pode ser apagado.
 
-Feito em 07/10 (detalhes no histórico):
-- **Vercel:** verificação em duas etapas com chave nova.
-- **Auriculoterapia** (aba `/auriculoterapia`): orelha 3D real (holograma
-  ou pele, esquerda/direita), 93 pontos da norma chinesa GB/T 13734-2008,
-  busca, filtro por região, mapa 2D. **Na ficha:** painel "Auriculoterapia —
-  pontos sugeridos" (síndromes + sintomas → pontos; terapeuta escolhe
-  pontos e orelha), salvo em `fichas.auriculo` e no PDF.
-- **Mapa do corpo realista:** corpos masculino/feminino reais (MakeHuman,
-  CC0) em posição anatômica, pelo sexo do paciente; órgãos com anatomia
-  real (BodyParts3D, CC BY 4.0); útero, trompas e ovários no corpo feminino
-  ("Pelvic Organs from MRI", CC BY 4.0). Os 71 pontos levados para o corpo
-  novo (aprovado pelo dono).
+Feito em 08/10 (detalhes no histórico):
+- **Mapa do corpo 2D ilustrado (estilo atlas)**, pedido do dono a partir de
+  uma imagem de referência (de banco de imagens — não podia ser usada):
+  corpo inteiro, frente e costas, com **músculos, ossos, artérias e veias**
+  do BodyParts3D encaixados no corpo MakeHuman e os órgãos por cima;
+  masculino ou feminino pelo sexo do paciente; contorno de holograma do
+  corpo; pontos e órgãos comprometidos por cima. Também no PDF. Ver
+  `scripts/corpo-ilustrado/LEIA-ME.md`.
+- Antes disso (substituído pela ilustração, fica como reserva): órgãos com
+  silhueta real e contorno 2D masculino/feminino no mapa antigo.
 
 **Jeito de trabalhar combinado com o dono:** testar no `localhost:3000`
 e, quando ele disser **"publicar"**, rodar `npm run build`, atualizar este
 arquivo, commit e push (a Vercel publica sozinha). Trabalhos grandes: num
-ramo separado até o "publicar". Nesta máquina o `gh` não está no PATH;
-para conferir a publicação basta ver se os arquivos novos respondem 200
-no site (ex.: `curl -I https://acupuntura-eta.vercel.app/corpo/masculino.glb`).
+ramo separado até o "publicar". Conferir a publicação: no notebook,
+`gh api repos/eliasjscaminhodacura-oss/Acupuntura/commits/<sha>/status`; no
+trabalho (sem `gh` no PATH), ver se os arquivos novos respondem 200 no site.
 
-**Próxima coisa a fazer (no notebook):**
+**Próxima coisa a fazer:**
 
-1. **Atualizar:** `git pull` e `npm install` (dependências novas de
-   desenvolvimento: `@gltf-transform/core`, `@gltf-transform/extensions`,
-   `meshoptimizer`). Conferir `npm run build`. Nada a rodar no Supabase.
+1. **Atualizar:** `git pull` e `npm install`. Conferir `npm run build`.
+   Nada a rodar no Supabase.
 2. **Auriculoterapia — revisão com os livros:** o dono vai colocar os
    livros (PDF/fotos) numa pasta do notebook e mandar a **lista de pontos
    brasileiros** que usa. Conferir pontos, localizações, indicações e as
@@ -48,17 +43,12 @@ no site (ex.: `curl -I https://acupuntura-eta.vercel.app/corpo/masculino.glb`).
    `src/data/auriculo-sugestoes.json`); acrescentar os pontos brasileiros;
    montar planilha de revisão (como a da Dietética). Para mexer na posição
    de um ponto: mudar o `uv` e rodar `npm run auriculo:posicionar`.
-3. **Corpo realista, etapa 3:** (3a, ~40 min) ossos, vasos (artérias e
-   veias), nervos, traqueia, esôfago e ureteres reais do BodyParts3D, no
-   mesmo esquema dos órgãos (`scripts/orgaos-bp3d.mjs`, `npm run
-   corpo:gerar`); (3b, 1–2 h) trocar o mapa 2D e a página do PDF pelas
-   imagens do corpo real (o 2D é a base dos 71 pontos — cuidado).
-   Para rodar `npm run corpo:gerar` no notebook: ele baixa sozinho o
-   MakeHuman e o BodyParts3D (~140 MB) para `scripts/.makehuman/` e
-   `scripts/.bodyparts3d/`; o modelo dos órgãos femininos tem que ser
-   baixado pelo dono no Sketchfab ("Pelvic Organs from MRI", GLB) e posto
-   em `scripts/.pelve/pelvic_organs_from_mri.glb` — sem ele o corpo
-   feminino é gerado sem útero/ovários (o gerador avisa).
+3. **Corpo ilustrado — se o dono pedir ajustes:** tronco um pouco estreito
+   em relação à referência e uma pequena "ponta" na lateral do quadril
+   feminino. Regras de encaixe em `scripts/corpo-ilustrado.mjs`
+   (`armWeight`, faixa da virilha, pé girado, escala da cabeça). Ainda não
+   entraram nervos, traqueia, esôfago e ureteres (o 3D continua só com os
+   órgãos).
 4. **Auriculoterapia, etapa 3:** registrar os pontos usados em cada sessão
    (no Registro de atendimentos).
 5. Dietética: se o dono quiser revisar item a item, planilha
@@ -121,7 +111,9 @@ próprio).
 | `src/lib/pdf-export.ts` | geração do PDF: logo em todas as páginas, Ciclo, síndromes, mapa do corpo, sintomas em 3 colunas igual à tela |
 | `src/lib/cycle5.ts` + `src/components/ElementCycle.tsx` | Ciclo dos 5 Elementos (Sheng/Ke), gráfico principal do resultado |
 | `src/lib/radar3d.ts` + `src/components/ElementRadar.tsx` | gráfico 3D dos 5 elementos (botão "Ver em 3D") |
-| `src/lib/body-map.ts` + `src/components/BodyHologram.tsx` | mapa do corpo: contorno, 10 órgãos e 71 pontos (posições revisadas pelo dono em 05/10). `BodyHologram` mostra o 3D por padrão e o 2D (frente/costas) por botão ou se o aparelho não tiver WebGL; o PDF continua usando o 2D |
+| `src/lib/body-map.ts` + `src/components/BodyHologram.tsx` | mapa do corpo: contorno (neutro, masculino, feminino), 10 órgãos e 71 pontos (posições revisadas pelo dono em 05/10). `BodyHologram` mostra o 3D por padrão e o 2D (frente/costas) por botão ou se o aparelho não tiver WebGL. No 2D usa o **corpo ilustrado** quando existe; senão, o mapa antigo |
+| `src/lib/corpo-ilustrado.ts` + `src/data/corpo-ilustrado*.json` + `public/corpo/ilustrado-*` | corpo ilustrado (atlas): fotos (webp na tela, jpg no PDF), contorno, órgãos e pontos no plano da imagem. Gerado por `npm run corpo:ilustrado` + página de fotos (ver `scripts/corpo-ilustrado/LEIA-ME.md`) |
+| `src/lib/organs2d.ts` + `scripts/orgaos-2d.mjs` + `scripts/contorno.mjs` | silhuetas reais dos órgãos para o mapa antigo (reserva); `npm run corpo:orgaos2d` |
 | `src/lib/body3d.ts` + `src/components/Body3D.tsx` | corpo 3D com **three.js** (no ramo `corpo-real`: pele = corpo realista MakeHuman; antes: formas simples). Usa as mesmas coordenadas 200x440 do 2D; os pontos são colocados na pele por raio (frente/costas). Camadas, enquadramentos (Frente/Costas/Lado/Cabeça/Tronco/Mãos/Pés), toque mostra nome do órgão/osso. Carregado sob demanda (`next/dynamic`, `ssr: false`) |
 | `src/components/FichaForm.tsx` | ficha: resultado no final, salvamento automático (2 s), avanço automático entre partes, "voltar"/"corrigir dados" |
 | `src/components/ScrollButtons.tsx` | botões flutuantes ↑ início / ↓ final (em todas as telas, via `layout.tsx`) |
@@ -280,6 +272,28 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
 - Termos de uso / política de privacidade (junto com o advogado de LGPD).
 
 ## 8. Histórico (mais recente primeiro)
+
+### 08/10/2026
+- Notebook: `git pull` do trabalho de 07/10 + `npm install`; build OK.
+- Pedido do dono: órgãos no mapa 2D "mais reais". 1ª versão: silhuetas
+  reais (do 3D, pela régua inversa do `body-warp`) e foto dos órgãos com
+  luz; contorno 2D masculino/feminino. O dono não gostou e mandou uma imagem
+  de atlas (banco de imagens — direitos autorais, não usada).
+- **Corpo ilustrado** (escolha do dono: corpo inteiro): músculos (323
+  peças), ossos (203), artérias e veias do BodyParts3D encaixados no
+  MakeHuman. Tronco pelo `makeFit` (sem a trava do períneo:
+  `clampFloor: false`, medido sem os braços); braços e pernas pelas juntas
+  dos ossos (úmero, rádio/ulna, falange; fêmur, tíbia, pé), com mistura nas
+  emendas; o pé do atlas (escaneado deitado, pé esticado) é girado no
+  tornozelo; cabeça com escala própria. As cadeias do corpo começam onde o
+  tronco põe ombro e quadril (evita "abas"). Fotos ortográficas tiradas no
+  navegador (3 passadas: ossos+músculos, vasos, órgãos); pontos de
+  `build()` do `corpo-real.mjs` (agora importável sem efeitos).
+- No Windows, o `tar` do Git Bash não abre o zip do atlas ("C:" vira
+  servidor): `orgaos-bp3d.mjs` usa o `tar.exe` do sistema.
+- PDF com o corpo ilustrado: ~1 MB.
+- Dica: textos com crases (`) em comandos do Bash viram comandos — para
+  editar este arquivo, usar um script em arquivo, não `node -e`.
 
 ### 07/10/2026
 - Computador de trabalho: `git pull` do trabalho de 06/10 + `npm install`;
