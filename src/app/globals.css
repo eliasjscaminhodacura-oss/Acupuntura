@@ -496,6 +496,12 @@ button.small { padding: 6px 12px; font-size: 13px; }
   padding-left: 8px;
 }
 .ear-group h4 small { display: block; color: var(--muted); font-weight: normal; font-size: 12px; margin-top: 2px; }
+.ear-caution { margin-top: 10px !important; padding: 6px 10px; border-left: 3px solid #d9822b; background: rgba(217, 130, 43, 0.1); border-radius: 4px; }
+.ear-fontes { color: var(--muted); font-size: 12px; margin-top: 8px !important; }
+.auriculo-protocolos { margin: 6px 0 0; padding-left: 18px; font-size: 12px; color: var(--muted); line-height: 1.5; }
+.ear-refs { color: var(--muted); font-size: 12px; margin-top: 10px; }
+.ear-refs summary { cursor: pointer; font-weight: 600; }
+.ear-refs ul { margin: 6px 0 0; padding-left: 18px; line-height: 1.5; }
 .ear-credit { color: var(--muted); font-size: 11px; font-style: italic; line-height: 1.5; }
 
 /* Orientação alimentar */

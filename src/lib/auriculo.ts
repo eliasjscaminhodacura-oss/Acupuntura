@@ -1,8 +1,9 @@
 import data from '@/data/auriculo.json';
 import pos3d from '@/data/auriculo-3d.json';
 
-// Atlas de auriculoterapia: pontos da norma chinesa (GB/T 13734-2008)
-// com nome, localização e indicações (auriculo.json, revisado pelo
+// Atlas de auriculoterapia: pontos da norma chinesa (GB/T 13734-2008),
+// completados com os livros de referência (auriculo.json → referencias),
+// com nome, localização, indicações, cuidados e fontes (auriculo.json, revisado pelo
 // terapeuta) e a posição de cada um na orelha 3D e nas imagens 2D
 // (auriculo-3d.json, gerado por `npm run auriculo:posicionar`).
 //
@@ -24,6 +25,8 @@ export type PontoAuricular = {
   regiao: RegiaoId;
   localizacao: string;
   indicacoes: string;
+  cuidado?: string; // contraindicação / atenção
+  fontes: string[]; // ids de REFERENCIAS
   pos: [number, number, number];
   normal: [number, number, number];
   frente: Vista2D;
@@ -47,7 +50,7 @@ const COR: Record<RegiaoId, string> = {
 export const REGIOES: Regiao[] = data.regioes.map((r) => ({ ...r, id: r.id as RegiaoId, cor: COR[r.id as RegiaoId] }));
 export const REGIAO = Object.fromEntries(REGIOES.map((r) => [r.id, r])) as Record<RegiaoId, Regiao>;
 
-const P3 = pos3d as unknown as Record<string, Omit<PontoAuricular, 'codigo' | 'nome' | 'chines' | 'regiao' | 'localizacao' | 'indicacoes'>>;
+const P3 = pos3d as unknown as Record<string, Omit<PontoAuricular, 'codigo' | 'nome' | 'chines' | 'regiao' | 'localizacao' | 'indicacoes' | 'cuidado' | 'fontes'>>;
 
 export const PONTOS: PontoAuricular[] = data.pontos
   .filter((p) => P3[p.codigo])
@@ -58,8 +61,13 @@ export const PONTOS: PontoAuricular[] = data.pontos
     regiao: p.regiao as RegiaoId,
     localizacao: p.localizacao,
     indicacoes: p.indicacoes,
+    cuidado: 'cuidado' in p ? (p.cuidado as string) : undefined,
+    fontes: 'fontes' in p ? (p.fontes as string[]) : ['GB/T', 'Scavone'],
     ...P3[p.codigo],
   }));
+
+// Livros e normas usados (citados nas telas e no PDF).
+export const REFERENCIAS: { id: string; texto: string }[] = data.referencias;
 
 export const MODELO = {
   arquivo: data.modelo.arquivo,
@@ -77,7 +85,7 @@ export function buscar(texto: string, regioes: Set<RegiaoId> | null): PontoAuric
   return PONTOS.filter((p) => {
     if (regioes && regioes.size && !regioes.has(p.regiao)) return false;
     if (!t) return true;
-    return sem(`${p.codigo} ${p.nome} ${p.chines} ${p.indicacoes} ${REGIAO[p.regiao].nome}`).includes(t);
+    return sem(`${p.codigo} ${p.nome} ${p.chines} ${p.indicacoes} ${p.cuidado ?? ''} ${REGIAO[p.regiao].nome}`).includes(t);
   });
 }
 

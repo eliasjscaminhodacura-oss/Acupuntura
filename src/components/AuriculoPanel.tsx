@@ -2,6 +2,7 @@
 
 import { useMemo, useState, type CSSProperties } from 'react';
 import Ear2D from './Ear2D';
+import AuriculoRefs, { PontoExtras } from './AuriculoRefs';
 import type { Answers, FichaData } from '@/lib/ficha-types';
 import { PONTOS, REGIAO } from '@/lib/auriculo';
 import {
@@ -10,6 +11,7 @@ import {
   LADO_LABEL,
   PONTO,
   SUGESTOES,
+  evitados,
   pontosEscolhidos,
   sindromesUsadas,
   sugerir,
@@ -33,6 +35,7 @@ export default function AuriculoPanel({ data, ranked, answers, state, onChange, 
   const [focus, setFocus] = useState<string | null>(null);
   const sindromes = sindromesUsadas(state, ranked);
   const sugeridos = useMemo(() => sugerir(data, answers, sindromes), [data, answers, sindromes.join()]);
+  const evitar = useMemo(() => evitados(data, answers, sindromes), [data, answers, sindromes.join()]);
   const escolhidos = pontosEscolhidos(state, sugeridos);
   const escolhidosSet = useMemo(() => new Set(escolhidos), [escolhidos.join()]);
   const extras = escolhidos.filter((c) => !sugeridos.some((s) => s.ponto.codigo === c));
@@ -49,6 +52,11 @@ export default function AuriculoPanel({ data, ranked, answers, state, onChange, 
   };
   const togglePonto = (code: string) => {
     const next = escolhidosSet.has(code) ? escolhidos.filter((c) => c !== code) : [...escolhidos, code];
+    onChange({ ...state, escolhidos: next });
+  };
+  const addProtocolo = (codes: string[]) => {
+    const next = [...escolhidos];
+    for (const c of codes) if (!next.includes(c)) next.push(c);
     onChange({ ...state, escolhidos: next });
   };
   const ponto = focus ? PONTO.get(focus) : null;
@@ -117,6 +125,7 @@ export default function AuriculoPanel({ data, ranked, answers, state, onChange, 
               <p>{ponto.localizacao}</p>
               <h4>Indicações principais</h4>
               <p>{ponto.indicacoes}</p>
+              <PontoExtras ponto={ponto} />
             </div>
           ) : (
             <p className="ear-help" style={{ marginTop: 0 }}>
@@ -127,7 +136,31 @@ export default function AuriculoPanel({ data, ranked, answers, state, onChange, 
         </div>
       </div>
 
+      <h4>Protocolos dos livros</h4>
+      <div className="body3d-row">
+        {SUGESTOES.protocolos.map((pr) => (
+          <button key={pr.nome} type="button" className="body3d-chip" title={pr.nota}
+            onClick={() => addProtocolo(pr.principais)}>
+            + {pr.nome}
+          </button>
+        ))}
+      </div>
+      <ul className="auriculo-protocolos">
+        {SUGESTOES.protocolos.map((pr) => (
+          <li key={pr.nome}>
+            <strong>{pr.nome}</strong> ({pr.fonte}): {pr.principais.join(', ')}
+            {pr.complementares.length > 0 && <> · complementares: {pr.complementares.join(', ')}</>}. {pr.nota}
+          </li>
+        ))}
+      </ul>
+
       <h4>Pontos ({escolhidos.length} escolhidos)</h4>
+      {evitar.size > 0 && (
+        <p className="ear-caution">
+          <strong>⚠ Retirados da sugestão:</strong>{' '}
+          {[...evitar].map(([c, m]) => `${c} — ${PONTO.get(c)?.nome} (${m})`).join('; ')}.
+        </p>
+      )}
       <div className="auriculo-list">
         {[...sugeridos.map((s) => ({ codigo: s.ponto.codigo, motivos: s.motivos })), ...extras.map((c) => ({ codigo: c, motivos: ['acrescentado pelo terapeuta'] }))].map(({ codigo, motivos }) => {
           const p = PONTO.get(codigo)!;
@@ -137,7 +170,7 @@ export default function AuriculoPanel({ data, ranked, answers, state, onChange, 
               <input type="checkbox" checked={on} onChange={() => togglePonto(codigo)} />
               <span>
                 <span className="auriculo-dot" style={{ background: REGIAO[p.regiao].cor }} />
-                <strong>{codigo}</strong> — {p.nome}{' '}
+                <strong>{codigo}</strong> — {p.nome}{p.cuidado ? ' ⚠' : ''}{' '}
                 <button type="button" className="link-button" onClick={(e) => { e.preventDefault(); setFocus(codigo); }}>ver</button>
                 <span className="point-syn">{motivos.join(' · ')}</span>
               </span>
@@ -165,6 +198,7 @@ export default function AuriculoPanel({ data, ranked, answers, state, onChange, 
         onChange={(e) => onChange({ ...state, observacao: e.target.value })} />
 
       <p className="diet-legal">{SUGESTOES.aviso}</p>
+      <AuriculoRefs />
     </div>
   );
 }

@@ -12,6 +12,10 @@ type Sugestoes = {
   aviso: string;
   sindromes: Record<string, { pontos: string[]; principio: string }>;
   sintomas: { nome: string; itens: string[]; pontos: string[] }[];
+  // pontos tirados da sugestão quando há o sintoma ou a síndrome (segurança)
+  evitar: { pontos: string[]; sintomas: string[]; sindromes: string[]; motivo: string }[];
+  // protocolos prontos dos livros, que o terapeuta acrescenta com um toque
+  protocolos: { nome: string; fonte: string; principais: string[]; complementares: string[]; nota: string }[];
 };
 
 export const SUGESTOES = raw as Sugestoes;
@@ -57,11 +61,24 @@ export function sintomasMarcados(data: FichaData, answers: Answers) {
   );
 }
 
+// Pontos que não devem ser sugeridos para este paciente, com o motivo.
+export function evitados(data: FichaData, answers: Answers, sindromes: string[]): Map<string, string> {
+  const marcados = new Set(sintomasMarcados(data, answers).map((r) => r.nome));
+  const out = new Map<string, string>();
+  for (const r of SUGESTOES.evitar) {
+    if (r.sintomas.some((n) => marcados.has(n)) || r.sindromes.some((c) => sindromes.includes(c))) {
+      for (const p of r.pontos) if (!out.has(p)) out.set(p, r.motivo);
+    }
+  }
+  return out;
+}
+
 export function sugerir(data: FichaData, answers: Answers, sindromes: string[]): Sugerido[] {
+  const evitar = evitados(data, answers, sindromes);
   const acc = new Map<string, Sugerido>();
   const add = (codigo: string, score: number, motivo: string) => {
     const ponto = PONTO.get(codigo);
-    if (!ponto) return;
+    if (!ponto || evitar.has(codigo)) return;
     const s = acc.get(codigo) ?? { ponto, score: 0, motivos: [] };
     s.score += score;
     if (!s.motivos.includes(motivo)) s.motivos.push(motivo);

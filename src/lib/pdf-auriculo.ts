@@ -1,5 +1,5 @@
 import type { jsPDF } from 'jspdf';
-import { REGIAO, uv2d, type PontoAuricular } from './auriculo';
+import { REFERENCIAS, REGIAO, uv2d, type PontoAuricular } from './auriculo';
 import { LADO_LABEL, type LadoSessao } from './auriculo-sugestao';
 
 // Página de auriculoterapia do PDF da ficha: as imagens 2D da orelha
@@ -112,7 +112,7 @@ export function drawAuriculoSection(
 
   for (const p of a.pontos) {
     doc.setFontSize(8.5);
-    const lines = doc.splitTextToSize(safe(`${p.nome} - ${p.localizacao}`), contentW - 16) as string[];
+    const lines = doc.splitTextToSize(safe(`${p.nome} - ${p.localizacao}${p.cuidado ? ` CUIDADO: ${p.cuidado}` : ''}`), contentW - 16) as string[];
     y = opts.ensure(y, lines.length * 3.8 + 1.5);
     doc.setFillColor(...hex(REGIAO[p.regiao].cor));
     doc.rect(margin, y - 2.6, 2.6, 2.6, 'F');
@@ -129,6 +129,17 @@ export function drawAuriculoSection(
     doc.setFontSize(9);
     doc.text(lines, margin, y);
     y += lines.length * 4;
+  }
+  {
+    const refs = 'Referências: ' + REFERENCIAS.map((r) => r.texto).join(' ');
+    doc.setFontSize(7);
+    doc.setTextColor(107, 103, 92);
+    const lines = doc.splitTextToSize(safe(refs), contentW) as string[];
+    y = opts.ensure(y, lines.length * 3 + 4);
+    y += 3;
+    doc.text(lines, margin, y);
+    y += lines.length * 3;
+    doc.setTextColor(38, 38, 32);
   }
   return y;
 }

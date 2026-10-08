@@ -3,6 +3,7 @@
 import { useMemo, useRef, useState, type CSSProperties } from 'react';
 import dynamic from 'next/dynamic';
 import Ear2D from './Ear2D';
+import AuriculoRefs, { PontoExtras } from './AuriculoRefs';
 import { buscar, MODELO, PONTOS, REGIAO, REGIOES, type Lado, type RegiaoId } from '@/lib/auriculo';
 import type { Visual } from '@/lib/ear3d';
 
@@ -99,6 +100,7 @@ export default function EarAtlas() {
             <p>{ponto.localizacao}</p>
             <h4>Indicações principais</h4>
             <p>{ponto.indicacoes}</p>
+            <PontoExtras ponto={ponto} />
             {!show3d && !(ponto.regiao === 'P' || ponto.regiao === 'R' ? ponto.dorso.visivel : ponto.frente.visivel) && (
               <p className="ear-note">Este ponto fica numa dobra escondida nesta vista (marcado tracejado). No 3D dá para girar e vê-lo.</p>
             )}
@@ -130,7 +132,7 @@ export default function EarAtlas() {
             <ul className="point-list">
               {found.filter((p) => p.regiao === r.id).map((p) => (
                 <li key={p.codigo} className={selected === p.codigo ? 'active' : undefined} onClick={() => pick(p.codigo)}>
-                  <strong>{p.codigo}</strong> — {p.nome}
+                  <strong>{p.codigo}</strong> — {p.nome}{p.cuidado ? ' ⚠' : ''}
                   <div className="point-syn">{p.indicacoes}</div>
                 </li>
               ))}
@@ -144,6 +146,7 @@ export default function EarAtlas() {
         <br />
         {MODELO.credito}
       </p>
+      <AuriculoRefs />
     </>
   );
 }
