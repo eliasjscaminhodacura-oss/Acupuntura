@@ -43,6 +43,14 @@ Feito em 08/10 (detalhes no histórico):
   `souza`), quadro "Analgesia" (cap. X resumido + 13 programas dos caps.
   XLIV/XLV em `auriculo.json → analgesia.programas`) e protocolo
   "+ Analgesia" no painel da ficha.
+- **Aba "Analgesia em Acupuntura"** (`/analgesia`, publicada): base no livro
+  de Sandra Silvério-Lopes (org.), *Analgesia por Acupuntura* (Omnipax,
+  2013, CC BY-NC-ND) + artigos de Cassu & Luna (2004), Martini & Becker
+  (2009) e Luiz et al. (2012). 6 partes: Fundamentos, Auriculoterapia
+  (pontos analgésicos, 8 protocolos por tipo de dor, DORT, eletro na
+  orelha), Pontos do corpo e gestantes, Eletroacupuntura, Outras técnicas
+  (YNSA, quiro, magneto, laser) e Programas cirúrgicos (Souza). O quadro de
+  Analgesia da aba Auriculoterapia virou atalho para esta aba.
 
 **Jeito de trabalhar combinado com o dono:** testar no `localhost:3000`
 e, quando ele disser **"publicar"**, rodar `npm run build`, atualizar este
@@ -155,6 +163,7 @@ próprio).
 | `src/lib/ear3d.ts` + `src/components/Ear3D.tsx`, `Ear2D.tsx`, `EarAtlas.tsx`, `src/app/auriculoterapia/page.tsx` | tela de Auriculoterapia. `src/lib/holo.ts` = material "holograma" comum ao corpo e à orelha. `.glb` liberado no `proxy.ts` como as imagens |
 | `src/components/DietAtlas.tsx` + `src/app/dietoterapia/page.tsx` | aba Dietoterapia Chinesa (consulta sem paciente: por síndrome com nome por extenso, alimentos com filtros, receitas, 5 Elementos, referências) |
 | `src/data/facial.json` + `src/lib/facial.ts` + `src/components/FaceIllustration.tsx`, `FacialAtlas.tsx`, `FacialPanel.tsx` + `src/app/analise-facial/page.tsx` | Análise Facial: conteúdo (tipos, mapas, cores, sinais → síndromes), cálculo (`analisar`: constituição pelo formato do rosto; Elemento em destaque só sem empate), rostos desenhados em SVG (mesma pele de base com tom do Elemento — tez não é etnia), aba de consulta e painel da ficha (salvo em `fichas.facial`, texto no PDF) |
+| `src/data/analgesia.json` + `src/components/AnalgesiaAtlas.tsx` + `src/app/analgesia/page.tsx` | aba Analgesia em Acupuntura (texto em analgesia.json; protocolos por dor e programas de Souza vêm de `auriculo.json → analgesia`; referências em `auriculo.json → referencias`) |
 | `src/data/dietetica.json` + `src/lib/dietetica.ts` + `src/components/DietPanel.tsx` + `src/lib/pdf-dieta.ts` | Orientação alimentar segundo a MTC: conteúdo (revisado pelo dono via planilha), lógica (síndromes escolhidas — automático = 3 mais fortes; tira do "Prefira" o que alguma síndrome manda evitar ou o que tem natureza térmica oposta; restrições do paciente), painel no fim do resultado e PDF A5 do paciente |
 | `supabase/schema.sql` | tabelas `patients` e `fichas` + RLS. **Já executado** no Supabase. Pode ser rodado de novo sem problema |
 | `CLAUDE.md` | lido automaticamente pelo Claude Code; importa este arquivo |
@@ -305,6 +314,10 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
 ## 8. Histórico (mais recente primeiro)
 
 ### 08/10/2026
+- **Analgesia em Acupuntura:** o dono mandou 6 PDFs (2 eram cópias). O livro
+  de Silvério-Lopes tem texto extraível, mas com acentos quebrados (LaTeX:
+  "´a", "¸c") — corrigir com sed ao ler. O artigo de Luiz et al. só deu para
+  ler como imagem. Conteúdo resumido com nossas palavras, com fonte por bloco.
 - **Souza, Tratado de Auriculoterapia** (scans do dono em Downloads:
   "Documento sem título 08-10-2026*.pdf"): lidos os 200 pontos (p. 97–205;
   texto nas páginas ímpares, fotos nas pares) e os caps. X, XLIV e XLV.
