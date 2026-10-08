@@ -40,7 +40,7 @@ Feito em 08/10 (detalhes no histórico):
 - **Auriculoterapia com o Tratado de Souza** (publicada): 216 pontos
   (86 novos do Souza, 43 no dorso — códigos D1–D43; frente com letras
   LOe…, ATf…, COd… etc.), nome/nº de Souza nos equivalentes (campo
-  `souza`), quadro "Analgesia" (cap. X resumido + 10 programas dos caps.
+  `souza`), quadro "Analgesia" (cap. X resumido + 13 programas dos caps.
   XLIV/XLV em `auriculo.json → analgesia.programas`) e protocolo
   "+ Analgesia" no painel da ficha.
 
@@ -55,14 +55,11 @@ trabalho (sem `gh` no PATH), ver se os arquivos novos respondem 200 no site.
 
 1. **Atualizar:** `git pull` e `npm install`. Conferir `npm run build`.
    Nada a rodar no Supabase.
-2. **Auriculoterapia — falta do Souza:** o dono vai reescanear (modo
-   "Documento", 1 página por foto — o modo "Cartão de Identidade" ficou
-   ilegível) os programas de analgesia **2 (Adenoma da tireoide), 6 e 9
-   do cap. XLIV** (p. 336, 340, 343), o **nº 4 do cap. XLV** (~p. 350) e a
-   **Adenda 2** (p. 352). Acrescentar em `analgesia.programas` e tirar o
-   aviso de `programasNota`. Adendas 1 e 3 (obesidade, alcoolismo) só têm
-   figura sem nomes. Posições dos pontos novos são aproximadas: o dono pode
-   pedir ajustes (mudar `uv` e `npm run auriculo:posicionar`).
+2. **Auriculoterapia — Souza completo** (08/10): todos os 200 pontos e os
+   13 programas de analgesia (caps. XLIV e XLV) estão no app. As Adendas
+   (obesidade, tabagismo, alcoolismo) só têm figura sem nomes — não
+   entraram. Posições dos pontos novos são aproximadas: o dono pode pedir
+   ajustes (mudar `uv` e `npm run auriculo:posicionar`).
 3. **Corpo ilustrado — se o dono pedir ajustes:** tronco um pouco estreito
    em relação à referência e uma pequena "ponta" na lateral do quadril
    feminino. Regras de encaixe em `scripts/corpo-ilustrado.mjs`

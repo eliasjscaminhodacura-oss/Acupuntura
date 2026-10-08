@@ -67,6 +67,18 @@
         "estimulacao": "Aos pares: Rim → Pulmão; Bexiga → Simpático."
       },
       {
+        "nome": "Adenoma da tireoide",
+        "cap": "XLIV",
+        "pontos": [
+          "TF4",
+          "AH6a",
+          "AT4",
+          "CO18"
+        ],
+        "orelha": "Do mesmo lado",
+        "estimulacao": "Aos pares: Shen Men → Simpático; Subcórtex → Endócrino."
+      },
+      {
         "nome": "Amigdalectomia",
         "cap": "XLIV",
         "pontos": [
@@ -96,6 +108,17 @@
         "estimulacao": "Não precisa estimular: colocar as agulhas e esperar 15 a 20 minutos antes do procedimento."
       },
       {
+        "nome": "Gastrectomia",
+        "cap": "XLIV",
+        "pontos": [
+          "TF4",
+          "CO14",
+          "AH6a",
+          "CO4"
+        ],
+        "estimulacao": "Aos pares: Shen Men → Pulmão; Simpático → Estômago."
+      },
+      {
         "nome": "Glaucoma",
         "cap": "XLIV",
         "pontos": [
@@ -115,6 +138,19 @@
           "AH6a"
         ],
         "estimulacao": "Aos pares: Shen Men → Rim; Simpático → ponto da região (perna, joelho, cotovelo etc.)."
+      },
+      {
+        "nome": "Parto cirúrgico (cesárea)",
+        "cap": "XLIV",
+        "pontos": [
+          "TF4",
+          "CO14",
+          "TF2",
+          "AH6a",
+          "AT4",
+          "AH8"
+        ],
+        "estimulacao": "Aos pares: Shen Men → Pulmão; Útero → Simpático; Subcórtex → Abdômen. Para alcançar o Útero, a agulha entra sob a pele cerca de 5 mm acima do Shen Men e é levada por baixo da pele até passar do ponto Útero."
       },
       {
         "nome": "Intervenção nas fossas nasais",
@@ -159,7 +195,7 @@
         "sistemicos": "TA8 → CS5."
       }
     ],
-    "programasNota": "Programas do Tratado de Souza (caps. XLIV e XLV), resumidos. O scan recebido não trouxe 3 programas do cap. XLIV (nº 2, 6 e 9), o nº 4 do cap. XLV e a Adenda 2. Sempre em conjunto com a equipe médica."
+    "programasNota": "Programas do Tratado de Souza (caps. XLIV e XLV), resumidos. As Adendas (obesidade, tabagismo, alcoolismo) trazem só a figura da orelha, sem os nomes dos pontos. Sempre em conjunto com a equipe médica."
   },
   "modelo": {
     "arquivo": "/auriculo/orelha.glb",
