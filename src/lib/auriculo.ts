@@ -26,6 +26,7 @@ export type PontoAuricular = {
   localizacao: string;
   indicacoes: string;
   cuidado?: string; // contraindicação / atenção
+  souza?: string; // nome e número do ponto no livro de Souza, quando diferente
   fontes: string[]; // ids de REFERENCIAS
   pos: [number, number, number];
   normal: [number, number, number];
@@ -50,7 +51,7 @@ const COR: Record<RegiaoId, string> = {
 export const REGIOES: Regiao[] = data.regioes.map((r) => ({ ...r, id: r.id as RegiaoId, cor: COR[r.id as RegiaoId] }));
 export const REGIAO = Object.fromEntries(REGIOES.map((r) => [r.id, r])) as Record<RegiaoId, Regiao>;
 
-const P3 = pos3d as unknown as Record<string, Omit<PontoAuricular, 'codigo' | 'nome' | 'chines' | 'regiao' | 'localizacao' | 'indicacoes' | 'cuidado' | 'fontes'>>;
+const P3 = pos3d as unknown as Record<string, Omit<PontoAuricular, 'codigo' | 'nome' | 'chines' | 'regiao' | 'localizacao' | 'indicacoes' | 'cuidado' | 'souza' | 'fontes'>>;
 
 export const PONTOS: PontoAuricular[] = data.pontos
   .filter((p) => P3[p.codigo])
@@ -62,12 +63,16 @@ export const PONTOS: PontoAuricular[] = data.pontos
     localizacao: p.localizacao,
     indicacoes: p.indicacoes,
     cuidado: 'cuidado' in p ? (p.cuidado as string) : undefined,
+    souza: 'souza' in p ? (p.souza as string) : undefined,
     fontes: 'fontes' in p ? (p.fontes as string[]) : ['GB/T', 'Scavone'],
     ...P3[p.codigo],
   }));
 
 // Livros e normas usados (citados nas telas e no PDF).
 export const REFERENCIAS: { id: string; texto: string }[] = data.referencias;
+
+// Analgesia por auriculoterapia (resumo do Souza, cap. X).
+export const ANALGESIA = (data as unknown as { analgesia: { titulo: string; aviso: string; secoes: { titulo: string; itens: string[] }[] } }).analgesia;
 
 export const MODELO = {
   arquivo: data.modelo.arquivo,
@@ -85,7 +90,7 @@ export function buscar(texto: string, regioes: Set<RegiaoId> | null): PontoAuric
   return PONTOS.filter((p) => {
     if (regioes && regioes.size && !regioes.has(p.regiao)) return false;
     if (!t) return true;
-    return sem(`${p.codigo} ${p.nome} ${p.chines} ${p.indicacoes} ${p.cuidado ?? ''} ${REGIAO[p.regiao].nome}`).includes(t);
+    return sem(`${p.codigo} ${p.nome} ${p.chines} ${p.indicacoes} ${p.cuidado ?? ''} ${p.souza ?? ''} ${REGIAO[p.regiao].nome}`).includes(t);
   });
 }
 

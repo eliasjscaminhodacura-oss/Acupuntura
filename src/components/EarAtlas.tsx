@@ -3,7 +3,7 @@
 import { useMemo, useRef, useState, type CSSProperties } from 'react';
 import dynamic from 'next/dynamic';
 import Ear2D from './Ear2D';
-import AuriculoRefs, { PontoExtras } from './AuriculoRefs';
+import AuriculoRefs, { AnalgesiaInfo, PontoExtras } from './AuriculoRefs';
 import { buscar, MODELO, PONTOS, REGIAO, REGIOES, type Lado, type RegiaoId } from '@/lib/auriculo';
 import type { Visual } from '@/lib/ear3d';
 
@@ -140,6 +140,8 @@ export default function EarAtlas() {
           </div>
         ))}
       </div>
+
+      <AnalgesiaInfo />
 
       <p className="ear-credit">
         {MODELO.fonte} Localização aproximada: confirme sempre pela anatomia da orelha de cada paciente.
