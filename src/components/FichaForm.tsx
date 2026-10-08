@@ -34,6 +34,9 @@ import { normalizeDiet, type DietState } from '@/lib/dietetica';
 import AuriculoPanel from './AuriculoPanel';
 import { normalizeAuriculo, pontosEscolhidos, sindromesUsadas, sugerir, PONTO, type AuriculoState } from '@/lib/auriculo-sugestao';
 import { loadEarImages } from '@/lib/pdf-auriculo';
+import FacialPanel from './FacialPanel';
+import { OBS, analisar, normalizeFacial, type FacialState } from '@/lib/facial';
+import { topElement } from '@/lib/dietetica';
 
 const allData = appData as unknown as FichaData;
 
@@ -48,6 +51,7 @@ type Props = {
   initialComplaint: string;
   initialDiet: unknown;
   initialAuriculo: unknown;
+  initialFacial: unknown;
   initialCreatedAt: string | null;
   initialUpdatedAt: string | null;
 };
@@ -59,6 +63,7 @@ export default function FichaForm({
   initialComplaint,
   initialDiet,
   initialAuriculo,
+  initialFacial,
   initialCreatedAt,
   initialUpdatedAt,
 }: Props) {
@@ -70,6 +75,7 @@ export default function FichaForm({
   const [complaint, setComplaint] = useState(initialComplaint);
   const [diet, setDiet] = useState<DietState>(() => normalizeDiet(initialDiet));
   const [auriculo, setAuriculo] = useState<AuriculoState>(() => normalizeAuriculo(initialAuriculo));
+  const [facial, setFacial] = useState<FacialState>(() => normalizeFacial(initialFacial));
   // colunas opcionais que o banco ainda não tem (schema.sql não rodado):
   // o resto da ficha continua sendo salvo
   const [missingColumns, setMissingColumns] = useState<string[]>([]);
@@ -97,6 +103,7 @@ export default function FichaForm({
   const complaintRef = useRef(complaint);
   const dietRef = useRef(diet);
   const auriculoRef = useRef(auriculo);
+  const facialRef = useRef(facial);
   const missingRef = useRef<Set<string>>(new Set());
   const fichaIdRef = useRef(fichaId);
   const savingRef = useRef(false);
@@ -105,6 +112,7 @@ export default function FichaForm({
   complaintRef.current = complaint;
   dietRef.current = diet;
   auriculoRef.current = auriculo;
+  facialRef.current = facial;
 
   // Só as perguntas que valem para o sexo do paciente
   const data = useMemo(() => dataForSex(allData, patient.sex), [patient.sex]);
@@ -158,7 +166,7 @@ export default function FichaForm({
     if (!dirty) return;
     const t = setTimeout(() => { void handleSave(); }, AUTOSAVE_DELAY_MS);
     return () => clearTimeout(t);
-  }, [answers, complaint, diet, auriculo, dirty, saveRetry]);
+  }, [answers, complaint, diet, auriculo, facial, dirty, saveRetry]);
 
   function changeAutoScroll(on: boolean) {
     setAutoScroll(on);
@@ -222,6 +230,7 @@ export default function FichaForm({
     const snapComplaint = complaintRef.current;
     const snapDiet = dietRef.current;
     const snapAuriculo = auriculoRef.current;
+    const snapFacial = facialRef.current;
     const scores = computeScores(snapAnswers, data);
 
     let error: unknown = null;
@@ -247,7 +256,7 @@ export default function FichaForm({
         if (res.data) fichaIdRef.current = res.data.id;
         return res.error;
       };
-      const optional: Record<string, unknown> = { diet: snapDiet, auriculo: snapAuriculo };
+      const optional: Record<string, unknown> = { diet: snapDiet, auriculo: snapAuriculo, facial: snapFacial };
       const payload = () => ({
         ...base,
         ...Object.fromEntries(Object.entries(optional).filter(([k]) => !missingRef.current.has(k))),
@@ -255,7 +264,7 @@ export default function FichaForm({
       error = await write(payload());
       // Banco sem a coluna "diet"/"auriculo" (schema.sql ainda não rodado):
       // tira a coluna que falta e salva o resto.
-      for (let i = 0; i < 2 && error; i++) {
+      for (let i = 0; i < 3 && error; i++) {
         const msg = String((error as { message?: string }).message);
         const col = Object.keys(optional).find((k) => !missingRef.current.has(k) && msg.includes(k));
         if (!col) break;
@@ -284,7 +293,7 @@ export default function FichaForm({
     logChain.current = logChain.current.then(() => logSave(therapistId!, wasNew));
     const changedMeanwhile =
       pendingRef.current || answersRef.current !== snapAnswers || complaintRef.current !== snapComplaint ||
-      dietRef.current !== snapDiet || auriculoRef.current !== snapAuriculo;
+      dietRef.current !== snapDiet || auriculoRef.current !== snapAuriculo || facialRef.current !== snapFacial;
     pendingRef.current = false;
     if (changedMeanwhile) {
       setSaveRetry((n) => n + 1); // salva de novo o que mudou durante este salvamento
@@ -327,6 +336,21 @@ export default function FichaForm({
     return true;
   }
 
+  // Texto da análise facial para o PDF.
+  function facialLinhas(): string[] {
+    const a = analisar(facial);
+    const out: string[] = [];
+    if (a.constituicao) out.push(`Constituição (formato do rosto): ${a.constituicao}.`);
+    const sinais = facial.marcados.map((id) => OBS.get(id)).filter((o) => o && !o.id.startsWith('forma-')).map((o) => o!.label);
+    if (sinais.length) out.push(`Sinais observados: ${sinais.join('; ')}.`);
+    if (a.destaque) out.push(`Elemento com mais sinais no rosto: ${a.destaque}.`);
+    const naFicha = new Set(top.map((s) => s.code));
+    const conf = a.sindromes.filter((s) => naFicha.has(s.code)).map((s) => data.syndromes[s.code]?.name ?? s.code);
+    if (conf.length) out.push(`Síndromes da anamnese confirmadas pelo rosto: ${conf.join(', ')}.`);
+    if (facial.observacao.trim()) out.push(`Observações: ${facial.observacao.trim()}`);
+    return out;
+  }
+
   async function handlePdf() {
     const logo = await loadLogoDataUrl();
     const corpoPdf = patient.sex === 'F' ? 'feminino' : 'masculino';
@@ -361,7 +385,8 @@ export default function FichaForm({
         imagens: ear,
       },
       organImgs,
-      ilusImgs
+      ilusImgs,
+      facialLinhas()
     );
     downloadBlob(blob, `ficha-${patient.name.replace(/\s+/g, '-').toLowerCase()}.pdf`);
   }
@@ -519,6 +544,15 @@ export default function FichaForm({
             );
           })}
         </div>
+
+        <FacialPanel
+          data={data}
+          ranked={top.map((s) => s.code)}
+          topElement={topElement(result.elementScores)}
+          state={facial}
+          onChange={(next) => { setFacial(next); setDirty(true); }}
+          notSaved={missingColumns.includes('facial')}
+        />
 
         <DietPanel
           data={data}

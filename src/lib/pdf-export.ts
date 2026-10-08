@@ -344,7 +344,8 @@ export function buildPdfBlob(
   logoDataUrl?: string,
   auriculo?: AuriculoPdf | null,
   organImgs?: OrganImages,
-  ilusImgs?: OrganImages // fotos do corpo ilustrado (JPEG), por vista
+  ilusImgs?: OrganImages, // fotos do corpo ilustrado (JPEG), por vista
+  facial?: string[] // linhas da análise facial
 ): Blob {
   const doc = new jsPDF({ unit: 'mm', format: 'a4' });
   const pageW = doc.internal.pageSize.getWidth();
@@ -508,6 +509,22 @@ export function buildPdfBlob(
         doc.text(lines, MARGIN + 14, y);
         y += lines.length * 3.6 + 1;
       }
+    }
+  }
+
+  // Análise facial segundo a MTC
+  if (facial && facial.length) {
+    if (y + 24 > PAGE_BOTTOM) { doc.addPage(); y = PAGE_TOP; } else y += 6;
+    sectionTitle(doc, 'Análise facial segundo a MTC', y);
+    y += 7;
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(9);
+    doc.setTextColor(...INK);
+    for (const l of facial) {
+      const lines = doc.splitTextToSize(safe(l), contentW) as string[];
+      if (y + lines.length * 4 > PAGE_BOTTOM) { doc.addPage(); y = PAGE_TOP; }
+      doc.text(lines, MARGIN, y);
+      y += lines.length * 4 + 1.5;
     }
   }
 

@@ -1,0 +1,175 @@
+{
+  "aviso": "Análise facial segundo a Medicina Tradicional Chinesa: um dos recursos da inspeção (Wang). Deve ser lida junto com a anamnese, a língua e o pulso; não é diagnóstico médico. Conteúdo a ser revisado pelo terapeuta.",
+  "fontes": [
+    "Huang Di Nei Jing – Ling Shu, cap. 64 (os 25 tipos de pessoas segundo os 5 Elementos).",
+    "Huang Di Nei Jing – Ling Shu, cap. 49 (as cores e as áreas do rosto).",
+    "Huang Di Nei Jing – Su Wen, cap. 32 (áreas do rosto nas doenças de calor).",
+    "Literatura geral de diagnóstico pela inspeção em MTC. Textos resumidos com nossas palavras; ilustrações próprias do app."
+  ],
+  "tipos": {
+    "Madeira": {
+      "titulo": "Tipo Madeira",
+      "resumo": "Rosto alongado, como um tronco de árvore: alto, reto e firme.",
+      "rosto": ["Rosto comprido e mais estreito, de laterais retas", "Testa alta", "Sobrancelhas marcadas, às vezes subindo para fora", "Nariz longo e reto", "Tez com tom levemente esverdeado"],
+      "corpo": ["Cabeça pequena em relação ao corpo", "Ombros e costas largos, corpo reto e alto", "Mãos e pés pequenos", "Tendões aparentes"],
+      "temperamento": ["Determinado, planejador, gosta de crescer e de liderar", "Trabalhador, mente ativa", "Tende a se preocupar e a se irritar quando contrariado"],
+      "estacao": "Sente-se melhor na primavera e no verão; adoece com mais facilidade no outono e no inverno.",
+      "tendencias": "Tensão muscular e nos tendões, dor de cabeça nas têmporas, irritabilidade, TPM, problemas de vista, rigidez no pescoço e nos ombros.",
+      "sindromes": ["EstgQiF", "AscYgF", "FgF", "VtF", "DefXueF", "UmdCalorF"]
+    },
+    "Fogo": {
+      "titulo": "Tipo Fogo",
+      "resumo": "Rosto em forma de chama: largo nas maçãs e afinando no queixo (ou na testa).",
+      "rosto": ["Rosto pontudo: maçãs largas e queixo fino", "Tez com tom rosado ou avermelhado", "Olhos brilhantes e expressivos", "Covinhas e sorriso fácil", "Cabelo ralo ou cacheado"],
+      "corpo": ["Cabeça pequena, ombros e costas bem formados", "Mãos e pés pequenos", "Movimentos rápidos e ágeis"],
+      "temperamento": ["Entusiasmado, comunicativo, carismático", "Perspicaz, decide rápido", "Pode ser impaciente e ansioso; dorme mal quando agitado"],
+      "estacao": "Sente-se melhor na primavera e no verão; adoece com mais facilidade no outono e no inverno.",
+      "tendencias": "Ansiedade, palpitação, insônia, agitação, rubor no rosto, aftas, problemas de pressão e circulação.",
+      "sindromes": ["FgC", "DefYnC", "DefXueC", "FlmC", "CalorID", "EstgXueC"]
+    },
+    "Terra": {
+      "titulo": "Tipo Terra",
+      "resumo": "Rosto redondo e cheio, estável como a terra.",
+      "rosto": ["Rosto redondo, carnudo", "Cabeça grande", "Boca larga e lábios carnudos", "Nariz arredondado", "Tez com tom amarelado"],
+      "corpo": ["Ombros e costas bonitos, abdômen grande", "Coxas e pernas fortes, muita carne/músculo", "Passos firmes e calmos"],
+      "temperamento": ["Calmo, acolhedor, generoso, gosta de ajudar", "Confiável e paciente", "Pode se preocupar demais e pensar em excesso"],
+      "estacao": "Sente-se melhor no outono e no inverno; adoece com mais facilidade na primavera e no verão.",
+      "tendencias": "Digestão lenta, inchaço, ganho de peso, umidade e catarro, cansaço após comer, vontade de doce, preocupação.",
+      "sindromes": ["DefQiBP", "DefYgBP", "UmdFrioBP", "UmdCalorBP", "AlimE", "DefQiE"]
+    },
+    "Metal": {
+      "titulo": "Tipo Metal",
+      "resumo": "Rosto quadrado ou oval bem definido, de ossos marcados.",
+      "rosto": ["Rosto quadrado/oval, contornos definidos", "Maçãs do rosto (ossos) marcadas", "Pele com tom pálido, fina", "Nariz reto e bem desenhado", "Sobrancelhas retas"],
+      "corpo": ["Cabeça pequena, ombros e costas pequenos", "Abdômen pequeno, ossos leves", "Mãos e pés pequenos; ágil"],
+      "temperamento": ["Organizado, correto, íntegro, disciplinado", "Firme nas decisões, bom administrador", "Pode ser reservado e guardar tristezas"],
+      "estacao": "Sente-se melhor no outono e no inverno; adoece com mais facilidade na primavera e no verão.",
+      "tendencias": "Resfriados e alergias respiratórias, pele seca, intestino preso, tristeza e luto prolongados.",
+      "sindromes": ["DefQiP", "DefYnP", "SecP", "VtFrioP", "FlmFrioP", "UmdFrioIG"]
+    },
+    "Água": {
+      "titulo": "Tipo Água",
+      "resumo": "Cabeça grande, testa ampla e mandíbula larga; traços mais profundos.",
+      "rosto": ["Testa ampla e cabeça grande", "Mandíbula e bochechas largas, contorno irregular", "Orelhas grandes", "Olhos profundos, às vezes com olheiras", "Tez com tom mais escuro ou acinzentado (em relação à própria pele)"],
+      "corpo": ["Ombros estreitos, abdômen grande", "Coluna/tronco longos", "Movimentos lentos e balanceados"],
+      "temperamento": ["Reservado, observador, profundo", "Determinado e resistente", "Pode ser desconfiado e medroso diante do novo"],
+      "estacao": "Sente-se melhor no outono e no inverno; adoece com mais facilidade na primavera e no verão.",
+      "tendencias": "Cansaço, frio, dor lombar e nos joelhos, problemas urinários, zumbido, medo, queda de cabelo.",
+      "sindromes": ["DefYgR", "DefYnR", "DefJgR", "DefQiR", "UmdFrioB"]
+    }
+  },
+  "mapas": [
+    {
+      "id": "suwen",
+      "nome": "Mapa do Su Wen (cap. 32)",
+      "descricao": "O mapa mais simples: cada um dos 5 órgãos Zang aparece numa área do rosto. Útil para ver onde o rosto fica vermelho, escuro, com acne ou manchas. Lembre: “esquerda” é o lado esquerdo do paciente (na figura, à direita de quem olha).",
+      "zonas": [
+        { "id": "testa", "nome": "Testa", "orgao": "Coração", "elemento": "Fogo", "sinais": "Vermelhidão ou acne na testa: calor no Coração (agitação, insônia). Testa escura: sobrecarga e cansaço." },
+        { "id": "nariz", "nome": "Nariz", "orgao": "Baço-Pâncreas", "elemento": "Terra", "sinais": "Nariz amarelado: Baço fraco ou umidade. Ponta vermelha: calor no Estômago/Baço." },
+        { "id": "bochecha-esq", "nome": "Bochecha esquerda (do paciente)", "orgao": "Fígado", "elemento": "Madeira", "sinais": "Vermelhidão: calor/Fogo do Fígado. Tom esverdeado: estagnação, dor, frio." },
+        { "id": "bochecha-dir", "nome": "Bochecha direita (do paciente)", "orgao": "Pulmão", "elemento": "Metal", "sinais": "Vermelhidão: calor no Pulmão. Palidez: Qi do Pulmão fraco." },
+        { "id": "queixo", "nome": "Queixo", "orgao": "Rim", "elemento": "Água", "sinais": "Queixo escuro: Rim enfraquecido. Acne no queixo: desequilíbrio hormonal, calor/umidade na parte baixa." }
+      ]
+    },
+    {
+      "id": "lingshu",
+      "nome": "Mapa do Ling Shu (cap. 49)",
+      "descricao": "Mapa detalhado, centrado no nariz e na linha do meio do rosto: a parte de cima reflete a cabeça, o meio reflete o tronco e as vísceras, e as laterais refletem as vísceras ocas e os rins.",
+      "zonas": [
+        { "id": "ls-testa", "nome": "Parte alta da testa", "orgao": "Cabeça e face", "elemento": null, "sinais": "Alterações aqui refletem problemas da cabeça e do rosto." },
+        { "id": "ls-glabela-alta", "nome": "Acima do espaço entre as sobrancelhas", "orgao": "Garganta", "elemento": null, "sinais": "Garganta e laringe." },
+        { "id": "ls-yintang", "nome": "Entre as sobrancelhas (Yintang)", "orgao": "Pulmão", "elemento": "Metal", "sinais": "Pulmão. Ruga vertical funda entre as sobrancelhas também indica tensão emocional." },
+        { "id": "ls-raiz-nariz", "nome": "Raiz do nariz (entre os olhos)", "orgao": "Coração", "elemento": "Fogo", "sinais": "Coração." },
+        { "id": "ls-dorso-nariz", "nome": "Meio do dorso do nariz", "orgao": "Fígado", "elemento": "Madeira", "sinais": "Fígado." },
+        { "id": "ls-lado-dorso", "nome": "Laterais do dorso do nariz", "orgao": "Vesícula Biliar", "elemento": "Madeira", "sinais": "Vesícula Biliar." },
+        { "id": "ls-ponta-nariz", "nome": "Ponta do nariz", "orgao": "Baço-Pâncreas", "elemento": "Terra", "sinais": "Baço-Pâncreas." },
+        { "id": "ls-asas-nariz", "nome": "Asas do nariz", "orgao": "Estômago", "elemento": "Terra", "sinais": "Estômago." },
+        { "id": "ls-bochecha-interna", "nome": "Bochechas, ao lado do nariz (abaixo dos olhos)", "orgao": "Intestino Delgado", "elemento": "Fogo", "sinais": "Intestino Delgado." },
+        { "id": "ls-bochecha-centro", "nome": "Centro das bochechas", "orgao": "Intestino Grosso", "elemento": "Metal", "sinais": "Intestino Grosso." },
+        { "id": "ls-bochecha-externa", "nome": "Bochechas, mais para fora (perto da orelha)", "orgao": "Rim", "elemento": "Água", "sinais": "Rim." },
+        { "id": "ls-filtro", "nome": "Abaixo do nariz (sulco do lábio superior)", "orgao": "Bexiga e útero/órgãos genitais", "elemento": "Água", "sinais": "Bexiga e órgãos genitais." }
+      ]
+    }
+  ],
+  "cores": [
+    { "id": "verde", "nome": "Verde-azulada (Qing)", "amostra": "#8c9a7e", "elemento": "Madeira", "orgao": "Fígado", "significado": "Frio, dor, estagnação do Sangue, vento (convulsões, espasmos). Em volta da boca e entre os olhos de crianças: cólica e espasmo." },
+    { "id": "vermelha", "nome": "Vermelha", "amostra": "#d4796a", "elemento": "Fogo", "orgao": "Coração", "significado": "Calor. Rosto todo vermelho: calor de excesso (Fogo). Só as maçãs vermelhas, mais à tarde: calor por deficiência de Yin." },
+    { "id": "amarela", "nome": "Amarela", "amostra": "#d9b45a", "elemento": "Terra", "orgao": "Baço-Pâncreas", "significado": "Baço fraco ou umidade. Amarelo brilhante (como laranja): umidade-calor. Amarelo opaco e esfumaçado: umidade-frio. Amarelo pálido e seco: deficiência de Qi e Sangue." },
+    { "id": "branca", "nome": "Branca / pálida", "amostra": "#ece6dc", "elemento": "Metal", "orgao": "Pulmão", "significado": "Deficiência e frio. Branco brilhante e inchado: deficiência de Yang. Branco sem brilho, baço: deficiência de Sangue ou de Qi." },
+    { "id": "escura", "nome": "Escura / acinzentada (Hei)", "amostra": "#6f6159", "elemento": "Água", "orgao": "Rim", "significado": "Rim enfraquecido, frio, dor forte, estagnação do Sangue. Escuro e seco: Yin do Rim gasto. Olheiras escuras: Rim cansado." }
+  ],
+  "brilho": "A cor da tez é um tom que aparece por cima da cor natural da pele de cada pessoa (seja ela clara, morena ou negra) — não tem relação com etnia. Compare sempre com a cor habitual do próprio paciente. Mais importante que a cor é o brilho (o “Shen” da tez): tez com brilho e viço, mesmo alterada, indica que o Qi e a essência ainda estão bons e a recuperação é mais fácil; tez opaca, seca e sem vida indica um quadro mais profundo ou mais antigo.",
+  "observacoes": [
+    { "grupo": "Formato do rosto (constituição)", "unico": true, "nota": "A constituição mostra tendências, não doença. Escolha o tipo que mais se parece.", "itens": [
+      { "id": "forma-madeira", "label": "Comprido e reto (Madeira)", "elemento": "Madeira", "sindromes": [] },
+      { "id": "forma-fogo", "label": "Pontudo, maçãs largas e queixo fino (Fogo)", "elemento": "Fogo", "sindromes": [] },
+      { "id": "forma-terra", "label": "Redondo e cheio (Terra)", "elemento": "Terra", "sindromes": [] },
+      { "id": "forma-metal", "label": "Quadrado/oval, ossos marcados (Metal)", "elemento": "Metal", "sindromes": [] },
+      { "id": "forma-agua", "label": "Cabeça grande, testa e mandíbula largas (Água)", "elemento": "Água", "sindromes": [] }
+    ] },
+    { "grupo": "Cor da tez", "itens": [
+      { "id": "cor-verde", "label": "Esverdeada / azulada", "elemento": "Madeira", "sindromes": ["EstgQiF", "EstgXueF", "VtF"] },
+      { "id": "cor-vermelha", "label": "Rosto todo vermelho", "elemento": "Fogo", "sindromes": ["FgC", "FgF", "CalorE"] },
+      { "id": "cor-macas", "label": "Maçãs do rosto vermelhas (mais à tarde)", "elemento": "Fogo", "sindromes": ["DefYnR", "DefYnP", "DefYnC"] },
+      { "id": "cor-amarela-opaca", "label": "Amarelada, opaca", "elemento": "Terra", "sindromes": ["DefQiBP", "UmdFrioBP"] },
+      { "id": "cor-amarela-brilhante", "label": "Amarelada brilhante (alaranjada)", "elemento": "Terra", "sindromes": ["UmdCalorF", "UmdCalorBP"] },
+      { "id": "cor-palida-brilhante", "label": "Branca, brilhante e inchada", "elemento": "Metal", "sindromes": ["DefYgBP", "DefYgR", "DefQiP"] },
+      { "id": "cor-palida-baca", "label": "Pálida, sem brilho (baça)", "elemento": "Metal", "sindromes": ["DefXueC", "DefXueF", "DefQiBP"] },
+      { "id": "cor-escura", "label": "Escura / acinzentada", "elemento": "Água", "sindromes": ["DefYgR", "DefJgR", "EstgXueF"] },
+      { "id": "cor-arroxeada", "label": "Arroxeada (lábios/rosto)", "elemento": "Fogo", "sindromes": ["EstgXueC", "EstgXueF", "ColapsQiC"] }
+    ] },
+    { "grupo": "Brilho e vitalidade", "itens": [
+      { "id": "shen-bom", "label": "Tez com brilho e viço", "elemento": null, "sindromes": [] },
+      { "id": "shen-fraco", "label": "Tez opaca, seca, sem vida", "elemento": null, "sindromes": ["DefJgR", "DefXueC", "DefQiBP"] }
+    ] },
+    { "grupo": "Olhos", "itens": [
+      { "id": "olheiras", "label": "Olheiras escuras", "elemento": "Água", "sindromes": ["DefYnR", "DefYgR", "DefJgR"] },
+      { "id": "bolsas", "label": "Bolsas / inchaço abaixo dos olhos", "elemento": "Terra", "sindromes": ["DefQiBP", "UmdFrioBP", "DefYgR"] },
+      { "id": "olhos-vermelhos", "label": "Olhos vermelhos", "elemento": "Madeira", "sindromes": ["FgF", "AscYgF", "VtCalorP"] },
+      { "id": "esclera-amarela", "label": "Parte branca amarelada", "elemento": "Terra", "sindromes": ["UmdCalorF", "UmdCalorBP"] },
+      { "id": "olhos-secos", "label": "Olhos secos, vista cansada ou turva", "elemento": "Madeira", "sindromes": ["DefXueF", "DefYnR"] },
+      { "id": "palpebra-palida", "label": "Parte interna da pálpebra pálida", "elemento": "Madeira", "sindromes": ["DefXueF", "DefXueC"] },
+      { "id": "palpebra-tremor", "label": "Tremor na pálpebra", "elemento": "Madeira", "sindromes": ["VtF", "DefXueF"] },
+      { "id": "olhar-apagado", "label": "Olhar sem brilho", "elemento": "Fogo", "sindromes": ["DefQiC", "DefXueC"] }
+    ] },
+    { "grupo": "Testa e sobrancelhas", "itens": [
+      { "id": "ruga-glabela", "label": "Ruga vertical funda entre as sobrancelhas", "elemento": "Madeira", "sindromes": ["EstgQiF", "AscYgF"] },
+      { "id": "testa-vermelha", "label": "Testa vermelha ou com acne", "elemento": "Fogo", "sindromes": ["FgC", "CalorID"] },
+      { "id": "testa-escura", "label": "Testa escura", "elemento": "Fogo", "sindromes": ["DefYgC", "EstgXueC"] }
+    ] },
+    { "grupo": "Nariz", "itens": [
+      { "id": "nariz-ponta-vermelha", "label": "Ponta do nariz vermelha", "elemento": "Terra", "sindromes": ["CalorE", "UmdCalorBP"] },
+      { "id": "nariz-amarelo", "label": "Nariz amarelado", "elemento": "Terra", "sindromes": ["DefQiBP", "UmdFrioBP"] },
+      { "id": "nariz-asas", "label": "Asas do nariz abrindo ao respirar", "elemento": "Metal", "sindromes": ["FlmCalorP", "DefQiP"] },
+      { "id": "nariz-vasinhos", "label": "Vasinhos aparentes no nariz", "elemento": "Terra", "sindromes": ["CalorE", "EstgXueF"] }
+    ] },
+    { "grupo": "Bochechas e pele", "itens": [
+      { "id": "bochecha-esq-vermelha", "label": "Bochecha esquerda (do paciente) mais vermelha", "elemento": "Madeira", "sindromes": ["FgF", "AscYgF"] },
+      { "id": "bochecha-dir-vermelha", "label": "Bochecha direita (do paciente) mais vermelha", "elemento": "Metal", "sindromes": ["FlmCalorP", "DefYnP"] },
+      { "id": "acne-bochechas", "label": "Acne nas bochechas", "elemento": "Terra", "sindromes": ["CalorE", "UmdCalorBP", "FlmCalorP"] },
+      { "id": "manchas-escuras", "label": "Manchas escuras (melasma)", "elemento": "Madeira", "sindromes": ["EstgXueF", "EstgQiF", "DefYnR"] },
+      { "id": "rosto-inchado", "label": "Rosto inchado", "elemento": "Água", "sindromes": ["DefYgR", "DefQiP", "DefYgBP"] },
+      { "id": "rosto-magro", "label": "Rosto magro, encovado", "elemento": "Terra", "sindromes": ["DefQiBP", "DefYnR", "DefYnE"] },
+      { "id": "pele-oleosa", "label": "Pele oleosa", "elemento": "Terra", "sindromes": ["UmdCalorBP", "UmdCalorF"] },
+      { "id": "pele-seca", "label": "Pele seca, descamando", "elemento": "Metal", "sindromes": ["SecP", "DefXueF", "DefYnP"] }
+    ] },
+    { "grupo": "Boca e lábios", "itens": [
+      { "id": "labios-palidos", "label": "Lábios pálidos", "elemento": "Terra", "sindromes": ["DefXueC", "DefXueF", "DefQiBP"] },
+      { "id": "labios-vermelhos", "label": "Lábios muito vermelhos e secos", "elemento": "Terra", "sindromes": ["CalorE", "DefYnE"] },
+      { "id": "labios-arroxeados", "label": "Lábios arroxeados", "elemento": "Fogo", "sindromes": ["EstgXueC", "ColapsQiC"] },
+      { "id": "labios-rachados", "label": "Lábios rachados", "elemento": "Metal", "sindromes": ["SecP", "DefYnE"] },
+      { "id": "cantos-boca", "label": "Feridas nos cantos da boca / aftas", "elemento": "Terra", "sindromes": ["CalorE", "UmdCalorBP", "FgC"] },
+      { "id": "boca-desviada", "label": "Boca ou rosto desviado", "elemento": "Madeira", "sindromes": ["VtF"] },
+      { "id": "filtro-escuro", "label": "Área abaixo do nariz escura", "elemento": "Água", "sindromes": ["DefYgR", "UmdFrioB"] }
+    ] },
+    { "grupo": "Queixo, orelhas e cabelo", "itens": [
+      { "id": "acne-queixo", "label": "Acne no queixo / mandíbula", "elemento": "Água", "sindromes": ["DefYnR", "EstgXueF", "UmdCalorB"] },
+      { "id": "queixo-escuro", "label": "Queixo escuro", "elemento": "Água", "sindromes": ["DefYgR", "DefJgR"] },
+      { "id": "orelhas-finas", "label": "Orelhas pequenas e finas", "elemento": "Água", "sindromes": ["DefJgR"] },
+      { "id": "orelhas-vermelhas", "label": "Orelhas vermelhas", "elemento": "Madeira", "sindromes": ["FgF", "AscYgF"] },
+      { "id": "lobulo-prega", "label": "Prega diagonal no lóbulo da orelha", "elemento": "Fogo", "sindromes": ["EstgXueC"] },
+      { "id": "cabelo-ralo", "label": "Cabelo ralo ou caindo", "elemento": "Água", "sindromes": ["DefXueF", "DefJgR"] },
+      { "id": "cabelo-grisalho", "label": "Cabelo grisalho cedo", "elemento": "Água", "sindromes": ["DefJgR", "DefYnR"] }
+    ] }
+  ]
+}

@@ -674,3 +674,36 @@ button.small { padding: 6px 12px; font-size: 13px; }
   font-size: 14px;
   max-width: 100%;
 }
+
+/* Análise facial */
+.facial h4 { margin: 16px 0 6px; color: var(--jade); }
+.facial-gallery { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; margin-top: 12px; }
+.facial-thumb { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 6px 4px; background: var(--panel); border: 2px solid var(--border); border-radius: 10px; color: var(--ink); font-size: 12px; line-height: 1.3; cursor: pointer; }
+.facial-thumb span { font-weight: 600; text-align: center; }
+.facial-thumb.on { box-shadow: 0 0 0 3px rgba(62, 98, 89, .25); background: var(--bg); }
+.facial-thumb:not(.on) { border-color: var(--border) !important; }
+.facial-thumb .face-svg { width: 100%; max-width: 110px; }
+.facial-gallery.small .face-svg { max-width: 72px; }
+.facial-tipo { display: grid; grid-template-columns: minmax(180px, 280px) 1fr; gap: 16px; margin-top: 14px; border-left: 4px solid transparent; padding-left: 12px; }
+.facial-tipo h3 { margin: 0 0 4px; }
+.facial-tipo ul { margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.5; }
+.facial-tipo p { font-size: 14px; line-height: 1.5; margin: 6px 0; }
+.facial-tipo-img .face-svg { width: 100%; }
+.facial-zonas { list-style: none; margin: 10px 0 0; padding: 0; font-size: 14px; }
+.facial-zonas li { padding: 5px 8px; border-radius: 6px; cursor: pointer; }
+.facial-zonas li:hover, .facial-zonas li.on { background: var(--bg); }
+.facial-cor { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 10px; }
+.facial-amostra { flex: 0 0 34px; height: 34px; border-radius: 50%; border: 1px solid var(--border); }
+.facial-sinais { margin: 0; padding-left: 4px; list-style: none; font-size: 14px; line-height: 1.6; }
+.facial-result { margin-top: 14px; padding: 10px 12px; background: var(--bg); border-radius: 8px; font-size: 14px; }
+.facial-result h4 { margin-top: 0; }
+.facial-result p { margin: 6px 0 0; }
+.facial-bars { display: grid; gap: 4px; max-width: 420px; }
+.facial-bar { display: grid; grid-template-columns: 70px 1fr 24px; gap: 8px; align-items: center; font-size: 13px; }
+.facial-bar div { height: 10px; background: var(--border); border-radius: 5px; overflow: hidden; }
+.facial-bar i { display: block; height: 100%; }
+@media (max-width: 640px) {
+  .facial-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .facial-tipo { grid-template-columns: 1fr; }
+  .facial-tipo-img { max-width: 260px; margin: 0 auto; }
+}
