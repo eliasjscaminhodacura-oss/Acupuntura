@@ -74,9 +74,11 @@ trabalho (sem `gh` no PATH), ver se os arquivos novos respondem 200 no site.
 **Próxima coisa a fazer:**
 
 1. **Ao abrir no outro computador:** `git pull` e `npm install`. Conferir
-   `npm run build`. Nada a rodar no Supabase. 09/10: piscar do Ciclo no
-   celular corrigido e publicado. O dono disse que vai trazer **outros
-   serviços** — começar ouvindo o pedido.
+   `npm run build`. Nada a rodar no Supabase. 09/10 (publicado): piscar do
+   Ciclo no celular; **"Onde encontrar no Brasil"** na Fitoterapia
+   (produtos Taimin e TaoZen). Se o dono mandar outras lojas, acrescentar
+   em `scripts/produtos-brasil.mjs` e rodar `npm run fitoterapia:produtos`
+   (atualizar a lista de tempos em tempos: as lojas mudam o catálogo).
    Se o `npm run dev` der erro de hidratação com dados velhos, encerrar o
    processo node da porta 3000 e ligar de novo.
 2. **Auriculoterapia — Souza completo** (08/10): todos os 200 pontos e os
@@ -182,6 +184,7 @@ próprio).
 | `src/data/facial.json` + `src/lib/facial.ts` + `src/components/FaceIllustration.tsx`, `FacialAtlas.tsx`, `FacialPanel.tsx` + `src/app/analise-facial/page.tsx` | Análise Facial: conteúdo (tipos, mapas, cores, sinais → síndromes), cálculo (`analisar`: constituição pelo formato do rosto; Elemento em destaque só sem empate), rostos desenhados em SVG (mesma pele de base com tom do Elemento — tez não é etnia), aba de consulta e painel da ficha (salvo em `fichas.facial`, texto no PDF) |
 | `src/data/analgesia.json` + `src/components/AnalgesiaAtlas.tsx` + `src/app/analgesia/page.tsx` | aba Analgesia em Acupuntura (texto em analgesia.json; protocolos por dor e programas de Souza vêm de `auriculo.json → analgesia`; referências em `auriculo.json → referencias`) |
 | `scripts/fitoterapia-dados.mjs` → `src/data/fitoterapia.json` + `src/lib/fitoterapia.ts` + `src/components/FitoAtlas.tsx`, `FitoPanel.tsx` + `src/app/fitoterapia/page.tsx` | Fitoterapia Chinesa: ervas (natureza, sabor, meridianos, ações, cuidados, alertas gest/anticoag/pressao/toxica/animal/mineral), fórmulas (composição sem dose, síndromes — a 1ª síndrome da lista = fórmula principal ★), painel da ficha (`fichas.fitoterapia`), PDF |
+| `scripts/produtos-brasil.mjs` → `src/data/produtos-brasil.json` + `src/lib/produtos.ts` + `src/components/ProdutosBrasil.tsx` | Fórmulas à venda no Brasil (Taimin: 2 páginas do site, ervas em latim → tabela `LATIM`; TaoZen: dados públicos que o próprio site usa, `/api/apps/<id>/entities/Formula`). Guarda só nome, forma, composição e link (sem preço, texto ou foto). Liga cada produto à fórmula do app: "mesma" (mesmo nome-base) ou "parecida" (≥ 3 ervas em comum e Jaccard ≥ 0,5, sem contar alcaçuz/gengibre/tâmara). `EXTRAS` = ervas que não estão no app, com avisos (Xi Jiao proibido, Ying Su Ke e Ma Huang controlados etc.). Aba "Onde encontrar no Brasil", linha "No Brasil" no `FormulaCard` e etiqueta no `FitoPanel` |
 | `src/data/dietetica.json` + `src/lib/dietetica.ts` + `src/components/DietPanel.tsx` + `src/lib/pdf-dieta.ts` | Orientação alimentar segundo a MTC: conteúdo (revisado pelo dono via planilha), lógica (síndromes escolhidas — automático = 3 mais fortes; tira do "Prefira" o que alguma síndrome manda evitar ou o que tem natureza térmica oposta; restrições do paciente), painel no fim do resultado e PDF A5 do paciente |
 | `supabase/schema.sql` | tabelas `patients` e `fichas` + RLS. **Já executado** no Supabase. Pode ser rodado de novo sem problema |
 | `CLAUDE.md` | lido automaticamente pelo Claude Code; importa este arquivo |
@@ -280,7 +283,8 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
        dietética é privativa do nutricionista — o app usa "orientação
        segundo a MTC" e aviso no PDF). Levar também (08/10): **Fitoterapia
        Chinesa** (quem pode indicar ervas; regularização na Anvisa; o app
-       não dá doses) e **Analgesia** (anestesia cirúrgica é ato médico; o
+       não dá doses; 09/10: lista de produtos de lojas — Taimin, TaoZen —
+       dentro do app) e **Analgesia** (anestesia cirúrgica é ato médico; o
        app fala em analgesia complementar, com aviso).
 9. [x] Dietética revisada (06/10) com base em Hirsch (Manual do Herói) e
        Arantes (Dietoterapia Chinesa, Roca 2015); dono aprovou.
@@ -345,6 +349,15 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
   caso, `.cycle-pulse` e `.holo-point-ring` piscam só com opacidade
   (`soft-blink`, sem crescer); só a varredura `.holo-scan` fica parada.
   Dono testou e aprovou; publicado.
+- **Fitoterapia — "Onde encontrar no Brasil"** (pedido do dono, publicado):
+  202 produtos (Taimin 16 remédios prontos; TaoZen 186 fórmulas em ervas
+  para decocção), 44 iguais a fórmulas do app e 25 parecidos; 42 das 61
+  fórmulas do app têm produto. A TaoZen às vezes lista menos ervas que a
+  fórmula clássica (ex.: Xue Fu Zhu Yu Tang com 6 de 11): o app mostra o
+  que falta e o que sobra. Sem produto: You Gui Wan, Shen Fu Tang, Yin Qiao
+  San, Ba Zheng San, Bai Tou Weng Tang e outras (19). Levar ao advogado:
+  citar marcas/lojas num app vendido (pode parecer propaganda) — aviso no
+  app diz que as lojas não têm ligação e não é recomendação de marca.
 
 ### 08/10/2026
 - **Fitoterapia Chinesa:** feita primeiro pelos clássicos e logo revisada com
