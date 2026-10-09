@@ -166,6 +166,20 @@ const E = [
 
 E.push(['bai-ji-li', 'Bai Ji Li', 'Tríbulo', 'Tribuli Fructus', 'M', 'amargo, picante', 'F, P', 'Acalma o Fígado e o vento; clareia os olhos; alivia coceira.', 'Evitar na gestação.', ['gest']]);
 
+// Ervas das fórmulas acrescentadas com as síndromes novas (09/10/2026).
+E.push(
+  ['hu-tao-ren', 'Hu Tao Ren', 'Noz', 'Juglandis Semen', 'M', 'doce', 'R, P, IG', 'Tonifica o Rim e ajuda a receber o Qi; umedece o intestino.', 'Evitar na diarreia e com catarro-calor.', []],
+  ['chen-xiang', 'Chen Xiang', 'Madeira de agar (aquilária)', 'Aquilariae Lignum resinatum', 'M', 'picante, amargo', 'R, BP, E', 'Move o Qi e alivia a dor; aquece o centro; ajuda o Rim a receber o Qi.', 'Evitar no calor por deficiência de Yin e no Qi afundado.', []],
+  ['yi-tang', 'Yi Tang', 'Maltose', 'Maltosum', 'M', 'doce', 'BP, E, P', 'Tonifica e aquece o centro; alivia a dor espasmódica; umedece o Pulmão.', 'Evitar no diabetes, com umidade, catarro ou vômito.', []],
+  ['huo-ma-ren', 'Huo Ma Ren', 'Semente de cânhamo', 'Cannabis Semen', 'N', 'doce', 'BP, E, IG', 'Umedece o intestino e solta as fezes.', 'Só a semente (sem efeito psicoativo). Em dose alta pode intoxicar; evitar na diarreia.', []],
+  ['mang-xiao', 'Mang Xiao', 'Sulfato de sódio (sal de Glauber)', 'Natrii Sulfas', 'Fr', 'salgado, amargo', 'E, IG', 'Purga o Calor e amolece fezes endurecidas.', 'Purgante forte: proibido na gestação; não usar em fraqueza nem por tempo prolongado.', ['gest', 'mineral']],
+  ['pu-huang', 'Pu Huang', 'Pólen de taboa', 'Typhae Pollen', 'N', 'doce', 'F, CS', 'Move o Sangue e alivia a dor; também estanca sangramentos (tostado).', 'Evitar na gestação.', ['gest', 'anticoag']],
+  ['tan-xiang', 'Tan Xiang', 'Sândalo', 'Santali albi Lignum', 'M', 'picante', 'BP, E, P', 'Move o Qi, aquece o centro e alivia a dor no peito e no estômago.', 'Evitar no calor por deficiência de Yin.', []],
+  ['di-gu-pi', 'Di Gu Pi', 'Casca da raiz do goji', 'Lycii Cortex', 'Fr', 'doce', 'P, F, R', 'Clareia o Calor por deficiência e o Calor do Pulmão; esfria o Sangue.', 'Evitar na diarreia por frio.', []],
+  ['qing-hao', 'Qing Hao', 'Artemísia anual', 'Artemisiae annuae Herba', 'Fr', 'amargo, picante', 'F, VB', 'Clareia o Calor por deficiência e o Calor do Sangue.', 'Evitar na diarreia por deficiência do Baço.', []],
+  ['geng-mi', 'Geng Mi', 'Arroz', 'Oryzae Semen', 'N', 'doce', 'BP, E', 'Protege o Estômago e gera líquidos.', '', []],
+);
+
 // Revisão com Bensky & Gamble (Materia Medica): cuidados acrescentados.
 const REV = {
   'dang-shen': ['Classicamente incompatível com Li Lu (Veratrum).', []],
@@ -326,6 +340,53 @@ F.push(
   ['ming-mu-di-huang-wan', 'Ming Mu Di Huang Wan', 'Pílula de Rehmannia que Clareia os Olhos', 'Shen Shi Yao Han (Ming)', 'Tonificar o Yin', ['sheng-di-huang', 'shan-yao', 'shan-zhu-yu', 'fu-ling', 'ze-xie', 'mu-dan-pi', 'gou-qi-zi', 'shi-jue-ming', 'bai-ji-li', 'bai-shao', 'dang-gui', 'ju-hua'],
     'Nutre o Yin do Fígado e do Rim e clareia os olhos.', 'Olhos secos e cansados, vista turva, sensação de areia nos olhos, lacrimejamento com vento, tontura.', 'Cuidado com Baço e Estômago fracos. Contraindicada na gestação.', ['DefXueF', 'DefYnR']],
 );
+
+// Síndromes novas da revisão com McDonald (Zang Fu Syndromes) e Maciocia
+// (Fundamentos, cap. 32–42), 09/10/2026. A 1ª síndrome é aquela em que a
+// fórmula é a principal.
+F.push(
+  ['yi-guan-jian', 'Yi Guan Jian', 'Decocção de Uma Ligação', 'Liu Zhou Yi Hua (Wei Zhi-Xiu, Qing)', 'Nutrir o Yin', ['sheng-di-huang', 'sha-shen', 'mai-men-dong', 'dang-gui', 'gou-qi-zi', 'chuan-lian-zi'],
+    'Nutre o Yin do Fígado e do Rim e suaviza o Fígado.', 'Olhos secos, visão turva, dor surda nas costelas, boca e garganta secas, regurgitação ácida, língua vermelha e seca.', 'Evitar com umidade ou catarro. Chuan Lian Zi é levemente tóxico (dose baixa).', ['DefYnF']],
+  ['tong-xie-yao-fang', 'Tong Xie Yao Fang', 'Fórmula Importante para Diarreia Dolorosa', 'Dan Xi Xin Fa (Zhu Dan-Xi)', 'Harmonizar Fígado e Baço', ['bai-zhu', 'bai-shao', 'chen-pi', 'fang-feng'],
+    'Acalma o Fígado, fortalece o Baço e alivia a diarreia com dor.', 'Barriga que dói e solta com o nervoso, dor que melhora após evacuar, gases, alternância de prisão de ventre e diarreia.', '', ['FinvBP']],
+  ['si-ni-san', 'Si Ni San', 'Pó dos Quatro Frios', 'Shang Han Lun (Zhang Zhong-Jing)', 'Harmonizar Fígado e Baço', ['chai-hu', 'zhi-ke', 'bai-shao', 'gan-cao'],
+    'Libera o Qi preso do Fígado e harmoniza o Fígado com o Estômago e o Baço.', 'Dor e distensão nas costelas e no estômago, mãos frias por tensão, irritação.', 'Cuidado na deficiência de Yin.', ['FinvE', 'FinvBP']],
+  ['di-tan-tang', 'Di Tan Tang', 'Decocção que Lava o Catarro', 'Ji Sheng Fang (Yan Yong-He, Song)', 'Transformar catarro', ['dan-nan-xing', 'ban-xia', 'zhi-ke', 'fu-ling', 'chen-pi', 'shi-chang-pu', 'ren-shen', 'zhu-ru', 'gan-cao', 'sheng-jiang'],
+    'Transforma a Fleuma e abre os orifícios da Mente.', 'Confusão mental, fala arrastada, catarro na garganta, olhar distante (também sequela de AVC, sob cuidado médico).', 'Evitar com calor ou deficiência de Yin.', ['FlmMente']],
+  ['ren-shen-hu-tao-tang', 'Ren Shen Hu Tao Tang', 'Decocção de Ginseng e Noz', 'Ji Sheng Fang (Yan Yong-He, Song)', 'Tonificar o Yang', ['ren-shen', 'hu-tao-ren', 'sheng-jiang'],
+    'Tonifica o Pulmão e o Rim e ajuda o Rim a receber o Qi.', 'Asma e falta de ar crônicas que pioram com esforço, dificuldade de puxar o ar, voz fraca.', 'Evitar na asma aguda com catarro-calor.', ['RnaoRecQi']],
+  ['nuan-gan-jian', 'Nuan Gan Jian', 'Decocção que Aquece o Fígado', 'Jing Yue Quan Shu (Zhang Jing-Yue, Ming)', 'Aquecer e mover o Qi', ['dang-gui', 'gou-qi-zi', 'xiao-hui-xiang', 'rou-gui', 'wu-yao', 'chen-xiang', 'fu-ling', 'sheng-jiang'],
+    'Aquece o Fígado e o Rim, move o Qi e alivia a dor.', 'Dor e frio no baixo ventre, dor no escroto (hérnia) que melhora com calor, mãos e pés frios.', 'Evitar com calor.', ['FrioCanalF']],
+  ['xiao-jian-zhong-tang', 'Xiao Jian Zhong Tang', 'Pequena Decocção que Fortalece o Centro', 'Shang Han Lun (Zhang Zhong-Jing)', 'Aquecer o centro', ['yi-tang', 'gui-zhi', 'bai-shao', 'sheng-jiang', 'da-zao', 'gan-cao'],
+    'Aquece e fortalece o centro e alivia a dor espasmódica.', 'Dor abdominal surda que melhora com calor e pressão, cansaço, palpitações, falta de apetite.', 'Evitar no diabetes (maltose), com vômito ou calor.', ['DefFrioID', 'FrioE']],
+  ['ma-zi-ren-wan', 'Ma Zi Ren Wan', 'Pílula de Semente de Cânhamo', 'Shang Han Lun (Zhang Zhong-Jing)', 'Umedecer a secura', ['huo-ma-ren', 'bai-shao', 'zhi-ke', 'da-huang', 'hou-po', 'xing-ren'],
+    'Umedece o intestino, clareia o Calor e solta as fezes.', 'Prisão de ventre com fezes secas e duras, urina frequente, boca seca.', 'Contém ruibarbo: proibida na gestação; não usar por muito tempo.', ['CalorIG', 'SecIG']],
+  ['run-chang-wan', 'Run Chang Wan', 'Pílula que Umedece o Intestino', 'Shen Shi Zun Sheng Shu (Ming)', 'Umedecer a secura', ['dang-gui', 'sheng-di-huang', 'huo-ma-ren', 'tao-ren', 'zhi-ke'],
+    'Nutre o Sangue e os líquidos e umedece o intestino.', 'Prisão de ventre de idosos, pós-parto ou de pessoas magras e secas.', 'Tao Ren: evitar na gestação.', ['SecIG']],
+  ['shi-xiao-san', 'Shi Xiao San', 'Pó do Sorriso Perdido', 'He Ji Ju Fang (Song)', 'Mover o Sangue', ['wu-ling-zhi', 'pu-huang'],
+    'Move o Sangue, desfaz a estase e alivia a dor.', 'Dor fixa em pontada no estômago ou no baixo ventre, cólica menstrual com coágulos.', 'Proibida na gestação. Sangramento digestivo exige avaliação médica.', ['EstXueE', 'EstgXueF']],
+  ['dan-shen-yin', 'Dan Shen Yin', 'Bebida de Sálvia', 'Shi Fang Ge Kuo (Chen Xiu-Yuan, Qing)', 'Mover o Sangue', ['dan-shen', 'tan-xiang', 'sha-ren'],
+    'Move o Sangue e o Qi e alivia a dor no estômago e no peito.', 'Dor no estômago ou no peito em pontada, que piora à noite.', 'Interage com anticoagulantes.', ['EstXueE', 'EstgXueC']],
+  ['qing-jing-san', 'Qing Jing San', 'Pó que Clareia a Menstruação', 'Fu Qing Zhu Nu Ke (Fu Qing-Zhu, Qing)', 'Clarear calor', ['mu-dan-pi', 'di-gu-pi', 'bai-shao', 'shu-di-huang', 'qing-hao', 'huang-bai', 'fu-ling'],
+    'Clareia o Calor do Sangue e regula a menstruação.', 'Menstruação adiantada e abundante, sangue vermelho vivo, sensação de calor, sede.', 'Evitar no frio.', ['CalorXue']],
+  ['ban-xia-hou-po-tang', 'Ban Xia Hou Po Tang', 'Decocção de Pinellia e Magnólia', 'Jin Gui Yao Lue (Zhang Zhong-Jing)', 'Mover o Qi', ['ban-xia', 'hou-po', 'fu-ling', 'sheng-jiang', 'zi-su-ye'],
+    'Move o Qi, faz descer o Qi rebelde e transforma o catarro.', 'Sensação de caroço na garganta, aperto no peito, suspiros, tosse com catarro, ansiedade.', 'Evitar na deficiência de Yin com secura.', ['EstgQiC', 'EstgQiF']],
+  ['xie-bai-san', 'Xie Bai San', 'Pó que Drena o Branco', 'Xiao Er Yao Zheng Zhi Jue (Qian Yi, Song)', 'Clarear calor', ['sang-bai-pi', 'di-gu-pi', 'gan-cao', 'geng-mi'],
+    'Clareia o Calor do Pulmão e acalma a tosse.', 'Tosse com calor, falta de ar, pele quente que piora à tarde.', 'Evitar na tosse por vento-frio.', ['CalorP']],
+  ['ba-zhen-tang', 'Ba Zhen Tang', 'Decocção dos Oito Tesouros', 'Zheng Ti Lei Yao (Ming)', 'Tonificar Qi e Sangue', ['ren-shen', 'bai-zhu', 'fu-ling', 'gan-cao', 'shu-di-huang', 'dang-gui', 'bai-shao', 'chuan-xiong'],
+    'Tonifica o Qi e o Sangue (Si Jun Zi Tang + Si Wu Tang).', 'Palidez, cansaço, falta de ar, palpitações, tontura, menstruação escassa.', 'Evitar com calor ou umidade.', ['DefXueBP', 'DefXueF', 'DefQiBP']],
+  ['dan-zhi-xiao-yao-san', 'Dan Zhi Xiao Yao San', 'Pó do Andarilho Livre com Peônia e Gardênia', 'Nei Ke Zhai Yao (Xue Ji, Ming)', 'Harmonizar Fígado e Baço', ['chai-hu', 'dang-gui', 'bai-shao', 'bai-zhu', 'fu-ling', 'gan-cao', 'bo-he', 'sheng-jiang', 'mu-dan-pi', 'zhi-zi'],
+    'Desfaz a estagnação do Fígado, clareia o Calor e nutre o Sangue.', 'Irritação forte, boca amarga, calor, TPM intensa, menstruação adiantada, mamas doloridas.', 'Mu Dan Pi: evitar na gestação.', ['CalorQiF', 'CalorXue']],
+);
+
+// Fórmulas que já existiam e servem também para as síndromes novas.
+const MAIS = {
+  'ming-mu-di-huang-wan': ['DefYnF'], 'xiao-yao-san': ['FinvBP'], 'chai-hu-shu-gan-san': ['FinvE', 'CalorQiF'],
+  'wen-dan-tang': ['FlmMente', 'DefQiVB'], 'ba-xian-chang-shou-wan': ['RnaoRecQi'], 'jin-gui-shen-qi-wan': ['RnaoRecQi', 'DefFrioB'],
+  'tian-tai-wu-yao-san': ['FrioCanalF'], 'li-zhong-wan': ['DefFrioID'], 'gui-pi-tang': ['DefXueBP'], 'lian-po-yin': ['UmdCalorE'],
+  'suo-quan-wan': ['DefFrioB'], 'xuan-fu-dai-zhe-tang': ['FinvE'], 'an-shen-ding-zhi-wan': ['DefQiVB'],
+};
+for (const row of F) if (MAIS[row[0]]) for (const s of MAIS[row[0]]) if (!row[9].includes(s)) row[9].push(s);
 
 const NOTAS = {
   'chai-hu-shu-gan-san': 'Maciocia a chama de Chai Hu Shu Gan Tang (decocção).',

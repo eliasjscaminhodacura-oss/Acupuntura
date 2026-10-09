@@ -8,6 +8,7 @@ import {
   formatDateBR,
   ELEMENT_COLOR,
 } from './ficha-logic';
+import { combinadosPresentes } from './combinados';
 import { shade, type Pt } from './radar3d';
 import { buildCycle5 } from './cycle5';
 import {
@@ -455,6 +456,23 @@ export function buildPdfBlob(
     doc.text(principio, MARGIN, y); y += principio.length * 4.2;
     doc.text(pontos, MARGIN, y); y += pontos.length * 4.2;
     doc.text(psico, MARGIN, y); y += psico.length * 4.2 + 3;
+  }
+
+  // Padrões combinados (duas síndromes fortes juntas)
+  const combinados = combinadosPresentes(top);
+  if (combinados.length) {
+    ensureSpace(14);
+    doc.setFont('helvetica', 'bold');
+    doc.text(safe('Padrões combinados'), MARGIN, y);
+    y += 5;
+    for (const c of combinados) {
+      const linhas = doc.splitTextToSize(safe(`${c.nome}: ${c.principio}${c.formula ? ` Fórmula de referência: ${c.formula}.` : ''}`), contentW);
+      ensureSpace(linhas.length * 4.2 + 2);
+      doc.setFont('helvetica', 'normal');
+      doc.text(linhas, MARGIN, y);
+      y += linhas.length * 4.2 + 2;
+    }
+    y += 2;
   }
 
   // Mapa do corpo: órgãos comprometidos e pontos sugeridos

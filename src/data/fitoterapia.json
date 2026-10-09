@@ -1626,6 +1626,122 @@
    "alertas": [
     "gest"
    ]
+  },
+  "hu-tao-ren": {
+   "pinyin": "Hu Tao Ren",
+   "nome": "Noz",
+   "latim": "Juglandis Semen",
+   "natureza": "Morno",
+   "sabor": "doce",
+   "meridianos": "R, P, IG",
+   "acoes": "Tonifica o Rim e ajuda a receber o Qi; umedece o intestino.",
+   "cuidado": "Evitar na diarreia e com catarro-calor.",
+   "alertas": []
+  },
+  "chen-xiang": {
+   "pinyin": "Chen Xiang",
+   "nome": "Madeira de agar (aquilária)",
+   "latim": "Aquilariae Lignum resinatum",
+   "natureza": "Morno",
+   "sabor": "picante, amargo",
+   "meridianos": "R, BP, E",
+   "acoes": "Move o Qi e alivia a dor; aquece o centro; ajuda o Rim a receber o Qi.",
+   "cuidado": "Evitar no calor por deficiência de Yin e no Qi afundado.",
+   "alertas": []
+  },
+  "yi-tang": {
+   "pinyin": "Yi Tang",
+   "nome": "Maltose",
+   "latim": "Maltosum",
+   "natureza": "Morno",
+   "sabor": "doce",
+   "meridianos": "BP, E, P",
+   "acoes": "Tonifica e aquece o centro; alivia a dor espasmódica; umedece o Pulmão.",
+   "cuidado": "Evitar no diabetes, com umidade, catarro ou vômito.",
+   "alertas": []
+  },
+  "huo-ma-ren": {
+   "pinyin": "Huo Ma Ren",
+   "nome": "Semente de cânhamo",
+   "latim": "Cannabis Semen",
+   "natureza": "Neutro",
+   "sabor": "doce",
+   "meridianos": "BP, E, IG",
+   "acoes": "Umedece o intestino e solta as fezes.",
+   "cuidado": "Só a semente (sem efeito psicoativo). Em dose alta pode intoxicar; evitar na diarreia.",
+   "alertas": []
+  },
+  "mang-xiao": {
+   "pinyin": "Mang Xiao",
+   "nome": "Sulfato de sódio (sal de Glauber)",
+   "latim": "Natrii Sulfas",
+   "natureza": "Frio",
+   "sabor": "salgado, amargo",
+   "meridianos": "E, IG",
+   "acoes": "Purga o Calor e amolece fezes endurecidas.",
+   "cuidado": "Purgante forte: proibido na gestação; não usar em fraqueza nem por tempo prolongado.",
+   "alertas": [
+    "gest",
+    "mineral"
+   ]
+  },
+  "pu-huang": {
+   "pinyin": "Pu Huang",
+   "nome": "Pólen de taboa",
+   "latim": "Typhae Pollen",
+   "natureza": "Neutro",
+   "sabor": "doce",
+   "meridianos": "F, CS",
+   "acoes": "Move o Sangue e alivia a dor; também estanca sangramentos (tostado).",
+   "cuidado": "Evitar na gestação.",
+   "alertas": [
+    "gest",
+    "anticoag"
+   ]
+  },
+  "tan-xiang": {
+   "pinyin": "Tan Xiang",
+   "nome": "Sândalo",
+   "latim": "Santali albi Lignum",
+   "natureza": "Morno",
+   "sabor": "picante",
+   "meridianos": "BP, E, P",
+   "acoes": "Move o Qi, aquece o centro e alivia a dor no peito e no estômago.",
+   "cuidado": "Evitar no calor por deficiência de Yin.",
+   "alertas": []
+  },
+  "di-gu-pi": {
+   "pinyin": "Di Gu Pi",
+   "nome": "Casca da raiz do goji",
+   "latim": "Lycii Cortex",
+   "natureza": "Frio",
+   "sabor": "doce",
+   "meridianos": "P, F, R",
+   "acoes": "Clareia o Calor por deficiência e o Calor do Pulmão; esfria o Sangue.",
+   "cuidado": "Evitar na diarreia por frio.",
+   "alertas": []
+  },
+  "qing-hao": {
+   "pinyin": "Qing Hao",
+   "nome": "Artemísia anual",
+   "latim": "Artemisiae annuae Herba",
+   "natureza": "Frio",
+   "sabor": "amargo, picante",
+   "meridianos": "F, VB",
+   "acoes": "Clareia o Calor por deficiência e o Calor do Sangue.",
+   "cuidado": "Evitar na diarreia por deficiência do Baço.",
+   "alertas": []
+  },
+  "geng-mi": {
+   "pinyin": "Geng Mi",
+   "nome": "Arroz",
+   "latim": "Oryzae Semen",
+   "natureza": "Neutro",
+   "sabor": "doce",
+   "meridianos": "BP, E",
+   "acoes": "Protege o Estômago e gera líquidos.",
+   "cuidado": "",
+   "alertas": []
   }
  },
  "formulas": [
@@ -1750,7 +1866,8 @@
    "sindromes": [
     "DefXueC",
     "BPcontrXue",
-    "DefQiC"
+    "DefQiC",
+    "DefXueBP"
    ]
   },
   {
@@ -1917,7 +2034,9 @@
    "cuidados": "Contém Fu Zi: proibida na gestação; não usar com calor ou deficiência de Yin.",
    "sindromes": [
     "DefYgR",
-    "UmdFrioB"
+    "UmdFrioB",
+    "RnaoRecQi",
+    "DefFrioB"
    ]
   },
   {
@@ -1937,7 +2056,8 @@
    "cuidados": "Evitar com calor.",
    "sindromes": [
     "DefYgBP",
-    "FrioE"
+    "FrioE",
+    "DefFrioID"
    ]
   },
   {
@@ -2166,7 +2286,8 @@
    "indicacoes": "Urina frequente e clara, enurese noturna, incontinência por frio e fraqueza do Rim.",
    "cuidados": "",
    "sindromes": [
-    "DefQiR"
+    "DefQiR",
+    "DefFrioB"
    ]
   },
   {
@@ -2189,7 +2310,8 @@
    "indicacoes": "Irritação, suspiros, TPM, mamas doloridas, menstruação irregular, cansaço, digestão fraca. Uma das fórmulas mais usadas.",
    "cuidados": "Com calor (irritação forte, boca amarga) usa-se a versão com Mu Dan Pi e Zhi Zi (Jia Wei Xiao Yao San).",
    "sindromes": [
-    "EstgQiF"
+    "EstgQiF",
+    "FinvBP"
    ]
   },
   {
@@ -2211,7 +2333,9 @@
    "indicacoes": "Dor e distensão nas costelas, peito apertado, suspiros, irritação, dor que piora com emoções.",
    "cuidados": "Evitar na gestação (Chuan Xiong, Zhi Ke). Maciocia a chama de Chai Hu Shu Gan Tang (decocção).",
    "sindromes": [
-    "EstgQiF"
+    "EstgQiF",
+    "FinvE",
+    "CalorQiF"
    ]
   },
   {
@@ -2234,7 +2358,8 @@
    "indicacoes": "Dor e distensão no baixo ventre que irradia para os testículos (hérnia por frio), cólica intestinal por frio.",
    "cuidados": "O Ba Dou serve só para tostar o Chuan Lian Zi e é descartado. Contém Bing Lang e Chuan Lian Zi: uso curto. Dor abdominal forte exige avaliação médica.",
    "sindromes": [
-    "ObstID"
+    "ObstID",
+    "FrioCanalF"
    ]
   },
   {
@@ -2470,7 +2595,8 @@
    "cuidados": "Ban Xia só preparada; evitar na gestação.",
    "sindromes": [
     "FlmC",
-    "DefQiVB"
+    "DefQiVB",
+    "FlmMente"
    ]
   },
   {
@@ -2641,7 +2767,8 @@
    "indicacoes": "Arrotos persistentes, soluço, náusea e vômito, estufamento.",
    "cuidados": "Dai Zhe Shi (mineral) e Ban Xia: evitar na gestação.",
    "sindromes": [
-    "RebelE"
+    "RebelE",
+    "FinvE"
    ]
   },
   {
@@ -2751,7 +2878,8 @@
    "indicacoes": "Vômito e diarreia por umidade-calor, peito e estômago cheios, sede sem vontade de beber.",
    "cuidados": "Desidratação exige avaliação médica. Evitar na gestação.",
    "sindromes": [
-    "UmdCalorBP"
+    "UmdCalorBP",
+    "UmdCalorE"
    ]
   },
   {
@@ -2975,7 +3103,8 @@
    "cuidados": "Evitar na diarreia e com catarro; Mu Dan Pi — evitar na gestação.",
    "sindromes": [
     "DefYnP",
-    "DefYnR"
+    "DefYnR",
+    "RnaoRecQi"
    ]
   },
   {
@@ -3003,7 +3132,348 @@
    "cuidados": "Cuidado com Baço e Estômago fracos. Contraindicada na gestação.",
    "sindromes": [
     "DefXueF",
-    "DefYnR"
+    "DefYnR",
+    "DefYnF"
+   ]
+  },
+  {
+   "id": "yi-guan-jian",
+   "pinyin": "Yi Guan Jian",
+   "nome": "Decocção de Uma Ligação",
+   "origem": "Liu Zhou Yi Hua (Wei Zhi-Xiu, Qing)",
+   "categoria": "Nutrir o Yin",
+   "ervas": [
+    "sheng-di-huang",
+    "sha-shen",
+    "mai-men-dong",
+    "dang-gui",
+    "gou-qi-zi",
+    "chuan-lian-zi"
+   ],
+   "acao": "Nutre o Yin do Fígado e do Rim e suaviza o Fígado.",
+   "indicacoes": "Olhos secos, visão turva, dor surda nas costelas, boca e garganta secas, regurgitação ácida, língua vermelha e seca.",
+   "cuidados": "Evitar com umidade ou catarro. Chuan Lian Zi é levemente tóxico (dose baixa).",
+   "sindromes": [
+    "DefYnF"
+   ]
+  },
+  {
+   "id": "tong-xie-yao-fang",
+   "pinyin": "Tong Xie Yao Fang",
+   "nome": "Fórmula Importante para Diarreia Dolorosa",
+   "origem": "Dan Xi Xin Fa (Zhu Dan-Xi)",
+   "categoria": "Harmonizar Fígado e Baço",
+   "ervas": [
+    "bai-zhu",
+    "bai-shao",
+    "chen-pi",
+    "fang-feng"
+   ],
+   "acao": "Acalma o Fígado, fortalece o Baço e alivia a diarreia com dor.",
+   "indicacoes": "Barriga que dói e solta com o nervoso, dor que melhora após evacuar, gases, alternância de prisão de ventre e diarreia.",
+   "cuidados": "",
+   "sindromes": [
+    "FinvBP"
+   ]
+  },
+  {
+   "id": "si-ni-san",
+   "pinyin": "Si Ni San",
+   "nome": "Pó dos Quatro Frios",
+   "origem": "Shang Han Lun (Zhang Zhong-Jing)",
+   "categoria": "Harmonizar Fígado e Baço",
+   "ervas": [
+    "chai-hu",
+    "zhi-ke",
+    "bai-shao",
+    "gan-cao"
+   ],
+   "acao": "Libera o Qi preso do Fígado e harmoniza o Fígado com o Estômago e o Baço.",
+   "indicacoes": "Dor e distensão nas costelas e no estômago, mãos frias por tensão, irritação.",
+   "cuidados": "Cuidado na deficiência de Yin.",
+   "sindromes": [
+    "FinvE",
+    "FinvBP"
+   ]
+  },
+  {
+   "id": "di-tan-tang",
+   "pinyin": "Di Tan Tang",
+   "nome": "Decocção que Lava o Catarro",
+   "origem": "Ji Sheng Fang (Yan Yong-He, Song)",
+   "categoria": "Transformar catarro",
+   "ervas": [
+    "dan-nan-xing",
+    "ban-xia",
+    "zhi-ke",
+    "fu-ling",
+    "chen-pi",
+    "shi-chang-pu",
+    "ren-shen",
+    "zhu-ru",
+    "gan-cao",
+    "sheng-jiang"
+   ],
+   "acao": "Transforma a Fleuma e abre os orifícios da Mente.",
+   "indicacoes": "Confusão mental, fala arrastada, catarro na garganta, olhar distante (também sequela de AVC, sob cuidado médico).",
+   "cuidados": "Evitar com calor ou deficiência de Yin.",
+   "sindromes": [
+    "FlmMente"
+   ]
+  },
+  {
+   "id": "ren-shen-hu-tao-tang",
+   "pinyin": "Ren Shen Hu Tao Tang",
+   "nome": "Decocção de Ginseng e Noz",
+   "origem": "Ji Sheng Fang (Yan Yong-He, Song)",
+   "categoria": "Tonificar o Yang",
+   "ervas": [
+    "ren-shen",
+    "hu-tao-ren",
+    "sheng-jiang"
+   ],
+   "acao": "Tonifica o Pulmão e o Rim e ajuda o Rim a receber o Qi.",
+   "indicacoes": "Asma e falta de ar crônicas que pioram com esforço, dificuldade de puxar o ar, voz fraca.",
+   "cuidados": "Evitar na asma aguda com catarro-calor.",
+   "sindromes": [
+    "RnaoRecQi"
+   ]
+  },
+  {
+   "id": "nuan-gan-jian",
+   "pinyin": "Nuan Gan Jian",
+   "nome": "Decocção que Aquece o Fígado",
+   "origem": "Jing Yue Quan Shu (Zhang Jing-Yue, Ming)",
+   "categoria": "Aquecer e mover o Qi",
+   "ervas": [
+    "dang-gui",
+    "gou-qi-zi",
+    "xiao-hui-xiang",
+    "rou-gui",
+    "wu-yao",
+    "chen-xiang",
+    "fu-ling",
+    "sheng-jiang"
+   ],
+   "acao": "Aquece o Fígado e o Rim, move o Qi e alivia a dor.",
+   "indicacoes": "Dor e frio no baixo ventre, dor no escroto (hérnia) que melhora com calor, mãos e pés frios.",
+   "cuidados": "Evitar com calor.",
+   "sindromes": [
+    "FrioCanalF"
+   ]
+  },
+  {
+   "id": "xiao-jian-zhong-tang",
+   "pinyin": "Xiao Jian Zhong Tang",
+   "nome": "Pequena Decocção que Fortalece o Centro",
+   "origem": "Shang Han Lun (Zhang Zhong-Jing)",
+   "categoria": "Aquecer o centro",
+   "ervas": [
+    "yi-tang",
+    "gui-zhi",
+    "bai-shao",
+    "sheng-jiang",
+    "da-zao",
+    "gan-cao"
+   ],
+   "acao": "Aquece e fortalece o centro e alivia a dor espasmódica.",
+   "indicacoes": "Dor abdominal surda que melhora com calor e pressão, cansaço, palpitações, falta de apetite.",
+   "cuidados": "Evitar no diabetes (maltose), com vômito ou calor.",
+   "sindromes": [
+    "DefFrioID",
+    "FrioE"
+   ]
+  },
+  {
+   "id": "ma-zi-ren-wan",
+   "pinyin": "Ma Zi Ren Wan",
+   "nome": "Pílula de Semente de Cânhamo",
+   "origem": "Shang Han Lun (Zhang Zhong-Jing)",
+   "categoria": "Umedecer a secura",
+   "ervas": [
+    "huo-ma-ren",
+    "bai-shao",
+    "zhi-ke",
+    "da-huang",
+    "hou-po",
+    "xing-ren"
+   ],
+   "acao": "Umedece o intestino, clareia o Calor e solta as fezes.",
+   "indicacoes": "Prisão de ventre com fezes secas e duras, urina frequente, boca seca.",
+   "cuidados": "Contém ruibarbo: proibida na gestação; não usar por muito tempo.",
+   "sindromes": [
+    "CalorIG",
+    "SecIG"
+   ]
+  },
+  {
+   "id": "run-chang-wan",
+   "pinyin": "Run Chang Wan",
+   "nome": "Pílula que Umedece o Intestino",
+   "origem": "Shen Shi Zun Sheng Shu (Ming)",
+   "categoria": "Umedecer a secura",
+   "ervas": [
+    "dang-gui",
+    "sheng-di-huang",
+    "huo-ma-ren",
+    "tao-ren",
+    "zhi-ke"
+   ],
+   "acao": "Nutre o Sangue e os líquidos e umedece o intestino.",
+   "indicacoes": "Prisão de ventre de idosos, pós-parto ou de pessoas magras e secas.",
+   "cuidados": "Tao Ren: evitar na gestação.",
+   "sindromes": [
+    "SecIG"
+   ]
+  },
+  {
+   "id": "shi-xiao-san",
+   "pinyin": "Shi Xiao San",
+   "nome": "Pó do Sorriso Perdido",
+   "origem": "He Ji Ju Fang (Song)",
+   "categoria": "Mover o Sangue",
+   "ervas": [
+    "wu-ling-zhi",
+    "pu-huang"
+   ],
+   "acao": "Move o Sangue, desfaz a estase e alivia a dor.",
+   "indicacoes": "Dor fixa em pontada no estômago ou no baixo ventre, cólica menstrual com coágulos.",
+   "cuidados": "Proibida na gestação. Sangramento digestivo exige avaliação médica.",
+   "sindromes": [
+    "EstXueE",
+    "EstgXueF"
+   ]
+  },
+  {
+   "id": "dan-shen-yin",
+   "pinyin": "Dan Shen Yin",
+   "nome": "Bebida de Sálvia",
+   "origem": "Shi Fang Ge Kuo (Chen Xiu-Yuan, Qing)",
+   "categoria": "Mover o Sangue",
+   "ervas": [
+    "dan-shen",
+    "tan-xiang",
+    "sha-ren"
+   ],
+   "acao": "Move o Sangue e o Qi e alivia a dor no estômago e no peito.",
+   "indicacoes": "Dor no estômago ou no peito em pontada, que piora à noite.",
+   "cuidados": "Interage com anticoagulantes.",
+   "sindromes": [
+    "EstXueE",
+    "EstgXueC"
+   ]
+  },
+  {
+   "id": "qing-jing-san",
+   "pinyin": "Qing Jing San",
+   "nome": "Pó que Clareia a Menstruação",
+   "origem": "Fu Qing Zhu Nu Ke (Fu Qing-Zhu, Qing)",
+   "categoria": "Clarear calor",
+   "ervas": [
+    "mu-dan-pi",
+    "di-gu-pi",
+    "bai-shao",
+    "shu-di-huang",
+    "qing-hao",
+    "huang-bai",
+    "fu-ling"
+   ],
+   "acao": "Clareia o Calor do Sangue e regula a menstruação.",
+   "indicacoes": "Menstruação adiantada e abundante, sangue vermelho vivo, sensação de calor, sede.",
+   "cuidados": "Evitar no frio.",
+   "sindromes": [
+    "CalorXue"
+   ]
+  },
+  {
+   "id": "ban-xia-hou-po-tang",
+   "pinyin": "Ban Xia Hou Po Tang",
+   "nome": "Decocção de Pinellia e Magnólia",
+   "origem": "Jin Gui Yao Lue (Zhang Zhong-Jing)",
+   "categoria": "Mover o Qi",
+   "ervas": [
+    "ban-xia",
+    "hou-po",
+    "fu-ling",
+    "sheng-jiang",
+    "zi-su-ye"
+   ],
+   "acao": "Move o Qi, faz descer o Qi rebelde e transforma o catarro.",
+   "indicacoes": "Sensação de caroço na garganta, aperto no peito, suspiros, tosse com catarro, ansiedade.",
+   "cuidados": "Evitar na deficiência de Yin com secura.",
+   "sindromes": [
+    "EstgQiC",
+    "EstgQiF"
+   ]
+  },
+  {
+   "id": "xie-bai-san",
+   "pinyin": "Xie Bai San",
+   "nome": "Pó que Drena o Branco",
+   "origem": "Xiao Er Yao Zheng Zhi Jue (Qian Yi, Song)",
+   "categoria": "Clarear calor",
+   "ervas": [
+    "sang-bai-pi",
+    "di-gu-pi",
+    "gan-cao",
+    "geng-mi"
+   ],
+   "acao": "Clareia o Calor do Pulmão e acalma a tosse.",
+   "indicacoes": "Tosse com calor, falta de ar, pele quente que piora à tarde.",
+   "cuidados": "Evitar na tosse por vento-frio.",
+   "sindromes": [
+    "CalorP"
+   ]
+  },
+  {
+   "id": "ba-zhen-tang",
+   "pinyin": "Ba Zhen Tang",
+   "nome": "Decocção dos Oito Tesouros",
+   "origem": "Zheng Ti Lei Yao (Ming)",
+   "categoria": "Tonificar Qi e Sangue",
+   "ervas": [
+    "ren-shen",
+    "bai-zhu",
+    "fu-ling",
+    "gan-cao",
+    "shu-di-huang",
+    "dang-gui",
+    "bai-shao",
+    "chuan-xiong"
+   ],
+   "acao": "Tonifica o Qi e o Sangue (Si Jun Zi Tang + Si Wu Tang).",
+   "indicacoes": "Palidez, cansaço, falta de ar, palpitações, tontura, menstruação escassa.",
+   "cuidados": "Evitar com calor ou umidade.",
+   "sindromes": [
+    "DefXueBP",
+    "DefXueF",
+    "DefQiBP"
+   ]
+  },
+  {
+   "id": "dan-zhi-xiao-yao-san",
+   "pinyin": "Dan Zhi Xiao Yao San",
+   "nome": "Pó do Andarilho Livre com Peônia e Gardênia",
+   "origem": "Nei Ke Zhai Yao (Xue Ji, Ming)",
+   "categoria": "Harmonizar Fígado e Baço",
+   "ervas": [
+    "chai-hu",
+    "dang-gui",
+    "bai-shao",
+    "bai-zhu",
+    "fu-ling",
+    "gan-cao",
+    "bo-he",
+    "sheng-jiang",
+    "mu-dan-pi",
+    "zhi-zi"
+   ],
+   "acao": "Desfaz a estagnação do Fígado, clareia o Calor e nutre o Sangue.",
+   "indicacoes": "Irritação forte, boca amarga, calor, TPM intensa, menstruação adiantada, mamas doloridas.",
+   "cuidados": "Mu Dan Pi: evitar na gestação.",
+   "sindromes": [
+    "CalorQiF",
+    "CalorXue"
    ]
   }
  ]

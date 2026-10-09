@@ -44,7 +44,8 @@
    "fr_cal": "Calor",
    "sup_prof": "Prof",
    "syndromes": [
-    "EstgXueC"
+    "EstgXueC",
+    "ColapsQiC"
    ]
   },
   {
@@ -58,7 +59,8 @@
    "sup_prof": "Prof",
    "syndromes": [
     "DefYnR",
-    "DefYnC"
+    "DefYnC",
+    "DefYnF"
    ]
   },
   {
@@ -76,7 +78,10 @@
     "DefYgBP",
     "DefXueF",
     "DefYgR",
-    "DefQiVB"
+    "DefQiVB",
+    "BPcontrXue",
+    "DefQiP",
+    "DefXueBP"
    ]
   },
   {
@@ -90,7 +95,9 @@
    "sup_prof": "Sup",
    "syndromes": [
     "FgC",
-    "FgF"
+    "FgF",
+    "CalorP",
+    "CalorQiF"
    ]
   },
   {
@@ -153,7 +160,9 @@
     "EstgQiF",
     "AscYgF",
     "FgF",
-    "DefYnR"
+    "DefYnR",
+    "CalorID",
+    "CalorXue"
    ]
   },
   {
@@ -165,7 +174,10 @@
    "exc_def": "Def",
    "fr_cal": "",
    "sup_prof": "",
-   "syndromes": []
+   "syndromes": [
+    "FlmC",
+    "FlmMente"
+   ]
   },
   {
    "id": "item_17",
@@ -194,7 +206,9 @@
    "syndromes": [
     "EstgQiF",
     "DefYgC",
-    "DefQiE"
+    "DefQiE",
+    "FlmMente",
+    "EstgQiC"
    ]
   },
   {
@@ -237,7 +251,8 @@
     "AscYgF",
     "FgF",
     "VtF",
-    "DefYnR"
+    "DefYnR",
+    "CalorQiF"
    ]
   },
   {
@@ -268,7 +283,10 @@
     "FgF",
     "DefXueC",
     "FgC",
-    "DefYnE"
+    "DefYnE",
+    "FinvBP",
+    "FinvE",
+    "CalorQiF"
    ]
   },
   {
@@ -287,7 +305,9 @@
     "DefXueF",
     "DefXueC",
     "DefQiC",
-    "DefYgC"
+    "DefYgC",
+    "FlmMente",
+    "DefXueBP"
    ]
   },
   {
@@ -325,7 +345,9 @@
    "exc_def": "Exc",
    "fr_cal": "",
    "sup_prof": "",
-   "syndromes": []
+   "syndromes": [
+    "FlmC"
+   ]
   },
   {
    "id": "item_28",
@@ -336,7 +358,9 @@
    "exc_def": "Def",
    "fr_cal": "",
    "sup_prof": "",
-   "syndromes": []
+   "syndromes": [
+    "FlmMente"
+   ]
   },
   {
    "id": "item_29",
@@ -366,6 +390,66 @@
     "DefYgC",
     "DefXueC",
     "DefYnC"
+   ]
+  },
+  {
+   "id": "item_546",
+   "key": "MENTAL_emocional_ansiedade",
+   "cat": "MENTAL",
+   "subcat": "Emocional",
+   "label": "Ansiedade",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefXueC",
+    "DefYnC",
+    "FlmC",
+    "DefQiVB"
+   ]
+  },
+  {
+   "id": "item_547",
+   "key": "MENTAL_emocional_assusta facilmente",
+   "cat": "MENTAL",
+   "subcat": "Emocional",
+   "label": "Assusta-se facilmente",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefXueC",
+    "DefYnC",
+    "DefQiVB",
+    "FlmC",
+    "DefXueF"
+   ]
+  },
+  {
+   "id": "item_548",
+   "key": "MENTAL_emocional_indecisao",
+   "cat": "MENTAL",
+   "subcat": "Emocional",
+   "label": "Indecisão / timidez",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiVB"
+   ]
+  },
+  {
+   "id": "item_549",
+   "key": "MENTAL_emocional_confusao mental",
+   "cat": "MENTAL",
+   "subcat": "Emocional",
+   "label": "Confusão mental",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "FlmMente",
+    "FlmC"
    ]
   },
   {
@@ -449,7 +533,12 @@
     "DefQiBP",
     "DefYgBP",
     "DefQiR",
-    "DefYgR"
+    "DefYgR",
+    "ColapsQiBP",
+    "BPcontrXue",
+    "DefQiP",
+    "FinvBP",
+    "DefXueBP"
    ]
   },
   {
@@ -486,7 +575,10 @@
    "exc_def": "",
    "fr_cal": "",
    "sup_prof": "Prof",
-   "syndromes": []
+   "syndromes": [
+    "VtF",
+    "FlmMente"
+   ]
   },
   {
    "id": "item_42",
@@ -503,7 +595,8 @@
     "DefXueC",
     "EstgXueC",
     "FgC",
-    "FlmC"
+    "FlmC",
+    "FlmMente"
    ]
   },
   {
@@ -517,7 +610,11 @@
    "sup_prof": "Prof",
    "syndromes": [
     "DefQiP",
-    "DefYgR"
+    "DefYgR",
+    "ColapsQiC",
+    "RnaoRecQi",
+    "EstgQiC",
+    "CalorP"
    ]
   },
   {
@@ -559,8 +656,7 @@
     "DefXueF",
     "AscYgF",
     "FgF",
-    "VtF",
-    "DefQiVB"
+    "VtF"
    ]
   },
   {
@@ -572,10 +668,7 @@
    "exc_def": "",
    "fr_cal": "",
    "sup_prof": "Sup",
-   "syndromes": [
-    "CalorID",
-    "ObstID"
-   ]
+   "syndromes": []
   },
   {
    "id": "item_48",
@@ -605,7 +698,9 @@
    "syndromes": [
     "DefYnR",
     "DefXueF",
-    "CalorE"
+    "CalorE",
+    "SecIG",
+    "DefXueBP"
    ]
   },
   {
@@ -652,7 +747,11 @@
    "exc_def": "",
    "fr_cal": "Calor",
    "sup_prof": "",
-   "syndromes": []
+   "syndromes": [
+    "CalorXue",
+    "CalorP",
+    "UmdCalorE"
+   ]
   },
   {
    "id": "item_56",
@@ -663,7 +762,14 @@
    "exc_def": "",
    "fr_cal": "Frio",
    "sup_prof": "",
-   "syndromes": []
+   "syndromes": [
+    "UmdFrioIG",
+    "DefYgR",
+    "DefYgBP",
+    "DefYgC",
+    "FrioCanalF",
+    "DefFrioB"
+   ]
   },
   {
    "id": "item_57",
@@ -734,7 +840,8 @@
    "fr_cal": "",
    "sup_prof": "Prof",
    "syndromes": [
-    "DefYgR"
+    "DefYgR",
+    "RnaoRecQi"
    ]
   },
   {
@@ -785,9 +892,7 @@
    "exc_def": "Exc",
    "fr_cal": "Calor",
    "sup_prof": "Prof",
-   "syndromes": [
-    "UmdCalorIG"
-   ]
+   "syndromes": []
   },
   {
    "id": "item_68",
@@ -830,7 +935,50 @@
    "syndromes": [
     "DefYnP",
     "DefXueF",
-    "DefYnE"
+    "DefYnE",
+    "SecP",
+    "DefYnF"
+   ]
+  },
+  {
+   "id": "item_550",
+   "key": "CORPO_pele_erupcoes vermelhas",
+   "cat": "CORPO",
+   "subcat": "Pele",
+   "label": "Erupções vermelhas",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "CalorXue",
+    "UmdCalorBP"
+   ]
+  },
+  {
+   "id": "item_551",
+   "key": "CORPO_cabelo_queda",
+   "cat": "CORPO",
+   "subcat": "Cabelo",
+   "label": "Queda de cabelo",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefJgR",
+    "DefXueF"
+   ]
+  },
+  {
+   "id": "item_552",
+   "key": "CORPO_cabelo_branco cedo",
+   "cat": "CORPO",
+   "subcat": "Cabelo",
+   "label": "Embranquecimento precoce",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefJgR"
    ]
   },
   {
@@ -881,7 +1029,7 @@
    "fr_cal": "",
    "sup_prof": "Prof",
    "syndromes": [
-    "ColapsQiBP"
+    "ColapsQiC"
    ]
   },
   {
@@ -895,7 +1043,8 @@
    "sup_prof": "Prof",
    "syndromes": [
     "DefYnR",
-    "DefYnC"
+    "DefYnC",
+    "DefYnF"
    ]
   },
   {
@@ -908,7 +1057,8 @@
    "fr_cal": "",
    "sup_prof": "Prof",
    "syndromes": [
-    "DefQiP"
+    "DefQiP",
+    "RnaoRecQi"
    ]
   },
   {
@@ -1038,7 +1188,9 @@
    "fr_cal": "Calor",
    "sup_prof": "",
    "syndromes": [
-    "UmdCalorBP"
+    "UmdCalorBP",
+    "UmdCalorIG",
+    "UmdCalorB"
    ]
   },
   {
@@ -1078,7 +1230,10 @@
    "exc_def": "",
    "fr_cal": "Frio",
    "sup_prof": "",
-   "syndromes": []
+   "syndromes": [
+    "DefQiP",
+    "VtFrioP"
+   ]
   },
   {
    "id": "item_92",
@@ -1101,7 +1256,8 @@
    "fr_cal": "",
    "sup_prof": "",
    "syndromes": [
-    "EstgXueF"
+    "EstgXueF",
+    "EstXueE"
    ]
   },
   {
@@ -1177,7 +1333,8 @@
     "EstgXueF",
     "EstgXueC",
     "FlmFrioP",
-    "FlmCalorP"
+    "FlmCalorP",
+    "CalorP"
    ]
   },
   {
@@ -1221,7 +1378,11 @@
    "sup_prof": "",
    "syndromes": [
     "AlimE",
-    "RebelE"
+    "RebelE",
+    "FrioE",
+    "FinvE",
+    "EstXueE",
+    "UmdCalorE"
    ]
   },
   {
@@ -1235,7 +1396,8 @@
    "sup_prof": "",
    "syndromes": [
     "UmdCalorB",
-    "UmdFrioB"
+    "UmdFrioB",
+    "FrioCanalF"
    ]
   },
   {
@@ -1274,7 +1436,10 @@
    "sup_prof": "",
    "syndromes": [
     "DefYgR",
-    "DefYgBP"
+    "DefYgBP",
+    "UmdFrioIG",
+    "FrioE",
+    "FrioCanalF"
    ]
   },
   {
@@ -1304,7 +1469,8 @@
     "UmdCalorB",
     "UmdFrioB",
     "UmdCalorBP",
-    "UmdFrioBP"
+    "UmdFrioBP",
+    "UmdCalorIG"
    ]
   },
   {
@@ -1348,7 +1514,8 @@
     "DefQiR",
     "DefQiBP",
     "DefXueC",
-    "DefXueF"
+    "DefXueF",
+    "DefFrioID"
    ]
   },
   {
@@ -1360,7 +1527,10 @@
    "exc_def": "Def",
    "fr_cal": "",
    "sup_prof": "",
-   "syndromes": []
+   "syndromes": [
+    "FrioE",
+    "DefFrioID"
+   ]
   },
   {
    "id": "item_117",
@@ -1374,7 +1544,9 @@
    "syndromes": [
     "EstgXueF",
     "EstgXueC",
-    "EstgQiF"
+    "EstgQiF",
+    "ObstID",
+    "EstXueE"
    ]
   },
   {
@@ -1386,7 +1558,13 @@
    "exc_def": "",
    "fr_cal": "Frio",
    "sup_prof": "",
-   "syndromes": []
+   "syndromes": [
+    "UmdFrioIG",
+    "FrioE",
+    "DefYgBP",
+    "FrioCanalF",
+    "DefFrioID"
+   ]
   },
   {
    "id": "item_119",
@@ -1503,9 +1681,7 @@
    "exc_def": "Exc",
    "fr_cal": "",
    "sup_prof": "",
-   "syndromes": [
-    "ObstID"
-   ]
+   "syndromes": []
   },
   {
    "id": "item_130",
@@ -1567,7 +1743,8 @@
    "sup_prof": "Prof",
    "syndromes": [
     "DefQiR",
-    "DefJgR"
+    "DefJgR",
+    "RnaoRecQi"
    ]
   },
   {
@@ -1612,7 +1789,10 @@
    "exc_def": "",
    "fr_cal": "Frio",
    "sup_prof": "",
-   "syndromes": []
+   "syndromes": [
+    "DefYgR",
+    "DefFrioB"
+   ]
   },
   {
    "id": "item_140",
@@ -1713,7 +1893,10 @@
    "fr_cal": "",
    "sup_prof": "Prof",
    "syndromes": [
-    "DefQiBP"
+    "DefQiBP",
+    "ColapsQiBP",
+    "FinvE",
+    "DefXueBP"
    ]
   },
   {
@@ -1760,9 +1943,7 @@
    "sup_prof": "Sup",
    "syndromes": [
     "EstgXueC",
-    "EstgQiF",
-    "UmdCalorIG",
-    "UmdFrioIG"
+    "EstgQiF"
    ]
   },
   {
@@ -1777,8 +1958,6 @@
    "syndromes": [
     "EstgXueC",
     "EstgQiF",
-    "UmdCalorIG",
-    "UmdFrioIG",
     "VtCalorP",
     "VtFrioP"
    ]
@@ -1795,8 +1974,6 @@
    "syndromes": [
     "EstgXueC",
     "EstgQiF",
-    "UmdCalorIG",
-    "UmdFrioIG",
     "VtCalorP",
     "VtFrioP"
    ]
@@ -1823,9 +2000,7 @@
    "exc_def": "Exc",
    "fr_cal": "",
    "sup_prof": "Sup",
-   "syndromes": [
-    "ObstID"
-   ]
+   "syndromes": []
   },
   {
    "id": "item_159",
@@ -1839,7 +2014,8 @@
    "syndromes": [
     "DefXueF",
     "AscYgF",
-    "DefYnP"
+    "DefYnP",
+    "DefYnF"
    ]
   },
   {
@@ -1853,7 +2029,14 @@
    "sup_prof": "Prof",
    "syndromes": [
     "DefYgC",
-    "DefQiP"
+    "DefQiP",
+    "ColapsQiC",
+    "UmdFrioIG",
+    "FrioE",
+    "RnaoRecQi",
+    "FrioCanalF",
+    "DefFrioID",
+    "EstgQiC"
    ]
   },
   {
@@ -2032,7 +2215,8 @@
    "fr_cal": "",
    "sup_prof": "Prof",
    "syndromes": [
-    "DefXueF"
+    "DefXueF",
+    "DefYnF"
    ]
   },
   {
@@ -2063,7 +2247,8 @@
    "sup_prof": "Prof",
    "syndromes": [
     "DefXueF",
-    "AscYgF"
+    "AscYgF",
+    "DefYnF"
    ]
   },
   {
@@ -2076,7 +2261,10 @@
    "fr_cal": "Frio",
    "sup_prof": "Prof",
    "syndromes": [
-    "DefYgR"
+    "DefYgR",
+    "ColapsQiC",
+    "FrioE",
+    "FrioCanalF"
    ]
   },
   {
@@ -2154,7 +2342,8 @@
    "fr_cal": "",
    "sup_prof": "Prof",
    "syndromes": [
-    "DefXueF"
+    "DefXueF",
+    "DefYnF"
    ]
   },
   {
@@ -2192,7 +2381,16 @@
    "exc_def": "",
    "fr_cal": "",
    "sup_prof": "",
-   "syndromes": []
+   "syndromes": [
+    "DefXueC",
+    "DefYnC",
+    "FgF",
+    "FgC",
+    "FlmC",
+    "DefYnR",
+    "DefYnF",
+    "DefXueBP"
+   ]
   },
   {
    "id": "item_191",
@@ -2204,7 +2402,8 @@
    "fr_cal": "",
    "sup_prof": "Prof",
    "syndromes": [
-    "FgC"
+    "FgC",
+    "CalorID"
    ]
   },
   {
@@ -2270,7 +2469,8 @@
    "fr_cal": "",
    "sup_prof": "Prof",
    "syndromes": [
-    "FgC"
+    "FgC",
+    "DefQiVB"
    ]
   },
   {
@@ -2661,7 +2861,8 @@
    "sup_prof": "Prof",
    "syndromes": [
     "AscYgF",
-    "DefXueF"
+    "DefXueF",
+    "FgF"
    ]
   },
   {
@@ -2675,7 +2876,8 @@
    "sup_prof": "Prof",
    "syndromes": [
     "FgF",
-    "DefXueF"
+    "DefXueF",
+    "FrioCanalF"
    ]
   },
   {
@@ -2847,7 +3049,12 @@
     "FlmC",
     "DefXueF",
     "AscYgF",
-    "DefYnR"
+    "DefYnR",
+    "DefQiVB",
+    "DefXueC",
+    "DefYnF",
+    "RnaoRecQi",
+    "SecIG"
    ]
   },
   {
@@ -3065,7 +3272,8 @@
    "sup_prof": "Prof",
    "syndromes": [
     "DefYnR",
-    "DefXueF"
+    "DefXueF",
+    "DefYnF"
    ]
   },
   {
@@ -3092,7 +3300,9 @@
    "fr_cal": "",
    "sup_prof": "Prof",
    "syndromes": [
-    "DefXueF"
+    "DefXueF",
+    "DefQiVB",
+    "DefYnF"
    ]
   },
   {
@@ -3160,7 +3370,22 @@
    "fr_cal": "",
    "sup_prof": "Prof",
    "syndromes": [
-    "DefXueF"
+    "DefXueF",
+    "DefYnF"
+   ]
+  },
+  {
+   "id": "item_553",
+   "key": "OLHOS_visao_noturna fraca",
+   "cat": "OLHOS",
+   "subcat": "Visão",
+   "label": "Enxerga mal à noite",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefXueF",
+    "DefYnF"
    ]
   },
   {
@@ -3185,7 +3410,8 @@
    "sup_prof": "Sup",
    "syndromes": [
     "VtFrioP",
-    "VtCalorP"
+    "VtCalorP",
+    "UmdCalorE"
    ]
   },
   {
@@ -3200,8 +3426,23 @@
    "syndromes": [
     "FgF",
     "VtCalorP",
-    "UmdCalorIG",
-    "UmdCalorB"
+    "UmdCalorB",
+    "BPcontrXue",
+    "CalorXue"
+   ]
+  },
+  {
+   "id": "item_554",
+   "key": "NARIZOUVIDO_nariz_seco",
+   "cat": "NARIZOUVIDO",
+   "subcat": "Nariz",
+   "label": "Seco",
+   "exc_def": "Def",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "SecP",
+    "DefYnP"
    ]
   },
   {
@@ -3225,7 +3466,8 @@
    "fr_cal": "Calor",
    "sup_prof": "Sup",
    "syndromes": [
-    "VtCalorP"
+    "VtCalorP",
+    "UmdCalorE"
    ]
   },
   {
@@ -3294,7 +3536,9 @@
     "AscYgF",
     "DefXueF",
     "FgF",
-    "DefQiR"
+    "DefQiR",
+    "DefYnF",
+    "RnaoRecQi"
    ]
   },
   {
@@ -3360,7 +3604,8 @@
    "sup_prof": "",
    "syndromes": [
     "CalorE",
-    "FgC"
+    "FgC",
+    "CalorID"
    ]
   },
   {
@@ -3388,7 +3633,11 @@
    "sup_prof": "",
    "syndromes": [
     "DefYnE",
-    "CalorE"
+    "CalorE",
+    "SecP",
+    "DefYnC",
+    "CalorIG",
+    "SecIG"
    ]
   },
   {
@@ -3416,7 +3665,8 @@
    "syndromes": [
     "CalorE",
     "AlimE",
-    "UmdCalorBP"
+    "UmdCalorBP",
+    "SecIG"
    ]
   },
   {
@@ -3454,7 +3704,9 @@
    "sup_prof": "Prof",
    "syndromes": [
     "FgC",
-    "FgF"
+    "FgF",
+    "UmdCalorF",
+    "CalorQiF"
    ]
   },
   {
@@ -3466,9 +3718,7 @@
    "exc_def": "Exc",
    "fr_cal": "Calor",
    "sup_prof": "Prof",
-   "syndromes": [
-    "UmdCalorIG"
-   ]
+   "syndromes": []
   },
   {
    "id": "item_301",
@@ -3507,7 +3757,8 @@
     "VtCalorP",
     "DefYnP",
     "DefYnR",
-    "CalorE"
+    "CalorE",
+    "CalorID"
    ]
   },
   {
@@ -3523,7 +3774,11 @@
     "DefYnP",
     "VtCalorP",
     "DefYnR",
-    "CalorE"
+    "CalorE",
+    "SecP",
+    "DefYnC",
+    "DefYnF",
+    "SecIG"
    ]
   },
   {
@@ -3536,7 +3791,8 @@
    "fr_cal": "",
    "sup_prof": "Prof",
    "syndromes": [
-    "DefYnP"
+    "DefYnP",
+    "SecP"
    ]
   },
   {
@@ -3549,7 +3805,8 @@
    "fr_cal": "",
    "sup_prof": "Prof",
    "syndromes": [
-    "EstgQiF"
+    "EstgQiF",
+    "EstgQiC"
    ]
   },
   {
@@ -3561,10 +3818,7 @@
    "exc_def": "Exc",
    "fr_cal": "",
    "sup_prof": "",
-   "syndromes": [
-    "UmdCalorIG",
-    "UmdFrioIG"
-   ]
+   "syndromes": []
   },
   {
    "id": "item_310",
@@ -3614,7 +3868,8 @@
    "sup_prof": "Prof",
    "syndromes": [
     "DefYnP",
-    "DefQiP"
+    "DefQiP",
+    "RnaoRecQi"
    ]
   },
   {
@@ -3640,7 +3895,8 @@
    "syndromes": [
     "SecP",
     "FlmFrioP",
-    "FlmCalorP"
+    "FlmCalorP",
+    "CalorP"
    ]
   },
   {
@@ -3670,7 +3926,8 @@
     "FlmFrioP",
     "FlmCalorP",
     "DefYgR",
-    "DefQiP"
+    "DefQiP",
+    "RnaoRecQi"
    ]
   },
   {
@@ -3763,6 +4020,65 @@
    ]
   },
   {
+   "id": "item_555",
+   "key": "RESPIRATORIO_catarro na garganta",
+   "cat": "RESPIRATORIO",
+   "subcat": "Catarro preso na garganta",
+   "label": "Catarro preso na garganta",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "FlmMente",
+    "FlmFrioP",
+    "FlmC"
+   ]
+  },
+  {
+   "id": "item_556",
+   "key": "RESPIRATORIO_voz fraca",
+   "cat": "RESPIRATORIO",
+   "subcat": "Voz fraca",
+   "label": "Voz fraca",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiP",
+    "RnaoRecQi",
+    "DefQiC"
+   ]
+  },
+  {
+   "id": "item_557",
+   "key": "RESPIRATORIO_resfria facilmente",
+   "cat": "RESPIRATORIO",
+   "subcat": "Resfria-se com facilidade",
+   "label": "Resfria-se com facilidade",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Sup",
+   "syndromes": [
+    "DefQiP"
+   ]
+  },
+  {
+   "id": "item_558",
+   "key": "RESPIRATORIO_falta de ar ao esforco",
+   "cat": "RESPIRATORIO",
+   "subcat": "Falta de ar ao esforço / difícil puxar o ar",
+   "label": "Falta de ar ao esforço / difícil puxar o ar",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "RnaoRecQi",
+    "DefQiP",
+    "DefQiC",
+    "DefYgC"
+   ]
+  },
+  {
    "id": "item_329",
    "key": "RESPIRATORIO_suspiros",
    "cat": "RESPIRATORIO",
@@ -3772,7 +4088,11 @@
    "fr_cal": "",
    "sup_prof": "",
    "syndromes": [
-    "EstgQiF"
+    "EstgQiF",
+    "DefQiVB",
+    "FinvBP",
+    "FinvE",
+    "EstgQiC"
    ]
   },
   {
@@ -3844,7 +4164,8 @@
     "FgC",
     "FlmC",
     "EstgXueC",
-    "ColapsQiC"
+    "ColapsQiC",
+    "EstgQiC"
    ]
   },
   {
@@ -3893,7 +4214,8 @@
    "sup_prof": "Prof",
    "syndromes": [
     "EstgQiF",
-    "EstgXueC"
+    "EstgXueC",
+    "EstgQiC"
    ]
   },
   {
@@ -3908,7 +4230,9 @@
    "syndromes": [
     "EstgQiF",
     "FlmFrioP",
-    "FlmCalorP"
+    "FlmCalorP",
+    "EstgQiC",
+    "CalorQiF"
    ]
   },
   {
@@ -3933,7 +4257,8 @@
    "sup_prof": "Prof",
    "syndromes": [
     "EstgQiF",
-    "UmdCalorF"
+    "UmdCalorF",
+    "CalorQiF"
    ]
   },
   {
@@ -3948,7 +4273,9 @@
    "syndromes": [
     "EstgQiF",
     "UmdCalorF",
-    "FgF"
+    "FgF",
+    "FinvE",
+    "CalorQiF"
    ]
   },
   {
@@ -4011,7 +4338,13 @@
    "sup_prof": "Prof",
    "syndromes": [
     "CalorE",
-    "UmdCalorBP"
+    "UmdCalorBP",
+    "CalorID",
+    "SecP",
+    "FgF",
+    "FgC",
+    "CalorXue",
+    "CalorP"
    ]
   },
   {
@@ -4025,7 +4358,10 @@
    "sup_prof": "Prof",
    "syndromes": [
     "FrioE",
-    "UmdFrioBP"
+    "UmdFrioBP",
+    "UmdCalorIG",
+    "UmdCalorB",
+    "UmdCalorE"
    ]
   },
   {
@@ -4051,7 +4387,8 @@
    "fr_cal": "Frio",
    "sup_prof": "",
    "syndromes": [
-    "FrioE"
+    "FrioE",
+    "DefFrioID"
    ]
   },
   {
@@ -4219,7 +4556,10 @@
     "DefQiBP",
     "UmdCalorBP",
     "DefQiE",
-    "FrioE"
+    "FrioE",
+    "BPcontrXue",
+    "EstgQiC",
+    "DefXueBP"
    ]
   },
   {
@@ -4307,7 +4647,8 @@
    "fr_cal": "",
    "sup_prof": "Prof",
    "syndromes": [
-    "EstgQiF"
+    "EstgQiF",
+    "FinvE"
    ]
   },
   {
@@ -4337,7 +4678,9 @@
     "DefYgBP",
     "UmdFrioIG",
     "UmdCalorIG",
-    "AlimE"
+    "AlimE",
+    "FinvE",
+    "DefXueBP"
    ]
   },
   {
@@ -4350,7 +4693,8 @@
    "fr_cal": "",
    "sup_prof": "Prof",
    "syndromes": [
-    "EstgXueF"
+    "EstgXueF",
+    "EstXueE"
    ]
   },
   {
@@ -4395,7 +4739,8 @@
    "syndromes": [
     "DefQiBP",
     "DefQiE",
-    "AlimE"
+    "AlimE",
+    "UmdCalorE"
    ]
   },
   {
@@ -4411,7 +4756,8 @@
     "CalorE",
     "DefYnE",
     "EstgQiF",
-    "FgF"
+    "FgF",
+    "UmdCalorE"
    ]
   },
   {
@@ -4428,7 +4774,12 @@
     "DefYgBP",
     "UmdCalorBP",
     "UmdFrioBP",
-    "DefYnE"
+    "DefYnE",
+    "FrioE",
+    "UmdCalorF",
+    "FinvE",
+    "EstXueE",
+    "UmdCalorE"
    ]
   },
   {
@@ -4444,7 +4795,9 @@
     "DefQiBP",
     "DefYgBP",
     "UmdCalorIG",
-    "DefQiE"
+    "DefQiE",
+    "ObstID",
+    "FinvBP"
    ]
   },
   {
@@ -4458,7 +4811,50 @@
    "sup_prof": "",
    "syndromes": [
     "AlimE",
-    "RebelE"
+    "RebelE",
+    "FinvE"
+   ]
+  },
+  {
+   "id": "item_559",
+   "key": "GASTRICO_estomago_arrotos",
+   "cat": "GASTRICO",
+   "subcat": "Estômago",
+   "label": "Arrotos",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "RebelE",
+    "FinvE",
+    "AlimE"
+   ]
+  },
+  {
+   "id": "item_560",
+   "key": "GASTRICO_estomago_vomito claro",
+   "cat": "GASTRICO",
+   "subcat": "Estômago",
+   "label": "Vômito de líquido claro",
+   "exc_def": "Exc",
+   "fr_cal": "Frio",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "FrioE",
+    "FrioCanalF"
+   ]
+  },
+  {
+   "id": "item_561",
+   "key": "GASTRICO_estomago_vomito com sangue",
+   "cat": "GASTRICO",
+   "subcat": "Estômago",
+   "label": "Vômito com sangue ou fezes pretas (procurar médico)",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "EstXueE"
    ]
   },
   {
@@ -4470,7 +4866,10 @@
    "exc_def": "",
    "fr_cal": "",
    "sup_prof": "",
-   "syndromes": []
+   "syndromes": [
+    "ObstID",
+    "FinvBP"
+   ]
   },
   {
    "id": "item_390",
@@ -4509,7 +4908,12 @@
    "syndromes": [
     "AlimE",
     "DefQiE",
-    "UmdCalorF"
+    "UmdCalorF",
+    "ObstID",
+    "UmdCalorIG",
+    "UmdFrioIG",
+    "FinvBP",
+    "DefFrioID"
    ]
   },
   {
@@ -4537,6 +4941,49 @@
    "sup_prof": "Prof",
    "syndromes": [
     "CalorID"
+   ]
+  },
+  {
+   "id": "item_562",
+   "key": "GASTRICO_abdome_borborigmos",
+   "cat": "GASTRICO",
+   "subcat": "Abdome",
+   "label": "Barulhos na barriga (borborigmos)",
+   "exc_def": "",
+   "fr_cal": "Frio",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "ObstID",
+    "DefFrioID",
+    "UmdFrioIG",
+    "FinvBP"
+   ]
+  },
+  {
+   "id": "item_563",
+   "key": "GASTRICO_abdome_alivia gases",
+   "cat": "GASTRICO",
+   "subcat": "Abdome",
+   "label": "Dor que alivia ao soltar gases",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "ObstID",
+    "FinvBP"
+   ]
+  },
+  {
+   "id": "item_564",
+   "key": "GASTRICO_abdome_peso para baixo",
+   "cat": "GASTRICO",
+   "subcat": "Abdome",
+   "label": "Sensação de peso “para baixo”",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "ColapsQiBP"
    ]
   },
   {
@@ -4586,7 +5033,8 @@
    "syndromes": [
     "DefQiBP",
     "ColapsQiBP",
-    "UmdCalorIG"
+    "UmdCalorIG",
+    "CalorIG"
    ]
   },
   {
@@ -4602,6 +5050,20 @@
     "DefQiBP",
     "ColapsQiBP",
     "DefXueF"
+   ]
+  },
+  {
+   "id": "item_567",
+   "key": "INTESTINO_queimacao no anus",
+   "cat": "INTESTINO",
+   "subcat": "Queimação no ânus",
+   "label": "Queimação no ânus",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "UmdCalorIG",
+    "CalorIG"
    ]
   },
   {
@@ -4627,12 +5089,13 @@
    "syndromes": [
     "EstgQiF",
     "CalorID",
-    "CalorID",
-    "FgC",
     "FgC",
     "DefYnE",
     "DefQiBP",
-    "DefYnR"
+    "DefYnR",
+    "FgF",
+    "CalorIG",
+    "SecIG"
    ]
   },
   {
@@ -4669,7 +5132,8 @@
    "fr_cal": "",
    "sup_prof": "Prof",
    "syndromes": [
-    "EstgQiF"
+    "EstgQiF",
+    "FinvBP"
    ]
   },
   {
@@ -4693,7 +5157,13 @@
    "fr_cal": "Frio",
    "sup_prof": "Prof",
    "syndromes": [
-    "DefQiBP"
+    "DefQiBP",
+    "ColapsQiBP",
+    "UmdCalorIG",
+    "UmdFrioIG",
+    "FinvBP",
+    "DefFrioID",
+    "DefXueBP"
    ]
   },
   {
@@ -4746,7 +5216,13 @@
    "exc_def": "Exc",
    "fr_cal": "Calor",
    "sup_prof": "Prof",
-   "syndromes": []
+   "syndromes": [
+    "FgF",
+    "DefYnR",
+    "DefYnE",
+    "CalorIG",
+    "SecIG"
+   ]
   },
   {
    "id": "item_415",
@@ -4758,7 +5234,8 @@
    "fr_cal": "Calor",
    "sup_prof": "Prof",
    "syndromes": [
-    "UmdCalorIG"
+    "UmdCalorIG",
+    "BPcontrXue"
    ]
   },
   {
@@ -4773,6 +5250,33 @@
    "syndromes": [
     "DefQiBP",
     "DefYgBP"
+   ]
+  },
+  {
+   "id": "item_565",
+   "key": "INTESTINO_formato_alterna",
+   "cat": "INTESTINO",
+   "subcat": "Formato",
+   "label": "Alterna prisão de ventre e diarreia",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "FinvBP"
+   ]
+  },
+  {
+   "id": "item_566",
+   "key": "INTESTINO_formato_cheiro forte",
+   "cat": "INTESTINO",
+   "subcat": "Formato",
+   "label": "Cheiro muito forte",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "UmdCalorIG",
+    "UmdCalorBP"
    ]
   },
   {
@@ -4824,7 +5328,9 @@
    "fr_cal": "",
    "sup_prof": "Prof",
    "syndromes": [
-    "DefYgR"
+    "DefYgR",
+    "DefQiR",
+    "DefFrioB"
    ]
   },
   {
@@ -4876,7 +5382,8 @@
    "sup_prof": "Prof",
    "syndromes": [
     "DefYgR",
-    "UmdCalorB"
+    "UmdCalorB",
+    "DefFrioB"
    ]
   },
   {
@@ -4889,7 +5396,9 @@
    "fr_cal": "",
    "sup_prof": "Prof",
    "syndromes": [
-    "DefYgR"
+    "DefYgR",
+    "DefQiR",
+    "DefFrioB"
    ]
   },
   {
@@ -4902,7 +5411,9 @@
    "fr_cal": "",
    "sup_prof": "Prof",
    "syndromes": [
-    "DefYgR"
+    "DefYgR",
+    "DefQiR",
+    "DefFrioB"
    ]
   },
   {
@@ -4926,7 +5437,9 @@
    "fr_cal": "Frio",
    "sup_prof": "Prof",
    "syndromes": [
-    "DefYgR"
+    "DefYgR",
+    "DefFrioID",
+    "DefFrioB"
    ]
   },
   {
@@ -4940,7 +5453,10 @@
    "sup_prof": "Prof",
    "syndromes": [
     "DefYnR",
-    "UmdCalorB"
+    "UmdCalorB",
+    "CalorID",
+    "UmdCalorIG",
+    "CalorIG"
    ]
   },
   {
@@ -4965,7 +5481,11 @@
    "sup_prof": "Prof",
    "syndromes": [
     "DefYnR",
-    "UmdCalorB"
+    "UmdCalorB",
+    "CalorID",
+    "UmdCalorIG",
+    "UmdCalorF",
+    "CalorIG"
    ]
   },
   {
@@ -4978,7 +5498,11 @@
    "fr_cal": "Frio",
    "sup_prof": "Prof",
    "syndromes": [
-    "DefYgR"
+    "DefYgR",
+    "DefQiR",
+    "RnaoRecQi",
+    "DefFrioID",
+    "DefFrioB"
    ]
   },
   {
@@ -5063,6 +5587,65 @@
    ]
   },
   {
+   "id": "item_568",
+   "key": "URINA_urgencia",
+   "cat": "URINA",
+   "subcat": "Jato",
+   "label": "Urgência para urinar",
+   "exc_def": "Exc",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "UmdCalorB",
+    "UmdFrioB",
+    "ColapsQiBP"
+   ]
+  },
+  {
+   "id": "item_569",
+   "key": "URINA_gotejamento",
+   "cat": "URINA",
+   "subcat": "Jato",
+   "label": "Gotejamento depois de urinar",
+   "exc_def": "Def",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "DefQiR",
+    "DefFrioB"
+   ]
+  },
+  {
+   "id": "item_570",
+   "key": "URINA_sangue",
+   "cat": "URINA",
+   "subcat": "Cor",
+   "label": "Sangue na urina",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "UmdCalorB",
+    "CalorID",
+    "FgC",
+    "BPcontrXue",
+    "CalorXue"
+   ]
+  },
+  {
+   "id": "item_571",
+   "key": "URINA_areia",
+   "cat": "URINA",
+   "subcat": "Cor",
+   "label": "Areia ou cálculo",
+   "exc_def": "Exc",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "UmdCalorB"
+   ]
+  },
+  {
    "id": "item_445",
    "key": "GENITAIS_masculino_doença",
    "cat": "GENITAIS",
@@ -5086,7 +5669,22 @@
    "fr_cal": "Calor",
    "sup_prof": "Prof",
    "syndromes": [
-    "UmdCalorF"
+    "UmdCalorF",
+    "ObstID"
+   ]
+  },
+  {
+   "id": "item_572",
+   "key": "GENITAIS_masculino_escroto frio",
+   "cat": "GENITAIS",
+   "subcat": "Masculino",
+   "label": "Dor ou retração no escroto (melhora com calor)",
+   "exc_def": "Exc",
+   "fr_cal": "Frio",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "FrioCanalF",
+    "ObstID"
    ]
   },
   {
@@ -5253,7 +5851,9 @@
    "fr_cal": "",
    "sup_prof": "Prof",
    "syndromes": [
-    "DefQiBP"
+    "DefQiBP",
+    "ColapsQiBP",
+    "DefQiR"
    ]
   },
   {
@@ -5336,7 +5936,8 @@
    "syndromes": [
     "DefYgR",
     "DefYgBP",
-    "UmdFrioBP"
+    "UmdFrioBP",
+    "DefQiR"
    ]
   },
   {
@@ -5373,7 +5974,8 @@
    "fr_cal": "",
    "sup_prof": "Prof",
    "syndromes": [
-    "EstgQiF"
+    "EstgQiF",
+    "CalorQiF"
    ]
   },
   {
@@ -5427,7 +6029,9 @@
     "DefQiBP",
     "FgF",
     "EstgXueF",
-    "EstgQiF"
+    "EstgQiF",
+    "CalorXue",
+    "CalorQiF"
    ]
   },
   {
@@ -5492,7 +6096,10 @@
    "fr_cal": "Calor",
    "sup_prof": "Prof",
    "syndromes": [
-    "DefQiBP"
+    "DefQiBP",
+    "ColapsQiBP",
+    "BPcontrXue",
+    "CalorXue"
    ]
   },
   {
@@ -5507,7 +6114,9 @@
    "syndromes": [
     "DefXueF",
     "EstgXueF",
-    "DefJgR"
+    "DefJgR",
+    "DefYnF",
+    "DefXueBP"
    ]
   },
   {
@@ -5521,7 +6130,9 @@
    "sup_prof": "Prof",
    "syndromes": [
     "DefXueF",
-    "EstgXueF"
+    "EstgXueF",
+    "DefYnF",
+    "DefXueBP"
    ]
   },
   {
@@ -5536,6 +6147,20 @@
    "syndromes": [
     "DefXueF",
     "EstgQiF"
+   ]
+  },
+  {
+   "id": "item_573",
+   "key": "MENSTRUACAO_sangramento fora",
+   "cat": "MENSTRUACAO",
+   "subcat": "Quantidade",
+   "label": "Sangramento fora do período",
+   "exc_def": "",
+   "fr_cal": "",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "BPcontrXue",
+    "CalorXue"
    ]
   },
   {
@@ -5584,7 +6209,9 @@
    "exc_def": "Exc",
    "fr_cal": "Calor",
    "sup_prof": "Prof",
-   "syndromes": []
+   "syndromes": [
+    "CalorXue"
+   ]
   },
   {
    "id": "item_490",
@@ -5755,7 +6382,9 @@
    "exc_def": "Exc",
    "fr_cal": "Frio",
    "sup_prof": "Prof",
-   "syndromes": []
+   "syndromes": [
+    "FrioCanalF"
+   ]
   },
   {
    "id": "item_505",
@@ -5791,7 +6420,47 @@
    "syndromes": [
     "DefYgR",
     "DefYgBP",
-    "DefXueF"
+    "DefXueF",
+    "DefQiP",
+    "DefQiC",
+    "DefYgC",
+    "DefXueC",
+    "DefQiBP",
+    "DefXueBP",
+    "DefFrioID",
+    "DefFrioB",
+    "BPcontrXue",
+    "ColapsQiBP"
+   ]
+  },
+  {
+   "id": "item_574",
+   "key": "LINGUA_cor_vermelha",
+   "cat": "LINGUA",
+   "subcat": "Cor",
+   "label": "Vermelha",
+   "exc_def": "",
+   "fr_cal": "Calor",
+   "sup_prof": "Prof",
+   "syndromes": [
+    "FgC",
+    "FgF",
+    "CalorE",
+    "CalorID",
+    "CalorIG",
+    "CalorP",
+    "CalorXue",
+    "CalorQiF",
+    "UmdCalorBP",
+    "UmdCalorB",
+    "UmdCalorF",
+    "UmdCalorIG",
+    "UmdCalorE",
+    "FlmCalorP",
+    "FlmC",
+    "DefYnR",
+    "DefYnC",
+    "DefYnP"
    ]
   },
   {
@@ -5803,7 +6472,11 @@
    "exc_def": "",
    "fr_cal": "Calor",
    "sup_prof": "Prof",
-   "syndromes": []
+   "syndromes": [
+    "CalorXue",
+    "FgF",
+    "FgC"
+   ]
   },
   {
    "id": "item_510",
@@ -5816,7 +6489,8 @@
    "sup_prof": "Prof",
    "syndromes": [
     "EstgXueF",
-    "EstgXueC"
+    "EstgXueC",
+    "EstXueE"
    ]
   },
   {
@@ -5841,7 +6515,11 @@
    "exc_def": "",
    "fr_cal": "Calor",
    "sup_prof": "",
-   "syndromes": []
+   "syndromes": [
+    "FgC",
+    "CalorXue",
+    "UmdCalorB"
+   ]
   },
   {
    "id": "item_513",
@@ -5865,7 +6543,10 @@
    "exc_def": "",
    "fr_cal": "",
    "sup_prof": "",
-   "syndromes": []
+   "syndromes": [
+    "VtFrioP",
+    "VtCalorP"
+   ]
   },
   {
    "id": "item_516",
@@ -5876,7 +6557,16 @@
    "exc_def": "Exc",
    "fr_cal": "",
    "sup_prof": "Prof",
-   "syndromes": []
+   "syndromes": [
+    "AlimE",
+    "UmdFrioBP",
+    "UmdCalorBP",
+    "FlmFrioP",
+    "FlmCalorP",
+    "FlmMente",
+    "CalorIG",
+    "FrioE"
+   ]
   },
   {
    "id": "item_517",
@@ -5888,7 +6578,8 @@
    "fr_cal": "",
    "sup_prof": "Prof",
    "syndromes": [
-    "DefYnE"
+    "DefYnE",
+    "DefYnF"
    ]
   },
   {
@@ -5900,7 +6591,16 @@
    "exc_def": "",
    "fr_cal": "Frio",
    "sup_prof": "",
-   "syndromes": []
+   "syndromes": [
+    "VtFrioP",
+    "FlmFrioP",
+    "UmdFrioBP",
+    "UmdFrioB",
+    "UmdFrioIG",
+    "FrioE",
+    "FrioCanalF",
+    "DefFrioID"
+   ]
   },
   {
    "id": "item_519",
@@ -5911,7 +6611,24 @@
    "exc_def": "",
    "fr_cal": "Calor",
    "sup_prof": "",
-   "syndromes": []
+   "syndromes": [
+    "FgC",
+    "FgF",
+    "CalorE",
+    "CalorID",
+    "CalorIG",
+    "CalorP",
+    "CalorXue",
+    "CalorQiF",
+    "UmdCalorBP",
+    "UmdCalorB",
+    "UmdCalorF",
+    "UmdCalorIG",
+    "UmdCalorE",
+    "FlmCalorP",
+    "FlmC",
+    "VtCalorP"
+   ]
   },
   {
    "id": "item_520",
@@ -5922,7 +6639,10 @@
    "exc_def": "",
    "fr_cal": "Calor",
    "sup_prof": "",
-   "syndromes": []
+   "syndromes": [
+    "CalorIG",
+    "CalorE"
+   ]
   },
   {
    "id": "item_521",
@@ -5951,7 +6671,8 @@
     "DefYnE",
     "CalorE",
     "CalorID",
-    "DefXueF"
+    "DefXueF",
+    "CalorIG"
    ]
   },
   {
@@ -5980,7 +6701,8 @@
    "syndromes": [
     "DefYgBP",
     "UmdFrioBP",
-    "UmdCalorBP"
+    "UmdCalorBP",
+    "FlmMente"
    ]
   },
   {
@@ -6005,7 +6727,10 @@
    "sup_prof": "",
    "syndromes": [
     "DefYgBP",
-    "DefYgR"
+    "DefYgR",
+    "FlmMente",
+    "FlmFrioP",
+    "FlmCalorP"
    ]
   },
   {
@@ -6097,7 +6822,18 @@
    "exc_def": "",
    "fr_cal": "",
    "sup_prof": "Prof",
-   "syndromes": []
+   "syndromes": [
+    "DefYgR",
+    "DefYgBP",
+    "DefYgC",
+    "DefFrioID",
+    "DefFrioB",
+    "FrioCanalF",
+    "FrioE",
+    "DefQiR",
+    "ObstID",
+    "RnaoRecQi"
+   ]
   },
   {
    "id": "item_537",
@@ -6108,7 +6844,10 @@
    "exc_def": "",
    "fr_cal": "",
    "sup_prof": "Sup",
-   "syndromes": []
+   "syndromes": [
+    "VtFrioP",
+    "VtCalorP"
+   ]
   },
   {
    "id": "item_538",
@@ -6119,7 +6858,19 @@
    "exc_def": "",
    "fr_cal": "Frio",
    "sup_prof": "",
-   "syndromes": []
+   "syndromes": [
+    "DefYgR",
+    "DefYgBP",
+    "DefYgC",
+    "FrioE",
+    "FrioCanalF",
+    "DefFrioID",
+    "UmdFrioIG",
+    "UmdFrioBP",
+    "UmdFrioB",
+    "DefFrioB",
+    "FlmFrioP"
+   ]
   },
   {
    "id": "item_539",
@@ -6130,7 +6881,29 @@
    "exc_def": "",
    "fr_cal": "Calor",
    "sup_prof": "",
-   "syndromes": []
+   "syndromes": [
+    "FgC",
+    "FgF",
+    "CalorE",
+    "CalorID",
+    "CalorIG",
+    "CalorP",
+    "CalorXue",
+    "CalorQiF",
+    "UmdCalorBP",
+    "UmdCalorB",
+    "UmdCalorF",
+    "UmdCalorIG",
+    "UmdCalorE",
+    "FlmCalorP",
+    "FlmC",
+    "VtCalorP",
+    "DefYnR",
+    "DefYnC",
+    "DefYnP",
+    "DefYnE",
+    "DefYnF"
+   ]
   },
   {
    "id": "item_540",
@@ -6141,7 +6914,15 @@
    "exc_def": "Exc",
    "fr_cal": "",
    "sup_prof": "",
-   "syndromes": []
+   "syndromes": [
+    "FgC",
+    "FgF",
+    "CalorE",
+    "CalorIG",
+    "CalorID",
+    "AlimE",
+    "FlmC"
+   ]
   },
   {
    "id": "item_541",
@@ -6152,7 +6933,24 @@
    "exc_def": "Def",
    "fr_cal": "",
    "sup_prof": "",
-   "syndromes": []
+   "syndromes": [
+    "DefQiP",
+    "DefQiBP",
+    "DefQiC",
+    "DefQiE",
+    "DefQiR",
+    "DefYgR",
+    "DefYgBP",
+    "DefYgC",
+    "ColapsQiBP",
+    "ColapsQiC",
+    "BPcontrXue",
+    "DefQiVB",
+    "DefFrioB",
+    "DefFrioID",
+    "RnaoRecQi",
+    "DefXueBP"
+   ]
   },
   {
    "id": "item_542",
@@ -6163,7 +6961,11 @@
    "exc_def": "Exc",
    "fr_cal": "",
    "sup_prof": "",
-   "syndromes": []
+   "syndromes": [
+    "FgC",
+    "CalorE",
+    "CalorP"
+   ]
   },
   {
    "id": "item_543",
@@ -6174,7 +6976,18 @@
    "exc_def": "Def",
    "fr_cal": "",
    "sup_prof": "",
-   "syndromes": []
+   "syndromes": [
+    "DefXueC",
+    "DefXueF",
+    "DefXueBP",
+    "BPcontrXue",
+    "SecIG",
+    "DefYnR",
+    "DefYnC",
+    "DefYnP",
+    "DefYnE",
+    "DefYnF"
+   ]
   },
   {
    "id": "item_544",
@@ -6185,7 +6998,20 @@
    "exc_def": "Exc",
    "fr_cal": "",
    "sup_prof": "",
-   "syndromes": []
+   "syndromes": [
+    "FlmFrioP",
+    "FlmCalorP",
+    "FlmC",
+    "FlmMente",
+    "AlimE",
+    "UmdFrioBP",
+    "UmdCalorBP",
+    "UmdCalorIG",
+    "UmdCalorB",
+    "UmdFrioB",
+    "UmdCalorE",
+    "UmdCalorF"
+   ]
   },
   {
    "id": "item_545",
@@ -6196,7 +7022,20 @@
    "exc_def": "Exc",
    "fr_cal": "",
    "sup_prof": "",
-   "syndromes": []
+   "syndromes": [
+    "EstgQiF",
+    "CalorQiF",
+    "FgF",
+    "AscYgF",
+    "VtF",
+    "FinvBP",
+    "FinvE",
+    "UmdCalorF",
+    "EstgXueF",
+    "EstXueE",
+    "FrioCanalF",
+    "ObstID"
+   ]
   }
  ],
  "syndromes": {
@@ -6242,7 +7081,7 @@
   },
   "ColapsQiBP": {
    "code": "ColapsQiBP",
-   "name": "Colapso Yang do BP",
+   "name": "Afundamento Qi do BP",
    "organ": "BP",
    "organ_name": "Baço-Pâncreas",
    "element": "Terra",
@@ -6306,7 +7145,7 @@
   },
   "DefQiVB": {
    "code": "DefQiVB",
-   "name": "Defic. Qi da VB",
+   "name": "Deficiência da VB",
    "organ": "VB",
    "organ_name": "Vesícula Biliar",
    "element": "Madeira",
@@ -6458,7 +7297,7 @@
   },
   "ObstID": {
    "code": "ObstID",
-   "name": "Obstrução Qi no ID",
+   "name": "Dor por Qi no ID",
    "organ": "ID",
    "organ_name": "Intestino Delgado",
    "element": "Fogo",
@@ -6538,7 +7377,7 @@
   },
   "UmdFrioIG": {
    "code": "UmdFrioIG",
-   "name": "Umidade-Frio no IG",
+   "name": "Frio no IG",
    "organ": "IG",
    "organ_name": "Intestino Grosso",
    "element": "Metal",
@@ -6567,6 +7406,142 @@
    "organ_name": "Pulmão",
    "element": "Metal",
    "alma": "Po"
+  },
+  "DefYnF": {
+   "code": "DefYnF",
+   "name": "Defic. Yin do F",
+   "organ": "F",
+   "organ_name": "Fígado",
+   "element": "Madeira",
+   "alma": "Hun"
+  },
+  "FinvBP": {
+   "code": "FinvBP",
+   "name": "Fígado invade o BP",
+   "organ": "F",
+   "organ_name": "Fígado",
+   "element": "Madeira",
+   "alma": "Hun"
+  },
+  "FinvE": {
+   "code": "FinvE",
+   "name": "Fígado invade o E",
+   "organ": "F",
+   "organ_name": "Fígado",
+   "element": "Madeira",
+   "alma": "Hun"
+  },
+  "FlmMente": {
+   "code": "FlmMente",
+   "name": "Fleuma anuvia a Mente",
+   "organ": "C",
+   "organ_name": "Coração",
+   "element": "Fogo",
+   "alma": "Shen"
+  },
+  "RnaoRecQi": {
+   "code": "RnaoRecQi",
+   "name": "Rim não recebe o Qi",
+   "organ": "R",
+   "organ_name": "Rim",
+   "element": "Água",
+   "alma": "Zhi"
+  },
+  "FrioCanalF": {
+   "code": "FrioCanalF",
+   "name": "Frio no canal do F",
+   "organ": "F",
+   "organ_name": "Fígado",
+   "element": "Madeira",
+   "alma": "Hun"
+  },
+  "DefFrioID": {
+   "code": "DefFrioID",
+   "name": "Frio e deficiência no ID",
+   "organ": "ID",
+   "organ_name": "Intestino Delgado",
+   "element": "Fogo",
+   "alma": "Shen"
+  },
+  "CalorIG": {
+   "code": "CalorIG",
+   "name": "Calor no IG",
+   "organ": "IG",
+   "organ_name": "Intestino Grosso",
+   "element": "Metal",
+   "alma": "Po"
+  },
+  "SecIG": {
+   "code": "SecIG",
+   "name": "Secura no IG",
+   "organ": "IG",
+   "organ_name": "Intestino Grosso",
+   "element": "Metal",
+   "alma": "Po"
+  },
+  "EstXueE": {
+   "code": "EstXueE",
+   "name": "Estase Xue no E",
+   "organ": "E",
+   "organ_name": "Estômago",
+   "element": "Terra",
+   "alma": "Yi"
+  },
+  "CalorXue": {
+   "code": "CalorXue",
+   "name": "Calor no Xue",
+   "organ": "F",
+   "organ_name": "Fígado",
+   "element": "Madeira",
+   "alma": "Hun"
+  },
+  "EstgQiC": {
+   "code": "EstgQiC",
+   "name": "Estagnação Qi do C",
+   "organ": "C",
+   "organ_name": "Coração",
+   "element": "Fogo",
+   "alma": "Shen"
+  },
+  "CalorP": {
+   "code": "CalorP",
+   "name": "Calor no P",
+   "organ": "P",
+   "organ_name": "Pulmão",
+   "element": "Metal",
+   "alma": "Po"
+  },
+  "DefXueBP": {
+   "code": "DefXueBP",
+   "name": "Defic. Xue do BP",
+   "organ": "BP",
+   "organ_name": "Baço-Pâncreas",
+   "element": "Terra",
+   "alma": "Yi"
+  },
+  "UmdCalorE": {
+   "code": "UmdCalorE",
+   "name": "Umidade-Calor no E",
+   "organ": "E",
+   "organ_name": "Estômago",
+   "element": "Terra",
+   "alma": "Yi"
+  },
+  "DefFrioB": {
+   "code": "DefFrioB",
+   "name": "Frio e deficiência na B",
+   "organ": "B",
+   "organ_name": "Bexiga",
+   "element": "Água",
+   "alma": "Zhi"
+  },
+  "CalorQiF": {
+   "code": "CalorQiF",
+   "name": "Calor por estagnação do F",
+   "organ": "F",
+   "organ_name": "Fígado",
+   "element": "Madeira",
+   "alma": "Hun"
   }
  },
  "clinical_notes": {
@@ -6696,7 +7671,7 @@
    "psicossomatica": "Frio no peito, retração social, desânimo afetivo e sensação de coração pesado e gelado."
   },
   "ColapsQiC": {
-   "principio": "Resgatar o Yang genuíno, interromper o colapso e sustentar o Qi vital.",
+   "principio": "Resgatar o Yang genuíno, interromper o colapso e sustentar o Qi vital. Quadro grave: encaminhar ao pronto-socorro.",
    "pontos": "VG26, VC4, VC8, R1, CS6 (emergência).",
    "psicossomatica": "Desfalecimento da vontade de conexão, apagão súbito da chama da vida."
   },
@@ -6716,9 +7691,9 @@
    "psicossomatica": "Confusão mental, fala confusa, pensamentos turvos e distorção da percepção da realidade."
   },
   "EstgQiC": {
-   "principio": "Promover o fluxo suave de Qi no tórax e aliviar a opressão no peito.",
-   "pontos": "VC17, CS6, C7, F3.",
-   "psicossomatica": "Suspiros repetidos para abrir o peito; mágoa recente que impede a livre respiração afetiva."
+   "principio": "Mover o Qi do Coração, abrir o tórax e acalmar o Shen.",
+   "pontos": "C5, C7, CS6, VC17, P7, E40.",
+   "psicossomatica": "Tristeza e preocupação “presas no peito”; aperto e suspiros."
   },
   "CalorID": {
    "principio": "Drenar o calor do Intestino Delgado e direcioná-lo para a bexiga para expulsão.",
@@ -6804,6 +7779,86 @@
    "principio": "Aquecer a Bexiga, transformar a umidade fria e restaurar o controle miccional.",
    "pontos": "B28, VC3, VC4, B23, moxa.",
    "psicossomatica": "Sensação de vulnerabilidade nas fronteiras pessoais e incapacidade de segurar a própria energia."
+  },
+  "DefYnF": {
+   "principio": "Nutrir o Yin do Fígado (e do Rim), clarear os olhos e acalmar o Hun.",
+   "pontos": "F8 (Ququan), F3, R3, BP6, B18, B23.",
+   "psicossomatica": "Hun sem raiz: cansaço de “correr atrás”, irritação seca, sensação de vazio de direção."
+  },
+  "FinvBP": {
+   "principio": "Harmonizar o Fígado e o Baço: mover o Qi do Fígado e fortalecer o Baço.",
+   "pontos": "F13 (Zhangmen), F3, VB34, E36, BP6, VC6, E25.",
+   "psicossomatica": "Tensão que “desce para a barriga”: preocupação e frustração somadas, intestino que reage ao humor."
+  },
+  "FinvE": {
+   "principio": "Acalmar o Fígado e fazer descer o Qi do Estômago.",
+   "pontos": "F14 (Qimen), F3, VB34, VC13, VC12, E36, CS6.",
+   "psicossomatica": "Raiva engolida que vira azia e arroto; dificuldade em “digerir” contrariedades."
+  },
+  "FlmMente": {
+   "principio": "Transformar a Fleuma, abrir os orifícios da Mente e acalmar o Shen.",
+   "pontos": "CS5 (Jianshi), C9, VG26, E40, VC12, B15.",
+   "psicossomatica": "Shen nublado: confusão, olhar distante, desligamento da realidade."
+  },
+  "RnaoRecQi": {
+   "principio": "Tonificar o Rim, fortalecer a recepção do Qi e acalmar a asma.",
+   "pontos": "R7, R3, VC4, VC6, B23, P9, VC17.",
+   "psicossomatica": "Fôlego curto para a vida: medo de não dar conta, falta de reserva."
+  },
+  "FrioCanalF": {
+   "principio": "Aquecer o canal do Fígado e dispersar o Frio.",
+   "pontos": "F1, F3, F5, VC3, VC4 (moxa), BP6.",
+   "psicossomatica": "Contração e retraimento por frio afetivo; dificuldade de se soltar."
+  },
+  "DefFrioID": {
+   "principio": "Aquecer e tonificar o Intestino Delgado e o Baço.",
+   "pontos": "VC6, E25, E39, E36, B27, B20 (moxa).",
+   "psicossomatica": "Falta de calor para separar o que serve do que não serve."
+  },
+  "CalorIG": {
+   "principio": "Clarear o Calor do Intestino Grosso e umedecer as fezes.",
+   "pontos": "IG11, IG4, E25, E37, B25, TA6.",
+   "psicossomatica": "Retenção irritada: segurar o que deveria ser solto."
+  },
+  "SecIG": {
+   "principio": "Nutrir os líquidos e umedecer o Intestino Grosso.",
+   "pontos": "E25, E36, BP6, R6, VC4, B25.",
+   "psicossomatica": "Secura afetiva: dificuldade de fluir e de soltar."
+  },
+  "EstXueE": {
+   "principio": "Mover o Sangue do Estômago e aliviar a dor. Sangramento digestivo exige avaliação médica.",
+   "pontos": "VC10, VC12, E34, E36, BP4, CS6, B17, B21.",
+   "psicossomatica": "Mágoa antiga que “pesa no estômago” e não se dissolve."
+  },
+  "CalorXue": {
+   "principio": "Clarear o Calor e esfriar o Sangue.",
+   "pontos": "BP10, IG11, BP6, F2, R2, B17.",
+   "psicossomatica": "Inquietação que “ferve o sangue”: impulsividade, raiva quente."
+  },
+  "CalorP": {
+   "principio": "Clarear o Calor do Pulmão e fazer descer o Qi.",
+   "pontos": "P5, P10, P1, IG11, VC17, B13.",
+   "psicossomatica": "Indignação e luto não expressos que “queimam” o peito."
+  },
+  "DefXueBP": {
+   "principio": "Tonificar o Baço e nutrir o Sangue.",
+   "pontos": "E36, BP6, VC12, B20, B17, VC4.",
+   "psicossomatica": "Esgotamento por excesso de preocupação e de cuidar dos outros."
+  },
+  "UmdCalorE": {
+   "principio": "Clarear o Calor, drenar a Umidade e harmonizar o Estômago.",
+   "pontos": "VC12, E44, E36, BP9, BP6, IG11, IG20.",
+   "psicossomatica": "Ruminação pesada e irritada."
+  },
+  "DefFrioB": {
+   "principio": "Aquecer e firmar a Bexiga e o Rim.",
+   "pontos": "B23, B28, VC4, VC3, R3, VG4 (moxa).",
+   "psicossomatica": "Medo que “escapa”: dificuldade de reter e de se sentir seguro."
+  },
+  "CalorQiF": {
+   "principio": "Mover o Qi do Fígado e clarear o Calor.",
+   "pontos": "F2, F3, VB34, CS6, TA6, VC17.",
+   "psicossomatica": "Frustração antiga que virou irritação quente."
   }
  }
 }

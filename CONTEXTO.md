@@ -79,6 +79,10 @@ trabalho (sem `gh` no PATH), ver se os arquivos novos respondem 200 no site.
    (produtos Taimin e TaoZen). Se o dono mandar outras lojas, acrescentar
    em `scripts/produtos-brasil.mjs` e rodar `npm run fitoterapia:produtos`
    (atualizar a lista de tempos em tempos: as lojas mudam o catálogo).
+   **Ramo `sindromes-livros` (09/10, AINDA NÃO PUBLICADO):** revisão das
+   síndromes com os livros (ver histórico 09/10). Esperando o dono testar
+   com pacientes reais no `localhost:3000` e dizer "publicar" (juntar com
+   `main`). Nada a rodar no Supabase.
    Se o `npm run dev` der erro de hidratação com dados velhos, encerrar o
    processo node da porta 3000 e ligar de novo.
 2. **Auriculoterapia — Souza completo** (08/10): todos os 200 pontos e os
@@ -358,6 +362,45 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
   San, Ba Zheng San, Bai Tou Weng Tang e outras (19). Levar ao advogado:
   citar marcas/lojas num app vendido (pode parecer propaganda) — aviso no
   app diz que as lojas não têm ligação e não é recomendação de marca.
+- **Revisão das síndromes com livros de referência** (pedido do dono; ramo
+  `sindromes-livros`). Livros na pasta `D:\` do computador do trabalho:
+  McDonald & Penner, *Zang Fu Syndromes* (1994, texto em inglês); Maciocia,
+  *Os Fundamentos da Medicina Chinesa* 2ª ed. (texto; cap. 32–42 = padrões
+  dos órgãos); Auteroche, *O Diagnóstico na Medicina Chinesa*; apostila *Os
+  8 Princípios*; Maciocia, *Ginecologia* parte 2 (OCR sem acentos). *A
+  Prática da Medicina Chinesa* e o 2º arquivo dos *Fundamentos* são só
+  imagem (não lidos). Texto extraído com `pdfjs-dist` na pasta temporária.
+  Feito por `scripts/sindromes-livros.mjs` (rodar uma vez; já rodado):
+  - 17 síndromes novas (códigos: DefYnF, FinvBP, FinvE, FlmMente,
+    RnaoRecQi, FrioCanalF, DefFrioID, CalorIG, SecIG, EstXueE, CalorXue,
+    EstgQiC, CalorP, DefXueBP, UmdCalorE, DefFrioB, CalorQiF) com notas
+    clínicas, dieta (`dietetica.json`, `revisado: false`), aurículo e
+    fórmulas → 63 síndromes.
+  - Nomes corrigidos (códigos iguais, fichas salvas continuam valendo):
+    ColapsQiBP = "Afundamento Qi do BP", DefQiVB = "Deficiência da VB",
+    ObstID = "Dor por Qi no ID", UmdFrioIG = "Frio no IG". Tirados sintomas
+    de canal (braço, ombro, dente, torcicolo, reumatismo) do ID/IG e
+    "pressão alta" da VB; "transpiração profusa e fria" passou do BP para o
+    Colapso do Yang do C.
+  - 29 perguntas novas (ansiedade, assusta-se, indecisão, confusão mental,
+    voz fraca, resfria-se fácil, falta de ar ao esforço, arrotos, vômito
+    claro, borborigmos, alterna fezes, queimação no ânus, sangue/areia na
+    urina, urgência, gotejamento, queda de cabelo, língua Vermelha etc.) →
+    489 perguntas.
+  - **Pulso e língua passaram a pontuar** (antes os 10 pulsos e várias
+    línguas não estavam ligados a nada), pelos 8 Princípios.
+  - **Padrões combinados** (`src/lib/combinados.ts`): 15 pares de
+    McDonald/Maciocia, mostrados no resultado e no PDF quando as duas
+    síndromes estão entre as 6 mais fortes (≥ 2 pontos).
+  - Fitoterapia: 16 fórmulas novas (Yi Guan Jian, Tong Xie Yao Fang, Si Ni
+    San, Di Tan Tang, Ren Shen Hu Tao Tang, Nuan Gan Jian, Xiao Jian Zhong
+    Tang, Ma Zi Ren Wan, Run Chang Wan, Shi Xiao San, Dan Shen Yin, Qing
+    Jing San, Ban Xia Hou Po Tang, Xie Bai San, Ba Zhen Tang, Dan Zhi Xiao
+    Yao San) e 10 ervas → 77 fórmulas, 143 ervas; todas as 63 síndromes têm
+    fórmula. Lista de produtos refeita (52 iguais, 25 parecidas).
+  - Simulação de 3 casos: resultado coerente (ex.: "barriga solta com o
+    nervoso + pulso em Corda" → Fígado invade o BP em 1º).
+  - Ao publicar, fichas antigas podem mudar um pouco de resultado.
 
 ### 08/10/2026
 - **Fitoterapia Chinesa:** feita primeiro pelos clássicos e logo revisada com

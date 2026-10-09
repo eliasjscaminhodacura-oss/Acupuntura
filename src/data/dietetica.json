@@ -4806,6 +4806,503 @@
         "embutidos-e-industrializados"
       ],
       "revisado": false
+    },
+    "DefYnF": {
+      "principio": "Nutrir o Yin do Fígado e do Rim.",
+      "paciente": "Falta “umidade” e nutrição ao fígado (olhos secos, visão cansada, calor à noite). Alimentos que nutrem e refrescam de leve.",
+      "naturezas": [
+        "Neutro",
+        "Fresco"
+      ],
+      "preparo": "Sopas, caldos e cozidos; evitar fritar e grelhar.",
+      "prefira": [
+        "goji-berry",
+        "gergelim-preto",
+        "feijao-preto",
+        "ovo",
+        "espinafre",
+        "beterraba",
+        "tofu-e-soja",
+        "pera",
+        "cha-de-crisantemo",
+        "pato",
+        "ostra-e-mariscos"
+      ],
+      "evite": [
+        "pimenta-vermelha",
+        "pimenta-do-reino",
+        "bebidas-alcoolicas",
+        "cafe",
+        "frituras-e-comidas-gordurosas",
+        "carne-de-cordeiro"
+      ],
+      "revisado": false
+    },
+    "FinvBP": {
+      "principio": "Harmonizar o Fígado e fortalecer o Baço.",
+      "paciente": "A tensão emocional mexe com o intestino. Refeições calmas, em horários regulares, comida morna e fácil de digerir.",
+      "naturezas": [
+        "Neutro",
+        "Morno"
+      ],
+      "preparo": "Cozidos, sopas e vapor; comer devagar e sem pressa.",
+      "prefira": [
+        "arroz-branco",
+        "abobora",
+        "cenoura",
+        "inhame-cara",
+        "casca-de-tangerina-seca",
+        "hortela",
+        "erva-doce-funcho",
+        "cardamomo",
+        "aveia",
+        "batata-doce"
+      ],
+      "evite": [
+        "bebidas-geladas-e-sorvetes",
+        "saladas-e-alimentos-crus",
+        "frituras-e-comidas-gordurosas",
+        "cafe",
+        "bebidas-alcoolicas",
+        "acucar-refinado-e-doces"
+      ],
+      "revisado": false
+    },
+    "FinvE": {
+      "principio": "Acalmar o Fígado e harmonizar o Estômago.",
+      "paciente": "A irritação “sobe” para o estômago (azia, arroto, enjoo). Refeições leves, sem pressa, evitando o que irrita o estômago.",
+      "naturezas": [
+        "Neutro",
+        "Fresco"
+      ],
+      "preparo": "Cozidos e vapor; pequenas porções.",
+      "prefira": [
+        "arroz-branco",
+        "aveia",
+        "batata",
+        "abobrinha",
+        "chuchu",
+        "hortela",
+        "casca-de-tangerina-seca",
+        "camomila-cha",
+        "gengibre-fresco",
+        "repolho"
+      ],
+      "evite": [
+        "cafe",
+        "bebidas-alcoolicas",
+        "pimenta-vermelha",
+        "frituras-e-comidas-gordurosas",
+        "vinagre",
+        "acucar-refinado-e-doces"
+      ],
+      "revisado": false
+    },
+    "FlmMente": {
+      "principio": "Transformar a Fleuma e clarear a mente.",
+      "paciente": "Há “muco” atrapalhando a clareza da mente. Comida leve, pouca gordura, pouco doce e pouco laticínio.",
+      "naturezas": [
+        "Neutro",
+        "Morno"
+      ],
+      "preparo": "Cozidos leves; evitar comida pesada à noite.",
+      "prefira": [
+        "rabanete-nabo",
+        "casca-de-tangerina-seca",
+        "cevada",
+        "feijao-azuki",
+        "alho-poro",
+        "algas-kombu-nori",
+        "cogumelo-shiitake",
+        "gengibre-fresco",
+        "pera",
+        "cha-verde"
+      ],
+      "evite": [
+        "leite-de-vaca",
+        "queijo",
+        "frituras-e-comidas-gordurosas",
+        "acucar-refinado-e-doces",
+        "embutidos-e-industrializados",
+        "bebidas-alcoolicas",
+        "amendoim"
+      ],
+      "revisado": false
+    },
+    "RnaoRecQi": {
+      "principio": "Tonificar o Rim e o Pulmão para firmar a respiração.",
+      "paciente": "Falta “reserva” para o fôlego. Alimentos quentinhos e nutritivos, que fortalecem o rim.",
+      "naturezas": [
+        "Morno",
+        "Neutro"
+      ],
+      "preparo": "Sopas e cozidos longos; caldo de ossos.",
+      "prefira": [
+        "nozes",
+        "castanha-portuguesa",
+        "gergelim-preto",
+        "feijao-preto",
+        "caldo-de-ossos",
+        "carne-de-cordeiro",
+        "inhame-cara",
+        "goji-berry",
+        "camarao",
+        "amendoa"
+      ],
+      "evite": [
+        "bebidas-geladas-e-sorvetes",
+        "saladas-e-alimentos-crus",
+        "acucar-refinado-e-doces",
+        "leite-de-vaca"
+      ],
+      "revisado": false
+    },
+    "FrioCanalF": {
+      "principio": "Aquecer o canal do Fígado e dispersar o Frio.",
+      "paciente": "O frio “contrai” o baixo ventre. Comida bem quente e temperos que aquecem.",
+      "naturezas": [
+        "Morno",
+        "Quente"
+      ],
+      "preparo": "Cozidos longos e sopas quentes; nada gelado.",
+      "prefira": [
+        "gengibre-seco",
+        "canela",
+        "erva-doce-funcho",
+        "cravo",
+        "carne-de-cordeiro",
+        "alho",
+        "cebola",
+        "pimenta-do-reino",
+        "nozes",
+        "castanha-portuguesa"
+      ],
+      "evite": [
+        "bebidas-geladas-e-sorvetes",
+        "saladas-e-alimentos-crus",
+        "melancia",
+        "pepino",
+        "banana"
+      ],
+      "revisado": false
+    },
+    "DefFrioID": {
+      "principio": "Aquecer e fortalecer o Intestino Delgado e o Baço.",
+      "paciente": "O intestino está “frio” e fraco (dor que melhora com calor, diarreia). Comida morna e cozida.",
+      "naturezas": [
+        "Morno",
+        "Neutro"
+      ],
+      "preparo": "Cozidos, sopas e mingaus; nada cru nem gelado.",
+      "prefira": [
+        "arroz-branco",
+        "gengibre-seco",
+        "abobora",
+        "cenoura",
+        "inhame-cara",
+        "erva-doce-funcho",
+        "canela",
+        "cardamomo",
+        "frango",
+        "tamara-jujuba"
+      ],
+      "evite": [
+        "bebidas-geladas-e-sorvetes",
+        "saladas-e-alimentos-crus",
+        "melancia",
+        "leite-de-vaca",
+        "acucar-refinado-e-doces"
+      ],
+      "revisado": false
+    },
+    "CalorIG": {
+      "principio": "Clarear o Calor e umedecer o Intestino Grosso.",
+      "paciente": "O intestino está “quente e seco” (fezes duras, queimação). Mais água, fibras e alimentos que refrescam.",
+      "naturezas": [
+        "Fresco",
+        "Neutro"
+      ],
+      "preparo": "Cozidos e crus moderados; muita água.",
+      "prefira": [
+        "banana",
+        "pera",
+        "mamao",
+        "espinafre",
+        "aipo-salsao",
+        "pepino",
+        "linhaca",
+        "ameixa-seca",
+        "abobrinha",
+        "agua-de-coco"
+      ],
+      "evite": [
+        "pimenta-vermelha",
+        "pimenta-do-reino",
+        "frituras-e-comidas-gordurosas",
+        "bebidas-alcoolicas",
+        "carne-de-cordeiro",
+        "cafe",
+        "pao-branco-e-massas-refinadas"
+      ],
+      "revisado": false
+    },
+    "SecIG": {
+      "principio": "Nutrir os líquidos e umedecer o intestino.",
+      "paciente": "Faltam líquidos para as fezes saírem (fezes secas, difíceis). Alimentos que umedecem e boas gorduras.",
+      "naturezas": [
+        "Neutro"
+      ],
+      "preparo": "Sopas, mingaus e caldos; muita água morna.",
+      "prefira": [
+        "gergelim-preto",
+        "linhaca",
+        "nozes",
+        "amendoa",
+        "pera",
+        "banana",
+        "mamao",
+        "espinafre",
+        "mel",
+        "ameixa-seca",
+        "aveia"
+      ],
+      "evite": [
+        "pimenta-vermelha",
+        "frituras-e-comidas-gordurosas",
+        "cafe",
+        "bebidas-alcoolicas",
+        "pao-branco-e-massas-refinadas"
+      ],
+      "revisado": false
+    },
+    "EstXueE": {
+      "principio": "Mover o Sangue e proteger o Estômago.",
+      "paciente": "Há estagnação no estômago (dor fixa, em pontada). Refeições leves e mornas. Sangramento exige avaliação médica.",
+      "naturezas": [
+        "Neutro",
+        "Morno"
+      ],
+      "preparo": "Cozidos macios; porções pequenas.",
+      "prefira": [
+        "cebola",
+        "curcuma-acafrao-da-terra",
+        "cogumelo-shiitake",
+        "feijao-azuki",
+        "berinjela",
+        "gengibre-fresco",
+        "arroz-branco",
+        "abobora"
+      ],
+      "evite": [
+        "frituras-e-comidas-gordurosas",
+        "bebidas-alcoolicas",
+        "cafe",
+        "pimenta-vermelha",
+        "bebidas-geladas-e-sorvetes"
+      ],
+      "revisado": false
+    },
+    "CalorXue": {
+      "principio": "Clarear o Calor e esfriar o Sangue.",
+      "paciente": "O sangue está “quente” (sangramentos, manchas vermelhas, menstruação forte). Alimentos frescos e nada de temperos fortes.",
+      "naturezas": [
+        "Fresco",
+        "Neutro"
+      ],
+      "preparo": "Cozidos rápidos, vapor e crus moderados.",
+      "prefira": [
+        "aipo-salsao",
+        "pepino",
+        "melancia",
+        "pera",
+        "espinafre",
+        "broto-de-feijao",
+        "feijao-mungo-moyashi",
+        "tofu-e-soja",
+        "agua-de-coco",
+        "cha-de-crisantemo"
+      ],
+      "evite": [
+        "pimenta-vermelha",
+        "pimenta-do-reino",
+        "bebidas-alcoolicas",
+        "carne-de-cordeiro",
+        "frituras-e-comidas-gordurosas",
+        "cafe",
+        "gengibre-seco",
+        "canela"
+      ],
+      "revisado": false
+    },
+    "EstgQiC": {
+      "principio": "Mover o Qi e abrir o tórax.",
+      "paciente": "Aperto no peito e tristeza “presa”. Refeições leves e aromáticas, que ajudam o Qi a circular.",
+      "naturezas": [
+        "Neutro",
+        "Morno"
+      ],
+      "preparo": "Cozidos leves com temperos aromáticos.",
+      "prefira": [
+        "casca-de-tangerina-seca",
+        "hortela",
+        "cebola",
+        "cebolinha",
+        "manjericao",
+        "rabanete-nabo",
+        "alho-poro",
+        "camomila-cha",
+        "arroz-branco"
+      ],
+      "evite": [
+        "frituras-e-comidas-gordurosas",
+        "acucar-refinado-e-doces",
+        "bebidas-geladas-e-sorvetes",
+        "embutidos-e-industrializados"
+      ],
+      "revisado": false
+    },
+    "CalorP": {
+      "principio": "Clarear o Calor do Pulmão.",
+      "paciente": "O pulmão está “quente” (tosse, sede, calor). Alimentos que refrescam e umedecem.",
+      "naturezas": [
+        "Fresco",
+        "Neutro"
+      ],
+      "preparo": "Sopas leves, chás e frutas.",
+      "prefira": [
+        "pera",
+        "rabanete-nabo",
+        "agriao",
+        "caqui",
+        "melancia",
+        "tangerina-fruta",
+        "broto-de-feijao",
+        "aipo-salsao",
+        "cha-verde"
+      ],
+      "evite": [
+        "pimenta-vermelha",
+        "pimenta-do-reino",
+        "frituras-e-comidas-gordurosas",
+        "bebidas-alcoolicas",
+        "carne-de-cordeiro"
+      ],
+      "revisado": false
+    },
+    "DefXueBP": {
+      "principio": "Fortalecer o Baço e nutrir o Sangue.",
+      "paciente": "O baço fraco não forma sangue suficiente (cansaço, palidez, menstruação escassa). Comida nutritiva, morna e cozida.",
+      "naturezas": [
+        "Neutro",
+        "Morno"
+      ],
+      "preparo": "Sopas, caldos e cozidos.",
+      "prefira": [
+        "tamara-jujuba",
+        "feijao-preto",
+        "beterraba",
+        "espinafre",
+        "ovo",
+        "carne-bovina",
+        "figado-boi-ou-galinha",
+        "goji-berry",
+        "arroz-branco",
+        "abobora",
+        "caldo-de-ossos"
+      ],
+      "evite": [
+        "bebidas-geladas-e-sorvetes",
+        "saladas-e-alimentos-crus",
+        "acucar-refinado-e-doces",
+        "cafe"
+      ],
+      "revisado": false
+    },
+    "UmdCalorE": {
+      "principio": "Clarear o Calor e drenar a Umidade do Estômago.",
+      "paciente": "O estômago está “pesado e quente” (enjoo, sinusite, peso). Comida leve, sem fritura nem doce.",
+      "naturezas": [
+        "Fresco",
+        "Neutro"
+      ],
+      "preparo": "Cozidos leves e vapor.",
+      "prefira": [
+        "feijao-azuki",
+        "feijao-mungo-moyashi",
+        "cevada",
+        "pepino",
+        "aipo-salsao",
+        "rabanete-nabo",
+        "abobrinha",
+        "cha-verde",
+        "milho-e-fuba"
+      ],
+      "evite": [
+        "frituras-e-comidas-gordurosas",
+        "acucar-refinado-e-doces",
+        "leite-de-vaca",
+        "queijo",
+        "bebidas-alcoolicas",
+        "pimenta-vermelha",
+        "embutidos-e-industrializados"
+      ],
+      "revisado": false
+    },
+    "DefFrioB": {
+      "principio": "Aquecer e firmar a Bexiga e o Rim.",
+      "paciente": "A bexiga está “fria e fraca” (urina clara e frequente). Comida quente, sem gelados.",
+      "naturezas": [
+        "Morno",
+        "Quente"
+      ],
+      "preparo": "Sopas e cozidos longos.",
+      "prefira": [
+        "nozes",
+        "castanha-portuguesa",
+        "canela",
+        "carne-de-cordeiro",
+        "feijao-preto",
+        "gengibre-seco",
+        "erva-doce-funcho",
+        "camarao",
+        "caldo-de-ossos"
+      ],
+      "evite": [
+        "bebidas-geladas-e-sorvetes",
+        "saladas-e-alimentos-crus",
+        "melancia",
+        "pepino",
+        "cafe"
+      ],
+      "revisado": false
+    },
+    "CalorQiF": {
+      "principio": "Mover o Qi do Fígado e clarear o Calor.",
+      "paciente": "A tensão acumulada virou calor (irritação, gosto amargo). Alimentos frescos e leves, pouco álcool e fritura.",
+      "naturezas": [
+        "Fresco",
+        "Neutro"
+      ],
+      "preparo": "Cozidos leves, vapor e saladas moderadas.",
+      "prefira": [
+        "aipo-salsao",
+        "cha-de-crisantemo",
+        "hortela",
+        "pepino",
+        "broto-de-feijao",
+        "rabanete-nabo",
+        "tangerina-fruta",
+        "espinafre",
+        "pera"
+      ],
+      "evite": [
+        "bebidas-alcoolicas",
+        "frituras-e-comidas-gordurosas",
+        "pimenta-vermelha",
+        "cafe",
+        "carne-de-cordeiro"
+      ],
+      "revisado": false
     }
   },
   "receitas": [
@@ -4872,7 +5369,8 @@
         "DefYgBP",
         "DefQiC",
         "ColapsQiBP",
-        "DefQiVB"
+        "DefQiVB",
+        "DefFrioID"
       ],
       "ingredientes": [
         {
@@ -4917,7 +5415,8 @@
         "UmdFrioBP",
         "DefQiP",
         "ColapsQiBP",
-        "FrioE"
+        "FrioE",
+        "DefFrioID"
       ],
       "ingredientes": [
         {
@@ -5036,7 +5535,8 @@
         "DefQiBP",
         "DefQiE",
         "DefYnE",
-        "DefYnP"
+        "DefYnP",
+        "SecIG"
       ],
       "ingredientes": [
         {
@@ -5141,7 +5641,8 @@
         "ColapsQiC",
         "VtFrioP",
         "FlmFrioP",
-        "UmdFrioIG"
+        "UmdFrioIG",
+        "DefFrioID"
       ],
       "ingredientes": [
         {
@@ -5184,7 +5685,11 @@
         "DefYgR",
         "DefYgBP",
         "DefYgC",
-        "ColapsQiC"
+        "ColapsQiC",
+        "RnaoRecQi",
+        "FrioCanalF",
+        "DefFrioID",
+        "DefFrioB"
       ],
       "ingredientes": [
         {
@@ -5242,7 +5747,10 @@
       "indicacoes": [
         "DefYgR",
         "DefQiR",
-        "DefJgR"
+        "DefJgR",
+        "RnaoRecQi",
+        "FrioCanalF",
+        "DefFrioB"
       ],
       "ingredientes": [
         {
@@ -5293,7 +5801,10 @@
       "rende": "2 porções",
       "tempo": "20 min",
       "indicacoes": [
-        "DefYgR"
+        "DefYgR",
+        "RnaoRecQi",
+        "FrioCanalF",
+        "DefFrioB"
       ],
       "ingredientes": [
         {
@@ -5341,7 +5852,10 @@
         "DefQiR",
         "DefYgR",
         "UmdFrioIG",
-        "ColapsQiBP"
+        "ColapsQiBP",
+        "RnaoRecQi",
+        "FrioCanalF",
+        "DefFrioB"
       ],
       "ingredientes": [
         {
@@ -5389,7 +5903,8 @@
       "indicacoes": [
         "DefYnP",
         "SecP",
-        "FlmCalorP"
+        "FlmCalorP",
+        "CalorP"
       ],
       "ingredientes": [
         {
@@ -5433,7 +5948,10 @@
         "DefYnE",
         "DefYnC",
         "CalorE",
-        "AscYgF"
+        "AscYgF",
+        "DefYnF",
+        "CalorIG",
+        "SecIG"
       ],
       "ingredientes": [
         {
@@ -5477,7 +5995,9 @@
         "DefXueF",
         "AscYgF",
         "DefYnC",
-        "VtF"
+        "VtF",
+        "DefYnF",
+        "DefXueBP"
       ],
       "ingredientes": [
         {
@@ -5525,7 +6045,9 @@
       "indicacoes": [
         "DefYnR",
         "DefJgR",
-        "DefXueF"
+        "DefXueF",
+        "DefYnF",
+        "DefXueBP"
       ],
       "ingredientes": [
         {
@@ -5573,7 +6095,8 @@
       "indicacoes": [
         "DefYnC",
         "DefXueC",
-        "DefYnE"
+        "DefYnE",
+        "SecIG"
       ],
       "ingredientes": [
         {
@@ -5615,7 +6138,8 @@
       "indicacoes": [
         "DefXueF",
         "VtF",
-        "DefXueC"
+        "DefXueC",
+        "DefXueBP"
       ],
       "ingredientes": [
         {
@@ -5657,7 +6181,8 @@
       "indicacoes": [
         "DefXueC",
         "DefXueF",
-        "BPcontrXue"
+        "BPcontrXue",
+        "DefXueBP"
       ],
       "ingredientes": [
         {
@@ -5703,7 +6228,8 @@
       "tempo": "20 min",
       "indicacoes": [
         "DefXueF",
-        "DefXueC"
+        "DefXueC",
+        "DefXueBP"
       ],
       "ingredientes": [
         {
@@ -5755,7 +6281,11 @@
         "UmdCalorBP",
         "UmdCalorB",
         "UmdCalorIG",
-        "VtCalorP"
+        "VtCalorP",
+        "CalorIG",
+        "CalorXue",
+        "UmdCalorE",
+        "CalorQiF"
       ],
       "ingredientes": [
         {
@@ -5793,7 +6323,9 @@
         "AscYgF",
         "FgF",
         "VtF",
-        "VtCalorP"
+        "VtCalorP",
+        "CalorXue",
+        "CalorQiF"
       ],
       "ingredientes": [
         {
@@ -5831,7 +6363,9 @@
         "AscYgF",
         "FgF",
         "VtF",
-        "UmdCalorF"
+        "UmdCalorF",
+        "CalorXue",
+        "CalorQiF"
       ],
       "ingredientes": [
         {
@@ -5873,7 +6407,8 @@
       "indicacoes": [
         "CalorID",
         "FgC",
-        "CalorE"
+        "CalorE",
+        "CalorIG"
       ],
       "ingredientes": [
         {
@@ -5906,7 +6441,9 @@
         "UmdCalorB",
         "UmdCalorF",
         "UmdCalorIG",
-        "CalorE"
+        "CalorE",
+        "CalorIG",
+        "UmdCalorE"
       ],
       "ingredientes": [
         {
@@ -5959,7 +6496,8 @@
         "UmdCalorB",
         "UmdFrioB",
         "UmdCalorBP",
-        "CalorID"
+        "CalorID",
+        "UmdCalorE"
       ],
       "ingredientes": [
         {
@@ -6093,7 +6631,10 @@
         "RebelE",
         "ObstID",
         "FlmFrioP",
-        "DefQiVB"
+        "DefQiVB",
+        "FinvBP",
+        "FinvE",
+        "EstgQiC"
       ],
       "ingredientes": [
         {
@@ -6131,7 +6672,11 @@
         "EstgXueF",
         "EstgXueC",
         "EstgQiF",
-        "DefQiVB"
+        "DefQiVB",
+        "FinvBP",
+        "FinvE",
+        "EstXueE",
+        "EstgQiC"
       ],
       "ingredientes": [
         {
@@ -6177,7 +6722,8 @@
       "tempo": "20 min",
       "indicacoes": [
         "EstgXueF",
-        "EstgXueC"
+        "EstgXueC",
+        "EstXueE"
       ],
       "ingredientes": [
         {
@@ -6225,7 +6771,10 @@
         "ObstID",
         "RebelE",
         "EstgQiF",
-        "FrioE"
+        "FrioE",
+        "FinvBP",
+        "FinvE",
+        "EstgQiC"
       ],
       "ingredientes": [
         {
@@ -6258,7 +6807,9 @@
         "AlimE",
         "FlmCalorP",
         "RebelE",
-        "FlmC"
+        "FlmC",
+        "FlmMente",
+        "CalorP"
       ],
       "ingredientes": [
         {
@@ -6454,7 +7005,9 @@
       "tempo": "10 min",
       "indicacoes": [
         "VtCalorP",
-        "FgF"
+        "FgF",
+        "CalorXue",
+        "CalorQiF"
       ],
       "ingredientes": [
         {
@@ -6491,7 +7044,9 @@
       "indicacoes": [
         "FlmCalorP",
         "VtCalorP",
-        "FlmC"
+        "FlmC",
+        "FlmMente",
+        "CalorP"
       ],
       "ingredientes": [
         {
@@ -6591,7 +7146,11 @@
         "DefJgR",
         "DefQiR",
         "DefYgR",
-        "DefXueF"
+        "DefXueF",
+        "RnaoRecQi",
+        "FrioCanalF",
+        "DefXueBP",
+        "DefFrioB"
       ],
       "ingredientes": [
         {
@@ -6656,7 +7215,9 @@
         "DefYnR",
         "DefXueF",
         "DefQiR",
-        "SecP"
+        "SecP",
+        "DefYnF",
+        "DefXueBP"
       ],
       "ingredientes": [
         {

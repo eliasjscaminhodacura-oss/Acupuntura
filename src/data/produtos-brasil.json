@@ -146,15 +146,6 @@
    ],
    "aviso": "Mineral: uso curto."
   },
-  "mang-xiao": {
-   "pinyin": "Mang Xiao",
-   "nome": "Sulfato de sódio",
-   "alertas": [
-    "mineral",
-    "gest"
-   ],
-   "aviso": "Purgante: proibido na gestação."
-  },
   "lu-hui": {
    "pinyin": "Lu Hui",
    "nome": "Babosa (resina)",
@@ -214,14 +205,6 @@
    ],
    "aviso": ""
   },
-  "pu-huang": {
-   "pinyin": "Pu Huang",
-   "nome": "Pólen de taboa",
-   "alertas": [
-    "gest"
-   ],
-   "aviso": ""
-  },
   "wang-bu-liu-xing": {
    "pinyin": "Wang Bu Liu Xing",
    "nome": "Vacária",
@@ -254,8 +237,20 @@
    "alertas": [],
    "aviso": ""
   },
-  "du-huo": {
-   "pinyin": "Du Huo",
+  "he-ye": {
+   "pinyin": "He Ye",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "rou-dou-kou": {
+   "pinyin": "Rou Dou Kou",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "he-zi": {
+   "pinyin": "He Zi",
    "nome": "",
    "alertas": [],
    "aviso": ""
@@ -266,74 +261,14 @@
    "alertas": [],
    "aviso": ""
   },
-  "yi-tang": {
-   "pinyin": "Yi Tang",
+  "du-huo": {
+   "pinyin": "Du Huo",
    "nome": "",
    "alertas": [],
    "aviso": ""
   },
-  "mu-gua": {
-   "pinyin": "Mu Gua",
-   "nome": "",
-   "alertas": [],
-   "aviso": ""
-  },
-  "xia-ku-cao": {
-   "pinyin": "Xia Ku Cao",
-   "nome": "",
-   "alertas": [],
-   "aviso": ""
-  },
-  "suo-yang": {
-   "pinyin": "Suo Yang",
-   "nome": "",
-   "alertas": [],
-   "aviso": ""
-  },
-  "he-ye": {
-   "pinyin": "He Ye",
-   "nome": "",
-   "alertas": [],
-   "aviso": ""
-  },
-  "jue-ming-zi": {
-   "pinyin": "Jue Ming Zi",
-   "nome": "",
-   "alertas": [],
-   "aviso": ""
-  },
-  "yu-jin": {
-   "pinyin": "Yu Jin",
-   "nome": "",
-   "alertas": [],
-   "aviso": ""
-  },
-  "he-huan-pi": {
-   "pinyin": "He Huan Pi",
-   "nome": "",
-   "alertas": [],
-   "aviso": ""
-  },
-  "geng-mi": {
-   "pinyin": "Geng Mi",
-   "nome": "",
-   "alertas": [],
-   "aviso": ""
-  },
-  "nu-zhen-zi": {
-   "pinyin": "Nu Zhen Zi",
-   "nome": "",
-   "alertas": [],
-   "aviso": ""
-  },
-  "sang-shen": {
-   "pinyin": "Sang Shen",
-   "nome": "",
-   "alertas": [],
-   "aviso": ""
-  },
-  "hei-zhi-ma": {
-   "pinyin": "Hei Zhi Ma",
+  "wei-ling-xian": {
+   "pinyin": "Wei Ling Xian",
    "nome": "",
    "alertas": [],
    "aviso": ""
@@ -344,50 +279,38 @@
    "alertas": [],
    "aviso": ""
   },
-  "rou-cong-rong": {
-   "pinyin": "Rou Cong Rong",
+  "bai-bu": {
+   "pinyin": "Bai Bu",
    "nome": "",
    "alertas": [],
    "aviso": ""
   },
-  "ling-zhi": {
-   "pinyin": "Ling Zhi",
+  "bai-qian": {
+   "pinyin": "Bai Qian",
    "nome": "",
    "alertas": [],
    "aviso": ""
   },
-  "bai-mao-gen": {
-   "pinyin": "Bai Mao Gen",
+  "song-zi-ren": {
+   "pinyin": "Song Zi Ren",
    "nome": "",
    "alertas": [],
    "aviso": ""
   },
-  "huo-ma-ren": {
-   "pinyin": "Huo Ma Ren",
+  "yu-li-ren": {
+   "pinyin": "Yu Li Ren",
    "nome": "",
    "alertas": [],
    "aviso": ""
   },
-  "ban-lan-gen": {
-   "pinyin": "Ban Lan Gen",
+  "xiao-ji": {
+   "pinyin": "Xiao Ji",
    "nome": "",
    "alertas": [],
    "aviso": ""
   },
-  "bu-gu-zhi": {
-   "pinyin": "Bu Gu Zhi",
-   "nome": "",
-   "alertas": [],
-   "aviso": ""
-  },
-  "hu-tao-ren": {
-   "pinyin": "Hu Tao Ren",
-   "nome": "",
-   "alertas": [],
-   "aviso": ""
-  },
-  "xu-duan": {
-   "pinyin": "Xu Duan",
+  "ou-jie": {
+   "pinyin": "Ou Jie",
    "nome": "",
    "alertas": [],
    "aviso": ""
@@ -398,20 +321,8 @@
    "alertas": [],
    "aviso": ""
   },
-  "tong-cao": {
-   "pinyin": "Tong Cao",
-   "nome": "",
-   "alertas": [],
-   "aviso": ""
-  },
-  "tian-hua-fen": {
-   "pinyin": "Tian Hua Fen",
-   "nome": "",
-   "alertas": [],
-   "aviso": ""
-  },
-  "wei-ling-xian": {
-   "pinyin": "Wei Ling Xian",
+  "jue-ming-zi": {
+   "pinyin": "Jue Ming Zi",
    "nome": "",
    "alertas": [],
    "aviso": ""
@@ -428,32 +339,14 @@
    "alertas": [],
    "aviso": ""
   },
-  "qin-jiao": {
-   "pinyin": "Qin Jiao",
-   "nome": "",
-   "alertas": [],
-   "aviso": ""
-  },
   "shi-wei": {
    "pinyin": "Shi Wei",
    "nome": "",
    "alertas": [],
    "aviso": ""
   },
-  "zi-su-zi": {
-   "pinyin": "Zi Su Zi",
-   "nome": "",
-   "alertas": [],
-   "aviso": ""
-  },
-  "song-zi-ren": {
-   "pinyin": "Song Zi Ren",
-   "nome": "",
-   "alertas": [],
-   "aviso": ""
-  },
-  "yu-li-ren": {
-   "pinyin": "Yu Li Ren",
+  "xiang-ru": {
+   "pinyin": "Xiang Ru",
    "nome": "",
    "alertas": [],
    "aviso": ""
@@ -482,38 +375,14 @@
    "alertas": [],
    "aviso": ""
   },
-  "ku-shen": {
-   "pinyin": "Ku Shen",
-   "nome": "",
-   "alertas": [],
-   "aviso": ""
-  },
-  "xiao-ji": {
-   "pinyin": "Xiao Ji",
-   "nome": "",
-   "alertas": [],
-   "aviso": ""
-  },
-  "ou-jie": {
-   "pinyin": "Ou Jie",
-   "nome": "",
-   "alertas": [],
-   "aviso": ""
-  },
-  "xiang-ru": {
-   "pinyin": "Xiang Ru",
-   "nome": "",
-   "alertas": [],
-   "aviso": ""
-  },
-  "bai-jie-zi": {
-   "pinyin": "Bai Jie Zi",
-   "nome": "",
-   "alertas": [],
-   "aviso": ""
-  },
   "yin-yang-huo": {
    "pinyin": "Yin Yang Huo",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "rou-cong-rong": {
+   "pinyin": "Rou Cong Rong",
    "nome": "",
    "alertas": [],
    "aviso": ""
@@ -524,26 +393,116 @@
    "alertas": [],
    "aviso": ""
   },
-  "rou-dou-kou": {
-   "pinyin": "Rou Dou Kou",
+  "bu-gu-zhi": {
+   "pinyin": "Bu Gu Zhi",
    "nome": "",
    "alertas": [],
    "aviso": ""
   },
-  "he-zi": {
-   "pinyin": "He Zi",
+  "tian-hua-fen": {
+   "pinyin": "Tian Hua Fen",
    "nome": "",
    "alertas": [],
    "aviso": ""
   },
-  "bai-bu": {
-   "pinyin": "Bai Bu",
+  "ku-shen": {
+   "pinyin": "Ku Shen",
    "nome": "",
    "alertas": [],
    "aviso": ""
   },
-  "bai-qian": {
-   "pinyin": "Bai Qian",
+  "zi-su-zi": {
+   "pinyin": "Zi Su Zi",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "bai-jie-zi": {
+   "pinyin": "Bai Jie Zi",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "mu-gua": {
+   "pinyin": "Mu Gua",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "nu-zhen-zi": {
+   "pinyin": "Nu Zhen Zi",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "sang-shen": {
+   "pinyin": "Sang Shen",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "hei-zhi-ma": {
+   "pinyin": "Hei Zhi Ma",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "ling-zhi": {
+   "pinyin": "Ling Zhi",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "bai-mao-gen": {
+   "pinyin": "Bai Mao Gen",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "tong-cao": {
+   "pinyin": "Tong Cao",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "ban-lan-gen": {
+   "pinyin": "Ban Lan Gen",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "xu-duan": {
+   "pinyin": "Xu Duan",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "yu-jin": {
+   "pinyin": "Yu Jin",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "he-huan-pi": {
+   "pinyin": "He Huan Pi",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "xia-ku-cao": {
+   "pinyin": "Xia Ku Cao",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "suo-yang": {
+   "pinyin": "Suo Yang",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "qin-jiao": {
+   "pinyin": "Qin Jiao",
    "nome": "",
    "alertas": [],
    "aviso": ""
@@ -659,8 +618,8 @@
     "bai-shao",
     "chuan-xiong"
    ],
-   "formula": "si-wu-tang",
-   "relacao": "parecida",
+   "formula": "ba-zhen-tang",
+   "relacao": "mesma",
    "id": "taozen-5"
   },
   {
@@ -796,6 +755,8 @@
     "sheng-jiang",
     "zi-su-ye"
    ],
+   "formula": "ban-xia-hou-po-tang",
+   "relacao": "mesma",
    "id": "taozen-12"
   },
   {
@@ -888,8 +849,8 @@
     "chuan-xiong",
     "shu-di-huang"
    ],
-   "formula": "si-wu-tang",
-   "relacao": "parecida",
+   "formula": "ba-zhen-tang",
+   "relacao": "mesma",
    "id": "taimin-17"
   },
   {
@@ -1194,6 +1155,8 @@
     "ban-xia",
     "bai-shao"
    ],
+   "formula": "si-ni-san",
+   "relacao": "parecida",
    "id": "taozen-33"
   },
   {
@@ -1344,7 +1307,7 @@
     "fu-ling",
     "ze-xie"
    ],
-   "formula": "xiao-yao-san",
+   "formula": "ba-zhen-tang",
    "relacao": "parecida",
    "id": "taozen-42"
   },
@@ -1803,6 +1766,8 @@
     "da-zao",
     "gan-cao"
    ],
+   "formula": "xiao-jian-zhong-tang",
+   "relacao": "parecida",
    "id": "taozen-67"
   },
   {
@@ -1897,7 +1862,7 @@
     "bo-he",
     "gan-cao"
    ],
-   "formula": "xiao-yao-san",
+   "formula": "dan-zhi-xiao-yao-san",
    "relacao": "parecida",
    "id": "taozen-72"
   },
@@ -2248,6 +2213,8 @@
     "hou-po",
     "da-huang"
    ],
+   "formula": "ma-zi-ren-wan",
+   "relacao": "mesma",
    "id": "taozen-91"
   },
   {
@@ -2657,6 +2624,8 @@
     "huo-ma-ren",
     "zhi-ke"
    ],
+   "formula": "run-chang-wan",
+   "relacao": "mesma",
    "id": "taozen-113"
   },
   {
@@ -2985,6 +2954,8 @@
     "rou-gui",
     "gan-cao"
    ],
+   "formula": "ba-zhen-tang",
+   "relacao": "parecida",
    "id": "taozen-130"
   },
   {
@@ -3088,8 +3059,8 @@
     "zhi-ke",
     "gan-cao"
    ],
-   "formula": "chai-hu-shu-gan-san",
-   "relacao": "parecida",
+   "formula": "si-ni-san",
+   "relacao": "mesma",
    "id": "taozen-136"
   },
   {
@@ -3299,6 +3270,8 @@
     "chen-pi",
     "fang-feng"
    ],
+   "formula": "tong-xie-yao-fang",
+   "relacao": "mesma",
    "id": "taozen-147"
   },
   {
@@ -3886,6 +3859,8 @@
     "dang-gui",
     "chuan-lian-zi"
    ],
+   "formula": "yi-guan-jian",
+   "relacao": "mesma",
    "id": "taozen-179"
   },
   {

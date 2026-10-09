@@ -154,7 +154,7 @@ produtos.sort((a, b) => a.nome.localeCompare(b.nome));
 produtos.forEach((p, i) => { p.id = `${p.loja}-${i}`; });
 
 const usadas = new Set(produtos.flatMap((p) => p.ervas));
-const extras = Object.fromEntries(Object.entries(EXTRAS).filter(([id]) => usadas.has(id))
+const extras = Object.fromEntries(Object.entries(EXTRAS).filter(([id]) => usadas.has(id) && !ERVAS[id])
   .map(([id, [pinyin, nome, alertas, aviso]]) => [id, { pinyin, nome, alertas, aviso }]));
 
 const out = {

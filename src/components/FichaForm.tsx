@@ -17,6 +17,7 @@ import {
   applyNormalDefaults,
   type NormalGroup,
 } from '@/lib/ficha-logic';
+import { combinadosPresentes } from '@/lib/combinados';
 import ElementRadar from './ElementRadar';
 import ElementCycle from './ElementCycle';
 import BodyHologram from './BodyHologram';
@@ -138,6 +139,7 @@ export default function FichaForm({
   }, [data]);
   const result = useMemo(() => computeScores(answers, data), [answers, data]);
   const top = useMemo(() => topSyndromes(result, data, 8), [result, data]);
+  const combinados = useMemo(() => combinadosPresentes(top), [top]);
   const body = useMemo(
     () => buildBodyResult(data, result.syndromeScores, top.map((s) => s.code)),
     [data, result, top]
@@ -561,6 +563,18 @@ export default function FichaForm({
               </div>
             );
           })}
+          {combinados.length > 0 && (
+            <div className="combinados">
+              <h4>Padrões combinados</h4>
+              <p className="diet-help">As síndromes mais fortes aparecem juntas e formam {combinados.length > 1 ? 'estes padrões' : 'este padrão'} (McDonald; Maciocia):</p>
+              {combinados.map((c) => (
+                <div key={c.nome} style={{ marginBottom: 8, fontSize: 14 }}>
+                  <strong>{c.nome}</strong>
+                  <div style={{ fontSize: 13 }}><em>Princípio:</em> {c.principio}{c.formula ? <> <em>Fórmula de referência:</em> {c.formula}.</> : null}</div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
 
         <FacialPanel
