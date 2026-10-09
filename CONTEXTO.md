@@ -11,8 +11,13 @@
 **Última sessão: 08/10/2026 (notebook do dono).** O app está publicado em
 **https://acupuntura-eta.vercel.app** (Vercel; cada `git push` para `main`
 atualiza o site em 1–2 min; o dono já usa com pacientes reais).
-**Tudo o que foi feito em 08/10 está publicado** (`main`). O ramo
-`corpo-ilustrado` já foi juntado com `main` e pode ser apagado.
+**Tudo o que foi feito em 08/10 está publicado** (`main`) e o dia foi
+fechado (CONTEXTO atualizado, commit e push). Não há ramos pendentes nem
+nada a rodar no Supabase. Na tela inicial ("Meus pacientes") há agora os
+botões: + Novo paciente, Auriculoterapia, Analgesia em Acupuntura,
+Dietoterapia Chinesa, Análise Facial e Fitoterapia Chinesa. Na ficha, depois
+das síndromes, vêm os painéis: Análise facial, Fitoterapia, Orientação
+alimentar e Auriculoterapia (todos salvos no Supabase e no PDF).
 
 Feito em 08/10 (detalhes no histórico):
 - **Mapa do corpo 2D ilustrado (estilo atlas)**, pedido do dono a partir de
@@ -30,8 +35,7 @@ Feito em 08/10 (detalhes no histórico):
   prontos. O ramo `auriculo-revisao` já foi juntado com `main`.
 - **Aba "Dietoterapia Chinesa"** (publicada; pedido do dono para divulgar o
   método): tela `/dietoterapia` de consulta sem paciente (por síndrome,
-  alimentos, receitas, 5 Elementos). Na tela inicial, botões apagados
-  "Fitoterapia (em breve)" — próximo módulo que o dono quer oferecer.
+  alimentos, receitas, 5 Elementos).
 - **Análise Facial segundo a MTC** (publicada): aba `/analise-facial`
   (5 tipos do Ling Shu 64 com rostos desenhados em SVG, mapas do rosto Su
   Wen 32 e Ling Shu 49, cores da tez, sinais) e painel na ficha (sinais
@@ -69,8 +73,11 @@ trabalho (sem `gh` no PATH), ver se os arquivos novos respondem 200 no site.
 
 **Próxima coisa a fazer:**
 
-1. **Atualizar:** `git pull` e `npm install`. Conferir `npm run build`.
-   Nada a rodar no Supabase.
+1. **Atualizar (09/10, computador do trabalho):** `git pull` e
+   `npm install`. Conferir `npm run build`. Nada a rodar no Supabase.
+   O dono disse que vai trazer **outros serviços** — começar ouvindo o pedido.
+   Se o `npm run dev` der erro de hidratação com dados velhos, encerrar o
+   processo node da porta 3000 e ligar de novo.
 2. **Auriculoterapia — Souza completo** (08/10): todos os 200 pontos e os
    13 programas de analgesia (caps. XLIV e XLV) estão no app. As Adendas
    (obesidade, tabagismo, alcoolismo) só têm figura sem nomes — não
@@ -270,7 +277,10 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
        termos de uso, política de privacidade, contrato de operador de dados.
        E perguntar sobre a Orientação alimentar (Lei 8.234/1991: prescrição
        dietética é privativa do nutricionista — o app usa "orientação
-       segundo a MTC" e aviso no PDF).
+       segundo a MTC" e aviso no PDF). Levar também (08/10): **Fitoterapia
+       Chinesa** (quem pode indicar ervas; regularização na Anvisa; o app
+       não dá doses) e **Analgesia** (anestesia cirúrgica é ato médico; o
+       app fala em analgesia complementar, com aviso).
 9. [x] Dietética revisada (06/10) com base em Hirsch (Manual do Herói) e
        Arantes (Dietoterapia Chinesa, Roca 2015); dono aprovou.
        [ ] Opcional: dono revisar a planilha item a item e importar
