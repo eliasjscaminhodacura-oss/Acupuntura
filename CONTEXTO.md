@@ -73,9 +73,10 @@ trabalho (sem `gh` no PATH), ver se os arquivos novos respondem 200 no site.
 
 **Próxima coisa a fazer:**
 
-1. **Atualizar (09/10, computador do trabalho):** `git pull` e
-   `npm install`. Conferir `npm run build`. Nada a rodar no Supabase.
-   O dono disse que vai trazer **outros serviços** — começar ouvindo o pedido.
+1. **Ao abrir no outro computador:** `git pull` e `npm install`. Conferir
+   `npm run build`. Nada a rodar no Supabase. 09/10: piscar do Ciclo no
+   celular corrigido e publicado. O dono disse que vai trazer **outros
+   serviços** — começar ouvindo o pedido.
    Se o `npm run dev` der erro de hidratação com dados velhos, encerrar o
    processo node da porta 3000 e ligar de novo.
 2. **Auriculoterapia — Souza completo** (08/10): todos os 200 pontos e os
@@ -334,6 +335,16 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
 - Termos de uso / política de privacidade (junto com o advogado de LGPD).
 
 ## 8. Histórico (mais recente primeiro)
+
+### 09/10/2026
+- Computador de trabalho: `git pull` do trabalho de 08/10 + `npm install`;
+  build OK.
+- Celular do dono: o elemento mais comprometido no Ciclo não piscava (só o
+  halo parado) porque o aparelho pede "menos movimento" (economia de
+  bateria / remover animações) e o CSS desligava a animação. Agora, nesse
+  caso, `.cycle-pulse` e `.holo-point-ring` piscam só com opacidade
+  (`soft-blink`, sem crescer); só a varredura `.holo-scan` fica parada.
+  Dono testou e aprovou; publicado.
 
 ### 08/10/2026
 - **Fitoterapia Chinesa:** feita primeiro pelos clássicos e logo revisada com

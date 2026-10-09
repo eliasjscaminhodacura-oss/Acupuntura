@@ -303,8 +303,16 @@ button.small { padding: 6px 12px; font-size: 13px; }
 .point-list strong { color: var(--brick); }
 .point-syn { color: var(--muted); font-size: 12px; margin-top: 2px; }
 
+/* Celular com "remover animações"/economia de bateria: sem crescer nem
+   varrer, mas o destaque continua piscando (só acende e apaga). */
+@keyframes soft-blink {
+  0%, 100% { opacity: .9; }
+  50% { opacity: .2; }
+}
 @media (prefers-reduced-motion: reduce) {
-  .cycle-pulse, .holo-scan, .holo-organ-top, .holo-point-ring { animation: none; }
+  .holo-scan { animation: none; }
+  .cycle-pulse { animation: soft-blink 1.8s ease-in-out infinite; }
+  .holo-point-ring { animation: soft-blink 1.2s ease-in-out infinite; }
 }
 
 .results-title {
