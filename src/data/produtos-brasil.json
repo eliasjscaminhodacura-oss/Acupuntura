@@ -1,0 +1,4294 @@
+{
+ "atualizado": "2026-10-09",
+ "aviso": "Lista feita a partir dos catálogos públicos das lojas, só com nome, forma e composição (sem doses). Confira no site da loja a composição atual, a procedência e a situação na Anvisa. As lojas não têm ligação com este app; a lista não é recomendação de marca.",
+ "lojas": {
+  "taimin": {
+   "nome": "Taimin",
+   "site": "https://taimin.com.br/medicina-chinesa/produtos",
+   "tipo": "Remédios prontos (cápsulas, pílulas e comprimidos), segundo a Farmacopeia Chinesa",
+   "nota": "Segundo o site: isento de registro sanitário (RDC 901/2024); venda sob prescrição de profissional habilitado."
+  },
+  "taozen": {
+   "nome": "TaoZen",
+   "site": "https://taozen.com.br/formulas-classicas",
+   "tipo": "Ervas em pacote para preparar a decocção (chá cozido)",
+   "nota": "Segundo o site: preparo e uso devem seguir a orientação de um profissional habilitado."
+  }
+ },
+ "extras": {
+  "he-shou-wu": {
+   "pinyin": "He Shou Wu",
+   "nome": "Polígono multiflor",
+   "alertas": [
+    "toxica"
+   ],
+   "aviso": "Pode causar lesão no fígado (há relatos mesmo na forma preparada): evitar em doença do fígado, pedir exames se o uso for longo."
+  },
+  "han-fang-ji": {
+   "pinyin": "Han Fang Ji",
+   "nome": "Stephania tetrandra",
+   "alertas": [
+    "toxica"
+   ],
+   "aviso": "Confundida no comércio com Guang Fang Ji (Aristolochia), que lesa os rins e causa câncer: confirmar com a loja que é Stephania."
+  },
+  "ma-huang": {
+   "pinyin": "Ma Huang",
+   "nome": "Éfedra",
+   "alertas": [
+    "pressao",
+    "gest"
+   ],
+   "aviso": "Contém efedrina (substância controlada pela Anvisa): acelera o coração e sobe a pressão; evitar em cardíacos, hipertensos, ansiedade, glaucoma e gestação. Confirmar com a loja a forma liberada."
+  },
+  "xi-jiao": {
+   "pinyin": "Xi Jiao",
+   "nome": "Chifre de rinoceronte",
+   "alertas": [
+    "animal"
+   ],
+   "aviso": "Comércio PROIBIDO (espécie protegida, CITES). Perguntar à loja qual substituto usa (em geral Shui Niu Jiao, chifre de búfalo)."
+  },
+  "ling-yang-jiao": {
+   "pinyin": "Ling Yang Jiao",
+   "nome": "Chifre de antílope saiga",
+   "alertas": [
+    "animal"
+   ],
+   "aviso": "Espécie ameaçada (CITES): perguntar à loja a origem ou o substituto."
+  },
+  "ying-su-ke": {
+   "pinyin": "Ying Su Ke",
+   "nome": "Casca da papoula",
+   "alertas": [
+    "toxica",
+    "gest"
+   ],
+   "aviso": "Derivado da papoula (opiáceo): substância controlada no Brasil; risco de dependência. Perguntar à loja o que usa no lugar."
+  },
+  "quan-xie": {
+   "pinyin": "Quan Xie",
+   "nome": "Escorpião",
+   "alertas": [
+    "toxica",
+    "gest",
+    "animal"
+   ],
+   "aviso": "Tóxico: dose baixa e uso curto; proibido na gestação."
+  },
+  "shui-zhi": {
+   "pinyin": "Shui Zhi",
+   "nome": "Sanguessuga",
+   "alertas": [
+    "gest",
+    "anticoag",
+    "animal"
+   ],
+   "aviso": "Anticoagulante forte: proibido na gestação e com anticoagulantes ou sangramentos."
+  },
+  "zhe-chong": {
+   "pinyin": "Zhe Chong",
+   "nome": "Barata-da-terra",
+   "alertas": [
+    "toxica",
+    "gest",
+    "animal"
+   ],
+   "aviso": "Levemente tóxico; proibido na gestação."
+  },
+  "chan-tui": {
+   "pinyin": "Chan Tui",
+   "nome": "Muda de cigarra",
+   "alertas": [
+    "animal"
+   ],
+   "aviso": ""
+  },
+  "lu-rong": {
+   "pinyin": "Lu Rong",
+   "nome": "Chifre jovem de cervo",
+   "alertas": [
+    "animal"
+   ],
+   "aviso": "Muito quente: evitar com calor ou pressão alta."
+  },
+  "lu-jiao": {
+   "pinyin": "Lu Jiao",
+   "nome": "Chifre de cervo",
+   "alertas": [
+    "animal"
+   ],
+   "aviso": ""
+  },
+  "gui-ban-jiao": {
+   "pinyin": "Gui Ban Jiao",
+   "nome": "Gelatina de casco de tartaruga",
+   "alertas": [
+    "animal",
+    "gest"
+   ],
+   "aviso": "Espécie protegida: usar só de fonte legal."
+  },
+  "zhen-zhu-mu": {
+   "pinyin": "Zhen Zhu Mu",
+   "nome": "Madrepérola",
+   "alertas": [
+    "mineral"
+   ],
+   "aviso": ""
+  },
+  "zi-ran-tong": {
+   "pinyin": "Zi Ran Tong",
+   "nome": "Pirita",
+   "alertas": [
+    "mineral",
+    "gest"
+   ],
+   "aviso": "Mineral: uso curto."
+  },
+  "mang-xiao": {
+   "pinyin": "Mang Xiao",
+   "nome": "Sulfato de sódio",
+   "alertas": [
+    "mineral",
+    "gest"
+   ],
+   "aviso": "Purgante: proibido na gestação."
+  },
+  "lu-hui": {
+   "pinyin": "Lu Hui",
+   "nome": "Babosa (resina)",
+   "alertas": [
+    "gest"
+   ],
+   "aviso": "Purgante forte: proibido na gestação e na menstruação."
+  },
+  "cang-er-zi": {
+   "pinyin": "Cang Er Zi",
+   "nome": "Xanthium",
+   "alertas": [
+    "toxica"
+   ],
+   "aviso": "Tóxico em dose alta ou uso longo (fígado)."
+  },
+  "wu-zhu-yu": {
+   "pinyin": "Wu Zhu Yu",
+   "nome": "Evódia",
+   "alertas": [
+    "toxica",
+    "gest"
+   ],
+   "aviso": "Levemente tóxica: dose baixa."
+  },
+  "xue-jie": {
+   "pinyin": "Xue Jie",
+   "nome": "Sangue-de-dragão",
+   "alertas": [
+    "gest",
+    "anticoag"
+   ],
+   "aviso": ""
+  },
+  "ru-xiang": {
+   "pinyin": "Ru Xiang",
+   "nome": "Olíbano",
+   "alertas": [
+    "gest"
+   ],
+   "aviso": ""
+  },
+  "mo-yao": {
+   "pinyin": "Mo Yao",
+   "nome": "Mirra",
+   "alertas": [
+    "gest"
+   ],
+   "aviso": ""
+  },
+  "san-qi": {
+   "pinyin": "San Qi",
+   "nome": "Notoginseng",
+   "alertas": [
+    "gest",
+    "anticoag"
+   ],
+   "aviso": ""
+  },
+  "pu-huang": {
+   "pinyin": "Pu Huang",
+   "nome": "Pólen de taboa",
+   "alertas": [
+    "gest"
+   ],
+   "aviso": ""
+  },
+  "wang-bu-liu-xing": {
+   "pinyin": "Wang Bu Liu Xing",
+   "nome": "Vacária",
+   "alertas": [
+    "gest"
+   ],
+   "aviso": ""
+  },
+  "hai-zao": {
+   "pinyin": "Hai Zao",
+   "nome": "Sargaço",
+   "alertas": [],
+   "aviso": "Rica em iodo: cuidado na tireoide. Classicamente incompatível com Gan Cao."
+  },
+  "kun-bu": {
+   "pinyin": "Kun Bu",
+   "nome": "Alga laminária",
+   "alertas": [],
+   "aviso": "Rica em iodo: cuidado na tireoide."
+  },
+  "bai-dou-kou": {
+   "pinyin": "Bai Dou Kou",
+   "nome": "Cardamomo-redondo",
+   "alertas": [],
+   "aviso": ""
+  },
+  "fu-pen-zi": {
+   "pinyin": "Fu Pen Zi",
+   "nome": "Framboesa chinesa",
+   "alertas": [],
+   "aviso": ""
+  },
+  "du-huo": {
+   "pinyin": "Du Huo",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "xiao-mai": {
+   "pinyin": "Xiao Mai",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "yi-tang": {
+   "pinyin": "Yi Tang",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "mu-gua": {
+   "pinyin": "Mu Gua",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "xia-ku-cao": {
+   "pinyin": "Xia Ku Cao",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "suo-yang": {
+   "pinyin": "Suo Yang",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "he-ye": {
+   "pinyin": "He Ye",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "jue-ming-zi": {
+   "pinyin": "Jue Ming Zi",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "yu-jin": {
+   "pinyin": "Yu Jin",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "he-huan-pi": {
+   "pinyin": "He Huan Pi",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "geng-mi": {
+   "pinyin": "Geng Mi",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "nu-zhen-zi": {
+   "pinyin": "Nu Zhen Zi",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "sang-shen": {
+   "pinyin": "Sang Shen",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "hei-zhi-ma": {
+   "pinyin": "Hei Zhi Ma",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "xin-yi-hua": {
+   "pinyin": "Xin Yi Hua",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "rou-cong-rong": {
+   "pinyin": "Rou Cong Rong",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "ling-zhi": {
+   "pinyin": "Ling Zhi",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "bai-mao-gen": {
+   "pinyin": "Bai Mao Gen",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "huo-ma-ren": {
+   "pinyin": "Huo Ma Ren",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "ban-lan-gen": {
+   "pinyin": "Ban Lan Gen",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "bu-gu-zhi": {
+   "pinyin": "Bu Gu Zhi",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "hu-tao-ren": {
+   "pinyin": "Hu Tao Ren",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "xu-duan": {
+   "pinyin": "Xu Duan",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "gu-sui-bu": {
+   "pinyin": "Gu Sui Bu",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "tong-cao": {
+   "pinyin": "Tong Cao",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "tian-hua-fen": {
+   "pinyin": "Tian Hua Fen",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "wei-ling-xian": {
+   "pinyin": "Wei Ling Xian",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "she-gan": {
+   "pinyin": "She Gan",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "kuan-dong-hua": {
+   "pinyin": "Kuan Dong Hua",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "qin-jiao": {
+   "pinyin": "Qin Jiao",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "shi-wei": {
+   "pinyin": "Shi Wei",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "zi-su-zi": {
+   "pinyin": "Zi Su Zi",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "song-zi-ren": {
+   "pinyin": "Song Zi Ren",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "yu-li-ren": {
+   "pinyin": "Yu Li Ren",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "ye-ju-hua": {
+   "pinyin": "Ye Ju Hua",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "pu-gong-ying": {
+   "pinyin": "Pu Gong Ying",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "zi-hua-di-ding": {
+   "pinyin": "Zi Hua Di Ding",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "zi-bei-tian-kui": {
+   "pinyin": "Zi Bei Tian Kui",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "ku-shen": {
+   "pinyin": "Ku Shen",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "xiao-ji": {
+   "pinyin": "Xiao Ji",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "ou-jie": {
+   "pinyin": "Ou Jie",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "xiang-ru": {
+   "pinyin": "Xiang Ru",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "bai-jie-zi": {
+   "pinyin": "Bai Jie Zi",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "yin-yang-huo": {
+   "pinyin": "Yin Yang Huo",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "ba-ji-tian": {
+   "pinyin": "Ba Ji Tian",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "rou-dou-kou": {
+   "pinyin": "Rou Dou Kou",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "he-zi": {
+   "pinyin": "He Zi",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "bai-bu": {
+   "pinyin": "Bai Bu",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  },
+  "bai-qian": {
+   "pinyin": "Bai Qian",
+   "nome": "",
+   "alertas": [],
+   "aviso": ""
+  }
+ },
+ "produtos": [
+  {
+   "loja": "taozen",
+   "nome": "An Mian Pian",
+   "chines": "安眠片",
+   "nomePt": "Comprimido para Sono Tranquilo",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/an-mian-pian",
+   "ervas": [
+    "suan-zao-ren",
+    "fu-ling",
+    "zhi-mu",
+    "chuan-xiong",
+    "gan-cao"
+   ],
+   "id": "taozen-0"
+  },
+  {
+   "loja": "taozen",
+   "nome": "An Shen Bu",
+   "chines": "安神補",
+   "nomePt": "Suplemento para Acalmar o Espírito",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/an-shen-bu",
+   "ervas": [
+    "suan-zao-ren",
+    "fu-ling",
+    "dang-gui",
+    "yuan-zhi",
+    "gan-cao"
+   ],
+   "id": "taozen-1"
+  },
+  {
+   "loja": "taozen",
+   "nome": "An Zhong San",
+   "chines": "安中散",
+   "nomePt": "Pó para Acalmar o Centro",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/an-zhong-san",
+   "ervas": [
+    "yan-hu-suo",
+    "gao-liang-jiang",
+    "rou-gui",
+    "xiao-hui-xiang",
+    "mu-li",
+    "gan-cao"
+   ],
+   "id": "taozen-2"
+  },
+  {
+   "loja": "taimin",
+   "nome": "Anshen Jiaonang",
+   "chines": "安神胶囊",
+   "forma": "cápsulas",
+   "apresentacao": "180 cápsulas",
+   "url": "https://taimin.com.br/medicina-chinesa/produtos",
+   "ervas": [
+    "suan-zao-ren",
+    "chuan-xiong",
+    "zhi-mu",
+    "mai-men-dong",
+    "he-shou-wu",
+    "wu-wei-zi",
+    "dan-shen",
+    "fu-ling"
+   ],
+   "id": "taimin-3"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Ba Wei Dai Xia Tang",
+   "chines": "八味帶下湯",
+   "nomePt": "Decocção de Oito Ingredientes para Leucorreia",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/ba-wei-dai-xia-tang",
+   "ervas": [
+    "cang-zhu",
+    "huang-bai",
+    "bai-zhu",
+    "shan-yao",
+    "fu-ling",
+    "che-qian-zi",
+    "bai-shao",
+    "gan-cao"
+   ],
+   "id": "taozen-4"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Ba Zhen Tang",
+   "chines": "八珍湯",
+   "nomePt": "Decocção dos Oito Tesouros",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/ba-zhen-tang",
+   "ervas": [
+    "ren-shen",
+    "bai-zhu",
+    "fu-ling",
+    "gan-cao",
+    "shu-di-huang",
+    "dang-gui",
+    "bai-shao",
+    "chuan-xiong"
+   ],
+   "formula": "si-wu-tang",
+   "relacao": "parecida",
+   "id": "taozen-5"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Bai He Gu Jin Tang",
+   "chines": "百合固金湯",
+   "nomePt": "Decocção de Lírio para Preservar o Metal",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/bai-he-gu-jin-tang",
+   "ervas": [
+    "bai-he",
+    "sheng-di-huang",
+    "shu-di-huang",
+    "mai-men-dong",
+    "xuan-shen",
+    "bei-mu",
+    "jie-geng",
+    "dang-gui",
+    "bai-shao",
+    "gan-cao"
+   ],
+   "formula": "bai-he-gu-jin-tang",
+   "relacao": "mesma",
+   "id": "taozen-6"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Bai Hu Tang",
+   "chines": "白虎湯",
+   "nomePt": "Decocção do Tigre Branco",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/bai-hu-tang",
+   "ervas": [
+    "shi-gao",
+    "zhi-mu",
+    "geng-mi",
+    "gan-cao"
+   ],
+   "id": "taozen-7"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Bai Huang Kun",
+   "chines": "白黃坤",
+   "nomePt": "Fórmula Kun Branco-Amarelo",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/bai-huang-kun",
+   "ervas": [
+    "bai-zhu",
+    "huang-qi",
+    "fu-ling",
+    "chen-pi",
+    "bai-bian-dou",
+    "gan-cao"
+   ],
+   "id": "taozen-8"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Bai Zi Ren Wan",
+   "chines": "柏子仁丸",
+   "nomePt": "Pílula de Semente de Cipreste",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/bai-shi-wan",
+   "ervas": [
+    "bai-zi-ren",
+    "suan-zao-ren",
+    "yuan-zhi",
+    "dang-gui",
+    "fu-shen",
+    "wu-wei-zi"
+   ],
+   "formula": "yang-xin-tang",
+   "relacao": "parecida",
+   "id": "taozen-9"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Ban Tu Wan",
+   "chines": "斑禿丸",
+   "nomePt": "Pílula para Alopecia Areata",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/ban-tu-wan",
+   "ervas": [
+    "he-shou-wu",
+    "shu-di-huang",
+    "dang-gui",
+    "gou-qi-zi",
+    "nu-zhen-zi",
+    "sang-shen",
+    "hei-zhi-ma",
+    "chuan-xiong"
+   ],
+   "id": "taozen-10"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Ban Xia Bai Zhu Tian Ma Tang",
+   "chines": "半夏白朮天麻湯",
+   "nomePt": "Decocção de Pinellia, Atractylodes e Gastrodia",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/ban-xia-bai-zhu-tian-ma-tang",
+   "ervas": [
+    "ban-xia",
+    "tian-ma",
+    "bai-zhu",
+    "fu-ling",
+    "chen-pi",
+    "gan-cao"
+   ],
+   "formula": "xiang-sha-liu-jun-zi-tang",
+   "relacao": "parecida",
+   "id": "taozen-11"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Ban Xia Hou Po Tang",
+   "chines": "半夏厚朴湯",
+   "nomePt": "Decocção de Pinellia e Magnolia",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/ban-xia-hou-po-tang",
+   "ervas": [
+    "ban-xia",
+    "hou-po",
+    "fu-ling",
+    "sheng-jiang",
+    "zi-su-ye"
+   ],
+   "id": "taozen-12"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Ban Xia Xie Xin Tang",
+   "chines": "半夏瀉心湯",
+   "nomePt": "Decocção de Pinellia para Drenar o Epigástrio",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/ban-xia-xie-xin-tang",
+   "ervas": [
+    "ban-xia",
+    "huang-qin",
+    "huang-lian",
+    "sheng-jiang",
+    "ren-shen",
+    "da-zao",
+    "gan-cao"
+   ],
+   "id": "taozen-13"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Bao He Wan",
+   "chines": "保和丸",
+   "nomePt": "Pílula para Preservar a Harmonia",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/bao-he-wan",
+   "ervas": [
+    "shan-zha",
+    "shen-qu",
+    "lai-fu-zi",
+    "ban-xia",
+    "chen-pi",
+    "fu-ling",
+    "lian-qiao"
+   ],
+   "formula": "bao-he-wan",
+   "relacao": "mesma",
+   "id": "taozen-14"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Bao Jian Mei Jian Fei Wan",
+   "chines": "保健美減肥丸",
+   "nomePt": "Pílula da Saúde e Beleza para Emagrecer",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/bao-jian-mei-jian-fei-wan",
+   "ervas": [
+    "ze-xie",
+    "shan-zha",
+    "he-ye",
+    "fu-ling",
+    "da-huang"
+   ],
+   "id": "taozen-15"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Bao Yuan Tang",
+   "chines": "保元湯",
+   "nomePt": "Decocção para Preservar a Fonte",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 33 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/bao-yuan-tang",
+   "ervas": [
+    "ren-shen",
+    "huang-qi",
+    "gan-cao",
+    "rou-gui"
+   ],
+   "id": "taozen-16"
+  },
+  {
+   "loja": "taimin",
+   "nome": "Bazhen Wan",
+   "chines": "八珍丸",
+   "forma": "pílulas",
+   "apresentacao": "360 pílulas",
+   "url": "https://taimin.com.br/medicina-chinesa/produtos",
+   "ervas": [
+    "dang-shen",
+    "bai-zhu",
+    "fu-ling",
+    "gan-cao",
+    "dang-gui",
+    "bai-shao",
+    "chuan-xiong",
+    "shu-di-huang"
+   ],
+   "formula": "si-wu-tang",
+   "relacao": "parecida",
+   "id": "taimin-17"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Bi Yan Pian",
+   "chines": "鼻炎片",
+   "nomePt": "Comprimido para Inflamação Nasal",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/bi-yan-pian",
+   "ervas": [
+    "cang-er-zi",
+    "xin-yi-hua",
+    "bai-zhi",
+    "fang-feng",
+    "huang-qin",
+    "lian-qiao"
+   ],
+   "id": "taozen-18"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Bu Fei Tang",
+   "chines": "補肺湯",
+   "nomePt": "Decocção para Tonificar o Pulmão",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/bu-fei-tang",
+   "ervas": [
+    "ren-shen",
+    "huang-qi",
+    "shu-di-huang",
+    "wu-wei-zi",
+    "zi-wan"
+   ],
+   "formula": "bu-fei-tang",
+   "relacao": "mesma",
+   "id": "taozen-19"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Bu Gan Tang",
+   "chines": "補肝湯",
+   "nomePt": "Decocção para Tonificar o Fígado",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/bu-gan-tang",
+   "ervas": [
+    "shu-di-huang",
+    "dang-gui",
+    "bai-shao",
+    "suan-zao-ren",
+    "mu-gua",
+    "gan-cao"
+   ],
+   "formula": "si-wu-tang",
+   "relacao": "parecida",
+   "id": "taozen-20"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Bu Huan Jin Zheng Qi San",
+   "chines": "不換金正氣散",
+   "nomePt": "Pó do Qi Correto Insubstituível como Ouro",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 42 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/bu-huan-jin-zheng-qi-san",
+   "ervas": [
+    "huo-xiang",
+    "cang-zhu",
+    "hou-po",
+    "ban-xia",
+    "chen-pi",
+    "gan-cao"
+   ],
+   "formula": "ping-wei-san",
+   "relacao": "parecida",
+   "id": "taozen-21"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Bu Zhong Yi Qi Tang",
+   "chines": "補中益氣湯",
+   "nomePt": "Decocção para Tonificar o Centro e Beneficiar o Qi",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/bu-zhong-yi-qi-tang",
+   "ervas": [
+    "huang-qi",
+    "ren-shen",
+    "bai-zhu",
+    "gan-cao",
+    "dang-gui",
+    "chen-pi",
+    "sheng-ma",
+    "chai-hu"
+   ],
+   "formula": "bu-zhong-yi-qi-tang",
+   "relacao": "mesma",
+   "id": "taozen-22"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Cang Er Zi San",
+   "chines": "蒼耳子散",
+   "nomePt": "Pó de Xanthium",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 30 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/cang-er-zi-san",
+   "ervas": [
+    "cang-er-zi",
+    "xin-yi-hua",
+    "bai-zhi",
+    "bo-he"
+   ],
+   "id": "taozen-23"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Chai Ge Jie Ji Tang",
+   "chines": "柴葛解肌湯",
+   "nomePt": "Decocção de Bupleurum e Pueraria para Libertar os Músculos",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/chai-ge-jie-ji-tang",
+   "ervas": [
+    "chai-hu",
+    "ge-gen",
+    "qiang-huo",
+    "bai-zhi",
+    "huang-qin",
+    "shi-gao",
+    "gan-cao"
+   ],
+   "id": "taozen-24"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Chai Hu Gui Zhi Tang",
+   "chines": "柴胡桂枝湯",
+   "nomePt": "Decocção de Bupleurum e Canela",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/chai-hu-gui-zhi-tang",
+   "ervas": [
+    "chai-hu",
+    "gui-zhi",
+    "bai-shao",
+    "huang-qin",
+    "ban-xia",
+    "ren-shen",
+    "sheng-jiang",
+    "da-zao",
+    "gan-cao"
+   ],
+   "id": "taozen-25"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Chai Hu Jia Long Gu Mu Li Tang",
+   "chines": "柴胡加龍骨牡蠣湯",
+   "nomePt": "Decocção de Bupleurum com Osso de Dragão e Concha de Ostra",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/chai-hu-jia-long-gu-mu-li-tang",
+   "ervas": [
+    "chai-hu",
+    "long-gu",
+    "mu-li",
+    "huang-qin",
+    "gui-zhi",
+    "fu-ling",
+    "ban-xia",
+    "da-huang",
+    "ren-shen"
+   ],
+   "id": "taozen-26"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Chai Hu Qing Gan Tang",
+   "chines": "柴胡清肝湯",
+   "nomePt": "Decocção de Bupleurum para Limpar o Fígado",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/chai-hu-qing-gan-tang",
+   "ervas": [
+    "chai-hu",
+    "huang-qin",
+    "zhi-zi",
+    "dang-gui",
+    "chuan-xiong",
+    "bai-shao",
+    "sheng-di-huang",
+    "gan-cao"
+   ],
+   "id": "taozen-27"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Chai Hu Shu Gan Tang",
+   "chines": "柴胡疏肝散",
+   "nomePt": "Pó de Bupleurum para Suavizar o Fígado",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/chai-hu-shu-gan-tang",
+   "ervas": [
+    "chai-hu",
+    "bai-shao",
+    "zhi-ke",
+    "xiang-fu",
+    "chuan-xiong",
+    "chen-pi",
+    "gan-cao"
+   ],
+   "formula": "chai-hu-shu-gan-san",
+   "relacao": "mesma",
+   "id": "taozen-28"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Chuan Xiong Cha Tiao San",
+   "chines": "川芎茶調散",
+   "nomePt": "Pó de Ligusticum Regulado com Chá",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 39 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/chuan-xiong-cha-tiao-san",
+   "ervas": [
+    "chuan-xiong",
+    "bai-zhi",
+    "qiang-huo",
+    "fang-feng",
+    "bo-he",
+    "gan-cao"
+   ],
+   "id": "taozen-29"
+  },
+  {
+   "loja": "taimin",
+   "nome": "Chuanxiong Chatiao Wan",
+   "chines": "川芎茶调丸",
+   "forma": "pílulas",
+   "apresentacao": "360 pílulas",
+   "url": "https://taimin.com.br/medicina-chinesa/produtos",
+   "ervas": [
+    "chuan-xiong",
+    "bai-zhi",
+    "qiang-huo",
+    "xi-xin",
+    "fang-feng",
+    "jing-jie",
+    "bo-he",
+    "gan-cao"
+   ],
+   "id": "taimin-30"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Cong Rong Bu Shen Wan",
+   "chines": "蓯蓉補腎丸",
+   "nomePt": "Pílula de Cistanche para Tonificar o Rim",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/cong-rong-bu-shen-wan",
+   "ervas": [
+    "rou-cong-rong",
+    "du-zhong",
+    "niu-xi",
+    "tu-si-zi"
+   ],
+   "id": "taozen-31"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Da Bu Yin Wan",
+   "chines": "大補陰丸",
+   "nomePt": "Grande Pílula para Tonificar o Yin",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/da-bu-yin-wan",
+   "ervas": [
+    "shu-di-huang",
+    "gui-ban",
+    "huang-bai",
+    "zhi-mu"
+   ],
+   "id": "taozen-32"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Da Chai Hu Tang",
+   "chines": "大柴胡湯",
+   "nomePt": "Grande Decocção de Bupleurum",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/da-chai-hu-tang",
+   "ervas": [
+    "chai-hu",
+    "huang-qin",
+    "da-huang",
+    "zhi-ke",
+    "ban-xia",
+    "bai-shao"
+   ],
+   "id": "taozen-33"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Da Cheng Qi Tang",
+   "chines": "大承氣湯",
+   "nomePt": "Grande Decocção para Ordenar o Qi",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/da-cheng-qi-tang",
+   "ervas": [
+    "da-huang",
+    "mang-xiao",
+    "zhi-ke",
+    "hou-po"
+   ],
+   "id": "taozen-34"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Da Huang Zhe Chong Wan",
+   "chines": "大黃蟅蟲丸",
+   "nomePt": "Pílula de Ruibarbo e Eupolyphaga",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/da-huang-zhe-chong-wan",
+   "ervas": [
+    "da-huang",
+    "zhe-chong",
+    "tao-ren",
+    "shui-zhi",
+    "gan-cao"
+   ],
+   "id": "taozen-35"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Da Huo Luo Dan",
+   "chines": "大活絡丹",
+   "nomePt": "Grande Pílula para Ativar os Colaterais",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 42 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/da-huo-luo-dan",
+   "ervas": [
+    "dang-gui",
+    "chuan-xiong",
+    "tian-ma",
+    "quan-xie",
+    "niu-xi"
+   ],
+   "id": "taozen-36"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Da Qing Long Tang",
+   "chines": "大青龍湯",
+   "nomePt": "Grande Decocção do Dragão Verde-Azulado",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/da-qing-long-tang",
+   "ervas": [
+    "ma-huang",
+    "gui-zhi",
+    "xing-ren",
+    "shi-gao",
+    "gan-cao"
+   ],
+   "id": "taozen-37"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Dai Zhe Shi Tang",
+   "chines": "代赭石湯",
+   "nomePt": "Decocção de Hematita",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/dai-zhe-shi-tang",
+   "ervas": [
+    "dai-zhe-shi",
+    "ban-xia",
+    "sheng-jiang",
+    "gan-cao"
+   ],
+   "id": "taozen-38"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Dang Gui Bu Xue Tang",
+   "chines": "當歸補血湯",
+   "nomePt": "Decocção de Angelica para Tonificar o Sangue",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 36 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/dang-gui-bu-xue-tang",
+   "ervas": [
+    "huang-qi",
+    "dang-gui"
+   ],
+   "id": "taozen-39"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Dang Gui Long Hui Wan",
+   "chines": "當歸龍薈丸",
+   "nomePt": "Pílula de Angelica, Gentiana e Aloe",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 39 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/dang-gui-long-hui-wan",
+   "ervas": [
+    "long-dan-cao",
+    "lu-hui",
+    "dang-gui",
+    "huang-qin",
+    "huang-lian"
+   ],
+   "id": "taozen-40"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Dang Gui Nian Tong Tang",
+   "chines": "當歸拈痛湯",
+   "nomePt": "Decocção de Angelica para Eliminar Dor",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/dang-gui-nian-tong-tang",
+   "ervas": [
+    "qiang-huo",
+    "fang-feng",
+    "dang-gui",
+    "huang-qin",
+    "yi-yi-ren",
+    "zhi-mu"
+   ],
+   "id": "taozen-41"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Dang Gui Shao Yao San",
+   "chines": "當歸芍藥散",
+   "nomePt": "Pó de Angelica e Peônia",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/dang-gui-shao-yao-san",
+   "ervas": [
+    "bai-shao",
+    "dang-gui",
+    "chuan-xiong",
+    "bai-zhu",
+    "fu-ling",
+    "ze-xie"
+   ],
+   "formula": "xiao-yao-san",
+   "relacao": "parecida",
+   "id": "taozen-42"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Dang Gui Si Ni Tang",
+   "chines": "當歸四逆湯",
+   "nomePt": "Decocção de Angelica para as Quatro Extremidades Frias",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/dang-gui-si-ni-tang",
+   "ervas": [
+    "dang-gui",
+    "gui-zhi",
+    "bai-shao",
+    "xi-xin",
+    "gan-cao",
+    "da-zao"
+   ],
+   "id": "taozen-43"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Du Huo Ji Sheng Tang",
+   "chines": "獨活寄生湯",
+   "nomePt": "Decocção de Angelica Pubescens e Loranthus",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/du-huo-ji-sheng-tang",
+   "ervas": [
+    "du-huo",
+    "sang-ji-sheng",
+    "du-zhong",
+    "niu-xi",
+    "dang-gui",
+    "shu-di-huang"
+   ],
+   "id": "taozen-44"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Er Chen Tang",
+   "chines": "二陳湯",
+   "nomePt": "Decocção das Duas Ervas Envelhecidas",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 44 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/er-chen-tang",
+   "ervas": [
+    "ban-xia",
+    "chen-pi",
+    "fu-ling",
+    "gan-cao"
+   ],
+   "formula": "er-chen-tang",
+   "relacao": "mesma",
+   "id": "taozen-45"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Er Miao San",
+   "chines": "二妙散",
+   "nomePt": "Pó das Duas Maravilhas",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 24 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/er-miao-san",
+   "ervas": [
+    "huang-bai",
+    "cang-zhu"
+   ],
+   "id": "taozen-46"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Fang Feng Tong Sheng San",
+   "chines": "防風通聖散",
+   "nomePt": "Pó Sagrado de Saposhnikovia",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/fang-feng-tong-sheng-san",
+   "ervas": [
+    "fang-feng",
+    "jing-jie",
+    "da-huang",
+    "mang-xiao",
+    "huang-qin",
+    "shi-gao"
+   ],
+   "id": "taozen-47"
+  },
+  {
+   "loja": "taimin",
+   "nome": "Fufang Yimucao Jiaonang",
+   "chines": "复方益母草胶囊",
+   "forma": "cápsulas",
+   "apresentacao": "60 cápsulas",
+   "url": "https://taimin.com.br/medicina-chinesa/produtos",
+   "ervas": [
+    "yi-mu-cao",
+    "shu-di-huang",
+    "dang-gui"
+   ],
+   "id": "taimin-48"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Gan Lu Xiao Du Dan",
+   "chines": "甘露消毒丹",
+   "nomePt": "Pílula do Doce Orvalho para Eliminar Toxinas",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/gan-lu-xiao-du-dan",
+   "ervas": [
+    "hua-shi",
+    "yin-chen",
+    "huang-qin",
+    "shi-chang-pu",
+    "mu-tong",
+    "lian-qiao"
+   ],
+   "id": "taozen-49"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Gan Mai Da Zao Tang",
+   "chines": "甘麥大棗湯",
+   "nomePt": "Decocção de Alcaçuz, Trigo e Jujuba",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/gan-mai-da-zao-tang",
+   "ervas": [
+    "gan-cao",
+    "xiao-mai",
+    "da-zao"
+   ],
+   "id": "taozen-50"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Ge Gen Qin Lian Tang",
+   "chines": "葛根芩連湯",
+   "nomePt": "Decocção de Pueraria, Scutellaria e Coptis",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 39 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/ge-gen-qin-lian-tang",
+   "ervas": [
+    "ge-gen",
+    "huang-qin",
+    "huang-lian",
+    "gan-cao"
+   ],
+   "formula": "ge-gen-qin-lian-tang",
+   "relacao": "mesma",
+   "id": "taozen-51"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Ge Gen Tang",
+   "chines": "葛根湯",
+   "nomePt": "Decocção de Pueraria",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/ge-gen-tang",
+   "ervas": [
+    "ge-gen",
+    "ma-huang",
+    "gui-zhi",
+    "bai-shao",
+    "sheng-jiang",
+    "da-zao",
+    "gan-cao"
+   ],
+   "id": "taozen-52"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Ge Xia Zhu Yu Tang",
+   "chines": "膈下逐瘀湯",
+   "nomePt": "Decocção para Expelir Estase Abaixo do Diafragma",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/ge-xia-zhu-yu-tang",
+   "ervas": [
+    "tao-ren",
+    "hong-hua",
+    "dang-gui",
+    "chi-shao",
+    "chuan-xiong",
+    "yan-hu-suo"
+   ],
+   "formula": "ge-xia-zhu-yu-tang",
+   "relacao": "mesma",
+   "id": "taozen-53"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Gui Lu Er Xian Jiao",
+   "chines": "龜鹿二仙膠",
+   "nomePt": "Cola dos Dois Imortais de Tartaruga e Cervo",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/gui-lu-er-xian-jiao",
+   "ervas": [
+    "gui-ban",
+    "lu-jiao",
+    "ren-shen",
+    "gou-qi-zi"
+   ],
+   "id": "taozen-54"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Gui Pi Wan",
+   "chines": "歸脾丸",
+   "nomePt": "Pílula para Restaurar o Baço",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/gui-pi-wan",
+   "ervas": [
+    "ren-shen",
+    "huang-qi",
+    "bai-zhu",
+    "dang-gui",
+    "long-yan-rou",
+    "suan-zao-ren",
+    "fu-shen",
+    "yuan-zhi",
+    "mu-xiang",
+    "gan-cao"
+   ],
+   "formula": "gui-pi-tang",
+   "relacao": "mesma",
+   "id": "taozen-55"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Gui Zhi Fu Ling Wan",
+   "chines": "桂枝茯苓丸",
+   "nomePt": "Pílula de Canela e Poria",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/gui-zhi-fu-ling-wan",
+   "ervas": [
+    "gui-zhi",
+    "fu-ling",
+    "mu-dan-pi",
+    "tao-ren",
+    "chi-shao"
+   ],
+   "id": "taozen-56"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Gui Zhi Tang",
+   "chines": "桂枝湯",
+   "nomePt": "Decocção de Ramos de Canela",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 37 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/gui-zhi-tang",
+   "ervas": [
+    "gui-zhi",
+    "bai-shao",
+    "sheng-jiang",
+    "da-zao",
+    "gan-cao"
+   ],
+   "formula": "gui-zhi-tang",
+   "relacao": "mesma",
+   "id": "taozen-57"
+  },
+  {
+   "loja": "taimin",
+   "nome": "Guifu Dihuang Jiaonang",
+   "chines": "桂附地黄胶囊",
+   "forma": "cápsulas",
+   "apresentacao": "180 cápsulas",
+   "url": "https://taimin.com.br/medicina-chinesa/produtos",
+   "ervas": [
+    "rou-gui",
+    "fu-zi",
+    "shu-di-huang",
+    "shan-zhu-yu",
+    "mu-dan-pi",
+    "shan-yao",
+    "fu-ling",
+    "ze-xie"
+   ],
+   "formula": "jin-gui-shen-qi-wan",
+   "relacao": "parecida",
+   "id": "taimin-58"
+  },
+  {
+   "loja": "taimin",
+   "nome": "Guipi Wan",
+   "chines": "归脾丸",
+   "forma": "pílulas",
+   "apresentacao": "360 pílulas",
+   "url": "https://taimin.com.br/medicina-chinesa/produtos",
+   "ervas": [
+    "dang-shen",
+    "bai-zhu",
+    "huang-qi",
+    "gan-cao",
+    "fu-ling",
+    "yuan-zhi",
+    "suan-zao-ren",
+    "long-yan-rou",
+    "dang-gui",
+    "mu-xiang",
+    "da-zao"
+   ],
+   "formula": "gui-pi-tang",
+   "relacao": "mesma",
+   "id": "taimin-59"
+  },
+  {
+   "loja": "taimin",
+   "nome": "Guizhi Fuling Pian",
+   "chines": "桂枝茯苓片",
+   "forma": "comprimidos",
+   "apresentacao": "135 comprimidos",
+   "url": "https://taimin.com.br/medicina-chinesa/produtos",
+   "ervas": [
+    "gui-zhi",
+    "fu-ling",
+    "mu-dan-pi",
+    "tao-ren",
+    "bai-shao"
+   ],
+   "id": "taimin-60"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Hai Zao Yu Hu Tang",
+   "chines": "海藻玉壺湯",
+   "nomePt": "Decocção de Sargassum do Vaso de Jade",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/hai-zao-yu-hu-tang",
+   "ervas": [
+    "hai-zao",
+    "kun-bu",
+    "ban-xia",
+    "chen-pi",
+    "lian-qiao",
+    "chuan-xiong"
+   ],
+   "id": "taozen-61"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Hei Xiao Yao San",
+   "chines": "黑逍遙散",
+   "nomePt": "Pó do Andarilho Livre Preto",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/hei-xiao-yao-san",
+   "ervas": [
+    "chai-hu",
+    "dang-gui",
+    "bai-shao",
+    "shu-di-huang",
+    "bai-zhu",
+    "fu-ling",
+    "bo-he",
+    "gan-cao"
+   ],
+   "formula": "xiao-yao-san",
+   "relacao": "parecida",
+   "id": "taozen-62"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Huan Shao Dan",
+   "chines": "還少丹",
+   "nomePt": "Pílula para Restaurar a Juventude",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/huan-shao-dan",
+   "ervas": [
+    "shu-di-huang",
+    "shan-yao",
+    "niu-xi",
+    "gou-qi-zi",
+    "du-zhong",
+    "yuan-zhi",
+    "shi-chang-pu"
+   ],
+   "id": "taozen-63"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Huang Lian Jie Du Tang",
+   "chines": "黃連解毒湯",
+   "nomePt": "Decocção de Coptis para Eliminar Toxinas",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 30 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/huang-lian-jie-du-tang",
+   "ervas": [
+    "huang-lian",
+    "huang-qin",
+    "huang-bai",
+    "zhi-zi"
+   ],
+   "id": "taozen-64"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Huang Lian Shang Qing Wan",
+   "chines": "黃連上清丸",
+   "nomePt": "Pílula de Coptis para Clarear a Parte Superior",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/huang-lian-shang-qing-wan",
+   "ervas": [
+    "huang-lian",
+    "huang-qin",
+    "huang-bai",
+    "zhi-zi",
+    "ju-hua",
+    "bo-he"
+   ],
+   "id": "taozen-65"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Huang Long Tang",
+   "chines": "黃龍湯",
+   "nomePt": "Decocção do Dragão Amarelo",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/huang-long-tang",
+   "ervas": [
+    "da-huang",
+    "mang-xiao",
+    "ren-shen",
+    "dang-gui",
+    "gan-cao",
+    "zhi-ke"
+   ],
+   "id": "taozen-66"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Huang Qi Jian Zhong Tang",
+   "chines": "黃芪建中湯",
+   "nomePt": "Decocção de Astragalus para Fortalecer o Centro",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/huang-qi-jian-zhong-tang",
+   "ervas": [
+    "huang-qi",
+    "gui-zhi",
+    "bai-shao",
+    "yi-tang",
+    "sheng-jiang",
+    "da-zao",
+    "gan-cao"
+   ],
+   "id": "taozen-67"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Huo Luo Xiao Ling Dan",
+   "chines": "活絡效靈丹",
+   "nomePt": "Pílula Milagrosa para Ativar os Colaterais",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/huo-luo-xiao-ling-dan",
+   "ervas": [
+    "dang-gui",
+    "dan-shen",
+    "ru-xiang",
+    "mo-yao"
+   ],
+   "id": "taozen-68"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Huo Xiang Zheng Qi San",
+   "chines": "藿香正氣散",
+   "nomePt": "Pó de Agastache para Retificar o Qi",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/huo-xiang-zheng-qi-san",
+   "ervas": [
+    "huo-xiang",
+    "zi-su-ye",
+    "bai-zhi",
+    "ban-xia",
+    "chen-pi",
+    "fu-ling",
+    "hou-po"
+   ],
+   "formula": "huo-xiang-zheng-qi-san",
+   "relacao": "mesma",
+   "id": "taozen-69"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Ji Ming San",
+   "chines": "雞鳴散",
+   "nomePt": "Pó do Canto do Galo",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/ji-ming-san",
+   "ervas": [
+    "bing-lang",
+    "wu-zhu-yu",
+    "mu-gua",
+    "zi-su-ye",
+    "chen-pi",
+    "sheng-jiang"
+   ],
+   "id": "taozen-70"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Jia Kang Ping Fang",
+   "chines": "甲亢平方",
+   "nomePt": "Fórmula para Equilibrar a Tireoide",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/jia-kang-ping-fang",
+   "ervas": [
+    "xia-ku-cao",
+    "sheng-di-huang",
+    "xuan-shen",
+    "bai-shao",
+    "mu-li",
+    "zhi-zi"
+   ],
+   "id": "taozen-71"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Jia Wei Xiao Yao San",
+   "chines": "加味逍遙散",
+   "nomePt": "Pó do Andarilho Livre Modificado",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/jia-wei-xiao-yao-san",
+   "ervas": [
+    "chai-hu",
+    "dang-gui",
+    "bai-shao",
+    "bai-zhu",
+    "fu-ling",
+    "mu-dan-pi",
+    "zhi-zi",
+    "bo-he",
+    "gan-cao"
+   ],
+   "formula": "xiao-yao-san",
+   "relacao": "parecida",
+   "id": "taozen-72"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Jian Bu Hu Qian Wan",
+   "chines": "健步虎潛丸",
+   "nomePt": "Pílula do Tigre Escondido para Passos Fortes",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/jian-bu-hu-qian-wan",
+   "ervas": [
+    "shu-di-huang",
+    "gui-ban",
+    "huang-bai",
+    "zhi-mu",
+    "niu-xi",
+    "suo-yang"
+   ],
+   "id": "taozen-73"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Jian Nao Wan",
+   "chines": "健腦丸",
+   "nomePt": "Pílula para Fortalecer o Cérebro",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/jian-nao-wan",
+   "ervas": [
+    "shu-di-huang",
+    "he-shou-wu",
+    "yuan-zhi",
+    "shi-chang-pu",
+    "gou-qi-zi",
+    "long-yan-rou"
+   ],
+   "id": "taozen-74"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Jiang Zhi Yi Gan Tang",
+   "chines": "降脂益肝湯",
+   "nomePt": "Decocção para Reduzir Gordura e Beneficiar o Fígado",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/jiang-zhi-yi-gan-tang",
+   "ervas": [
+    "chai-hu",
+    "ze-xie",
+    "dan-shen",
+    "shan-zha",
+    "he-ye",
+    "jue-ming-zi"
+   ],
+   "id": "taozen-75"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Jie Yu Dan",
+   "chines": "解鬱丹",
+   "nomePt": "Pílula para Aliviar a Depressão",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/jie-yu-dan",
+   "ervas": [
+    "chai-hu",
+    "xiang-fu",
+    "bai-shao",
+    "yu-jin",
+    "he-huan-pi",
+    "yuan-zhi"
+   ],
+   "id": "taozen-76"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Jin Fei Cao San",
+   "chines": "金沸草散",
+   "nomePt": "Pó de Inula",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 39 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/jin-fei-cao-san",
+   "ervas": [
+    "xuan-fu-hua",
+    "ban-xia",
+    "qian-hu",
+    "xi-xin",
+    "jing-jie",
+    "gan-cao"
+   ],
+   "id": "taozen-77"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Jin Suo Gu Jing Wan",
+   "chines": "金鎖固精丸",
+   "nomePt": "Pílula do Cadeado Dourado para Reter a Essência",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/jin-suo-gu-jing-wan",
+   "ervas": [
+    "sha-yuan-zi",
+    "qian-shi",
+    "lian-zi",
+    "lian-xu",
+    "long-gu",
+    "mu-li"
+   ],
+   "formula": "jin-suo-gu-jing-wan",
+   "relacao": "mesma",
+   "id": "taozen-78"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Juan Bi Tang",
+   "chines": "蠲痹湯",
+   "nomePt": "Decocção para Eliminar Obstrução Dolorosa",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/juan-bi-tang",
+   "ervas": [
+    "qiang-huo",
+    "du-huo",
+    "gui-zhi",
+    "dang-gui",
+    "chuan-xiong",
+    "huang-qi",
+    "gan-cao"
+   ],
+   "id": "taozen-79"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Kang Ai Ling",
+   "chines": "抗癌靈",
+   "nomePt": "Fórmula Espiritual Anti-Câncer",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/kang-ai-ling",
+   "ervas": [
+    "huang-qi",
+    "dang-shen",
+    "bai-zhu",
+    "ling-zhi",
+    "dang-gui",
+    "gou-qi-zi"
+   ],
+   "id": "taozen-80"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Li Zhong Wan",
+   "chines": "理中丸",
+   "nomePt": "Pílula para Regular o Centro",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 33 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/li-zhong-wan",
+   "ervas": [
+    "ren-shen",
+    "sheng-jiang",
+    "bai-zhu",
+    "gan-cao"
+   ],
+   "formula": "li-zhong-wan",
+   "relacao": "mesma",
+   "id": "taozen-81"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Liang Gen San",
+   "chines": "涼根散",
+   "nomePt": "Pó das Duas Raízes Refrescantes",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/liang-gen-san",
+   "ervas": [
+    "lu-gen",
+    "bai-mao-gen",
+    "sheng-di-huang",
+    "mai-men-dong"
+   ],
+   "id": "taozen-82"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Ling Gui Zhu Gan Tang",
+   "chines": "苓桂朮甘湯",
+   "nomePt": "Decocção de Poria, Canela, Atractylodes e Alcaçuz",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 36 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/ling-gui-zhu-gan-tang",
+   "ervas": [
+    "fu-ling",
+    "gui-zhi",
+    "bai-zhu",
+    "gan-cao"
+   ],
+   "formula": "wu-ling-san",
+   "relacao": "parecida",
+   "id": "taozen-83"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Ling Jiao Gou Teng Tang",
+   "chines": "羚角鉤藤湯",
+   "nomePt": "Decocção de Chifre de Antílope e Uncaria",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/ling-jiao-gou-teng-tang",
+   "ervas": [
+    "ling-yang-jiao",
+    "gou-teng",
+    "sang-ye",
+    "ju-hua",
+    "sheng-di-huang",
+    "bai-shao"
+   ],
+   "id": "taozen-84"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Liu Jun Zi Tang",
+   "chines": "六君子湯",
+   "nomePt": "Decocção dos Seis Cavalheiros",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/liu-jun-zi-tang",
+   "ervas": [
+    "ren-shen",
+    "bai-zhu",
+    "fu-ling",
+    "ban-xia",
+    "chen-pi",
+    "gan-cao"
+   ],
+   "formula": "xiang-sha-liu-jun-zi-tang",
+   "relacao": "parecida",
+   "id": "taozen-85"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Liu Wei Di Huang Wan",
+   "chines": "六味地黃丸",
+   "nomePt": "Pílula das Seis Ervas com Rehmannia",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/liu-wei-di-huang-wan",
+   "ervas": [
+    "shu-di-huang",
+    "shan-zhu-yu",
+    "shan-yao",
+    "ze-xie",
+    "mu-dan-pi",
+    "fu-ling"
+   ],
+   "formula": "liu-wei-di-huang-wan",
+   "relacao": "mesma",
+   "id": "taozen-86"
+  },
+  {
+   "loja": "taimin",
+   "nome": "Liuwei Dihuang Wan",
+   "chines": "六味地黃丸",
+   "forma": "pílulas",
+   "apresentacao": "360 pílulas",
+   "url": "https://taimin.com.br/medicina-chinesa/produtos",
+   "ervas": [
+    "shu-di-huang",
+    "shan-zhu-yu",
+    "mu-dan-pi",
+    "shan-yao",
+    "fu-ling",
+    "ze-xie"
+   ],
+   "formula": "liu-wei-di-huang-wan",
+   "relacao": "mesma",
+   "id": "taimin-87"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Long Dan Xie Gan Tang",
+   "chines": "龍膽瀉肝湯",
+   "nomePt": "Decocção de Genciana para Drenar o Fígado",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/long-dan-xie-gan-tang",
+   "ervas": [
+    "long-dan-cao",
+    "huang-qin",
+    "zhi-zi",
+    "ze-xie",
+    "che-qian-zi",
+    "dang-gui",
+    "sheng-di-huang",
+    "chai-hu",
+    "gan-cao"
+   ],
+   "formula": "long-dan-xie-gan-tang",
+   "relacao": "mesma",
+   "id": "taozen-88"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Ma Huang Tang",
+   "chines": "麻黃湯",
+   "nomePt": "Decocção de Ephedra",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 27 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/ma-huang-tang",
+   "ervas": [
+    "ma-huang",
+    "gui-zhi",
+    "xing-ren",
+    "gan-cao"
+   ],
+   "id": "taozen-89"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Ma Xing Shi Gan Tang",
+   "chines": "麻杏石甘湯",
+   "nomePt": "Decocção de Ephedra, Amêndoa, Gesso e Alcaçuz",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/ma-xing-shi-gan-tang",
+   "ervas": [
+    "ma-huang",
+    "shi-gao",
+    "xing-ren",
+    "gan-cao"
+   ],
+   "id": "taozen-90"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Ma Zi Ren Wan",
+   "chines": "麻子仁丸",
+   "nomePt": "Pílula de Semente de Cânhamo",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/ma-zi-ren-wan",
+   "ervas": [
+    "huo-ma-ren",
+    "xing-ren",
+    "bai-shao",
+    "zhi-ke",
+    "hou-po",
+    "da-huang"
+   ],
+   "id": "taozen-91"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Mai Men Dong Tang",
+   "chines": "麥門冬湯",
+   "nomePt": "Decocção de Ophiopogon",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/mai-men-dong-tang",
+   "ervas": [
+    "mai-men-dong",
+    "ren-shen",
+    "ban-xia",
+    "geng-mi",
+    "da-zao",
+    "gan-cao"
+   ],
+   "id": "taozen-92"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Ming Mu Di Huang Wan",
+   "chines": "明目地黃丸",
+   "nomePt": "Pílula de Rehmannia para Clarear a Visão",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/ming-mu-di-huang-wan",
+   "ervas": [
+    "shu-di-huang",
+    "shan-zhu-yu",
+    "shan-yao",
+    "gou-qi-zi",
+    "ju-hua",
+    "dang-gui",
+    "bai-shao"
+   ],
+   "formula": "ming-mu-di-huang-wan",
+   "relacao": "mesma",
+   "id": "taozen-93"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Nu Shen San",
+   "chines": "女神散",
+   "nomePt": "Pó da Deusa Feminina",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/nu-shen-san",
+   "ervas": [
+    "dang-gui",
+    "chuan-xiong",
+    "bai-zhu",
+    "xiang-fu",
+    "huang-qin",
+    "ren-shen"
+   ],
+   "id": "taozen-94"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Pi Pa Qing Fei Yin",
+   "chines": "枇杷清肺飲",
+   "nomePt": "Bebida de Nêspera para Clarear o Pulmão",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 36 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/pi-pa-qing-fei-yin",
+   "ervas": [
+    "pi-pa-ye",
+    "sang-bai-pi",
+    "huang-qin",
+    "huang-lian",
+    "gan-cao"
+   ],
+   "id": "taozen-95"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Ping Wei San",
+   "chines": "平胃散",
+   "nomePt": "Pó para Acalmar o Estômago",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 30 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/ping-wei-san",
+   "ervas": [
+    "cang-zhu",
+    "hou-po",
+    "chen-pi",
+    "gan-cao"
+   ],
+   "formula": "ping-wei-san",
+   "relacao": "mesma",
+   "id": "taozen-96"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Pu Ji Xiao Du Yin",
+   "chines": "普濟消毒飲",
+   "nomePt": "Bebida Universal para Eliminar Toxinas",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/pu-ji-xiao-du-yin",
+   "ervas": [
+    "huang-qin",
+    "huang-lian",
+    "niu-bang-zi",
+    "lian-qiao",
+    "bo-he",
+    "jie-geng",
+    "ban-lan-gen"
+   ],
+   "id": "taozen-97"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Qi Bao Mei Ran Dan",
+   "chines": "七寶美髯丹",
+   "nomePt": "Pílula dos Sete Tesouros para Barba Bonita",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/qi-bao-mei-ran-dan",
+   "ervas": [
+    "he-shou-wu",
+    "gou-qi-zi",
+    "tu-si-zi",
+    "niu-xi",
+    "dang-gui",
+    "bu-gu-zhi",
+    "fu-ling"
+   ],
+   "id": "taozen-98"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Qi Ju Di Huang Wan",
+   "chines": "杞菊地黃丸",
+   "nomePt": "Pílula de Rehmannia com Goji e Crisântemo",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/qi-ju-di-huang-wan",
+   "ervas": [
+    "shu-di-huang",
+    "shan-zhu-yu",
+    "shan-yao",
+    "gou-qi-zi",
+    "ju-hua",
+    "fu-ling",
+    "ze-xie",
+    "mu-dan-pi"
+   ],
+   "formula": "liu-wei-di-huang-wan",
+   "relacao": "parecida",
+   "id": "taozen-99"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Qian Lie Xian Wan",
+   "chines": "前列腺丸",
+   "nomePt": "Pílula para a Próstata",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/qian-lie-xian-wan",
+   "ervas": [
+    "huang-bai",
+    "che-qian-zi",
+    "wang-bu-liu-xing",
+    "niu-xi",
+    "tu-si-zi",
+    "zhi-mu"
+   ],
+   "id": "taozen-100"
+  },
+  {
+   "loja": "taimin",
+   "nome": "Qiju Dihuang Wan",
+   "chines": "杞菊地黄丸",
+   "forma": "pílulas",
+   "apresentacao": "360 pílulas",
+   "url": "https://taimin.com.br/medicina-chinesa/produtos",
+   "ervas": [
+    "gou-qi-zi",
+    "ju-hua",
+    "shu-di-huang",
+    "shan-zhu-yu",
+    "mu-dan-pi",
+    "shan-yao",
+    "fu-ling",
+    "ze-xie"
+   ],
+   "formula": "liu-wei-di-huang-wan",
+   "relacao": "parecida",
+   "id": "taimin-101"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Qing Bi Tang",
+   "chines": "清鼻湯",
+   "nomePt": "Decocção para Limpar o Nariz",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/qing-bi-tang",
+   "ervas": [
+    "xin-yi-hua",
+    "cang-er-zi",
+    "bai-zhi",
+    "bo-he"
+   ],
+   "id": "taozen-102"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Qing E Wan Jia Wei",
+   "chines": "青娥丸加味",
+   "nomePt": "Pílula da Donzela Azul Modificada",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/qing-e-wan-jia-wei",
+   "ervas": [
+    "du-zhong",
+    "bu-gu-zhi",
+    "hu-tao-ren",
+    "xu-duan",
+    "gu-sui-bu",
+    "niu-xi"
+   ],
+   "id": "taozen-103"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Qing Fei Pai Du Tang",
+   "chines": "清肺排毒湯",
+   "nomePt": "Decocção para Clarear o Pulmão e Eliminar Toxinas",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/qing-fei-pai-du-tang",
+   "ervas": [
+    "ma-huang",
+    "xing-ren",
+    "shi-gao",
+    "chai-hu",
+    "huang-qin",
+    "ban-xia",
+    "fu-ling",
+    "gan-cao"
+   ],
+   "id": "taozen-104"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Qing Fei Tang",
+   "chines": "清肺湯",
+   "nomePt": "Decocção para Clarear o Pulmão",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/qing-fei-tang",
+   "ervas": [
+    "huang-qin",
+    "sang-bai-pi",
+    "zhi-mu",
+    "bei-mu",
+    "jie-geng",
+    "gan-cao"
+   ],
+   "id": "taozen-105"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Qing Shang Fang Feng Tang",
+   "chines": "清上防風湯",
+   "nomePt": "Decocção de Saposhnikovia para Clarear a Parte Superior",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/qing-shang-fang-feng-tang",
+   "ervas": [
+    "fang-feng",
+    "huang-qin",
+    "lian-qiao",
+    "bo-he"
+   ],
+   "id": "taozen-106"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Qing Wei Tang",
+   "chines": "清胃湯",
+   "nomePt": "Decocção para Clarear o Estômago",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 39 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/qing-wei-tang",
+   "ervas": [
+    "huang-lian",
+    "sheng-ma",
+    "mu-dan-pi",
+    "sheng-di-huang",
+    "dang-gui"
+   ],
+   "formula": "qing-wei-san",
+   "relacao": "mesma",
+   "id": "taozen-107"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Qing Wen Bai Du Yin",
+   "chines": "清瘟敗毒飲",
+   "nomePt": "Bebida para Clarear Epidemia e Eliminar Toxinas",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/qing-wen-bai-du-yin",
+   "ervas": [
+    "shi-gao",
+    "huang-lian",
+    "sheng-di-huang",
+    "xi-jiao",
+    "zhi-mu",
+    "huang-qin",
+    "zhi-zi",
+    "lian-qiao"
+   ],
+   "id": "taozen-108"
+  },
+  {
+   "loja": "taimin",
+   "nome": "Qinggan Lidan Jiaonang",
+   "chines": "清肝利胆胶囊",
+   "forma": "cápsulas",
+   "apresentacao": "120 cápsulas",
+   "url": "https://taimin.com.br/medicina-chinesa/produtos",
+   "ervas": [
+    "yin-chen",
+    "jin-yin-hua",
+    "zhi-zi",
+    "hou-po",
+    "han-fang-ji"
+   ],
+   "id": "taimin-109"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Ren Shen Bai Du San",
+   "chines": "人參敗毒散",
+   "nomePt": "Pó de Ginseng para Eliminar Toxinas",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/ren-shen-bai-du-san",
+   "ervas": [
+    "ren-shen",
+    "qiang-huo",
+    "du-huo",
+    "chai-hu",
+    "chuan-xiong",
+    "jie-geng",
+    "zhi-ke",
+    "fu-ling",
+    "gan-cao"
+   ],
+   "formula": "jing-fang-bai-du-san",
+   "relacao": "parecida",
+   "id": "taozen-110"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Ren Shen Yang Rong Tang",
+   "chines": "人參養榮湯",
+   "nomePt": "Decocção de Ginseng para Nutrir a Glória",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/ren-shen-yang-rong-tang",
+   "ervas": [
+    "ren-shen",
+    "huang-qi",
+    "shu-di-huang",
+    "dang-gui",
+    "bai-shao",
+    "wu-wei-zi",
+    "fu-ling",
+    "yuan-zhi",
+    "chen-pi",
+    "gan-cao"
+   ],
+   "id": "taozen-111"
+  },
+  {
+   "loja": "taimin",
+   "nome": "Renshen Shouwu Jiaonang",
+   "chines": "人参首乌胶囊",
+   "forma": "cápsulas",
+   "apresentacao": "45 cápsulas",
+   "url": "https://taimin.com.br/medicina-chinesa/produtos",
+   "ervas": [
+    "ren-shen",
+    "he-shou-wu"
+   ],
+   "id": "taimin-112"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Run Chang Wan",
+   "chines": "潤腸丸",
+   "nomePt": "Pílula para Umedecer os Intestinos",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/run-chang-wan",
+   "ervas": [
+    "dang-gui",
+    "sheng-di-huang",
+    "tao-ren",
+    "huo-ma-ren",
+    "zhi-ke"
+   ],
+   "id": "taozen-113"
+  },
+  {
+   "loja": "taozen",
+   "nome": "San Ren Tang",
+   "chines": "三仁湯",
+   "nomePt": "Decocção das Três Sementes",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/san-ren-tang",
+   "ervas": [
+    "xing-ren",
+    "bai-dou-kou",
+    "yi-yi-ren",
+    "ban-xia",
+    "hou-po",
+    "tong-cao",
+    "hua-shi",
+    "dan-zhu-ye"
+   ],
+   "id": "taozen-114"
+  },
+  {
+   "loja": "taozen",
+   "nome": "San Zhong Kui Jian Tang",
+   "chines": "散腫潰堅湯",
+   "nomePt": "Decocção para Dispersar Inchaço e Amolecer Massas",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/san-zhong-kui-jian-tang",
+   "ervas": [
+    "xia-ku-cao",
+    "hai-zao",
+    "kun-bu",
+    "bei-mu",
+    "mu-li",
+    "dang-gui"
+   ],
+   "id": "taozen-115"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Sang Ju Yin",
+   "chines": "桑菊飲",
+   "nomePt": "Bebida de Amoreira e Crisântemo",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 40 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/sang-ju-yin",
+   "ervas": [
+    "sang-ye",
+    "ju-hua",
+    "lian-qiao",
+    "bo-he",
+    "xing-ren",
+    "jie-geng",
+    "lu-gen",
+    "gan-cao"
+   ],
+   "formula": "sang-ju-yin",
+   "relacao": "mesma",
+   "id": "taozen-116"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Sha Shen Mai Men Dong Tang",
+   "chines": "沙參麥門冬湯",
+   "nomePt": "Decocção de Adenophora e Ophiopogon",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 42 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/sha-shen-mai-men-dong-tang",
+   "ervas": [
+    "sha-shen",
+    "mai-men-dong",
+    "yu-zhu",
+    "sang-ye",
+    "tian-hua-fen",
+    "bai-bian-dou",
+    "gan-cao"
+   ],
+   "formula": "sha-shen-mai-dong-tang",
+   "relacao": "parecida",
+   "id": "taozen-117"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Shang Zhong Xia Tong Yong Tong Feng Wan",
+   "chines": "上中下通用痛風丸",
+   "nomePt": "Pílula Universal para Gota de Cima para Baixo",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/shang-zhong-xia-tong-yong-tong-feng-wan",
+   "ervas": [
+    "qiang-huo",
+    "du-huo",
+    "fang-feng",
+    "wei-ling-xian",
+    "cang-zhu",
+    "huang-bai",
+    "niu-xi"
+   ],
+   "id": "taozen-118"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Shao Fu Zhu Yu Tang",
+   "chines": "少腹逐瘀湯",
+   "nomePt": "Decocção para Expelir Estase do Baixo Abdômen",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/shao-fu-zhu-yu-tang",
+   "ervas": [
+    "dang-gui",
+    "chuan-xiong",
+    "chi-shao",
+    "pu-huang",
+    "wu-ling-zhi",
+    "xiao-hui-xiang",
+    "rou-gui",
+    "sheng-jiang",
+    "yan-hu-suo"
+   ],
+   "id": "taozen-119"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Shao Yao Gan Cao Tang",
+   "chines": "芍藥甘草湯",
+   "nomePt": "Decocção de Peônia e Alcaçuz",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 24 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/shao-yao-gan-cao-tang",
+   "ervas": [
+    "bai-shao",
+    "gan-cao"
+   ],
+   "id": "taozen-120"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Shao Yao Tang",
+   "chines": "芍藥湯",
+   "nomePt": "Decocção de Peônia",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/shao-yao-tang",
+   "ervas": [
+    "bai-shao",
+    "huang-qin",
+    "huang-lian",
+    "da-huang",
+    "dang-gui",
+    "bing-lang",
+    "mu-xiang",
+    "rou-gui",
+    "gan-cao"
+   ],
+   "id": "taozen-121"
+  },
+  {
+   "loja": "taozen",
+   "nome": "She Gan Ma Huang Tang",
+   "chines": "射干麻黃湯",
+   "nomePt": "Decocção de Belamcanda e Ephedra",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/she-gan-ma-huang-tang",
+   "ervas": [
+    "she-gan",
+    "ma-huang",
+    "xi-xin",
+    "ban-xia",
+    "zi-wan",
+    "kuan-dong-hua",
+    "wu-wei-zi",
+    "sheng-jiang",
+    "da-zao"
+   ],
+   "id": "taozen-122"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Shen Ling Bai Zhu San",
+   "chines": "參苓白朮散",
+   "nomePt": "Pó de Ginseng, Poria e Atractylodes",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/shen-ling-bai-zhu-san",
+   "ervas": [
+    "ren-shen",
+    "bai-zhu",
+    "fu-ling",
+    "shan-yao",
+    "yi-yi-ren",
+    "lian-zi",
+    "bai-bian-dou",
+    "sha-ren",
+    "jie-geng",
+    "gan-cao"
+   ],
+   "formula": "shen-ling-bai-zhu-san",
+   "relacao": "mesma",
+   "id": "taozen-123"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Shen Mi Tang",
+   "chines": "神秘湯",
+   "nomePt": "Decocção Misteriosa",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 22 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/shen-mi-tang",
+   "ervas": [
+    "ma-huang",
+    "xing-ren",
+    "hou-po",
+    "chen-pi",
+    "chai-hu",
+    "zi-su-ye",
+    "gan-cao"
+   ],
+   "id": "taozen-124"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Shen Rong Wan",
+   "chines": "參茸丸",
+   "nomePt": "Pílula de Ginseng e Chifre de Cervo",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/shen-rong-wan",
+   "ervas": [
+    "ren-shen",
+    "lu-rong",
+    "shu-di-huang",
+    "dang-gui",
+    "du-zhong"
+   ],
+   "id": "taozen-125"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Shen Shi Tang",
+   "chines": "參濕湯",
+   "nomePt": "Decocção de Ginseng para Umidade",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 39 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/shen-shi-tang",
+   "ervas": [
+    "ren-shen",
+    "fu-ling",
+    "bai-zhu",
+    "chen-pi",
+    "gan-cao"
+   ],
+   "formula": "si-jun-zi-tang",
+   "relacao": "parecida",
+   "id": "taozen-126"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Shen Tong Zhu Yu Tang",
+   "chines": "身痛逐瘀湯",
+   "nomePt": "Decocção para Expelir Estase do Corpo Dolorido",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/shen-tong-zhu-yu-tang",
+   "ervas": [
+    "tao-ren",
+    "hong-hua",
+    "chuan-xiong",
+    "dang-gui",
+    "qin-jiao",
+    "qiang-huo",
+    "gan-cao"
+   ],
+   "id": "taozen-127"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Sheng Ma Ge Gen Tang",
+   "chines": "升麻葛根湯",
+   "nomePt": "Decocção de Sheng Ma e Ge Gen",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 27 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/sheng-ma-ge-gen-tang",
+   "ervas": [
+    "sheng-ma",
+    "ge-gen",
+    "bai-shao",
+    "gan-cao"
+   ],
+   "id": "taozen-128"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Sheng Mai San",
+   "chines": "生脈散",
+   "nomePt": "Pó para Gerar o Pulso",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 24 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/sheng-mai-san",
+   "ervas": [
+    "ren-shen",
+    "mai-men-dong",
+    "wu-wei-zi"
+   ],
+   "id": "taozen-129"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Shi Quan Da Bu Tang",
+   "chines": "十全大補湯",
+   "nomePt": "Decocção do Grande Tônico de Dez Ingredientes",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/shi-quan-da-bu-tang",
+   "ervas": [
+    "ren-shen",
+    "huang-qi",
+    "bai-zhu",
+    "fu-ling",
+    "dang-gui",
+    "shu-di-huang",
+    "bai-shao",
+    "chuan-xiong",
+    "rou-gui",
+    "gan-cao"
+   ],
+   "id": "taozen-130"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Shi Wei San",
+   "chines": "石韋散",
+   "nomePt": "Pó de Pyrrosia",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/shi-wei-san",
+   "ervas": [
+    "shi-wei",
+    "hua-shi",
+    "che-qian-zi",
+    "qu-mai",
+    "gan-cao"
+   ],
+   "id": "taozen-131"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Shu Gan Wan",
+   "chines": "舒肝丸",
+   "nomePt": "Pílula para Suavizar o Fígado",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/shu-gan-wan",
+   "ervas": [
+    "chai-hu",
+    "bai-shao",
+    "xiang-fu",
+    "chen-pi",
+    "zhi-ke",
+    "gan-cao"
+   ],
+   "formula": "chai-hu-shu-gan-san",
+   "relacao": "parecida",
+   "id": "taozen-132"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Si Jun Zi Tang",
+   "chines": "四君子湯",
+   "nomePt": "Decocção dos Quatro Cavalheiros",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 33 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/si-jun-zi-tang",
+   "ervas": [
+    "ren-shen",
+    "bai-zhu",
+    "fu-ling",
+    "gan-cao"
+   ],
+   "formula": "si-jun-zi-tang",
+   "relacao": "mesma",
+   "id": "taozen-133"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Si Miao Wan",
+   "chines": "四妙丸",
+   "nomePt": "Pílula das Quatro Maravilhas",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/si-miao-wan",
+   "ervas": [
+    "cang-zhu",
+    "huang-bai",
+    "yi-yi-ren",
+    "niu-xi"
+   ],
+   "id": "taozen-134"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Si Miao Yong An Tang",
+   "chines": "四妙勇安湯",
+   "nomePt": "Decocção das Quatro Maravilhas para Coragem e Paz",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/si-miao-yong-an-tang",
+   "ervas": [
+    "jin-yin-hua",
+    "xuan-shen",
+    "dang-gui",
+    "gan-cao"
+   ],
+   "id": "taozen-135"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Si Ni San",
+   "chines": "四逆散",
+   "nomePt": "Pó das Quatro Inversões",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 33 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/si-ni-san",
+   "ervas": [
+    "chai-hu",
+    "bai-shao",
+    "zhi-ke",
+    "gan-cao"
+   ],
+   "formula": "chai-hu-shu-gan-san",
+   "relacao": "parecida",
+   "id": "taozen-136"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Si Wu Tang",
+   "chines": "四物湯",
+   "nomePt": "Decocção das Quatro Substâncias",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 36 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/si-wu-tang",
+   "ervas": [
+    "shu-di-huang",
+    "dang-gui",
+    "bai-shao",
+    "chuan-xiong"
+   ],
+   "formula": "si-wu-tang",
+   "relacao": "mesma",
+   "id": "taozen-137"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Si Wu Xiao Feng San",
+   "chines": "四物消風散",
+   "nomePt": "Pó das Quatro Substâncias para Dispersar Vento",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/si-wu-xiao-feng-san",
+   "ervas": [
+    "shu-di-huang",
+    "dang-gui",
+    "bai-shao",
+    "chuan-xiong",
+    "jing-jie",
+    "fang-feng"
+   ],
+   "formula": "si-wu-tang",
+   "relacao": "parecida",
+   "id": "taozen-138"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Su Zi Jiang Qi Tang",
+   "chines": "蘇子降氣湯",
+   "nomePt": "Decocção de Semente de Perilla para Descer o Qi",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 27 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/su-zi-jiang-qi-tang",
+   "ervas": [
+    "zi-su-zi",
+    "ban-xia",
+    "hou-po",
+    "chen-pi",
+    "rou-gui",
+    "dang-gui",
+    "gan-cao"
+   ],
+   "id": "taozen-139"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Suan Zao Ren Tang",
+   "chines": "酸棗仁湯",
+   "nomePt": "Decocção de Semente de Ziziphus",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 39 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/suan-zao-ren-tang",
+   "ervas": [
+    "suan-zao-ren",
+    "fu-ling",
+    "zhi-mu",
+    "chuan-xiong",
+    "gan-cao"
+   ],
+   "id": "taozen-140"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Suo Quan Wan",
+   "chines": "縮泉丸",
+   "nomePt": "Pílula para Contrair a Fonte",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 30 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/suo-quan-wan",
+   "ervas": [
+    "wu-yao",
+    "yi-zhi-ren",
+    "shan-yao"
+   ],
+   "formula": "suo-quan-wan",
+   "relacao": "mesma",
+   "id": "taozen-141"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Tao He Cheng Qi Tang",
+   "chines": "桃核承氣湯",
+   "nomePt": "Decocção de Caroço de Pêssego para Ordenar o Qi",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 42 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/tao-he-cheng-qi-tang",
+   "ervas": [
+    "tao-ren",
+    "da-huang",
+    "gui-zhi",
+    "mang-xiao",
+    "gan-cao"
+   ],
+   "id": "taozen-142"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Tao Hong Si Wu Tang",
+   "chines": "桃紅四物湯",
+   "nomePt": "Decocção das Quatro Substâncias com Pêssego e Cártamo",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/tao-hong-si-wu-tang",
+   "ervas": [
+    "shu-di-huang",
+    "dang-gui",
+    "bai-shao",
+    "chuan-xiong",
+    "tao-ren",
+    "hong-hua"
+   ],
+   "formula": "si-wu-tang",
+   "relacao": "parecida",
+   "id": "taozen-143"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Tian Ma Gou Teng Yin",
+   "chines": "天麻鉤藤飲",
+   "nomePt": "Bebida de Gastrodia e Uncaria",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/tian-ma-gou-teng-yin",
+   "ervas": [
+    "tian-ma",
+    "gou-teng",
+    "shi-jue-ming",
+    "zhi-zi",
+    "huang-qin",
+    "du-zhong",
+    "sang-ji-sheng"
+   ],
+   "formula": "tian-ma-gou-teng-yin",
+   "relacao": "mesma",
+   "id": "taozen-144"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Tian Tai Wu Yao San",
+   "chines": "天台烏藥散",
+   "nomePt": "Pó de Lindera de Tiantai",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 39 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/tian-tai-wu-yao-san",
+   "ervas": [
+    "wu-yao",
+    "xiao-hui-xiang",
+    "qing-pi",
+    "gao-liang-jiang",
+    "bing-lang"
+   ],
+   "formula": "tian-tai-wu-yao-san",
+   "relacao": "mesma",
+   "id": "taozen-145"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Tian Wang Bu Xin Dan",
+   "chines": "天王補心丹",
+   "nomePt": "Pílula do Imperador Celestial para Tonificar o Coração",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/tian-wang-bu-xin-dan",
+   "ervas": [
+    "sheng-di-huang",
+    "xuan-shen",
+    "mai-men-dong",
+    "tian-men-dong",
+    "dang-gui",
+    "suan-zao-ren",
+    "bai-zi-ren",
+    "wu-wei-zi",
+    "fu-ling",
+    "yuan-zhi",
+    "ren-shen"
+   ],
+   "formula": "tian-wang-bu-xin-dan",
+   "relacao": "mesma",
+   "id": "taozen-146"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Tong Xie Yao Fang",
+   "chines": "痛瀉要方",
+   "nomePt": "Fórmula Importante para Dor e Diarreia",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 33 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/tong-xie-yao-fang",
+   "ervas": [
+    "bai-zhu",
+    "bai-shao",
+    "chen-pi",
+    "fang-feng"
+   ],
+   "id": "taozen-147"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Wan Dai Tang",
+   "chines": "完帶湯",
+   "nomePt": "Decocção para Completar a Faixa",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/wan-dai-tang",
+   "ervas": [
+    "bai-zhu",
+    "shan-yao",
+    "ren-shen",
+    "cang-zhu",
+    "chen-pi",
+    "che-qian-zi",
+    "chai-hu",
+    "gan-cao"
+   ],
+   "id": "taozen-148"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Wei Ling Tang",
+   "chines": "胃苓湯",
+   "nomePt": "Decocção para Estômago e Fluidos",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/wei-ling-tang",
+   "ervas": [
+    "cang-zhu",
+    "fu-ling",
+    "zhu-ling",
+    "ze-xie",
+    "bai-zhu"
+   ],
+   "formula": "wu-ling-san",
+   "relacao": "parecida",
+   "id": "taozen-149"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Wen Dan Tang",
+   "chines": "溫膽湯",
+   "nomePt": "Decocção que Aquece a Vesícula Biliar",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 9 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/wen-dan-tang",
+   "ervas": [
+    "ban-xia",
+    "zhu-ru",
+    "zhi-ke",
+    "chen-pi",
+    "fu-ling",
+    "gan-cao"
+   ],
+   "formula": "wen-dan-tang",
+   "relacao": "mesma",
+   "id": "taozen-150"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Wu Ji San",
+   "chines": "五積散",
+   "nomePt": "Pó dos Cinco Acúmulos",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 39 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/wu-ji-san",
+   "ervas": [
+    "ma-huang",
+    "bai-zhi",
+    "cang-zhu",
+    "dang-gui",
+    "chuan-xiong"
+   ],
+   "id": "taozen-151"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Wu Ling San",
+   "chines": "五苓散",
+   "nomePt": "Pó dos Cinco Ingredientes com Poria",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/wu-ling-san",
+   "ervas": [
+    "ze-xie",
+    "fu-ling",
+    "zhu-ling",
+    "bai-zhu",
+    "gui-zhi"
+   ],
+   "formula": "wu-ling-san",
+   "relacao": "mesma",
+   "id": "taozen-152"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Wu Mei Wan",
+   "chines": "烏梅丸",
+   "nomePt": "Pílula de Ameixa Preta",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/wu-mei-wan",
+   "ervas": [
+    "wu-mei",
+    "xi-xin",
+    "sheng-jiang",
+    "huang-lian",
+    "huang-bai",
+    "dang-gui"
+   ],
+   "formula": "wu-mei-wan",
+   "relacao": "mesma",
+   "id": "taozen-153"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Wu Ren Wan",
+   "chines": "五仁丸",
+   "nomePt": "Pílula das Cinco Sementes",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/wu-ren-wan",
+   "ervas": [
+    "tao-ren",
+    "xing-ren",
+    "bai-zi-ren",
+    "song-zi-ren",
+    "yu-li-ren"
+   ],
+   "id": "taozen-154"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Wu Wei Xiao Du Yin",
+   "chines": "五味消毒飲",
+   "nomePt": "Bebida dos Cinco Ingredientes para Eliminar Toxinas",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/wu-wei-xiao-du-yin",
+   "ervas": [
+    "jin-yin-hua",
+    "ye-ju-hua",
+    "pu-gong-ying",
+    "zi-hua-di-ding",
+    "zi-bei-tian-kui"
+   ],
+   "id": "taozen-155"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Wu Zhu Yu Tang",
+   "chines": "吳茱萸湯",
+   "nomePt": "Decocção de Evodia",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/wu-zhu-yu-tang",
+   "ervas": [
+    "wu-zhu-yu",
+    "sheng-jiang",
+    "ren-shen",
+    "da-zao"
+   ],
+   "id": "taozen-156"
+  },
+  {
+   "loja": "taimin",
+   "nome": "Wuzi Yanzong Pian",
+   "chines": "五子衍宗片",
+   "forma": "comprimidos",
+   "apresentacao": "270 comprimidos",
+   "url": "https://taimin.com.br/medicina-chinesa/produtos",
+   "ervas": [
+    "gou-qi-zi",
+    "tu-si-zi",
+    "fu-pen-zi",
+    "wu-wei-zi",
+    "che-qian-zi"
+   ],
+   "id": "taimin-157"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Xi Gan Ming Mu Tang",
+   "chines": "洗肝明目湯",
+   "nomePt": "Decocção para Lavar o Fígado e Clarear a Visão",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/xi-gan-ming-mu",
+   "ervas": [
+    "ju-hua",
+    "gou-qi-zi",
+    "jue-ming-zi",
+    "dang-gui",
+    "chai-hu"
+   ],
+   "id": "taozen-158"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Xiang Sha Liu Jun Zi Tang",
+   "chines": "香砂六君子湯",
+   "nomePt": "Decocção dos Seis Cavalheiros com Aucklandia e Amomum",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/xiang-sha-liu-jun-zi-tang",
+   "ervas": [
+    "ren-shen",
+    "bai-zhu",
+    "fu-ling",
+    "chen-pi",
+    "mu-xiang",
+    "sha-ren"
+   ],
+   "formula": "xiang-sha-liu-jun-zi-tang",
+   "relacao": "mesma",
+   "id": "taozen-159"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Xiang Sha Ping Wei San",
+   "chines": "香砂平胃散",
+   "nomePt": "Pó para Acalmar o Estômago com Aucklandia e Amomum",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 36 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/xiang-sha-ping-wei-san",
+   "ervas": [
+    "cang-zhu",
+    "hou-po",
+    "chen-pi",
+    "mu-xiang",
+    "sha-ren"
+   ],
+   "formula": "ping-wei-san",
+   "relacao": "parecida",
+   "id": "taozen-160"
+  },
+  {
+   "loja": "taimin",
+   "nome": "Xiangsha Yangwei Wan",
+   "chines": "香砂养胃丸",
+   "forma": "pílulas",
+   "apresentacao": "360 pílulas",
+   "url": "https://taimin.com.br/medicina-chinesa/produtos?page=2",
+   "ervas": [
+    "mu-xiang",
+    "sha-ren",
+    "bai-zhu",
+    "chen-pi",
+    "fu-ling",
+    "ban-xia",
+    "xiang-fu",
+    "zhi-ke",
+    "bai-dou-kou",
+    "hou-po",
+    "huo-xiang",
+    "gan-cao",
+    "sheng-jiang",
+    "da-zao"
+   ],
+   "formula": "xiang-sha-liu-jun-zi-tang",
+   "relacao": "parecida",
+   "id": "taimin-161"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Xiao Chai Hu Tang",
+   "chines": "小柴胡湯",
+   "nomePt": "Decocção Menor de Bupleurum",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/xiao-chai-hu-tang",
+   "ervas": [
+    "chai-hu",
+    "huang-qin",
+    "ban-xia",
+    "sheng-jiang",
+    "ren-shen",
+    "da-zao",
+    "gan-cao"
+   ],
+   "id": "taozen-162"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Xiao Feng San",
+   "chines": "消風散",
+   "nomePt": "Pó que Elimina o Vento",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/xiao-feng-san",
+   "ervas": [
+    "jing-jie",
+    "fang-feng",
+    "chan-tui",
+    "ku-shen",
+    "sheng-di-huang"
+   ],
+   "id": "taozen-163"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Xiao Ji Yin Zi",
+   "chines": "小薊飲子",
+   "nomePt": "Bebida de Cirsium",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/xiao-ji-yin-zi",
+   "ervas": [
+    "xiao-ji",
+    "ou-jie",
+    "pu-huang",
+    "sheng-di-huang",
+    "zhi-zi"
+   ],
+   "id": "taozen-164"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Xiao Qing Long Tang",
+   "chines": "小青龍湯",
+   "nomePt": "Decocção do Pequeno Dragão Verde",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 42 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/xiao-qing-long-tang",
+   "ervas": [
+    "ma-huang",
+    "gui-zhi",
+    "sheng-jiang",
+    "xi-xin",
+    "wu-wei-zi",
+    "ban-xia"
+   ],
+   "id": "taozen-165"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Xiao Yao Wan",
+   "chines": "逍遙丸",
+   "nomePt": "Pílula do Andarilho Livre",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/xiao-yao-wan",
+   "ervas": [
+    "chai-hu",
+    "dang-gui",
+    "bai-shao",
+    "bai-zhu",
+    "fu-ling",
+    "bo-he"
+   ],
+   "formula": "xiao-yao-san",
+   "relacao": "mesma",
+   "id": "taozen-166"
+  },
+  {
+   "loja": "taimin",
+   "nome": "Xiaoyao Wan",
+   "chines": "逍遥丸",
+   "forma": "pílulas",
+   "apresentacao": "360 pílulas",
+   "url": "https://taimin.com.br/medicina-chinesa/produtos?page=2",
+   "ervas": [
+    "chai-hu",
+    "dang-gui",
+    "bai-shao",
+    "bai-zhu",
+    "fu-ling",
+    "gan-cao",
+    "bo-he"
+   ],
+   "formula": "xiao-yao-san",
+   "relacao": "mesma",
+   "id": "taimin-167"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Xie Xin Tang",
+   "chines": "瀉心湯",
+   "nomePt": "Decocção para Drenar o Coração",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 21 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/xie-xin-tang",
+   "ervas": [
+    "huang-lian",
+    "huang-qin",
+    "da-huang"
+   ],
+   "formula": "xie-xin-tang",
+   "relacao": "mesma",
+   "id": "taozen-168"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Xin Jia Xiang Ru Yin",
+   "chines": "新加香薷飲",
+   "nomePt": "Bebida Modificada de Elsholtzia",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 42 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/xin-jia-xiang-ru-yin",
+   "ervas": [
+    "xiang-ru",
+    "hou-po",
+    "bai-bian-dou",
+    "jin-yin-hua",
+    "lian-qiao"
+   ],
+   "id": "taozen-169"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Xin Yi Qing Fei Tang",
+   "chines": "辛夷清肺湯",
+   "nomePt": "Decocção de Magnólia para Clarear o Pulmão",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/xin-yi-qing-fei-tang",
+   "ervas": [
+    "xin-yi-hua",
+    "huang-qin",
+    "zhi-zi",
+    "mai-men-dong",
+    "bai-he"
+   ],
+   "id": "taozen-170"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Xin Yi San",
+   "chines": "辛夷散",
+   "nomePt": "Pó de Magnólia",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 39 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/xin-yi-san",
+   "ervas": [
+    "xin-yi-hua",
+    "bai-zhi",
+    "fang-feng",
+    "chuan-xiong",
+    "sheng-ma"
+   ],
+   "id": "taozen-171"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Xing Qi Huo Xue Tang",
+   "chines": "行氣活血湯",
+   "nomePt": "Decocção para Mover Qi e Ativar Sangue",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/xing-qi-huo-xue-tang",
+   "ervas": [
+    "chai-hu",
+    "xiang-fu",
+    "chuan-xiong",
+    "tao-ren",
+    "hong-hua",
+    "dang-gui",
+    "gan-cao"
+   ],
+   "id": "taozen-172"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Xing Su San",
+   "chines": "杏蘇散",
+   "nomePt": "Pó de Damasco e Perilla",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 39 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/xing-su-san",
+   "ervas": [
+    "zi-su-ye",
+    "xing-ren",
+    "qian-hu",
+    "jie-geng",
+    "chen-pi"
+   ],
+   "id": "taozen-173"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Xue Fu Zhu Yu Tang",
+   "chines": "血府逐瘀湯",
+   "nomePt": "Decocção para Expelir Estase do Peito",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/xue-fu-zhu-yu-tang",
+   "ervas": [
+    "tao-ren",
+    "hong-hua",
+    "chuan-xiong",
+    "chi-shao",
+    "chai-hu",
+    "jie-geng"
+   ],
+   "formula": "xue-fu-zhu-yu-tang",
+   "relacao": "mesma",
+   "id": "taozen-174"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Yan Hu Chuan Xiong",
+   "chines": "延胡川芎",
+   "nomePt": "Combinação de Corydalis e Ligusticum",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 18 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/yan-hu-chuan-xiong",
+   "ervas": [
+    "yan-hu-suo",
+    "chuan-xiong"
+   ],
+   "id": "taozen-175"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Yang He Tang",
+   "chines": "陽和湯",
+   "nomePt": "Decocção da Harmonia Yang",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/yang-he-tang",
+   "ervas": [
+    "shu-di-huang",
+    "lu-jiao-jiao",
+    "rou-gui",
+    "sheng-jiang",
+    "ma-huang",
+    "bai-jie-zi"
+   ],
+   "id": "taozen-176"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Yang Xin Tang",
+   "chines": "養心湯",
+   "nomePt": "Decocção para Nutrir o Coração",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/yang-xin-tang",
+   "ervas": [
+    "huang-qi",
+    "fu-ling",
+    "fu-shen",
+    "dang-gui",
+    "chuan-xiong",
+    "suan-zao-ren"
+   ],
+   "formula": "yang-xin-tang",
+   "relacao": "mesma",
+   "id": "taozen-177"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Yang Yin Qing Fei Tang",
+   "chines": "養陰清肺湯",
+   "nomePt": "Decocção para Nutrir Yin e Clarear o Pulmão",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/yang-yin-qing-fei-tang",
+   "ervas": [
+    "sheng-di-huang",
+    "mai-men-dong",
+    "xuan-shen",
+    "bai-shao",
+    "mu-dan-pi",
+    "bo-he"
+   ],
+   "id": "taozen-178"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Yi Guan Jian",
+   "chines": "一貫煎",
+   "nomePt": "Decocção da Ligação Universal",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/yi-guan-jian",
+   "ervas": [
+    "sheng-di-huang",
+    "gou-qi-zi",
+    "sha-shen",
+    "mai-men-dong",
+    "dang-gui",
+    "chuan-lian-zi"
+   ],
+   "id": "taozen-179"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Yi Qi Cong Ming Tang",
+   "chines": "益氣聰明湯",
+   "nomePt": "Decocção para Beneficiar Qi e Clarear a Mente",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/yi-qi-cong-ming-tang",
+   "ervas": [
+    "huang-qi",
+    "ren-shen",
+    "ge-gen",
+    "sheng-ma",
+    "bai-shao",
+    "huang-bai"
+   ],
+   "id": "taozen-180"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Yi Yi Ren Tang",
+   "chines": "薏苡仁湯",
+   "nomePt": "Decocção de Semente de Lágrima-de-Jó",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/yi-yi-ren-tang",
+   "ervas": [
+    "yi-yi-ren",
+    "ma-huang",
+    "gui-zhi",
+    "cang-zhu",
+    "gan-cao"
+   ],
+   "id": "taozen-181"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Yi Zi Tang",
+   "chines": "異滋湯",
+   "nomePt": "Decocção Nutridora Especial",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 42 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/yi-zi-tang",
+   "ervas": [
+    "sheng-di-huang",
+    "mai-men-dong",
+    "xuan-shen",
+    "bai-shao"
+   ],
+   "id": "taozen-182"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Yin Chen Hao Tang",
+   "chines": "茵陳蒿湯",
+   "nomePt": "Decocção de Artemísia Capilar",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 33 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/yin-chen-hao-tang",
+   "ervas": [
+    "yin-chen",
+    "zhi-zi",
+    "da-huang"
+   ],
+   "formula": "yin-chen-hao-tang",
+   "relacao": "mesma",
+   "id": "taozen-183"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Yin Chen Wu Lin San",
+   "chines": "茵陳五苓散",
+   "nomePt": "Pó de Artemísia Capilar com Cinco Ingredientes",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/yin-chen-wu-lin-san",
+   "ervas": [
+    "yin-chen",
+    "ze-xie",
+    "fu-ling",
+    "zhu-ling",
+    "bai-zhu",
+    "gui-zhi"
+   ],
+   "formula": "wu-ling-san",
+   "relacao": "parecida",
+   "id": "taozen-184"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Yu Nu Jian",
+   "chines": "玉女煎",
+   "nomePt": "Decocção da Donzela de Jade",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/yu-nu-jian",
+   "ervas": [
+    "shi-gao",
+    "shu-di-huang",
+    "mai-men-dong",
+    "zhi-mu",
+    "niu-xi"
+   ],
+   "id": "taozen-185"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Yu Ping Feng San",
+   "chines": "玉屏風散",
+   "nomePt": "Pó do Biombo de Jade",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/yu-ping-feng-san",
+   "ervas": [
+    "huang-qi",
+    "bai-zhu",
+    "fang-feng"
+   ],
+   "formula": "yu-ping-feng-san",
+   "relacao": "mesma",
+   "id": "taozen-186"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Yu Quan Wan",
+   "chines": "玉泉丸",
+   "nomePt": "Pílula da Fonte de Jade",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/yu-quan-wan",
+   "ervas": [
+    "tian-hua-fen",
+    "ge-gen",
+    "mai-men-dong",
+    "ren-shen",
+    "fu-ling",
+    "wu-wei-zi",
+    "gan-cao"
+   ],
+   "id": "taozen-187"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Yue Ju Wan",
+   "chines": "越鞠丸",
+   "nomePt": "Pílula para Superar a Estagnação",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/yue-ju-wan",
+   "ervas": [
+    "xiang-fu",
+    "chuan-xiong",
+    "cang-zhu",
+    "zhi-zi",
+    "shen-qu"
+   ],
+   "formula": "yue-ju-wan",
+   "relacao": "mesma",
+   "id": "taozen-188"
+  },
+  {
+   "loja": "taimin",
+   "nome": "Yupingfeng Jiaonang",
+   "chines": "玉屏风胶囊",
+   "forma": "cápsulas",
+   "apresentacao": "90 cápsulas",
+   "url": "https://taimin.com.br/medicina-chinesa/produtos?page=2",
+   "ervas": [
+    "huang-qi",
+    "fang-feng",
+    "bai-zhu"
+   ],
+   "formula": "yu-ping-feng-san",
+   "relacao": "mesma",
+   "id": "taimin-189"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Zan Yu Dan",
+   "chines": "贊育丹",
+   "nomePt": "Pílula para Auxiliar a Fertilidade",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/zan-yu-dan",
+   "ervas": [
+    "shu-di-huang",
+    "yin-yang-huo",
+    "rou-cong-rong",
+    "ba-ji-tian",
+    "du-zhong",
+    "gou-qi-zi",
+    "dang-gui"
+   ],
+   "id": "taozen-190"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Zeng Ye Tang",
+   "chines": "增液湯",
+   "nomePt": "Decocção para Aumentar Fluidos",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/zeng-ye-tang",
+   "ervas": [
+    "xuan-shen",
+    "mai-men-dong",
+    "sheng-di-huang"
+   ],
+   "id": "taozen-191"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Zhen Ren Yang Zang Tang",
+   "chines": "真人養臟湯",
+   "nomePt": "Decocção do Homem Verdadeiro para Nutrir os Órgãos",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/zhen-ren-yang-zang-tang",
+   "ervas": [
+    "ren-shen",
+    "bai-zhu",
+    "rou-dou-kou",
+    "he-zi",
+    "ying-su-ke",
+    "rou-gui",
+    "dang-gui",
+    "gan-cao"
+   ],
+   "id": "taozen-192"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Zhen Zhu Mu Wan",
+   "chines": "珍珠母丸",
+   "nomePt": "Pílula de Madrepérola",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/zhen-zhu-mu-wan",
+   "ervas": [
+    "zhen-zhu-mu",
+    "suan-zao-ren",
+    "bai-zi-ren",
+    "dang-gui",
+    "shu-di-huang"
+   ],
+   "id": "taozen-193"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Zheng Gu Zi Jin Dan",
+   "chines": "正骨紫金丹",
+   "nomePt": "Pílula de Ouro Púrpura para Ajustar Ossos",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/zheng-gu-zi-jin-dan",
+   "ervas": [
+    "san-qi",
+    "ru-xiang",
+    "mo-yao",
+    "xue-jie",
+    "gu-sui-bu",
+    "zi-ran-tong"
+   ],
+   "id": "taozen-194"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Zhi Bai Di Huang Wan",
+   "chines": "知柏地黃丸",
+   "nomePt": "Pílula dos Seis Ingredientes com Anemarrhena e Phellodendron",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/zhi-bai-di-huang-wan",
+   "ervas": [
+    "shu-di-huang",
+    "shan-zhu-yu",
+    "shan-yao",
+    "ze-xie",
+    "mu-dan-pi",
+    "fu-ling",
+    "zhi-mu",
+    "huang-bai"
+   ],
+   "formula": "zhi-bai-di-huang-wan",
+   "relacao": "mesma",
+   "id": "taozen-195"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Zhi Shi Dao Zhi Wan",
+   "chines": "枳實導滯丸",
+   "nomePt": "Pílula de Aurantium para Guiar a Estagnação",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/zhi-shi-dao-zhi-wan",
+   "ervas": [
+    "zhi-ke",
+    "da-huang",
+    "huang-lian",
+    "huang-qin",
+    "fu-ling",
+    "bai-zhu",
+    "ze-xie",
+    "shen-qu"
+   ],
+   "id": "taozen-196"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Zhi Sou San",
+   "chines": "止嗽散",
+   "nomePt": "Pó para Parar a Tosse",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/zhi-sou-san",
+   "ervas": [
+    "jie-geng",
+    "zi-wan",
+    "bai-bu",
+    "bai-qian",
+    "jing-jie",
+    "chen-pi",
+    "gan-cao"
+   ],
+   "id": "taozen-197"
+  },
+  {
+   "loja": "taimin",
+   "nome": "Zhibai Dihuang Wan",
+   "chines": "知柏地黄丸",
+   "forma": "pílulas",
+   "apresentacao": "360 pílulas",
+   "url": "https://taimin.com.br/medicina-chinesa/produtos?page=2",
+   "ervas": [
+    "zhi-mu",
+    "huang-bai",
+    "shu-di-huang",
+    "shan-zhu-yu",
+    "mu-dan-pi",
+    "shan-yao",
+    "fu-ling",
+    "ze-xie"
+   ],
+   "formula": "zhi-bai-di-huang-wan",
+   "relacao": "mesma",
+   "id": "taimin-198"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Zhu Ye Shi Gao Tang",
+   "chines": "竹葉石膏湯",
+   "nomePt": "Decocção de Folha de Bambu e Gesso",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/zhu-ye-shi-gao-tang",
+   "ervas": [
+    "shi-gao",
+    "dan-zhu-ye",
+    "mai-men-dong",
+    "ren-shen",
+    "ban-xia",
+    "geng-mi",
+    "gan-cao"
+   ],
+   "id": "taozen-199"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Zuo Gui Wan",
+   "chines": "左歸丸",
+   "nomePt": "Pílula para Restaurar o Rim Esquerdo",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 45 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/zuo-gui-wan",
+   "ervas": [
+    "shu-di-huang",
+    "shan-yao",
+    "shan-zhu-yu",
+    "gou-qi-zi",
+    "tu-si-zi",
+    "lu-jiao-jiao",
+    "gui-ban-jiao",
+    "niu-xi"
+   ],
+   "formula": "zuo-gui-wan",
+   "relacao": "mesma",
+   "id": "taozen-200"
+  },
+  {
+   "loja": "taozen",
+   "nome": "Zuo Jin Wan",
+   "chines": "左金丸",
+   "nomePt": "Pílula do Metal Esquerdo",
+   "forma": "ervas para decocção",
+   "apresentacao": "pacote de 21 g (≈ 1 semana)",
+   "url": "https://taozen.com.br/formulas-classicas/zuo-jin-wan",
+   "ervas": [
+    "huang-lian",
+    "wu-zhu-yu"
+   ],
+   "id": "taozen-201"
+  }
+ ]
+}

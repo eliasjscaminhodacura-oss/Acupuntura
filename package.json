@@ -9,6 +9,7 @@
     "typecheck": "tsc --noEmit",
     "dietetica:exportar": "node scripts/dietetica-planilha.mjs exportar",
     "dietetica:importar": "node scripts/dietetica-planilha.mjs importar",
+    "fitoterapia:produtos": "node scripts/produtos-brasil.mjs",
     "auriculo:posicionar": "node scripts/auriculo-posicionar.mjs",
     "corpo:gerar": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/corpo-real.mjs",
     "corpo:orgaos2d": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/orgaos-2d.mjs",

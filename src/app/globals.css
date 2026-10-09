@@ -738,3 +738,11 @@ button.small { padding: 6px 12px; font-size: 13px; }
   .facial-tipo { grid-template-columns: 1fr; }
   .facial-tipo-img { max-width: 260px; margin: 0 auto; }
 }
+
+/* Fitoterapia: onde encontrar no Brasil */
+.prod-onde { font-size: 13px; }
+.prod-cn { color: var(--muted); font-size: 14px; }
+.prod-rel { padding: 4px 8px; border-radius: 6px; background: rgba(62, 98, 89, .08); }
+.prod-rel.parecida { background: rgba(217, 130, 43, .1); }
+.prod-lojas p { margin: 4px 0; font-size: 14px; }
+.fito-flag.prod { background: rgba(62, 98, 89, .12); color: var(--jade); }

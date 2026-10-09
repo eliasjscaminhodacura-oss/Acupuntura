@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react';
 import type { FichaData } from '@/lib/ficha-types';
 import { CONDICOES, FITO, FORMULA, AUTO_SINDROMES, escolhidas as escolhidasDe, sindromesUsadas, sugerir, type FitoState } from '@/lib/fitoterapia';
 import { FormulaCard } from './FitoAtlas';
+import { LOJAS, produtosDaFormula } from '@/lib/produtos';
 
 type Props = {
   data: FichaData;
@@ -69,6 +70,9 @@ export default function FitoPanel({ data, ranked, state, onChange, notSaved }: P
                   <span className="diet-recipe-meta">{s.formula.nome} — para: {s.sindromes.map(nome).join(', ')}</span>
                   {s.toxica && <span className="fito-flag">contém erva tóxica/preparada</span>}
                   {s.avisos.map((a) => <span key={a} className="fito-flag alerta">⚠ {a}</span>)}
+                  {produtosDaFormula(s.formula.id).length > 0 && (
+                    <span className="fito-flag prod">No Brasil: {[...new Set(produtosDaFormula(s.formula.id).map((p) => LOJAS[p.loja].nome))].join(', ')}</span>
+                  )}
                 </span>
               </label>
               <button type="button" className="link-button" onClick={() => setAberta(aberta === s.formula.id ? null : s.formula.id)}>

@@ -3,7 +3,9 @@
 import { useMemo, useState } from 'react';
 import appData from '@/data/app_data.json';
 import type { FichaData } from '@/lib/ficha-types';
-import { CATEGORIAS, ERVA, FITO, alertasDaFormula, nomeErva, type Formula } from '@/lib/fitoterapia';
+import { CATEGORIAS, ERVA, FITO, FORMULA, alertasDaFormula, nomeErva, type Formula } from '@/lib/fitoterapia';
+import { PROD } from '@/lib/produtos';
+import ProdutosAtlas, { OndeEncontrar } from './ProdutosBrasil';
 
 // Consulta da Fitoterapia Chinesa: fórmulas, ervas, síndromes e fundamentos.
 
@@ -11,7 +13,7 @@ const data = appData as unknown as FichaData;
 const nomeSind = (c: string) => data.syndromes[c]?.name ?? c;
 const sem = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 const NATUREZAS = ['Quente', 'Morno', 'Neutro', 'Fresco', 'Frio'];
-type Aba = 'formulas' | 'ervas' | 'sindromes' | 'fundamentos';
+type Aba = 'formulas' | 'ervas' | 'sindromes' | 'produtos' | 'fundamentos';
 
 export function FormulaCard({ f, onErva }: { f: Formula; onErva?: (id: string) => void }) {
   const al = alertasDaFormula(f);
@@ -33,6 +35,7 @@ export function FormulaCard({ f, onErva }: { f: Formula; onErva?: (id: string) =
         <span className="ear-fontes"> Doses a critério do terapeuta.</span>
       </p>
       <p><strong>Síndromes da ficha:</strong> {f.sindromes.map(nomeSind).join(', ')}.</p>
+      <OndeEncontrar formulaId={f.id} />
       {(f.cuidados || al.size > 0) && (
         <p className="ear-caution">
           <strong>⚠ Cuidados:</strong> {f.cuidados}{' '}
@@ -62,12 +65,13 @@ export default function FitoAtlas() {
   const sindromes = Object.keys(data.syndromes).sort((a, b) => nomeSind(a).localeCompare(nomeSind(b)));
   const e = erva ? ERVA[erva] : null;
   const verErva = (id: string) => { setAba('ervas'); setBusca(''); setNat(null); setErva(id); };
+  const verFormula = (id: string) => { setAba('formulas'); setCat(null); setBusca(FORMULA.get(id)?.pinyin ?? ''); window.scrollTo({ top: 0, behavior: 'smooth' }); };
 
   return (
     <div className="panel fito">
       <p className="ear-caution" style={{ marginTop: 0 }}><strong>⚠ </strong>{FITO.aviso}</p>
       <div className="diet-row" role="tablist">
-        {([['formulas', `Fórmulas (${FITO.formulas.length})`], ['ervas', `Ervas (${Object.keys(ERVA).length})`], ['sindromes', 'Por síndrome'], ['fundamentos', 'Fundamentos e segurança']] as [Aba, string][]).map(([k, l]) => (
+        {([['formulas', `Fórmulas (${FITO.formulas.length})`], ['ervas', `Ervas (${Object.keys(ERVA).length})`], ['sindromes', 'Por síndrome'], ['produtos', `Onde encontrar no Brasil (${PROD.produtos.length})`], ['fundamentos', 'Fundamentos e segurança']] as [Aba, string][]).map(([k, l]) => (
           <button key={k} type="button" role="tab" aria-selected={aba === k} className={'diet-toggle' + (aba === k ? ' on' : '')} onClick={() => { setAba(k); setBusca(''); }}>{l}</button>
         ))}
       </div>
@@ -144,6 +148,8 @@ export default function FitoAtlas() {
           ) : <p className="diet-help" style={{ marginTop: 12 }}>Escolha uma síndrome para ver as fórmulas indicadas.</p>}
         </>
       )}
+
+      {aba === 'produtos' && <ProdutosAtlas onFormula={verFormula} />}
 
       {aba === 'fundamentos' && FITO.fundamentos.map((b) => (
         <section key={b.titulo}>
