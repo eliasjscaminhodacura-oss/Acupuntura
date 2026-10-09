@@ -79,10 +79,10 @@ trabalho (sem `gh` no PATH), ver se os arquivos novos respondem 200 no site.
    (produtos Taimin e TaoZen). Se o dono mandar outras lojas, acrescentar
    em `scripts/produtos-brasil.mjs` e rodar `npm run fitoterapia:produtos`
    (atualizar a lista de tempos em tempos: as lojas mudam o catálogo).
-   **Ramo `sindromes-livros` (09/10, AINDA NÃO PUBLICADO):** revisão das
-   síndromes com os livros (ver histórico 09/10). Esperando o dono testar
-   com pacientes reais no `localhost:3000` e dizer "publicar" (juntar com
-   `main`). Nada a rodar no Supabase.
+   **Revisão das síndromes com os livros publicada (09/10)** — 69
+   síndromes, com Pericárdio e Triplo Aquecedor (ver histórico 09/10).
+   Dono ainda vai rever as dietas novas (`revisado: false`). O ramo
+   `sindromes-livros` já foi juntado ao `main` e pode ser apagado.
    Se o `npm run dev` der erro de hidratação com dados velhos, encerrar o
    processo node da porta 3000 e ligar de novo.
 2. **Auriculoterapia — Souza completo** (08/10): todos os 200 pontos e os
@@ -401,6 +401,23 @@ O Claude deve fazer estes passos pelo dono, explicando cada um:
   - Simulação de 3 casos: resultado coerente (ex.: "barriga solta com o
     nervoso + pulso em Corda" → Fígado invade o BP em 1º).
   - Ao publicar, fichas antigas podem mudar um pouco de resultado.
+- **Gráfico "Órgãos mais comprometidos" corrigido** (dono testou a paciente
+  Brenda Lia): a % era relativa ao órgão mais forte (= 100%) e não batia
+  com o ciclo. Agora cada órgão mostra a % de todos os sinais marcados,
+  agrupado por elemento (título do elemento com a mesma % do ciclo; os
+  órgãos de um elemento somam essa %). Rótulos do corpo 2D/3D e do PDF
+  também. `intensity` continua só para o desenho (`src/lib/body-map.ts`).
+- **Pericárdio e Triplo Aquecedor** (tabela do dono: Fogo = Coração e
+  Pericárdio / ID e TA). `scripts/pericardio-ta.mjs` (já rodado):
+  5 síndromes do Pericárdio de Maciocia, *Fundamentos* cap. 33 (DefXueCS,
+  FgCS, FlmFgCS, EstgQiCS, EstXueCS), ligadas só aos sintomas que as
+  diferenciam do Coração (tórax, falta de ar, mãos frias, menstruação,
+  relacionamentos) para não contar o Coração em dobro; e "Via das águas do
+  TA" (AguasTA: inchaços, edema, urina diminuída), porque os livros não têm
+  síndrome Zang Fu própria do TA. Pontos, fórmulas (Gui Pi, Xie Xin, Wen
+  Dan, Ban Xia Hou Po, Xue Fu Zhu Yu, Wu Ling San), dieta e aurículo →
+  69 síndromes, todas com fórmula. Não há figura de CS/TA no corpo 2D/3D.
+  O rótulo do Fogo no ciclo continua "Coração / Intestino Delgado".
 
 ### 08/10/2026
 - **Fitoterapia Chinesa:** feita primeiro pelos clássicos e logo revisada com

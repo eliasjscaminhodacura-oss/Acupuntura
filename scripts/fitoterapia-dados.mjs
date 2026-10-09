@@ -382,9 +382,13 @@ F.push(
 // Fórmulas que já existiam e servem também para as síndromes novas.
 const MAIS = {
   'ming-mu-di-huang-wan': ['DefYnF'], 'xiao-yao-san': ['FinvBP'], 'chai-hu-shu-gan-san': ['FinvE', 'CalorQiF'],
-  'wen-dan-tang': ['FlmMente', 'DefQiVB'], 'ba-xian-chang-shou-wan': ['RnaoRecQi'], 'jin-gui-shen-qi-wan': ['RnaoRecQi', 'DefFrioB'],
-  'tian-tai-wu-yao-san': ['FrioCanalF'], 'li-zhong-wan': ['DefFrioID'], 'gui-pi-tang': ['DefXueBP'], 'lian-po-yin': ['UmdCalorE'],
+  'ba-xian-chang-shou-wan': ['RnaoRecQi'], 'jin-gui-shen-qi-wan': ['RnaoRecQi', 'DefFrioB'],
+  'tian-tai-wu-yao-san': ['FrioCanalF'], 'li-zhong-wan': ['DefFrioID'], 'lian-po-yin': ['UmdCalorE'],
   'suo-quan-wan': ['DefFrioB'], 'xuan-fu-dai-zhe-tang': ['FinvE'], 'an-shen-ding-zhi-wan': ['DefQiVB'],
+  // Pericárdio (Maciocia, Fundamentos, cap. 33) e Triplo Aquecedor (via das águas).
+  'gui-pi-tang': ['DefXueBP', 'DefXueCS'], 'si-wu-tang': ['DefXueCS'], 'xie-xin-tang': ['FgCS'], 'dao-chi-san': ['FgCS'],
+  'wen-dan-tang': ['FlmMente', 'DefQiVB', 'FlmFgCS'], 'ban-xia-hou-po-tang': ['EstgQiCS'], 'xue-fu-zhu-yu-tang': ['EstXueCS'], 'dan-shen-yin': ['EstXueCS'],
+  'wu-ling-san': ['AguasTA'],
 };
 for (const row of F) if (MAIS[row[0]]) for (const s of MAIS[row[0]]) if (!row[9].includes(s)) row[9].push(s);
 

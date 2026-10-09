@@ -63,7 +63,13 @@
     "DefXueBP": { "pontos": ["CO13", "CO12", "CO4", "CO18", "AT4"], "principio": "Fortalecer o Baço e nutrir o Sangue." },
     "UmdCalorE": { "pontos": ["CO4", "CO13", "TG4", "HX6,7i", "AT4"], "principio": "Drenar a Umidade-Calor do Estômago." },
     "DefFrioB": { "pontos": ["CO9", "CO10", "HX3", "AT4", "TF2"], "principio": "Aquecer e firmar a Bexiga." },
-    "CalorQiF": { "pontos": ["CO12", "CO11", "HX6,7i", "TF4", "AT4"], "principio": "Mover o Qi do Fígado e clarear o Calor." }
+    "CalorQiF": { "pontos": ["CO12", "CO11", "HX6,7i", "TF4", "AT4"], "principio": "Mover o Qi do Fígado e clarear o Calor." },
+    "DefXueCS": { "pontos": ["CO15", "TF4", "CO13", "CO18", "AT4"], "principio": "Nutrir o Sangue do Coração e do Pericárdio e acalmar o Shen." },
+    "FgCS": { "pontos": ["CO15", "TF4", "HX6,7i", "CO12", "AT4"], "principio": "Drenar o Fogo do Pericárdio e acalmar o Shen." },
+    "FlmFgCS": { "pontos": ["CO15", "TF4", "AT4", "CO13", "CO12", "HX6,7i"], "principio": "Transformar a Fleuma-Fogo e acalmar o Shen." },
+    "EstgQiCS": { "pontos": ["CO15", "CO12", "TF4", "AT4", "AH10"], "principio": "Mover o Qi no tórax e acalmar o Shen." },
+    "EstXueCS": { "pontos": ["CO15", "AH6a", "AT4", "TF4", "AH10", "CO12"], "principio": "Mover o Sangue no tórax. Dor no peito: encaminhar à avaliação médica." },
+    "AguasTA": { "pontos": ["CO17", "CO10", "CO13", "CO14", "CO9", "CO18"], "principio": "Regular o Triplo Aquecedor e drenar os líquidos." }
   },
   "sintomas": [
     { "nome": "Insônia / sono agitado", "itens": ["SONO|Início|*", "SONO|Acorda no meio da noite|*", "SONO|Sonho|*"], "pontos": ["TF4", "AT4", "CO15", "LO4", "CO10", "AT3", "LOn"] },

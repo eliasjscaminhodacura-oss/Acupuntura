@@ -45,7 +45,8 @@
    "sup_prof": "Prof",
    "syndromes": [
     "EstgXueC",
-    "ColapsQiC"
+    "ColapsQiC",
+    "EstXueCS"
    ]
   },
   {
@@ -125,7 +126,8 @@
    "syndromes": [
     "DefQiE",
     "DefYgBP",
-    "DefYgR"
+    "DefYgR",
+    "AguasTA"
    ]
   },
   {
@@ -162,7 +164,8 @@
     "FgF",
     "DefYnR",
     "CalorID",
-    "CalorXue"
+    "CalorXue",
+    "FgCS"
    ]
   },
   {
@@ -176,7 +179,8 @@
    "sup_prof": "",
    "syndromes": [
     "FlmC",
-    "FlmMente"
+    "FlmMente",
+    "FlmFgCS"
    ]
   },
   {
@@ -208,7 +212,8 @@
     "DefYgC",
     "DefQiE",
     "FlmMente",
-    "EstgQiC"
+    "EstgQiC",
+    "EstgQiCS"
    ]
   },
   {
@@ -286,7 +291,10 @@
     "DefYnE",
     "FinvBP",
     "FinvE",
-    "CalorQiF"
+    "CalorQiF",
+    "FgCS",
+    "FlmFgCS",
+    "EstgQiCS"
    ]
   },
   {
@@ -405,7 +413,8 @@
     "DefXueC",
     "DefYnC",
     "FlmC",
-    "DefQiVB"
+    "DefQiVB",
+    "DefXueCS"
    ]
   },
   {
@@ -449,7 +458,8 @@
    "sup_prof": "Prof",
    "syndromes": [
     "FlmMente",
-    "FlmC"
+    "FlmC",
+    "FlmFgCS"
    ]
   },
   {
@@ -596,7 +606,8 @@
     "EstgXueC",
     "FgC",
     "FlmC",
-    "FlmMente"
+    "FlmMente",
+    "FlmFgCS"
    ]
   },
   {
@@ -614,7 +625,10 @@
     "ColapsQiC",
     "RnaoRecQi",
     "EstgQiC",
-    "CalorP"
+    "CalorP",
+    "DefXueCS",
+    "EstgQiCS",
+    "EstXueCS"
    ]
   },
   {
@@ -795,7 +809,8 @@
    "sup_prof": "Prof",
    "syndromes": [
     "DefYgR",
-    "DefYgBP"
+    "DefYgBP",
+    "AguasTA"
    ]
   },
   {
@@ -811,7 +826,8 @@
     "DefYgR",
     "DefYgBP",
     "UmdFrioBP",
-    "UmdCalorBP"
+    "UmdCalorBP",
+    "AguasTA"
    ]
   },
   {
@@ -827,7 +843,8 @@
     "DefYgR",
     "DefYgBP",
     "UmdFrioBP",
-    "UmdCalorBP"
+    "UmdCalorBP",
+    "AguasTA"
    ]
   },
   {
@@ -841,7 +858,8 @@
    "sup_prof": "Prof",
    "syndromes": [
     "DefYgR",
-    "RnaoRecQi"
+    "RnaoRecQi",
+    "AguasTA"
    ]
   },
   {
@@ -854,7 +872,8 @@
    "fr_cal": "",
    "sup_prof": "Prof",
    "syndromes": [
-    "DefQiR"
+    "DefQiR",
+    "AguasTA"
    ]
   },
   {
@@ -869,7 +888,8 @@
    "syndromes": [
     "DefYgR",
     "UmdFrioB",
-    "UmdCalorB"
+    "UmdCalorB",
+    "AguasTA"
    ]
   },
   {
@@ -1334,7 +1354,8 @@
     "EstgXueC",
     "FlmFrioP",
     "FlmCalorP",
-    "CalorP"
+    "CalorP",
+    "EstXueCS"
    ]
   },
   {
@@ -1484,7 +1505,8 @@
    "sup_prof": "",
    "syndromes": [
     "EstgXueF",
-    "EstgXueC"
+    "EstgXueC",
+    "EstXueCS"
    ]
   },
   {
@@ -1896,7 +1918,8 @@
     "DefQiBP",
     "ColapsQiBP",
     "FinvE",
-    "DefXueBP"
+    "DefXueBP",
+    "EstgQiCS"
    ]
   },
   {
@@ -1913,7 +1936,8 @@
     "DefQiP",
     "EstgQiF",
     "UmdCalorBP",
-    "UmdFrioBP"
+    "UmdFrioBP",
+    "AguasTA"
    ]
   },
   {
@@ -2036,7 +2060,10 @@
     "RnaoRecQi",
     "FrioCanalF",
     "DefFrioID",
-    "EstgQiC"
+    "EstgQiC",
+    "DefXueCS",
+    "EstgQiCS",
+    "EstXueCS"
    ]
   },
   {
@@ -2302,7 +2329,8 @@
    "sup_prof": "Prof",
    "syndromes": [
     "DefYgR",
-    "DefYgBP"
+    "DefYgBP",
+    "AguasTA"
    ]
   },
   {
@@ -2316,7 +2344,8 @@
    "sup_prof": "Prof",
    "syndromes": [
     "UmdCalorBP",
-    "UmdFrioBP"
+    "UmdFrioBP",
+    "AguasTA"
    ]
   },
   {
@@ -3605,7 +3634,8 @@
    "syndromes": [
     "CalorE",
     "FgC",
-    "CalorID"
+    "CalorID",
+    "FgCS"
    ]
   },
   {
@@ -3706,7 +3736,9 @@
     "FgC",
     "FgF",
     "UmdCalorF",
-    "CalorQiF"
+    "CalorQiF",
+    "FgCS",
+    "FlmFgCS"
    ]
   },
   {
@@ -3806,7 +3838,8 @@
    "sup_prof": "Prof",
    "syndromes": [
     "EstgQiF",
-    "EstgQiC"
+    "EstgQiC",
+    "EstgQiCS"
    ]
   },
   {
@@ -4031,7 +4064,8 @@
    "syndromes": [
     "FlmMente",
     "FlmFrioP",
-    "FlmC"
+    "FlmC",
+    "FlmFgCS"
    ]
   },
   {
@@ -4092,7 +4126,8 @@
     "DefQiVB",
     "FinvBP",
     "FinvE",
-    "EstgQiC"
+    "EstgQiC",
+    "EstgQiCS"
    ]
   },
   {
@@ -4144,7 +4179,8 @@
     "DefQiC",
     "EstgXueC",
     "EstgQiF",
-    "EstgXueF"
+    "EstgXueF",
+    "EstXueCS"
    ]
   },
   {
@@ -4215,7 +4251,12 @@
    "syndromes": [
     "EstgQiF",
     "EstgXueC",
-    "EstgQiC"
+    "EstgQiC",
+    "DefXueCS",
+    "FgCS",
+    "FlmFgCS",
+    "EstgQiCS",
+    "EstXueCS"
    ]
   },
   {
@@ -4232,7 +4273,12 @@
     "FlmFrioP",
     "FlmCalorP",
     "EstgQiC",
-    "CalorQiF"
+    "CalorQiF",
+    "DefXueCS",
+    "FgCS",
+    "FlmFgCS",
+    "EstgQiCS",
+    "EstXueCS"
    ]
   },
   {
@@ -4361,7 +4407,8 @@
     "UmdFrioBP",
     "UmdCalorIG",
     "UmdCalorB",
-    "UmdCalorE"
+    "UmdCalorE",
+    "AguasTA"
    ]
   },
   {
@@ -5456,7 +5503,8 @@
     "UmdCalorB",
     "CalorID",
     "UmdCalorIG",
-    "CalorIG"
+    "CalorIG",
+    "AguasTA"
    ]
   },
   {
@@ -5975,7 +6023,8 @@
    "sup_prof": "Prof",
    "syndromes": [
     "EstgQiF",
-    "CalorQiF"
+    "CalorQiF",
+    "EstgQiCS"
    ]
   },
   {
@@ -6099,7 +6148,8 @@
     "DefQiBP",
     "ColapsQiBP",
     "BPcontrXue",
-    "CalorXue"
+    "CalorXue",
+    "FgCS"
    ]
   },
   {
@@ -6116,7 +6166,8 @@
     "EstgXueF",
     "DefJgR",
     "DefYnF",
-    "DefXueBP"
+    "DefXueBP",
+    "DefXueCS"
    ]
   },
   {
@@ -6132,7 +6183,8 @@
     "DefXueF",
     "EstgXueF",
     "DefYnF",
-    "DefXueBP"
+    "DefXueBP",
+    "DefXueCS"
    ]
   },
   {
@@ -6197,7 +6249,8 @@
    "fr_cal": "",
    "sup_prof": "Prof",
    "syndromes": [
-    "EstgXueF"
+    "EstgXueF",
+    "EstXueCS"
    ]
   },
   {
@@ -6314,7 +6367,8 @@
    "fr_cal": "",
    "sup_prof": "Prof",
    "syndromes": [
-    "EstgXueF"
+    "EstgXueF",
+    "EstXueCS"
    ]
   },
   {
@@ -6531,7 +6585,8 @@
    "fr_cal": "",
    "sup_prof": "Prof",
    "syndromes": [
-    "EstgXueF"
+    "EstgXueF",
+    "EstgQiCS"
    ]
   },
   {
@@ -6655,7 +6710,8 @@
    "sup_prof": "Prof",
    "syndromes": [
     "DefYgBP",
-    "DefYgR"
+    "DefYgR",
+    "AguasTA"
    ]
   },
   {
@@ -6702,7 +6758,8 @@
     "DefYgBP",
     "UmdFrioBP",
     "UmdCalorBP",
-    "FlmMente"
+    "FlmMente",
+    "FlmFgCS"
    ]
   },
   {
@@ -7010,7 +7067,8 @@
     "UmdCalorB",
     "UmdFrioB",
     "UmdCalorE",
-    "UmdCalorF"
+    "UmdCalorF",
+    "AguasTA"
    ]
   },
   {
@@ -7542,6 +7600,54 @@
    "organ_name": "Fígado",
    "element": "Madeira",
    "alma": "Hun"
+  },
+  "DefXueCS": {
+   "code": "DefXueCS",
+   "name": "Defic. Xue do CS",
+   "organ": "CS",
+   "organ_name": "Pericárdio",
+   "element": "Fogo",
+   "alma": "Shen"
+  },
+  "FgCS": {
+   "code": "FgCS",
+   "name": "Fogo do CS",
+   "organ": "CS",
+   "organ_name": "Pericárdio",
+   "element": "Fogo",
+   "alma": "Shen"
+  },
+  "FlmFgCS": {
+   "code": "FlmFgCS",
+   "name": "Fleuma-Fogo no CS",
+   "organ": "CS",
+   "organ_name": "Pericárdio",
+   "element": "Fogo",
+   "alma": "Shen"
+  },
+  "EstgQiCS": {
+   "code": "EstgQiCS",
+   "name": "Estagnação Qi do CS",
+   "organ": "CS",
+   "organ_name": "Pericárdio",
+   "element": "Fogo",
+   "alma": "Shen"
+  },
+  "EstXueCS": {
+   "code": "EstXueCS",
+   "name": "Estase Xue do CS",
+   "organ": "CS",
+   "organ_name": "Pericárdio",
+   "element": "Fogo",
+   "alma": "Shen"
+  },
+  "AguasTA": {
+   "code": "AguasTA",
+   "name": "Via das águas do TA",
+   "organ": "TA",
+   "organ_name": "Triplo Aquecedor",
+   "element": "Fogo",
+   "alma": "Shen"
   }
  },
  "clinical_notes": {
@@ -7859,6 +7965,36 @@
    "principio": "Mover o Qi do Fígado e clarear o Calor.",
    "pontos": "F2, F3, VB34, CS6, TA6, VC17.",
    "psicossomatica": "Frustração antiga que virou irritação quente."
+  },
+  "DefXueCS": {
+   "principio": "Nutrir o Sangue, fortalecer o Coração e o Pericárdio e mover o Qi e o Sangue no tórax.",
+   "pontos": "CS6 (Neiguan), C7, VC14, VC15, VC4, B17 (moxa), B20, B14, VC17; CS6 com BP4.",
+   "psicossomatica": "Vazio nos relacionamentos: carência, insegurança afetiva, sensação de não ser cuidado."
+  },
+  "FgCS": {
+   "principio": "Drenar o Fogo do Coração e do Pericárdio e acalmar o Shen.",
+   "pontos": "CS8 (Laogong), C8, B14, VC15, VC14, VC17, IG11, VG24, VG19, BP6, F2.",
+   "psicossomatica": "Paixão e mágoa nos relacionamentos que “queimam” o peito: agitação, ciúme, inquietação."
+  },
+  "FlmFgCS": {
+   "principio": "Drenar o Fogo do Pericárdio e do Coração, transformar a Fleuma, abrir os orifícios da Mente e acalmá-la.",
+   "pontos": "CS5 (Jianshi), C7, C8, C9, CS7, VC15, B15, B14, VC17, VC12, E40, BP6, B20, F2.",
+   "psicossomatica": "Relações tumultuadas: explosões, confusão emocional, perda do controle de si."
+  },
+  "EstgQiCS": {
+   "principio": "Mover o Qi no tórax, regular o Pericárdio e o Coração e acalmar o Shen.",
+   "pontos": "CS6 (Neiguan), C5, C7, VC14, VC15, VC17, B14, P7, E40, IG4.",
+   "psicossomatica": "Tristeza e frustração nos relacionamentos “presas no peito”: aperto, suspiros, nó na garganta."
+  },
+  "EstXueCS": {
+   "principio": "Mover o Sangue no tórax, regular o Pericárdio e o Coração e acalmar o Shen. Dor no peito: encaminhar à avaliação médica.",
+   "pontos": "CS6 (Neiguan), CS4 (Ximen), C7, VC14, VC17, B14, B17, BP10.",
+   "psicossomatica": "Mágoa antiga nos relacionamentos que “endureceu” no peito."
+  },
+  "AguasTA": {
+   "principio": "Abrir e regular a passagem das águas nos três Aquecedores (Pulmão, Baço e Rim) e promover a diurese.",
+   "pontos": "VC5 (Shimen, Mu do TA), B22 (Sanjiaoshu), B39 (Weiyang), TA4, TA6, VC9 (Shuifen), BP9, P7, R7.",
+   "psicossomatica": "Sentir-se “encharcado” e retido: dificuldade de fazer circular e de deixar passar."
   }
  }
 }

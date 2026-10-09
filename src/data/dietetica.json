@@ -5303,6 +5303,199 @@
         "carne-de-cordeiro"
       ],
       "revisado": false
+    },
+    "DefXueCS": {
+      "principio": "Nutrir o Sangue, fortalecer o Coração e o Pericárdio e mover o Qi e o Sangue no tórax.",
+      "paciente": "Falta \"sangue\" para nutrir o coração e a mente (sono leve, palpitações, memória fraca, ansiedade). Prefira alimentos que nutrem o sangue e refeições calmas e regulares.",
+      "naturezas": [
+        "Neutro",
+        "Morno"
+      ],
+      "preparo": "Sopas, cozidos e congee com tâmaras.",
+      "prefira": [
+        "tamara-jujuba",
+        "lichia",
+        "ovo",
+        "goji-berry",
+        "uva-passa",
+        "beterraba",
+        "trigo-integral",
+        "aveia",
+        "figado-boi-ou-galinha",
+        "ostra-e-mariscos",
+        "feijao-preto",
+        "couve",
+        "uva",
+        "cereja"
+      ],
+      "evite": [
+        "cafe",
+        "bebidas-alcoolicas",
+        "pimenta-vermelha",
+        "acucar-refinado-e-doces"
+      ],
+      "revisado": false
+    },
+    "FgCS": {
+      "principio": "Drenar o Fogo do Coração e do Pericárdio e acalmar o Shen.",
+      "paciente": "Há \"fogo\" no coração (agitação, insônia, aftas na língua, calor). Prefira alimentos frescos e um toque amargo; evite estimulantes, álcool e picantes.",
+      "naturezas": [
+        "Fresco",
+        "Frio",
+        "Neutro"
+      ],
+      "preparo": "Sopas frescas, cozidos rápidos e vapor.",
+      "prefira": [
+        "feijao-mungo-moyashi",
+        "feijao-azuki",
+        "melancia",
+        "pepino",
+        "alface",
+        "jilo",
+        "trigo-integral",
+        "aipo-salsao",
+        "broto-de-feijao",
+        "maracuja",
+        "cevada",
+        "chuchu",
+        "abobrinha",
+        "agriao"
+      ],
+      "evite": [
+        "cafe",
+        "bebidas-alcoolicas",
+        "pimenta-vermelha",
+        "frituras-e-comidas-gordurosas",
+        "carne-de-cordeiro",
+        "canela"
+      ],
+      "revisado": false
+    },
+    "FlmFgCS": {
+      "principio": "Drenar o Fogo do Pericárdio e do Coração, transformar a Fleuma, abrir os orifícios da Mente e acalmá-la.",
+      "paciente": "Há \"muco e calor\" perturbando a mente (agitação, confusão, insônia). Alimentos leves e frescos; evite gordura, doces, laticínios, álcool e estimulantes.",
+      "naturezas": [
+        "Fresco",
+        "Neutro"
+      ],
+      "preparo": "Sopas leves e cozidos no vapor.",
+      "prefira": [
+        "rabanete-nabo",
+        "pera",
+        "algas-kombu-nori",
+        "agriao",
+        "feijao-mungo-moyashi",
+        "aipo-salsao",
+        "cevada",
+        "casca-de-tangerina-seca",
+        "maracuja",
+        "amendoa",
+        "painco-milheto",
+        "feijao-azuki",
+        "tofu-e-soja",
+        "chuchu"
+      ],
+      "evite": [
+        "frituras-e-comidas-gordurosas",
+        "leite-de-vaca",
+        "queijo",
+        "acucar-refinado-e-doces",
+        "bebidas-alcoolicas",
+        "cafe",
+        "pimenta-vermelha"
+      ],
+      "revisado": false
+    },
+    "EstgQiCS": {
+      "principio": "Mover o Qi no tórax, regular o Pericárdio e o Coração e acalmar o Shen.",
+      "paciente": "Aperto no peito e tristeza “presa”. Refeições leves e aromáticas, que ajudam o Qi a circular.",
+      "naturezas": [
+        "Neutro",
+        "Morno"
+      ],
+      "preparo": "Cozidos leves com temperos aromáticos.",
+      "prefira": [
+        "casca-de-tangerina-seca",
+        "hortela",
+        "cebola",
+        "cebolinha",
+        "manjericao",
+        "rabanete-nabo",
+        "alho-poro",
+        "camomila-cha",
+        "arroz-branco"
+      ],
+      "evite": [
+        "frituras-e-comidas-gordurosas",
+        "acucar-refinado-e-doces",
+        "bebidas-geladas-e-sorvetes",
+        "embutidos-e-industrializados"
+      ],
+      "revisado": false
+    },
+    "EstXueCS": {
+      "principio": "Mover o Sangue no tórax, regular o Pericárdio e o Coração e acalmar o Shen.",
+      "paciente": "A circulação no coração está \"travada\" (dor ou aperto no peito). Este quadro exige acompanhamento médico. Alimentos que ajudam a circulação, com pouca gordura e pouco sal.",
+      "naturezas": [
+        "Neutro",
+        "Morno"
+      ],
+      "preparo": "Cozidos leves, vapor; pouca gordura e pouco sal.",
+      "prefira": [
+        "curcuma-acafrao-da-terra",
+        "cebola",
+        "alho",
+        "beterraba",
+        "vinagre",
+        "pessego",
+        "cebolinha",
+        "berinjela",
+        "alho-poro",
+        "acucar-mascavo",
+        "centeio",
+        "pimentao",
+        "casca-de-tangerina-seca",
+        "erva-doce-funcho"
+      ],
+      "evite": [
+        "frituras-e-comidas-gordurosas",
+        "embutidos-e-industrializados",
+        "queijo",
+        "acucar-refinado-e-doces",
+        "bebidas-geladas-e-sorvetes",
+        "bebidas-alcoolicas"
+      ],
+      "revisado": false
+    },
+    "AguasTA": {
+      "principio": "Abrir a passagem das águas e drenar a retenção de líquidos.",
+      "paciente": "O corpo está “segurando água” (inchaço, urina pouca). Alimentos que ajudam a eliminar líquidos, pouco sal e nada gelado.",
+      "naturezas": [
+        "Neutro",
+        "Morno"
+      ],
+      "preparo": "Sopas e cozidos leves; pouco sal.",
+      "prefira": [
+        "feijao-azuki",
+        "cevada",
+        "milho-e-fuba",
+        "abobora",
+        "aipo-salsao",
+        "pepino",
+        "melancia",
+        "casca-de-tangerina-seca",
+        "gengibre-fresco",
+        "arroz-branco"
+      ],
+      "evite": [
+        "embutidos-e-industrializados",
+        "bebidas-geladas-e-sorvetes",
+        "acucar-refinado-e-doces",
+        "frituras-e-comidas-gordurosas",
+        "leite-de-vaca",
+        "bebidas-alcoolicas"
+      ],
+      "revisado": false
     }
   },
   "receitas": [
@@ -5319,7 +5512,8 @@
         "ColapsQiBP",
         "BPcontrXue",
         "DefQiP",
-        "DefXueC"
+        "DefXueC",
+        "DefXueCS"
       ],
       "ingredientes": [
         {
@@ -5416,7 +5610,8 @@
         "DefQiP",
         "ColapsQiBP",
         "FrioE",
-        "DefFrioID"
+        "DefFrioID",
+        "AguasTA"
       ],
       "ingredientes": [
         {
@@ -6096,7 +6291,8 @@
         "DefYnC",
         "DefXueC",
         "DefYnE",
-        "SecIG"
+        "SecIG",
+        "DefXueCS"
       ],
       "ingredientes": [
         {
@@ -6139,7 +6335,8 @@
         "DefXueF",
         "VtF",
         "DefXueC",
-        "DefXueBP"
+        "DefXueBP",
+        "DefXueCS"
       ],
       "ingredientes": [
         {
@@ -6182,7 +6379,8 @@
         "DefXueC",
         "DefXueF",
         "BPcontrXue",
-        "DefXueBP"
+        "DefXueBP",
+        "DefXueCS"
       ],
       "ingredientes": [
         {
@@ -6229,7 +6427,8 @@
       "indicacoes": [
         "DefXueF",
         "DefXueC",
-        "DefXueBP"
+        "DefXueBP",
+        "DefXueCS"
       ],
       "ingredientes": [
         {
@@ -6285,7 +6484,8 @@
         "CalorIG",
         "CalorXue",
         "UmdCalorE",
-        "CalorQiF"
+        "CalorQiF",
+        "FgCS"
       ],
       "ingredientes": [
         {
@@ -6408,7 +6608,8 @@
         "CalorID",
         "FgC",
         "CalorE",
-        "CalorIG"
+        "CalorIG",
+        "FgCS"
       ],
       "ingredientes": [
         {
@@ -6576,7 +6777,8 @@
       "indicacoes": [
         "UmdFrioBP",
         "UmdFrioIG",
-        "DefQiBP"
+        "DefQiBP",
+        "AguasTA"
       ],
       "ingredientes": [
         {
@@ -6634,7 +6836,8 @@
         "DefQiVB",
         "FinvBP",
         "FinvE",
-        "EstgQiC"
+        "EstgQiC",
+        "EstgQiCS"
       ],
       "ingredientes": [
         {
@@ -6676,7 +6879,9 @@
         "FinvBP",
         "FinvE",
         "EstXueE",
-        "EstgQiC"
+        "EstgQiC",
+        "EstgQiCS",
+        "EstXueCS"
       ],
       "ingredientes": [
         {
@@ -6723,7 +6928,8 @@
       "indicacoes": [
         "EstgXueF",
         "EstgXueC",
-        "EstXueE"
+        "EstXueE",
+        "EstXueCS"
       ],
       "ingredientes": [
         {
@@ -6774,7 +6980,8 @@
         "FrioE",
         "FinvBP",
         "FinvE",
-        "EstgQiC"
+        "EstgQiC",
+        "EstgQiCS"
       ],
       "ingredientes": [
         {
@@ -6809,7 +7016,8 @@
         "RebelE",
         "FlmC",
         "FlmMente",
-        "CalorP"
+        "CalorP",
+        "FlmFgCS"
       ],
       "ingredientes": [
         {
@@ -7046,7 +7254,8 @@
         "VtCalorP",
         "FlmC",
         "FlmMente",
-        "CalorP"
+        "CalorP",
+        "FlmFgCS"
       ],
       "ingredientes": [
         {
@@ -7093,7 +7302,8 @@
       "indicacoes": [
         "FlmFrioP",
         "VtFrioP",
-        "UmdFrioBP"
+        "UmdFrioBP",
+        "AguasTA"
       ],
       "ingredientes": [
         {
@@ -7264,7 +7474,8 @@
       "indicacoes": [
         "DefXueC",
         "DefYnC",
-        "DefQiC"
+        "DefQiC",
+        "DefXueCS"
       ],
       "ingredientes": [
         {

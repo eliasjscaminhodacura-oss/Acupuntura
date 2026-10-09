@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import dynamic from 'next/dynamic';
 import { BODY_H, BODY_W, BREAST_LINES, ORGANS, bodyOutline, pointPositions, type BodyResult, type BodyView } from '@/lib/body-map';
 import { ELEMENT_COLOR } from '@/lib/ficha-logic';
@@ -61,7 +61,7 @@ function IllustratedView({ view, body, corpo, selected, onSelect }: {
           const color = ELEMENT_COLOR[hit.element];
           return (
             <g key={o.organ} filter={`url(#${id}-glow)`} className={hit.intensity > 0.99 ? 'holo-organ-top' : undefined}>
-              <title>{`${o.organ}: ${Math.round(hit.intensity * 100)}%`}</title>
+              <title>{`${o.organ}: ${hit.pct}%`}</title>
               <path d={loopsPath(o.loops)} fillRule="evenodd" fill={color} fillOpacity={0.05 + 0.15 * hit.intensity}
                 stroke={shade(color, 1.4)} strokeWidth={1.1} strokeLinejoin="round" />
             </g>
@@ -156,7 +156,7 @@ function View({ view, body, corpo, selected, onSelect }: {
           const opacity = img ? (hit ? 0.12 + 0.3 * hit.intensity : 0) : hit ? 0.35 + 0.6 * hit.intensity : 0.1;
           return (
             <g key={o.organ} filter={hit ? `url(#${id}-glow)` : undefined} className={hit && hit.intensity > 0.99 ? 'holo-organ-top' : undefined}>
-              <title>{hit ? `${o.organ}: ${Math.round(hit.intensity * 100)}%` : o.organ}</title>
+              <title>{hit ? `${o.organ}: ${hit.pct}%` : o.organ}</title>
               <path d={loopsPath(o.loops)} fillRule="evenodd" fill={color} fillOpacity={opacity}
                 stroke={hit ? shade(color, 1.4) : CYAN} strokeOpacity={hit ? 0.95 : img ? 0 : 0.45}
                 strokeWidth={img ? 1.1 : 0.7} strokeLinejoin="round" />
@@ -171,7 +171,7 @@ function View({ view, body, corpo, selected, onSelect }: {
           const opacity = hit ? 0.35 + 0.6 * hit.intensity : 0.12;
           return (
             <g key={o.organ} filter={hit ? `url(#${id}-glow)` : undefined} className={hit && hit.intensity > 0.99 ? 'holo-organ-top' : undefined}>
-              <title>{hit ? `${o.organ}: ${Math.round(hit.intensity * 100)}%` : o.organ}</title>
+              <title>{hit ? `${o.organ}: ${hit.pct}%` : o.organ}</title>
               {o.shapes.map((s, i) =>
                 s.kind === 'ellipse' ? (
                   <ellipse key={i} cx={s.cx} cy={s.cy} rx={s.rx} ry={s.ry} fill={color} fillOpacity={opacity}
@@ -258,13 +258,20 @@ export default function BodyHologram({ body, sex }: { body: BodyResult; sex: Sex
       )}
 
       <div className="holo-legend">
-        {body.organs.length > 0 && <h4>Órgãos mais comprometidos</h4>}
-        {body.organs.map((o) => (
-          <div key={o.organ} className="organ-bar">
-            <span className="organ-name">{o.organ}</span>
-            <span className="bar"><span style={{ width: `${Math.round(o.intensity * 100)}%`, background: ELEMENT_COLOR[o.element] }} /></span>
-            <span className="organ-pct">{Math.round(o.intensity * 100)}%</span>
-          </div>
+        {body.organs.length > 0 && <h4>Órgãos mais comprometidos <small>(% de todos os sinais marcados, como no ciclo dos 5 elementos)</small></h4>}
+        {body.organs.map((o, i) => (
+          <Fragment key={o.organ}>
+            {o.element !== body.organs[i - 1]?.element && (
+              <div className="organ-el" style={{ color: ELEMENT_COLOR[o.element] }}>
+                {o.element} <span>{body.organs.filter((x) => x.element === o.element).reduce((t, x) => t + x.pct, 0)}%</span>
+              </div>
+            )}
+            <div className="organ-bar">
+              <span className="organ-name">{o.organ}</span>
+              <span className="bar"><span style={{ width: `${o.pct}%`, background: ELEMENT_COLOR[o.element] }} /></span>
+              <span className="organ-pct">{o.pct}%</span>
+            </div>
+          </Fragment>
         ))}
 
         {body.organs.length > 0 && body.points.length > 0 && (

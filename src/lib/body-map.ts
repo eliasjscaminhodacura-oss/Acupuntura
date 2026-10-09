@@ -208,7 +208,9 @@ export function pointCodes(text: string): string[] {
 }
 
 export type BodyResult = {
-  organs: { organ: string; score: number; intensity: number; element: string }[]; // mais comprometido primeiro
+  // pct: parte do total de sinais (como no ciclo dos 5 elementos; os órgãos de
+  // um elemento somam a % dele). intensity: relativo ao órgão mais forte (desenho).
+  organs: { organ: string; score: number; intensity: number; pct: number; element: string }[]; // elemento mais comprometido primeiro
   points: { code: string; def: PointDef; syndromes: string[] }[];
 };
 
@@ -229,9 +231,26 @@ export function buildBodyResult(
     organMap.set(info.organ_name, cur);
   }
   const max = Math.max(1, ...[...organMap.values()].map((o) => o.score));
+  // O elemento soma os seus órgãos (ex.: Terra = Baço + Estômago); por isso
+  // os órgãos vêm agrupados pelo elemento mais comprometido primeiro, para
+  // o gráfico coincidir com o ciclo dos 5 elementos.
+  const elementTotal = new Map<string, number>();
+  for (const o of organMap.values()) elementTotal.set(o.element, (elementTotal.get(o.element) ?? 0) + o.score);
+  const total = [...organMap.values()].reduce((t, o) => t + o.score, 0);
   const organs = [...organMap.entries()]
-    .map(([organ, o]) => ({ organ, score: o.score, intensity: o.score / max, element: o.element }))
-    .sort((a, b) => b.score - a.score);
+    .map(([organ, o]) => ({ organ, score: o.score, intensity: o.score / max, pct: 0, element: o.element }))
+    .sort((a, b) => elementTotal.get(b.element)! - elementTotal.get(a.element)! || a.element.localeCompare(b.element) || b.score - a.score);
+  // Arredonda cada órgão de forma que os de um elemento somem a % que o ciclo mostra.
+  for (const [element, et] of elementTotal) {
+    const grupo = organs.filter((o) => o.element === element);
+    const raw = grupo.map((o) => (o.score / total) * 100);
+    grupo.forEach((o, i) => (o.pct = Math.floor(raw[i])));
+    let falta = Math.round((et / total) * 100) - grupo.reduce((t, o) => t + o.pct, 0);
+    for (const i of raw.map((v, i) => i).sort((a, b) => (raw[b] % 1) - (raw[a] % 1))) {
+      if (falta-- <= 0) break;
+      grupo[i].pct += 1;
+    }
+  }
 
   const pointMap = new Map<string, string[]>();
   for (const code of topCodes) {

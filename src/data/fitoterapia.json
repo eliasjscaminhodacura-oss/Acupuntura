@@ -1867,7 +1867,8 @@
     "DefXueC",
     "BPcontrXue",
     "DefQiC",
-    "DefXueBP"
+    "DefXueBP",
+    "DefXueCS"
    ]
   },
   {
@@ -1915,7 +1916,8 @@
    "indicacoes": "Palidez, tontura, vista turva, unhas fracas, menstruação escassa ou atrasada. Fórmula-base do Sangue.",
    "cuidados": "Pesada para o Baço fraco; evitar na diarreia.",
    "sindromes": [
-    "DefXueF"
+    "DefXueF",
+    "DefXueCS"
    ]
   },
   {
@@ -2386,7 +2388,8 @@
    "cuidados": "Proibida na gestação; interage com anticoagulantes. Dor no peito exige avaliação cardiológica.",
    "sindromes": [
     "EstgXueC",
-    "EstgXueF"
+    "EstgXueF",
+    "EstXueCS"
    ]
   },
   {
@@ -2531,7 +2534,8 @@
    "indicacoes": "Fogo no Coração: inquietação, insônia, rosto vermelho, aftas, sangramento por calor, prisão de ventre.",
    "cuidados": "Muito fria e purgativa: uso curto. Proibida na gestação.",
    "sindromes": [
-    "FgC"
+    "FgC",
+    "FgCS"
    ]
   },
   {
@@ -2551,7 +2555,8 @@
    "cuidados": "Usar só Mu Tong de Akebia (nunca Guan Mu Tong).",
    "sindromes": [
     "CalorID",
-    "FgC"
+    "FgC",
+    "FgCS"
    ]
   },
   {
@@ -2596,7 +2601,8 @@
    "sindromes": [
     "FlmC",
     "DefQiVB",
-    "FlmMente"
+    "FlmMente",
+    "FlmFgCS"
    ]
   },
   {
@@ -2856,7 +2862,8 @@
    "cuidados": "Evitar na gestação (apostila de remédios patenteados).",
    "sindromes": [
     "UmdFrioB",
-    "UmdFrioBP"
+    "UmdFrioBP",
+    "AguasTA"
    ]
   },
   {
@@ -3360,7 +3367,8 @@
    "cuidados": "Interage com anticoagulantes.",
    "sindromes": [
     "EstXueE",
-    "EstgXueC"
+    "EstgXueC",
+    "EstXueCS"
    ]
   },
   {
@@ -3403,7 +3411,8 @@
    "cuidados": "Evitar na deficiência de Yin com secura.",
    "sindromes": [
     "EstgQiC",
-    "EstgQiF"
+    "EstgQiF",
+    "EstgQiCS"
    ]
   },
   {

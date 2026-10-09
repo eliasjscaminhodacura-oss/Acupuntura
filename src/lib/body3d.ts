@@ -376,7 +376,7 @@ export function createBodyScene(model: BodyModel): BodyScene {
         u.uBase.value = h ? 0.12 + 0.4 * h.intensity : 0.07;
         u.uRim.value = h ? 0.6 + 0.4 * h.intensity : 0.5;
         u.uOpacity.value = 1;
-        m.userData.label = h ? `${organ} — ${Math.round(h.intensity * 100)}% (${h.element})` : `${organ} — sem alteração`;
+        m.userData.label = h ? `${organ} — ${h.pct}% (${h.element})` : `${organ} — sem alteração`;
         if (h && h.intensity > 0.99) organPulse.push(m);
       }
     }

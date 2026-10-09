@@ -506,7 +506,7 @@ export function buildPdfBlob(
       if (i % 2 === 0) ensureSpace(5);
       doc.setFillColor(...hexToRgb(ELEMENT_COLOR[o.element]));
       doc.rect(x, y - 2.6, 3, 3, 'F');
-      doc.text(safe(`${o.organ} (${o.element}) - ${Math.round(o.intensity * 100)}%`), x + 4.5, y);
+      doc.text(safe(`${o.organ} (${o.element}) - ${o.pct}%`), x + 4.5, y);
     });
     y += 8;
 
